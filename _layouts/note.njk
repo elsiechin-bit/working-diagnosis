@@ -3,7 +3,7 @@ layout: base.njk
 ---
 <article class="note">
   <header class="note__head">
-    <p class="kicker">❍ Note</p>
+    <p class="kicker">❍ Field Note</p>
     <h1 class="note__title">{{ title }}</h1>
     {% if dek %}<p class="note__dek">{{ dek }}</p>{% endif %}
     {% if date %}
@@ -17,5 +17,5 @@ layout: base.njk
     {{ content | safe }}
   </div>
 
-  <p class="note__back"><a href="/notes/">← All notes</a></p>
+  <p class="note__back"><a href="/field-notes/">← All field notes</a></p>
 </article>

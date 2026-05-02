@@ -12,4 +12,10 @@ layout: base.njk
   <div class="topic-body">
     {{ content | safe }}
   </div>
+
+  {% if pillar %}
+  <aside class="topic-handouts">
+    <p><a href="/handouts/#{{ pillar | slugify }}">Patient handouts for {{ pillar }} →</a></p>
+  </aside>
+  {% endif %}
 </article>
