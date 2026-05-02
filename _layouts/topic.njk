@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+
+<article class="topic">
+  <header class="topic-header">
+    {% if pillar %}<p class="pillar-label">{{ pillar }}</p>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="topic-dek">{{ description }}</p>{% endif %}
+  </header>
+
+  <div class="topic-body">
+    {{ content | safe }}
+  </div>
+</article>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} — {{ site.title }}</title>
+  <meta name="description" content="{{ description or site.tagline }}">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+  {% include "header.njk" %}
+
+  <main class="wrap">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+</body>
+</html>

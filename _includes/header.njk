@@ -1,0 +1,12 @@
+<header class="masthead">
+  <div class="wrap masthead-row">
+    <a href="/" class="brand">
+      <span class="brand-name">Working <em>Diagnosis</em>.</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      {% for item in site.nav %}
+        <a href="{{ item.url }}">{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

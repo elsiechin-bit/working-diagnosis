@@ -1,0 +1,19 @@
+{
+  "title": "Working Diagnosis",
+  "tagline": "An internet workshop for general practice",
+  "author": "Working Diagnosis",
+  "url": "https://workingdiagnosis.nz",
+  "nav": [
+    { "label": "Lifestyle", "url": "/lifestyle/" },
+    { "label": "MSK", "url": "/msk/" },
+    { "label": "Travel", "url": "/travel/" },
+    { "label": "Vaccines", "url": "/vaccines/" },
+    { "label": "Paeds", "url": "/paeds/" },
+    { "label": "Geriatrics", "url": "/geriatrics/" },
+    { "label": "Gynae", "url": "/gynae/" },
+    { "label": "Mental Health", "url": "/mental-health/" },
+    { "label": "Nutrition", "url": "/nutrition/" },
+    { "label": "Myths", "url": "/myths/" },
+    { "label": "Notes", "url": "/notes/" }
+  ]
+}
