@@ -6,55 +6,55 @@ description: A growing library of patient-facing handouts, organised by clinical
 
 This is a working library. Handouts are written for a Year 8 reading level, NZ-grounded, and free to print, email, or work through with patients during a consult. Pillars without handouts yet will fill in over time.
 
-## Lifestyle {#lifestyle}
+## Lifestyle
 
 [Lifestyle pillar →](/lifestyle/)
 
 _Handouts coming soon._
 
-## MSK {#msk}
+## MSK
 
 [MSK pillar →](/msk/)
 
 _Handouts coming soon._
 
-## Travel {#travel}
+## Travel
 
 [Travel pillar →](/travel/)
 
 _Handouts coming soon._
 
-## Vaccines {#vaccines}
+## Vaccines
 
 [Vaccines pillar →](/vaccines/)
 
 _Handouts coming soon._
 
-## Paediatrics {#paeds}
+## Paediatrics
 
 [Paeds pillar →](/paeds/)
 
 _Handouts coming soon._
 
-## Geriatrics {#geriatrics}
+## Geriatrics
 
 [Geriatrics pillar →](/geriatrics/)
 
 _Handouts coming soon._
 
-## Gynae {#gynae}
+## Gynae
 
 [Gynae pillar →](/gynae/)
 
 _Handouts coming soon._
 
-## Mental Health {#mental-health}
+## Mental Health
 
 [Mental Health pillar →](/mental-health/)
 
 _Handouts coming soon._
 
-## Nutrition {#nutrition}
+## Nutrition
 
 [Nutrition pillar →](/nutrition/)
 
