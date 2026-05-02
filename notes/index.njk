@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: Notes
+description: Short essays from the consult room.
+permalink: /notes/
+eleventyExcludeFromCollections: true
+---
+<section class="notes-index">
+  <header class="notes-index__head">
+    <p class="kicker">❍ Notes</p>
+    <h1 class="notes-index__title">Notes</h1>
+    <p class="notes-index__dek">Short essays, things I've been thinking about, occasional rants from the consult room.</p>
+  </header>
+
+  {% if collections.notes and collections.notes.length %}
+    <ul class="notes-index__list">
+      {% for note in collections.notes | reverse %}
+        <li class="notes-index__item">
+          <p class="notes-index__date">
+            <time datetime="{{ note.date | dateISO }}">{{ note.date | dateDisplay }}</time>
+          </p>
+          <h2 class="notes-index__entry">
+            <a href="{{ note.url }}">{{ note.data.title }}</a>
+          </h2>
+          {% if note.data.dek %}
+            <p class="notes-index__entry-dek">{{ note.data.dek }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="notes-index__empty">Nothing here yet.</p>
+  {% endif %}
+</section>
