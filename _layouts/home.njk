@@ -1,0 +1,61 @@
+---
+layout: base.njk
+---
+
+<section class="hero">
+  <div class="hero-grid">
+
+    <div class="hero-main">
+      <p class="kicker">{{ kicker }}</p>
+
+      <h1 class="wordmark">
+        Working
+        <span class="second">Diagnosis</span>
+      </h1>
+
+      <div class="lede">
+        {{ content | safe }}
+      </div>
+    </div>
+
+    <div class="hero-aside">
+      {% include "tools-aside.njk" %}
+    </div>
+
+  </div>
+</section>
+
+<section class="pillars-grid">
+  <h2 class="section-label">Three rooms</h2>
+  <div class="pillars">
+    <article class="pillar">
+      <span class="pnum">01 / Tools</span>
+      <h3>The <em>Workbench</em>.</h3>
+      <p>Reference tools for the inner circle — guideline comparisons, a smarter NZF browser, a rolling ticker of MoH and Canterbury updates.</p>
+      <a href="/workshop/" class="more">The workbench →</a>
+    </article>
+
+    <article class="pillar">
+      <span class="pnum">02 / Words</span>
+      <h3>The <em>Field Notes</em>.</h3>
+      <p>Short essays on what's changing in primary care — AI, evidence, technology, the future quietly arriving in 15-minute consults.</p>
+      <a href="/notes/" class="more">Read recent →</a>
+    </article>
+
+    <article class="pillar">
+      <span class="pnum">03 / Play</span>
+      <h3>The <em>Games</em>.</h3>
+      <p>Tiny interactive explainers for patients — what a 1-in-1000 risk looks like, why antibiotics aren't lollies, what sleep actually does.</p>
+      <a href="/myths/" class="more">Have a play →</a>
+    </article>
+  </div>
+</section>
+
+<section class="pillar-list">
+  <h2 class="section-label">All rooms</h2>
+  <ul>
+    {% for item in site.nav %}
+      <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+    {% endfor %}
+  </ul>
+</section>

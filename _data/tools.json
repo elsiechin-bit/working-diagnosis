@@ -1,0 +1,26 @@
+{
+  "label": "GP Tools",
+  "kicker": "Quick access",
+  "items": [
+    {
+      "name": "Substance Risk Calculator",
+      "url": "/workshop/tools/substance-risk/",
+      "blurb": "AUDIT, AUDIT-C, ASSIST and a few quick risk indices."
+    },
+    {
+      "name": "Paediatric Dosage Calculator",
+      "url": "/workshop/tools/paeds-dosage/",
+      "blurb": "Weight-based dosing for the everyday paediatric formulary."
+    },
+    {
+      "name": "Paediatric Growth Charts",
+      "url": "/workshop/tools/growth-charts/",
+      "blurb": "Plot weight, length, head circumference, BMI."
+    },
+    {
+      "name": "Developmental Milestones",
+      "url": "/workshop/tools/milestones/",
+      "blurb": "Quick-reference age-banded developmental checks."
+    }
+  ]
+}

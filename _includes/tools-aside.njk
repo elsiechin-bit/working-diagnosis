@@ -1,0 +1,14 @@
+<aside class="tools-aside" aria-label="GP Tools">
+  <p class="aside-kicker">{{ tools.kicker }}</p>
+  <h2 class="aside-title">{{ tools.label }}</h2>
+  <ul class="tools-list">
+    {% for tool in tools.items %}
+      <li>
+        <a href="{{ tool.url }}" class="tool-link">
+          <span class="tool-name">{{ tool.name }}</span>
+          <span class="tool-blurb">{{ tool.blurb }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>

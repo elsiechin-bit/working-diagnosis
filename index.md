@@ -1,10 +1,7 @@
 ---
 title: Home
-layout: base.njk
+layout: home.njk
+kicker: A workshop for general practice — Aotearoa NZ
 ---
 
-# Working Diagnosis.
-
-A workshop for general practice — tools, essays, and small interactive things, made in Aotearoa.
-
-This is the homepage.
+A small, slowly-growing collection of clinical tools, field notes, and interactive explainers. Built and maintained by a working NZ GP, in pockets of time, mostly on Tuesdays.
