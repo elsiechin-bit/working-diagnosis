@@ -1,4 +1,4 @@
-<aside class="tools-aside" aria-label="GP Tools">
+<div class="tools-aside" aria-label="GP Tools">
   <p class="aside-kicker">{{ tools.kicker }}</p>
   <h2 class="aside-title">{{ tools.label }}</h2>
   <ul class="tools-list">
@@ -6,9 +6,9 @@
       <li>
         <a href="{{ tool.url }}" class="tool-link">
           <span class="tool-name">{{ tool.name }}</span>
-          <span class="tool-blurb">{{ tool.blurb }}</span>
+          {% if tool.blurb %}<span class="tool-blurb">{{ tool.blurb }}</span>{% endif %}
         </a>
       </li>
     {% endfor %}
   </ul>
-</aside>
+</div>

@@ -2,36 +2,18 @@
 layout: base.njk
 ---
 
+{#
 <section class="hero">
-  <div class="hero-grid">
+  <section class="home-hero">
+    <img src="/assets/logo-hero.png"
+         alt="Working Diagnosis"
+         width="1200" height="1200"
+         class="home-hero-img">
+  </section>
 
-    <div class="hero-main">
-      <p class="kicker">{{ kicker }}</p>
-
-      <h1 class="wordmark">
-        Working
-        <span class="second">Diagnosis</span>
-      </h1>
-
-      <div class="lede">
-
-      <section class="home-hero">
-  <img src="/assets/logo-hero.png"
-       alt="Working Diagnosis"
-       width="1200" height="1200"
-       class="home-hero-img">
+  {{ content | safe }}
 </section>
-
-        {{ content | safe }}
-      </div>
-    </div>
-
-    <div class="hero-aside">
-      {% include "tools-aside.njk" %}
-    </div>
-
-  </div>
-</section>
+#}
 
 <section class="pillars-grid">
   <h2 class="section-label">Three rooms</h2>
@@ -47,7 +29,7 @@ layout: base.njk
       <span class="pnum">02 / Words</span>
       <h3>The <em>Field Notes</em>.</h3>
       <p>Short essays on what's changing in primary care — AI, evidence, technology, the future quietly arriving in 15-minute consults.</p>
-      <a href="/notes/" class="more">Read recent →</a>
+      <a href="/field-notes/" class="more">Read recent →</a>
     </article>
 
     <article class="pillar">
@@ -60,8 +42,8 @@ layout: base.njk
 </section>
 
 <section class="pillar-list">
-  <h2 class="section-label">All rooms</h2>
-  <ul>
+  <h2 class="section-label">Topics</h2>
+  <ul class="topic-list">
     {% for item in site.nav %}
       <li><a href="{{ item.url }}">{{ item.label }}</a></li>
     {% endfor %}

@@ -1,0 +1,2410 @@
+---
+title: Paediatric Dose Calculator
+permalink: /workshop/tools/paediatric-doses/
+eleventyExcludeFromCollections: true
+description: Weight- and age-based paediatric dose calculator with WHO growth charts. Aligned to NZFc and Starship guidelines.
+---
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paediatric Dose Calculator — Working Diagnosis</title>
+<meta name="description" content="Weight- and age-based paediatric dose calculator with WHO growth charts. NZ general practice clinical aid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset ──────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:17px}
+
+/* ── Working Diagnosis tokens (aliased to original calculator names) ─── */
+:root{
+  /* WD palette */
+  --paper:#F5F1E8;
+  --paper-warm:#EDE7D8;
+  --paper-cream:#FAF7EE;
+  --ink:#1A1F1C;
+  --ink-soft:#3A4540;
+  --ink-mute:#6B7A75;
+  --rule:#D9D1BD;
+  --rule-soft:#E4DBC4;
+  --green:#2F6B5C;
+  --green-deep:#1F4A3F;
+  --ochre:#B8714F;
+
+  /* Calculator-internal aliases — preserve original variable names so the
+     rest of the stylesheet works unchanged. */
+  --bg:var(--paper);
+  --card:var(--paper-cream);
+  --card-soft:var(--paper-warm);
+  --border:var(--rule);
+  --border-soft:var(--rule-soft);
+  --txt:var(--ink);
+  --txt-on-dark:var(--paper);
+  --muted:var(--ink-mute);
+  --muted-soft:#a8a08e;
+
+  /* Functional accents — mapped to WD palette */
+  --navy:var(--ink);
+  --teal:var(--green);
+  --safe:var(--green);
+  --warn:var(--ochre);
+  --danger:#a05858;
+
+  /* Tinted input fields — cognitive cues (blue=weight, ochre=age, lilac=height).
+     Kept distinct because clinicians recognise these by colour at a glance. */
+  --wt-bg:#dce6ec;--wt-bd:#a8bfca;--wt-tx:#243848;
+  --ag-bg:#ecdcc0;--ag-bd:#c4a87a;--ag-tx:#3e2c14;
+  --ht-bg:#dcd6e4;--ht-bd:#a8a4c0;--ht-tx:#302848;
+
+  /* Highlighter yellow — search matches + active selection. Kept for visibility. */
+  --hi:#ffe14c;--hi-bd:#e8c426;--hi-tx:#1a1410;
+
+  /* Type stack — Working Diagnosis */
+  --serif:'Newsreader','Georgia',serif;
+  --display:'Fraunces','Georgia',serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+
+  /* Type scale */
+  --fs-eyebrow:.6875rem;
+  --fs-micro:.75rem;
+  --fs-sm:.8125rem;
+  --fs-base:.9375rem;
+  --fs-md:1.0625rem;
+  --fs-lg:1.25rem;
+  --fs-xl:1.5rem;
+  --fs-2xl:1.875rem;
+  --fs-hero:2.5rem;
+
+  --w-reg:400;--w-med:500;--w-bold:700;
+  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-pill:999px;
+}
+
+/* ── Base ───────────────────────────────────────────────────── */
+body{
+  background:var(--bg);
+  color:var(--txt);
+  font-family:var(--serif);
+  font-size:var(--fs-base);
+  line-height:1.65;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+.app{max-width:1080px;margin:0 auto;padding:0 24px 72px}
+
+/* Shared eyebrow rule */
+.eyebrow,.ig label,.gp-field label,.gcard-lbl,.reg-lbl{
+  font-family:var(--mono);
+  font-size:var(--fs-eyebrow);
+  font-weight:var(--w-bold);
+  text-transform:uppercase;
+  letter-spacing:.11em;
+  color:var(--muted);
+}
+
+/* Highlighter */
+mark.hi,.hi{
+  background:var(--hi);color:var(--hi-tx);
+  font-weight:var(--w-bold);
+  padding:0 3px;border-radius:3px;
+  font-style:normal;
+}
+
+/* ── Working Diagnosis strip ────────────────────────────────── */
+.wd-strip{
+  background:var(--paper-warm);
+  border-bottom:1px solid var(--rule);
+  margin:0 -24px;
+  padding:11px 28px;
+}
+.wd-strip-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;
+  max-width:1080px;margin:0 auto;
+}
+.wd-brand{
+  font-family:var(--display);
+  font-weight:600;
+  color:var(--ink);
+  text-decoration:none;
+  font-size:1rem;
+  letter-spacing:-0.005em;
+  line-height:1;
+}
+.wd-brand em{font-style:italic;color:var(--green)}
+.wd-back{
+  font-family:var(--mono);
+  font-size:.7rem;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  color:var(--ink-mute);
+  text-decoration:none;
+}
+.wd-back:hover{color:var(--green)}
+
+/* ── Header (paper, not navy) ───────────────────────────────── */
+.hdr{
+  position:sticky;top:0;z-index:200;
+  background:var(--paper);
+  color:var(--ink);
+  padding:18px 28px 14px;
+  margin:0 -24px;
+  border-bottom:1px solid var(--rule);
+  box-shadow:0 1px 0 rgba(20,18,14,.04);
+}
+.hdr-row1{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:16px}
+.branding{flex:1;min-width:200px}
+.branding h1{
+  font-family:var(--display);
+  font-size:var(--fs-lg);
+  font-weight:600;
+  letter-spacing:-.005em;line-height:1.2;
+  color:var(--ink);
+}
+.disc{
+  font-size:var(--fs-micro);
+  color:var(--ink-mute);
+  margin-top:4px;
+  font-style:italic;
+}
+
+/* Header inputs: weight + age */
+.hdr-inputs{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
+.ig{display:flex;flex-direction:column;gap:6px}
+.ig label{color:var(--ink-mute)}
+.ig input{
+  width:140px;padding:11px 14px;
+  border-radius:var(--r-md);
+  font-family:var(--mono);
+  font-size:var(--fs-xl);
+  font-weight:var(--w-bold);
+  outline:none;
+  transition:border-color .18s,box-shadow .18s;
+}
+.ig input::-webkit-inner-spin-button,.ig input::-webkit-outer-spin-button{-webkit-appearance:none}
+.ig input::placeholder{
+  font-family:var(--serif);
+  font-size:var(--fs-sm);
+  font-weight:var(--w-reg);
+  opacity:.42;
+}
+.ig-wt input{background:var(--wt-bg);border:2px solid var(--wt-bd);color:var(--wt-tx)}
+.ig-wt input:focus{border-color:#7a9fac;box-shadow:0 0 0 3px rgba(168,191,202,.35)}
+.ig-ag input{background:var(--ag-bg);border:2px solid var(--ag-bd);color:var(--ag-tx)}
+.ig-ag input:focus{border-color:#b09060;box-shadow:0 0 0 3px rgba(196,168,122,.35)}
+
+/* Header buttons (ink-on-paper) */
+.hdr-btns{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap}
+.hbtn{
+  padding:10px 18px;border-radius:var(--r-sm);
+  border:1px solid var(--rule);
+  background:var(--paper-cream);
+  color:var(--ink-soft);
+  font-family:var(--serif);
+  font-size:var(--fs-sm);
+  font-weight:var(--w-med);
+  cursor:pointer;
+  transition:all .18s;
+  white-space:nowrap;
+}
+.hbtn:hover{background:var(--paper-warm);color:var(--ink);border-color:var(--ink-mute)}
+.hbtn.on{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd);font-weight:var(--w-bold)}
+
+/* Age unit pills (ink-on-paper) */
+.label-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.age-units{display:flex;gap:3px}
+.ubtn{
+  padding:1px 7px;border-radius:4px;
+  border:1px solid var(--rule);
+  background:transparent;
+  color:var(--ink-mute);
+  font-family:var(--mono);
+  font-size:.62rem;
+  font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:.08em;
+  cursor:pointer;transition:all .14s;
+  line-height:1.5;
+}
+.ubtn:hover{background:var(--paper-warm);color:var(--ink)}
+.ubtn.on{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
+
+/* Click-to-copy on dose value */
+.dose-val.copyable{
+  cursor:pointer;
+  padding:2px 6px;margin-left:-6px;
+  border-radius:var(--r-sm);
+  transition:background .15s,color .15s;
+}
+.dose-val.copyable:hover{background:rgba(47,107,92,.08)}
+.dose-val.copyable.flash{background:var(--hi);color:var(--hi-tx)}
+
+/* ── Search bar ─────────────────────────────────────────────── */
+.hdr-row2{margin:11px 0}
+#q{
+  width:100%;padding:12px 16px 12px 42px;
+  background:var(--paper-cream);
+  border:1.5px solid var(--rule);
+  border-radius:var(--r-md);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:var(--fs-base);
+  outline:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7A75' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:14px center;
+  transition:all .18s;
+}
+#q::placeholder{color:var(--muted-soft)}
+#q:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(47,107,92,.16)}
+
+/* Category filter pills */
+.cats{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px}
+.fbtn{
+  padding:6px 14px;border-radius:var(--r-pill);
+  border:1px solid var(--rule);
+  background:var(--paper-cream);
+  color:var(--ink-mute);
+  font-family:var(--serif);
+  font-size:var(--fs-sm);
+  font-weight:var(--w-med);
+  cursor:pointer;
+  transition:all .14s;
+  white-space:nowrap;
+}
+.fbtn:hover{background:var(--paper-warm);color:var(--ink);border-color:var(--ink-mute)}
+.fbtn.on{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd);font-weight:var(--w-bold)}
+
+.cats-sep{
+  display:inline-block;width:1px;height:20px;
+  background:var(--rule);
+  margin:0 4px;align-self:center;
+}
+.fbtn.ax-btn{border-color:rgba(160,88,88,.4);color:#8a4848;background:#f5e8e8}
+.fbtn.ax-btn:hover{background:#eddada;color:#6a3838;border-color:#a05858}
+.fbtn.ax-btn.on{
+  background:#a05858;color:#f5e8e8;
+  border-color:#a05858;
+  font-weight:var(--w-bold);
+}
+
+/* ── Growth view ────────────────────────────────────────────── */
+.gp-inputs{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:16px;margin-bottom:22px;padding-bottom:20px;
+  border-bottom:1px solid var(--rule);
+}
+.gp-field{display:flex;flex-direction:column;gap:6px}
+.gp-static{
+  display:flex;align-items:center;gap:8px;
+  padding:11px 14px;border-radius:var(--r-md);
+  border:2px solid var(--rule);min-height:50px;
+  background:var(--paper-cream);
+}
+.gp-static.gp-wt{background:var(--wt-bg);border-color:var(--wt-bd)}
+.gp-static.gp-wt .gp-static-val{color:var(--wt-tx)}
+.gp-static.gp-wt .gp-static-unit{color:var(--wt-tx);opacity:.55}
+.gp-static.gp-ag{background:var(--ag-bg);border-color:var(--ag-bd)}
+.gp-static.gp-ag .gp-static-val{color:var(--ag-tx)}
+.gp-static.gp-ag .gp-static-unit{color:var(--ag-tx);opacity:.55}
+.gp-static-val{font-family:var(--mono);font-size:var(--fs-xl);font-weight:var(--w-bold)}
+.gp-static-unit{font-size:var(--fs-sm);color:var(--muted);font-weight:var(--w-bold)}
+.gp-static-empty{font-size:var(--fs-sm);color:var(--muted-soft);font-style:italic}
+.gp-input-wrap{position:relative}
+.gp-input-wrap input{
+  width:100%;padding:11px 46px 11px 14px;
+  border:2px solid var(--ht-bd);border-radius:var(--r-md);
+  font-family:var(--mono);
+  font-size:var(--fs-xl);
+  font-weight:var(--w-bold);
+  color:var(--ht-tx);outline:none;
+  background:var(--ht-bg);
+  transition:border-color .18s,box-shadow .18s;
+}
+.gp-input-wrap input:focus{border-color:#8878a8;box-shadow:0 0 0 3px rgba(173,168,196,.32)}
+.gp-input-wrap input::placeholder{
+  font-family:var(--serif);
+  font-size:var(--fs-sm);
+  font-weight:var(--w-reg);
+  color:rgba(48,40,72,.32);
+}
+.gp-input-unit{
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  font-size:var(--fs-micro);
+  font-weight:var(--w-bold);
+  color:var(--ht-tx);opacity:.6;
+  pointer-events:none;
+}
+.gp-lt2-note{
+  font-size:var(--fs-micro);
+  color:var(--ochre);
+  font-weight:var(--w-bold);
+  margin-top:5px;font-style:italic;
+}
+
+/* Gender selector */
+.gender-row{display:flex;gap:7px}
+.gbtn{
+  flex:1;padding:11px 8px;
+  border-radius:var(--r-md);
+  border:2px solid var(--rule);
+  background:var(--paper-cream);
+  color:var(--ink-mute);
+  font-family:var(--mono);
+  font-size:var(--fs-sm);
+  font-weight:var(--w-bold);
+  cursor:pointer;transition:all .16s;
+  text-align:center;
+}
+.gbtn:hover{background:var(--paper-warm);color:var(--ink)}
+.gbtn.on{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
+
+/* Growth percentile cards */
+.growth-results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gcard{border-radius:var(--r-md);border:1.5px solid var(--rule);overflow:hidden}
+.gcard-top{padding:14px 16px 10px;border-bottom:1px solid rgba(0,0,0,.04)}
+.gcard-lbl{margin-bottom:7px}
+.gcard-pct{
+  font-family:var(--mono);
+  font-size:var(--fs-hero);
+  font-weight:var(--w-bold);
+  line-height:1;color:var(--ink);
+}
+.gcard-pct span{font-size:var(--fs-sm);font-weight:var(--w-bold);color:var(--muted)}
+.gcard-bot{padding:9px 16px 13px}
+.gcard-class{font-size:var(--fs-base);font-weight:var(--w-bold);margin-bottom:3px}
+.gcard-detail{font-size:var(--fs-micro);color:var(--muted);font-family:var(--mono)}
+.pcbar{height:6px;border-radius:3px;background:#ddd8d0;margin-top:8px;overflow:hidden}
+.pcbar-fill{height:100%;border-radius:3px;transition:width .55s ease}
+.gcard.norm,.gcard.norm .gcard-top{background:#edf2e8}.gcard.norm .gcard-class{color:var(--green-deep)}
+.gcard.low,.gcard.low .gcard-top,
+.gcard.high,.gcard.high .gcard-top{background:#f4ede0}
+.gcard.low .gcard-class,.gcard.high .gcard-class{color:var(--ochre)}
+.gcard.vlow,.gcard.vlow .gcard-top,
+.gcard.vhigh,.gcard.vhigh .gcard-top{background:#f5e8e8}
+.gcard.vlow .gcard-class,.gcard.vhigh .gcard-class{color:var(--danger)}
+.gcard.na{background:var(--paper-cream)}
+.gcard.na .gcard-pct{font-size:var(--fs-lg);color:var(--muted-soft)}
+
+.growth-note{
+  font-size:var(--fs-micro);
+  color:var(--muted);
+  margin-top:16px;padding-top:13px;
+  border-top:1px solid var(--rule);
+  line-height:1.7;font-style:italic;
+}
+
+/* ── Result line ────────────────────────────────────────────── */
+.rl{
+  padding:18px 0 8px;
+  font-family:var(--mono);
+  font-size:var(--fs-sm);
+  font-weight:var(--w-bold);
+  color:var(--muted);
+  min-height:40px;
+}
+
+/* ── Drug grid + cards ──────────────────────────────────────── */
+.grid{display:flex;flex-direction:column;gap:10px}
+.card{
+  background:var(--card);
+  border-radius:var(--r-lg);
+  border:1.5px solid var(--rule);
+  box-shadow:0 1px 3px rgba(20,18,14,.04);
+  overflow:hidden;
+  animation:fadeIn .2s ease;
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.card.flagged{border-left:3px solid var(--ochre)}
+
+.card-hdr{
+  padding:12px 16px 10px;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  border-bottom:1px solid var(--rule-soft);
+  background:var(--paper-warm);
+}
+.card.common .card-hdr{background:#f0e8d0;border-left:3px solid var(--ag-bd)}
+.card-hdr-main{flex:1;min-width:0}
+.dn{
+  font-family:var(--display);
+  font-size:var(--fs-md);
+  font-weight:600;
+  color:var(--ink);
+  letter-spacing:-.005em;
+  line-height:1.3;
+}
+.card.common .dn{color:#3e2c14}
+.dn-alias{
+  font-family:var(--serif);
+  font-size:var(--fs-sm);
+  font-weight:var(--w-reg);
+  font-style:italic;
+  color:var(--muted);
+  margin-left:6px;
+}
+.di{font-size:var(--fs-sm);color:var(--muted);margin-top:3px;line-height:1.45;font-style:italic}
+
+/* Regimen rows */
+.reg{padding:10px 16px;border-bottom:1px solid var(--rule-soft)}
+.reg:last-child{border-bottom:none}
+.reg-lbl{
+  font-family:var(--mono);
+  font-size:var(--fs-eyebrow);
+  font-weight:var(--w-bold);
+  text-transform:uppercase;
+  letter-spacing:.09em;
+  color:var(--green);
+  margin-bottom:5px;
+}
+.reg.sev-mild .reg-lbl{color:var(--green)}
+.reg.sev-mod .reg-lbl{color:var(--ochre)}
+.reg.sev-severe .reg-lbl{color:var(--danger)}
+
+.reg-main{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  min-height:34px;
+}
+.reg-dose{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dose-val{
+  font-family:var(--mono);
+  font-size:var(--fs-md);
+  font-weight:var(--w-bold);
+  color:var(--ink);
+}
+.dose-val.ph{
+  font-size:var(--fs-sm);
+  font-style:italic;
+  color:var(--muted-soft);
+  font-weight:var(--w-reg);
+}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot-s{background:var(--green)}.dot-w{background:var(--ochre)}.dot-d{background:var(--danger)}
+.cap-badge{
+  font-family:var(--mono);
+  font-size:.6rem;
+  font-weight:var(--w-bold);
+  text-transform:uppercase;
+  padding:2px 6px;border-radius:var(--r-sm);
+  background:#f5e4e4;color:var(--danger);
+}
+.reg-meta{
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  display:flex;gap:4px;flex-wrap:wrap;
+  flex:1;min-width:0;
+}
+
+/* Math line */
+.math-line{
+  font-family:var(--mono);
+  font-size:var(--fs-micro);
+  color:var(--muted);
+  margin-top:4px;
+  padding-left:14px;
+}
+
+/* Flag chips */
+.flag-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.flag{
+  font-size:var(--fs-micro);
+  padding:3px 8px;border-radius:var(--r-sm);
+  line-height:1.4;
+}
+.flag-warn{background:#f4ede0;color:var(--ochre);border:1px solid #d8c0a0}
+.flag-info{background:#e8efea;color:var(--green-deep);border:1px solid #c4d4cc}
+
+/* Volume comparison */
+.vol-comparison{
+  display:flex;flex-wrap:wrap;gap:10px;
+  margin-top:5px;padding-left:14px;
+  font-size:var(--fs-sm);color:var(--muted);
+}
+.vol-opt{font-family:var(--mono)}
+.vol-opt.vol-best{color:var(--ink);font-weight:var(--w-bold)}
+.vol-opt strong{color:var(--ink)}
+
+/* Card actions */
+.card-actions{display:flex;gap:5px}
+.card-action{
+  padding:4px 10px;border-radius:var(--r-sm);
+  border:1px solid var(--rule);
+  background:var(--paper-cream);
+  color:var(--muted);
+  font-family:var(--serif);
+  font-size:var(--fs-micro);
+  font-weight:var(--w-bold);
+  cursor:pointer;
+  transition:all .14s;
+  white-space:nowrap;
+}
+.card-action:hover{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
+.card-action.flash{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
+
+/* Badges (kept muted hues — clinically useful category cues) */
+.badge-row{display:flex;gap:5px;align-items:flex-start;flex-wrap:wrap;flex-shrink:0;padding-top:2px}
+.badge{
+  font-family:var(--mono);
+  font-size:var(--fs-eyebrow);
+  font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:.08em;
+  padding:4px 8px;border-radius:var(--r-sm);
+  white-space:nowrap;
+}
+.badge-common{background:#e8d8b0;color:#3e2c14}
+.b-an{background:#e8d8b0;color:#3e2c14}.b-ab{background:#ccdce8;color:#182c3c}
+.b-re{background:#c8ddd0;color:#183024}.b-gi{background:#dcd0e4;color:#2c1c3c}
+.b-ah{background:#e4d0d4;color:#3c1820}.b-af{background:#e4d8c4;color:#38240c}
+.b-ns{background:#c8dcd0;color:#183024}.b-nu{background:#ccd8e4;color:#182c3c}
+.b-pa{background:#c4dcc8;color:#143018}.b-dr{background:#dcd0e4;color:#2c1c3c}
+.b-oo{background:#ccd8e4;color:#182c3c}.b-cv{background:#e4ccd0;color:#3c1418}
+.b-en{background:#e8dcc8;color:#382810}
+
+.age-warn{
+  padding:8px 20px;background:#f4ede0;
+  font-size:var(--fs-sm);
+  color:var(--ochre);
+  font-weight:var(--w-bold);
+  border-bottom:1px solid #d8c0a0;
+  font-style:italic;
+}
+
+/* Regimen block */
+.reg{padding:16px 20px;border-bottom:1px solid var(--rule-soft)}
+.reg:last-child{border-bottom:none}
+
+/* Volume calculator */
+.vol-row{
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  margin-top:10px;padding-top:10px;
+  border-top:1px dashed var(--rule);
+}
+.vol-lbl{font-size:var(--fs-sm);color:var(--muted);font-weight:var(--w-bold)}
+.prep-sel{
+  padding:7px 12px;
+  border:1.5px solid var(--rule);
+  border-radius:var(--r-sm);
+  font-family:var(--serif);
+  font-size:var(--fs-sm);
+  color:var(--ink);
+  background:var(--paper-cream);
+  cursor:pointer;outline:none;
+  max-width:280px;
+}
+.vol-val{
+  font-family:var(--mono);
+  font-size:var(--fs-md);
+  font-weight:var(--w-bold);
+  color:var(--green);
+}
+
+/* Notes */
+.notes{
+  margin-top:11px;padding:10px 13px;
+  background:var(--paper-warm);
+  border-radius:var(--r-sm);
+  border-left:2px solid var(--rule);
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  line-height:1.7;
+}
+.notes::before{content:'ℹ ';color:var(--green)}
+
+/* Compact mode */
+body.compact .notes,body.compact .vol-row,body.compact .cap-note,
+body.compact .band-lbl,body.compact .reg-lbl,
+body.compact .meta .mhide,body.compact .dose-calc{display:none}
+body.compact .meta{gap:8px}
+
+/* Empty state */
+.empty{text-align:center;padding:64px 20px;color:var(--muted)}
+.empty h3{
+  font-family:var(--display);
+  font-size:var(--fs-md);
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:7px;
+}
+
+/* Footer */
+.foot{
+  margin-top:32px;padding:18px 22px;
+  background:var(--paper-cream);
+  border-radius:var(--r-lg);
+  border:1.5px solid var(--rule);
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  line-height:1.75;
+  font-style:italic;
+}
+.foot strong{color:var(--ink);font-style:normal;font-weight:var(--w-bold)}
+
+/* ── Mobile ─────────────────────────────────────────────────── */
+@media(max-width:660px){
+  .hdr-row1{flex-direction:column;align-items:flex-start}
+  .hdr-inputs,.hdr-btns{width:100%}
+  .ig{flex:1}
+  .ig input{width:100%}
+  .dose-val{font-size:var(--fs-md)}
+  .growth-results{grid-template-columns:1fr 1fr}
+  .gcard-pct{font-size:var(--fs-2xl)}
+}
+@media(max-width:560px){.growth-results{grid-template-columns:1fr 1fr}}
+
+/* ── Tabs ───────────────────────────────────────────────────── */
+.hdr-tabs{
+  display:flex;gap:0;
+  margin:14px -28px -14px;
+  padding:0 28px;
+  border-bottom:1px solid var(--rule);
+}
+.tab{
+  padding:10px 22px 12px;
+  border:none;background:transparent;
+  color:var(--ink-mute);
+  font-family:var(--display);
+  font-size:var(--fs-base);
+  font-weight:600;
+  letter-spacing:-.005em;
+  cursor:pointer;
+  transition:color .15s,border-color .15s;
+  border-bottom:3px solid transparent;
+  margin-bottom:-1px;
+}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--green-deep);border-bottom-color:var(--green)}
+
+/* ── View containers ────────────────────────────────────────── */
+[hidden]{display:none!important}
+.view{animation:fadeIn .22s ease}
+
+/* ── Growth view ────────────────────────────────────────────── */
+.gv{padding-top:20px}
+.gv-header{
+  display:flex;align-items:baseline;justify-content:space-between;
+  flex-wrap:wrap;gap:8px;margin-bottom:14px;
+}
+.gv-title{
+  font-family:var(--display);
+  font-size:var(--fs-lg);
+  font-weight:600;
+  color:var(--ink);
+  letter-spacing:-.005em;
+}
+.gv-ref{font-size:var(--fs-micro);color:var(--muted);font-style:italic}
+
+/* ── Centile charts ─────────────────────────────────────────── */
+.charts{display:flex;flex-direction:column;gap:14px;margin-top:20px}
+.chart-wrap{
+  background:var(--card);
+  border-radius:var(--r-lg);
+  border:1.5px solid var(--rule);
+  padding:14px 16px 12px;
+  box-shadow:0 1px 3px rgba(20,18,14,.04);
+}
+.chart-title{
+  font-family:var(--display);
+  font-size:var(--fs-base);
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:4px;
+  display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;
+}
+.chart-meta{
+  font-family:var(--mono);
+  font-size:var(--fs-micro);
+  font-weight:var(--w-reg);
+  color:var(--muted);
+  text-transform:none;letter-spacing:0;
+}
+.centile-chart{display:block;width:100%;height:auto}
+.chart-empty{
+  font-size:var(--fs-sm);
+  color:var(--muted-soft);
+  font-style:italic;
+  padding:30px 12px;
+  text-align:center;
+}
+
+/* ── Funding badges ─────────────────────────────────────────── */
+.b-fund{letter-spacing:.05em}
+.b-fund-F{background:#d4e2c8;color:#2c4018}
+.b-fund-R{background:#e8dcc8;color:#5a3d18}
+.b-fund-U{background:#e0d8d4;color:#4a3838}
+
+/* ── Dose-band bar ──────────────────────────────────────────── */
+.dose-band{
+  display:flex;align-items:center;gap:10px;
+  margin:4px 0 9px;
+  font-family:var(--mono);
+  font-size:var(--fs-micro);
+  color:var(--muted);
+}
+.dose-band-bar{
+  flex:0 1 220px;
+  height:6px;
+  background:linear-gradient(90deg,#ccdce8 0%,#d8e4d0 50%,#ccdce8 100%);
+  border-radius:3px;
+  position:relative;
+}
+.dose-band-marker{
+  position:absolute;top:-3px;
+  width:3px;height:12px;
+  background:var(--ink);
+  border-radius:1px;
+  transform:translateX(-50%);
+  box-shadow:0 0 0 1.5px var(--paper);
+}
+.dose-band-tx{font-weight:var(--w-bold);color:var(--ink)}
+
+/* ── Recents drawer ─────────────────────────────────────────── */
+.recents{
+  display:flex;align-items:center;gap:7px;
+  flex-wrap:wrap;
+  padding:6px 0 0;
+  min-height:1px;
+}
+.recents:empty{display:none}
+.recents-lbl{
+  font-family:var(--mono);
+  font-size:var(--fs-eyebrow);
+  font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:.11em;
+  color:var(--muted);
+  flex-shrink:0;
+  margin-right:2px;
+}
+.recent-pill{
+  font-family:var(--serif);
+  font-size:var(--fs-sm);
+  font-weight:var(--w-med);
+  padding:4px 11px;
+  border-radius:var(--r-pill);
+  background:var(--paper-cream);
+  border:1px solid var(--rule);
+  color:var(--ink);
+  cursor:pointer;
+  transition:all .14s;
+}
+.recent-pill:hover{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd);font-weight:var(--w-bold)}
+
+/* ── Card action buttons ────────────────────────────────────── */
+.card-actions{
+  display:flex;gap:6px;margin-top:9px;padding-top:9px;
+  border-top:1px dashed var(--rule);
+}
+
+/* ── Fever combo card ───────────────────────────────────────── */
+.combo-card{
+  background:linear-gradient(135deg,#fdf6dc,#f4ede0);
+  border:1.5px solid #c4a87a;
+  border-left:4px solid var(--ochre);
+  border-radius:var(--r-lg);
+  padding:14px 18px;
+  margin-bottom:13px;
+  box-shadow:0 1px 3px rgba(20,18,14,.05);
+}
+.combo-title{
+  font-family:var(--display);
+  font-size:var(--fs-md);
+  font-weight:600;
+  color:var(--ag-tx);
+  margin-bottom:4px;
+  letter-spacing:-.005em;
+}
+.combo-sub{font-size:var(--fs-sm);color:var(--muted);margin-bottom:12px;font-style:italic}
+.combo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px}
+@media(max-width:560px){.combo-grid{grid-template-columns:1fr}}
+.combo-drug{
+  background:var(--paper);
+  border-radius:var(--r-md);
+  padding:11px 13px;
+  border:1px solid var(--rule);
+}
+.combo-drug-name{
+  font-family:var(--display);font-weight:600;
+  color:var(--ink);font-size:var(--fs-base);margin-bottom:4px;
+  letter-spacing:-.005em;
+}
+.combo-drug-dose{font-family:var(--mono);font-size:var(--fs-md);font-weight:var(--w-bold);color:var(--ink)}
+.combo-drug-dose.ph{font-style:italic;color:var(--muted-soft);font-weight:var(--w-reg);font-size:var(--fs-sm)}
+.combo-drug-freq{font-size:var(--fs-sm);color:var(--muted);margin-top:4px}
+.combo-schedule{
+  background:rgba(255,255,255,.55);
+  border-radius:var(--r-sm);
+  padding:9px 13px;
+  font-size:var(--fs-sm);
+  color:var(--ink);
+  line-height:1.6;
+}
+.combo-schedule strong{color:var(--ag-tx)}
+
+/* ── Parent print overlay ───────────────────────────────────── */
+#print-overlay{display:none}
+.parent-print{
+  font-family:'Newsreader','Georgia',serif;
+  color:#1a1614;
+  max-width:680px;margin:0 auto;
+  background:#fff;
+  padding:30px 40px;
+}
+.pp-head{border-bottom:2px solid #1a1f1c;padding-bottom:10px;margin-bottom:18px}
+.pp-name{
+  font-family:'Fraunces','Georgia',serif;
+  font-size:28pt;font-weight:600;
+  letter-spacing:-.005em;line-height:1.15;
+  color:#1a1614;
+}
+.pp-alias{
+  font-style:italic;color:#5a5048;
+  font-size:11pt;margin-top:4px;
+}
+.pp-tbl{
+  width:100%;border-collapse:collapse;
+  margin:14px 0;
+  font-size:13pt;line-height:1.45;
+}
+.pp-tbl th{
+  text-align:left;padding:9px 14px 9px 0;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10pt;font-weight:700;
+  text-transform:uppercase;letter-spacing:.09em;
+  color:#5a5048;
+  width:120px;vertical-align:top;
+  border-bottom:1px solid #d4ccc4;
+}
+.pp-tbl td{
+  padding:9px 0;vertical-align:top;
+  border-bottom:1px solid #d4ccc4;
+}
+.pp-tbl td strong{font-size:15pt}
+.pp-vol{font-size:11pt;color:#5a5048;margin-top:3px}
+.pp-notes{
+  background:#f4f1ea;
+  border-left:3px solid #b0a898;
+  padding:11px 14px;
+  margin:14px 0;
+  font-size:11pt;line-height:1.55;
+}
+.pp-foot{
+  margin-top:22px;padding-top:11px;
+  border-top:1px solid #d4ccc4;
+  font-size:10pt;color:#5a5048;line-height:1.5;
+  font-style:italic;
+}
+
+/* ── Print stylesheet ───────────────────────────────────────── */
+@media print{
+  body *{visibility:hidden}
+  #print-overlay,#print-overlay *{visibility:visible}
+  #print-overlay.print-target{
+    display:block!important;
+    position:absolute;top:0;left:0;width:100%;
+    background:#fff;padding:0;margin:0;
+  }
+  @page{margin:18mm 16mm}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:0.01ms!important;
+    scroll-behavior:auto!important;
+  }
+}
+
+/* ── Presentation row ───────────────────────────────────────── */
+.hdr-row-presentation{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:14px 0 0;
+  padding:11px 14px;
+  background:var(--paper-cream);
+  border-radius:var(--r-md);
+  border:1.5px solid var(--rule);
+}
+.presentation-label{
+  font-family:var(--mono);
+  font-size:var(--fs-eyebrow);
+  font-weight:var(--w-bold);
+  text-transform:uppercase;letter-spacing:.09em;
+  color:var(--green);
+}
+#presentation-select{
+  flex:1;min-width:200px;
+  padding:9px 12px;
+  background:var(--paper);
+  border:1.5px solid var(--rule);
+  border-radius:var(--r-md);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:var(--fs-base);
+  outline:none;
+  cursor:pointer;
+  transition:border-color .14s;
+}
+#presentation-select:hover{border-color:var(--ink-mute)}
+#presentation-select:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(47,107,92,.16)}
+.hbtn-mini{
+  padding:7px 12px;border-radius:var(--r-sm);
+  border:1px solid var(--rule);
+  background:var(--paper);
+  color:var(--muted);
+  font-family:var(--serif);
+  font-size:var(--fs-sm);
+  font-weight:var(--w-med);
+  cursor:pointer;
+  transition:all .14s;
+}
+.hbtn-mini:hover{background:var(--paper-warm);color:var(--ink);border-color:var(--ink-mute)}
+
+/* Presentation banner inside drug cards */
+.pres-banner{
+  padding:7px 16px;
+  font-size:var(--fs-sm);
+  background:#e8efea;
+  color:var(--ink);
+  border-bottom:1px solid var(--rule-soft);
+  line-height:1.5;
+}
+.pres-banner strong{
+  font-family:var(--mono);
+  font-size:var(--fs-eyebrow);
+  font-weight:var(--w-bold);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-right:6px;
+}
+.pres-banner.pres-line-1{background:#e6efe8;border-left:3px solid var(--green)}
+.pres-banner.pres-line-1 strong{color:var(--green-deep)}
+.pres-banner.pres-line-2{background:#f4ede0;border-left:3px solid var(--ochre)}
+.pres-banner.pres-line-2 strong{color:var(--ochre)}
+.pres-banner.pres-line-3{background:#f4e8e0;border-left:3px solid #c08858}
+.pres-banner.pres-line-3 strong{color:#8a5828}
+
+.rl-pres{
+  background:var(--hi);color:var(--hi-tx);
+  padding:2px 8px;border-radius:var(--r-sm);
+  font-weight:var(--w-bold);
+}
+
+.pp-indication{
+  background:#fff8d8;
+  border:1.5px solid #d8c050;
+  border-radius:6px;
+  padding:11px 14px;
+  margin:14px 0;
+  font-size:12pt;line-height:1.55;
+}
+.pp-warnings{
+  margin:14px 0;
+  padding:11px 14px;
+  background:#fff;
+  border:1.5px solid #1a1614;
+  border-radius:6px;
+}
+.pp-warnings h3{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10pt;font-weight:700;
+  text-transform:uppercase;letter-spacing:.09em;
+  margin-bottom:7px;
+  color:#1a1614;
+}
+.pp-warnings ul{margin:0;padding-left:20px;font-size:11pt;line-height:1.6}
+.pp-warnings li{margin-bottom:4px}
+
+/* Trend controls */
+.trend-controls{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:14px 0 6px;padding:8px 12px;
+  background:var(--paper-cream);
+  border-radius:var(--r-md);
+  border:1px dashed var(--rule);
+}
+.trend-controls .hbtn-mini{
+  background:var(--green);color:var(--paper);
+  border:none;font-weight:var(--w-bold);
+}
+.trend-controls .hbtn-mini:hover{background:var(--green-deep);color:var(--paper)}
+.trend-help{font-size:var(--fs-sm);color:var(--muted);font-style:italic}
+.trend-list:empty{display:none}
+.trend-list-inner{
+  display:flex;flex-wrap:wrap;gap:6px;
+  margin:8px 0 12px;padding:8px 12px;
+  background:rgba(47,107,92,.06);
+  border-radius:var(--r-md);
+}
+.trend-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 8px 5px 11px;
+  background:var(--paper);
+  border:1px solid var(--rule);
+  border-radius:var(--r-pill);
+  font-family:var(--mono);
+  font-size:var(--fs-micro);
+  color:var(--ink);
+}
+.trend-pill button{
+  border:none;background:transparent;
+  color:var(--muted);cursor:pointer;
+  font-size:14px;line-height:1;padding:0 4px;
+  border-radius:50%;
+}
+.trend-pill button:hover{background:var(--danger);color:#fff}
+</style>
+</head>
+<body>
+
+<header class="wd-strip">
+  <div class="wd-strip-inner">
+    <a href="/" class="wd-brand">Working <em>Diagnosis</em>.</a>
+    <a href="/" class="wd-back">← Back to site</a>
+  </div>
+</header>
+
+<div class="app">
+<header class="hdr">
+  <div class="hdr-row1">
+    <div class="branding">
+      <h1>Paediatric Dose Calculator</h1>
+      <p class="disc">Clinical aid only. Verify against NZFc / Starship guidelines before prescribing.</p>
+    </div>
+    <div class="hdr-inputs">
+      <div class="ig ig-wt"><label>Weight kg</label><input type="number" id="wt" placeholder="e.g. 14.5" min="0.5" max="120" step="0.1" inputmode="decimal" oninput="render()" autofocus></div>
+      <div class="ig ig-ag">
+        <div class="label-row">
+          <label>Age</label>
+          <div class="age-units" role="group" aria-label="Age unit">
+            <button type="button" class="ubtn on" data-unit="yr" onclick="setAgeUnit('yr')" tabindex="-1">Yr</button>
+            <button type="button" class="ubtn" data-unit="mo" onclick="setAgeUnit('mo')" tabindex="-1">Mo</button>
+            <button type="button" class="ubtn" data-unit="wk" onclick="setAgeUnit('wk')" tabindex="-1">Wk</button>
+          </div>
+        </div>
+        <input type="number" id="ag" placeholder="e.g. 3.5" min="0" max="240" step="0.1" inputmode="decimal" oninput="render()">
+      </div>
+    </div>
+    <div class="hdr-btns">
+      <button class="hbtn" onclick="resetAll()" title="Clear weight, age and search (next patient)">↺ Reset</button>
+      <button class="hbtn" id="btn-compact" onclick="toggleCompact()" title="Compact drug cards">⊞ Compact</button>
+    </div>
+  </div>
+  <div class="hdr-tabs" role="tablist">
+    <button class="tab on" id="tab-drugs" role="tab" aria-selected="true" onclick="setView('drugs')">Drugs</button>
+    <button class="tab" id="tab-growth" role="tab" aria-selected="false" onclick="setView('growth')">Growth Charts</button>
+  </div>
+</header>
+
+<div id="drugs-controls">
+  <div class="hdr-row-presentation">
+    <label class="presentation-label">Or start with a presentation:</label>
+    <select id="presentation-select" onchange="setPresentation(this.value)">
+      <option value="">— Choose a clinical presentation —</option>
+    </select>
+    <button class="hbtn-mini" onclick="setPresentation('')" id="presentation-clear" hidden>✕ Clear</button>
+  </div>
+  <div class="hdr-row2"><input type="search" id="q" placeholder="Search drug name, indication, category…" title="Press / to focus, Esc to clear" oninput="render()"></div>
+  <div class="cats" id="cats"></div>
+</div>
+
+<main id="view-drugs" class="view">
+  <div class="recents" id="recents"></div>
+  <p class="rl" id="rl"></p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<main id="view-growth" class="view gv" hidden>
+  <div class="gv-header">
+    <h2 class="gv-title">WHO Centile Charts</h2>
+    <span class="gv-ref">WHO 2006 (0–5 yrs) / 2007 (5–19 yrs), LMS method</span>
+  </div>
+  <div class="gp-inputs">
+    <div class="gp-field">
+      <label>Weight</label>
+      <div class="gp-static gp-wt" id="gp-wt-display"><span class="gp-static-empty">Enter weight above</span></div>
+    </div>
+    <div class="gp-field">
+      <label>Age</label>
+      <div class="gp-static gp-ag" id="gp-ag-display"><span class="gp-static-empty">Enter age above</span></div>
+    </div>
+    <div class="gp-field">
+      <label>Height / Length</label>
+      <div class="gp-input-wrap">
+        <input type="number" id="ght" placeholder="e.g. 89.5" min="30" max="225" step="0.1" inputmode="decimal" oninput="updateGrowthResults()">
+        <span class="gp-input-unit">cm</span>
+      </div>
+      <div class="gp-lt2-note" id="gp-lt2" style="display:none">⚠ &lt; 2 yrs: measure length lying down</div>
+    </div>
+    <div class="gp-field">
+      <label>Sex</label>
+      <div class="gender-row">
+        <button class="gbtn on" id="gbtn-m" onclick="setGender('m')" tabindex="-1">Male</button>
+        <button class="gbtn" id="gbtn-f" onclick="setGender('f')" tabindex="-1">Female</button>
+      </div>
+    </div>
+  </div>
+  <div id="gp-results"></div>
+  <div class="trend-controls">
+    <button class="hbtn-mini" onclick="addTrendPoint()" id="trend-add-btn">+ Add measurement</button>
+    <span class="trend-help">Add 2–4 historical points to see growth trend on the charts.</span>
+  </div>
+  <div id="trend-list" class="trend-list"></div>
+  <div id="charts" class="charts"></div>
+  <div class="growth-note">WHO Child Growth Standards 2006 (0–5 yrs) and WHO Reference 2007 (5–19 yrs). Weight-for-age shown to 10 years only (BMI preferred beyond this). BMI overweight ≥ 85th centile; obese ≥ 97th centile. Yellow dot marks the most recent measurement; ink dots are earlier measurements joined by a line.</div>
+</main>
+<footer class="foot">
+  <strong>References:</strong> NZ Formulary for Children (NZFc), Starship Clinical Guidelines, WHO Growth Standards 2006 / 2007. ★ Common = frequently prescribed in NZ general practice. All doses require clinical judgement. PHARMAC funding subject to change. Reviewed May 2026.
+</footer>
+</div>
+<script>
+// ── WHO LMS reference data ────────────────────────────────────────
+const WHO={
+  wfa:{
+    b:[[0,0.3487,3.3464,0.14602],[3,0.2986,6.3762,0.11816],[6,0.1714,7.9750,0.11498],[9,0.0576,9.1498,0.11576],[12,-0.0580,10.1540,0.11914],[18,-0.2558,11.7567,0.12838],[24,-0.4184,13.0059,0.13587],[36,-0.6829,15.1459,0.14320],[48,-0.8603,17.0838,0.14572],[60,-0.9694,18.9578,0.14693],[72,-1.085,21.24,0.1525],[84,-1.168,23.25,0.1570],[96,-1.218,25.06,0.1619],[108,-1.249,26.72,0.1679],[120,-1.268,28.29,0.1754]],
+    g:[[0,0.3809,3.2322,0.14171],[3,0.2850,5.8458,0.12780],[6,0.0450,7.2974,0.12569],[9,-0.1248,8.4800,0.12707],[12,-0.2580,9.4865,0.12912],[18,-0.4310,11.1785,0.13195],[24,-0.5614,12.7154,0.13523],[36,-0.7703,15.4972,0.13708],[48,-0.9047,17.8018,0.13855],[60,-1.0045,19.9741,0.13903],[72,-1.025,21.17,0.1439],[84,-1.086,23.45,0.1485],[96,-1.143,25.79,0.1536],[108,-1.201,28.21,0.1593],[120,-1.266,30.72,0.1648]]
+  },
+  hfa:{
+    b:[[0,-0.3521,49.8842,0.03795],[3,0.6487,61.4292,0.03571],[6,1.0388,67.6236,0.03403],[9,1.1249,72.7653,0.03394],[12,0.9927,76.9922,0.03440],[18,0.5996,82.3040,0.03614],[24,0.2460,87.1162,0.03816],[36,-0.3521,96.1004,0.04153],[48,-0.7696,103.3117,0.04269],[60,-1.0177,109.1716,0.04342],[72,-1.153,116.01,0.04298],[84,-1.237,121.92,0.04269],[96,-1.312,127.71,0.04262],[108,-1.393,133.43,0.04288],[120,-1.454,138.95,0.04335],[132,-1.483,144.23,0.04363],[144,-1.452,149.19,0.04324],[156,-1.318,153.55,0.04175],[168,-1.069,158.20,0.03932],[180,-0.706,162.59,0.03650],[192,-0.410,165.42,0.03518],[204,-0.266,167.01,0.03481],[216,-0.178,168.11,0.03476],[228,-0.126,168.83,0.03476]],
+    g:[[0,-0.3521,49.1477,0.03790],[3,0.7261,59.8029,0.03636],[6,1.1261,65.7295,0.03467],[9,1.1979,70.1435,0.03434],[12,1.0388,74.0150,0.03538],[18,0.6476,80.5819,0.03781],[24,0.2786,85.7153,0.03988],[36,-0.3521,94.9979,0.04275],[48,-0.7475,101.9539,0.04385],[60,-0.9527,107.9817,0.04456],[72,-0.908,115.07,0.04381],[84,-0.993,120.99,0.04372],[96,-1.046,126.99,0.04348],[108,-1.107,132.82,0.04335],[120,-1.168,138.42,0.04348],[132,-1.108,143.53,0.04327],[144,-0.869,148.22,0.04104],[156,-0.543,152.57,0.03817],[168,-0.226,155.50,0.03618],[180,-0.009,157.59,0.03535],[192,0.048,158.97,0.03537],[204,0.048,159.62,0.03591],[216,0.048,159.97,0.03634],[228,0.048,160.24,0.03673]]
+  },
+  bfa:{
+    b:[[0,0.0,13.41,0.12948],[6,0.0,17.26,0.09826],[12,0.0,16.73,0.09440],[24,0.0,16.39,0.09480],[36,0.0,15.68,0.09640],[48,0.0,15.29,0.09885],[60,0.0,15.16,0.10125],[72,-0.640,15.34,0.11044],[84,-0.983,15.47,0.11888],[96,-1.181,15.67,0.12640],[108,-1.290,15.96,0.13370],[120,-1.331,16.36,0.14052],[132,-1.318,16.95,0.14620],[144,-1.259,17.75,0.15029],[156,-1.163,18.83,0.15264],[168,-1.035,19.89,0.15346],[180,-0.887,20.89,0.15265],[192,-0.738,21.88,0.15046],[204,-0.601,22.79,0.14741],[216,-0.481,23.60,0.14404]],
+    g:[[0,0.0,13.32,0.13214],[6,0.0,16.71,0.10247],[12,0.0,16.44,0.09791],[24,0.0,16.12,0.09659],[36,0.0,15.46,0.09817],[48,0.0,14.96,0.10208],[60,0.0,14.79,0.10663],[72,-1.049,14.99,0.11478],[84,-1.273,15.18,0.12396],[96,-1.385,15.44,0.13120],[108,-1.427,15.78,0.13742],[120,-1.418,16.23,0.14327],[132,-1.363,16.78,0.14924],[144,-1.270,17.52,0.15503],[156,-1.147,18.44,0.15990],[168,-1.003,19.40,0.16297],[180,-0.851,20.32,0.16385],[192,-0.705,21.18,0.16295],[204,-0.571,21.97,0.16089],[216,-0.453,22.68,0.15834]]
+  }
+};
+
+// ── Statistical helpers ──
+function erf(x){const s=x>=0?1:-1;x=Math.abs(x);const t=1/(1+0.3275911*x);const y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x);return s*y}
+const zToP=z=>Math.round(1000*0.5*(1+erf(z/Math.SQRT2)))/10;
+const lmsZ=(x,L,M,S)=>Math.abs(L)<1e-6?Math.log(x/M)/S:(Math.pow(x/M,L)-1)/(L*S);
+function interpLMS(tbl,aMo){
+  if(!tbl||!tbl.length)return null;
+  if(aMo<=tbl[0][0])return tbl[0].slice(1);
+  const last=tbl[tbl.length-1];
+  if(aMo>=last[0])return last.slice(1);
+  for(let i=0;i<tbl.length-1;i++){
+    if(aMo>=tbl[i][0]&&aMo<=tbl[i+1][0]){
+      const f=(aMo-tbl[i][0])/(tbl[i+1][0]-tbl[i][0]);
+      return[1,2,3].map(k=>tbl[i][k]+f*(tbl[i+1][k]-tbl[i][k]));
+    }
+  }
+  return null;
+}
+function calcPercentile(type,gender,aMo,val){
+  const lms=interpLMS(WHO[type][gender==='m'?'b':'g'],aMo);
+  if(!lms)return null;
+  const z=lmsZ(val,lms[0],lms[1],lms[2]);
+  return{z:Math.round(z*100)/100,p:zToP(z)};
+}
+
+const valFromZ=(L,M,S,z)=>Math.abs(L)<1e-6?M*Math.exp(S*z):M*Math.pow(1+L*S*z,1/L);
+
+const PCT_LINES=[
+  {p:3, z:-1.881, color:'#a05858', dash:'4 3', w:1.1},
+  {p:10,z:-1.282, color:'#B8714F', dash:null,  w:1.1},
+  {p:50,z:0,      color:'#1A1F1C', dash:null,  w:2.0},
+  {p:90,z:1.282,  color:'#B8714F', dash:null,  w:1.1},
+  {p:97,z:1.881,  color:'#a05858', dash:'4 3', w:1.1}
+];
+
+function renderChart(type,sex,patientAgeM,patientVal,cfg){
+  const tbl=WHO[type][sex==='m'?'b':'g'];
+  const{title,yLabel,xMin,xMax}=cfg;
+  let yMin=Infinity,yMax=-Infinity;
+  for(let a=xMin;a<=xMax;a++){
+    const lms=interpLMS(tbl,a);if(!lms)continue;
+    const lo=valFromZ(lms[0],lms[1],lms[2],-1.881);
+    const hi=valFromZ(lms[0],lms[1],lms[2],1.881);
+    if(lo<yMin)yMin=lo;if(hi>yMax)yMax=hi;
+  }
+  yMin=Math.floor(yMin*0.92);yMax=Math.ceil(yMax*1.05);
+  const W=600,H=320,px=46,py=14,pw=540,ph=270;
+  const sx=a=>px+(a-xMin)/(xMax-xMin)*pw;
+  const sy=v=>py+ph-(v-yMin)/(yMax-yMin)*ph;
+  const lines=PCT_LINES.map(({p,z,color,dash,w})=>{
+    const pts=[];
+    for(let a=xMin;a<=xMax;a+=1){
+      if(a<tbl[0][0]||a>tbl[tbl.length-1][0])continue;
+      const lms=interpLMS(tbl,a);if(!lms)continue;
+      pts.push([sx(a),sy(valFromZ(lms[0],lms[1],lms[2],z))]);
+    }
+    if(!pts.length)return'';
+    const d=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+    const last=pts[pts.length-1];
+    return`<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}"${dash?` stroke-dasharray="${dash}"`:''}/>
+<text x="${last[0]+3}" y="${last[1]+3}" font-family="JetBrains Mono,monospace" font-size="9" font-weight="700" fill="${color}">${p}</text>`;
+  }).join('');
+  const xTicks=[];
+  for(let yr=Math.ceil(xMin/12);yr*12<=xMax;yr++){
+    const a=yr*12,x=sx(a);
+    xTicks.push(`<line x1="${x}" y1="${py+ph}" x2="${x}" y2="${py+ph+3}" stroke="#6B7A75"/>
+<text x="${x}" y="${py+ph+13}" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6B7A75">${yr}</text>`);
+  }
+  const yRange=yMax-yMin;
+  const yStep=yRange>120?20:yRange>60?10:yRange>20?5:2;
+  const yTicks=[];
+  for(let v=Math.ceil(yMin/yStep)*yStep;v<=yMax;v+=yStep){
+    const y=sy(v);
+    yTicks.push(`<line x1="${px-3}" y1="${y}" x2="${px}" y2="${y}" stroke="#6B7A75"/>
+<text x="${px-5}" y="${y+3}" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="9" fill="#6B7A75">${v}</text>
+<line x1="${px}" y1="${y}" x2="${px+pw}" y2="${y}" stroke="#D9D1BD" stroke-width="0.4" stroke-dasharray="2 4"/>`);
+  }
+  let marker='',pctLabel='';
+  const series=Array.isArray(patientVal)?patientVal:(patientAgeM!=null&&patientVal!=null?[{ageM:patientAgeM,val:patientVal}]:[]);
+  const inRange=series.filter(s=>s.ageM>=xMin&&s.ageM<=xMax&&s.val>=yMin&&s.val<=yMax);
+  if(inRange.length>0){
+    if(inRange.length>1){
+      const pathD=inRange.map((s,i)=>(i?'L':'M')+sx(s.ageM).toFixed(1)+' '+sy(s.val).toFixed(1)).join(' ');
+      marker+=`<path d="${pathD}" fill="none" stroke="#1A1F1C" stroke-width="2" opacity="0.7"/>`;
+    }
+    inRange.forEach((s,i)=>{
+      const cx=sx(s.ageM),cy=sy(s.val);
+      const isLatest=i===inRange.length-1;
+      if(isLatest&&inRange.length===1){
+        marker+=`<line x1="${px}" y1="${cy}" x2="${cx}" y2="${cy}" stroke="#1A1F1C" stroke-dasharray="2 2" stroke-width="0.7" opacity="0.4"/>
+<line x1="${cx}" y1="${py+ph}" x2="${cx}" y2="${cy}" stroke="#1A1F1C" stroke-dasharray="2 2" stroke-width="0.7" opacity="0.4"/>`;
+      }
+      const fill=isLatest?'#ffe14c':'#1A1F1C';
+      const r=isLatest?6:4;
+      marker+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}" stroke="#1A1F1C" stroke-width="1.5"/>`;
+    });
+    const latest=inRange[inRange.length-1];
+    const pr=calcPercentile(type,sex,latest.ageM,latest.val);
+    if(pr){
+      let trendNote='';
+      if(inRange.length>1){
+        const first=inRange[0];
+        const prFirst=calcPercentile(type,sex,first.ageM,first.val);
+        if(prFirst){
+          const dz=pr.z-prFirst.z;
+          trendNote=` · trend ${dz>0?'+':''}${dz.toFixed(2)} z over ${inRange.length} points`;
+        }
+      }
+      pctLabel=`<span class="chart-meta">Latest: ${latest.val} ${cfg.unit} · ${pr.p}th centile (z = ${pr.z.toFixed(2)})${trendNote}</span>`;
+    }
+  } else if(series.length>0){
+    pctLabel=`<span class="chart-meta">Measurement outside chart range</span>`;
+  }
+  const svg=`<svg viewBox="0 0 ${W} ${H}" class="centile-chart" xmlns="http://www.w3.org/2000/svg">
+<rect x="${px}" y="${py}" width="${pw}" height="${ph}" fill="#FAF7EE" stroke="#D9D1BD"/>
+${yTicks.join('')}${xTicks.join('')}${lines}${marker}
+<text x="${px+pw/2}" y="${H-2}" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" font-weight="700" fill="#6B7A75">Age (years)</text>
+<text x="10" y="${py+ph/2}" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" font-weight="700" fill="#6B7A75" transform="rotate(-90 10 ${py+ph/2})">${yLabel}</text>
+</svg>`;
+  return`<div class="chart-wrap"><div class="chart-title"><span>${title}</span>${pctLabel}</div>${svg}</div>`;
+}
+
+// ── Drug data ─────────────────────────────────────────────────────
+const D=[
+{id:'paracetamol',name:'Paracetamol',al:['Pamol','Panadol','Paedeous'],f:'F',cat:'Analgesics & NSAIDs',ind:['Pain','Fever'],minAm:1,c:1,regs:[{
+  lbl:'Pain / Fever',route:'Oral / Rectal',type:'wt',mpk:15,band:[10,15],freq:'Every 4–6 h (max 5 doses/24 h)',mxD:1000,mxDay:4000,
+  notes:'Max 5 doses/24 h. Daily max is lesser of 4 g or 60 mg/kg/day. Reduce dose and frequency in hepatic impairment or malnutrition.',
+  preps:[{lbl:'Pamol 120 mg/5 mL',mpm:24},{lbl:'Pamol Forte 250 mg/5 mL',mpm:50}]
+}]},
+{id:'ibuprofen',name:'Ibuprofen',al:['Nurofen','Brufen','Fenpaed'],f:'F',cat:'Analgesics & NSAIDs',ind:['Pain','Fever','Inflammation'],minAm:3,minKg:5,c:1,regs:[{
+  lbl:'Pain / Fever',route:'Oral',type:'wt',mpk:7.5,band:[5,10],freq:'Every 6–8 h',mxD:400,mxDay:1200,
+  notes:'Range 5–10 mg/kg/dose. Give with food. Avoid in dehydration, renal impairment, GI disease, chickenpox, NSAID-sensitive asthma. Not < 3 months or < 5 kg.',
+  preps:[{lbl:'Nurofen Children 100 mg/5 mL',mpm:20}]
+}]},
+{id:'amoxicillin',name:'Amoxicillin',al:['Amoxil','Ospamox'],f:'F',ax:'bl',cat:'Antibacterials',ind:['AOM','Tonsillitis','URTI','Skin infections','UTI'],minAm:1,c:1,regs:[
+  {lbl:'Standard dose',route:'Oral',type:'wt',mpk:25,band:[15,25],freq:'Twice daily (BD)',mxD:500,
+   notes:'Standard for strep pharyngitis, mild URTI, skin infections. BD preferred for adherence.',
+   preps:[{lbl:'Amoxicillin 125 mg/5 mL',mpm:25},{lbl:'Amoxicillin 250 mg/5 mL',mpm:50}]},
+  {lbl:'High dose, AOM / sinusitis',route:'Oral',type:'wt',mpk:40,band:[35,45],freq:'Twice daily (BD)',mxD:1000,
+   notes:'For AOM and acute sinusitis where penicillin-resistant S. pneumoniae suspected. Verify PHARMAC funding criteria.',
+   preps:[{lbl:'Amoxicillin 125 mg/5 mL',mpm:25},{lbl:'Amoxicillin 250 mg/5 mL',mpm:50}]}
+]},
+{id:'flucloxacillin',name:'Flucloxacillin',al:['Floxapen','Staphylex'],f:'F',ax:'bl',cat:'Antibacterials',ind:['Cellulitis','Impetigo','Staphylococcal skin infections'],minAm:1,c:1,regs:[{
+  lbl:'Skin / soft tissue',route:'Oral',type:'wt',mpk:12.5,band:[12.5,25],freq:'Four times daily (QID), 30 min before food',mxD:500,
+  notes:'Range 12.5–25 mg/kg/dose. Must give on empty stomach, food reduces absorption ~50%. Consider cefalexin if QID compliance is a concern.',
+  preps:[{lbl:'Flucloxacillin 125 mg/5 mL',mpm:25},{lbl:'Flucloxacillin 250 mg/5 mL',mpm:50}]
+}]},
+{id:'coamoxiclav',name:'Co-amoxiclav (Augmentin)',al:['Augmentin','Synermox'],f:'R',ax:'bl',cat:'Antibacterials',ind:['Animal/human bites','AOM 2nd line','Polymicrobial wound infections'],minAm:2,regs:[{
+  lbl:'Amoxicillin component dose',route:'Oral',type:'wt',mpk:22.5,band:[12.5,22.5],freq:'Twice daily (BD), with food',mxD:500,
+  notes:'Dose as amoxicillin component. Augmentin 400/57 per 5 mL: amox 80 mg/mL, clavulanate 11.4 mg/mL. Volume calculated using amoxicillin component concentration.',
+  preps:[{lbl:'Augmentin 400/57 per 5 mL (amox component)',mpm:80}]
+}]},
+{id:'cefalexin',name:'Cefalexin',al:['Keflex','Ceporex'],f:'F',ax:'bl',cat:'Antibacterials',ind:['Skin infections','UTI','Impetigo','Strep (penicillin allergy)'],minAm:1,c:1,regs:[{
+  lbl:'Mild–moderate infection',route:'Oral',type:'wt',mpk:12.5,band:[12.5,25],freq:'Four times daily (QID)',mxD:500,
+  notes:'Range 12.5–25 mg/kg/dose. BD at 25 mg/kg/dose for skin infections if QID compliance is poor. Covers both strep and staph.',
+  preps:[{lbl:'Cefalexin 125 mg/5 mL',mpm:25},{lbl:'Cefalexin 250 mg/5 mL',mpm:50}]
+}]},
+{id:'azithromycin',name:'Azithromycin',al:['Zithromax'],f:'F',cat:'Antibacterials',ind:['Pertussis','Atypical pneumonia','Penicillin allergy respiratory','Chlamydia'],minAm:6,c:1,regs:[{
+  lbl:'Pertussis / atypical pneumonia',route:'Oral',type:'wt',mpk:10,freq:'Once daily for 5 days',mxD:500,
+  notes:'For atypical pneumonia: 10 mg/kg day 1 then 5 mg/kg days 2–5 (max 500/250 mg). Give 30–60 min before food. Not < 6 months, use erythromycin for neonatal pertussis.',
+  preps:[{lbl:'Azithromycin 200 mg/5 mL',mpm:40}]
+}]},
+{id:'erythromycin',name:'Erythromycin',al:['EES','Erymax','Eryacne'],f:'F',cat:'Antibacterials',ind:['Pertussis (neonates, preferred)','Penicillin allergy','Acne'],minAm:0,regs:[{
+  lbl:'Respiratory / skin infections',route:'Oral',type:'wt',mpk:10,band:[7.5,12.5],freq:'Four times daily (QID)',mxD:500,
+  notes:'Preferred over azithromycin in neonates for pertussis (azithromycin associated with IHPS in < 1 month). Common GI side effects, give with food. Potent CYP3A4 inhibitor.',
+  preps:[{lbl:'Erythromycin 125 mg/5 mL',mpm:25},{lbl:'Erythromycin 250 mg/5 mL',mpm:50}]
+}]},
+{id:'trimethoprim',name:'Trimethoprim',al:['Triprim','TMP'],f:'F',cat:'Antibacterials',ind:['UTI treatment','UTI prophylaxis'],minAm:6,c:1,regs:[
+  {lbl:'UTI treatment',route:'Oral',type:'wt',mpk:4,freq:'Twice daily (BD) for 3–7 days',mxD:200,
+   notes:'3 days for uncomplicated lower UTI in older children; 7 days for febrile/upper UTI. Use local resistance data.',
+   preps:[{lbl:'Trimethoprim 50 mg/5 mL',mpm:10}]},
+  {lbl:'UTI prophylaxis',route:'Oral',type:'wt',mpk:2,freq:'Once daily at night',mxD:100,
+   notes:'Long-term prophylaxis usually requires paediatric specialist input. Monitor for resistance.',
+   preps:[{lbl:'Trimethoprim 50 mg/5 mL',mpm:10}]}
+]},
+{id:'nitrofurantoin',name:'Nitrofurantoin',al:['Macrodantin','Nifuran'],f:'F',cat:'Antibacterials',ind:['Lower UTI treatment','UTI prophylaxis'],minAm:3,regs:[
+  {lbl:'Lower UTI treatment',route:'Oral',type:'wt',mpk:1,freq:'Four times daily (QID) for 3–7 days',mxD:100,
+   notes:'Do NOT use for upper UTI (inadequate tissue levels). Avoid if eGFR < 45 mL/min/1.73 m². Give with food. Avoid G6PD deficiency.',
+   preps:[{lbl:'Nitrofurantoin 25 mg/5 mL',mpm:5}]},
+  {lbl:'UTI prophylaxis',route:'Oral',type:'wt',mpk:1,freq:'Once daily at night',mxD:50,
+   notes:'Monitor for pulmonary toxicity with long-term use. Specialist guidance advised.',
+   preps:[{lbl:'Nitrofurantoin 25 mg/5 mL',mpm:5}]}
+]},
+{id:'metronidazole',name:'Metronidazole',al:['Flagyl','Metrogyl'],f:'F',cat:'Antibacterials',ind:['Giardia','Anaerobic infections','Dental abscess'],minAm:1,c:1,regs:[
+  {lbl:'Giardia',route:'Oral',type:'wt',mpk:5,freq:'Three times daily (TDS) for 5–7 days',mxD:400,
+   notes:'Range 5–7.5 mg/kg/dose TDS. Give with food. Disulfiram-like reaction with alcohol.',
+   preps:[{lbl:'Metronidazole 200 mg/5 mL',mpm:40}]},
+  {lbl:'Anaerobic / dental infection',route:'Oral',type:'wt',mpk:7.5,freq:'Three times daily (TDS) for 5–7 days',mxD:400,
+   notes:'Range 7.5 mg/kg/dose TDS (max 400 mg; 500 mg in adolescents). Give with food. Alcohol interaction.',
+   preps:[{lbl:'Metronidazole 200 mg/5 mL',mpm:40}]}
+]},
+{id:'penV',name:'Phenoxymethylpenicillin (Pen V)',ax:'bl',cat:'Antibacterials',ind:['Strep pharyngitis','Rheumatic fever prophylaxis'],minAm:1,regs:[
+  {lbl:'Strep pharyngitis treatment',route:'Oral',type:'wb',
+   bands:[{mnK:0,mxK:20,d:250,u:'mg',lbl:'< 20 kg: 250 mg'},{mnK:20,mxK:999,d:500,u:'mg',lbl:'≥ 20 kg: 500 mg'}],
+   freq:'Twice daily (BD) for 10 days',
+   notes:'Full 10-day course required for GAS eradication. Amoxicillin BD is an alternative with better palatability.',
+   preps:[{lbl:'Penicillin V 125 mg/5 mL',mpm:25},{lbl:'Penicillin V 250 mg/5 mL',mpm:50}]},
+  {lbl:'Rheumatic fever prophylaxis',route:'Oral',type:'wb',
+   bands:[{mnK:0,mxK:30,d:250,u:'mg',lbl:'< 30 kg: 250 mg'},{mnK:30,mxK:999,d:500,u:'mg',lbl:'≥ 30 kg: 500 mg'}],
+   freq:'Twice daily (BD), minimum 10 years or to age 21',
+   notes:'NZ: critical for Maori and Pacific children. Benzathine penicillin G IM monthly preferred where adherence uncertain.',
+   preps:[{lbl:'Penicillin V 125 mg/5 mL',mpm:25},{lbl:'Penicillin V 250 mg/5 mL',mpm:50}]}
+]},
+{id:'clindamycin',name:'Clindamycin',al:['Dalacin'],f:'F',cat:'Antibacterials',ind:['MRSA skin/soft tissue','Severe cellulitis','Dental infections'],minAm:1,regs:[{
+  lbl:'Skin / soft tissue / dental',route:'Oral',type:'wt',mpk:6,freq:'Three to four times daily (TDS–QID)',mxD:450,
+  notes:'Range 6–8 mg/kg/dose TDS–QID. First-line for suspected MRSA skin infections. Check local resistance. Associated with C. difficile colitis, counsel re: diarrhoea.',
+  preps:[{lbl:'Clindamycin 75 mg/5 mL',mpm:15}]
+}]},
+{id:'doxycycline',name:'Doxycycline',al:['Doxine','Vibramycin','Doxy'],f:'F',cat:'Antibacterials',ind:['Atypical pneumonia / mycoplasma','Chlamydia (adolescent)','Acne'],minAm:96,regs:[
+  {lbl:'Atypical pneumonia / mycoplasma',route:'Oral',type:'wt',mpk:2.5,freq:'Twice daily (BD) for 7–14 days',mxD:100,
+   notes:'CONTRAINDICATED < 8 years (permanent dental staining). ≥ 12 yrs or > 45 kg: adult dose 100 mg BD. Give with food and a full glass of water. Separate by ≥ 2 h from dairy, iron, antacids.',
+   preps:[]},
+  {lbl:'Chlamydia, adolescent',route:'Oral',type:'fx',fxD:'100 mg',freq:'Twice daily (BD) for 7 days',
+   notes:'Azithromycin 1 g single dose is an alternative. Partner treatment and contact tracing required.',preps:[]}
+]},
+{id:'roxithromycin',name:'Roxithromycin',cat:'Antibacterials',ind:['Atypical pneumonia','Mycoplasma','Penicillin allergy respiratory'],minAm:6,regs:[{
+  lbl:'Respiratory / atypical infection',route:'Oral',type:'wt',mpk:4,freq:'Twice daily (BD) for 10 days',mxD:150,
+  notes:'Range 2.5–4 mg/kg/dose BD. Give on empty stomach. Better GI tolerability than erythromycin. CYP3A4 inhibitor.',
+  preps:[{lbl:'Roxithromycin 50 mg/5 mL',mpm:10}]
+}]},
+{id:'pivmecillinam',name:'Pivmecillinam (Selexid)',ax:'bl',cat:'Antibacterials',ind:['Lower UTI, E. coli'],minAm:36,minKg:15,regs:[{
+  lbl:'Lower UTI',route:'Oral',type:'fx',fxD:'200 mg',freq:'Three times daily (TDS) for 3–7 days',
+  notes:'Tablet only, unsuitable for small children. Lower NZ resistance rates than trimethoprim. Not active against S. saprophyticus or Enterococcus.',preps:[]
+}]},
+{id:'cotrimoxazole',name:'Co-trimoxazole (Bactrim)',cat:'Antibacterials',ind:['MRSA skin infections','Resistant UTI','PCP prophylaxis'],minAm:6,regs:[
+  {lbl:'MRSA / susceptible UTI',route:'Oral',type:'wt',mpk:4,unit:'mg TMP component',freq:'Twice daily (BD) for 5–10 days',mxD:160,
+   notes:'Dose as trimethoprim (TMP) component (1:5 ratio with sulfamethoxazole). Bactrim suspension 40 mg TMP/200 mg SMX per 5 mL. Check local sensitivity. Avoid in G6PD deficiency, sulfonamide allergy, neonates < 6 weeks.',
+   preps:[{lbl:'Bactrim 40 mg TMP/200 mg SMX per 5 mL',mpm:8}]},
+  {lbl:'PCP prophylaxis',route:'Oral',type:'wt',mpk:2.5,unit:'mg TMP component',freq:'Once daily (or 3 days/week)',mxD:80,
+   notes:'PCP prophylaxis for immunocompromised children. Specialist initiation. 2.5 mg TMP/kg/day, max 80 mg TMP daily.',
+   preps:[{lbl:'Bactrim 40 mg TMP/200 mg SMX per 5 mL',mpm:8}]}
+]},
+{id:'rifampicin',name:'Rifampicin',cat:'Antibacterials',ind:['Meningococcal prophylaxis','Hib prophylaxis'],minAm:0,c:1,regs:[
+  {lbl:'Meningococcal prophylaxis',route:'Oral',type:'ab',
+   bands:[{mnM:0,mxM:1,d:5,u:'mg/kg/dose',lbl:'< 1 month: 5 mg/kg BD × 2 days',freq:'Twice daily for 2 days'},
+          {mnM:1,mxM:144,d:10,u:'mg/kg/dose',lbl:'1 month–12 yrs: 10 mg/kg BD × 2 days (max 600 mg)',freq:'Twice daily for 2 days'},
+          {mnM:144,mxM:99999,d:600,u:'mg (fixed)',lbl:'> 12 yrs: 600 mg BD × 2 days',freq:'Twice daily for 2 days'}],
+   freq:'Twice daily for 2 days',
+   notes:'Turns urine/sweat/tears orange, stains contact lenses permanently. Empty stomach. Potent CYP inducer. Consult public health unit for close contact definition.',
+   preps:[{lbl:'Rifampicin 100 mg/5 mL',mpm:20}]},
+  {lbl:'Hib prophylaxis',route:'Oral',type:'wt',mpk:20,freq:'Once daily for 4 days',mxD:600,
+   notes:'20 mg/kg/day × 4 days (max 600 mg/day). For unimmunised household contacts where child < 4 years present.',
+   preps:[{lbl:'Rifampicin 100 mg/5 mL',mpm:20}]}
+]},
+{id:'benzpen',name:'Benzathine Penicillin G (Bicillin)',ax:'bl',cat:'Antibacterials',ind:['Rheumatic fever prophylaxis (IM, preferred)'],minAm:0,regs:[{
+  lbl:'RF prophylaxis',route:'IM injection',type:'wb',
+  bands:[{mnK:0,mxK:30,d:600000,u:'units IM',lbl:'< 30 kg: 600,000 units monthly'},{mnK:30,mxK:999,d:1200000,u:'units IM',lbl:'≥ 30 kg: 1,200,000 units monthly'}],
+  freq:'Once monthly (every 4 weeks) IM, long-term',
+  notes:'Preferred over oral Pen V. Duration: min 10 years or age 21 (whichever longer); lifelong if valvular disease. Critical for Maori/Pacific populations, NZ RHD burden. Z-track technique; rotate sites. PHARMAC-subsidised.',preps:[]
+}]},
+{id:'prednisolone',name:'Prednisolone',al:['Predmix','Pred Forte','Redipred'],f:'F',cat:'Respiratory',ind:['Acute asthma / wheeze','Croup (moderate)'],minAm:1,c:1,regs:[
+  {lbl:'Acute asthma / wheeze',route:'Oral',type:'wt',mpk:1,freq:'Once daily (morning) for 3–5 days',mxD:40,
+   notes:'3 days usually sufficient. No taper required for ≤ 5 day courses. Redipred (25 mg/5 mL) better tolerated by young children.',
+   preps:[{lbl:'Redipred 25 mg/5 mL',mpm:5},{lbl:'Prednisolone 5 mg/5 mL',mpm:1}]},
+  {lbl:'Croup (moderate severity)',route:'Oral',type:'wt',mpk:1,freq:'Single dose',mxD:25,
+   notes:'Single dose usually sufficient. Dexamethasone preferred where available (longer duration). Can repeat at 12–24 h if symptoms recur.',
+   preps:[{lbl:'Redipred 25 mg/5 mL',mpm:5},{lbl:'Prednisolone 5 mg/5 mL',mpm:1}]}
+]},
+{id:'dexamethasone',name:'Dexamethasone',cat:'Respiratory',ind:['Croup (preferred agent)'],minAm:3,c:1,regs:[{
+  lbl:'Croup',route:'Oral / IM',type:'wt',mpk:0.15,freq:'Single dose (may repeat at 12–24 h)',mxD:10,
+  notes:'Oral dex 4 mg/mL injection can be given orally (mix with sweet drink). Longer duration of action than prednisolone, preferred agent for croup.',
+  preps:[{lbl:'Dexamethasone 4 mg/mL (injection, oral use)',mpm:4}]
+}]},
+{id:'salbutamol',name:'Salbutamol',al:['Ventolin','Asmol','Respigen'],f:'F',cat:'Respiratory',ind:['Acute wheeze / asthma','Bronchospasm'],minAm:1,c:1,regs:[
+  {lbl:'Nebulised, acute wheeze',route:'Nebulised',type:'wb',
+   bands:[{mnK:0,mxK:20,d:2.5,u:'mg',lbl:'< 20 kg: 2.5 mg'},{mnK:20,mxK:999,d:5,u:'mg',lbl:'≥ 20 kg: 5 mg'}],
+   freq:'Every 20 min acutely, reassess after 3 doses',
+   notes:'Ipratropium 250 mcg (< 5 yrs) or 500 mcg (≥ 5 yrs) can be added for severe wheeze.',
+   preps:[{lbl:'Salbutamol 5 mg/2.5 mL nebules',mpm:2}]},
+  {lbl:'MDI + spacer',route:'Inhaled MDI + spacer',type:'fx',fxD:'2–6 puffs (100 mcg each)',
+   freq:'Every 20 min acutely, reassess after 3 doses',
+   notes:'Mild: 2–4 puffs. Moderate–severe: 4–6 puffs. Give 1 puff at a time with 5 breaths between. Equivalent to nebuliser for mild–moderate wheeze.',preps:[]}
+]},
+{id:'montelukast',name:'Montelukast',cat:'Respiratory',ind:['Asthma maintenance','Allergic rhinitis','Exercise-induced bronchospasm'],minAm:6,c:1,regs:[{
+  lbl:'Asthma / allergic rhinitis',route:'Oral',type:'ab',
+  bands:[{mnM:6,mxM:24,d:4,u:'mg granules',lbl:'6 months–< 2 yrs: 4 mg granules',freq:'Once daily (evening)'},
+         {mnM:24,mxM:72,d:4,u:'mg chewable',lbl:'2–< 6 yrs: 4 mg chewable',freq:'Once daily (evening)'},
+         {mnM:72,mxM:180,d:5,u:'mg chewable',lbl:'6–< 15 yrs: 5 mg chewable',freq:'Once daily (evening)'},
+         {mnM:180,mxM:99999,d:10,u:'mg tablet',lbl:'≥ 15 yrs: 10 mg tablet',freq:'Once daily (evening)'}],
+  freq:'Once daily (evening)',
+  notes:'Medsafe / FDA black-box: rare neuropsychiatric events (nightmares, mood changes, suicidal ideation), counsel family. Discontinue if symptoms emerge. Chewable tablets contain aspartame, caution PKU. PHARMAC-subsidised.',preps:[]
+}]},
+{id:'ipratropium',name:'Ipratropium Bromide',cat:'Respiratory',ind:['Acute severe wheeze, add-on to salbutamol'],minAm:6,regs:[{
+  lbl:'Acute wheeze, add-on nebulised',route:'Nebulised',type:'wb',
+  bands:[{mnK:0,mxK:20,d:125,u:'mcg',lbl:'< 20 kg: 125–250 mcg'},{mnK:20,mxK:999,d:250,u:'mcg',lbl:'≥ 20 kg: 250–500 mcg'}],
+  freq:'Every 20 min for first hour (3 doses), then every 4–6 h',
+  notes:'Add to salbutamol for moderate–severe acute wheeze first 1–2 hours only. Mix in same nebuliser. Do not use as monotherapy. Typically given as the full 250 mcg/1 mL or 500 mcg/2 mL ampoule.',
+  preps:[]
+}]},
+{id:'fluticasone',name:'Fluticasone (ICS preventer)',cat:'Respiratory',ind:['Asthma maintenance, preventer'],minAm:48,c:1,regs:[
+  {lbl:'Low dose, mild persistent',route:'Inhaled MDI + spacer',type:'fx',fxD:'50–100 mcg',freq:'Twice daily (BD)',
+   notes:'4–11 yrs: 50–100 mcg BD. ≥ 12 yrs: 100–250 mcg BD. Mandatory spacer use. Rinse mouth and spit. Flixotide: 50/125/250 mcg. Review at 3 months.',preps:[]},
+  {lbl:'Medium dose, moderate persistent',route:'Inhaled MDI + spacer',type:'fx',fxD:'100–250 mcg',freq:'Twice daily (BD)',
+   notes:'4–11 yrs: 100–200 mcg BD. ≥ 12 yrs: 250–500 mcg BD. Consider adding montelukast or refer for LABA add-on.',preps:[]}
+]},
+{id:'beclometasone',name:'Beclometasone / QVAR (ICS)',cat:'Respiratory',ind:['Asthma maintenance, alternative ICS'],minAm:60,regs:[{
+  lbl:'Asthma maintenance',route:'Inhaled MDI + spacer',type:'fx',fxD:'50–200 mcg',freq:'Twice daily (BD)',
+  notes:'CFC-free QVAR ~2× potent as older CFC preparations, do not interchange doses. Low: 50–100 mcg BD (5–11 yrs), 100–200 mcg BD (≥ 12 yrs). Rinse mouth.',preps:[]
+}]},
+{id:'budesonide-neb',name:'Budesonide Nebulised (Pulmicort)',cat:'Respiratory',ind:['Croup, where oral route refused'],minAm:6,regs:[{
+  lbl:'Moderate croup',route:'Nebulised',type:'fx',fxD:'2 mg (single nebulisation)',freq:'Single dose; may repeat at 12 h',
+  notes:'2 × Pulmicort Respules 1 mg/2 mL. Alternative to oral dexamethasone where oral route impractical. Oral dexamethasone preferred in primary care.',preps:[]
+}]},
+{id:'fluticasone-nasal',name:'Fluticasone Nasal Spray (Flixonase)',cat:'Respiratory',ind:['Allergic rhinitis, seasonal and perennial','Nasal polyps'],minAm:48,c:1,regs:[{
+  lbl:'Allergic rhinitis',route:'Intranasal',type:'ab',
+  bands:[{mnM:48,mxM:144,d:1,u:'spray each nostril',lbl:'4–< 12 yrs: 1 spray (50 mcg) each nostril daily',freq:'Once daily (may increase to BD if needed)'},
+         {mnM:144,mxM:99999,d:2,u:'sprays each nostril',lbl:'≥ 12 yrs: 2 sprays (100 mcg) each nostril daily',freq:'Once daily'}],
+  freq:'Once daily (morning preferred)',
+  notes:'Full effect takes 1–2 weeks, counsel not to stop early. Blow nose before use; head slightly forward. Alternate nostrils to reduce local effects. PHARMAC-subsidised (Flixonase 50 mcg/actuation).',preps:[]
+}]},
+{id:'mometasone-nasal',name:'Mometasone Nasal Spray (Nasonex)',cat:'Respiratory',ind:['Allergic rhinitis','Nasal polyps'],minAm:24,regs:[{
+  lbl:'Allergic rhinitis',route:'Intranasal',type:'ab',
+  bands:[{mnM:24,mxM:72,d:1,u:'spray each nostril',lbl:'2–< 6 yrs: 1 spray (50 mcg) each nostril daily (specialist guidance)',freq:'Once daily'},
+         {mnM:72,mxM:144,d:1,u:'spray each nostril',lbl:'6–< 12 yrs: 1 spray (50 mcg) each nostril daily',freq:'Once daily'},
+         {mnM:144,mxM:99999,d:2,u:'sprays each nostril',lbl:'≥ 12 yrs: 2 sprays (100 mcg) each nostril daily',freq:'Once daily'}],
+  freq:'Once daily',
+  notes:'Minimal systemic bioavailability (< 0.1%). Once daily dosing. Onset 1–2 weeks. PHARMAC-subsidised.',preps:[]
+}]},
+{id:'ondansetron',name:'Ondansetron',al:['Zofran','Ondaz'],f:'F',cat:'Gastrointestinal',ind:['Vomiting, acute gastroenteritis','Nausea'],minAm:6,c:1,regs:[{
+  lbl:'Acute vomiting',route:'Oral / Sublingual',type:'wt',mpk:0.15,freq:'Every 8 h (max 3 doses)',mxD:4,
+  notes:'ODT preferred when vomiting. Single dose often sufficient for viral gastroenteritis. Not routinely PHARMAC-funded for gastroenteritis in primary care. Avoid in QTc prolongation.',
+  preps:[{lbl:'Ondansetron 4 mg/5 mL',mpm:0.8}]
+}]},
+{id:'macrogol',name:'Macrogol / Movicol Paediatric',cat:'Gastrointestinal',ind:['Constipation, first-line','Faecal disimpaction'],minAm:6,c:1,regs:[
+  {lbl:'Constipation maintenance',route:'Oral',type:'ab',
+   bands:[{mnM:6,mxM:24,d:0.5,u:'sachet/day',lbl:'6–24 months: 0.5–1 sachet/day (specialist guidance)',freq:'Once daily'},
+          {mnM:24,mxM:144,d:1,u:'sachet/day',lbl:'2–< 12 yrs: 1 sachet/day, titrate',freq:'Once to twice daily, titrate'},
+          {mnM:144,mxM:99999,d:2,u:'adult sachets/day',lbl:'≥ 12 yrs: 1–2 adult Movicol sachets/day',freq:'Once to twice daily'}],
+   freq:'Once daily; titrate to one soft stool per day',
+   notes:'Dissolve Movicol Paediatric Plain sachet in 62.5 mL water. Onset 2–4 days. Maintenance often months. Combine with fibre, fluid, toilet routine. PHARMAC-subsidised. First-line NZ guidelines.',preps:[]},
+  {lbl:'Faecal disimpaction',route:'Oral',type:'ab',
+   bands:[{mnM:24,mxM:144,d:4,u:'sachets/day (escalate)',lbl:'2–< 12 yrs: 4/day → increase by 2/day to max 8',freq:'Divided doses across day'},
+          {mnM:144,mxM:99999,d:8,u:'adult sachets/day',lbl:'≥ 12 yrs: 8 adult Movicol sachets/day × 3 days',freq:'Divided doses across day'}],
+   freq:'Divided doses across the day for up to 3 days, then switch to maintenance',
+   notes:'Escalation: Day 1=4, Day 2=6, Day 3=8 sachets/day (max 8). Liquid stools expected, ensure toilet access. Specialist review if no response after 3 days at max dose.',preps:[]}
+]},
+{id:'lactulose',name:'Lactulose',cat:'Gastrointestinal',ind:['Constipation (2nd line)','Hepatic encephalopathy'],minAm:1,regs:[{
+  lbl:'Constipation',route:'Oral',type:'ab',
+  bands:[{mnM:1,mxM:12,d:2.5,u:'mL',lbl:'1–12 months: 2.5 mL BD',freq:'Twice daily'},
+         {mnM:12,mxM:60,d:5,u:'mL',lbl:'1–< 5 yrs: 5 mL BD',freq:'Twice daily'},
+         {mnM:60,mxM:120,d:10,u:'mL',lbl:'5–< 10 yrs: 10 mL BD',freq:'Twice daily'},
+         {mnM:120,mxM:99999,d:15,u:'mL',lbl:'≥ 10 yrs: 15 mL BD',freq:'Twice daily'}],
+  freq:'Twice daily; adjust to response',
+  notes:'Osmotic laxative; onset 24–48 h. Bloating and flatulence common. Macrogol preferred as first-line in NZ guidelines.',preps:[]
+}]},
+{id:'senna',name:'Senna',cat:'Gastrointestinal',ind:['Constipation, stimulant laxative'],minAm:12,regs:[{
+  lbl:'Constipation',route:'Oral',type:'ab',
+  bands:[{mnM:12,mxM:60,d:2.5,u:'mL syrup',lbl:'1–< 5 yrs: 2.5 mL at bedtime',freq:'Once at bedtime'},
+         {mnM:60,mxM:120,d:5,u:'mL syrup',lbl:'5–< 10 yrs: 5 mL at bedtime',freq:'Once at bedtime'},
+         {mnM:120,mxM:99999,d:10,u:'mL syrup',lbl:'≥ 10 yrs: 10–20 mL at bedtime',freq:'Once at bedtime'}],
+  freq:'At bedtime; onset 8–12 h',
+  notes:'Senna syrup 7.5 mg/5 mL sennosides. Stimulant laxative, causes griping; combine with osmotic agent for chronic constipation. Avoid if bowel obstruction suspected.',preps:[]
+}]},
+{id:'omeprazole',name:'Omeprazole',al:['Losec','Omezol'],f:'F',cat:'Gastrointestinal',ind:['GERD / reflux oesophagitis','Peptic ulcer adjunct'],minAm:12,c:1,regs:[{
+  lbl:'GERD / reflux',route:'Oral',type:'wt',mpk:1,freq:'Once daily, 30 min before breakfast',mxD:20,
+  notes:'Range 1–2 mg/kg/day; max 20 mg (< 40 kg) or 40 mg (adolescents). Capsule granules: mix in water, do not crush granules. PHARMAC-subsidised. Reassess at 4–8 weeks. Avoid < 1 year unless specialist-directed.',
+  preps:[]
+}]},
+{id:'domperidone',name:'Domperidone',al:['Motilium'],f:'R',cat:'Gastrointestinal',ind:['Nausea and vomiting, short-term (specialist-initiated)'],minAm:0,regs:[{
+  lbl:'Nausea / vomiting, SHORT TERM only',route:'Oral',type:'wt',mpk:0.25,freq:'Three times daily (TDS), MAXIMUM 7 days',mxD:10,
+  notes:'MEDSAFE WARNING: QTc prolongation and cardiac arrhythmia risk. Max 7 days. Contraindicated with CYP3A4 inhibitors (azoles, macrolides). Avoid in neonates. Document risk-benefit.',
+  preps:[{lbl:'Domperidone 5 mg/5 mL',mpm:1}]
+}]},
+{id:'hyoscine-bb',name:'Hyoscine Butylbromide (Buscopan)',cat:'Gastrointestinal',ind:['GI spasm / colic','IBS-associated pain'],minAm:72,regs:[{
+  lbl:'GI spasm',route:'Oral',type:'ab',
+  bands:[{mnM:72,mxM:144,d:10,u:'mg',lbl:'6–< 12 yrs: 10 mg three times daily',freq:'Three times daily (TDS)'},
+         {mnM:144,mxM:99999,d:20,u:'mg',lbl:'≥ 12 yrs: 20 mg four times daily',freq:'Four times daily (QID)'}],
+  freq:'As needed for spasm',
+  notes:'Anticholinergic, avoid in paralytic ileus, urinary retention, myasthenia gravis. Poorly absorbed orally. OTC available (Buscopan 10 mg tablets).',preps:[]
+}]},
+{id:'cyclizine',name:'Cyclizine',cat:'Gastrointestinal',ind:['Nausea / vomiting','Motion sickness (≥ 6 yrs)'],minAm:72,regs:[{
+  lbl:'Nausea / motion sickness',route:'Oral',type:'wt',mpk:0.5,freq:'Three times daily (TDS) as needed',mxD:25,
+  notes:"Range 0.5–1 mg/kg/dose TDS. Max 25 mg/dose (< 12 yrs); max 50 mg/dose (≥ 12 yrs). Not recommended < 6 years. Sedating, warn re drowsiness. For motion sickness: give 30–60 min before travel. Tablets 50 mg only in NZ.",preps:[]
+}]},
+{id:'loratadine',name:'Loratadine',al:['Claratyne','Lorano'],f:'F',cat:'Antihistamines',ind:['Allergic rhinitis','Urticaria','Allergic reactions (non-sedating)'],minAm:24,c:1,regs:[{
+  lbl:'Allergic rhinitis / urticaria',route:'Oral',type:'wb',
+  bands:[{mnK:0,mxK:30,d:5,u:'mg',lbl:'< 30 kg: 5 mg'},{mnK:30,mxK:999,d:10,u:'mg',lbl:'≥ 30 kg: 10 mg'}],
+  freq:'Once daily',
+  notes:'Non-sedating, preferred for daytime use. Onset 1–3 h. Not recommended < 2 years.',
+  preps:[{lbl:'Claratyne 5 mg/5 mL syrup',mpm:1}]
+}]},
+{id:'cetirizine',name:'Cetirizine',al:['Zyrtec','Allereze','Razene'],f:'F',cat:'Antihistamines',ind:['Allergic rhinitis','Urticaria','Eczema-associated itch'],minAm:12,c:1,regs:[{
+  lbl:'Allergic rhinitis / urticaria / itch',route:'Oral',type:'ab',
+  bands:[{mnM:12,mxM:24,d:2.5,u:'mg',lbl:'1–< 2 yrs: 2.5 mg once daily',freq:'Once daily'},
+         {mnM:24,mxM:72,d:2.5,u:'mg',lbl:'2–< 6 yrs: 2.5 mg twice daily',freq:'Twice daily'},
+         {mnM:72,mxM:99999,d:10,u:'mg',lbl:'≥ 6 yrs: 10 mg once daily',freq:'Once daily'}],
+  freq:'Age-dependent, see selected band',
+  notes:'Mildly sedating, useful for itch-disturbed sleep. Onset 20–60 min.',
+  preps:[{lbl:'Cetirizine 5 mg/5 mL syrup',mpm:1}]
+}]},
+{id:'chlorphenamine',name:'Chlorphenamine (Piriton)',cat:'Antihistamines',ind:['Acute urticaria','Pruritus (sedating)','Allergic reactions'],minAm:12,regs:[{
+  lbl:'Urticaria / pruritus',route:'Oral',type:'wt',mpk:0.1,freq:'Every 6 h as needed',mxD:4,
+  notes:'Range 0.1 mg/kg/dose (max 4 mg < 12 yrs; 8 mg adolescents). Sedating, useful for nocturnal itch. Not recommended < 1 year.',
+  preps:[{lbl:'Chlorphenamine 2 mg/5 mL syrup',mpm:0.4}]
+}]},
+{id:'hydroxyzine',name:'Hydroxyzine (Atarax)',cat:'Antihistamines',ind:['Pruritus (atopic eczema)','Anxiety (short-term)','Urticaria'],minAm:12,c:1,regs:[{
+  lbl:'Pruritus / anxiety',route:'Oral',type:'wt',mpk:0.5,freq:'Every 6–8 h as needed (max QID)',mxD:25,
+  notes:'Range 0.5–1 mg/kg/dose (max 25 mg < 6 yrs; 50 mg in adolescents). Sedating, useful for nocturnal itch in eczema. Onset 30 min. Avoid in QTc prolongation. Tolerance may develop. Not for > 4 months continuous use without review.',
+  preps:[{lbl:'Hydroxyzine 10 mg/5 mL syrup',mpm:2}]
+}]},
+{id:'nystatin',name:'Nystatin',al:['Nilstat','Mycostatin'],f:'F',cat:'Antifungals & Antivirals',ind:['Oral candidiasis (thrush)','Nappy rash with candida'],minAm:0,c:1,regs:[{
+  lbl:'Oral thrush',route:'Oral (topical contact)',type:'ab',
+  bands:[{mnM:0,mxM:1,d:1,u:'mL QID',lbl:'Neonates: 1 mL QID',freq:'Four times daily (QID)'},
+         {mnM:1,mxM:99999,d:1,u:'mL QID',lbl:'Infants & children: 1–2 mL QID',freq:'Four times daily (QID)'}],
+  freq:'Four times daily after feeds for 7 days (or 48 h after resolution)',
+  notes:'Apply to mouth/tongue with cotton bud after feeds. 100,000 units per mL. Continue 48 h after symptoms resolve. Treat carer if breastfeeding nipple thrush (apply nystatin cream after feeds).',
+  preps:[{lbl:'Nystatin 100,000 units/mL oral suspension',mpm:20}]
+}]},
+{id:'fluconazole',name:'Fluconazole',al:['Diflucan','Fluzole'],f:'F',cat:'Antifungals & Antivirals',ind:['Recurrent vaginal candidiasis (adolescent)','Resistant oral candidiasis','Tinea capitis'],minAm:1,regs:[{
+  lbl:'Candidiasis',route:'Oral',type:'wt',mpk:6,freq:'Once daily for 7–14 days',mxD:400,
+  notes:'Loading 6 mg/kg day 1 (max 400 mg), then 3 mg/kg/day. Tinea capitis: 3–6 mg/kg/day for 4–6 weeks. Vaginal candidiasis (≥ 14 yrs): 150 mg single dose. Many drug interactions (CYP2C9/3A4 inhibitor).',
+  preps:[]
+}]},
+{id:'aciclovir',name:'Aciclovir',al:['Zovirax','Lovir'],f:'F',cat:'Antifungals & Antivirals',ind:['Herpes simplex (HSV-1, HSV-2)','Varicella in immunocompromised','Recurrent HSV suppression'],minAm:0,c:1,regs:[
+  {lbl:'HSV gingivostomatitis / cold sores',route:'Oral',type:'wt',mpk:15,freq:'Five times daily for 5–7 days',mxD:400,
+   notes:'Range 15–20 mg/kg/dose (max 400 mg/dose). Start within 72 h of symptom onset for greatest benefit. Encourage fluid intake to avoid crystalluria. Adjust in renal impairment.',
+   preps:[{lbl:'Aciclovir 200 mg/5 mL suspension',mpm:40}]},
+  {lbl:'Varicella, immunocompromised',route:'Oral',type:'wt',mpk:20,freq:'Four times daily for 5–7 days',mxD:800,
+   notes:'Specialist guidance preferred. Range 20 mg/kg/dose QID (max 800 mg). Start within 24 h of rash onset. Consider IV in severe disease.',
+   preps:[{lbl:'Aciclovir 200 mg/5 mL suspension',mpm:40}]}
+]},
+{id:'valaciclovir',name:'Valaciclovir',al:['Valtrex'],f:'R',cat:'Antifungals & Antivirals',ind:['Recurrent HSV (better adherence than aciclovir)'],minAm:144,regs:[{
+  lbl:'Recurrent HSV',route:'Oral',type:'fx',fxD:'500 mg',freq:'Twice daily for 3–5 days',
+  notes:'Adolescents only (≥ 12 yrs). Pro-drug of aciclovir, better bioavailability and BD dosing. Tablet only.',preps:[]
+}]},
+{id:'oseltamivir',name:'Oseltamivir',al:['Tamiflu'],cat:'Antifungals & Antivirals',ind:['Influenza A and B','Influenza prophylaxis (high-risk contacts)'],minAm:0,regs:[{
+  lbl:'Influenza treatment',route:'Oral',type:'ab',
+  bands:[{mnK:0,mxK:15,d:30,u:'mg BD',lbl:'≤ 15 kg: 30 mg BD',freq:'Twice daily'},
+         {mnK:15,mxK:23,d:45,u:'mg BD',lbl:'15–23 kg: 45 mg BD',freq:'Twice daily'},
+         {mnK:23,mxK:40,d:60,u:'mg BD',lbl:'23–40 kg: 60 mg BD',freq:'Twice daily'},
+         {mnK:40,mxK:999,d:75,u:'mg BD',lbl:'> 40 kg: 75 mg BD',freq:'Twice daily'}],
+  freq:'Twice daily for 5 days',
+  notes:'Most effective if started within 48 h of symptom onset. Halve frequency to once daily for prophylaxis (10 days). Neonatal dosing differs, consult specialist.',preps:[]
+}]},
+{id:'diazepam',name:'Diazepam',al:['Valium','Stesolid'],f:'F',cat:'Nervous System',ind:['Acute seizure (rectal, status)','Severe anxiety'],minAm:1,regs:[
+  {lbl:'Acute seizure / status epilepticus',route:'Rectal (Stesolid)',type:'ab',
+   bands:[{mnK:0,mxK:10,d:5,u:'mg PR',lbl:'< 10 kg: 5 mg rectally',freq:'Single dose, may repeat once after 10 min'},
+          {mnK:10,mxK:25,d:5,u:'mg PR',lbl:'10–< 25 kg: 5 mg rectally',freq:'Single dose, may repeat once after 10 min'},
+          {mnK:25,mxK:999,d:10,u:'mg PR',lbl:'≥ 25 kg: 10 mg rectally',freq:'Single dose, may repeat once after 10 min'}],
+   freq:'Single dose; may repeat once after 10 min if seizure continues',
+   notes:'Stesolid rectal tubes. Buccal midazolam preferred where available (less stigmatising for school-age children).',preps:[]}
+]},
+{id:'midazolam',name:'Midazolam (buccal / nasal)',al:['Buccolam','Epistatus'],f:'R',cat:'Nervous System',ind:['Acute seizure, community management','Status epilepticus, prehospital'],minAm:3,regs:[{
+  lbl:'Acute seizure',route:'Buccal',type:'ab',
+  bands:[{mnM:3,mxM:12,d:2.5,u:'mg buccal',lbl:'3–< 12 months: 2.5 mg buccal',freq:'Single dose; may repeat once after 10 min'},
+         {mnM:12,mxM:60,d:5,u:'mg buccal',lbl:'1–< 5 yrs: 5 mg buccal',freq:'Single dose; may repeat once after 10 min'},
+         {mnM:60,mxM:120,d:7.5,u:'mg buccal',lbl:'5–< 10 yrs: 7.5 mg buccal',freq:'Single dose; may repeat once after 10 min'},
+         {mnM:120,mxM:99999,d:10,u:'mg buccal',lbl:'≥ 10 yrs: 10 mg buccal',freq:'Single dose; may repeat once after 10 min'}],
+  freq:'Single dose; may repeat once after 10 min if seizure ongoing. Call ambulance.',
+  notes:'Apply between cheek and gum. Buccolam pre-filled syringes. Train family. Documented seizure management plan essential. Specialist initiation usually required.',preps:[]
+}]},
+{id:'melatonin',name:'Melatonin (Circadin)',f:'R',cat:'Nervous System',ind:['Sleep disturbance, ADHD/ASD (specialist initiation)','Delayed sleep phase'],minAm:36,regs:[{
+  lbl:'Sleep onset difficulty',route:'Oral',type:'fx',fxD:'2–5 mg, 30–60 min before bedtime',freq:'Once nightly',
+  notes:'Specialist initiation usually required. Start 2 mg, titrate to response (max 5–10 mg). Circadin (modified release) tablets 2 mg only PHARMAC-funded under Special Authority. OTC immediate-release products of variable quality. Reassess every 6 months.',preps:[]
+}]},
+{id:'promethazine',name:'Promethazine (Phenergan)',cat:'Nervous System',ind:['Allergic reactions','Motion sickness (≥ 2 yrs)','Nausea/vomiting'],minAm:24,regs:[{
+  lbl:'Allergy / nausea / motion sickness',route:'Oral',type:'wt',mpk:0.25,freq:'Every 6–8 h as needed (max TDS)',mxD:25,
+  notes:"Range 0.25–0.5 mg/kg/dose (max 25 mg/dose). MEDSAFE WARNING: contraindicated < 2 years (fatal respiratory depression). Use cautiously 2–6 yrs. Sedating. For motion sickness: 1–2 h before travel.",preps:[]
+}]},
+{id:'methylphenidate-ir',name:'Methylphenidate IR (Rubifen)',f:'R',cat:'Nervous System',ind:['ADHD (specialist-initiated)'],minAm:72,regs:[{
+  lbl:'ADHD initiation, immediate release',route:'Oral',type:'fx',fxD:'5 mg morning + lunchtime, titrate weekly',freq:'2–3 times daily (avoid evening dose)',
+  notes:'SPECIALIST INITIATION ONLY (Pharmac Special Authority, paediatrician/psychiatrist). Start 5 mg BD, titrate weekly to 0.3–1 mg/kg/dose (max 60 mg/day). Monitor weight, height, BP, HR, mood. Document baseline before starting.',preps:[]
+}]},
+{id:'methylphenidate-cr',name:'Methylphenidate CR (Concerta, Ritalin LA)',f:'R',cat:'Nervous System',ind:['ADHD maintenance (specialist-initiated)'],minAm:72,regs:[{
+  lbl:'ADHD maintenance, controlled release',route:'Oral',type:'fx',fxD:'18–54 mg once daily (Concerta) or 20–40 mg (Ritalin LA)',freq:'Once daily, morning',
+  notes:'SPECIALIST INITIATION. Convert from IR: total daily IR dose ≈ Concerta dose (round to nearest 18 mg). Do not crush. Drug holidays controversial; some specialists weekend off, others continuous. Subsidised under Special Authority.',preps:[]
+}]},
+{id:'sertraline',name:'Sertraline',al:['Zoloft'],f:'F',cat:'Nervous System',ind:['Depression (≥ 12 yrs, specialist initiation)','OCD (≥ 6 yrs)','Anxiety disorders'],minAm:72,regs:[{
+  lbl:'Depression / anxiety',route:'Oral',type:'fx',fxD:'25 mg morning, titrate to 50–200 mg',freq:'Once daily (morning)',
+  notes:'SPECIALIST INITIATION (paediatric psychiatry / paediatrician). MEDSAFE BOX WARNING: increased suicidal ideation in adolescents in first weeks. Weekly review for first month. Start low, titrate slowly (every 1–2 weeks). Discontinuation: taper over weeks. CYP2D6/2C19 inhibitor.',preps:[]
+}]},
+{id:'fluoxetine',name:'Fluoxetine',al:['Prozac','Fluox'],f:'F',cat:'Nervous System',ind:['Depression (≥ 8 yrs)','OCD (≥ 7 yrs)'],minAm:84,regs:[{
+  lbl:'Depression / OCD',route:'Oral',type:'fx',fxD:'10 mg, titrate to 20 mg after 1–2 weeks',freq:'Once daily (morning)',
+  notes:'SPECIALIST INITIATION. MEDSAFE BOX WARNING: suicidal ideation. Long half-life ~ 5 days, so missed doses less critical, but discontinuation may take weeks. Start 10 mg, may increase to 20 mg (max 60 mg) after weeks.',preps:[]
+}]},
+{id:'sumatriptan',name:'Sumatriptan',al:['Imigran'],cat:'Nervous System',ind:['Migraine, acute treatment'],minAm:144,regs:[{
+  lbl:'Acute migraine',route:'Oral / Nasal',type:'fx',fxD:'25–50 mg orally or 10–20 mg intranasally',freq:'May repeat once after 2 h if needed',
+  notes:'Adolescents (≥ 12 yrs). Single dose at onset. Nasal spray (Imigran 10 mg or 20 mg) faster onset, useful with associated nausea. Max 200 mg orally or 40 mg nasally per 24 h. Avoid in basilar/hemiplegic migraine, ischaemic disease.',preps:[]
+}]},
+{id:'permethrin',name:'Permethrin 5% Cream (Lyderm)',f:'F',cat:'Dermatology',ind:['Scabies'],minAm:2,regs:[{
+  lbl:'Scabies',route:'Topical',type:'fx',fxD:'Apply to entire body neck-down (whole body in infants)',freq:'Single application, repeat after 7 days',
+  notes:'Apply at bedtime, leave 8–14 h, then wash off. Treat all household contacts simultaneously. Wash bed linen and clothing in hot water. Itch may persist 2–4 weeks post-treatment (use crotamiton or sedating antihistamine). 30 g tube usually sufficient for an adult.',preps:[]
+}]},
+{id:'mupirocin',name:'Mupirocin 2% Ointment (Bactroban)',f:'F',cat:'Dermatology',ind:['Localised impetigo','Nasal MRSA decolonisation'],minAm:1,regs:[{
+  lbl:'Localised impetigo',route:'Topical',type:'fx',fxD:'Apply thinly to lesion',freq:'Three times daily (TDS) for 5–7 days',
+  notes:'Localised impetigo only. Generalised/extensive: oral antibiotic. Increasing resistance with widespread use. Reserve for limited disease. Cover lesion if practical to reduce spread.',preps:[]
+}]},
+{id:'hydrocortisone-cream',name:'Hydrocortisone 1% (mild TCS)',f:'F',cat:'Dermatology',ind:['Mild atopic eczema, all body sites','Nappy rash with inflammation'],minAm:1,c:1,regs:[{
+  lbl:'Mild eczema, sensitive sites',route:'Topical',type:'fx',fxD:'Apply thinly',freq:'Once to twice daily',
+  notes:'Mild potency, suitable for face, neck, flexures. Use until clear plus 2–3 days. Combine with regular emollient. Counsel re fingertip unit (FTU) measurement: 1 FTU covers ~ 2 adult palms.',preps:[]
+}]},
+{id:'betamethasone-cream',name:'Betamethasone Valerate 0.02% / 0.1% (mod–potent TCS)',f:'F',cat:'Dermatology',ind:['Moderate eczema, body and limbs','Inflammatory dermatoses'],minAm:1,c:1,regs:[{
+  lbl:'Moderate eczema, body / limbs',route:'Topical',type:'fx',fxD:'Apply thinly',freq:'Once to twice daily',
+  notes:'Moderate (0.02%) or potent (0.1%) potency. Body and limbs only, AVOID face / flexures (use mild only). Short courses 1–2 weeks. Step down to mild as eczema clears. Counsel re fingertip unit.',preps:[]
+}]},
+{id:'mometasone-cream',name:'Mometasone Furoate 0.1% (potent TCS)',f:'R',cat:'Dermatology',ind:['Moderate–severe eczema','Psoriasis'],minAm:24,regs:[{
+  lbl:'Moderate–severe eczema',route:'Topical',type:'fx',fxD:'Apply thinly',freq:'Once daily',
+  notes:'Potent corticosteroid. Once daily dosing (advantage). Body/limbs only. Max 2–3 weeks then step down. Available as cream, ointment, lotion. Specialist preferred for prolonged use in children.',preps:[]
+}]},
+{id:'clobetasol',name:'Clobetasol Propionate 0.05% (very potent TCS)',f:'R',cat:'Dermatology',ind:['Severe eczema (specialist)','Psoriasis (specialist)'],minAm:24,regs:[{
+  lbl:'Severe inflammatory dermatoses',route:'Topical',type:'fx',fxD:'Apply thinly',freq:'Once to twice daily',
+  notes:'SPECIALIST INITIATION in children. Very potent, max 2 weeks continuous. Body and limbs only, avoid face/flexures. Risk of systemic absorption, HPA suppression, skin atrophy. Gradual taper.',preps:[]
+}]},
+{id:'emollient',name:'Emollient (Cetomacrogol, Sorbolene)',f:'F',cat:'Dermatology',ind:['Eczema maintenance, all severities','Dry skin'],minAm:0,c:1,regs:[{
+  lbl:'Maintenance therapy',route:'Topical',type:'fx',fxD:'Apply liberally',freq:'At least twice daily; reapply often',
+  notes:'CORNERSTONE of eczema management. Apply within 3 min of bathing for greatest benefit. Quantities required: ~ 250 g/week for child, ~ 500 g/week for older child/adolescent. PHARMAC-subsidised: cetomacrogol with glycerol (also called aqueous cream BP, but newer evidence favours cetomacrogol-only formulations for sensitive skin).',preps:[]
+}]},
+{id:'clotrimazole',name:'Clotrimazole 1% (Canesten)',f:'F',cat:'Dermatology',ind:['Tinea corporis / cruris / pedis','Cutaneous candidiasis','Nappy rash (candida)'],minAm:0,c:1,regs:[{
+  lbl:'Cutaneous fungal infection',route:'Topical',type:'fx',fxD:'Apply thinly',freq:'Twice to three times daily',
+  notes:'Continue 7 days after symptoms resolve to prevent relapse. For tinea capitis, oral therapy (griseofulvin or terbinafine) is required. Combination clotrimazole+hydrocortisone preparations available for inflamed nappy rash.',preps:[]
+}]},
+{id:'terbinafine',name:'Terbinafine (oral)',cat:'Dermatology',ind:['Tinea capitis (oral required)','Onychomycosis (specialist)'],minAm:48,regs:[{
+  lbl:'Tinea capitis',route:'Oral',type:'wb',
+  bands:[{mnK:0,mxK:20,d:62.5,u:'mg',lbl:'< 20 kg: 62.5 mg daily'},
+         {mnK:20,mxK:40,d:125,u:'mg',lbl:'20–40 kg: 125 mg daily'},
+         {mnK:40,mxK:999,d:250,u:'mg',lbl:'> 40 kg: 250 mg daily'}],
+  freq:'Once daily for 4 weeks (M. canis: 6–8 weeks)',
+  notes:'PHARMAC Special Authority required. Confirm diagnosis with mycology before commencing. Baseline LFTs not routinely required in healthy children but consider with prolonged courses. Tablets only, may need crushed in food for younger children.',preps:[]
+}]},
+{id:'ketoconazole-sh',name:'Ketoconazole 2% Shampoo (Nizoral)',cat:'Dermatology',ind:['Seborrhoeic dermatitis (cradle cap, scalp)','Pityriasis versicolor'],minAm:12,regs:[{
+  lbl:'Seborrhoeic dermatitis',route:'Topical scalp',type:'fx',fxD:'Apply, lather, leave 3–5 min, rinse',freq:'Twice weekly for 2–4 weeks',
+  notes:'Avoid eyes. Cradle cap usually self-limiting; gentle massage with emollient first-line. For older children, twice-weekly use as preventive maintenance. Available OTC.',preps:[]
+}]},
+{id:'fusidic-skin',name:'Fusidic Acid 2% Cream (Foban)',f:'F',cat:'Dermatology',ind:['Localised impetigo','Infected eczema (limited)'],minAm:1,regs:[{
+  lbl:'Localised superficial skin infection',route:'Topical',type:'fx',fxD:'Apply thinly',freq:'Three to four times daily for 5–7 days',
+  notes:'Mupirocin generally preferred due to lower resistance rates in NZ. Reserve for short courses, avoid prolonged use to limit fusidic acid resistance.',preps:[]
+}]},
+{id:'benzoyl-peroxide',name:'Benzoyl Peroxide 2.5–5%',cat:'Dermatology',ind:['Mild–moderate acne'],minAm:120,regs:[{
+  lbl:'Mild–moderate acne',route:'Topical',type:'fx',fxD:'Apply thinly to affected area',freq:'Once daily, building up to twice daily',
+  notes:'Start once daily for first week to reduce irritation. Bleaches fabrics and hair, warn re pillowcases. Combine with topical retinoid (adapalene) for greater effect. OTC available.',preps:[]
+}]},
+{id:'adapalene',name:'Adapalene 0.1% (Differin)',cat:'Dermatology',ind:['Acne, comedonal and inflammatory'],minAm:144,regs:[{
+  lbl:'Acne',route:'Topical',type:'fx',fxD:'Apply thinly to entire affected area at night',freq:'Once daily (evening)',
+  notes:'Adolescents only (≥ 12 yrs). Apply pea-sized amount to whole face (not just spots). Initial irritation common, reduce frequency or rotate with non-application days. Sun-protective measures essential. May take 8–12 weeks for visible improvement.',preps:[]
+}]},
+{id:'tacrolimus-topical',name:'Tacrolimus 0.03% / 0.1% (Protopic)',f:'R',cat:'Dermatology',ind:['Moderate–severe eczema, face / flexures (steroid-sparing)'],minAm:24,regs:[{
+  lbl:'Eczema, sensitive sites',route:'Topical',type:'fx',fxD:'Apply thinly twice daily until clear, then taper',freq:'Twice daily, then 2–3× weekly maintenance',
+  notes:'PHARMAC Special Authority. ≥ 2 yrs: 0.03% strength only. ≥ 16 yrs: 0.03% or 0.1%. Burning sensation common in first days, usually resolves. Use sunscreen, avoid UV exposure. Steroid-sparing for facial/flexural eczema.',preps:[]
+}]},
+{id:'chloramphenicol-eye',name:'Chloramphenicol Eye Drops / Ointment',f:'F',cat:'Ophthalmic & Otic',ind:['Bacterial conjunctivitis'],minAm:1,c:1,regs:[{
+  lbl:'Bacterial conjunctivitis',route:'Topical, eye',type:'fx',fxD:'1 drop OR small amount of ointment to affected eye(s)',freq:'Drops: every 2 h for 48 h then QID; Ointment: TDS–QID',
+  notes:'Most paediatric conjunctivitis is viral. Treat if purulent, persistent (> 5–7 days), or contact lens wearer. Continue 48 h after resolution. School exclusion not required. Counsel hand hygiene. PHARMAC subsidised.',preps:[]
+}]},
+{id:'gentamicin-eye',name:'Gentamicin Eye Drops 0.3%',cat:'Ophthalmic & Otic',ind:['Bacterial conjunctivitis (chloramphenicol allergy/resistance)','Corneal abrasion prophylaxis'],minAm:0,regs:[{
+  lbl:'Bacterial conjunctivitis',route:'Topical, eye',type:'fx',fxD:'1–2 drops to affected eye(s)',freq:'Every 2 h for 48 h, then QID',
+  notes:'Alternative when chloramphenicol unsuitable. Consider for Pseudomonas concern (contact lens wearer). Contact ophthalmology if no improvement at 48 h.',preps:[]
+}]},
+{id:'sodcrom-eye',name:'Sodium Cromoglicate Eye Drops 2%',f:'F',cat:'Ophthalmic & Otic',ind:['Allergic conjunctivitis'],minAm:48,regs:[{
+  lbl:'Allergic conjunctivitis',route:'Topical, eye',type:'fx',fxD:'1–2 drops to each eye',freq:'Four times daily',
+  notes:'Mast cell stabiliser, requires 1–2 weeks for full effect. Best for chronic / seasonal use. For acute symptoms add ocular antihistamine. PHARMAC subsidised. Avoid contact lenses during use.',preps:[]
+}]},
+{id:'fusidic-eye',name:'Fusidic Acid Eye Drops 1% (Fucithalmic)',cat:'Ophthalmic & Otic',ind:['Bacterial conjunctivitis','Staphylococcal blepharitis'],minAm:0,regs:[{
+  lbl:'Conjunctivitis / blepharitis',route:'Topical, eye',type:'fx',fxD:'1 drop',freq:'Twice daily',
+  notes:'Twice daily dosing (adherence advantage). Particularly useful for staphylococcal blepharitis. Continue 48 h after resolution.',preps:[]
+}]},
+{id:'ciprofloxacin-ear',name:'Ciprofloxacin Ear Drops 0.3% (Ciloxan)',f:'R',cat:'Ophthalmic & Otic',ind:['Otitis externa','Otitis media with grommets','Discharging ears'],minAm:12,regs:[{
+  lbl:'Otitis externa / discharging ear',route:'Topical, ear',type:'fx',fxD:'4 drops',freq:'Twice daily for 7 days',
+  notes:'Quinolone preferred over aminoglycoside drops (no ototoxicity risk if perforation). Useful with grommets. Pull pinna up and back, wiggle gently. Avoid swimming/water in ears during treatment. PHARMAC Special Authority for some formulations.',preps:[]
+}]},
+{id:'acetic-acid-ear',name:'Acetic Acid 2% Ear Drops (EarCalm)',cat:'Ophthalmic & Otic',ind:['Mild otitis externa','Swimmer\u2019s ear prophylaxis'],minAm:24,regs:[{
+  lbl:'Mild otitis externa',route:'Topical, ear',type:'fx',fxD:'1 spray or 2–3 drops',freq:'Three times daily for 7 days',
+  notes:'OTC alternative for mild OE. Antifungal and antibacterial via acidification. Stinging common initially. Not for use with grommets or perforation.',preps:[]
+}]},
+{id:'ivermectin',name:'Ivermectin (oral, scabies)',cat:'Antiparasitics',ind:['Resistant or crusted scabies (specialist)','Onchocerciasis'],minAm:0,minKg:15,regs:[{
+  lbl:'Scabies, resistant or crusted',route:'Oral',type:'wt',mpk:0.2,freq:'Single dose, repeat after 7–14 days',mxD:18,
+  notes:'For ≥ 15 kg only. Take with food (×2 absorption fed vs fasted). Specialist initiation usually. Standard scabies = topical permethrin first-line.',preps:[]
+}]},
+{id:'mebendazole',name:'Mebendazole (Vermox, Combantrin-1)',f:'F',cat:'Antiparasitics',ind:['Threadworm (Enterobius)','Roundworm','Hookworm'],minAm:12,c:1,regs:[{
+  lbl:'Threadworm',route:'Oral',type:'fx',fxD:'100 mg',freq:'Single dose, repeat after 2 weeks',
+  notes:'≥ 6 months: 100 mg single dose, repeat at 2 weeks. Treat all household members simultaneously. Wash bedding/clothing. Hand hygiene. Cut nails. Soft chewable tablet 100 mg available OTC.',preps:[]
+}]},
+{id:'albendazole',name:'Albendazole',cat:'Antiparasitics',ind:['Hookworm','Roundworm','Strongyloides'],minAm:24,regs:[{
+  lbl:'Hookworm / roundworm',route:'Oral',type:'ab',
+  bands:[{mnM:24,mxM:120,d:200,u:'mg',lbl:'2–< 10 yrs: 200 mg once',freq:'Single dose'},
+         {mnM:120,mxM:99999,d:400,u:'mg',lbl:'≥ 10 yrs: 400 mg once',freq:'Single dose'}],
+  freq:'Single dose for most helminths',
+  notes:'Strongyloides: 400 mg daily for 3 days. Take with fatty food. Tablets only. Specialist guidance for tropical infections.',preps:[]
+}]},
+{id:'ferrous-sulfate',name:'Ferrous Sulfate (iron supplement)',f:'F',cat:'Nutritional & Haematological',ind:['Iron deficiency anaemia','Iron deficiency without anaemia'],minAm:6,c:1,regs:[{
+  lbl:'Iron deficiency',route:'Oral',type:'wt',mpk:3,unit:'mg elemental iron',freq:'Once to twice daily',mxD:200,
+  notes:'Range 3–6 mg elemental Fe/kg/day. Ferro-Liquid 30 mg Fe/5 mL = 6 mg/mL. Give between meals if tolerated, with vitamin C-rich drink. With food if GI upset. Stains teeth, dilute and rinse mouth. Treat 3 months minimum after Hb normalised. Check ferritin at 3 months.',
+  preps:[{lbl:'Ferro-Liquid (Iron 30 mg/5 mL)',mpm:6}]
+}]},
+{id:'vitamin-d',name:'Vitamin D (Cholecalciferol)',f:'F',cat:'Nutritional & Haematological',ind:['Vitamin D deficiency','Rickets prevention','Breastfed infants (routine)'],minAm:0,c:1,regs:[
+  {lbl:'Routine prophylaxis',route:'Oral',type:'ab',
+   bands:[{mnM:0,mxM:12,d:400,u:'IU/day',lbl:'< 1 yr (esp. breastfed): 400 IU/day',freq:'Once daily'},
+          {mnM:12,mxM:99999,d:400,u:'IU/day',lbl:'≥ 1 yr at risk: 400 IU/day or monthly equivalent',freq:'Once daily or monthly'}],
+   freq:'Once daily',
+   notes:'NZ exclusive breastfed infants of dark-skinned mothers, premature, or limited sun: routine supplementation. Cholecalciferol (D3) preferred. Liquid drops or chewables. Annual review.',preps:[]},
+  {lbl:'Vitamin D deficiency treatment',route:'Oral',type:'ab',
+   bands:[{mnM:0,mxM:12,d:1000,u:'IU/day',lbl:'< 1 yr: 1,000–2,000 IU/day for 3 months',freq:'Once daily'},
+          {mnM:12,mxM:144,d:2000,u:'IU/day',lbl:'1–< 12 yrs: 2,000–5,000 IU/day for 3 months',freq:'Once daily'},
+          {mnM:144,mxM:99999,d:5000,u:'IU/day',lbl:'≥ 12 yrs: 50,000 IU monthly for 3–6 months',freq:'Monthly'}],
+   freq:'Daily for 3 months, then maintenance',
+   notes:'Confirm 25-OH vitamin D < 50 nmol/L before treatment. Recheck level at 3 months. Then maintenance dose (400 IU/day or as above). Calcium intake assessment essential.',preps:[]}
+]},
+{id:'folic-acid',name:'Folic Acid',f:'F',cat:'Nutritional & Haematological',ind:['Folate deficiency','Methotrexate co-prescription','Haemoglobinopathies'],minAm:0,regs:[{
+  lbl:'Folate deficiency / supplementation',route:'Oral',type:'ab',
+  bands:[{mnM:0,mxM:12,d:0.5,u:'mg/day',lbl:'< 1 yr: 0.5 mg/day (specialist guidance)',freq:'Once daily'},
+         {mnM:12,mxM:144,d:5,u:'mg/day',lbl:'1–< 12 yrs: 5 mg/day',freq:'Once daily'},
+         {mnM:144,mxM:99999,d:5,u:'mg/day',lbl:'≥ 12 yrs: 5 mg/day',freq:'Once daily'}],
+  freq:'Once daily',
+  notes:'Folate deficiency: 4 weeks treatment then maintenance. With methotrexate: 5 mg weekly (different day from MTX). Haemoglobinopathies: lifelong daily supplementation. Always exclude B12 deficiency before treating macrocytic anaemia.',preps:[]
+}]},
+{id:'zinc',name:'Zinc Sulfate (acute diarrhoea)',cat:'Nutritional & Haematological',ind:['Acute diarrhoea (resource-limited / specialist)'],minAm:0,regs:[{
+  lbl:'Acute diarrhoea',route:'Oral',type:'ab',
+  bands:[{mnM:0,mxM:6,d:10,u:'mg/day',lbl:'< 6 months: 10 mg/day for 10–14 days',freq:'Once daily'},
+         {mnM:6,mxM:99999,d:20,u:'mg/day',lbl:'≥ 6 months: 20 mg/day for 10–14 days',freq:'Once daily'}],
+  freq:'Once daily for 10–14 days',
+  notes:'WHO recommendation for acute diarrhoea (mainly LMIC settings). NZ use limited. Reduces duration and severity of diarrhoea.',preps:[]
+}]},
+{id:'hydroxocobalamin',name:'Hydroxocobalamin (B12)',cat:'Nutritional & Haematological',ind:['B12 deficiency','Pernicious anaemia'],minAm:0,regs:[{
+  lbl:'B12 deficiency, IM',route:'IM injection',type:'fx',fxD:'1 mg IM',freq:'Three injections per week for 2 weeks, then 3-monthly maintenance',
+  notes:'Loading: 1 mg IM 3× weekly for 2 weeks (or until no further improvement in neurological symptoms). Maintenance: 1 mg IM every 3 months. Some specialists use oral high-dose 1–2 mg daily as alternative for adolescents. Check intrinsic factor antibodies if pernicious anaemia suspected.',preps:[]
+}]},
+{id:'calcium-carbonate',name:'Calcium Carbonate',cat:'Nutritional & Haematological',ind:['Calcium supplementation (rickets adjunct)','Hypocalcaemia'],minAm:0,regs:[{
+  lbl:'Calcium supplementation',route:'Oral',type:'ab',
+  bands:[{mnM:0,mxM:12,d:200,u:'mg elemental Ca/day',lbl:'< 1 yr: 200 mg/day (specialist)',freq:'Divided doses'},
+         {mnM:12,mxM:96,d:500,u:'mg elemental Ca/day',lbl:'1–< 8 yrs: 500 mg/day',freq:'Divided doses'},
+         {mnM:96,mxM:99999,d:1000,u:'mg elemental Ca/day',lbl:'≥ 8 yrs: 1000 mg/day',freq:'Divided doses'}],
+  freq:'Divided doses with meals',
+  notes:'Use elemental calcium content for dosing. Calcium carbonate ~ 40% elemental Ca. Take with vitamin D for rickets. Separate from iron (≥ 2 h) and tetracyclines. Constipation common.',preps:[]
+}]},
+{id:'atenolol',name:'Atenolol',cat:'Cardiovascular',ind:['Hypertension (specialist)','Supraventricular tachycardia','Migraine prophylaxis'],minAm:24,regs:[{
+  lbl:'Hypertension / SVT',route:'Oral',type:'wt',mpk:0.5,freq:'Once to twice daily',mxD:50,
+  notes:'SPECIALIST INITIATION (paediatric cardiologist). Range 0.5–1 mg/kg/dose BD (max 2 mg/kg/day or 100 mg). Stop gradually to avoid rebound. Contraindicated in asthma. Tablets only.',preps:[]
+}]},
+{id:'amlodipine',name:'Amlodipine',cat:'Cardiovascular',ind:['Hypertension (specialist)'],minAm:12,regs:[{
+  lbl:'Hypertension',route:'Oral',type:'wt',mpk:0.1,freq:'Once daily',mxD:5,
+  notes:'SPECIALIST INITIATION. Start 0.1 mg/kg/day (max 5 mg). Titrate weekly to max 0.6 mg/kg/day or 10 mg. Tablets can be crushed. Ankle oedema and gum hyperplasia possible. CYP3A4 substrate.',preps:[]
+}]},
+{id:'levothyroxine',name:'Levothyroxine (Synthroid, Eltroxin)',f:'F',cat:'Endocrine',ind:['Congenital hypothyroidism','Acquired hypothyroidism'],minAm:0,regs:[{
+  lbl:'Hypothyroidism replacement',route:'Oral',type:'ab',
+  bands:[{mnM:0,mxM:6,d:13,u:'mcg/kg/day',lbl:'< 6 months: 10–15 mcg/kg/day',freq:'Once daily'},
+         {mnM:6,mxM:24,d:9,u:'mcg/kg/day',lbl:'6 months–< 2 yrs: 8–10 mcg/kg/day',freq:'Once daily'},
+         {mnM:24,mxM:60,d:6,u:'mcg/kg/day',lbl:'2–< 5 yrs: 5–6 mcg/kg/day',freq:'Once daily'},
+         {mnM:60,mxM:144,d:4,u:'mcg/kg/day',lbl:'5–< 12 yrs: 4–5 mcg/kg/day',freq:'Once daily'},
+         {mnM:144,mxM:99999,d:2.5,u:'mcg/kg/day',lbl:'≥ 12 yrs: 2–3 mcg/kg/day',freq:'Once daily'}],
+  freq:'Once daily, on empty stomach 30 min before food',
+  notes:'SPECIALIST INITIATION (paediatric endocrinology) for congenital hypothyroidism (lifelong). Tablets only, may be crushed and mixed with small water for infants. Avoid soy formula at same time. Monitor TSH and free T4 every 4–6 weeks initially, then every 6–12 months when stable.',preps:[]
+}]},
+{id:'metformin',name:'Metformin',f:'F',cat:'Endocrine',ind:['Type 2 diabetes (≥ 10 yrs)','PCOS (adolescent)'],minAm:120,regs:[{
+  lbl:'Type 2 diabetes / PCOS',route:'Oral',type:'fx',fxD:'500 mg once daily, titrate',freq:'Once daily, increasing to BD or TDS',
+  notes:'SPECIALIST INITIATION. Start 500 mg once daily with food, increase weekly to max 2,000 mg/day in divided doses. GI side effects common, slow titration helps. Hold during illness with vomiting/dehydration. Avoid in renal impairment (eGFR < 30). Monitor B12 with long-term use.',preps:[]
+}]}
+];
+
+
+// ── Clinical presentations (entry points to drug list) ────────────
+const PRESENTATIONS={
+  'aom':{label:'Acute otitis media',drugs:[
+    {id:'amoxicillin',regimen:1,note:'First-line: 40 mg/kg/dose BD × 5–7 days'},
+    {id:'coamoxiclav',regimen:0,note:'Second-line if treatment failure or recent amoxicillin'},
+    {id:'paracetamol',regimen:0,note:'Pain relief'}
+  ]},
+  'tonsillitis':{label:'Streptococcal tonsillitis',drugs:[
+    {id:'penV',regimen:0,note:'First-line for confirmed Group A Strep × 10 days'},
+    {id:'amoxicillin',regimen:0,note:'Alternative, BD dosing improves adherence'},
+    {id:'cefalexin',regimen:0,note:'Penicillin allergy (non-severe)'}
+  ]},
+  'cellulitis':{label:'Cellulitis / skin infection',drugs:[
+    {id:'flucloxacillin',regimen:0,note:'First-line, especially staph coverage'},
+    {id:'cefalexin',regimen:0,note:'Alternative, better palatability and BD option'},
+    {id:'clindamycin',regimen:0,note:'If MRSA suspected or severe penicillin allergy'}
+  ]},
+  'impetigo':{label:'Impetigo',drugs:[
+    {id:'mupirocin',regimen:0,note:'Localised: topical only'},
+    {id:'flucloxacillin',regimen:0,note:'Extensive: oral antibiotic'},
+    {id:'cefalexin',regimen:0,note:'Alternative oral option'}
+  ]},
+  'uti-lower':{label:'Lower UTI (uncomplicated)',drugs:[
+    {id:'trimethoprim',regimen:0,note:'First-line where local resistance allows'},
+    {id:'nitrofurantoin',regimen:0,note:'Lower UTI only, not for upper UTI'},
+    {id:'cefalexin',regimen:0,note:'Alternative, also covers upper UTI'}
+  ]},
+  'fever-pain':{label:'Fever / pain',drugs:[
+    {id:'paracetamol',regimen:0,note:'First-line, all ages > 1 month'},
+    {id:'ibuprofen',regimen:0,note:'≥ 3 months and well hydrated'}
+  ]},
+  'wheeze':{label:'Acute viral wheeze / asthma',drugs:[
+    {id:'salbutamol',regimen:1,note:'Acute relief, MDI + spacer preferred'},
+    {id:'prednisolone',regimen:0,note:'Short oral steroid course'},
+    {id:'ipratropium',regimen:0,note:'Add to salbutamol for severe wheeze'}
+  ]},
+  'eczema':{label:'Eczema / atopic dermatitis',drugs:[
+    {id:'emollient',regimen:0,note:'Cornerstone of management'},
+    {id:'hydrocortisone-cream',regimen:0,note:'Mild flare or sensitive sites'},
+    {id:'betamethasone-cream',regimen:0,note:'Moderate flare, body and limbs'},
+    {id:'cetirizine',regimen:0,note:'Itch-disturbed sleep'}
+  ]},
+  'gastro':{label:'Acute gastroenteritis',drugs:[
+    {id:'ondansetron',regimen:0,note:'For persistent vomiting affecting oral hydration'},
+    {id:'paracetamol',regimen:0,note:'Comfort, fever'}
+  ]},
+  'threadworm':{label:'Threadworm',drugs:[
+    {id:'mebendazole',regimen:0,note:'Single dose, repeat at 2 weeks; treat household'}
+  ]}
+};
+
+// ── Parent-facing warnings (rendered into print sheet) ────────────
+const PARENT_WARNINGS={
+  'paracetamol':['Do NOT exceed the maximum dose.','Do not give more than 5 doses in 24 hours.','Check other medicines for paracetamol (cold/flu products often contain it).','If your child has liver problems, ask your GP first.','Seek urgent medical advice if accidental overdose.'],
+  'ibuprofen':['Always give with food or milk.','Do not give if your child is dehydrated, vomiting, or has chickenpox.','Do not give to children under 3 months or under 5 kg.','Stop and contact your GP if your child develops black/bloody stools, vomits blood, or has tummy pain.','Avoid combining with other anti-inflammatory medicines.'],
+  'amoxicillin':['Complete the full course even if your child feels better.','Take regularly at the prescribed times for steady levels in the body.','Side effects: diarrhoea or rash are common but usually mild.','Stop and contact your GP urgently if your child develops a widespread rash, swelling of face/lips, or breathing difficulty.','Tell your GP if there is any history of penicillin allergy.'],
+  'flucloxacillin':['Give 30–60 minutes BEFORE food or 2 hours after — food reduces absorption.','Complete the full course as prescribed.','Stop and seek urgent advice if yellow eyes/skin, dark urine, or severe fatigue (rare liver effects).','Tell your GP if there is any history of penicillin allergy.'],
+  'coamoxiclav':['Take with food to reduce stomach upset.','Complete the full course.','Diarrhoea is more common than with plain amoxicillin.','Stop and seek urgent advice for severe diarrhoea, jaundice, or rash.'],
+  'cefalexin':['Complete the full course.','Take with or without food.','Diarrhoea may occur, usually mild.','Tell your GP about any previous antibiotic allergies.'],
+  'azithromycin':['Take 30–60 minutes before food OR 2 hours after.','Complete the full course (even short 3- or 5-day courses).','Diarrhoea, nausea, and stomach pain are common.','Stop and contact GP for severe diarrhoea, irregular heartbeat, or hearing changes.'],
+  'erythromycin':['Take with food to reduce nausea.','Complete the full course.','Stomach upset is common but usually settles.','Many drug interactions — tell your GP all other medicines your child is taking.'],
+  'trimethoprim':['Complete the full course.','Drink plenty of water.','Mild rash or stomach upset can occur.','Stop and contact GP for severe rash, mouth ulcers, or unusual bruising/bleeding.'],
+  'nitrofurantoin':['Give with food (improves absorption and reduces nausea).','May turn urine dark yellow or brown — this is harmless.','Stop and contact GP immediately for breathing difficulty, persistent cough, or yellow skin/eyes.','Not suitable for kidney infection — see GP if back pain or fever.'],
+  'metronidazole':['Take with or after food to reduce nausea.','AVOID alcohol for 48 hours after the last dose (in adolescents).','May give a metallic taste in mouth.','Complete the full course.'],
+  'prednisolone':['Give in the morning with food.','Complete the prescribed short course (usually 3 days).','Do not stop early, but no taper is needed for short courses ≤ 5 days.','May cause increased appetite, mood changes, or trouble sleeping during the course.','If your child has been exposed to chickenpox or measles and is on steroids, contact your GP.'],
+  'salbutamol':['Use a spacer if at all possible — much more effective than puffer alone.','Give 1 puff at a time, 5–6 breaths through spacer between puffs.','If your child needs salbutamol more than every 4 hours, or you are using more than 6–8 puffs at a time, seek urgent medical care.','Mild shakiness or fast heartbeat is normal and settles within 30 minutes.','Bring the spacer to all asthma reviews.'],
+  'ondansetron':['Place ODT (wafer) on the tongue — let it dissolve, do not chew.','Most children only need 1–2 doses.','If vomiting persists despite ondansetron, return to the GP or ED.','May cause headache or constipation.','Seek urgent care for any irregular heartbeat or fainting.'],
+  'mebendazole':['Treat ALL household members on the same day.','Wash bedding, towels and underwear in hot water on treatment day.','Cut your child\u2019s nails short and discourage scratching.','Hand-washing before food and after toilet is critical.','Repeat dose in 2 weeks to catch any newly hatched worms.'],
+  'loratadine':['Once-daily dosing, can give any time of day.','Non-sedating but mild drowsiness can occur in some children.','Effects begin within 1–3 hours.','Safe for daily use during allergy season.']
+};
+
+
+// ── State ────────────────────────────────────────────────────────
+const S={
+  cat:'all',
+  ageUnit:'yr',
+  view:'drugs',
+  gender:'m',
+  recent:[],
+  trendPoints:[]
+};
+
+// ── Trend points (multiple growth measurements) ──────────────────
+function addTrendPoint(){
+  const wt=+($('wt')?.value||0);
+  const ht=+($('ght')?.value||0);
+  const ageY=getAgeYears();
+  if(!wt&&!ht){flashMsg('Enter weight or height first');return}
+  if(!ageY){flashMsg('Enter age first');return}
+  S.trendPoints.push({ageM:ageY*12,wt:wt||null,ht:ht||null});
+  S.trendPoints.sort((a,b)=>a.ageM-b.ageM);
+  renderTrendList();
+  updateGrowthResults();
+}
+function removeTrendPoint(i){S.trendPoints.splice(i,1);renderTrendList();updateGrowthResults()}
+function renderTrendList(){
+  const el=$('trend-list');if(!el)return;
+  if(!S.trendPoints.length){el.innerHTML='';return}
+  const pills=S.trendPoints.map((p,i)=>{
+    const ageY=p.ageM/12;
+    const ageStr=ageY<2?Math.round(p.ageM)+' mo':ageY.toFixed(1)+' y';
+    const parts=[];
+    if(p.wt)parts.push(p.wt+' kg');
+    if(p.ht)parts.push(p.ht+' cm');
+    return`<span class="trend-pill">${ageStr} · ${parts.join(' · ')}<button onclick="removeTrendPoint(${i})" title="Remove">×</button></span>`;
+  }).join('');
+  el.innerHTML=`<div class="trend-list-inner">${pills}</div>`;
+}
+function flashMsg(m){
+  const e=document.createElement('div');
+  e.textContent=m;
+  e.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1A1F1C;color:#F5F1E8;padding:10px 20px;border-radius:6px;font-family:Newsreader,serif;z-index:9999;animation:fadeIn .2s';
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),2200);
+}
+
+// ── Categories ───────────────────────────────────────────────────
+const CATS=[
+  {id:'all',lbl:'All'},{id:'common',lbl:'★ Common'},
+  {id:'Analgesics & NSAIDs',lbl:'Analgesics'},
+  {id:'Antibacterials',lbl:'Antibacterials'},
+  {id:'Antifungals & Antivirals',lbl:'Antifungals/virals'},
+  {id:'Respiratory',lbl:'Respiratory'},
+  {id:'Gastrointestinal',lbl:'GI'},
+  {id:'Antihistamines',lbl:'Antihist.'},
+  {id:'Nervous System',lbl:'CNS'},
+  {id:'Dermatology',lbl:'Derm'},
+  {id:'Antiparasitics',lbl:'Parasitic'},
+  {id:'Nutritional & Haematological',lbl:'Vit/Haem'},
+  {id:'Cardiovascular',lbl:'CV'},
+  {id:'Endocrine',lbl:'Endocrine'},
+  {id:'Ophthalmic & Otic',lbl:'Eye/Ear'}
+];
+const BC={
+  'Analgesics & NSAIDs':'b-an','Antibacterials':'b-ab',
+  'Antifungals & Antivirals':'b-af','Respiratory':'b-re',
+  'Gastrointestinal':'b-gi','Antihistamines':'b-ah',
+  'Nervous System':'b-ns','Dermatology':'b-dr',
+  'Antiparasitics':'b-pa','Nutritional & Haematological':'b-nu',
+  'Cardiovascular':'b-cv','Endocrine':'b-en',
+  'Ophthalmic & Otic':'b-oo'
+};
+
+// ── Helpers ──────────────────────────────────────────────────────
+const $=id=>document.getElementById(id);
+const e=s=>(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'})[c]);
+const hi=(s,q)=>{if(!q||!s)return e(s);const r=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');return e(s).replace(r,'<mark class="hi">$1</mark>')};
+
+function getAgeYears(){
+  const a=+$('ag').value||0;
+  if(!a)return 0;
+  return S.ageUnit==='yr'?a:S.ageUnit==='mo'?a/12:a/52;
+}
+function setAgeUnit(u){S.ageUnit=u;document.querySelectorAll('.ubtn').forEach(b=>b.classList.toggle('on',b.dataset.unit===u));render()}
+function resetAll(){$('wt').value='';$('ag').value='';$('q').value='';if($('ght'))$('ght').value='';S.trendPoints=[];if($('trend-list'))$('trend-list').innerHTML='';S.cat='all';S.recent=[];$('wt').focus();render()}
+function toggleBL(){const f=$('btn-bl');if(!f)return;f.classList.toggle('on');render()}
+function showRecent(id){const d=D.find(x=>x.id===id);if(!d)return;$('q').value=d.name;render()}
+function trackRecent(id){if(!S.recent.includes(id)){S.recent.unshift(id);if(S.recent.length>5)S.recent.pop()}}
+function renderRecents(){
+  const el=$('recents');if(!el)return;
+  const wt=+$('wt').value;
+  if(!wt||!S.recent.length||$('q').value){el.innerHTML='';return}
+  const pills=S.recent.map(id=>{
+    const d=D.find(x=>x.id===id);
+    if(!d)return'';
+    return`<button class="recent-pill" onclick="showRecent('${id}')">${e(d.name.split(' ')[0])}</button>`;
+  }).join('');
+  el.innerHTML=`<span class="recents-lbl">Recent:</span>${pills}`;
+}
+
+// ── Plain-English freq/route translation for parents ────────────
+const FREQ_PLAIN={'q4h':'every 4 hours','q6h':'every 6 hours','q8h':'every 8 hours','q12h':'every 12 hours (twice a day)','BD':'twice a day','TDS':'three times a day','QID':'four times a day','q4-6h':'every 4 to 6 hours','q6-8h':'every 6 to 8 hours','OD':'once a day','single':'one dose only','PRN':'as needed'};
+function plainifyFreq(f){
+  if(!f)return f;
+  let p=f;
+  for(const[k,v]of Object.entries(FREQ_PLAIN)){p=p.replace(new RegExp('\\b'+k+'\\b','gi'),v)}
+  p=p.replace(/twice daily \(BD\)/gi,'twice a day').replace(/three times daily \(TDS\)/gi,'three times a day').replace(/four times daily \(QID\)/gi,'four times a day').replace(/once daily/gi,'once a day').replace(/every (\d+)\s*h(?:ours?)?/gi,'every $1 hours');
+  return p;
+}
+function plainifyRoute(r){if(!r)return r;return r.replace(/Oral\s*\/\s*Rectal/i,'By mouth or in the bottom').replace(/Oral/i,'By mouth').replace(/Rectal/i,'In the bottom (suppository)').replace(/Topical/i,'On the skin').replace(/Inhaled MDI \+ spacer/i,'By puffer with spacer').replace(/Nebulised/i,'By nebuliser').replace(/IM injection/i,'By injection (in muscle)').replace(/Buccal/i,'In the cheek').replace(/Intranasal/i,'In the nose')}
+
+// ── Build parent-facing print HTML for a card ───────────────────
+function buildParentText(card){
+  const drugId=card.dataset.drug,regIdx=+(card.dataset.regimen||0);
+  const drug=D.find(x=>x.id===drugId);if(!drug)return null;
+  const reg=drug.regs[regIdx];
+  const pres=card.dataset.presentation||null;
+  const wt=+$('wt').value,ageY=getAgeYears();
+  const calc=calcDose(reg,wt,ageY,drug);
+  if(!calc)return null;
+  const prep=card.querySelector('.prep-sel');
+  const volTxt=card.querySelector('.vol-val')?.textContent||'';
+  const prepName=prep&&prep.value?prep.options[prep.selectedIndex].text:null;
+  return{drug,reg,calc,wt,ageY,prepName,volTxt,pres}
+}
+function buildParentHTML(p){
+  const{drug,reg,calc,wt,ageY,prepName,volTxt,pres}=p;
+  const ageStr=ageY<2?Math.round(ageY*12)+' months':ageY.toFixed(1)+' years';
+  const today=new Date().toLocaleDateString('en-NZ',{day:'numeric',month:'long',year:'numeric'});
+  const presLine=pres&&PRESENTATIONS[pres]?`<div class="pp-indication"><strong>For:</strong> ${PRESENTATIONS[pres].label}</div>`:'';
+  let doseLine,volLine='';
+  if(calc.doseRange){
+    doseLine=`${calc.doseRange[0]}–${calc.doseRange[1]} mg`;
+    if(calc.dose)doseLine+=` (giving ${calc.dose} mg)`;
+  }else if(calc.dose){doseLine=`${calc.dose} ${reg.unit||'mg'}`}
+  else{doseLine=calc.fxD||'See dose'}
+  if(volTxt&&prepName)volLine=`<div class="pp-vol">≈ ${volTxt} of ${prepName}</div>`;
+  const warnings=PARENT_WARNINGS[drug.id]||[];
+  const warnHTML=warnings.length?`<div class="pp-warnings"><h3>Important — please read</h3><ul>${warnings.map(w=>`<li>${e(w)}</li>`).join('')}</ul></div>`:'';
+  return`<div class="parent-print">
+<div class="pp-head">
+<div class="pp-name">${e(drug.name)}</div>
+${drug.al?`<div class="pp-alias">also known as ${drug.al.map(e).join(', ')}</div>`:''}
+</div>
+${presLine}
+<table class="pp-tbl">
+<tr><th>Patient</th><td>Weight ${wt} kg, age ${ageStr}</td></tr>
+<tr><th>How much</th><td><strong>${doseLine}</strong>${volLine}</td></tr>
+<tr><th>How often</th><td>${e(plainifyFreq(reg.freq))}</td></tr>
+<tr><th>How to give</th><td>${e(plainifyRoute(reg.route))}</td></tr>
+${reg.notes?`<tr><th>Notes</th><td>${e(reg.notes)}</td></tr>`:''}
+</table>
+${warnHTML}
+<div class="pp-foot">Prepared ${today} · Working Diagnosis Paediatric Dose Calculator · NZFc / Starship aligned · Always discuss any concerns with your GP or pharmacist.</div>
+</div>`;
+}
+function getActionContext(btn){
+  const card=btn.closest('.card,.combo-card');
+  if(!card)return null;
+  if(card.classList.contains('combo-card')){return{card,combo:true}}
+  return buildParentText(card);
+}
+function copyParentInstructions(btn){
+  const ctx=getActionContext(btn);if(!ctx)return;
+  let text;
+  if(ctx.combo){
+    const wt=+$('wt').value,ageY=getAgeYears();
+    text=`Working Diagnosis · Pain & Fever combination\nWeight ${wt} kg, age ${ageY<2?Math.round(ageY*12)+' months':ageY.toFixed(1)+' years'}\n\nAlternate paracetamol and ibuprofen as needed.\nKeep a written log of times and which medicine was given.`;
+  }else{
+    const{drug,reg,calc,wt,ageY,prepName,volTxt}=ctx;
+    const ageStr=ageY<2?Math.round(ageY*12)+' months':ageY.toFixed(1)+' years';
+    let doseLine=calc.dose?`${calc.dose} ${reg.unit||'mg'}`:(calc.fxD||'see dose');
+    text=`${drug.name}\nWeight ${wt} kg, age ${ageStr}\n\nDose: ${doseLine}${volTxt&&prepName?` (≈ ${volTxt} of ${prepName})`:''}\nFrequency: ${plainifyFreq(reg.freq)}\nRoute: ${plainifyRoute(reg.route)}\n\n${reg.notes||''}`;
+  }
+  navigator.clipboard.writeText(text).then(()=>flashAction(btn,'Copied'));
+}
+function printCard(btn){
+  const ctx=getActionContext(btn);if(!ctx||ctx.combo)return;
+  const html=buildParentHTML(ctx);
+  const overlay=$('print-overlay');
+  overlay.innerHTML=html;
+  overlay.classList.add('print-target');
+  window.print();
+  setTimeout(()=>overlay.classList.remove('print-target'),500);
+}
+function flashAction(btn,msg){
+  const orig=btn.textContent;
+  btn.classList.add('flash');
+  btn.textContent=msg;
+  setTimeout(()=>{btn.classList.remove('flash');btn.textContent=orig},900);
+}
+
+// ── View / mode toggles ────────────────────────────────────────
+function toggleCompact(){document.body.classList.toggle('compact');$('btn-compact').classList.toggle('on')}
+function setView(v){S.view=v;
+  $('tab-drugs').classList.toggle('on',v==='drugs');$('tab-drugs').setAttribute('aria-selected',v==='drugs');
+  $('tab-growth').classList.toggle('on',v==='growth');$('tab-growth').setAttribute('aria-selected',v==='growth');
+  $('view-drugs').hidden=v!=='drugs';
+  $('view-growth').hidden=v!=='growth';
+  $('drugs-controls').hidden=v!=='drugs';
+  if(v==='growth')updateGrowthResults();
+}
+function setGender(g){S.gender=g;$('gbtn-m').classList.toggle('on',g==='m');$('gbtn-f').classList.toggle('on',g==='f');updateGrowthResults()}
+
+// ── Growth view rendering ──────────────────────────────────────
+function renderGrowth(){
+  const wt=+$('wt').value,ageY=getAgeYears();
+  const wtEl=$('gp-wt-display'),agEl=$('gp-ag-display');
+  if(wt)wtEl.innerHTML=`<span class="gp-static-val">${wt}</span><span class="gp-static-unit">kg</span>`;
+  else wtEl.innerHTML=`<span class="gp-static-empty">Enter weight above</span>`;
+  if(ageY){
+    const ageM=ageY*12;
+    if(ageY<2)agEl.innerHTML=`<span class="gp-static-val">${Math.round(ageM)}</span><span class="gp-static-unit">months</span>`;
+    else agEl.innerHTML=`<span class="gp-static-val">${ageY.toFixed(1)}</span><span class="gp-static-unit">years</span>`;
+    $('gp-lt2').style.display=ageY<2?'block':'none';
+  }else{
+    agEl.innerHTML=`<span class="gp-static-empty">Enter age above</span>`;
+    $('gp-lt2').style.display='none';
+  }
+}
+function updateGrowthResults(){
+  renderGrowth();
+  const wt=+$('wt').value,ht=+($('ght')?.value||0),ageY=getAgeYears();
+  const out=$('gp-results');
+  if(!ageY||(!wt&&!ht)){out.innerHTML='';renderEmptyCharts();return}
+  const aMo=ageY*12;
+  const cards=[];
+  if(wt&&aMo<=120){
+    const r=calcPercentile('wfa',S.gender,aMo,wt);
+    cards.push(gCard('Weight-for-age',r,wt,'kg'));
+  }else if(wt&&aMo>120){
+    cards.push(`<div class="gcard na"><div class="gcard-top"><div class="gcard-lbl">Weight-for-age</div><div class="gcard-pct">N/A</div></div><div class="gcard-bot"><div class="gcard-class">> 10 yrs: use BMI</div></div></div>`);
+  }
+  if(ht){
+    const r=calcPercentile('hfa',S.gender,aMo,ht);
+    cards.push(gCard(ageY<2?'Length-for-age':'Height-for-age',r,ht,'cm'));
+  }
+  if(wt&&ht){
+    const bmi=wt/Math.pow(ht/100,2);
+    if(aMo>=24){
+      const r=calcPercentile('bfa',S.gender,aMo,bmi);
+      cards.push(gCard('BMI-for-age',r,bmi.toFixed(1),'kg/m²'));
+    }
+  }
+  out.innerHTML=`<div class="growth-results">${cards.join('')}</div>`;
+  renderCharts();
+}
+function renderCharts(){
+  const wt=+$('wt').value,ht=+($('ght')?.value||0),ageY=getAgeYears();
+  const c=$('charts');
+  if(!ageY||(!wt&&!ht)){c.innerHTML='';return}
+  const aMo=ageY*12;
+  const charts=[];
+  const wtTrend=S.trendPoints.filter(p=>p.wt).map(p=>({ageM:p.ageM,val:p.wt}));
+  if(wt)wtTrend.push({ageM:aMo,val:wt});
+  const htTrend=S.trendPoints.filter(p=>p.ht).map(p=>({ageM:p.ageM,val:p.ht}));
+  if(ht)htTrend.push({ageM:aMo,val:ht});
+  const xMin=Math.max(0,Math.min(aMo-12,...S.trendPoints.map(p=>p.ageM-1)));
+  const xMaxWt=Math.min(120,aMo+24);
+  const xMaxHt=Math.min(228,aMo+24);
+  if(wtTrend.length&&aMo<=120){
+    charts.push(renderChart('wfa',S.gender,null,wtTrend,{title:`Weight-for-age (${S.gender==='m'?'boys':'girls'})`,yLabel:'Weight (kg)',xMin:Math.max(0,xMin),xMax:xMaxWt,unit:'kg'}));
+  }
+  if(htTrend.length){
+    const ageM=aMo;
+    charts.push(renderChart('hfa',S.gender,null,htTrend,{title:`${ageY<2?'Length':'Height'}-for-age (${S.gender==='m'?'boys':'girls'})`,yLabel:`${ageY<2?'Length':'Height'} (cm)`,xMin:Math.max(0,xMin),xMax:xMaxHt,unit:'cm'}));
+  }
+  if(wt&&ht&&aMo>=24){
+    const bmi=wt/Math.pow(ht/100,2);
+    const bmiTrend=S.trendPoints.filter(p=>p.wt&&p.ht).map(p=>({ageM:p.ageM,val:p.wt/Math.pow(p.ht/100,2)}));
+    bmiTrend.push({ageM:aMo,val:bmi});
+    charts.push(renderChart('bfa',S.gender,null,bmiTrend,{title:`BMI-for-age (${S.gender==='m'?'boys':'girls'})`,yLabel:'BMI (kg/m²)',xMin:Math.max(24,xMin),xMax:Math.min(228,aMo+24),unit:'kg/m²'}));
+  }
+  c.innerHTML=charts.join('');
+}
+function renderEmptyCharts(){const c=$('charts');if(c)c.innerHTML='<div class="chart-wrap"><div class="chart-empty">Enter weight/height + age to see WHO centile charts</div></div>'}
+function gCard(label,r,val,unit){
+  if(!r)return`<div class="gcard na"><div class="gcard-top"><div class="gcard-lbl">${label}</div><div class="gcard-pct">N/A</div></div><div class="gcard-bot"><div class="gcard-class">Out of reference range</div></div></div>`;
+  const cls=gCardCls(r.p),lbl=gCardLbl(r.p);
+  const sup=r.p===1?'st':r.p===2?'nd':r.p===3?'rd':'th';
+  return`<div class="gcard ${cls}"><div class="gcard-top"><div class="gcard-lbl">${label}</div><div class="gcard-pct">${r.p}<span>${sup}</span></div><div class="pcbar"><div class="pcbar-fill" style="width:${Math.min(100,Math.max(0,r.p))}%;background:${gCardCls(r.p)==='norm'?'#2F6B5C':gCardCls(r.p).startsWith('v')?'#a05858':'#B8714F'}"></div></div></div><div class="gcard-bot"><div class="gcard-class">${lbl}</div><div class="gcard-detail">${val} ${unit} · z = ${r.z.toFixed(2)}</div></div></div>`;
+}
+function gCardCls(p){if(p<3)return'vlow';if(p<10)return'low';if(p<=90)return'norm';if(p<=97)return'high';return'vhigh'}
+function gCardLbl(p){if(p<3)return'Below 3rd centile';if(p<10)return'Below 10th centile';if(p<=85)return'Within reference range';if(p<=90)return'High normal';if(p<=97)return'Above 90th centile';return'Above 97th centile'}
+
+// ── Drug calculation ───────────────────────────────────────────
+function calcDose(reg,wt,ageY,drug){
+  if(!reg)return null;
+  const ageM=ageY*12;
+  if(reg.type==='wt'){
+    if(!wt)return{ph:true};
+    let dose=Math.round(wt*reg.mpk*10)/10;
+    let cap=false;
+    if(reg.mxD&&dose>reg.mxD){dose=reg.mxD;cap=true}
+    let doseRange=null;
+    if(reg.band){
+      const lo=Math.round(wt*reg.band[0]*10)/10;
+      const hi=Math.min(reg.mxD||Infinity,Math.round(wt*reg.band[1]*10)/10);
+      doseRange=[lo,hi];
+    }
+    return{dose,cap,doseRange,flags:calcFlags(drug,wt,ageY,dose,reg)};
+  }
+  if(reg.type==='wb'){
+    if(!wt)return{ph:true};
+    const b=reg.bands.find(x=>wt>=x.mnK&&wt<x.mxK);
+    if(!b)return null;
+    return{dose:b.d,unit:b.u,bandLbl:b.lbl,flags:calcFlags(drug,wt,ageY,b.d,reg)};
+  }
+  if(reg.type==='ab'){
+    const b=reg.bands.find(x=>{
+      if(x.mnM!==undefined)return ageM>=x.mnM&&ageM<x.mxM;
+      if(x.mnK!==undefined&&wt)return wt>=x.mnK&&wt<x.mxK;
+      return false;
+    });
+    if(!b)return{ph:true};
+    return{dose:b.d,unit:b.u,bandLbl:b.lbl,bandFreq:b.freq,flags:calcFlags(drug,wt,ageY,b.d,reg)};
+  }
+  if(reg.type==='fx'){return{fxD:reg.fxD,flags:calcFlags(drug,wt,ageY,null,reg)}}
+  return null;
+}
+
+// ── Roughly expected weight for age ─────────────────────────────
+const ROUGH_WT_FOR_AGE={1:10,2:12,3:14,4:16,5:18,6:20,7:23,8:26,9:29,10:32,12:40,14:50,16:60};
+function expectedWeight(ageY){
+  if(!ageY)return null;
+  if(ageY<1)return 3.5+ageY*5;
+  const keys=Object.keys(ROUGH_WT_FOR_AGE).map(Number).sort((a,b)=>a-b);
+  if(ageY<=keys[0])return ROUGH_WT_FOR_AGE[keys[0]];
+  if(ageY>=keys[keys.length-1])return ROUGH_WT_FOR_AGE[keys[keys.length-1]];
+  for(let i=0;i<keys.length-1;i++){
+    if(ageY>=keys[i]&&ageY<=keys[i+1]){
+      const f=(ageY-keys[i])/(keys[i+1]-keys[i]);
+      return ROUGH_WT_FOR_AGE[keys[i]]+f*(ROUGH_WT_FOR_AGE[keys[i+1]]-ROUGH_WT_FOR_AGE[keys[i]]);
+    }
+  }
+  return null;
+}
+function calcFlags(drug,wt,ageY,dose,reg){
+  const flags=[];
+  if(drug.minAm&&ageY*12<drug.minAm){
+    const m=drug.minAm;
+    flags.push({type:'warn',text:`Not recommended < ${m<12?m+' months':(m/12)+' years'}`});
+  }
+  if(drug.minKg&&wt&&wt<drug.minKg){flags.push({type:'warn',text:`Not recommended < ${drug.minKg} kg`})}
+  if(wt&&ageY){
+    const exp=expectedWeight(ageY);
+    if(exp){
+      const ratio=wt/exp;
+      if(ratio<0.7)flags.push({type:'warn',text:`Weight low for age (~${exp.toFixed(0)} kg expected) — verify`});
+      else if(ratio>1.5)flags.push({type:'warn',text:`Weight high for age (~${exp.toFixed(0)} kg expected) — verify`});
+    }
+  }
+  return flags;
+}
+
+// ── Volume calc ────────────────────────────────────────────────
+function calcVol(dose,mpm){if(!dose||!mpm)return null;return Math.round(dose/mpm*10)/10}
+
+// ── Card render ────────────────────────────────────────────────
+function renderCard(d,q,presKey,presNote){
+  const wt=+$('wt').value,ageY=getAgeYears();
+  let html='';
+  const dnAlias=d.al?`<span class="dn-alias">${d.al.map(a=>hi(a,q)).join(', ')}</span>`:'';
+  const isCommon=d.c===1;
+  const fundClass=d.f?`b-fund-${d.f}`:'';
+  const fundLbl={F:'Funded',R:'Restricted',U:'Unfunded'}[d.f]||'';
+  const fundBadge=d.f?`<span class="badge b-fund ${fundClass}">${fundLbl}</span>`:'';
+  const catBadge=`<span class="badge ${BC[d.cat]||''}">${e(d.cat.split(' ')[0])}</span>`;
+  const commonBadge=isCommon?`<span class="badge badge-common">★</span>`:'';
+  const flagged=d.regs.some(r=>{const c=calcDose(r,wt,ageY,d);return c&&c.flags&&c.flags.length});
+  let cardCls='card'+(isCommon?' common':'')+(flagged?' flagged':'');
+  let presBanner='';
+  if(presNote){presBanner=`<div class="pres-banner pres-line-${presKey?1:1}"><strong>For this presentation</strong>${e(presNote)}</div>`}
+  html+=`<div class="${cardCls}" data-drug="${d.id}"${presKey?` data-presentation="${presKey}"`:''}>`;
+  html+=`<div class="card-hdr"><div class="card-hdr-main"><div class="dn">${hi(d.name,q)}${dnAlias}</div>`;
+  if(d.ind)html+=`<div class="di">${d.ind.map(i=>hi(i,q)).join(' · ')}</div>`;
+  html+=`</div><div class="badge-row">${commonBadge}${catBadge}${fundBadge}</div></div>`;
+  if(presBanner)html+=presBanner;
+  d.regs.forEach((reg,ri)=>{
+    const calc=calcDose(reg,wt,ageY,d);
+    if(!calc)return;
+    let sevCls='';
+    if(reg.lbl){if(/severe/i.test(reg.lbl))sevCls='sev-severe';else if(/moderate|2nd|second/i.test(reg.lbl))sevCls='sev-mod';else if(/mild|standard|first|1st/i.test(reg.lbl))sevCls='sev-mild'}
+    html+=`<div class="reg ${sevCls}" data-regimen="${ri}">`;
+    if(reg.lbl)html+=`<div class="reg-lbl">${e(reg.lbl)}</div>`;
+    html+=`<div class="reg-main">`;
+    if(calc.ph){html+=`<span class="dose-val ph">Enter ${reg.type==='wt'||reg.type==='wb'?'weight':'age + weight'}</span>`}
+    else if(calc.fxD){html+=`<span class="dose-val">${e(calc.fxD)}</span>`}
+    else if(calc.doseRange){
+      const[lo,hi]=calc.doseRange;
+      html+=`<span class="dose-val copyable" onclick="copyVal(this,${calc.dose})">${lo}–${hi} mg</span>`;
+      if(calc.cap)html+=`<span class="cap-badge">capped</span>`;
+    }else if(calc.dose){
+      html+=`<span class="dose-val copyable" onclick="copyVal(this,${calc.dose})">${calc.dose} ${e(reg.unit||'mg')}</span>`;
+      if(calc.cap)html+=`<span class="cap-badge">capped</span>`;
+    }
+    if(reg.freq){
+      const useFreq=calc.bandFreq||reg.freq;
+      html+=`<span class="reg-meta"><span>${e(useFreq)}</span><span class="mhide"> · ${e(reg.route)}</span></span>`;
+    }
+    html+=`</div>`;
+    if(calc.bandLbl)html+=`<div class="math-line">${e(calc.bandLbl)}</div>`;
+    else if(calc.dose&&!calc.fxD&&reg.mpk&&wt){html+=`<div class="math-line">${wt} kg × ${reg.mpk} mg/kg = ${(wt*reg.mpk).toFixed(1)} mg</div>`}
+    if(calc.flags&&calc.flags.length){html+=`<div class="flag-row">${calc.flags.map(f=>`<span class="flag flag-${f.type==='warn'?'warn':'info'}">${e(f.text)}</span>`).join('')}</div>`}
+    if(reg.preps&&reg.preps.length&&calc.dose){
+      const opts=reg.preps.map((p,pi)=>{
+        const v=calcVol(calc.dose,p.mpm);
+        return`<option value="${pi}" data-mpm="${p.mpm}">${e(p.lbl)} → ${v?v+' mL':'—'}</option>`;
+      }).join('');
+      html+=`<div class="vol-row"><span class="vol-lbl">Volume:</span><select class="prep-sel" onchange="updVol(this,${calc.dose})">${opts}</select><span class="vol-val">${e(reg.preps[0]?.mpm?calcVol(calc.dose,reg.preps[0].mpm)+' mL':'—')}</span></div>`;
+    }
+    if(reg.notes)html+=`<div class="notes">${e(reg.notes)}</div>`;
+    if(!calc.ph){html+=`<div class="card-actions"><button class="card-action" onclick="copyParentInstructions(this)">📋 Copy parent text</button><button class="card-action" onclick="printCard(this)">🖨 Print parent sheet</button></div>`}
+    html+=`</div>`;
+  });
+  html+=`</div>`;
+  return html;
+}
+function copyVal(el,v){navigator.clipboard.writeText(String(v)).then(()=>{el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),700)})}
+function updVol(sel,dose){const mpm=+sel.options[sel.selectedIndex].dataset.mpm;const v=calcVol(dose,mpm);sel.parentElement.querySelector('.vol-val').textContent=v?v+' mL':'—'}
+
+function renderFeverCombo(q){
+  const wt=+$('wt').value,ageY=getAgeYears();
+  if(!wt||!ageY||ageY<0.25)return'';
+  if(q&&!/(fever|pain|combo|paracet|ibupro)/i.test(q))return'';
+  const para=D.find(d=>d.id==='paracetamol');
+  const ibu=D.find(d=>d.id==='ibuprofen');
+  const paraDose=Math.min(1000,Math.round(wt*15*10)/10);
+  const ibuDose=ageY>=0.25?Math.min(400,Math.round(wt*7.5*10)/10):null;
+  if(!ibuDose)return'';
+  return`<div class="combo-card">
+<div class="combo-title">Pain & Fever — combination</div>
+<div class="combo-sub">Alternate every 3 hours for ongoing fever or pain</div>
+<div class="combo-grid">
+<div class="combo-drug"><div class="combo-drug-name">Paracetamol</div><div class="combo-drug-dose">${paraDose} mg</div><div class="combo-drug-freq">Every 4–6 h, max 4×/day</div></div>
+<div class="combo-drug"><div class="combo-drug-name">Ibuprofen</div><div class="combo-drug-dose">${ibuDose} mg</div><div class="combo-drug-freq">Every 6–8 h with food</div></div>
+</div>
+<div class="combo-schedule"><strong>Suggested rotation:</strong> Paracetamol at 0 / 6 / 12 / 18 h, Ibuprofen at 3 / 9 / 15 / 21 h. Keep a written log of times and doses given.</div>
+<div class="card-actions" style="margin-top:10px;border-top:none;padding-top:0"><button class="card-action" onclick="copyParentInstructions(this)">📋 Copy schedule</button></div>
+</div>`;
+}
+
+// ── Render orchestrator ────────────────────────────────────────
+function render(){
+  if(S.view==='growth'){updateGrowthResults();return}
+  renderRecents();
+  const wt=+$('wt').value,ageY=getAgeYears();
+  const q=$('q').value.trim().toLowerCase();
+  const grid=$('grid');
+  $('rl').innerHTML=wt&&ageY?`<span style="color:var(--ink);font-weight:700">${wt} kg, ${ageY<2?Math.round(ageY*12)+' mo':ageY.toFixed(1)+' y'}</span>${S.cat!=='all'?` · ${e(S.cat)}`:''}${S.presentation?` · <span class="rl-pres">${e(PRESENTATIONS[S.presentation].label)}</span>`:''}`:`Enter weight and age to calculate doses.`;
+  let drugs;
+  if(S.presentation&&PRESENTATIONS[S.presentation]){
+    const pres=PRESENTATIONS[S.presentation];
+    drugs=pres.drugs.map(p=>({drug:D.find(d=>d.id===p.id),note:p.note,regimen:p.regimen||0})).filter(x=>x.drug);
+    if(q)drugs=drugs.filter(({drug})=>drug.name.toLowerCase().includes(q)||(drug.al||[]).join(' ').toLowerCase().includes(q));
+  }else{
+    drugs=D.filter(d=>{
+      if(S.cat==='common')return d.c===1;
+      if(S.cat!=='all'&&d.cat!==S.cat)return false;
+      if(q){
+        const hay=(d.name+' '+(d.al||[]).join(' ')+' '+(d.ind||[]).join(' ')+' '+d.cat).toLowerCase();
+        return hay.includes(q);
+      }
+      return true;
+    }).map(d=>({drug:d,note:null,regimen:0}));
+  }
+  if(!drugs.length){grid.innerHTML='<div class="empty"><h3>No drugs match.</h3><p>Try clearing the search or category filter.</p></div>';return}
+  let html='';
+  if(!S.presentation&&!q&&S.cat==='all')html+=renderFeverCombo(q);
+  drugs.forEach(({drug,note})=>{
+    drug._activeRegimen=undefined;
+    if(S.presentation){const p=PRESENTATIONS[S.presentation].drugs.find(x=>x.id===drug.id);if(p)drug._activeRegimen=p.regimen}
+    html+=renderCard(drug,q,S.presentation,note);
+    if(q)trackRecent(drug.id);
+  });
+  grid.innerHTML=html;
+}
+
+// ── Presentation + category selection ─────────────────────────
+function setPresentation(key){
+  S.presentation=key||null;
+  const sel=$('presentation-select');
+  if(sel)sel.value=key||'';
+  $('presentation-clear').hidden=!key;
+  if(key){S.cat='all';$('q').value='';renderCats()}
+  render();
+}
+function setCat(c){S.cat=c;S.presentation=null;$('presentation-select').value='';$('presentation-clear').hidden=true;renderCats();render()}
+function renderCats(){
+  $('cats').innerHTML=CATS.map((c,i)=>{
+    const sep=i===2?'<span class="cats-sep"></span>':'';
+    return sep+`<button class="fbtn${S.cat===c.id?' on':''}" onclick="setCat('${c.id}')">${e(c.lbl)}</button>`;
+  }).join('');
+}
+function renderPresentations(){
+  const sel=$('presentation-select');if(!sel)return;
+  sel.innerHTML='<option value="">— Choose a clinical presentation —</option>'+Object.entries(PRESENTATIONS).map(([k,v])=>`<option value="${k}">${e(v.label)}</option>`).join('');
+}
+
+// ── Init ───────────────────────────────────────────────────────
+document.addEventListener('keydown',e=>{
+  if(e.key==='/'&&document.activeElement.tagName!=='INPUT'){e.preventDefault();$('q').focus()}
+  if(e.key==='Escape'){$('q').value='';$('q').blur();render()}
+});
+const print=document.createElement('div');print.id='print-overlay';document.body.appendChild(print);
+
+renderCats();renderPresentations();renderEmptyCharts();render();
+
+// URL parameter hydration: ?w=14&a=4&u=yr&p=aom
+(()=>{
+  const p=new URLSearchParams(location.search);
+  if(p.has('w')){$('wt').value=p.get('w')}
+  if(p.has('u')){const u=p.get('u');if(['yr','mo','wk'].includes(u))setAgeUnit(u)}
+  if(p.has('a')){$('ag').value=p.get('a')}
+  if(p.has('p')){setPresentation(p.get('p'))}
+  if(p.has('w')||p.has('a'))render();
+})();
+</script>
+</body>
+</html>

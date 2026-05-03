@@ -5,15 +5,15 @@
   "url": "https://workingdiagnosis.nz",
   "nav": [
     { "label": "Lifestyle", "url": "/lifestyle/" },
-    { "label": "MSK", "url": "/msk/" },
-    { "label": "Travel", "url": "/travel/" },
-    { "label": "Vaccines", "url": "/vaccines/" },
-    { "label": "Paeds", "url": "/paeds/" },
+    { "label": "MSK", "url": "/musculoskeletal/" },
+    { "label": "Paeds", "url": "/paediatrics/" },
     { "label": "Geriatrics", "url": "/geriatrics/" },
-    { "label": "Gynae", "url": "/gynae/" },
+    { "label": "Gynae", "url": "/gynaecology/" },
+    { "label": "Dermatology", "url": "/dermatology/" },
     { "label": "Mental Health", "url": "/mental-health/" },
-    { "label": "Nutrition", "url": "/nutrition/" },
-    { "label": "Myths", "url": "/myths/" },
-    { "label": "Field Notes", "url": "/field-notes/" }
+    { "label": "Vaccines", "url": "/vaccines/" },   
+    { "label": "Travel", "url": "/travel/" },
+    { "label": "Field Notes", "url": "/field-notes/" },
+    { "label": "Resources", "url": "/resources/" }
   ]
 }
