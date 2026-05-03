@@ -2,6 +2,7 @@
 title: Rongoā Māori, mātauranga Māori, and the GP consult
 dek: Beyond cultural competence — a working introduction to the historical record, the frameworks, the regulatory landscape, and what real engagement looks like.
 description: A working non-Māori GP on engaging seriously with rongoā Māori and te ao Māori in clinical practice — the historical context, the established frameworks, the contemporary regulatory situation, and what good practice actually requires.
+category: Culture & Social Context
 date: 2026-05-02
 ---
 

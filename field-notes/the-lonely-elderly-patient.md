@@ -2,6 +2,7 @@
 title: Notes on the lonely elderly patient
 dek: Where the medical, the legal, and the philosophical all meet — and what working GPs are left holding.
 description: A working GP on the social isolation of older patients, the medicolegal framework that does and doesn't help, and the philosophical question of autonomy in a shrunken social world.
+category: Culture & Social Context
 date: 2026-05-02
 ---
 

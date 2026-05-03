@@ -2,6 +2,7 @@
 title: Advance care planning, in practice
 dek: Why it matters, the legal and cultural framework, and what the conversation actually looks like in clinic.
 description: A working GP on advance care planning in NZ — the evidence, the PPPR Act, the End of Life Choice Act, te ao Māori perspectives, and the practicalities of the consult.
+category: Consultation Practice
 date: 2026-05-02
 ---
 

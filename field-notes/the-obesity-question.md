@@ -2,6 +2,7 @@
 title: Notes on the obesity question in NZ
 dek: A working GP between population and clinic, in the year GLP-1s went from rare to routine.
 description: Obesity as a public health problem, the limits of clinical intervention, and what the new pharmacological era means for equity in NZ.
+category: Clinical Conditions
 date: 2026-05-02
 ---
 

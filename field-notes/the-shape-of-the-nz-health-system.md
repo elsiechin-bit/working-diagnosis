@@ -2,6 +2,7 @@
 title: The shape of the New Zealand health system
 dek: What's structurally distinctive about NZ healthcare in international comparison — what we do uniquely well, what we don't, and what the comparative data actually show.
 description: A working GP on the structural features that distinguish New Zealand's health system from those of comparable countries — ACC, Pharmac, capitation, the 2022 reforms — and what international comparisons reveal.
+category: NZ Health System & Policy
 date: 2026-05-02
 ---
 

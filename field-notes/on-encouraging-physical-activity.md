@@ -2,6 +2,7 @@
 title: On encouraging physical activity
 dek: The evidence, the NZ data, the sedentary problem, the socioeconomic constraints, and what the consult can actually do.
 description: A working GP on physical activity in primary care — the evidence base, current NZ rates, the independent risk of sitting, the structural barriers low-income patients face, and what good clinical practice looks like.
+category: Prevention & Lifestyle
 date: 2026-05-02
 ---
 

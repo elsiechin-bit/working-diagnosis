@@ -2,6 +2,7 @@
 title: On GP burnout
 dek: The NZ numbers, the moral-injury reframing, and why the wellness-industry response is mostly the wrong response.
 description: A working GP on burnout in NZ general practice — what the RNZCGP workforce data show, why "burnout" may be the wrong frame, and what the evidence suggests actually helps.
+category: NZ Health System & Policy
 date: 2026-05-02
 ---
 

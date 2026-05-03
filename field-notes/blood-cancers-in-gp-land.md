@@ -2,6 +2,7 @@
 title: Blood cancers in GP land
 dek: MGUS, CLL, MPNs, lymphoma survivors, and the patient on ibrutinib who turns up with a bruise. The conditions haematology now mostly manages from a distance, and what the long-term GP role actually involves.
 description: A working GP on managing blood malignancies in the post-diagnosis years — MGUS surveillance, CLL on watch-and-wait, lymphoma survivorship, MPNs on hydroxyurea, and recognising the side effects of BTK inhibitors and venetoclax in the chronic disease consult.
+category: Clinical Conditions
 date: 2026-05-02
 ---
 

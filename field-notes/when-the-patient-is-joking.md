@@ -2,6 +2,7 @@
 title: When the patient is joking
 dek: The disclosure that arrives dressed as a punchline, the clinical signal hidden in the laugh, and what the consultation room loses when humour is treated as decoration.
 description: A working GP on patient-initiated humour as clinical information — how shame and fear arrive in the consult dressed as jokes, what the literature actually shows, when changes in humour signal something neurological, and what the clinical task of receiving the joke involves.
+category: Consultation Practice
 date: 2026-05-02
 ---
 

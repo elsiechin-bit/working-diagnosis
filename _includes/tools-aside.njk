@@ -1,14 +1,20 @@
 <div class="tools-aside" aria-label="GP Tools">
   <p class="aside-kicker">{{ tools.kicker }}</p>
   <h2 class="aside-title">{{ tools.label }}</h2>
-  <ul class="tools-list">
-    {% for tool in tools.items %}
-      <li>
-        <a href="{{ tool.url }}" class="tool-link">
-          <span class="tool-name">{{ tool.name }}</span>
-          {% if tool.blurb %}<span class="tool-blurb">{{ tool.blurb }}</span>{% endif %}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+
+  {% for group in tools.categories %}
+    <details class="tools-group">
+      <summary class="tools-group__header">{{ group.name }}</summary>
+      <ul class="tools-list">
+        {% for tool in group.items %}
+          <li>
+            <a href="{{ tool.url }}" class="tool-link">
+              <span class="tool-name">{{ tool.name }}</span>
+              {% if tool.blurb %}<span class="tool-blurb">{{ tool.blurb }}</span>{% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
+  {% endfor %}
 </div>

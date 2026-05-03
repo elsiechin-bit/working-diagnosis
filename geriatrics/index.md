@@ -5,6 +5,17 @@ layout: topic.njk
 pillar: Geriatrics
 ---
 
+<style>
+  .pillars-grid {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+</style>
+
 <div class="topic">
   <div class="topic-header">
     <p class="pillar-label">Geriatrics</p>

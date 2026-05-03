@@ -5,14 +5,6 @@ pillar: Field Notes
 description: A working GP's curated shelf — podcasts, books, journals, and websites worth your time.
 ---
 
-<div class="topic-header">
-  <p class="pillar-label">Field Notes</p>
-  <h1>Resources</h1>
-  <p class="topic-dek">A working GP's curated shelf. Podcasts worth commuting to, books that changed how I think, journals I actually read, and websites I return to.</p>
-</div>
-
-<div class="topic-body">
-
 <h2 class="section-label">Podcasts</h2>
 
 **RNZCGP GP CME Podcast** — The college's own continuing medical education series. NZ-specific, peer-reviewed, and counts toward CPD. Short enough for a school-run commute.
@@ -31,6 +23,7 @@ description: A working GP's curated shelf — podcasts, books, journals, and web
 [litfl.com](https://litfl.com)
 
 **The NNT Podcast** — Evidence-based medicine applied to everyday clinical decisions. Pairs well with the NNT website. Good antidote to over-treatment.
+[thennt.com](https://www.thennt.com)
 
 ---
 
@@ -94,5 +87,3 @@ description: A working GP's curated shelf — podcasts, books, journals, and web
 
 **UpToDate** — Requires a subscription (or hospital access). Comprehensive but US-centric — always cross-reference funded options and NZ guidelines.
 [uptodate.com](https://www.uptodate.com)
-
-</div>

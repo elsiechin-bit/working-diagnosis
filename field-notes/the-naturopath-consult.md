@@ -2,6 +2,7 @@
 title: What patients bring back from the naturopath
 dek: A field guide to the tests, the supplements, the worldviews — and what to actually do in clinic.
 description: A working GP on naturopathic tests and treatments commonly seen in NZ general practice, what the evidence supports, and how to handle the consult.
+category: Consultation Practice
 date: 2026-05-02
 ---
 

@@ -1,0 +1,776 @@
+---
+title: COPD Medication Selector
+layout: base.njk
+permalink: /workshop/tools/copd/
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COPD Medication Selector — Working Diagnosis</title>
+  <meta name="description" content="NZ GP tool for COPD medication selection guided by BPAC and GOLD staging. Browse NZF-subsidised respiratory medicines.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Tokens ────────────────────────────────────── */
+    :root {
+      --paper:      #F5F1E8;
+      --paper-warm: #EDE7D8;
+      --ink:        #1A1F1C;
+      --ink-soft:   #3A4540;
+      --ink-mute:   #6B7A75;
+      --green:      #2F6B5C;
+      --green-deep: #1F4A3F;
+      --ochre:      #B8714F;
+      --rule:       #D9D1BD;
+      --alert:      #C84C3C;
+
+      --serif-display: 'Fraunces', Georgia, serif;
+      --serif-body:    'Newsreader', Georgia, serif;
+      --mono:          'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+
+    /* ─── Reset ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    /* ─── Base ──────────────────────────────────────── */
+    body {
+      font-family: var(--serif-body);
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--green-deep); text-decoration: none; }
+    a:hover { color: var(--green); }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ─── Masthead ──────────────────────────────────── */
+    .masthead {
+      border-bottom: 1px solid var(--rule);
+      padding: 22px 0 18px;
+      margin-bottom: 48px;
+    }
+    .masthead-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .brand {
+      font-family: var(--serif-display);
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .brand em { font-style: italic; color: var(--green); }
+    .brand a { color: inherit; }
+
+    /* ─── Tool Container ────────────────────────────── */
+    .tool-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .tool-header {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .tool-kicker {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ochre);
+      margin: 0 0 14px;
+    }
+
+    .tool-title {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      color: var(--ink);
+    }
+
+    .tool-dek {
+      font-size: 1.1rem;
+      color: var(--ink-soft);
+      margin: 0;
+      max-width: 680px;
+      line-height: 1.5;
+    }
+
+    /* ─── Layout ────────────────────────────────────── */
+    .copd-layout {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 820px) {
+      .copd-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    .copd-sidebar {
+      position: sticky;
+      top: 24px;
+    }
+
+    @media (max-width: 820px) {
+      .copd-sidebar { position: static; }
+    }
+
+    /* ─── Input Panel ───────────────────────────────── */
+    .input-panel {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 24px;
+    }
+
+    .input-panel h3 {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 18px;
+      margin: 0 0 20px;
+      color: var(--ink);
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    /* FIX: direct child label only — avoids contaminating radio-item labels */
+    .form-group > label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 8px;
+    }
+
+    /* FIX: select only — radios must NOT inherit width/padding from this rule */
+    .form-group select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      font-family: var(--serif-body);
+      font-size: 16px;
+      color: var(--ink);
+      background: white;
+    }
+
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 0 2px rgba(47, 107, 92, 0.1);
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .radio-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* FIX: radios keep natural browser sizing */
+    .radio-item input[type="radio"] {
+      width: auto;
+      margin: 0;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .radio-item label {
+      margin: 0;
+      font-family: var(--serif-body);
+      font-size: 16px;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    /* ─── Result Area ───────────────────────────────── */
+    .copd-main {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .result-card {
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 32px;
+      display: none;
+    }
+
+    .result-card.active {
+      display: block;
+      animation: slideIn 200ms ease-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .result-card h2 {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 28px;
+      margin: 0 0 8px;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .result-card .gold-group {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ochre);
+      margin: 0 0 24px;
+    }
+
+    .result-card h3 {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 20px;
+      margin: 28px 0 14px;
+      color: var(--green-deep);
+      letter-spacing: -0.005em;
+    }
+
+    .result-card p {
+      margin: 0 0 16px;
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .result-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .result-card li {
+      padding: 10px 0 10px 20px;
+      position: relative;
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .result-card li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    /* ─── Medicine Cards ────────────────────────────── */
+    .med-options {
+      margin: 16px 0 24px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .med-option {
+      padding: 16px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .med-option:last-child { border-bottom: none; }
+    .med-option:hover { background: rgba(47, 107, 92, 0.025); }
+
+    .med-info { flex: 1; }
+
+    .med-name {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 17px;
+      color: var(--ink);
+      margin: 0 0 3px;
+    }
+
+    .med-generic {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--ink-mute);
+      margin: 0 0 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .med-details {
+      font-size: 15px;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      margin: 0 0 8px;
+    }
+
+    .med-badge {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 3px;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .med-badge.subsidised {
+      background: rgba(47, 107, 92, 0.12);
+      color: var(--green-deep);
+    }
+
+    .med-badge.unsubsidised {
+      background: rgba(200, 76, 60, 0.1);
+      color: var(--alert);
+    }
+
+    .med-notes {
+      flex: 0 0 160px;
+    }
+
+    .med-notes p {
+      font-size: 14px;
+      color: var(--ink-mute);
+      line-height: 1.5;
+      margin: 0;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .med-option { flex-direction: column; align-items: flex-start; }
+      .med-notes { flex: 1 1 100%; }
+      .med-notes p { text-align: left; }
+    }
+
+    /* ─── Info / Warning / Cessation Boxes ─────────── */
+    .info-box {
+      background: rgba(47, 107, 92, 0.05);
+      border-left: 3px solid var(--green);
+      padding: 14px 16px;
+      margin: 16px 0;
+      border-radius: 2px;
+    }
+    .info-box p { margin: 0; font-size: 16px; color: var(--ink-soft); }
+    .info-box strong { color: var(--green-deep); }
+
+    .warning-box {
+      background: rgba(200, 76, 60, 0.05);
+      border-left: 3px solid var(--alert);
+      padding: 14px 16px;
+      margin: 16px 0;
+      border-radius: 2px;
+    }
+    .warning-box p { margin: 0; font-size: 16px; color: var(--ink-soft); }
+    .warning-box strong { color: var(--alert); }
+
+    .cessation-box {
+      background: rgba(184, 113, 79, 0.07);
+      border-left: 3px solid var(--ochre);
+      padding: 14px 16px;
+      margin: 20px 0 0;
+      border-radius: 2px;
+    }
+    .cessation-box p { margin: 0; font-size: 16px; color: var(--ink-soft); }
+    .cessation-box strong { color: var(--ochre); }
+
+    /* ─── Reference Note ────────────────────────────── */
+    .ref-note {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--ink-mute);
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ─── Footer ────────────────────────────────────── */
+    .site-footer {
+      margin-top: 64px;
+      padding: 40px 0;
+      border-top: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      color: var(--ink-mute);
+    }
+    .site-footer p { margin: 0 0 6px; }
+    .footer-meta { font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap masthead-row">
+      <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="tool-container">
+
+      <div class="tool-header">
+        <p class="tool-kicker">❍ Workshop / Respiratory</p>
+        <h1 class="tool-title">COPD Medication Selector</h1>
+        <p class="tool-dek">GOLD-staged inhaler therapy with NZF-subsidised medicine options. Enter patient profile to see current maintenance and rescue recommendations.</p>
+      </div>
+
+      <div class="copd-layout">
+
+        <!-- ─── Sidebar ──────────────────────────────── -->
+        <aside class="copd-sidebar">
+          <div class="input-panel">
+            <h3>Patient Profile</h3>
+
+            <div class="form-group">
+              <label for="status">Diagnosis Status</label>
+              <select id="status">
+                <option value="">— Select —</option>
+                <option value="new">New diagnosis</option>
+                <option value="established">Established COPD</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="smoke">Smoking Status</label>
+              <select id="smoke">
+                <option value="">— Select —</option>
+                <option value="current">Current smoker</option>
+                <option value="former">Former smoker</option>
+                <option value="never">Never smoked</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Exacerbation History</label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="exac-0" name="exacerbations" value="0" checked>
+                  <label for="exac-0">0–1 per year</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="exac-2plus" name="exacerbations" value="2plus">
+                  <label for="exac-2plus">≥2 per year</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Dyspnoea / Symptoms</label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="symp-mild" name="symptoms" value="mild" checked>
+                  <label for="symp-mild">Mild (mMRC 0–1)</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="symp-severe" name="symptoms" value="severe">
+                  <label for="symp-severe">Severe (mMRC ≥2)</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ─── Main Content ─────────────────────────── -->
+        <article class="copd-main" id="mainContent">
+          <!-- Populated by JavaScript -->
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
+      <p class="footer-meta">An internet workshop for general practice.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ─── State ──────────────────────────────────────────
+    let medicineDb = null;
+
+    // ─── Fetch NZF database ─────────────────────────────
+    // FIX: path corrected to /assets/ — Eleventy only passthrough-copies
+    // the assets/ folder. The original copd-selector-integrated.html used
+    // /data/nzf-respiratory-db.json which would 404 because _data/ is
+    // Eleventy's data-cascade folder and is NOT served as static files.
+    async function loadDatabase() {
+      try {
+        const res = await fetch('/assets/nzf-respiratory-db.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        medicineDb = await res.json();
+      } catch (err) {
+        console.warn('NZF database unavailable — showing generic guidance only.', err);
+        medicineDb = null;
+      }
+    }
+
+    // ─── Medicine card renderer ─────────────────────────
+    function renderMedCards(medicines) {
+      if (!medicines || medicines.length === 0) return '';
+      const rows = medicines.map(function(med) {
+        const badgeClass = med.subsidised ? 'subsidised' : 'unsubsidised';
+        const badgeText  = med.subsidised ? 'Funded' : 'Not funded';
+        return '<div class="med-option">' +
+          '<div class="med-info">' +
+            '<div class="med-name">' + (med.brandName || med.genericName) + '</div>' +
+            '<div class="med-generic">' + med.genericName + ' ' + med.strength + '</div>' +
+            '<div class="med-details">' + med.formulation + ' · ' + med.frequency + '</div>' +
+            '<span class="med-badge ' + badgeClass + '">' + badgeText + '</span>' +
+          '</div>' +
+          '<div class="med-notes"><p>' + med.notes + '</p></div>' +
+        '</div>';
+      });
+      return '<div class="med-options">' + rows.join('') + '</div>';
+    }
+
+    // ─── GOLD staging ───────────────────────────────────
+    function getGoldGroup(exacValue, sympValue) {
+      const lowExac = exacValue === '0';
+      const highSymp = sympValue === 'severe';
+      if  (lowExac && !highSymp) return 'A';
+      if  (lowExac &&  highSymp) return 'B';
+      if (!lowExac && !highSymp) return 'C';
+      return 'D';
+    }
+
+    // ─── Smoking cessation note ─────────────────────────
+    function cessationNote(smokeValue) {
+      if (smokeValue !== 'current') return '';
+      return '<div class="cessation-box"><p>' +
+        '<strong>❍ Active smoker:</strong> Smoking cessation is the single most effective ' +
+        'intervention in COPD — it slows FEV₁ decline and reduces exacerbation risk. ' +
+        'Offer brief advice every visit. Consider pharmacotherapy: varenicline (Champix), ' +
+        'bupropion (Zyban), or NRT (patches, gum, lozenges). Refer to a dedicated cessation service.' +
+        '</p></div>';
+    }
+
+    // ─── Medicine filter per GOLD group ─────────────────
+    // Returns only options appropriate for NZ primary care.
+    // Combination-only or specialist-restricted agents are excluded from GOLD A.
+    // Unfunded agents appear in GOLD D with unsubsidised badge (for completeness).
+    function getMeds(group) {
+      if (!medicineDb) return { main: [], rescue: [] };
+      var db = medicineDb.categories;
+      var saba = db.SABA.medicines.filter(function(m) { return m.id === 'salb-100'; });
+
+      if (group === 'A') {
+        // Subsidised LAMA monotherapy only.
+        // Exclude aclidinium (twice-daily, not funded for GP).
+        // Exclude umeclidinium (combination-only, not available standalone).
+        return {
+          main:   db.LAMA.medicines.filter(function(m) {
+            return m.subsidised && (m.id === 'tio-18' || m.id === 'gly-50');
+          }),
+          rescue: saba
+        };
+      }
+
+      if (group === 'B' || group === 'C') {
+        // Subsidised LABA/LAMA combinations only. Exclude duaklir (not funded).
+        return {
+          main:   db.LABA_LAMA.medicines.filter(function(m) { return m.subsidised; }),
+          rescue: saba
+        };
+      }
+
+      if (group === 'D') {
+        // Show all triple options — Trimbow is funded, Trelegy is not.
+        // Badge on each card communicates funding status clearly.
+        return { main: db.TRIPLE.medicines, rescue: saba };
+      }
+
+      return { main: [], rescue: [] };
+    }
+
+    // ─── Per-group content ──────────────────────────────
+    function goldContent(group, meds) {
+      var mainCards   = renderMedCards(meds.main);
+      var rescueCards = renderMedCards(meds.rescue);
+
+      // Fallback text if database failed to load
+      var fallbacks = {
+        A: 'Database unavailable — Tiotropium (Spiriva) 18 µg daily or Glycopyrronium (Seebri) 50 µg daily.',
+        B: 'Database unavailable — Anoro Ellipta (vilanterol/umeclidinium) 25/62.5 µg daily or Ultibro Breezhaler (indacaterol/glycopyrronium) 110/50 µg daily.',
+        C: 'Database unavailable — Anoro Ellipta or Ultibro Breezhaler once daily.',
+        D: 'Database unavailable — Trimbow (budesonide/glycopyrronium/formoterol) 87/9/4.8 µg, 2 puffs twice daily.'
+      };
+      var mainFallback   = mainCards   || '<p style="color:var(--ink-mute)">' + fallbacks[group] + '</p>';
+      var rescueFallback = rescueCards || '<p style="color:var(--ink-mute)">Salbutamol (Asmol / Ventolin) 100 µg as needed.</p>';
+
+      var configs = {
+        A: {
+          title: 'GOLD Group A',
+          sub:   'Low symptoms · Low exacerbation risk',
+          maintenance:
+            '<h3>Maintenance Therapy</h3>' +
+            '<p><strong>First-line:</strong> LAMA monotherapy.</p>' +
+            '<div class="info-box"><p><strong>BPAC / NZ guidance:</strong> LAMA is preferred over ' +
+            'LABA as monotherapy in COPD. Tiotropium is well established and cost-effective on the ' +
+            'NZ schedule. Glycopyrronium (Seebri) is an alternative with rapid onset (~5 min).</p></div>' +
+            mainFallback,
+          rescue:
+            '<h3>Rescue Therapy</h3>' +
+            '<p>Short-acting β₂-agonist as needed.</p>' +
+            rescueFallback,
+          extra: ''
+        },
+        B: {
+          title: 'GOLD Group B',
+          sub:   'High symptoms · Low exacerbation risk',
+          maintenance:
+            '<h3>Maintenance Therapy</h3>' +
+            '<p><strong>First-line:</strong> Dual LABA/LAMA combination.</p>' +
+            '<div class="info-box"><p><strong>Rationale:</strong> Dual LABA/LAMA provides superior ' +
+            'dyspnoea relief vs monotherapy. Once-daily single-inhaler regimens improve adherence. ' +
+            'LABA monotherapy is not recommended in COPD.</p></div>' +
+            mainFallback,
+          rescue:
+            '<h3>Rescue Therapy</h3>' +
+            '<p>Short-acting β₂-agonist as needed. If exacerbations develop, reassess for escalation to GOLD C/D.</p>' +
+            rescueFallback,
+          extra: ''
+        },
+        C: {
+          title: 'GOLD Group C',
+          sub:   'Low symptoms · High exacerbation risk',
+          maintenance:
+            '<h3>Maintenance Therapy</h3>' +
+            '<p><strong>First-line:</strong> Dual LABA/LAMA combination.</p>' +
+            '<div class="info-box"><p><strong>BPAC guidance on ICS:</strong> ICS is NOT indicated ' +
+            'here unless there are asthma features or eosinophils ≥100 cells/µL. Overuse of ICS ' +
+            'in COPD increases pneumonia and oral candidiasis risk.</p></div>' +
+            mainFallback,
+          rescue:
+            '<h3>Rescue Therapy</h3>' +
+            '<p>Short-acting β₂-agonist as needed. Prompt review and escalation if exacerbations persist despite dual therapy.</p>' +
+            rescueFallback,
+          extra: ''
+        },
+        D: {
+          title: 'GOLD Group D',
+          sub:   'High symptoms · High exacerbation risk',
+          maintenance:
+            '<h3>Maintenance Therapy</h3>' +
+            '<p><strong>First-line:</strong> Triple therapy — ICS/LABA/LAMA.</p>' +
+            '<div class="info-box"><p><strong>ICS justification:</strong> Triple therapy reduces ' +
+            'exacerbations vs dual therapy in GOLD D. Benefit is strongest with eosinophils ' +
+            '≥100 cells/µL or ≥2 exacerbations/year despite dual therapy. ' +
+            '<strong>Trimbow</strong> is the funded option in NZ primary care.</p></div>' +
+            '<div class="warning-box"><p><strong>Trelegy Ellipta</strong> (once-daily triple) is ' +
+            'not routinely funded in NZ — specialist initiation required. Use Trimbow first-line.</p></div>' +
+            mainFallback,
+          rescue:
+            '<h3>Rescue Therapy</h3>' +
+            '<p>Short-acting β₂-agonist as needed. Consider ipratropium (Atrovent) as adjunct if required.</p>' +
+            rescueFallback,
+          extra:
+            '<h3>Additional Considerations</h3>' +
+            '<ul>' +
+            '<li><strong>Roflumilast (Daxas):</strong> Consider in chronic bronchitis phenotype with ≥2 exacerbations/year. Oral PDE-4 inhibitor; ~10% relative reduction in exacerbations. GI side effects common. Funded if criteria met.</li>' +
+            '<li><strong>Pulmonary rehabilitation:</strong> Refer if dyspnoea is limiting activity.</li>' +
+            '<li><strong>Vaccination:</strong> Pneumovax 23, Prevenar 13, annual influenza, COVID boosters.</li>' +
+            '<li><strong>Written action plan:</strong> Provide exacerbation plan (when to start rescue prednisolone/antibiotics).</li>' +
+            '</ul>'
+        }
+      };
+
+      return configs[group];
+    }
+
+    // ─── Main render function ───────────────────────────
+    // FIX: single render function called on every input change.
+    // The original copd-selector-integrated.html rendered a duplicate rescue
+    // section — both rescueGuide (which already contained the Rescue h3) AND
+    // a separate "Rescue Medications" h3 + rescueMedicinesHtml were injected.
+    // Here, rescue content is unified into one section per group.
+    function render() {
+      var status    = document.getElementById('status').value;
+      var smoke     = document.getElementById('smoke').value;
+      var exacValue = document.querySelector('input[name="exacerbations"]:checked').value;
+      var sympValue = document.querySelector('input[name="symptoms"]:checked').value;
+      var main      = document.getElementById('mainContent');
+
+      if (!status) {
+        main.innerHTML =
+          '<div class="result-card active">' +
+          '<p style="color:var(--ink-mute);text-align:center;padding:16px 0;">' +
+          'Select a diagnosis status to view recommended inhaler therapy.' +
+          '</p></div>';
+        return;
+      }
+
+      var group   = getGoldGroup(exacValue, sympValue);
+      var meds    = getMeds(group);
+      var content = goldContent(group, meds);
+
+      main.innerHTML =
+        '<div class="result-card active">' +
+          '<h2>' + content.title + '</h2>' +
+          '<div class="gold-group">' + content.sub + '</div>' +
+          content.maintenance +
+          content.rescue +
+          content.extra +
+          cessationNote(smoke) +
+          '<div class="ref-note">' +
+            'GOLD 2024 Strategy Document · BPAC NZ · NZ Pharmaceutical Schedule (May 2026) · ' +
+            '<a href="https://www.nzf.org.nz" target="_blank" rel="noopener">nzf.org.nz</a>' +
+          '</div>' +
+        '</div>';
+    }
+
+    // ─── Initialise ─────────────────────────────────────
+    // Load DB first, then render — ensures medicine cards appear immediately
+    // on first selection rather than requiring a second interaction.
+    loadDatabase().then(render);
+
+    document.getElementById('status').addEventListener('change', render);
+    document.getElementById('smoke').addEventListener('change', render);
+    document.querySelectorAll('input[name="exacerbations"]').forEach(function(r) {
+      r.addEventListener('change', render);
+    });
+    document.querySelectorAll('input[name="symptoms"]').forEach(function(r) {
+      r.addEventListener('change', render);
+    });
+  </script>
+
+</body>
+</html>

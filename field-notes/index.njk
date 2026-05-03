@@ -13,21 +13,38 @@ eleventyExcludeFromCollections: true
   </header>
 
   {% if collections.notes and collections.notes.length %}
-    <ul class="notes-index__list">
-      {% for note in collections.notes | reverse %}
-        <li class="notes-index__item">
-          <p class="notes-index__date">
-            <time datetime="{{ note.date | dateISO }}">{{ note.date | dateDisplay }}</time>
-          </p>
-          <h2 class="notes-index__entry">
-            <a href="{{ note.url }}">{{ note.data.title }}</a>
-          </h2>
-          {% if note.data.dek %}
-            <p class="notes-index__entry-dek">{{ note.data.dek }}</p>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+
+    {% set categoryList = [
+      "Clinical Conditions",
+      "Prevention & Lifestyle",
+      "Consultation Practice",
+      "NZ Health System & Policy",
+      "Culture & Social Context"
+    ] %}
+
+    {% for cat in categoryList %}
+      <div class="notes-category">
+        <h2 class="notes-category__title">{{ cat }}</h2>
+        <ul class="notes-index__list">
+          {% for note in collections.notes | reverse %}
+            {% if note.data.category == cat %}
+              <li class="notes-index__item">
+                <p class="notes-index__date">
+                  <time datetime="{{ note.date | dateISO }}">{{ note.date | dateDisplay }}</time>
+                </p>
+                <h3 class="notes-index__entry">
+                  <a href="{{ note.url }}">{{ note.data.title }}</a>
+                </h3>
+                {% if note.data.dek %}
+                  <p class="notes-index__entry-dek">{{ note.data.dek }}</p>
+                {% endif %}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+
   {% else %}
     <p class="notes-index__empty">Nothing here yet.</p>
   {% endif %}

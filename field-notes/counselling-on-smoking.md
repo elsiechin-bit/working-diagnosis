@@ -2,6 +2,7 @@
 title: Counselling people who smoke, after Smokefree 2025
 dek: Where the policy landed, what the numbers actually show, what active smokers tend to believe, and what works in the consult.
 description: A working GP on the post-repeal Smokefree 2025 landscape, NZ smoking rates by age, the beliefs older smokers hold about quitting, the relapse data, and what to actually do in clinic.
+category: Prevention & Lifestyle
 date: 2026-05-02
 ---
 

@@ -2,6 +2,7 @@
 title: Notes on health data, after MMH and MediMap
 dek: Two breaches in two months, one regulatory regime, and a hard look at the trust we extend to private platforms.
 description: Reflections on the Manage My Health and MediMap breaches of 2025–26, what they reveal about NZ's privacy regime, and what they mean for working GPs.
+category: NZ Health System & Policy
 date: 2026-05-02
 ---
 

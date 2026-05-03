@@ -2,6 +2,7 @@
 title: ACC's contested edges
 dek: A working GP reading the lines that ACC draws — and three case histories showing where they fall.
 description: A survey of the conditions where ACC's cover boundaries are most contested, with deep dives into surgical mesh, maternal birth injury, and TN v ACC.
+category: NZ Health System & Policy
 date: 2026-05-02
 ---
 

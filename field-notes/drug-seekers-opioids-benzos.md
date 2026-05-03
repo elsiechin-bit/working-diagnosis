@@ -2,6 +2,7 @@
 title: Drug seekers, opioids, and benzos
 dek: A working GP, in five parts — the framing, the opioid story, the benzo story, the ethics, and a working position.
 description: A working GP on the framing problem behind 'drug seeking', the NZ opioid context, the quieter benzodiazepine epidemic, and what coherent practice looks like.
+category: Consultation Practice
 date: 2026-05-02
 ---
 

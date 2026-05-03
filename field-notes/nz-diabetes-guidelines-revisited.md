@@ -2,6 +2,7 @@
 title: Thoughts on the NZ diabetes guidelines (2026)
 dek: What's actually changed since 2021, and what to keep close at hand in clinic.
 description: A working GP's read of the NZSSD type 2 diabetes management guidance — the 2021 paradigm shift, the ethnicity criterion, and what's still unsettled.
+category: Clinical Conditions
 date: 2026-05-02
 ---
 

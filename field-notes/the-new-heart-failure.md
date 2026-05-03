@@ -2,6 +2,7 @@
 title: The new heart failure
 dek: Four drugs, all of them early, low dose, in roughly any order. The biggest shift in heart failure management in a generation, most of which happened during COVID, most of which NZ primary care has not yet caught up with.
 description: A working GP on the four-pillar paradigm in heart failure with reduced ejection fraction, the SGLT2 revolution in HFpEF, the December 2024 Pharmac decision on empagliflozin, and the substantial gap between current evidence and current NZ practice.
+category: Clinical Conditions
 date: 2026-05-02
 ---
 

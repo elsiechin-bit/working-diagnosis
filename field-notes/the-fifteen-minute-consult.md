@@ -2,6 +2,7 @@
 title: The fifteen-minute consult
 dek: How NZ general practice compares internationally, what performance indicators measure (and miss), and what the evidence actually shows.
 description: A working GP on the international evidence around consultation length, performance frameworks like the UK's QOF, and what the comparative data suggests for NZ primary care.
+category: Consultation Practice
 date: 2026-05-02
 ---
 
