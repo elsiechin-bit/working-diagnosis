@@ -1,121 +1,161 @@
 {
   "label": "GP Tools",
   "kicker": "Quick access",
-  "items": [
+  "categories": [
     {
-      "name": "Substance Risk Calculator",
-      "url": "/workshop/tools/substance-risk/",
-      "blurb": "AUDIT, AUDIT-C, ASSIST and a few quick risk indices."
+      "name": "Cardiovascular",
+      "items": [
+        {
+          "name": "Cardiovascular Risk Stratification",
+          "url": "/workshop/tools/cv-risk/",
+          "blurb": "Framingham, SCORE2, and NZ cardiovascular risk assessment."
+        },
+        {
+          "name": "CHA2DS2-VASc",
+          "url": "/workshop/tools/cha2ds2-vasc/",
+          "blurb": "Stroke risk in atrial fibrillation and anticoagulation decision support."
+        },
+        {
+          "name": "HAS-BLED",
+          "url": "/workshop/tools/has-bled/",
+          "blurb": "Bleeding risk in patients on anticoagulation for AF."
+        },
+        {
+          "name": "Wells Criteria (DVT & PE)",
+          "url": "/workshop/tools/wells-criteria/",
+          "blurb": "DVT and PE risk stratification with D-dimer guidance."
+        },
+        {
+          "name": "6 Minute Walk Distance Score",
+          "url": "/workshop/tools/6mwd/",
+          "blurb": "Predicted distance by age and sex; prognostic interpretation."
+        }
+      ]
     },
     {
-      "name": "Paediatric Dosage Calculator",
-      "url": "/workshop/tools/paeds-dosage/",
-      "blurb": "Weight-based dosing for the everyday paediatric formulary."
+      "name": "Paediatrics",
+      "items": [
+        {
+          "name": "Paediatric Dosage Calculator",
+          "url": "/workshop/tools/paeds-dosage/",
+          "blurb": "Weight-based dosing for the everyday paediatric formulary."
+        },
+        {
+          "name": "Paediatric Growth Charts",
+          "url": "/workshop/tools/growth-charts/",
+          "blurb": "Plot weight, length, head circumference, BMI."
+        },
+        {
+          "name": "Developmental Milestones",
+          "url": "/workshop/tools/milestones/",
+          "blurb": "Quick-reference age-banded developmental checks."
+        }
+      ]
     },
     {
-      "name": "Paediatric Growth Charts",
-      "url": "/workshop/tools/growth-charts/",
-      "blurb": "Plot weight, length, head circumference, BMI."
+      "name": "Mental Health",
+      "items": [
+        {
+          "name": "Substance Risk Calculator",
+          "url": "/workshop/tools/substance-risk/",
+          "blurb": "AUDIT, AUDIT-C, ASSIST and a few quick risk indices."
+        },
+        {
+          "name": "Antidepressant Weaning",
+          "url": "/workshop/tools/antidepressant-weaning/",
+          "blurb": "Tapering schedules and withdrawal risk by agent."
+        },
+        {
+          "name": "Psychotropic Selector",
+          "url": "/workshop/tools/psychotropic-selector/",
+          "blurb": "Side-effect profile and safety comparison by class and indication."
+        },
+        {
+          "name": "Benzodiazepine Conversion",
+          "url": "/workshop/tools/benzo-conversion/",
+          "blurb": "Diazepam-equivalent dose and tapering strategies."
+        },
+        {
+          "name": "COMM (Opioid Monitoring)",
+          "url": "/workshop/tools/comm/",
+          "blurb": "Current Opioid Misuse Measure for risk assessment."
+        }
+      ]
     },
     {
-      "name": "Developmental Milestones",
-      "url": "/workshop/tools/milestones/",
-      "blurb": "Quick-reference age-banded developmental checks."
+      "name": "Medications",
+      "items": [
+        {
+          "name": "Opioid Converter",
+          "url": "/workshop/tools/opioid-converter/",
+          "blurb": "Morphine-equivalent dose conversion across opioid therapies."
+        },
+        {
+          "name": "Steroid Equivalent Calculator",
+          "url": "/workshop/tools/steroid-equivalent/",
+          "blurb": "Glucocorticoid potency and dose comparison (prednisolone equivalent)."
+        }
+      ]
     },
     {
-      "name": "Antidepressant Weaning",
-      "url": "/workshop/tools/antidepressant-weaning/",
-      "blurb": "Tapering schedules and withdrawal risk by agent."
+      "name": "Geriatrics",
+      "items": [
+        {
+          "name": "Cognitive Scores (mini-ACE, MMSE)",
+          "url": "/workshop/tools/cognitive-scores/",
+          "blurb": "Mini-ACE, MMSE, education-adjusted and non-English variants."
+        },
+        {
+          "name": "CIRS-G (Cumulative Illness Rating)",
+          "url": "/workshop/tools/cirs-g/",
+          "blurb": "Comorbidity burden and risk stratification in older adults."
+        },
+        {
+          "name": "DASI (Activity Status Index)",
+          "url": "/workshop/tools/dasi/",
+          "blurb": "Functional capacity and perioperative risk estimation."
+        },
+        {
+          "name": "Geriatric Assessment Toolkit",
+          "url": "/workshop/tools/geriatric-assessment/",
+          "blurb": "FRAIL, Katz ADL, Lawton IADL, and Rockwood CFS for frailty and functional assessment."
+        }
+      ]
     },
     {
-      "name": "Opioid Converter",
-      "url": "/workshop/tools/opioid-converter/",
-      "blurb": "Morphine-equivalent dose conversion across opioid therapies."
+      "name": "General",
+      "items": [
+        {
+          "name": "COPD Management",
+          "url": "/workshop/tools/copd/",
+          "blurb": "GOLD-staged inhaler therapy with NZF-subsidised medicine options."
+        },
+        {
+          "name": "Due Date Estimator",
+          "url": "/workshop/tools/due-date/",
+          "blurb": "Naegele's rule and gestational age by LMP or ultrasound."
+        },
+        {
+          "name": "CTS-6 (Carpal Tunnel Score)",
+          "url": "/workshop/tools/cts-6/",
+          "blurb": "Kamath & Stothard six-item weighted score for CTS probability."
+        }
+      ]
     },
     {
-      "name": "Psychotropic Selector",
-      "url": "/workshop/tools/psychotropic-selector/",
-      "blurb": "Side-effect profile and safety comparison by class and indication."
-    },
-    {
-      "name": "Cardiovascular Risk Stratification",
-      "url": "/workshop/tools/cv-risk/",
-      "blurb": "Framingham, SCORE2, and NZ cardiovascular risk assessment."
-    },
-    {
-      "name": "COPD Management",
-      "url": "/workshop/tools/copd/",
-      "blurb": "GOLD classification, spirometry interpretation, and exacerbation risk."
-    },
-    {
-      "name": "Due Date Estimator",
-      "url": "/workshop/tools/due-date/",
-      "blurb": "Naegele's rule and gestational age by LMP or ultrasound."
-    },
-    {
-      "name": "Wells Criteria (DVT & PE)",
-      "url": "/workshop/tools/wells-criteria/",
-      "blurb": "DVT and PE risk stratification with D-dimer guidance."
-    },
-    {
-      "name": "CHA2DS2-VASc",
-      "url": "/workshop/tools/cha2ds2-vasc/",
-      "blurb": "Stroke risk in atrial fibrillation and anticoagulation decision support."
-    },
-    {
-      "name": "Steroid Equivalent Calculator",
-      "url": "/workshop/tools/steroid-equivalent/",
-      "blurb": "Glucocorticoid potency and dose comparison (prednisolone equivalent)."
-    },
-    {
-      "name": "HAS-BLED",
-      "url": "/workshop/tools/has-bled/",
-      "blurb": "Bleeding risk in patients on anticoagulation for AF."
-    },
-    {
-      "name": "6 Minute Walk Distance Score",
-      "url": "/workshop/tools/6mwd/",
-      "blurb": "Predicted distance by age and sex; prognostic interpretation."
-    },
-    {
-      "name": "Cognitive Scores (mini-ACE, MMSE)",
-      "url": "/workshop/tools/cognitive-scores/",
-      "blurb": "Mini-ACE, MMSE, education-adjusted and non-English variants."
-    },
-    {
-      "name": "Benzodiazepine Conversion",
-      "url": "/workshop/tools/benzo-conversion/",
-      "blurb": "Diazepam-equivalent dose and tapering strategies."
-    },
-    {
-      "name": "CTS-6 (Carpal Tunnel Severity)",
-      "url": "/workshop/tools/cts-6/",
-      "blurb": "CTS Symptom Severity Scale and Functional Status Scale."
-    },
-    {
-      "name": "CIRS-G (Cumulative Illness Rating)",
-      "url": "/workshop/tools/cirs-g/",
-      "blurb": "Comorbidity burden and risk stratification in older adults."
-    },
-    {
-      "name": "COMM (Opioid Monitoring)",
-      "url": "/workshop/tools/comm/",
-      "blurb": "Current Opioid Misuse Measure for risk assessment."
-    },
-    {
-      "name": "DASI (Activity Status Index)",
-      "url": "/workshop/tools/dasi/",
-      "blurb": "Functional capacity and perioperative risk estimation."
-    },
-    {
-      "name": "Useful Resources",
-      "url": "/workshop/resources/",
-      "blurb": "Curated links: NZF, BPAC, HealthPathways, UpToDate, guidelines."
-    },
-    {
-      "name": "Patient Handouts",
-      "url": "/workshop/handouts/",
-      "blurb": "Printable patient education and shared decision-making resources."
+      "name": "Resources",
+      "items": [
+        {
+          "name": "Useful Resources",
+          "url": "/workshop/resources/",
+          "blurb": "Curated links: NZF, BPAC, HealthPathways, UpToDate, guidelines."
+        },
+        {
+          "name": "Patient Handouts",
+          "url": "/workshop/handouts/",
+          "blurb": "Printable patient education and shared decision-making resources."
+        }
+      ]
     }
   ]
 }
