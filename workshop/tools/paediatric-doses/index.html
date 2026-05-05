@@ -539,6 +539,7 @@ mark.hi,.hi{
 .b-pa{background:#c4dcc8;color:#143018}.b-dr{background:#dcd0e4;color:#2c1c3c}
 .b-oo{background:#ccd8e4;color:#182c3c}.b-cv{background:#e4ccd0;color:#3c1418}
 .b-en{background:#e8dcc8;color:#382810}
+.b-em{background:#f4cece;color:#3c1010}.b-ur{background:#d4d0e8;color:#28204c}
 
 .age-warn{
   padding:8px 20px;background:#f4ede0;
@@ -1811,6 +1812,157 @@ const D=[
 {id:'metformin',name:'Metformin',f:'F',cat:'Endocrine',ind:['Type 2 diabetes (≥ 10 yrs)','PCOS (adolescent)'],minAm:120,regs:[{
   lbl:'Type 2 diabetes / PCOS',route:'Oral',type:'fx',fxD:'500 mg once daily, titrate',freq:'Once daily, increasing to BD or TDS',
   notes:'SPECIALIST INITIATION. Start 500 mg once daily with food, increase weekly to max 2,000 mg/day in divided doses. GI side effects common, slow titration helps. Hold during illness with vomiting/dehydration. Avoid in renal impairment (eGFR < 30). Monitor B12 with long-term use.',preps:[]
+}]},
+// ── Emergency ─────────────────────────────────────────────────────
+{id:'adrenaline',name:'Adrenaline (Epinephrine)',al:['EpiPen'],cat:'Emergency',ind:['Anaphylaxis'],minAm:0,c:1,regs:[{
+  lbl:'Anaphylaxis (IM)',route:'IM (outer mid-thigh)',type:'wt',mpk:0.01,band:[0.01,0.01],freq:'Single dose; repeat every 5-10 min if no improvement',mxD:0.5,
+  notes:'Give 0.01 mg/kg (= 0.01 mL/kg of 1:1000 solution) IM. Max 0.5 mg. EpiPen Jr 0.15 mg for 15-30 kg; EpiPen 0.3 mg for >= 30 kg. Inject into outer mid-thigh through clothing if needed. Call 111. Repeat every 5-10 min if inadequate response. Lay flat with legs raised unless respiratory compromise.',
+  preps:[{lbl:'Adrenaline 1:1000 (1 mg/mL)',mpm:1}]
+}]},
+{id:'benzylpenicillin',name:'Benzylpenicillin (Crystapen)',ax:'bl',cat:'Emergency',ind:['Pre-hospital suspected meningococcal disease'],minAm:0,c:1,regs:[{
+  lbl:'Pre-hospital meningococcal',route:'IV or IM',type:'wb',
+  bands:[{mnK:0,mxK:10,d:300,u:'mg',lbl:'< 10 kg: 300 mg IV/IM'},{mnK:10,mxK:40,d:600,u:'mg',lbl:'10-40 kg: 600 mg IV/IM'},{mnK:40,mxK:999,d:1200,u:'mg',lbl:'> 40 kg: 1200 mg IV/IM'}],
+  freq:'Single dose before transfer to hospital',
+  notes:'Give before transport if meningococcal disease suspected (non-blanching rash + fever, or meningism). Dissolve 600 mg vial in 5 mL water for injection; give IV push over 3-5 min or IM. Penicillin allergy: substitute ceftriaxone 50 mg/kg IM/IV. Rifampicin for household contacts (see Rifampicin entry).',preps:[]
+}]},
+{id:'glucagon',name:'Glucagon',cat:'Emergency',ind:['Severe hypoglycaemia (unconscious or unable to swallow)'],minAm:0,c:1,regs:[{
+  lbl:'Severe hypoglycaemia',route:'IM or SC',type:'wb',
+  bands:[{mnK:0,mxK:20,d:0.5,u:'mg',lbl:'< 20 kg: 0.5 mg (0.5 mL)'},{mnK:20,mxK:999,d:1,u:'mg',lbl:'>= 20 kg: 1 mg (1 mL)'}],
+  freq:'Single dose; repeat once after 15 min if no response',
+  notes:'Reconstitute 1 mg vial with supplied diluent. Inject IM (outer thigh) or SC. Onset 10-15 min. Position on side (aspiration risk). Give fast-acting carbohydrate when conscious and able to swallow. Call 111 if no response. Encourage snack after recovery to prevent relapse.',preps:[]
+}]},
+// ── Antibacterials (additions) ─────────────────────────────────────
+{id:'ceftriaxone',name:'Ceftriaxone',cat:'Antibacterials',ind:['Suspected meningococcal (penicillin allergy or IV unavailable)','Empiric serious infection (IM/IV)','Severe community-acquired pneumonia'],minAm:3,regs:[{
+  lbl:'Serious infection / empiric coverage',route:'IV or IM',type:'wt',mpk:50,band:[50,100],freq:'Once daily (BD for meningitis)',mxD:4000,
+  notes:'Range 50-100 mg/kg/dose (max 2 g once daily; meningitis 100 mg/kg up to 4 g). Penicillin-allergy alternative for pre-hospital meningococcal. Avoid in neonates (displaces bilirubin). IM: reconstitute with 1% lignocaine to reduce pain.',preps:[]
+}]},
+{id:'isoniazid',name:'Isoniazid (INH)',cat:'Antibacterials',ind:['Latent TB infection (LTBI) prophylaxis','Active TB combination therapy (specialist)'],minAm:0,regs:[{
+  lbl:'LTBI treatment',route:'Oral',type:'wt',mpk:10,band:[10,15],freq:'Once daily for 6-9 months',mxD:300,
+  notes:'Range 10-15 mg/kg/day (max 300 mg/day). Co-prescribe pyridoxine (vitamin B6) 10-25 mg/day to prevent peripheral neuropathy, essential in malnutrition, HIV, renal disease. Confirm LTBI diagnosis before treating. CXR and HIV test recommended. Monitor LFTs if symptomatic. Public health notification required for active TB. PHARMAC Special Authority.',
+  preps:[{lbl:'Isoniazid 50 mg/5 mL syrup',mpm:10}]
+}]},
+// ── Respiratory (additions) ────────────────────────────────────────
+{id:'adrenaline-neb',name:'Adrenaline Nebulised (croup)',cat:'Respiratory',ind:['Severe croup (bridging while arranging transfer)'],minAm:3,regs:[{
+  lbl:'Severe croup',route:'Nebulised',type:'wb',
+  bands:[{mnK:0,mxK:10,d:2.5,u:'mL of 1:1000',lbl:'< 10 kg: 2.5 mL of 1:1000'},{mnK:10,mxK:999,d:5,u:'mL of 1:1000',lbl:'>= 10 kg: 5 mL of 1:1000'}],
+  freq:'Single nebulisation; observe for minimum 3-4 h (rebound risk)',
+  notes:'Use adrenaline 1:1000 (1 mg/mL). Dilute to 4 mL total with 0.9% NaCl if needed. Short-acting (1-2 h) with rebound stridor risk: observe for minimum 3-4 h post-treatment. Give oral dexamethasone concurrently. Severe croup only; arrange hospital transfer. Not a substitute for definitive airway management.',
+  preps:[{lbl:'Adrenaline 1:1000 (1 mg/mL)',mpm:1}]
+}]},
+{id:'budesonide-inh',name:'Budesonide Turbuhaler (Pulmicort)',al:['Pulmicort'],f:'F',cat:'Respiratory',ind:['Asthma maintenance preventer (ICS, Turbuhaler)'],minAm:72,regs:[
+  {lbl:'Low-medium dose preventer',route:'Inhaled Turbuhaler',type:'fx',fxD:'100-200 mcg BD',freq:'Twice daily (BD)',
+   notes:'6-11 yrs: 100-200 mcg BD (Pulmicort 100 Turbuhaler). >= 12 yrs: 200-400 mcg BD. Requires adequate inspiratory flow; unsuitable < 6 yrs (use MDI + spacer instead). Rinse mouth and spit after each use. PHARMAC subsidised. Equivalent potency to beclometasone CFC approximately 1:1.',preps:[]},
+  {lbl:'Medium-high dose (moderate-severe asthma)',route:'Inhaled Turbuhaler',type:'fx',fxD:'200-400 mcg BD',freq:'Twice daily (BD)',
+   notes:'>= 12 yrs: 400-800 mcg BD. Consider step-up to ICS + LABA combination inhaler (Symbicort) at this level with specialist guidance.',preps:[]}
+]},
+{id:'seretide',name:'Fluticasone/Salmeterol (Seretide)',al:['Seretide'],cat:'Respiratory',ind:['Moderate-severe persistent asthma (ICS + LABA step-up)'],minAm:48,regs:[{
+  lbl:'Asthma step-up ICS + LABA',route:'MDI + spacer or Accuhaler',type:'fx',fxD:'Seretide 50 (fluticasone 50 mcg + salmeterol 25 mcg) 1-2 puffs BD',freq:'Twice daily (BD)',
+  notes:'>= 4 yrs: Seretide 50 Evohaler 1-2 puffs BD via spacer. >= 12 yrs: Seretide 125 or 250 as appropriate. LABA must not be used without ICS. Add-on after ICS proves inadequate; paediatric specialist guidance recommended. Rinse mouth after use. PHARMAC Special Authority may apply.',preps:[]}
+]},
+{id:'symbicort',name:'Budesonide/Formoterol (Symbicort)',al:['Symbicort'],cat:'Respiratory',ind:['Moderate-severe persistent asthma (ICS + LABA)','SMART therapy (>= 12 yrs)'],minAm:72,regs:[{
+  lbl:'Asthma maintenance and reliever (SMART)',route:'Inhaled Turbuhaler',type:'fx',fxD:'Symbicort 100/6 or 200/6 mcg 1-2 puffs BD',freq:'Twice daily maintenance; as-needed puffs for relief',
+  notes:'>= 6 yrs maintenance: 1-2 puffs BD (Symbicort 100/6 Turbuhaler). SMART therapy >= 12 yrs only: same inhaler used for both maintenance and as reliever (max 12 puffs/day total). Step-up from ICS alone; paediatric respiratory specialist review recommended.',preps:[]}
+]},
+// ── Analgesics & NSAIDs (additions) ───────────────────────────────
+{id:'naproxen',name:'Naproxen',al:['Naprosyn','Naprogesic'],cat:'Analgesics & NSAIDs',ind:['Juvenile idiopathic arthritis','Musculoskeletal inflammatory pain','Dysmenorrhoea (adolescent)'],minAm:24,regs:[{
+  lbl:'Anti-inflammatory / JIA',route:'Oral',type:'wt',mpk:5,band:[5,7.5],freq:'Twice daily (BD)',mxD:500,
+  notes:'Range 5-7.5 mg/kg BD (max 500 mg BD). JIA: up to 10 mg/kg BD under specialist guidance. Give with food. NSAID precautions apply: avoid in dehydration, renal impairment, GI disease, NSAID-sensitive asthma. Longer half-life than ibuprofen; BD dosing preferred. Not recommended < 2 yrs.',preps:[]
+}]},
+// ── Antihistamines (additions) ─────────────────────────────────────
+{id:'fexofenadine',name:'Fexofenadine',al:['Telfast','Fexo'],cat:'Antihistamines',ind:['Allergic rhinitis','Chronic urticaria (non-sedating)'],minAm:72,regs:[{
+  lbl:'Allergic rhinitis / urticaria',route:'Oral',type:'ab',
+  bands:[{mnM:72,mxM:144,d:30,u:'mg',lbl:'6-< 12 yrs: 30 mg twice daily',freq:'Twice daily'},
+         {mnM:144,mxM:99999,d:120,u:'mg',lbl:'>= 12 yrs: 120-180 mg once daily',freq:'Once daily'}],
+  freq:'Age-dependent',
+  notes:'Non-sedating; minimal CNS effects; no QTc prolongation. Give with water; grapefruit juice and antacids reduce absorption. Useful where loratadine or cetirizine are insufficient. Limited PHARMAC subsidy for children, check funding status.',preps:[]
+}]},
+// ── Gastrointestinal (additions) ──────────────────────────────────
+{id:'lansoprazole',name:'Lansoprazole',al:['Zoton','Lanzopral'],cat:'Gastrointestinal',ind:['GERD / reflux oesophagitis (PPI alternative to omeprazole)','H. pylori eradication (combination)'],minAm:1,regs:[{
+  lbl:'GERD / reflux',route:'Oral',type:'wt',mpk:1,freq:'Once daily, 30 min before breakfast',mxD:30,
+  notes:'Range 1-2 mg/kg/day (max 30 mg). FasTabs (orodispersible) preferred for children: place on tongue and allow to disperse without water. Alternative PPI if omeprazole unavailable or poorly tolerated. Reassess at 4-8 weeks. Avoid < 1 yr unless specialist-directed.',preps:[]
+}]},
+{id:'glycerol-supp',name:'Glycerol Suppositories',cat:'Gastrointestinal',ind:['Infant constipation (short-term relief)','Acute faecal softening'],minAm:0,regs:[{
+  lbl:'Constipation relief',route:'Rectal',type:'ab',
+  bands:[{mnM:0,mxM:24,d:1,u:'g (infant suppository)',lbl:'< 2 yrs: 1 g infant suppository',freq:'Once or twice daily as needed'},
+         {mnM:24,mxM:144,d:2,u:'g (child suppository)',lbl:'2-< 12 yrs: 2 g child suppository',freq:'Once or twice daily as needed'},
+         {mnM:144,mxM:99999,d:4,u:'g (adult suppository)',lbl:'>= 12 yrs: 4 g adult suppository',freq:'Once or twice daily as needed'}],
+  freq:'As needed; insert and retain for 15-30 min',
+  notes:'Lubricant and mild osmotic action. For short-term relief only, not ongoing constipation management. In infants, use cautiously and only when oral agents (macrogol, lactulose) are insufficient or refused. Warm in hands before insertion.',preps:[]
+}]},
+// ── Nervous System (additions) ────────────────────────────────────
+{id:'valproate',name:'Sodium Valproate (Epilim)',al:['Epilim','Convulex'],f:'R',cat:'Nervous System',ind:['Epilepsy - absence, myoclonic, generalised tonic-clonic (specialist)'],minAm:1,regs:[{
+  lbl:'Epilepsy maintenance',route:'Oral',type:'wt',mpk:10,band:[10,20],freq:'Twice daily (BD)',mxD:800,
+  notes:'SPECIALIST INITIATION. Start 5-10 mg/kg/day BD; increase by 5-10 mg/kg/week to effective dose (usual 20-30 mg/kg/day, max 40 mg/kg/day or 2 g/day). HIGHLY TERATOGENIC: restricted use in females of reproductive potential under PREVENT programme. Monitor LFTs and FBC at initiation and periodically. Many drug interactions. Rare pancreatitis risk.',
+  preps:[{lbl:'Epilim 200 mg/5 mL liquid',mpm:40}]
+}]},
+{id:'carbamazepine',name:'Carbamazepine (Tegretol)',al:['Tegretol'],f:'R',cat:'Nervous System',ind:['Focal epilepsy (specialist)','Trigeminal neuralgia','Neuropathic pain (specialist)'],minAm:1,regs:[{
+  lbl:'Epilepsy / neuropathic pain',route:'Oral',type:'wt',mpk:5,band:[5,10],freq:'Twice daily (BD)',mxD:400,
+  notes:'SPECIALIST INITIATION. Start 5 mg/kg/day BD; increase by 2.5-5 mg/kg every 1-2 weeks to 10-20 mg/kg/day (max 800 mg/day in children; 1 g/day in adolescents). Check FBC and LFTs before starting, then periodically. HLA-B*1502 screening recommended in Han Chinese before prescribing. Potent CYP3A4 inducer; many drug interactions.',
+  preps:[{lbl:'Tegretol 100 mg/5 mL liquid',mpm:20}]
+}]},
+{id:'levetiracetam',name:'Levetiracetam (Keppra)',al:['Keppra'],f:'R',cat:'Nervous System',ind:['Focal and generalised epilepsy (specialist)'],minAm:1,regs:[{
+  lbl:'Epilepsy maintenance',route:'Oral',type:'wt',mpk:10,band:[10,20],freq:'Twice daily (BD)',mxD:750,
+  notes:'SPECIALIST INITIATION. Start 10 mg/kg/day BD; increase by 10 mg/kg every 2 weeks to 20-40 mg/kg/day (max 60 mg/kg/day or 3 g/day). Behavioural side effects (irritability, aggression) in approximately 10%; usually manageable. Few drug interactions. Dose reduce in renal impairment. Well tolerated overall.',
+  preps:[{lbl:'Keppra 100 mg/mL oral solution',mpm:100}]
+}]},
+{id:'topiramate',name:'Topiramate (Topamax)',al:['Topamax'],f:'R',cat:'Nervous System',ind:['Migraine prophylaxis (>= 12 yrs, specialist)','Epilepsy (specialist)'],minAm:24,regs:[{
+  lbl:'Migraine prophylaxis or epilepsy',route:'Oral',type:'wt',mpk:1,band:[1,3],freq:'Twice daily (BD)',mxD:100,
+  notes:'SPECIALIST INITIATION. Start 0.5-1 mg/kg/day; increase slowly over weeks to response. Migraine prophylaxis (>= 12 yrs): target 50-100 mg/day. Epilepsy: 3-9 mg/kg/day. Side effects: cognitive slowing, word-finding difficulty, paraesthesia, kidney stones (maintain hydration), weight loss. Teratogenic; counsel females of reproductive potential.',preps:[]
+}]},
+{id:'amitriptyline',name:'Amitriptyline',cat:'Nervous System',ind:['Migraine prophylaxis (adolescent)','Neuropathic pain','Functional abdominal pain'],minAm:144,regs:[{
+  lbl:'Migraine prophylaxis / neuropathic pain',route:'Oral',type:'fx',fxD:'10 mg at night; titrate to 10-50 mg',freq:'Once daily at night',
+  notes:'Adolescents >= 12 yrs only. Start 10 mg at night; increase by 10 mg every 1-2 weeks to response (usual 10-50 mg, max 75 mg). ECG before starting if cardiac history. Anticholinergic effects: dry mouth, constipation, sedation. MEDSAFE WARNING: do not use for depression in under-18s (increased suicidal ideation). Prescribe limited quantities given overdose risk.',preps:[]
+}]},
+{id:'clonidine',name:'Clonidine',al:['Catapres','Dixarit'],f:'R',cat:'Nervous System',ind:['ADHD adjunct or non-stimulant option','Sleep disturbance in ADHD or ASD','Tics / Tourette syndrome'],minAm:72,regs:[{
+  lbl:'ADHD / tics / sleep',route:'Oral',type:'wt',mpk:0.002,band:[0.002,0.005],freq:'Twice to three times daily',mxD:0.1,
+  notes:'SPECIALIST INITIATION. Start 1 mcg/kg/day (0.001 mg/kg/day); increase slowly every 1-2 weeks. Range 2-5 mcg/kg/day (= 0.002-0.005 mg/kg/dose), max 0.3 mg/day total. For sleep: evening dose 30-60 min before bedtime. Side effects: sedation, hypotension, dry mouth. Do NOT stop abruptly (rebound hypertension). Monitor BP and heart rate.',preps:[]
+}]},
+{id:'atomoxetine',name:'Atomoxetine (Strattera)',al:['Strattera'],f:'R',cat:'Nervous System',ind:['ADHD - non-stimulant alternative (specialist)'],minAm:72,regs:[{
+  lbl:'ADHD (weight-based)',route:'Oral',type:'wt',mpk:0.5,band:[0.5,1.2],freq:'Once daily or split morning and afternoon',mxD:40,
+  notes:'SPECIALIST INITIATION (PHARMAC Special Authority). Start 0.5 mg/kg/day for 1 week; increase to 1.2 mg/kg/day (max 1.4 mg/kg/day or 100 mg/day, whichever is lower). > 70 kg: start 40 mg/day, target 80-100 mg/day. Onset 2-4 weeks. Not a controlled substance. Side effects: decreased appetite, insomnia, GI upset, rarely hepatotoxicity, raised BP. Suicidal ideation warning in initial weeks.',preps:[]
+}]},
+// ── Cardiovascular (additions) ────────────────────────────────────
+{id:'propranolol',name:'Propranolol',al:['Inderal'],cat:'Cardiovascular',ind:['SVT (paediatric cardiology)','Migraine prophylaxis (>= 12 yrs)','Thyrotoxicosis adjunct'],minAm:12,regs:[
+  {lbl:'Migraine prophylaxis',route:'Oral',type:'wt',mpk:0.5,band:[0.5,1],freq:'Twice daily (BD)',mxD:40,
+   notes:'Range 0.5-1 mg/kg BD; increase gradually every 2 weeks. Max 4 mg/kg/day or 120 mg/day. Contraindicated in asthma, uncontrolled heart failure, heart block, bradycardia. Do not stop abruptly (rebound hypertension). Usually specialist-initiated.',preps:[]},
+  {lbl:'SVT (paediatric cardiology)',route:'Oral',type:'wt',mpk:0.25,band:[0.25,1],freq:'Three times daily (TDS)',mxD:40,
+   notes:'Paediatric cardiologist initiation. Start 0.25 mg/kg TDS; titrate to 0.5-1 mg/kg/dose TDS (max 4 mg/kg/day). ECG before starting. Contraindicated in asthma.',preps:[]}
+]},
+{id:'furosemide',name:'Furosemide',al:['Lasix','Frusid'],cat:'Cardiovascular',ind:['Fluid overload / oedema (specialist)','Cardiac failure','Hypertensive urgency'],minAm:0,regs:[{
+  lbl:'Oedema / fluid overload',route:'Oral',type:'wt',mpk:0.5,band:[0.5,2],freq:'Once to twice daily',mxD:40,
+  notes:'SPECIALIST INITIATION. Range 0.5-2 mg/kg/dose BD (max 40 mg/dose; up to 80 mg in resistant oedema). Oral bioavailability variable (~50%) compared to IV. Monitor electrolytes (hypokalaemia, hyponatraemia), renal function, and weight. Supplement potassium if prolonged use.',
+  preps:[{lbl:'Furosemide 10 mg/mL oral solution',mpm:10}]
+}]},
+{id:'aspirin-kawasaki',name:'Aspirin (Kawasaki disease)',cat:'Cardiovascular',ind:['Kawasaki disease - anti-inflammatory and antiplatelet (specialist only)'],minAm:0,regs:[
+  {lbl:'Kawasaki acute phase (anti-inflammatory)',route:'Oral',type:'wt',mpk:25,band:[25,25],freq:'Four times daily (QID) until afebrile >= 48 h',mxD:1000,
+   notes:'SPECIALIST INITIATION ONLY. Anti-inflammatory dose: 80-100 mg/kg/day QID, given with IVIG (2 g/kg). Active influenza or varicella increases Reye syndrome risk; seek paediatric advice.',preps:[]},
+  {lbl:'Kawasaki post-acute (antiplatelet)',route:'Oral',type:'wt',mpk:4,band:[3,5],freq:'Once daily',mxD:100,
+   notes:'3-5 mg/kg/day (max 100 mg) once fever has resolved for >= 48 h. Continue minimum 6-8 weeks; long-term if coronary artery aneurysms on echo. Paediatric cardiology follow-up essential.',preps:[]}
+]},
+// ── Urology (new) ─────────────────────────────────────────────────
+{id:'desmopressin',name:'Desmopressin (DDAVP)',al:['Minirin','DDAVP Melt'],cat:'Urology',ind:['Nocturnal enuresis (>= 5 yrs)','Diabetes insipidus (specialist)'],minAm:60,regs:[{
+  lbl:'Nocturnal enuresis',route:'Oral or sublingual melt',type:'ab',
+  bands:[{mnM:60,mxM:99999,d:200,u:'mcg tablet (or 120 mcg melt)',lbl:'>= 5 yrs: 200 mcg tablet or 120 mcg sublingual melt at bedtime',freq:'Once at bedtime'}],
+  freq:'Once at bedtime; restrict fluids 1 h before to 8 h after dose',
+  notes:'Restrict fluid intake from 1 h before to 8 h after dose (hyponatraemia and water intoxication risk). Hold during vomiting, diarrhoea, or febrile illness. Start on a non-school night. Max dose: tablet 400 mcg, melt 240 mcg (melt 120 mcg = tablet 200 mcg). Review at 3 months. PHARMAC subsidised.',preps:[]
+}]},
+{id:'oxybutynin',name:'Oxybutynin',cat:'Urology',ind:['Overactive bladder','Daytime urinary urgency or incontinence (>= 5 yrs)'],minAm:60,regs:[{
+  lbl:'Overactive bladder',route:'Oral',type:'ab',
+  bands:[{mnM:60,mxM:132,d:2.5,u:'mg',lbl:'5-< 11 yrs: 2.5-3 mg twice to three times daily',freq:'Twice to three times daily'},
+         {mnM:132,mxM:99999,d:5,u:'mg',lbl:'>= 11 yrs: 5 mg twice to three times daily (max 5 mg QID)',freq:'Two to four times daily'}],
+  freq:'Two to three times daily',
+  notes:'Anticholinergic: dry mouth, constipation, facial flushing, drowsiness common. Usually initiated with paediatric continence specialist. Review at 1-3 months. Useful in neurogenic bladder (e.g. spina bifida). Avoid in high ambient temperatures (impaired sweating). Modified-release tablet available for older children.',preps:[]
+}]},
+// ── Endocrine (additions) ─────────────────────────────────────────
+{id:'hydrocortisone-oral',name:'Hydrocortisone oral',al:['Hysone','Cortef'],cat:'Endocrine',ind:['Adrenal insufficiency replacement therapy','Congenital adrenal hyperplasia','Sick day rule dosing'],minAm:0,regs:[
+  {lbl:'Physiological replacement',route:'Oral',type:'wt',mpk:0.25,band:[0.17,0.33],freq:'Three times daily (TDS), larger morning dose',mxD:10,
+   notes:'SPECIALIST INITIATION (paediatric endocrinology). Total daily dose approximately 0.5-1 mg/kg/day in 3 divided doses (approximately 6-12 mg/m2/day). Give largest dose in morning. Steroid emergency card and written sick day action plan essential for all families.',preps:[]},
+  {lbl:'Sick day doubling (fever or illness)',route:'Oral',type:'wt',mpk:0.5,band:[0.33,0.66],freq:'Three times daily during illness',mxD:20,
+   notes:'Double or triple maintenance dose when febrile (>= 38 degrees C), vomiting, or during significant illness or surgery. If unable to keep oral medication down: give IM hydrocortisone 25 mg/m2 (approximately 1-2 mg/kg) and call 111 immediately. Sick day rules must be rehearsed with families at every visit.',preps:[]}
+]},
+{id:'fludrocortisone',name:'Fludrocortisone (Florinef)',cat:'Endocrine',ind:['Primary adrenal insufficiency - mineralocorticoid replacement','Congenital adrenal hyperplasia (salt-wasting)'],minAm:0,regs:[{
+  lbl:'Mineralocorticoid replacement',route:'Oral',type:'fx',fxD:'50-100 mcg once daily',freq:'Once daily (morning)',
+  notes:'SPECIALIST INITIATION (paediatric endocrinology). Usual dose: infants 100-200 mcg/day; older children 50-100 mcg/day. Monitor blood pressure, plasma renin activity, and electrolytes. Supplement sodium in infancy (1-2 mmol/kg/day NaCl drops). Tablets only available in NZ; specialist will advise on preparation method for infants.',preps:[]
 }]}
 ];
 
@@ -1934,6 +2086,7 @@ function flashMsg(m){
 // ── Categories ───────────────────────────────────────────────────
 const CATS=[
   {id:'all',lbl:'All'},{id:'common',lbl:'★ Common'},
+  {id:'Emergency',lbl:'Emergency'},
   {id:'Analgesics & NSAIDs',lbl:'Analgesics'},
   {id:'Antibacterials',lbl:'Antibacterials'},
   {id:'Antifungals & Antivirals',lbl:'Antifungals/virals'},
@@ -1946,7 +2099,8 @@ const CATS=[
   {id:'Nutritional & Haematological',lbl:'Vit/Haem'},
   {id:'Cardiovascular',lbl:'CV'},
   {id:'Endocrine',lbl:'Endocrine'},
-  {id:'Ophthalmic & Otic',lbl:'Eye/Ear'}
+  {id:'Ophthalmic & Otic',lbl:'Eye/Ear'},
+  {id:'Urology',lbl:'Urology'}
 ];
 const BC={
   'Analgesics & NSAIDs':'b-an','Antibacterials':'b-ab',
@@ -1955,7 +2109,8 @@ const BC={
   'Nervous System':'b-ns','Dermatology':'b-dr',
   'Antiparasitics':'b-pa','Nutritional & Haematological':'b-nu',
   'Cardiovascular':'b-cv','Endocrine':'b-en',
-  'Ophthalmic & Otic':'b-oo'
+  'Ophthalmic & Otic':'b-oo','Emergency':'b-em',
+  'Urology':'b-ur'
 };
 
 // ── Helpers ──────────────────────────────────────────────────────
