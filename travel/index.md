@@ -396,6 +396,31 @@ pillar: Travel
 
     <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
 
+    <h2 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 1.25rem;">Individual topic pages</h2>
+
+    <p>Each topic below has its own page with expanded clinical reasoning, management detail, and NZ-specific guidance.</p>
+
+    <h3 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.2rem; letter-spacing: -0.01em; margin: 2rem 0 0.75rem;">Before travel</h3>
+    <ul style="padding-left: 1.25rem; color: var(--ink-soft); line-height: 2.2;">
+      <li><a href="/travel/pre-travel-consult/">Pre-travel consultation</a> &#8212; timing, complexity triage, travel health kit, Yellow Fever certificates</li>
+      <li><a href="/travel/malaria/">Malaria prophylaxis</a> &#8212; regional risk, paediatric dosing, drug interactions, standby emergency treatment</li>
+      <li><a href="/travel/insect-bite-prevention/">Insect bite prevention</a> &#8212; DEET, picaridin, permethrin, bed nets, biting times by vector</li>
+      <li><a href="/travel/fit-to-fly/">Fit to fly</a> &#8212; hypoxia inhalation test, MEDIF forms, in-flight oxygen, specific condition guidance</li>
+    </ul>
+
+    <h3 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.2rem; letter-spacing: -0.01em; margin: 2rem 0 0.75rem;">During travel</h3>
+    <ul style="padding-left: 1.25rem; color: var(--ink-soft); line-height: 2.2;">
+      <li><a href="/travel/travellers-diarrhoea/">Traveller&#8217;s diarrhoea</a> &#8212; pathogens by region, severity classification, management algorithm, paediatric approach</li>
+      <li><a href="/travel/altitude-illness/">Altitude illness</a> &#8212; Lake Louise Score, trek acclimatisation schedules, field management of HACE and HAPE</li>
+    </ul>
+
+    <h3 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.2rem; letter-spacing: -0.01em; margin: 2rem 0 0.75rem;">After travel</h3>
+    <ul style="padding-left: 1.25rem; color: var(--ink-soft); line-height: 2.2;">
+      <li><a href="/travel/returning-traveller/">Fever in the returned traveller</a> &#8212; tropical screen panel, malaria workup protocol, dengue algorithm, admission criteria</li>
+    </ul>
+
+    <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
+
     <h2 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 1.25rem;">Resources</h2>
 
     <ul style="padding-left: 1.25rem; color: var(--ink-soft); line-height: 2.2;">
