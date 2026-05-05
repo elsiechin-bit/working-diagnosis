@@ -32,8 +32,8 @@ a:hover { color: var(--green); }
 
 .page-wrapper {
   display: flex;
-  gap: 40px;
-  max-width: 1400px;
+  gap: 24px;
+  max-width: 1060px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -67,7 +67,7 @@ a:hover { color: var(--green); }
 .wrap { max-width: 1080px; padding: 0 24px; }
 
 .masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
-.masthead-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+.masthead-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; max-width: 1060px; margin: 0 auto; padding: 0 24px; }
 .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; }
 .brand em { font-style: italic; color: var(--green); }
 .primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
