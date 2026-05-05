@@ -61,7 +61,7 @@ The practical implication for any New Zealand GP: if you would ask about food re
 
 The role of social media in eating disorders is a topic that attracts confident claims in both directions, and deserves more care than it usually gets.
 
-The strongest evidence is from the company itself. Internal research conducted by Facebook (and subsequently leaked by whistleblower Frances Haugen in 2021) found that Instagram knew its platform made body image concerns worse for a significant proportion of teenage girls, and that those concerns were causally related to the platform's recommendation algorithms pushing appearance-related content. [7] The company characterised this as a known risk and continued to operate the algorithms regardless. This is not epidemiology, but it is testimony from the entity with the most complete data, and it should be taken seriously.
+The strongest evidence is from the company itself. Internal research conducted by Facebook (and subsequently leaked by whistleblower Frances Haugen in 2021) found that Instagram knew its platform made body image concerns worse for a significant proportion of teenage girls, and that those concerns were causally related to the platform's recommendation algorithms pushing appearance-related content. [7] The company characterised this as a known risk and continued to operate the algorithms regardless. This falls short of epidemiology, but it is testimony from the entity with the most complete data, and it should be taken seriously.
 
 The broader epidemiological evidence is more complicated. Ecological data showing that eating disorder presentations have increased over the same period that social media use has increased is consistent with a causal relationship but does not establish one. Longitudinal studies examining social media use and eating disorder development have found associations, but associations of modest size, with evidence of bidirectionality - people with existing eating disorder cognitions may selectively engage with appearance-related content, rather than the content causing the cognition. [8]
 
@@ -85,7 +85,7 @@ Approximately one in three to one in four people with an eating disorder is male
 
 Men with eating disorders are less likely to be identified by clinicians, less likely to be referred to specialist services, and less likely to seek help themselves. They are also more likely to have their disordered behaviours framed as positive: a young man who is highly controlled about his food intake and exercises intensively may receive admiration rather than concern. Muscle dysmorphia in particular sits in a cultural space where extreme physique modification is normalised, celebrated in gyms and on social media, and commercially profitable.
 
-When men do present, they are likely to have been unwell for longer, and they may present to GPs not with concerns about eating but with concerns about their training, their supplements, or related physical issues. Asking about dietary intake, restriction, and food-related anxiety in male patients presenting with body composition concerns, overtraining symptoms, or fatigue is not overreach. It is appropriate screening.
+When men do present, they are likely to have been unwell for longer, and they may present to GPs with concerns about their training, their supplements, or related physical issues — the eating disorder presenting through a side door. Asking about dietary intake, restriction, and food-related anxiety in male patients presenting with body composition concerns, overtraining symptoms, or fatigue is not overreach. It is appropriate screening.
 
 ## Part VIII - LGBTQ+ populations
 
@@ -99,7 +99,7 @@ For New Zealand GPs providing care to LGBTQ+ patients, eating and weight are wor
 
 Specialist eating disorder services in New Zealand are geographically concentrated and under-resourced relative to the burden of disease. Major centres have dedicated services; rural New Zealand largely does not. [12] The consequences for patients outside the main cities are a familiar pattern in New Zealand health: delayed access, greater reliance on the GP to hold clinical complexity that would benefit from specialist input, and outcomes that diverge from those achievable with adequate service.
 
-The Eating Disorders Association of New Zealand (EDANZ) provides peer support, family support, and resource navigation. It is not a clinical service, but for patients and families trying to find their way in a confusing and under-signposted system, it is often the first useful point of contact. Knowing that it exists and being able to direct patients to it is a practical skill.
+The Eating Disorders Association of New Zealand (EDANZ) provides peer support, family support, and resource navigation. It is a non-clinical service, and for patients and families trying to find their way in a confusing and under-signposted system, it is often the first useful point of contact. Knowing that it exists and being able to direct patients to it is a practical skill.
 
 For GPs, the evidence-based interventions that are feasible within a primary care context include: Cognitive Behavioural Therapy-Enhanced (CBT-E) delivered by a sufficiently trained psychologist in the community; family-based treatment (Maudsley approach) for adolescents; and pharmacological support where indicated - specifically fluoxetine for bulimia nervosa, where there is reasonable evidence, and (with considerably more caution) pharmacotherapy for BED. For anorexia nervosa with medical compromise, the role of primary care is primarily to monitor physical parameters, coordinate referral, and maintain the therapeutic relationship that keeps the patient engaged with the health system at all.
 
@@ -115,7 +115,7 @@ A handful of things would meaningfully improve eating disorder outcomes in New Z
 
 **Honest conversations about the wellness industry.** The normalisation of dietary restriction as virtue is a health literacy problem that GPs are well-placed to name. Patients with food anxiety do not need to hear that their restriction is admirable. They need someone to ask what eating is like for them, and to take the answer seriously.
 
-**Resources matched to the burden of disease.** This is a system problem, not a primary care problem, but primary care advocacy matters. Eating disorders have the mortality profile of a serious physical illness. The resourcing should reflect that.
+**Resources matched to the burden of disease.** This is a system problem — and primary care advocacy matters precisely because of that. Eating disorders have the mortality profile of a serious physical illness. The resourcing should reflect that.
 
 There is a version of a New Zealand GP who sees a Maori woman in her thirties, at a normal body weight, who mentions in passing that she tends to eat and eat when she is stressed and then hates herself for it - and who hears that as a lifestyle note rather than a screening cue for binge eating disorder. That GP is not negligent. They have been trained in an image, and the image is incomplete.
 

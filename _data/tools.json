@@ -8,7 +8,7 @@
         {
           "name": "Cardiovascular Risk Stratification",
           "url": "/workshop/tools/cv-risk/",
-          "blurb": "Framingham, SCORE2, and NZ cardiovascular risk assessment."
+          "blurb": "PREDICT-CVD 5-year cardiovascular risk for NZ patients, with Framingham, QRISK3, SCORE2, and ACC/AHA for comparison."
         },
         {
           "name": "CHA2DS2-VASc",
@@ -23,7 +23,7 @@
         {
           "name": "Paediatric Dosage Calculator",
           "url": "/workshop/tools/paediatric-doses/",
-          "blurb": "Weight-based dosing for the everyday paediatric formulary."
+          "blurb": "Weight- and age-based dosing aligned to NZFc and Starship guidelines."
         }
       ]
     },
@@ -33,22 +33,22 @@
         {
           "name": "Substance Risk Calculator",
           "url": "/workshop/tools/substance-risk/",
-          "blurb": "AUDIT, AUDIT-C, ASSIST and a few quick risk indices."
+          "blurb": "Alcohol (AUDIT), cannabis, and nicotine/vaping risk profiles with evidence-based harm summaries and cessation guidance."
         },
         {
           "name": "Antidepressant Weaning",
           "url": "/workshop/tools/antidepressant-weaning/",
-          "blurb": "Tapering schedules and withdrawal risk by agent."
+          "blurb": "Tapering schedules and cross-tapering transitions. Covers SSRIs, SNRIs, TCAs, and mirtazapine."
         },
         {
           "name": "Psychotropic Selector",
           "url": "/workshop/tools/psychotropic-selector/",
-          "blurb": "Side-effect profile and safety comparison by class and indication."
+          "blurb": "Filterable reference for 22 agents: NZ dosing, side effects, CYP450, cost, and pregnancy safety by indication and class."
         },
         {
           "name": "Benzodiazepine Conversion",
           "url": "/workshop/tools/benzo-conversion/",
-          "blurb": "Diazepam-equivalent dose and tapering strategies."
+          "blurb": "Diazepam-equivalent conversion for 11 agents including Z-drugs. Switching protocols and dependence management."
         }
       ]
     },
@@ -58,7 +58,7 @@
         {
           "name": "Opioid Converter",
           "url": "/workshop/tools/opioid-converter/",
-          "blurb": "Morphine-equivalent dose conversion across opioid therapies."
+          "blurb": "Conversion across 9 opioid agents including transdermal patches. Aligned to NZ HealthPathways guidance."
         },
         {
           "name": "Steroid Equivalent Calculator",
@@ -93,7 +93,7 @@
         {
           "name": "COPD Management",
           "url": "/workshop/tools/copd/",
-          "blurb": "GOLD-staged inhaler therapy with NZF-subsidised medicine options."
+          "blurb": "BPAC/GOLD-staged medication selector with NZF-subsidised inhaler options."
         },
         {
           "name": "Due Date Estimator",

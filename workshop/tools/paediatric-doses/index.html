@@ -79,7 +79,7 @@ html{font-size:17px}
   --fs-hero:2.5rem;
 
   --w-reg:400;--w-med:500;--w-bold:700;
-  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-pill:999px;
+  --r-sm:3px;--r-md:4px;--r-lg:4px;--r-pill:4px;
 }
 
 /* ── Base ───────────────────────────────────────────────────── */
@@ -136,15 +136,17 @@ mark.hi,.hi{
 .branding h1{
   font-family:var(--display);
   font-size:var(--fs-lg);
-  font-weight:600;
-  letter-spacing:-.005em;line-height:1.2;
+  font-weight:500;
+  letter-spacing:-.01em;line-height:1.2;
   color:var(--ink);
 }
 .disc{
-  font-size:var(--fs-micro);
-  color:var(--ink-mute);
-  margin-top:4px;
-  font-style:italic;
+  font-family:var(--mono);
+  font-size:.6rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ochre);
+  margin-top:5px;
 }
 
 /* Header inputs: weight + age */
@@ -187,7 +189,7 @@ mark.hi,.hi{
   white-space:nowrap;
 }
 .hbtn:hover{background:var(--paper-warm);color:var(--ink);border-color:var(--ink-mute)}
-.hbtn.on{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd);font-weight:var(--w-bold)}
+.hbtn.on{background:var(--green-deep);color:var(--paper);border-color:var(--green-deep);font-weight:var(--w-bold)}
 
 /* Age unit pills (ink-on-paper) */
 .label-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
@@ -205,7 +207,7 @@ mark.hi,.hi{
   line-height:1.5;
 }
 .ubtn:hover{background:var(--paper-warm);color:var(--ink)}
-.ubtn.on{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
+.ubtn.on{background:var(--green);color:var(--paper);border-color:var(--green-deep)}
 
 /* Click-to-copy on dose value */
 .dose-val.copyable{
@@ -238,19 +240,21 @@ mark.hi,.hi{
 /* Category filter pills */
 .cats{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px}
 .fbtn{
-  padding:6px 14px;border-radius:var(--r-pill);
+  padding:5px 12px;border-radius:var(--r-pill);
   border:1px solid var(--rule);
   background:var(--paper-cream);
   color:var(--ink-mute);
-  font-family:var(--serif);
-  font-size:var(--fs-sm);
-  font-weight:var(--w-med);
+  font-family:var(--mono);
+  font-size:.6rem;
+  font-weight:var(--w-bold);
+  letter-spacing:.09em;
+  text-transform:uppercase;
   cursor:pointer;
   transition:all .14s;
   white-space:nowrap;
 }
 .fbtn:hover{background:var(--paper-warm);color:var(--ink);border-color:var(--ink-mute)}
-.fbtn.on{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd);font-weight:var(--w-bold)}
+.fbtn.on{background:var(--green-deep);color:var(--paper);border-color:var(--green-deep);font-weight:var(--w-bold)}
 
 .cats-sep{
   display:inline-block;width:1px;height:20px;
@@ -260,8 +264,8 @@ mark.hi,.hi{
 .fbtn.ax-btn{border-color:rgba(160,88,88,.4);color:#8a4848;background:#f5e8e8}
 .fbtn.ax-btn:hover{background:#eddada;color:#6a3838;border-color:#a05858}
 .fbtn.ax-btn.on{
-  background:#a05858;color:#f5e8e8;
-  border-color:#a05858;
+  background:#7a3c3c;color:#f5e8e8;
+  border-color:#7a3c3c;
   font-weight:var(--w-bold);
 }
 
@@ -334,7 +338,7 @@ mark.hi,.hi{
   text-align:center;
 }
 .gbtn:hover{background:var(--paper-warm);color:var(--ink)}
-.gbtn.on{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
+.gbtn.on{background:var(--green);color:var(--paper);border-color:var(--green-deep)}
 
 /* Growth percentile cards */
 .growth-results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -430,7 +434,7 @@ mark.hi,.hi{
   font-weight:var(--w-bold);
   text-transform:uppercase;
   letter-spacing:.09em;
-  color:var(--green);
+  color:var(--ochre);
   margin-bottom:5px;
 }
 .reg.sev-mild .reg-lbl{color:var(--green)}
@@ -514,7 +518,7 @@ mark.hi,.hi{
   transition:all .14s;
   white-space:nowrap;
 }
-.card-action:hover{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
+.card-action:hover{background:var(--paper-warm);color:var(--green-deep);border-color:var(--green)}
 .card-action.flash{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
 
 /* Badges (kept muted hues  -  clinically useful category cues) */
@@ -604,16 +608,15 @@ body.compact .meta{gap:8px}
 
 /* Footer */
 .foot{
-  margin-top:32px;padding:18px 22px;
-  background:var(--paper-cream);
-  border-radius:var(--r-lg);
-  border:1.5px solid var(--rule);
-  font-size:var(--fs-sm);
+  margin-top:32px;padding:18px 0 0;
+  border-top:1px solid var(--rule);
+  font-size:var(--fs-micro);
+  font-family:var(--mono);
+  letter-spacing:.03em;
   color:var(--muted);
-  line-height:1.75;
-  font-style:italic;
+  line-height:1.8;
 }
-.foot strong{color:var(--ink);font-style:normal;font-weight:var(--w-bold)}
+.foot strong{color:var(--ochre);font-weight:var(--w-bold)}
 
 /* ── Mobile ─────────────────────────────────────────────────── */
 @media(max-width:660px){
@@ -635,16 +638,17 @@ body.compact .meta{gap:8px}
   border-bottom:1px solid var(--rule);
 }
 .tab{
-  padding:10px 22px 12px;
+  padding:10px 20px 11px;
   border:none;background:transparent;
   color:var(--ink-mute);
-  font-family:var(--display);
-  font-size:var(--fs-base);
-  font-weight:600;
-  letter-spacing:-.005em;
+  font-family:var(--mono);
+  font-size:var(--fs-eyebrow);
+  font-weight:var(--w-bold);
+  letter-spacing:1.5px;
+  text-transform:uppercase;
   cursor:pointer;
   transition:color .15s,border-color .15s;
-  border-bottom:3px solid transparent;
+  border-bottom:2px solid transparent;
   margin-bottom:-1px;
 }
 .tab:hover{color:var(--ink)}
@@ -663,11 +667,11 @@ body.compact .meta{gap:8px}
 .gv-title{
   font-family:var(--display);
   font-size:var(--fs-lg);
-  font-weight:600;
+  font-weight:500;
   color:var(--ink);
-  letter-spacing:-.005em;
+  letter-spacing:-.01em;
 }
-.gv-ref{font-size:var(--fs-micro);color:var(--muted);font-style:italic}
+.gv-ref{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre)}
 
 /* ── Centile charts ─────────────────────────────────────────── */
 .charts{display:flex;flex-direction:column;gap:14px;margin-top:20px}
@@ -762,7 +766,7 @@ body.compact .meta{gap:8px}
   cursor:pointer;
   transition:all .14s;
 }
-.recent-pill:hover{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd);font-weight:var(--w-bold)}
+.recent-pill:hover{background:var(--paper-warm);color:var(--green-deep);border-color:var(--green);font-weight:var(--w-bold)}
 
 /* ── Card action buttons ────────────────────────────────────── */
 .card-actions{
@@ -903,7 +907,7 @@ body.compact .meta{gap:8px}
   font-size:var(--fs-eyebrow);
   font-weight:var(--w-bold);
   text-transform:uppercase;letter-spacing:.09em;
-  color:var(--green);
+  color:var(--ochre);
 }
 #presentation-select{
   flex:1;min-width:200px;
@@ -958,7 +962,7 @@ body.compact .meta{gap:8px}
 .pres-banner.pres-line-3 strong{color:#8a5828}
 
 .rl-pres{
-  background:var(--hi);color:var(--hi-tx);
+  background:var(--green-deep);color:var(--paper);
   padding:2px 8px;border-radius:var(--r-sm);
   font-weight:var(--w-bold);
 }
@@ -1028,8 +1032,10 @@ body.compact .meta{gap:8px}
 .trend-pill button:hover{background:var(--danger);color:#fff}
 
 /* ── Site Footer ────────────────────────────────────────────────── */
-.site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
-.site-footer p { margin: 0 0 6px; }
+.site-footer { margin-top: 48px; padding: 32px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.65rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-mute); }
+.site-footer p { margin: 0 0 4px; }
+.site-footer a { color: var(--ink-mute); text-decoration: none; }
+.site-footer a:hover { color: var(--green); }
 </style>
 </head>
 <body>
@@ -1131,12 +1137,19 @@ body.compact .meta{gap:8px}
   </div>
   <div id="trend-list" class="trend-list"></div>
   <div id="charts" class="charts"></div>
-  <div class="growth-note">WHO Child Growth Standards 2006 (0–5 yrs) and WHO Reference 2007 (5–19 yrs). Weight-for-age shown to 10 years only (BMI preferred beyond this). BMI overweight ≥ 85th centile; obese ≥ 97th centile. Yellow dot marks the most recent measurement; ink dots are earlier measurements joined by a line.</div>
+  <div class="growth-note">WHO Child Growth Standards 2006 (0–5 yrs) and WHO Reference 2007 (5–19 yrs). Weight-for-age shown to 10 years only (BMI preferred beyond this). BMI overweight ≥ 85th centile; obese ≥ 97th centile. Ochre dot marks the most recent measurement; ink dots are earlier measurements joined by a line.</div>
 </main>
 <footer class="foot">
-  <strong>References:</strong> NZ Formulary for Children (NZFc), Starship Clinical Guidelines, WHO Growth Standards 2006 / 2007. ★ Common = frequently prescribed in NZ general practice. All doses require clinical judgement. PHARMAC funding subject to change. Reviewed May 2026.
+  <strong>References</strong> &mdash; NZ Formulary for Children (NZFc), Starship Clinical Guidelines, WHO Growth Standards 2006 / 2007. ★ Common = frequently prescribed in NZ general practice. All doses require clinical judgement. PHARMAC funding subject to change. Reviewed May 2026.
 </footer>
 </div>
+
+<footer class="site-footer">
+  <div style="max-width:1080px;margin:0 auto;padding:0 24px">
+    <p><a href="/">Working Diagnosis.</a> &mdash; A clinical workbench for NZ general practice.</p>
+    <p>Clinical aid only. Always verify against NZFc and current Starship guidelines before prescribing. Not a substitute for clinical judgement.</p>
+  </div>
+</footer>
 <script>
 // ── WHO LMS reference data ────────────────────────────────────────
 const WHO={
@@ -1245,9 +1258,10 @@ function renderChart(type,sex,patientAgeM,patientVal,cfg){
         marker+=`<line x1="${px}" y1="${cy}" x2="${cx}" y2="${cy}" stroke="#1A1F1C" stroke-dasharray="2 2" stroke-width="0.7" opacity="0.4"/>
 <line x1="${cx}" y1="${py+ph}" x2="${cx}" y2="${cy}" stroke="#1A1F1C" stroke-dasharray="2 2" stroke-width="0.7" opacity="0.4"/>`;
       }
-      const fill=isLatest?'#ffe14c':'#1A1F1C';
+      const fill=isLatest?'#B8714F':'#1A1F1C';
       const r=isLatest?6:4;
-      marker+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}" stroke="#1A1F1C" stroke-width="1.5"/>`;
+      const strokeCol=isLatest?'#7a3c18':'#1A1F1C';
+      marker+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}" stroke="${strokeCol}" stroke-width="1.5"/>`;
     });
     const latest=inRange[inRange.length-1];
     const pr=calcPercentile(type,sex,latest.ageM,latest.val);
@@ -2379,24 +2393,19 @@ const print=document.createElement('div');print.id='print-overlay';document.body
 
 renderCats();renderPresentations();renderEmptyCharts();render();
 
-// URL parameter hydration: ?w=14&a=4&u=yr&p=aom
-(()=>{
-  const p=new URLSearchParams(location.search);
-  if(p.has('w')){$('wt').value=p.get('w')}
-  if(p.has('u')){const u=p.get('u');if(['yr','mo','wk'].includes(u))setAgeUnit(u)}
-  if(p.has('a')){$('ag').value=p.get('a')}
-  if(p.has('p')){setPresentation(p.get('p'))}
-  if(p.has('w')||p.has('a'))render();
+// URL parameter load — lets you deep-link to a pre-filled state
+(function(){
+  try{
+    const p=new URLSearchParams(location.search);
+    if(p.get('wt')){$('wt').value=p.get('wt')}
+    if(p.get('ag')){$('ag').value=p.get('ag')}
+    if(p.get('unit')){setAgeUnit(p.get('unit'))}
+    if(p.get('tab')){setView(p.get('tab'))}
+    if(p.get('cat')){setCat(p.get('cat'))}
+    if(p.get('q')){$('q').value=p.get('q')}
+    render();
+  }catch(err){}
 })();
 </script>
-<script src="/assets/workshop-gate.js"></script>
-
-<footer class="site-footer">
-  <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
-    <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
-    <p>An internet workshop for general practice.</p>
-  </div>
-</footer>
-
 </body>
 </html>

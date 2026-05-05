@@ -1,0 +1,788 @@
+---
+title: Anticholinergic Burden Calculator
+layout: base.njk
+permalink: /workshop/tools/anticholinergic-burden/
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anticholinergic Burden Calculator</title>
+  <meta name="description" content="Calculate cumulative anticholinergic drug burden using the ACB scale. NZ-relevant drug list.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --paper: #F5F1E8;
+      --paper-warm: #EDE7D8;
+      --paper-deep: #E4DBC4;
+      --ink: #1A1F1C;
+      --soft: #3A4540;
+      --ink-mute: #6B7A75;
+      --green: #2F6B5C;
+      --green-deep: #1F4A3F;
+      --ochre: #B8714F;
+      --rule: #D9D1BD;
+      --serif-display: "Fraunces", serif;
+      --serif-body: "Newsreader", serif;
+      --mono: "JetBrains Mono", monospace;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.01) 2px, rgba(0,0,0,.01) 4px);
+    }
+
+    .masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+    .masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
+    .brand em { font-style: italic; color: var(--green); }
+    .primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+    .primary-nav a:hover { color: var(--green); }
+
+    .wrap { max-width: 56rem; margin: 0 auto; padding: 0 1.5rem 3rem; }
+
+    h1 { font-family: var(--serif-display); font-size: 2.5rem; font-weight: 600; line-height: 1.2; margin-bottom: 0.5rem; color: var(--ink); }
+
+    .tagline { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+
+    .section { margin-bottom: 2.5rem; }
+
+    h2 { font-family: var(--serif-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 1.25rem; color: var(--ink); }
+
+    h3 { font-family: var(--serif-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--ink); }
+
+    .kicker { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.5rem; }
+
+    .alert { padding: 1rem; background: var(--paper-warm); border-left: 3px solid var(--ochre); margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .alert strong { color: var(--ochre); }
+    .alert em { font-style: italic; color: var(--soft); }
+
+    /* Search */
+    .search-wrapper { position: relative; margin-bottom: 1rem; }
+
+    .search-input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 2px solid var(--rule);
+      background: white;
+      color: var(--ink);
+      font-family: var(--serif-body);
+      font-size: 1rem;
+      transition: border-color 0.15s;
+    }
+    .search-input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(47,107,92,0.1); }
+    .search-input::placeholder { color: var(--ink-mute); }
+
+    .search-results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid var(--rule);
+      border-top: none;
+      z-index: 100;
+      max-height: 300px;
+      overflow-y: auto;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .search-results.open { display: block; }
+
+    .search-result-item {
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      border-bottom: 1px solid var(--paper-warm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: background 0.1s;
+    }
+    .search-result-item:last-child { border-bottom: none; }
+    .search-result-item:hover { background: var(--paper-warm); }
+    .search-result-item.already-added { opacity: 0.45; cursor: not-allowed; }
+
+    .result-left { flex: 1; }
+    .result-drug-name { font-weight: 500; color: var(--ink); }
+    .result-drug-brand { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-mute); margin-top: 1px; }
+    .result-drug-class { font-size: 0.85rem; color: var(--soft); font-style: italic; }
+
+    .score-badge {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      flex-shrink: 0;
+      letter-spacing: 0.05em;
+    }
+    .badge-0 { background: #e8f5e9; color: #2e7d32; }
+    .badge-1 { background: #fff9c4; color: #7a6000; }
+    .badge-2 { background: #ffe0cc; color: #a04000; }
+    .badge-3 { background: #fce4e4; color: #9b2222; }
+
+    .search-hint { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-mute); margin-top: 0.5rem; letter-spacing: 0.03em; }
+
+    /* Med list */
+    .med-list { margin-top: 1.5rem; }
+
+    .med-list-empty {
+      padding: 1.5rem;
+      background: var(--paper-warm);
+      border: 1px dashed var(--rule);
+      text-align: center;
+      color: var(--ink-mute);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .med-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.875rem 1rem;
+      background: white;
+      border: 1px solid var(--rule);
+      border-top: none;
+    }
+    .med-item:first-child { border-top: 1px solid var(--rule); }
+    .med-item-left { flex: 1; }
+    .med-item-name { font-weight: 500; color: var(--ink); }
+    .med-item-brand { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-mute); }
+    .med-item-class { font-size: 0.85rem; color: var(--soft); font-style: italic; margin-top: 2px; }
+    .med-item-note { font-size: 0.85rem; color: var(--ochre); margin-top: 4px; }
+
+    .med-item-right { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+
+    .remove-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--ink-mute);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      letter-spacing: 0.05em;
+      transition: color 0.15s;
+    }
+    .remove-btn:hover { color: var(--ochre); }
+
+    /* Total panel */
+    .total-panel {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      border: 2px solid var(--rule);
+      background: var(--paper-warm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .total-score-display { display: flex; align-items: baseline; gap: 0.5rem; }
+    .total-number { font-family: var(--mono); font-size: 3.5rem; font-weight: 500; line-height: 1; }
+    .total-label { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); }
+
+    .total-risk-label { font-family: var(--serif-display); font-size: 1.2rem; font-weight: 600; }
+
+    .risk-nil { color: var(--green); }
+    .risk-low { color: #7a6000; }
+    .risk-moderate { color: var(--ochre); }
+    .risk-high { color: #9b2222; }
+
+    .total-panel.risk-nil-panel { border-color: var(--green); }
+    .total-panel.risk-low-panel { border-color: #d4af00; }
+    .total-panel.risk-moderate-panel { border-color: var(--ochre); }
+    .total-panel.risk-high-panel { border-color: #c0392b; background: rgba(155,34,34,0.04); }
+
+    /* Interpretation card */
+    .interpretation-card {
+      display: none;
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      border-left: 3px solid var(--green);
+      background: white;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .interpretation-card.show { display: block; }
+    .interpretation-card p { margin-bottom: 0.75rem; }
+    .interpretation-card p:last-child { margin-bottom: 0; }
+
+    .flag-list { margin-top: 1rem; }
+    .flag-item { padding: 0.5rem 0.75rem; border-left: 2px solid var(--ochre); margin-bottom: 0.5rem; background: var(--paper-warm); font-size: 0.9rem; }
+    .flag-item strong { color: var(--ochre); }
+
+    .bar-wrapper { margin: 1rem 0; }
+    .bar-track { height: 8px; background: var(--paper-deep); border-radius: 4px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s ease; }
+    .bar-labels { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.65rem; color: var(--ink-mute); margin-top: 4px; letter-spacing: 0.05em; }
+
+    /* Guidance sections */
+    .toggle-btn { background: var(--paper-warm); border: 1px solid var(--rule); padding: 0.75rem 1rem; width: 100%; text-align: left; cursor: pointer; font-family: var(--serif-body); font-size: 0.95rem; transition: background 0.2s; color: var(--ink); margin-bottom: 1px; }
+    .toggle-btn:hover { background: var(--paper-deep); }
+    .toggle-btn::after { content: ' +'; font-family: var(--mono); color: var(--ink-mute); float: right; }
+    .toggle-btn.open::after { content: ' -'; }
+    .toggle-content { display: none; padding: 1.25rem 0; }
+    .toggle-content.open { display: block; }
+
+    .guidance-block { background: var(--paper-warm); border-left: 3px solid var(--green); padding: 1rem 1.25rem; margin-bottom: 1rem; font-size: 0.92rem; line-height: 1.65; }
+    .guidance-block p { margin-bottom: 0.6rem; }
+    .guidance-block p:last-child { margin-bottom: 0; }
+
+    /* Reference table */
+    .table-wrapper { overflow-x: auto; margin-bottom: 1.5rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    table th { background: var(--paper-deep); padding: 0.65rem 0.75rem; text-align: left; font-weight: 600; border-bottom: 1px solid var(--rule); font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--paper-deep); vertical-align: top; }
+    table tr:last-child td { border-bottom: none; }
+    table tr:hover td { background: var(--paper-warm); }
+
+    .ref-list { margin-top: 1rem; font-size: 0.85rem; color: var(--soft); }
+    .ref-list ol { margin-left: 1.5rem; line-height: 2; }
+    .ref-list li { margin-bottom: 0.25rem; }
+
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 0.85rem; color: var(--ink-mute); line-height: 1.6; }
+
+    .site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
+    .site-footer p { margin: 0 0 6px; }
+
+    .info-box { background: var(--paper-warm); border: 1px solid var(--rule); padding: 1.1rem 1.25rem; margin-bottom: 1.25rem; font-size: 0.92rem; line-height: 1.6; }
+
+    .scale-compare { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    @media (max-width: 40rem) { .scale-compare { grid-template-columns: 1fr; } }
+
+    .scale-card { background: white; border: 1px solid var(--rule); padding: 1rem; }
+    .scale-name { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); margin-bottom: 0.4rem; }
+    .scale-fullname { font-weight: 500; font-size: 0.92rem; margin-bottom: 0.4rem; }
+    .scale-desc { font-size: 0.84rem; color: var(--soft); font-style: italic; }
+
+    @media (max-width: 36rem) {
+      h1 { font-size: 1.8rem; }
+      .total-number { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="masthead-row">
+      <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/workshop/">Workshop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <h1>Anticholinergic Burden Calculator</h1>
+    <div class="tagline">❍ ACB scale scoring · NZ drug list · cumulative burden</div>
+
+    <div class="alert">
+      <strong>Consultation support tool.</strong> Uses the <em>Anticholinergic Cognitive Burden (ACB) scale</em> (Fox et al. 2011, updated Bishara et al. 2017). An ACB total of 3 or more is associated with significantly increased risk of cognitive impairment, falls, and adverse outcomes in older adults. Scores are additive; individual drug tolerability varies. This tool does not replace clinical judgement.
+    </div>
+
+    <!-- SEARCH SECTION -->
+    <div class="section">
+      <div class="kicker">❍ Step 1: add patient medications</div>
+      <h2>Search and Add Medications</h2>
+      <p style="margin-bottom: 1rem; color: var(--soft);">Type a drug name or brand name. Click a result to add it to the list. Medications already added are greyed out.</p>
+
+      <div class="search-wrapper">
+        <input
+          type="text"
+          id="drug-search"
+          class="search-input"
+          placeholder="e.g. amitriptyline, oxybutynin, Phenergan..."
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <div id="search-results" class="search-results" role="listbox"></div>
+      </div>
+      <div class="search-hint">Type at least 2 characters. All anticholinergic-relevant medications scored 1, 2, or 3 are included.</div>
+
+      <div class="med-list" id="med-list">
+        <div class="med-list-empty" id="med-list-empty">No medications added yet</div>
+      </div>
+
+      <!-- TOTAL PANEL -->
+      <div class="total-panel" id="total-panel" style="display:none;">
+        <div>
+          <div class="total-score-display">
+            <span class="total-number" id="total-number">0</span>
+            <span class="total-label">ACB total</span>
+          </div>
+          <div class="bar-wrapper">
+            <div class="bar-track" style="width: 220px;">
+              <div class="bar-fill" id="bar-fill" style="width:0%; background: var(--green);"></div>
+            </div>
+            <div class="bar-labels" style="width: 220px;">
+              <span>0</span>
+              <span>3</span>
+              <span>6</span>
+              <span>9+</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="total-risk-label" id="risk-label">-</div>
+          <div style="font-size: 0.9rem; color: var(--soft); margin-top: 0.25rem;" id="risk-sublabel"></div>
+        </div>
+      </div>
+
+      <!-- INTERPRETATION -->
+      <div class="interpretation-card" id="interpretation-card">
+        <div id="interpretation-text"></div>
+        <div id="flag-list" class="flag-list"></div>
+      </div>
+    </div>
+
+    <!-- CLINICAL GUIDANCE -->
+    <div class="section">
+      <div class="kicker">❍ Clinical context</div>
+      <h2>Why Anticholinergic Burden Matters</h2>
+
+      <div class="info-box">
+        <p>Anticholinergic drugs block muscarinic acetylcholine receptors. Peripheral effects include dry mouth, constipation, urinary retention, blurred vision, and tachycardia. Central effects in older adults include confusion, delirium, cognitive impairment, and falls. These effects are cumulative: a patient on four drugs each scoring 1 has the same total burden as one drug scoring 4.</p>
+        <p>A landmark 2019 cohort study (Coupland et al., <em>JAMA Internal Medicine</em>) found each additional ACB point was associated with a <strong>26% increase in odds of dementia diagnosis</strong>. The association held after adjustment for depressive symptoms and other confounders.</p>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">About the ACB Scale and Other Scoring Systems</button>
+      <div class="toggle-content">
+        <div class="scale-compare">
+          <div class="scale-card">
+            <div class="scale-name">ACB</div>
+            <div class="scale-fullname">Anticholinergic Cognitive Burden</div>
+            <div class="scale-desc">Fox et al. 2011, updated Bishara et al. 2017. Most validated for cognitive outcomes. Used in this calculator. Scores 1, 2, 3 per drug.</div>
+          </div>
+          <div class="scale-card">
+            <div class="scale-name">ARS</div>
+            <div class="scale-fullname">Anticholinergic Risk Scale</div>
+            <div class="scale-desc">Rudolph et al. 2008. Focused on peripheral anticholinergic adverse effects in older adults. Scores 1, 2, 3 per drug; smaller drug list.</div>
+          </div>
+          <div class="scale-card">
+            <div class="scale-name">ADS</div>
+            <div class="scale-fullname">Anticholinergic Drug Scale</div>
+            <div class="scale-desc">Carnahan et al. 2006. Based on serum anticholinergic activity and receptor binding. Scores 0-3; good concordance with ACB for most drugs.</div>
+          </div>
+        </div>
+        <div class="guidance-block">
+          <p><strong>Which scale to use?</strong> A 2015 systematic review (Salahudeen et al., <em>JAGS</em>) found that while individual drug rankings differ between scales, all predict similar adverse outcomes. The ACB scale has the most large-scale validation and is recommended in the STOPP/START v3 criteria (2022) for routine use in older adult prescribing review.</p>
+          <p><strong>Concordance:</strong> For the most commonly implicated drugs (TCAs, first-generation antihistamines, antimuscarinics for OAB), all three major scales agree on high scores. Disagreement is greatest for drugs with borderline serum anticholinergic activity.</p>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">STOPP/START Criteria and High-Risk Prescribing</button>
+      <div class="toggle-content">
+        <div class="guidance-block">
+          <p><strong>STOPP v3 (2022) flags these drugs as explicitly inappropriate in older adults:</strong></p>
+          <ul style="margin: 0.5rem 0 0.75rem 1.25rem; line-height: 1.8;">
+            <li><strong>Any anticholinergic drug in patients with cognitive impairment, delirium, or dementia</strong> (regardless of score) -- risk of worsening confusion and functional decline</li>
+            <li><strong>Oxybutynin</strong> -- highest anticholinergic burden of commonly used OAB agents; consider solifenacin (funded NZ) or mirabegron (beta-3 agonist, non-anticholinergic)</li>
+            <li><strong>Promethazine</strong> -- as antiemetic or antihistamine; better alternatives available</li>
+            <li><strong>Paroxetine</strong> -- most anticholinergic SSRI; switch to sertraline or escitalopram where possible</li>
+            <li><strong>First-generation antihistamines</strong> (chlorphenamine, doxylamine, diphenhydramine) -- for any indication in older adults; use non-sedating antihistamines instead</li>
+            <li><strong>Antipsychotics with high anticholinergic burden</strong> (chlorpromazine, olanzapine) -- in patients with falls risk or cognitive impairment</li>
+            <li><strong>Tertiary TCAs</strong> (amitriptyline, imipramine, doxepin) -- as antidepressants, for neuropathic pain, or as sleep aids; switch to nortriptyline if TCA required (lower burden, though still score 3)</li>
+          </ul>
+          <p><strong>NZ HealthPathways note:</strong> Review of anticholinergic burden is a standard component of Comprehensive Geriatric Assessment (CGA) in New Zealand. BPAC Best Practice guidance on polypharmacy in older adults (2019) recommends proactive ACB review at all medication reconciliation visits.</p>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Reducing Anticholinergic Burden -- Practical Substitutions</button>
+      <div class="toggle-content">
+        <div class="guidance-block">
+          <p><strong>Overactive bladder (OAB):</strong> Oxybutynin (score 3, worst CNS penetration) should be replaced. Funded NZ alternatives: solifenacin (score 3, better CNS profile than oxybutynin), tolterodine (score 3). Mirabegron (Betmiga, beta-3 agonist, score 0) is an excellent non-anticholinergic option; not funded in NZ as at 2024 but special authority may apply.</p>
+          <p><strong>Depression in older adults:</strong> Avoid tertiary TCAs. If TCA necessary, nortriptyline (score 3) causes fewer cognitive effects than amitriptyline or imipramine at equivalent doses. SSRIs: sertraline and escitalopram have the lowest anticholinergic burden (score 1). Avoid paroxetine (score 2).</p>
+          <p><strong>Neuropathic pain:</strong> Amitriptyline is first-line but contributes significantly to burden. Consider gabapentin, pregabalin (no anticholinergic activity), or duloxetine (score 0-1) in older patients with existing cognitive risk.</p>
+          <p><strong>Sleep:</strong> First-generation antihistamines (doxylamine, diphenhydramine) are all score 3; avoid routinely in older adults. Melatonin (score 0) is preferred; low-dose mirtazapine (score 2) may be appropriate if depression is co-present.</p>
+          <p><strong>Antiemetics:</strong> Prochlorperazine (score 2) and promethazine (score 3) should be replaced by metoclopramide (score 1) or ondansetron (score 0) where possible.</p>
+          <p><strong>COPD/asthma:</strong> Inhaled antimuscarinics (tiotropium, ipratropium) have low systemic absorption and are scored conservatively in this calculator. They should not be withheld for COPD management; the risk-benefit ratio is favourable. Note their contribution to total burden in patients already carrying a high score.</p>
+          <p><strong>Antipsychotics:</strong> Haloperidol (score 1) has the lowest anticholinergic burden of commonly used antipsychotics. Risperidone and aripiprazole are scored 0-1 in most scales. Avoid olanzapine (score 3), chlorpromazine (score 3), and quetiapine (score 2) in patients with existing cognitive impairment.</p>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Threshold Evidence -- When Does the Score Matter?</button>
+      <div class="toggle-content">
+        <div class="guidance-block">
+          <p><strong>ACB score of 1-2:</strong> Individual studies show marginal cognitive and functional effects. Main concern is additive burden with other drugs. These medications should not be avoided on anticholinergic grounds alone in cognitively intact patients, but should be noted during medication reconciliation.</p>
+          <p><strong>ACB score of 3-5:</strong> Multiple large studies demonstrate increased odds of cognitive impairment, falls, and hospitalisation. Coupland et al. (2019, n=58,769) found ACB score 3+ sustained over 10 years was associated with an odds ratio of 1.54 for dementia. Proactive review and substitution recommended in all patients aged over 65.</p>
+          <p><strong>ACB score of 6+:</strong> Strongly associated with delirium (especially post-operatively), falls with injury, urinary retention, constipation, and impaired quality of life. Urgent deprescribing review indicated. In patients with existing cognitive impairment, an ACB score of 3+ is itself a STOPP criterion.</p>
+          <p><strong>Important caveats:</strong> Scores are derived from population-level data. Individual patients may tolerate high-burden regimens or experience effects at lower scores depending on age, renal/hepatic function, frailty, baseline cognition, and pharmacogenomic variation (notably CYP2D6 for drugs with anticholinergic metabolites). The ACB scale has been validated primarily in adults aged 65 and over.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRUG REFERENCE TABLE -->
+    <div class="section">
+      <div class="kicker">❍ Reference</div>
+      <h2>Full Drug List and ACB Scores</h2>
+      <p style="margin-bottom: 1.25rem; color: var(--soft);">Scores from Fox et al. (2011) ACB scale, updated by Bishara et al. (2017). NZ brand names and subsidy status approximate as at 2025; verify current status on the NZF.</p>
+
+      <div class="table-wrapper">
+        <table id="full-drug-table">
+          <thead>
+            <tr>
+              <th>Drug (generic)</th>
+              <th>NZ Brand / Notes</th>
+              <th>Class</th>
+              <th>ACB Score</th>
+              <th>Clinical note</th>
+            </tr>
+          </thead>
+          <tbody id="full-drug-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="section">
+      <div class="kicker">❍ Sources</div>
+      <h2>References</h2>
+      <div class="ref-list">
+        <ol>
+          <li>Fox C, Richardson K, Maidment ID, et al. Anticholinergic medication use and cognitive impairment in the older population: the Medical Research Council Cognitive Function and Ageing Study. <em>J Am Geriatr Soc.</em> 2011;59(8):1477-1483.</li>
+          <li>Bishara D, Harwood D, Sauer J, Taylor DM. Anticholinergic effect on cognition (AEC) of drugs commonly used in older people. <em>Int J Geriatr Psychiatry.</em> 2017;32(6):650-656.</li>
+          <li>Rudolph JL, Salow MJ, Angelini MC, McGlinchey RE. The anticholinergic risk scale and anticholinergic adverse effects in older persons. <em>Arch Intern Med.</em> 2008;168(5):508-513.</li>
+          <li>Salahudeen MS, Hilmer SN, Nishtala PS. Comparison of anticholinergic risk scales and associations with adverse health outcomes in older people. <em>J Am Geriatr Soc.</em> 2015;63(1):85-90.</li>
+          <li>Coupland CAC, Hill T, Dening T, Morriss R, Moore M, Hippisley-Cox J. Anticholinergic drug exposure and the risk of dementia: a nested case-control study. <em>JAMA Intern Med.</em> 2019;179(8):1084-1093.</li>
+          <li>O'Mahony D, Cherubini A, Guiteras AR, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 3. <em>Eur Geriatr Med.</em> 2023;14(4):625-632.</li>
+          <li>BPAC NZ. Polypharmacy: managing multiple medicines in older adults. Best Practice J. 2019. https://bpac.org.nz</li>
+          <li>New Zealand Formulary (NZF). Drug interaction and anticholinergic burden guidance. https://www.nzf.org.nz [cited 2025].</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>Disclaimer:</strong> ACB scores represent evidence-based estimates from population studies. Individual patient tolerability varies. In patients with cognitive impairment, falls risk, or frailty, the threshold for review is lower. Deprescribing should be gradual and monitored. Verify NZ funding status and current brand availability on the NZF before switching medications.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+      <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · &copy; 2026</p>
+      <p>An internet workshop for general practice.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ─── Drug database ───────────────────────────────────────────────────────
+    // ACB scores from Fox et al. (2011) and Bishara et al. (2017).
+    // STOPP flags based on STOPP/START v3 (O'Mahony et al. 2023).
+    const DRUGS = [
+
+      // ── Score 3: Definite / strong anticholinergic effect ──
+      { name: "Amitriptyline",         brand: "Endep",                    score: 3, cls: "TCA antidepressant",                stopp: true,  note: "High CNS anticholinergic burden. STOPP: avoid in elderly, cognitive impairment, falls, constipation, urinary retention. Consider nortriptyline if TCA essential." },
+      { name: "Atropine",              brand: "Atropine injection/drops",  score: 3, cls: "Antimuscarinic",                   stopp: false, note: "Pre-anaesthetic, eye drops, palliative secretion management." },
+      { name: "Benztropine",           brand: "Cogentin",                  score: 3, cls: "Antiparkinsonian",                 stopp: true,  note: "For antipsychotic-induced EPSE. STOPP: avoid in patients with cognitive impairment or dementia." },
+      { name: "Biperiden",             brand: "",                          score: 3, cls: "Antiparkinsonian",                 stopp: true,  note: "For EPSE. Rarely used in NZ." },
+      { name: "Chlorphenamine",        brand: "Piriton, Chlortabs",        score: 3, cls: "Antihistamine (1st gen)",          stopp: true,  note: "In many OTC cold and allergy preparations. STOPP: avoid in older adults; use cetirizine or loratadine instead." },
+      { name: "Chlorpromazine",        brand: "Largactil",                 score: 3, cls: "Antipsychotic (typical)",          stopp: true,  note: "High anticholinergic and sedative burden. STOPP: prefer haloperidol or risperidone for lower anticholinergic load." },
+      { name: "Clomipramine",          brand: "Anafranil",                 score: 3, cls: "TCA antidepressant",               stopp: true,  note: "Used for OCD and depression. STOPP: avoid in elderly." },
+      { name: "Cyclopentolate",        brand: "Cyclogyl (eye drops)",      score: 3, cls: "Ophthalmic antimuscarinic",        stopp: false, note: "Eye drops for pupil dilation. Systemic absorption is low but possible; note in patients with existing high burden." },
+      { name: "Darifenacin",           brand: "Enablex",                   score: 3, cls: "Antimuscarinic (OAB)",             stopp: true,  note: "Selective M3 antagonist. STOPP: consider mirabegron (beta-3 agonist, score 0) as non-anticholinergic alternative." },
+      { name: "Dicycloverine",         brand: "Merbentyl",                 score: 3, cls: "Antispasmodic",                   stopp: true,  note: "For IBS. STOPP: avoid in older adults with constipation or urinary retention." },
+      { name: "Diphenhydramine",       brand: "In some sleep/cold products",score: 3, cls: "Antihistamine (1st gen)",         stopp: true,  note: "In OTC sleep aids and combination cold preparations. STOPP: high-risk in elderly; avoid." },
+      { name: "Doxepin",               brand: "Sinequan, Deptran",         score: 3, cls: "TCA antidepressant",               stopp: true,  note: "Highest anticholinergic burden of available TCAs. STOPP: strongly avoid in older adults." },
+      { name: "Doxylamine",            brand: "Restavit, Unisom",          score: 3, cls: "Antihistamine / sleep aid (OTC)",  stopp: true,  note: "OTC sleep aid. STOPP: avoid in elderly; high risk of falls and confusion." },
+      { name: "Fesoterodine",          brand: "Toviaz",                    score: 3, cls: "Antimuscarinic (OAB)",             stopp: true,  note: "Active metabolite of tolterodine. STOPP: consider mirabegron if cognitive impairment present." },
+      { name: "Flavoxate",             brand: "Urispas",                   score: 3, cls: "Antimuscarinic (OAB)",             stopp: true,  note: "For urinary urgency/frequency. Limited efficacy data; prefer solifenacin or mirabegron." },
+      { name: "Hyoscine butylbromide", brand: "Buscopan",                  score: 3, cls: "Antispasmodic",                   stopp: false, note: "GI/biliary/renal colic. Quaternary amine; poor CNS penetration but contributes to peripheral burden." },
+      { name: "Hyoscine hydrobromide", brand: "Scopoderm patch",           score: 3, cls: "Antimuscarinic",                  stopp: false, note: "Transdermal patch for motion sickness and palliative secretion management. Tertiary amine; CNS penetration possible." },
+      { name: "Imipramine",            brand: "Tofranil",                  score: 3, cls: "TCA antidepressant",               stopp: true,  note: "Also used for nocturnal enuresis. STOPP: high anticholinergic burden; avoid in elderly." },
+      { name: "Nortriptyline",         brand: "Allegron",                  score: 3, cls: "TCA antidepressant",               stopp: true,  note: "Lower anticholinergic burden than amitriptyline/imipramine but still score 3. Preferred TCA if one is needed. STOPP: avoid in cognitive impairment." },
+      { name: "Olanzapine",            brand: "Zyprexa, Ozapin",           score: 3, cls: "Antipsychotic (atypical)",         stopp: true,  note: "Significant anticholinergic and metabolic burden. STOPP: avoid in patients with dementia or falls risk." },
+      { name: "Orphenadrine",          brand: "In Norgesic (with paracetamol)", score: 3, cls: "Muscle relaxant / anticholinergic", stopp: true, note: "Compound preparation. STOPP: avoid in older adults." },
+      { name: "Oxybutynin",            brand: "Ditropan",                  score: 3, cls: "Antimuscarinic (OAB)",             stopp: true,  note: "Crosses blood-brain barrier; greatest CNS anticholinergic burden of OAB drugs. STOPP: switch to solifenacin or mirabegron in patients aged 65+." },
+      { name: "Procyclidine",          brand: "Kemadrin",                  score: 3, cls: "Antiparkinsonian",                 stopp: true,  note: "For antipsychotic-induced EPSE. STOPP: avoid in cognitive impairment." },
+      { name: "Promethazine",          brand: "Phenergan",                 score: 3, cls: "Antihistamine / antiemetic",       stopp: true,  note: "STOPP: avoid as antiemetic or antihistamine in older adults; use metoclopramide or ondansetron instead." },
+      { name: "Solifenacin",           brand: "Vesicare",                  score: 3, cls: "Antimuscarinic (OAB)",             stopp: true,  note: "Funded in NZ; better CNS profile than oxybutynin but still anticholinergic. STOPP: consider mirabegron in cognitive impairment." },
+      { name: "Tiotropium",            brand: "Spiriva",                   score: 3, cls: "Inhaled antimuscarinic (COPD)",    stopp: false, note: "Inhaled; systemic absorption low (~19%). Scored 3 as a definite anticholinergic but risk-benefit favours use in COPD. Note contribution to total burden." },
+      { name: "Tolterodine",           brand: "Detrusitol, Detrol",        score: 3, cls: "Antimuscarinic (OAB)",             stopp: true,  note: "For overactive bladder. STOPP: review if cognitive impairment present; consider mirabegron." },
+      { name: "Trihexyphenidyl",       brand: "Artane",                    score: 3, cls: "Antiparkinsonian",                 stopp: true,  note: "For Parkinson's or EPSE. STOPP: avoid in cognitive impairment." },
+      { name: "Trimipramine",          brand: "",                          score: 3, cls: "TCA antidepressant",               stopp: true,  note: "Sedating TCA. Rarely prescribed in NZ. Avoid in elderly." },
+      { name: "Trospium",              brand: "Sanctura",                  score: 3, cls: "Antimuscarinic (OAB)",             stopp: true,  note: "Quaternary amine; theoretically lower CNS penetration. Evidence of cognitive effects still present at high doses." },
+
+      // ── Score 2: Probable anticholinergic effect ──
+      { name: "Amantadine",            brand: "Symmetrel",                 score: 2, cls: "Antiparkinsonian / antiviral",     stopp: false, note: "Used in Parkinson's disease and occasionally for influenza prophylaxis." },
+      { name: "Carbamazepine",         brand: "Tegretol",                  score: 2, cls: "Antiepileptic / mood stabiliser",  stopp: false, note: "Also used for trigeminal neuralgia. Score 2 on ACB; monitor for additive effects." },
+      { name: "Cyproheptadine",        brand: "Periactin",                 score: 2, cls: "Antihistamine / serotonin antagonist", stopp: true, note: "Used for appetite stimulation and adjunct in serotonin syndrome. Avoid in older adults as sedating antihistamine." },
+      { name: "Ipratropium",           brand: "Atrovent",                  score: 2, cls: "Inhaled antimuscarinic (COPD)",    stopp: false, note: "Inhaled; low systemic absorption. Score 2 in ACB. Retain for COPD management; note cumulative burden." },
+      { name: "Loxapine",              brand: "",                          score: 2, cls: "Antipsychotic (typical)",          stopp: false, note: "Rarely used in NZ. Score 2 on ACB." },
+      { name: "Mirtazapine",           brand: "Avanza, Axit, Remeron",     score: 2, cls: "Antidepressant (NaSSA)",           stopp: false, note: "Antihistaminergic and alpha-2 antagonist mechanism. ACB consensus score 2 in elderly; some scales score 1. Monitor in patients with existing cognitive impairment." },
+      { name: "Paroxetine",            brand: "Aropax",                    score: 2, cls: "SSRI antidepressant",              stopp: true,  note: "Most anticholinergic of all SSRIs. STOPP: switch to sertraline, citalopram, or escitalopram (all score 1) in older adults." },
+      { name: "Perphenazine",          brand: "",                          score: 2, cls: "Antipsychotic (typical)",          stopp: false, note: "Rarely used in NZ." },
+      { name: "Prochlorperazine",      brand: "Stemetil",                  score: 2, cls: "Antiemetic / antipsychotic",       stopp: true,  note: "Widely used antiemetic. STOPP: prefer metoclopramide or ondansetron in older adults; avoid in Parkinson's disease." },
+      { name: "Quetiapine",            brand: "Seroquel, Quetapel",        score: 2, cls: "Antipsychotic (atypical)",         stopp: true,  note: "Commonly prescribed for sleep, anxiety, psychosis. STOPP: review anticholinergic burden in elderly on quetiapine; prefer lower-burden antipsychotics where possible." },
+      { name: "Thioridazine",          brand: "",                          score: 2, cls: "Antipsychotic (typical)",          stopp: true,  note: "Rarely used; also high QTc risk. Avoid." },
+      { name: "Trifluoperazine",       brand: "Stelazine",                 score: 2, cls: "Antipsychotic (typical)",          stopp: false, note: "Score 2 ACB." },
+
+      // ── Score 1: Possible / mild anticholinergic effect ──
+      { name: "Alprazolam",            brand: "Xanax, Kalma",              score: 1, cls: "Benzodiazepine",                  stopp: false, note: "Mild anticholinergic activity; benzodiazepine effects (falls, sedation) are separately additive." },
+      { name: "Atenolol",              brand: "Tenormin, Noten",           score: 1, cls: "Beta-blocker",                    stopp: false, note: "Mild score; rarely clinically relevant." },
+      { name: "Captopril",             brand: "Capoten",                   score: 1, cls: "ACE inhibitor",                   stopp: false, note: "" },
+      { name: "Carvedilol",            brand: "Kredex, Dilatrend",         score: 1, cls: "Alpha/beta-blocker",              stopp: false, note: "" },
+      { name: "Cetirizine",            brand: "Zyrtec, Allerid",           score: 1, cls: "Antihistamine (2nd gen)",         stopp: false, note: "Significantly less anticholinergic than 1st gen antihistamines; score 1 rather than 3." },
+      { name: "Cimetidine",            brand: "Tagamet",                   score: 1, cls: "H2 antagonist",                   stopp: false, note: "Largely replaced by PPIs; score 1 may be relevant in patients on multiple medications." },
+      { name: "Citalopram",            brand: "Cipramil",                  score: 1, cls: "SSRI antidepressant",             stopp: false, note: "Low anticholinergic burden; preferred over paroxetine." },
+      { name: "Codeine",               brand: "In Panadeine, Codalgin",    score: 1, cls: "Opioid (weak)",                  stopp: false, note: "" },
+      { name: "Colchicine",            brand: "Colgout",                   score: 1, cls: "Antigout",                        stopp: false, note: "" },
+      { name: "Dexamethasone",         brand: "Decadron, Dexason",         score: 1, cls: "Corticosteroid",                  stopp: false, note: "" },
+      { name: "Diazepam",              brand: "Valium, Antenex",           score: 1, cls: "Benzodiazepine",                  stopp: false, note: "" },
+      { name: "Digoxin",               brand: "Lanoxin",                   score: 1, cls: "Cardiac glycoside",               stopp: false, note: "" },
+      { name: "Dipyridamole",          brand: "Persantin",                 score: 1, cls: "Antiplatelet",                    stopp: false, note: "" },
+      { name: "Escitalopram",          brand: "Lexapro, Esipram",          score: 1, cls: "SSRI antidepressant",             stopp: false, note: "Low anticholinergic burden; preferred over paroxetine in older adults." },
+      { name: "Fentanyl",              brand: "Durogesic, Fentanyl Sandoz",score: 1, cls: "Opioid (strong)",                stopp: false, note: "" },
+      { name: "Fluoxetine",            brand: "Prozac, Lovan",             score: 1, cls: "SSRI antidepressant",             stopp: false, note: "Score 1; lower anticholinergic burden than paroxetine." },
+      { name: "Furosemide",            brand: "Lasix, Frusid",             score: 1, cls: "Loop diuretic",                   stopp: false, note: "" },
+      { name: "Haloperidol",           brand: "Serenace, Haldol",          score: 1, cls: "Antipsychotic (typical)",         stopp: false, note: "Lowest anticholinergic burden of typical antipsychotics. Preferred for delirium management over higher-burden agents." },
+      { name: "Hydralazine",           brand: "Apresoline",                score: 1, cls: "Vasodilator",                     stopp: false, note: "" },
+      { name: "Hydrocortisone",        brand: "Solu-Cortef",               score: 1, cls: "Corticosteroid",                  stopp: false, note: "" },
+      { name: "Isosorbide dinitrate",  brand: "Isordil, Sorbidin",         score: 1, cls: "Nitrate",                         stopp: false, note: "" },
+      { name: "Isosorbide mononitrate",brand: "Imdur, Monit",              score: 1, cls: "Nitrate",                         stopp: false, note: "" },
+      { name: "Loratadine",            brand: "Claratyne",                 score: 1, cls: "Antihistamine (2nd gen)",         stopp: false, note: "Minimal anticholinergic effect; some scales score 0. Preferred antihistamine in older adults." },
+      { name: "Loperamide",            brand: "Imodium",                   score: 1, cls: "Antidiarrhoeal",                  stopp: false, note: "" },
+      { name: "Lorazepam",             brand: "Ativan",                    score: 1, cls: "Benzodiazepine",                  stopp: false, note: "" },
+      { name: "Metoclopramide",        brand: "Maxolon",                   score: 1, cls: "Prokinetic / antiemetic",         stopp: false, note: "Lower anticholinergic burden than prochlorperazine or promethazine. Preferred antiemetic in older adults." },
+      { name: "Metoprolol",            brand: "Betaloc, Toprol",           score: 1, cls: "Beta-blocker",                    stopp: false, note: "" },
+      { name: "Morphine",              brand: "MS Contin, Morphalgin",     score: 1, cls: "Opioid (strong)",                stopp: false, note: "" },
+      { name: "Nifedipine",            brand: "Adalat, Adefin",            score: 1, cls: "Calcium channel blocker",         stopp: false, note: "" },
+      { name: "Prednisolone",          brand: "Deltasone, Cordrol",        score: 1, cls: "Corticosteroid",                  stopp: false, note: "" },
+      { name: "Ranitidine",            brand: "Zantac (largely withdrawn)", score: 1, cls: "H2 antagonist",                 stopp: false, note: "Largely replaced by PPIs." },
+      { name: "Sertraline",            brand: "Zoloft, Apo-Sertraline",    score: 1, cls: "SSRI antidepressant",             stopp: false, note: "Lowest anticholinergic burden of SSRIs; preferred in older adults." },
+      { name: "Temazepam",             brand: "Normison, Temaze",          score: 1, cls: "Benzodiazepine (sleep)",          stopp: true,  note: "STOPP: avoid as sleep aid in older adults (falls and cognitive impairment risk). Anticholinergic burden is additive." },
+      { name: "Theophylline",          brand: "Nuelin, Theodur",           score: 1, cls: "Bronchodilator (xanthine)",       stopp: false, note: "" },
+      { name: "Tramadol",              brand: "Tramal, Zamadol",           score: 1, cls: "Opioid (weak) / SNRI",           stopp: false, note: "" },
+      { name: "Warfarin",              brand: "Coumadin, Marevan",         score: 1, cls: "Anticoagulant",                   stopp: false, note: "" },
+    ];
+
+    // ─── State ───────────────────────────────────────────────────────────────
+    let addedDrugs = []; // array of { drug: {}, id: unique }
+    let nextId = 1;
+
+    // ─── Search ──────────────────────────────────────────────────────────────
+    const searchInput = document.getElementById('drug-search');
+    const searchResults = document.getElementById('search-results');
+
+    searchInput.addEventListener('input', handleSearch);
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeResults();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.search-wrapper')) closeResults();
+    });
+
+    function handleSearch() {
+      const q = searchInput.value.trim().toLowerCase();
+      if (q.length < 2) { closeResults(); return; }
+
+      const matches = DRUGS.filter(d =>
+        d.name.toLowerCase().includes(q) ||
+        d.brand.toLowerCase().includes(q) ||
+        d.cls.toLowerCase().includes(q)
+      ).slice(0, 12);
+
+      if (matches.length === 0) {
+        searchResults.innerHTML = '<div style="padding:0.75rem 1rem; color: var(--ink-mute); font-size:0.9rem;">No matching drugs found</div>';
+      } else {
+        searchResults.innerHTML = matches.map(d => {
+          const alreadyAdded = addedDrugs.some(a => a.drug.name === d.name);
+          return `
+            <div class="search-result-item ${alreadyAdded ? 'already-added' : ''}"
+                 onclick="${alreadyAdded ? '' : `addDrug(${DRUGS.indexOf(d)})`}"
+                 role="option">
+              <div class="result-left">
+                <div class="result-drug-name">${d.name}</div>
+                ${d.brand ? `<div class="result-drug-brand">${d.brand}</div>` : ''}
+                <div class="result-drug-class">${d.cls}</div>
+              </div>
+              <div>
+                <span class="score-badge badge-${d.score}">ACB ${d.score}</span>
+                ${alreadyAdded ? '<div style="font-family:var(--mono);font-size:0.7rem;color:var(--ink-mute);margin-top:4px;text-align:center;">added</div>' : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+      searchResults.classList.add('open');
+    }
+
+    function closeResults() {
+      searchResults.classList.remove('open');
+    }
+
+    // ─── Add / remove drugs ──────────────────────────────────────────────────
+    function addDrug(index) {
+      const drug = DRUGS[index];
+      if (addedDrugs.some(a => a.drug.name === drug.name)) return;
+      addedDrugs.push({ drug, id: nextId++ });
+      searchInput.value = '';
+      closeResults();
+      renderMedList();
+      updateTotal();
+    }
+
+    function removeDrug(id) {
+      addedDrugs = addedDrugs.filter(a => a.id !== id);
+      renderMedList();
+      updateTotal();
+    }
+
+    function renderMedList() {
+      const list = document.getElementById('med-list');
+      const empty = document.getElementById('med-list-empty');
+
+      if (addedDrugs.length === 0) {
+        list.innerHTML = '<div class="med-list-empty" id="med-list-empty">No medications added yet</div>';
+        return;
+      }
+
+      list.innerHTML = addedDrugs.map(({ drug, id }) => `
+        <div class="med-item">
+          <div class="med-item-left">
+            <div class="med-item-name">${drug.name}</div>
+            ${drug.brand ? `<div class="med-item-brand">${drug.brand}</div>` : ''}
+            <div class="med-item-class">${drug.cls}</div>
+            ${drug.stopp ? `<div class="med-item-note">STOPP flag: see clinical notes below</div>` : ''}
+          </div>
+          <div class="med-item-right">
+            <span class="score-badge badge-${drug.score}">ACB ${drug.score}</span>
+            <button class="remove-btn" onclick="removeDrug(${id})">Remove</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ─── Total and interpretation ────────────────────────────────────────────
+    function updateTotal() {
+      const total = addedDrugs.reduce((sum, a) => sum + a.drug.score, 0);
+      const panel = document.getElementById('total-panel');
+      const interp = document.getElementById('interpretation-card');
+
+      if (addedDrugs.length === 0) {
+        panel.style.display = 'none';
+        interp.classList.remove('show');
+        return;
+      }
+
+      panel.style.display = 'flex';
+      document.getElementById('total-number').textContent = total;
+
+      // Bar
+      const pct = Math.min(100, (total / 9) * 100);
+      const bar = document.getElementById('bar-fill');
+      bar.style.width = pct + '%';
+
+      // Risk level
+      let riskClass, riskLabel, riskSub, interpHtml, barColor;
+
+      if (total === 0) {
+        riskClass = 'risk-nil'; barColor = 'var(--green)';
+        riskLabel = 'No anticholinergic burden';
+        riskSub = 'All medications score 0';
+        interpHtml = '<p>No medications in this list carry a recognised anticholinergic burden. No action required on anticholinergic grounds.</p>';
+      } else if (total <= 2) {
+        riskClass = 'risk-low'; barColor = '#d4af00';
+        riskLabel = 'Low burden';
+        riskSub = 'Monitor in vulnerable patients';
+        interpHtml = `<p>Total ACB of <strong>${total}</strong>. Individual studies show marginal cognitive and functional effects at this level. The main concern is additive burden if further anticholinergic drugs are added.</p>
+        <p>In cognitively intact adults aged under 65, this score does not generally require medication change on anticholinergic grounds alone. In older adults or those with cognitive impairment, frailty, or falls risk, even low-burden medications warrant review.</p>`;
+      } else if (total <= 5) {
+        riskClass = 'risk-moderate'; barColor = 'var(--ochre)';
+        riskLabel = 'Moderate burden';
+        riskSub = 'Review and consider substitution';
+        interpHtml = `<p>Total ACB of <strong>${total}</strong>. This level is associated with increased risk of cognitive impairment, falls, urinary retention, and constipation in older adults. In adults aged 65 and over, this score meets the threshold for proactive deprescribing review.</p>
+        <p>Coupland et al. (2019) found sustained ACB scores in this range were associated with a significantly elevated risk of dementia diagnosis over 10 years. Review each medication for indications, alternatives, and whether the dose can be reduced.</p>`;
+      } else {
+        riskClass = 'risk-high'; barColor = '#c0392b';
+        riskLabel = 'High burden';
+        riskSub = 'Urgent deprescribing review indicated';
+        interpHtml = `<p>Total ACB of <strong>${total}</strong>. This is a high anticholinergic burden associated with delirium, significant cognitive impairment, falls with injury, urinary retention, and impaired quality of life. Urgent medication review is indicated regardless of patient age.</p>
+        <p>In any patient with existing cognitive impairment, dementia, or delirium, an ACB score of 3 or more is itself a STOPP criterion. Prioritise substitution or cessation of the highest-scoring agents first, and reduce doses where cessation is not immediately possible.</p>`;
+      }
+
+      bar.style.background = barColor;
+      document.getElementById('total-number').style.color = barColor;
+
+      // Panel border
+      panel.className = 'total-panel';
+      if (total === 0) panel.classList.add('risk-nil-panel');
+      else if (total <= 2) panel.classList.add('risk-low-panel');
+      else if (total <= 5) panel.classList.add('risk-moderate-panel');
+      else panel.classList.add('risk-high-panel');
+
+      document.getElementById('risk-label').className = 'total-risk-label ' + riskClass;
+      document.getElementById('risk-label').textContent = riskLabel;
+      document.getElementById('risk-sublabel').textContent = riskSub;
+
+      // STOPP flags
+      const stoppDrugs = addedDrugs.filter(a => a.drug.stopp);
+      let flagHtml = '';
+      if (stoppDrugs.length > 0) {
+        flagHtml = '<p style="margin-bottom:0.5rem;"><strong>STOPP/START v3 flags for drugs in this list:</strong></p>' +
+          stoppDrugs.map(({ drug }) =>
+            `<div class="flag-item"><strong>${drug.name}:</strong> ${drug.note}</div>`
+          ).join('');
+      }
+
+      // Individual drug notes (non-STOPP)
+      const notedDrugs = addedDrugs.filter(a => !a.drug.stopp && a.drug.note);
+      if (notedDrugs.length > 0) {
+        flagHtml += '<p style="margin-top:0.75rem; margin-bottom:0.5rem;"><strong>Other clinical notes:</strong></p>' +
+          notedDrugs.map(({ drug }) =>
+            `<div class="flag-item" style="border-color: var(--ink-mute);"><strong>${drug.name}:</strong> ${drug.note}</div>`
+          ).join('');
+      }
+
+      document.getElementById('interpretation-text').innerHTML = interpHtml;
+      document.getElementById('flag-list').innerHTML = flagHtml;
+      interp.classList.add('show');
+      interp.style.borderColor = barColor;
+    }
+
+    // ─── Toggle sections ─────────────────────────────────────────────────────
+    function toggleSection(btn) {
+      btn.classList.toggle('open');
+      btn.nextElementSibling.classList.toggle('open');
+    }
+
+    // ─── Populate full drug table ─────────────────────────────────────────────
+    function buildDrugTable() {
+      const tbody = document.getElementById('full-drug-tbody');
+      const sorted = [...DRUGS].sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
+      tbody.innerHTML = sorted.map(d => `
+        <tr>
+          <td><strong>${d.name}</strong></td>
+          <td style="color: var(--soft);">${d.brand || '--'}</td>
+          <td style="font-style:italic;color:var(--soft);">${d.cls}</td>
+          <td><span class="score-badge badge-${d.score}">ACB ${d.score}</span></td>
+          <td style="color: var(--soft); font-size:0.84rem;">${d.note || ''}</td>
+        </tr>
+      `).join('');
+    }
+
+    buildDrugTable();
+  </script>
+
+</body>
+</html>

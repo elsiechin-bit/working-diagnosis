@@ -1,0 +1,988 @@
+---
+title: The Fog Machine
+layout: base.njk
+permalink: /lifestyle/sedation-stacking/
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Fog Machine — Working Diagnosis</title>
+  <meta name="description" content="An interactive explainer about cumulative sedation: how sleep deprivation, alcohol, medications, and cannabis combine to impair your brain.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --paper: #F5F1E8;
+      --paper-warm: #EDE7D8;
+      --paper-deep: #E4DBC4;
+      --ink: #1A1F1C;
+      --soft: #3A4540;
+      --ink-mute: #6B7A75;
+      --green: #2F6B5C;
+      --green-deep: #1F4A3F;
+      --ochre: #B8714F;
+      --rule: #D9D1BD;
+      --serif-display: "Fraunces", serif;
+      --serif-body: "Newsreader", serif;
+      --mono: "JetBrains Mono", monospace;
+
+      /* Sedation level colours */
+      --level-clear: #2F6B5C;
+      --level-mild: #8a7a20;
+      --level-moderate: #b85c20;
+      --level-serious: #9b2222;
+      --level-danger: #6b0000;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.012) 2px, rgba(0,0,0,.012) 4px);
+    }
+
+    /* ── Masthead ── */
+    .masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+    .masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
+    .brand em { font-style: italic; color: var(--green); }
+    .primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+    .primary-nav a:hover { color: var(--green); }
+
+    /* ── Layout ── */
+    .page-wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px 4rem; }
+
+    .hero {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 2.5rem;
+    }
+    .hero-kicker { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.75rem; }
+    .hero h1 { font-family: var(--serif-display); font-size: 3rem; font-weight: 600; line-height: 1.1; color: var(--ink); margin-bottom: 0.75rem; }
+    .hero h1 em { font-style: italic; color: var(--green); }
+    .hero-intro { font-size: 1.1rem; color: var(--soft); max-width: 680px; line-height: 1.7; }
+
+    /* ── Two-column game layout ── */
+    .game-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 780px) {
+      .game-layout { grid-template-columns: 1fr; }
+      .meter-column { order: -1; }
+      .hero h1 { font-size: 2rem; }
+    }
+
+    /* ── Ingredient cards ── */
+    .ingredient-section { margin-bottom: 2rem; }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ochre);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .ingredient-card {
+      background: white;
+      border: 1.5px solid var(--rule);
+      padding: 1rem;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s, transform 0.1s;
+      user-select: none;
+      position: relative;
+    }
+    .ingredient-card:hover { border-color: var(--green); background: var(--paper-warm); }
+    .ingredient-card.active {
+      border-color: var(--green);
+      background: var(--paper-warm);
+    }
+    .ingredient-card.active::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--green);
+    }
+    .ingredient-card.danger-card.active::after { background: var(--level-serious); }
+
+    .card-icon { font-size: 1.6rem; margin-bottom: 0.4rem; line-height: 1; }
+    .card-name { font-family: var(--serif-display); font-weight: 600; font-size: 0.95rem; color: var(--ink); margin-bottom: 0.2rem; }
+    .card-desc { font-size: 0.8rem; color: var(--ink-mute); line-height: 1.4; }
+    .card-units {
+      margin-top: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+    .card-units.active-units { color: var(--green); font-weight: 500; }
+
+    /* Quantity control (for alcohol and sleep) */
+    .qty-control {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .ingredient-card.active .qty-control { display: flex; }
+    .qty-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--soft); }
+    .qty-slider {
+      flex: 1;
+      -webkit-appearance: none;
+      height: 4px;
+      background: var(--rule);
+      outline: none;
+      border-radius: 2px;
+    }
+    .qty-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px; height: 16px;
+      background: var(--green);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .qty-value { font-family: var(--mono); font-size: 0.8rem; color: var(--green); font-weight: 500; min-width: 1.5rem; text-align: right; }
+
+    /* ── Meter column ── */
+    .meter-column { position: sticky; top: 24px; }
+
+    .meter-panel {
+      background: white;
+      border: 1.5px solid var(--rule);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .meter-title {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 1.25rem;
+    }
+
+    /* The gauge */
+    .gauge-wrapper { margin-bottom: 1.5rem; }
+    .gauge-track {
+      height: 18px;
+      background: var(--paper-deep);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 0.4rem;
+    }
+    .gauge-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.5s;
+      min-width: 0;
+    }
+    .gauge-markers {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      color: var(--ink-mute);
+      letter-spacing: 0.04em;
+    }
+
+    /* Level display */
+    .level-display {
+      text-align: center;
+      padding: 1.25rem 0.75rem;
+      background: var(--paper-warm);
+      margin-bottom: 1.25rem;
+      border-radius: 2px;
+      transition: background 0.4s;
+    }
+    .level-number { font-family: var(--mono); font-size: 2.8rem; font-weight: 500; line-height: 1; margin-bottom: 0.3rem; transition: color 0.4s; }
+    .level-unit { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); }
+    .level-name { font-family: var(--serif-display); font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem; transition: color 0.4s; }
+
+    /* Driving verdict */
+    .verdict-box {
+      padding: 0.875rem 1rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: background 0.4s, color 0.4s, border-color 0.4s;
+      border: 1.5px solid var(--rule);
+      margin-bottom: 1rem;
+    }
+    .verdict-box .verdict-icon { font-size: 1.2rem; display: block; margin-bottom: 0.3rem; }
+    .verdict-box .verdict-text { display: block; }
+    .verdict-ok { background: rgba(47, 107, 92, 0.08); border-color: var(--green); color: var(--green-deep); }
+    .verdict-caution { background: rgba(138, 122, 32, 0.1); border-color: #8a7a20; color: #5a5000; }
+    .verdict-no { background: rgba(155, 34, 34, 0.08); border-color: var(--level-serious); color: var(--level-serious); }
+
+    /* Active stack list */
+    .stack-list { margin-bottom: 0; }
+    .stack-list-title { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 0.5rem; }
+    .stack-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--paper-warm);
+      font-size: 0.85rem;
+    }
+    .stack-item:last-child { border-bottom: none; }
+    .stack-item-name { color: var(--soft); }
+    .stack-item-score { font-family: var(--mono); font-size: 0.75rem; color: var(--green); font-weight: 500; }
+    .stack-empty { font-size: 0.85rem; color: var(--ink-mute); font-style: italic; padding: 0.5rem 0; }
+
+    /* ── Warnings panel ── */
+    .warnings-panel { display: none; margin-top: 1rem; }
+    .warnings-panel.has-warnings { display: block; }
+    .warning-item {
+      padding: 0.875rem 1rem;
+      background: rgba(155, 34, 34, 0.06);
+      border-left: 3px solid var(--level-serious);
+      margin-bottom: 0.5rem;
+      font-size: 0.87rem;
+      line-height: 1.5;
+    }
+    .warning-item strong { color: var(--level-serious); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; display: block; margin-bottom: 0.2rem; }
+
+    /* ── Educational content ── */
+    .edu-section { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 2rem; }
+    .edu-section h2 { font-family: var(--serif-display); font-size: 1.6rem; font-weight: 600; margin-bottom: 1.25rem; color: var(--ink); }
+    .edu-section h3 { font-family: var(--serif-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--ink); }
+    .edu-section p { margin-bottom: 1rem; color: var(--soft); line-height: 1.75; }
+    .edu-section p:last-child { margin-bottom: 0; }
+
+    .callout {
+      background: var(--paper-warm);
+      border-left: 3px solid var(--green);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .callout-warn {
+      border-color: var(--ochre);
+      background: rgba(184,113,79,0.07);
+    }
+
+    .two-col-edu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 640px) { .two-col-edu { grid-template-columns: 1fr; } }
+
+    .edu-card {
+      background: white;
+      border: 1px solid var(--rule);
+      padding: 1.1rem 1.25rem;
+    }
+    .edu-card-title { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.5rem; }
+    .edu-card p { font-size: 0.9rem; margin-bottom: 0; }
+
+    /* Toggle sections */
+    .toggle-btn { background: var(--paper-warm); border: 1px solid var(--rule); padding: 0.75rem 1rem; width: 100%; text-align: left; cursor: pointer; font-family: var(--serif-body); font-size: 0.95rem; transition: background 0.15s; color: var(--ink); margin-bottom: 1px; }
+    .toggle-btn:hover { background: var(--paper-deep); }
+    .toggle-btn::after { content: ' +'; font-family: var(--mono); color: var(--ink-mute); float: right; }
+    .toggle-btn.open::after { content: ' -'; }
+    .toggle-content { display: none; padding: 1.25rem 0; }
+    .toggle-content.open { display: block; }
+
+    /* Scoring key table */
+    .score-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1rem 0; }
+    .score-table th { background: var(--paper-deep); padding: 0.6rem 0.75rem; text-align: left; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 1px solid var(--rule); }
+    .score-table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--paper-deep); vertical-align: top; }
+    .score-table tr:last-child td { border-bottom: none; }
+
+    /* References */
+    .ref-list { margin-top: 1rem; font-size: 0.84rem; color: var(--soft); }
+    .ref-list ol { margin-left: 1.5rem; line-height: 2; }
+
+    /* NZ specific box */
+    .nz-box {
+      background: var(--paper-deep);
+      border: 1px solid var(--rule);
+      padding: 1.1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+    .nz-box strong { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); display: block; margin-bottom: 0.4rem; }
+
+    .footer-note { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 0.84rem; color: var(--ink-mute); line-height: 1.6; }
+
+    .site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
+    .site-footer p { margin: 0 0 6px; }
+
+    @media (max-width: 480px) {
+      .cards-grid { grid-template-columns: 1fr 1fr; }
+      .gauge-track { height: 14px; }
+      .level-number { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="masthead-row">
+      <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/lifestyle/">Lifestyle</a>
+        <a href="/workshop/">Workshop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <div class="hero">
+      <div class="hero-kicker">❍ Lifestyle · interactive explainer</div>
+      <h1>The Fog <em>Machine</em>.</h1>
+      <p class="hero-intro">Most sedating substances work the same way: they slow down your central nervous system and make your brain quieter. The problem is that these effects stack. One thing might be unremarkable. Three things together is a different situation entirely -- and one that is often harder to notice from the inside.</p>
+    </div>
+
+    <div class="game-layout">
+
+      <!-- LEFT: Ingredient selector -->
+      <div class="ingredients-column">
+
+        <div class="ingredient-section">
+          <div class="section-label">❍ Sleep -- how much did you get last night?</div>
+          <div class="cards-grid">
+
+            <div class="ingredient-card" data-id="sleep" data-base-score="0" data-has-qty="true" onclick="toggleCard(this)">
+              <div class="card-icon">😴</div>
+              <div class="card-name">Hours of sleep</div>
+              <div class="card-desc">Slide to your actual hours</div>
+              <div class="qty-control" onclick="event.stopPropagation()">
+                <span class="qty-label">hrs</span>
+                <input type="range" class="qty-slider" min="0" max="9" value="7" step="1"
+                  oninput="updateSleepQty(this)">
+                <span class="qty-value" id="sleep-val">7</span>
+              </div>
+              <div class="card-units" id="sleep-units">Click to set</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="ingredient-section">
+          <div class="section-label">❍ Substances</div>
+          <div class="cards-grid">
+
+            <div class="ingredient-card" data-id="alcohol" data-base-score="0" data-has-qty="true" onclick="toggleCard(this)">
+              <div class="card-icon">🍺</div>
+              <div class="card-name">Alcohol</div>
+              <div class="card-desc">Standard drinks in the last 4 hours</div>
+              <div class="qty-control" onclick="event.stopPropagation()">
+                <span class="qty-label">drinks</span>
+                <input type="range" class="qty-slider" min="1" max="8" value="2" step="1"
+                  oninput="updateAlcoholQty(this)">
+                <span class="qty-value" id="alcohol-val">2</span>
+              </div>
+              <div class="card-units" id="alcohol-units">Click to add</div>
+            </div>
+
+            <div class="ingredient-card" data-id="cannabis" data-score="2" onclick="toggleCard(this)">
+              <div class="card-icon">🌿</div>
+              <div class="card-name">Cannabis</div>
+              <div class="card-desc">Smoked or vaped. Edibles last longer -- up to 12 hours.</div>
+              <div class="card-units">Adds 2 units</div>
+            </div>
+
+            <div class="ingredient-card" data-id="cannabis-edible" data-score="3" onclick="toggleCard(this)">
+              <div class="card-icon">🍫</div>
+              <div class="card-name">Cannabis -- edible</div>
+              <div class="card-desc">Onset delayed; effect lasts longer and is less predictable than inhaled.</div>
+              <div class="card-units">Adds 3 units</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="ingredient-section">
+          <div class="section-label">❍ Prescription medications</div>
+          <div class="cards-grid">
+
+            <div class="ingredient-card" data-id="benzo" data-score="4" data-combo="opioid,alcohol" onclick="toggleCard(this)">
+              <div class="card-icon">💊</div>
+              <div class="card-name">Benzodiazepine</div>
+              <div class="card-desc">Diazepam, lorazepam, temazepam, clonazepam, alprazolam</div>
+              <div class="card-units">Adds 4 units</div>
+            </div>
+
+            <div class="ingredient-card" data-id="zdrug" data-score="3" onclick="toggleCard(this)">
+              <div class="card-icon">💊</div>
+              <div class="card-name">Z-drug</div>
+              <div class="card-desc">Zopiclone (Imovane). Used for sleep but causes impairment the next morning too.</div>
+              <div class="card-units">Adds 3 units</div>
+            </div>
+
+            <div class="ingredient-card" data-id="opioid-weak" data-score="2" data-combo="benzo,alcohol" onclick="toggleCard(this)">
+              <div class="card-icon">💊</div>
+              <div class="card-name">Opioid (weak)</div>
+              <div class="card-desc">Codeine, tramadol -- for pain or cough</div>
+              <div class="card-units">Adds 2 units</div>
+            </div>
+
+            <div class="ingredient-card danger-card" data-id="opioid-strong" data-score="4" data-combo="benzo,alcohol" onclick="toggleCard(this)">
+              <div class="card-icon">💊</div>
+              <div class="card-name">Opioid (strong)</div>
+              <div class="card-desc">Morphine, oxycodone, fentanyl, hydromorphone</div>
+              <div class="card-units">Adds 4 units</div>
+            </div>
+
+            <div class="ingredient-card" data-id="sedating-ad" data-score="2" onclick="toggleCard(this)">
+              <div class="card-icon">💊</div>
+              <div class="card-name">Sedating antidepressant</div>
+              <div class="card-desc">Mirtazapine (Avanza), amitriptyline, nortriptyline</div>
+              <div class="card-units">Adds 2 units</div>
+            </div>
+
+            <div class="ingredient-card" data-id="antipsychotic" data-score="2" onclick="toggleCard(this)">
+              <div class="card-icon">💊</div>
+              <div class="card-name">Antipsychotic</div>
+              <div class="card-desc">Quetiapine, olanzapine, chlorpromazine -- even at low doses used for sleep</div>
+              <div class="card-units">Adds 2 units</div>
+            </div>
+
+            <div class="ingredient-card" data-id="gabapentinoid" data-score="2" onclick="toggleCard(this)">
+              <div class="card-icon">💊</div>
+              <div class="card-name">Gabapentin / pregabalin</div>
+              <div class="card-desc">Lyrica, Neurontin -- for nerve pain, anxiety, or epilepsy</div>
+              <div class="card-units">Adds 2 units</div>
+            </div>
+
+            <div class="ingredient-card" data-id="muscle-relax" data-score="2" onclick="toggleCard(this)">
+              <div class="card-icon">💊</div>
+              <div class="card-name">Muscle relaxant</div>
+              <div class="card-desc">Methocarbamol (Robaxin), cyclobenzaprine, orphenadrine</div>
+              <div class="card-units">Adds 2 units</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="ingredient-section">
+          <div class="section-label">❍ Over-the-counter</div>
+          <div class="cards-grid">
+
+            <div class="ingredient-card" data-id="antihistamine-1g" data-score="2" onclick="toggleCard(this)">
+              <div class="card-icon">💊</div>
+              <div class="card-name">Antihistamine (first-gen)</div>
+              <div class="card-desc">Chlorphenamine, doxylamine (Restavit), promethazine (Phenergan). Dramatically sedating.</div>
+              <div class="card-units">Adds 2 units</div>
+            </div>
+
+            <div class="ingredient-card" data-id="cold-flu" data-score="1" onclick="toggleCard(this)">
+              <div class="card-icon">🤧</div>
+              <div class="card-name">Cold and flu medication</div>
+              <div class="card-desc">Codral, Lemsip Max, DayQuil/NyQuil equivalents -- often contain antihistamines or codeine</div>
+              <div class="card-units">Adds 1 unit</div>
+            </div>
+
+            <div class="ingredient-card" data-id="melatonin" data-score="1" onclick="toggleCard(this)">
+              <div class="card-icon">🌙</div>
+              <div class="card-name">Melatonin</div>
+              <div class="card-desc">Lower sedation than prescription sleep aids. Morning grogginess possible.</div>
+              <div class="card-units">Adds 1 unit</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- EDUCATIONAL CONTENT -->
+        <div class="edu-section">
+          <h2>What is actually happening in your brain?</h2>
+          <p>Your brain runs on electrical signals. Neurons talk to each other by releasing chemicals that either excite or inhibit the next neuron in line. Sedating drugs -- and sleep deprivation -- tip the balance toward inhibition. Everything slows: reaction time, decision-making, coordination, emotional regulation.</p>
+          <p>Most of the drugs in this list work through one of two mechanisms. Benzodiazepines, alcohol, and Z-drugs boost GABA, the brain's main inhibitory signal. Opioids work through a different pathway but with the same net effect: quieter, slower. First-generation antihistamines block histamine in the brain, which is partly what keeps you awake. Sedating antidepressants often combine histamine blockade with other effects.</p>
+          <p>When you combine these substances, their effects don't just add -- they can amplify each other. A standard drink affects the GABA system. So does a temazepam. Together, they do considerably more than either would alone.</p>
+
+          <div class="callout">
+            Sleep deprivation is not just tiredness. After 17 hours without sleep, cognitive performance is comparable to a blood alcohol level of around 0.05% -- the legal limit for driving in New Zealand. After 24 hours awake, the comparison is approximately 0.10%.<sup>1</sup> Crucially, sleep-deprived people consistently underestimate how impaired they are.
+          </div>
+
+          <div class="two-col-edu">
+            <div class="edu-card">
+              <div class="edu-card-title">Why the combination is the problem</div>
+              <p>Alcohol plus a benzodiazepine isn't just twice as sedating -- it's more. Both drugs enhance GABA activity, but through slightly different receptor sites, and the combined effect on breathing suppression is disproportionately large. This is the mechanism behind most sedative overdose deaths.</p>
+            </div>
+            <div class="edu-card">
+              <div class="edu-card-title">Tolerance to effect vs impairment</div>
+              <p>Regular users of sedating medications often feel less drowsy than when they started. But behavioural testing shows their reaction times and coordination remain impaired even after tolerance to the subjective sedation develops. Feeling fine and being fine are not the same.</p>
+            </div>
+            <div class="edu-card">
+              <div class="edu-card-title">Cannabis and driving</div>
+              <p>Cannabis impairs reaction time, tracking ability, and divided attention for 3--4 hours after smoking. Edibles have unpredictable onset and can impair for 8--12 hours. The impairment is real even in experienced users, though it may be less obvious to them.<sup>2</sup></p>
+            </div>
+            <div class="edu-card">
+              <div class="edu-card-title">Zopiclone the morning after</div>
+              <p>Zopiclone (Imovane) has a half-life of 5--6 hours. It is detectable in blood for 12 hours or more. Studies show meaningful driving impairment the morning after a standard dose, particularly in adults over 60.<sup>3</sup></p>
+            </div>
+          </div>
+
+          <button class="toggle-btn" onclick="toggleSection(this)">The opioid-benzodiazepine combination</button>
+          <div class="toggle-content">
+            <p>Opioids and benzodiazepines together are the most dangerous commonly prescribed drug combination. They work through different but complementary mechanisms to suppress breathing: opioids suppress the brainstem's drive to breathe; benzodiazepines reduce the arousal response that would normally wake you if your oxygen levels drop. Together, they remove both the problem and the alarm.</p>
+            <p>In Aotearoa New Zealand and internationally, this combination is responsible for the majority of prescription drug overdose deaths. If you are prescribed both and are about to drink alcohol, the risk escalates further. Naloxone (Nyxoid nasal spray) is available in NZ without prescription at some pharmacies -- if you or a family member is on opioids, it is worth having.</p>
+          </div>
+
+          <button class="toggle-btn" onclick="toggleSection(this)">NZ law and driving</button>
+          <div class="toggle-content">
+            <div class="nz-box">
+              <strong>New Zealand legal position</strong>
+              Under section 56 of the Land Transport Act 1998, it is an offence to drive while impaired by any drug, including prescription medications, cannabis, alcohol, or their combination. Impairment is assessed by police using standardised field sobriety tests and, where indicated, compulsory blood or urine testing. A blood alcohol limit of 50 mg/100 mL applies for drivers aged 20 and over (zero for those under 20 or on restricted/learner licences). There is no legal blood limit for other drugs -- impairment itself is the offence.
+            </div>
+            <p>New Zealand's drug-driving law does not require a specific threshold level of a drug in your blood. If a Police officer has reasonable grounds to believe you are impaired, you can be required to undergo testing. The NZ Transport Agency estimates that drug impairment (including from prescription medications) is a factor in approximately 12% of serious crashes.<sup>4</sup></p>
+            <p>If you are on regular sedating medication, discuss with your GP whether it is safe to drive. Your GP can assess your individual situation, and in some cases driving may be restricted. This is not a punitive process -- it is part of safe prescribing.</p>
+          </div>
+
+          <button class="toggle-btn" onclick="toggleSection(this)">Practical: how to get home safely</button>
+          <div class="toggle-content">
+            <p>If your sedation score is above 2, the safest options are walking, a taxi or rideshare (Uber, Ola), a designated sober driver, or public transport. If you are in a rural area and this is difficult, waiting -- ideally with food and water, and lying down -- is better than driving.</p>
+            <p>The NZ Police website and the NZTA DriveCheck tool have further guidance. If you are unsure about a specific medication and driving, your GP or pharmacist is the right first call -- not Google, which tends to give answers calibrated to American law.</p>
+            <p>If someone you know is severely sedated and cannot be roused normally, call 111. This is particularly important if they have taken opioids in any combination with alcohol or benzodiazepines.</p>
+          </div>
+
+          <button class="toggle-btn" onclick="toggleSection(this)">How this tool scores things</button>
+          <div class="toggle-content">
+            <p>The sedation units in this tool are a simplified educational index, not a clinical measurement. They are based on the relative sedative properties of these substances as described in pharmacology literature, and scaled to make the additive and synergistic effects intuitive. The thresholds (mild, moderate, etc.) correspond to the ranges at which driving impairment has been demonstrated in controlled studies.</p>
+            <table class="score-table">
+              <thead>
+                <tr>
+                  <th>Total units</th>
+                  <th>Level</th>
+                  <th>What this means</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>0</td><td>Alert</td><td>No sedating substances present. Normal function.</td></tr>
+                <tr><td>1--2</td><td>Mildly drowsy</td><td>Some reduction in alertness. Drive carefully; be aware of fatigue.</td></tr>
+                <tr><td>3--5</td><td>Impaired</td><td>Meaningful impairment demonstrated in driving studies. Do not drive.</td></tr>
+                <tr><td>6--9</td><td>Seriously impaired</td><td>Major impairment. Do not drive or operate machinery. Arrange alternative transport.</td></tr>
+                <tr><td>10+</td><td>Dangerous</td><td>Combination carries risk of respiratory depression. Do not drive. Call 111 if in distress.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:2rem;">References</h2>
+          <div class="ref-list">
+            <ol>
+              <li>Williamson AM, Feyer A-M. Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication. <em>Occup Environ Med.</em> 2000;57(10):649-655.</li>
+              <li>Rogeberg O, Elvik R. The effects of cannabis intoxication on motor vehicle collision revisited and revised. <em>Addiction.</em> 2016;111(8):1348-1359.</li>
+              <li>Leufkens TRM, Ramaekers JG, de Weerd AW, Riedel WJ, Vermeeren A. On-the-road driving performance the morning after bedtime use of zopiclone 7.5 mg and its residual effects. <em>Psychopharmacology.</em> 2014;231(15):2987-2996.</li>
+              <li>NZ Transport Agency. Impaired driving -- drugs. Wellington: NZTA; 2023. https://www.nzta.govt.nz</li>
+              <li>Dasgupta N, Funk MJ, Proescholdbell S, Hirsch A, Ribisl KM, Marshall S. Cohort study of the impact of high-dose opioid analgesics on overdose mortality. <em>Pain Med.</em> 2016;17(1):85-98.</li>
+              <li>Gunja N. The clinical and forensic toxicology of Z-drugs. <em>J Med Toxicol.</em> 2013;9(2):155-162.</li>
+            </ol>
+          </div>
+
+          <div class="footer-note">
+            <p><strong>Note:</strong> This tool is for general education only. Individual responses to sedating substances vary considerably based on body weight, age, tolerance, kidney and liver function, genetic factors, and other medications. The scoring is a simplified index, not a clinical assessment. If you are unsure whether it is safe to drive while taking a medication, ask your GP or pharmacist. In an emergency, call 111.</p>
+          </div>
+        </div>
+
+      </div><!-- end ingredients-column -->
+
+      <!-- RIGHT: Meter panel -->
+      <div class="meter-column">
+
+        <div class="meter-panel">
+          <div class="meter-title">❍ Sedation score</div>
+
+          <div class="gauge-wrapper">
+            <div class="gauge-track">
+              <div class="gauge-fill" id="gauge-fill" style="width:0%; background: var(--level-clear);"></div>
+            </div>
+            <div class="gauge-markers">
+              <span>Clear</span>
+              <span>Drowsy</span>
+              <span>Impaired</span>
+              <span>Danger</span>
+            </div>
+          </div>
+
+          <div class="level-display" id="level-display">
+            <div class="level-number" id="level-number" style="color: var(--level-clear);">0</div>
+            <div class="level-unit">sedation units</div>
+            <div class="level-name" id="level-name" style="color: var(--level-clear);">Alert</div>
+          </div>
+
+          <div class="verdict-box verdict-ok" id="verdict-box">
+            <span class="verdict-icon">✓</span>
+            <span class="verdict-text">Drive normally</span>
+          </div>
+
+          <div class="stack-list" id="stack-list">
+            <div class="stack-list-title">In your system</div>
+            <div class="stack-empty" id="stack-empty">Nothing added yet. Click a card.</div>
+            <div id="stack-items"></div>
+          </div>
+        </div>
+
+        <!-- Warnings panel (outside meter-panel so it flows below) -->
+        <div class="warnings-panel" id="warnings-panel">
+          <div id="warnings-list"></div>
+        </div>
+
+        <div style="font-size:0.78rem; color: var(--ink-mute); line-height: 1.5; padding: 0 0.25rem;">
+          This is an educational tool. Individual responses vary. If in doubt, do not drive -- call a taxi, rideshare, or 111 in an emergency.
+        </div>
+
+      </div><!-- end meter-column -->
+
+    </div><!-- end game-layout -->
+
+  </main>
+
+  <footer class="site-footer">
+    <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+      <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · &copy; 2026</p>
+      <p>An internet workshop for general practice.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── State ──────────────────────────────────────────────────────────────
+    const state = {
+      sleep: { active: false, score: 0, label: '' },
+      alcohol: { active: false, score: 0, label: '' },
+      cannabis: { active: false, score: 2, label: 'Cannabis (smoked/vaped)' },
+      'cannabis-edible': { active: false, score: 3, label: 'Cannabis (edible)' },
+      benzo: { active: false, score: 4, label: 'Benzodiazepine' },
+      zdrug: { active: false, score: 3, label: 'Z-drug (zopiclone)' },
+      'opioid-weak': { active: false, score: 2, label: 'Opioid (weak)' },
+      'opioid-strong': { active: false, score: 4, label: 'Opioid (strong)' },
+      'sedating-ad': { active: false, score: 2, label: 'Sedating antidepressant' },
+      antipsychotic: { active: false, score: 2, label: 'Antipsychotic' },
+      gabapentinoid: { active: false, score: 2, label: 'Gabapentin / pregabalin' },
+      'muscle-relax': { active: false, score: 2, label: 'Muscle relaxant' },
+      'antihistamine-1g': { active: false, score: 2, label: '1st-gen antihistamine' },
+      'cold-flu': { active: false, score: 1, label: 'Cold & flu medication' },
+      melatonin: { active: false, score: 1, label: 'Melatonin' },
+    };
+
+    // ── Sleep score lookup ──────────────────────────────────────────────────
+    function sleepScore(hrs) {
+      if (hrs >= 8) return { score: 0, label: hrs + 'h sleep (well rested)' };
+      if (hrs === 7) return { score: 1, label: '7h sleep' };
+      if (hrs === 6) return { score: 2, label: '6h sleep' };
+      if (hrs === 5) return { score: 3, label: '5h sleep' };
+      if (hrs === 4) return { score: 4, label: '4h sleep (severely deprived)' };
+      if (hrs === 3) return { score: 5, label: '3h sleep' };
+      if (hrs === 2) return { score: 6, label: '2h sleep' };
+      if (hrs === 1) return { score: 7, label: '1h sleep' };
+      return { score: 8, label: 'No sleep (24h+ awake)' };
+    }
+
+    // ── Alcohol score lookup ────────────────────────────────────────────────
+    function alcoholScore(drinks) {
+      const map = [0, 1, 2, 3, 5, 6, 7, 8, 9];
+      return Math.min(map[drinks] ?? 9, 9);
+    }
+    function alcoholLabel(drinks) {
+      return drinks + ' standard drink' + (drinks !== 1 ? 's' : '');
+    }
+
+    // ── Toggle a card ───────────────────────────────────────────────────────
+    function toggleCard(el) {
+      const id = el.dataset.id;
+      const wasActive = el.classList.contains('active');
+      el.classList.toggle('active');
+      state[id].active = !wasActive;
+      if (!state[id].active && id !== 'sleep' && id !== 'alcohol') {
+        // nothing extra needed on deactivate for simple cards
+      }
+      updateAll();
+    }
+
+    // ── Sleep slider ────────────────────────────────────────────────────────
+    function updateSleepQty(slider) {
+      const hrs = parseInt(slider.value);
+      const result = sleepScore(hrs);
+      state.sleep.score = result.score;
+      state.sleep.label = result.label;
+
+      const valEl = document.getElementById('sleep-val');
+      const unitsEl = document.getElementById('sleep-units');
+      const card = slider.closest('.ingredient-card');
+      valEl.textContent = hrs === 0 ? '0' : hrs;
+
+      if (state.sleep.active) {
+        unitsEl.textContent = result.score === 0 ? 'No sedation' : '+' + result.score + ' units';
+        unitsEl.className = 'card-units ' + (result.score > 0 ? 'active-units' : '');
+      }
+      updateAll();
+    }
+
+    // ── Alcohol slider ──────────────────────────────────────────────────────
+    function updateAlcoholQty(slider) {
+      const drinks = parseInt(slider.value);
+      const score = alcoholScore(drinks);
+      state.alcohol.score = score;
+      state.alcohol.label = alcoholLabel(drinks);
+
+      document.getElementById('alcohol-val').textContent = drinks;
+      if (state.alcohol.active) {
+        document.getElementById('alcohol-units').textContent = '+' + score + ' units';
+        document.getElementById('alcohol-units').className = 'card-units active-units';
+      }
+      updateAll();
+    }
+
+    // ── Recalculate and render ──────────────────────────────────────────────
+    function updateAll() {
+      // Update sleep card label when active
+      const sleepCard = document.querySelector('[data-id="sleep"]');
+      const sleepSlider = sleepCard.querySelector('.qty-slider');
+      if (state.sleep.active) {
+        const hrs = parseInt(sleepSlider.value);
+        const result = sleepScore(hrs);
+        state.sleep.score = result.score;
+        state.sleep.label = result.label;
+        const unitsEl = document.getElementById('sleep-units');
+        unitsEl.textContent = result.score === 0 ? 'No sedation' : '+' + result.score + ' units';
+        unitsEl.className = 'card-units ' + (result.score > 0 ? 'active-units' : '');
+      } else {
+        document.getElementById('sleep-units').textContent = 'Click to set';
+        document.getElementById('sleep-units').className = 'card-units';
+      }
+
+      // Update alcohol card label when active
+      const alcoholCard = document.querySelector('[data-id="alcohol"]');
+      const alcoholSlider = alcoholCard.querySelector('.qty-slider');
+      if (state.alcohol.active) {
+        const drinks = parseInt(alcoholSlider.value);
+        state.alcohol.score = alcoholScore(drinks);
+        state.alcohol.label = alcoholLabel(drinks);
+        document.getElementById('alcohol-units').textContent = '+' + state.alcohol.score + ' units';
+        document.getElementById('alcohol-units').className = 'card-units active-units';
+      } else {
+        document.getElementById('alcohol-units').textContent = 'Click to add';
+        document.getElementById('alcohol-units').className = 'card-units';
+      }
+
+      // Update simple card units text
+      document.querySelectorAll('.ingredient-card[data-score]').forEach(card => {
+        const id = card.dataset.id;
+        const score = parseInt(card.dataset.score);
+        const unitsEl = card.querySelector('.card-units');
+        if (unitsEl) {
+          if (state[id] && state[id].active) {
+            unitsEl.className = 'card-units active-units';
+          } else {
+            unitsEl.className = 'card-units';
+          }
+        }
+      });
+
+      // Calculate total
+      let total = 0;
+      const activeItems = [];
+      for (const [id, item] of Object.entries(state)) {
+        if (item.active && item.score > 0) {
+          total += item.score;
+          activeItems.push({ id, label: item.label, score: item.score });
+        }
+      }
+
+      renderGauge(total);
+      renderStack(activeItems);
+      renderWarnings();
+    }
+
+    // ── Gauge ───────────────────────────────────────────────────────────────
+    function renderGauge(total) {
+      const MAX_DISPLAY = 12;
+      const pct = Math.min(100, (total / MAX_DISPLAY) * 100);
+
+      let color, levelName, verdictClass, verdictIcon, verdictText;
+
+      if (total === 0) {
+        color = 'var(--level-clear)';
+        levelName = 'Alert';
+        verdictClass = 'verdict-ok';
+        verdictIcon = '✓';
+        verdictText = 'Drive normally';
+      } else if (total <= 2) {
+        color = 'var(--level-mild)';
+        levelName = 'Mildly drowsy';
+        verdictClass = 'verdict-caution';
+        verdictIcon = '⚠';
+        verdictText = 'Drive carefully';
+      } else if (total <= 5) {
+        color = 'var(--level-moderate)';
+        levelName = 'Impaired';
+        verdictClass = 'verdict-no';
+        verdictIcon = '✕';
+        verdictText = 'Do not drive';
+      } else if (total <= 9) {
+        color = 'var(--level-serious)';
+        levelName = 'Seriously impaired';
+        verdictClass = 'verdict-no';
+        verdictIcon = '✕';
+        verdictText = 'Do not drive';
+      } else {
+        color = 'var(--level-danger)';
+        levelName = 'Dangerous';
+        verdictClass = 'verdict-no';
+        verdictIcon = '✕';
+        verdictText = 'Dangerous -- call 111 if unwell';
+      }
+
+      document.getElementById('gauge-fill').style.width = pct + '%';
+      document.getElementById('gauge-fill').style.background = color;
+      document.getElementById('level-number').textContent = total;
+      document.getElementById('level-number').style.color = color;
+      document.getElementById('level-name').textContent = levelName;
+      document.getElementById('level-name').style.color = color;
+
+      const vb = document.getElementById('verdict-box');
+      vb.className = 'verdict-box ' + verdictClass;
+      vb.querySelector('.verdict-icon').textContent = verdictIcon;
+      vb.querySelector('.verdict-text').textContent = verdictText;
+    }
+
+    // ── Stack list ──────────────────────────────────────────────────────────
+    function renderStack(items) {
+      const emptyEl = document.getElementById('stack-empty');
+      const itemsEl = document.getElementById('stack-items');
+
+      if (items.length === 0) {
+        emptyEl.style.display = '';
+        itemsEl.innerHTML = '';
+        return;
+      }
+
+      emptyEl.style.display = 'none';
+      itemsEl.innerHTML = items.map(item => `
+        <div class="stack-item">
+          <span class="stack-item-name">${item.label}</span>
+          <span class="stack-item-score">+${item.score}</span>
+        </div>
+      `).join('');
+    }
+
+    // ── Warnings ────────────────────────────────────────────────────────────
+    const COMBOS = [
+      {
+        ids: ['opioid-strong', 'benzo'],
+        title: 'Opioids + benzodiazepines',
+        text: 'This is the most dangerous commonly-encountered drug combination. Opioids suppress the drive to breathe; benzodiazepines suppress the arousal response that would normally wake you if your oxygen drops. Together they remove the problem and the alarm. This combination is responsible for the majority of prescription drug overdose deaths in New Zealand and internationally.',
+      },
+      {
+        ids: ['opioid-weak', 'benzo'],
+        title: 'Opioids + benzodiazepines',
+        text: 'Even weaker opioids combined with benzodiazepines carry elevated risk of respiratory depression, especially with alcohol or at higher doses. Avoid combining if possible.',
+      },
+      {
+        ids: ['opioid-strong', 'alcohol'],
+        title: 'Opioids + alcohol',
+        text: 'Alcohol significantly potentiates the respiratory depressant effect of opioids. This combination has caused many accidental overdose deaths. Naloxone (Nyxoid) nasal spray, available without prescription at some NZ pharmacies, should be kept at home if opioids are regularly prescribed.',
+      },
+      {
+        ids: ['opioid-weak', 'alcohol'],
+        title: 'Opioids + alcohol',
+        text: 'Even codeine or tramadol combined with alcohol carries elevated overdose risk. The respiratory depression may not be obvious until the person cannot be roused.',
+      },
+      {
+        ids: ['benzo', 'alcohol'],
+        title: 'Benzodiazepines + alcohol',
+        text: 'Both drugs enhance GABA -- the brain\'s main inhibitory signal -- but through complementary receptor sites, making the combination more than additive. Respiratory arrest is a real risk at recreational doses. Do not combine.',
+      },
+      {
+        ids: ['zdrug', 'alcohol'],
+        title: 'Z-drugs + alcohol',
+        text: 'Zopiclone and alcohol together produce severe sedation and increase the risk of respiratory depression. Both affect GABA signalling.',
+      },
+      {
+        ids: ['cannabis', 'alcohol'],
+        title: 'Cannabis + alcohol',
+        text: 'Cannabis and alcohol together produce greater impairment than either alone -- not just additive but synergistic. Reaction time, tracking, and divided attention are all worse. This combination is particularly implicated in fatal driving crashes.',
+      },
+      {
+        ids: ['cannabis-edible', 'alcohol'],
+        title: 'Cannabis (edible) + alcohol',
+        text: 'Edible cannabis has unpredictable onset and duration. Combined with alcohol, the cumulative impairment is difficult to anticipate and can peak hours after consumption.',
+      },
+    ];
+
+    function renderWarnings() {
+      const panel = document.getElementById('warnings-panel');
+      const list = document.getElementById('warnings-list');
+      const warnings = [];
+
+      for (const combo of COMBOS) {
+        // Check if all ids in combo are active (de-duplicate opioid combos)
+        const allActive = combo.ids.every(id => {
+          if (id === 'opioid-strong') return state['opioid-strong']?.active;
+          if (id === 'opioid-weak') return state['opioid-weak']?.active && !state['opioid-strong']?.active;
+          return state[id]?.active;
+        });
+        if (allActive) {
+          warnings.push(combo);
+        }
+      }
+
+      // High total score warning
+      const total = Object.values(state).filter(i => i.active).reduce((s, i) => s + (i.score || 0), 0);
+      if (total >= 10 && warnings.length === 0) {
+        warnings.push({
+          title: 'Very high sedation load',
+          text: 'The combination of substances in your system represents a serious sedation burden. Do not drive or operate machinery. If you feel unwell, are hard to rouse, or breathing seems slow or shallow, call 111.',
+        });
+      }
+
+      if (warnings.length === 0) {
+        panel.classList.remove('has-warnings');
+        return;
+      }
+
+      panel.classList.add('has-warnings');
+      list.innerHTML = warnings.map(w => `
+        <div class="warning-item">
+          <strong>${w.title}</strong>
+          ${w.text}
+        </div>
+      `).join('');
+    }
+
+    // ── Toggle sections ──────────────────────────────────────────────────────
+    function toggleSection(btn) {
+      btn.classList.toggle('open');
+      btn.nextElementSibling.classList.toggle('open');
+    }
+
+    // ── Init ─────────────────────────────────────────────────────────────────
+    updateAll();
+  </script>
+
+</body>
+</html>

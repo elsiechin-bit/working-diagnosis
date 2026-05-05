@@ -17,7 +17,7 @@ permalink: /gynaecology/vaginal-discharge/
 
 <h2>Bacterial vaginosis (BV)</h2>
 
-<p>BV is the most common cause of abnormal vaginal discharge in women of reproductive age. It is caused by polymicrobial overgrowth (predominantly Gardnerella vaginalis, Prevotella species, Mobiluncus species) replacing the normal lactobacillus-dominant flora. BV is not a sexually transmitted infection but is associated with sexual activity and is more common in women with new or multiple partners, IUD users, and those with intrinsic low lactobacillus colonisation.</p>
+<p>BV is the most common cause of abnormal vaginal discharge in women of reproductive age. It is caused by polymicrobial overgrowth (predominantly Gardnerella vaginalis, Prevotella species, Mobiluncus species) replacing the normal lactobacillus-dominant flora. BV is associated with sexual activity and is more common in women with new or multiple partners, IUD users, and those with intrinsic low lactobacillus colonisation — though it is not classified as a sexually transmitted infection.</p>
 
 <p>Presentation: thin, grey-white discharge with a characteristic fishy odour, often more noticeable after unprotected sex or during menstruation. No significant itch or external vulval inflammation (itch suggests candidiasis). Vaginal pH is elevated (above 4.5). Amsel criteria (clinical diagnosis): three of four - thin homogeneous discharge; pH greater than 4.5; fishy odour on 10% KOH application (whiff test); and clue cells on wet preparation (vaginal epithelial cells studded with bacteria, obscuring cell margins).</p>
 

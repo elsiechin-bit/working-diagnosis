@@ -93,7 +93,7 @@ A useful frame: most folk remedies are being used because the patient wants to t
 
 The exceptions  -  St John's Wort in a patient on the pill, colloidal silver in a patient who has been taking it for six months, high-dose garlic supplements in a patient on warfarin, noni juice in a patient with elevated LFTs  -  are worth knowing precisely so they can be identified when they arise.
 
-There is also a category of folk remedy use where the relevant intervention is not to advise against the remedy but to ensure the underlying problem is being adequately managed. The patient who is managing chronic pain primarily with anti-inflammatory herbs and topical kawakawa is a patient whose pain management needs a proper clinical review. The patient who is treating what sounds like a depressive episode with St John's Wort has sought treatment for depression; the clinical response is to take the diagnosis seriously, assess severity, and have a conversation about the treatment evidence  -  including, if appropriate, the evidence for St John's Wort itself.
+There is also a category of folk remedy use where the relevant intervention is to ensure the underlying problem is being adequately managed — advising against the remedy is secondary to that. The patient who is managing chronic pain primarily with anti-inflammatory herbs and topical kawakawa is a patient whose pain management needs a proper clinical review. The patient who is treating what sounds like a depressive episode with St John's Wort has sought treatment for depression; the clinical response is to take the diagnosis seriously, assess severity, and have a conversation about the treatment evidence  -  including, if appropriate, the evidence for St John's Wort itself.
 
 ## A working position
 

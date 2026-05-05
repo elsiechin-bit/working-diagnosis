@@ -58,7 +58,7 @@ Donna Kerridge, Ruatau Perez, Jolie Davis, and other contemporary rongoā practi
 
 - **Rongoā rākau**: the use of plant medicines, often gathered from specific places, with specific tikanga (protocols) about gathering, preparation, and administration.
 - **Mirimiri** and **romiromi**: bodywork practices, sometimes glossed as "Māori massage" but functionally distinct in their integration with diagnostic, energetic, and spiritual work.
-- **Karakia**: prayer, incantation, and spiritual work  -  not as decoration but as integral to the therapeutic process.
+- **Karakia**: prayer, incantation, and spiritual work  -  integral to the therapeutic process, carrying the same weight as any other element.
 - **Whitiwhiti kōrero**: structured conversation, advice, and the relational work of healing  -  a meaningful clinical contact requires time spent in talk, often involving whānau, often connecting current symptoms to whakapapa, whenua, and life circumstances.
 
 The contemporary regulatory situation is unusual and worth understanding clearly. **Rongoā practitioners are not regulated under the HPCA Act 2003**  -  there is no statutory registering authority. However, **ACC has, since 2020, formally funded rongoā Māori as a social rehabilitation option for clients with covered injuries** [14,15]. ACC maintains a register of approved rongoā practitioners, currently around 100 across NZ from Te Tai Tokerau to Murihiku [15]. As of mid-2024, ACC had funded over 77,000 rongoā Māori sessions in the preceding four years, with claim numbers having approximately doubled in that period [13]. The inaugural Rongoā Māori Conference, held in Rotorua in 2024 and supported by ACC, brought together over 450 practitioners [13].
@@ -108,7 +108,7 @@ Local engagement matters more than any reading list. The hauora Māori provider 
 
 What this post cannot do, and what no amount of reading can do, is give a non-Māori clinician the standing to speak about mātauranga Māori as if it is theirs. It is not, and it will not be. The honest position for a non-Māori clinician is to engage seriously, to defer appropriately, to keep learning, and to spend the relational time that the actual work requires.
 
-That, I think, is the honest place to land. The cultural competence framework's failure has been to imply that there is a finished version of this engagement that can be reached and ticked off. There isn't. The work is permanent, and being permanent is not a defect but a feature.
+That, I think, is the honest place to land. The cultural competence framework's failure has been to imply that there is a finished version of this engagement that can be reached and ticked off. There isn't. The work is permanent — and that permanence is precisely the point.
 
 ---
 

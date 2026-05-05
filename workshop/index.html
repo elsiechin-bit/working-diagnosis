@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Workbench  -  Working Diagnosis</title>
-<meta name="description" content="The Working Diagnosis workbench  -  patient-facing content pillars and clinician tools for NZ GPs.">
+<meta name="description" content="The Working Diagnosis workbench  -  clinical topic guides, consulting-room tools, and patient handouts.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -208,7 +208,7 @@ a:hover { color: var(--green); }
   line-height: 1.45;
 }
 
-/* ── Pillar card grid (public zone) ─────────────── */
+/* ── Pillar card grid ───────────────────────────── */
 .pillar-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -435,22 +435,21 @@ a:hover { color: var(--green); }
   <div class="wb-intro-text">
     <p class="wb-kicker">Overview</p>
     <h1 class="wb-title"><em>workbench</em>.</h1>
-    <p class="wb-dek">All pages  -  patient-facing content pillars and private clinician tools  -  in one place.</p>
+    <p class="wb-dek">Everything on the site in one place  -  topic guides, clinical tools, and patient handouts.</p>
   </div>
   <div class="wb-zone-nav">
-    <a href="#public" class="wb-zone-pill wb-zone-pill--public">↓ Public zone</a>
-    <a href="#clinician" class="wb-zone-pill wb-zone-pill--clinician">↓ Clinician zone</a>
+    <a href="#public" class="wb-zone-pill wb-zone-pill--public">↓ Topics</a>
+    <a href="#clinician" class="wb-zone-pill wb-zone-pill--clinician">↓ Tools</a>
   </div>
 </div>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- PUBLIC ZONE                                      -->
+<!-- TOPICS                                           -->
 <!-- ════════════════════════════════════════════════ -->
 <section class="wb-zone" id="public">
   <div class="zone-header">
-    <p class="zone-label">Public zone</p>
-    <h2 class="zone-heading">Patient-facing content</h2>
-    <p class="zone-dek">Educational resources and condition guides for patients  -  open to the world.</p>
+    <h2 class="zone-heading">Topics</h2>
+    <p class="zone-dek">Clinical topic guides across the common pillars of general practice.</p>
   </div>
 
   <!-- Clinical pillars ──────────────────────────── -->
@@ -554,17 +553,16 @@ a:hover { color: var(--green); }
 
   </div>
 
-</section><!-- /PUBLIC ZONE -->
+</section><!-- /TOPICS -->
 
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- CLINICIAN ZONE                                   -->
+<!-- TOOLS                                            -->
 <!-- ════════════════════════════════════════════════ -->
 <section class="wb-zone wb-zone--clinician" id="clinician">
   <div class="zone-header">
-    <p class="zone-label">Clinician zone</p>
     <h2 class="zone-heading">Workshop tools</h2>
-    <p class="zone-dek">Private calculators and reference tools for the consulting room.</p>
+    <p class="zone-dek">Calculators and reference tools for the consulting room.</p>
   </div>
 
   <!-- Resources highlight ──────────────────────── -->
@@ -594,9 +592,9 @@ a:hover { color: var(--green); }
     <div>
       <p class="tool-category-name">Cardiovascular</p>
       <ul class="tool-list">
-        <li><a href="/workshop/tools/cv-risk/"><span class="tool-name">Cardiovascular Risk</span><span class="tool-blurb">PREDICT-CVD, Framingham, SCORE2, and NZ risk assessment.</span></a></li>
+        <li><a href="/workshop/tools/cv-risk/"><span class="tool-name">Cardiovascular Risk</span><span class="tool-blurb">PREDICT-CVD 5-year risk for NZ patients. Framingham, QRISK3, SCORE2, and ACC/AHA for comparison.</span></a></li>
         <li><a href="/workshop/tools/cha2ds2-vasc/"><span class="tool-name">CHA₂DS₂-VASc</span><span class="tool-blurb">Stroke risk in atrial fibrillation and anticoagulation decisions.</span></a></li>
-        <li><a href="/workshop/tools/has-bled/"><span class="tool-name">HAS-BLED</span><span class="tool-blurb">Bleeding risk for patients on anticoagulation for AF.</span></a></li>
+        <li><a href="/workshop/tools/af-risk/"><span class="tool-name">HAS-BLED</span><span class="tool-blurb">Bleeding risk for patients on anticoagulation for AF. Combined with CHA&#x2082;DS&#x2082;-VASc in the AF Risk tool.</span></a></li>
         <li><a href="/workshop/tools/wells-criteria/"><span class="tool-name">Wells Criteria (DVT &amp; PE)</span><span class="tool-blurb">DVT and PE risk stratification with D-dimer guidance.</span></a></li>
         <li><a href="/workshop/tools/6mwd/"><span class="tool-name">6 Minute Walk Distance</span><span class="tool-blurb">Predicted distance by age and sex; prognostic interpretation.</span></a></li>
       </ul>
@@ -606,10 +604,10 @@ a:hover { color: var(--green); }
     <div>
       <p class="tool-category-name">Mental Health</p>
       <ul class="tool-list">
-        <li><a href="/workshop/tools/substance-risk/"><span class="tool-name">Substance Risk Calculator</span><span class="tool-blurb">AUDIT, AUDIT-C, ASSIST and quick risk indices.</span></a></li>
-        <li><a href="/workshop/tools/antidepressant-weaning/"><span class="tool-name">Antidepressant Weaning</span><span class="tool-blurb">Tapering schedules and withdrawal risk by agent.</span></a></li>
-        <li><a href="/workshop/tools/psychotropic-selector/"><span class="tool-name">Psychotropic Selector</span><span class="tool-blurb">Side-effect profile and safety comparison by class and indication.</span></a></li>
-        <li><a href="/workshop/tools/benzo-conversion/"><span class="tool-name">Benzodiazepine Conversion</span><span class="tool-blurb">Diazepam-equivalent dose and tapering strategies.</span></a></li>
+        <li><a href="/workshop/tools/substance-risk/"><span class="tool-name">Substance Risk Calculator</span><span class="tool-blurb">Alcohol (AUDIT), cannabis, and nicotine/vaping risk profiles with evidence-based harm summaries.</span></a></li>
+        <li><a href="/workshop/tools/antidepressant-weaning/"><span class="tool-name">Antidepressant Weaning</span><span class="tool-blurb">Tapering schedules and cross-tapering transitions. Covers SSRIs, SNRIs, TCAs, and mirtazapine.</span></a></li>
+        <li><a href="/workshop/tools/psychotropic-selector/"><span class="tool-name">Psychotropic Selector</span><span class="tool-blurb">Filterable reference for 22 agents: NZ dosing, side effects, CYP450, cost, and pregnancy safety.</span></a></li>
+        <li><a href="/workshop/tools/benzo-conversion/"><span class="tool-name">Benzodiazepine Conversion</span><span class="tool-blurb">Diazepam-equivalent conversion for 11 agents including Z-drugs. Switching protocols and dependence management.</span></a></li>
         <li><a href="/workshop/tools/comm/"><span class="tool-name">COMM</span><span class="tool-blurb">Current Opioid Misuse Measure for ongoing risk assessment.</span></a></li>
       </ul>
     </div>
@@ -629,7 +627,7 @@ a:hover { color: var(--green); }
     <div>
       <p class="tool-category-name">Paediatrics</p>
       <ul class="tool-list">
-        <li><a href="/workshop/tools/paediatric-doses/"><span class="tool-name">Paediatric Dosage Calculator</span><span class="tool-blurb">Weight-based dosing for the everyday paediatric formulary.</span></a></li>
+        <li><a href="/workshop/tools/paediatric-doses/"><span class="tool-name">Paediatric Dosage Calculator</span><span class="tool-blurb">Weight- and age-based dosing aligned to NZFc and Starship guidelines.</span></a></li>
         <li><a href="/workshop/tools/growth-charts/"><span class="tool-name">Paediatric Growth Charts</span><span class="tool-blurb">Plot weight, length, head circumference, BMI.</span></a></li>
         <li><a href="/workshop/tools/milestones/"><span class="tool-name">Developmental Milestones</span><span class="tool-blurb">Quick-reference age-banded developmental checks.</span></a></li>
       </ul>
@@ -639,7 +637,7 @@ a:hover { color: var(--green); }
     <div>
       <p class="tool-category-name">Medications</p>
       <ul class="tool-list">
-        <li><a href="/workshop/tools/opioid-converter/"><span class="tool-name">Opioid Converter</span><span class="tool-blurb">Morphine-equivalent dose conversion across opioid therapies.</span></a></li>
+        <li><a href="/workshop/tools/opioid-converter/"><span class="tool-name">Opioid Converter</span><span class="tool-blurb">Conversion across 9 opioid agents including transdermal patches. NZ HealthPathways-aligned.</span></a></li>
         <li><a href="/workshop/tools/steroid-equivalent/"><span class="tool-name">Steroid Equivalent Calculator</span><span class="tool-blurb">Glucocorticoid potency and dose comparison (prednisolone equivalent).</span></a></li>
       </ul>
     </div>
@@ -648,7 +646,7 @@ a:hover { color: var(--green); }
     <div>
       <p class="tool-category-name">General</p>
       <ul class="tool-list">
-        <li><a href="/workshop/tools/copd/"><span class="tool-name">COPD Management</span><span class="tool-blurb">GOLD-staged inhaler therapy with NZF-subsidised options.</span></a></li>
+        <li><a href="/workshop/tools/copd/"><span class="tool-name">COPD Management</span><span class="tool-blurb">BPAC/GOLD-staged medication selector with NZF-subsidised inhaler options.</span></a></li>
         <li><a href="/workshop/tools/edd/"><span class="tool-name">Due Date Estimator</span><span class="tool-blurb">Naegele's rule and gestational age by LMP or ultrasound.</span></a></li>
         <li><a href="/workshop/tools/cts-6/"><span class="tool-name">CTS-6 (Carpal Tunnel Score)</span><span class="tool-blurb">Kamath &amp; Stothard six-item weighted score for CTS probability.</span></a></li>
       </ul>

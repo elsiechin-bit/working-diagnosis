@@ -12,7 +12,7 @@ summary:
   - "In the consultation, the clearest framing is to emphasise cooking from whole ingredients as a pattern -- not to demonise specific products or imply that patients in lower socioeconomic circumstances simply need to make better choices."
 ---
 
-The term *ultraprocessed* entered the nutrition lexicon in 2009 when Brazilian epidemiologist Carlos Monteiro's group proposed the NOVA classification — a system that groups foods not by nutrient content but by the degree and purpose of industrial processing applied to them.[1] It was a deliberate provocation against reductionist nutrient-by-nutrient thinking, and it has been quietly reshaping how researchers frame dietary risk ever since.
+The term *ultraprocessed* entered the nutrition lexicon in 2009 when Brazilian epidemiologist Carlos Monteiro's group proposed the NOVA classification — a system that groups foods by the degree and purpose of industrial processing applied to them, rather than by nutrient content.[1] It was a deliberate provocation against reductionist nutrient-by-nutrient thinking, and it has been quietly reshaping how researchers frame dietary risk ever since.
 
 ## What NOVA actually says
 
@@ -24,7 +24,7 @@ NOVA divides foods into four groups.
 
 **Group 3 — Processed foods.** Products made by combining Group 1 and Group 2 items: cheese, cured meats, tinned fish, freshly baked bread, beer. Processing here is primarily for preservation or flavour.
 
-**Group 4 — Ultraprocessed foods (UPFs).** Industrial formulations that contain ingredients rarely or never found in domestic kitchens — emulsifiers, stabilisers, flavour enhancers, artificial sweeteners, colourings, modified starches, hydrogenated oils. The defining feature is not what has been added but that the product is assembled from fractionated food components, usually to make it hyper-palatable, cheap, shelf-stable, and convenient.[1]
+**Group 4 — Ultraprocessed foods (UPFs).** Industrial formulations that contain ingredients rarely or never found in domestic kitchens — emulsifiers, stabilisers, flavour enhancers, artificial sweeteners, colourings, modified starches, hydrogenated oils. The defining feature is that the product is assembled from fractionated food components — ingredients rarely or never used in domestic cooking — usually to make it hyper-palatable, cheap, shelf-stable, and convenient.[1]
 
 Familiar UPFs: packaged bread and buns, breakfast cereals, reconstituted meat products, flavoured yoghurts, instant noodles, soft drinks, mass-market confectionery, most fast food, many plant-based meat alternatives.
 

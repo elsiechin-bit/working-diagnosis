@@ -47,7 +47,7 @@ For those keeping score: NZ GPs practiced without a specialist college for twent
 
 The RNZCGP changed this, slowly. Fellowship (FRNZCGP) was established as a credential; eventually, in the 1990s, vocational registration as a GP required it. The GPEP training programme was established to provide a structured postgraduate training pathway. The college produced Fellowship of the Royal New Zealand College of General Practitioners as a recognisable indicator of formal training, which remains the qualification for vocational registration today [6].
 
-The college also, over time, became the institutional voice for the argument that general practice was not a residual category of medicine but a distinct specialty with its own intellectual tradition, its own consultation model, and its own evidence base. This argument has been more accepted in some quarters than others.
+The college also, over time, became the institutional voice for the argument that general practice was a distinct specialty with its own intellectual tradition, its own consultation model, and its own evidence base — and should be treated as such, rather than as a residual category. This argument has been more accepted in some quarters than others.
 
 ## Part IV  -  The 1990s reform era, or: what happens when you run hospitals like Telecom
 

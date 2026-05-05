@@ -72,7 +72,7 @@ Working GPs are not equipped to fix social isolation. We do not have the time, t
 
 **Have the EPOA conversation early.** A 70-year-old with intact capacity, no family nearby, and no EPOA in place is a future PPPR application waiting to happen. The proactive route is faster, cheaper, more aligned with the patient's actual wishes, and far less traumatic for everyone involved [10,11]. The conversation belongs in routine general practice, not at the point of crisis.
 
-**Do not medicalise solitude.** A 78-year-old who lives alone, does her own shopping, reads a lot, sees her grandchildren on Sundays, and is content is not a clinical problem. The metric is not whether someone is alone, but whether their connection meets their need. The DSM is not a place for solitude.
+**Do not medicalise solitude.** A 78-year-old who lives alone, does her own shopping, reads a lot, sees her grandchildren on Sundays, and is content requires no clinical response. The question to ask is whether someone's connection meets their need — aloneness and loneliness are different things. The DSM is not a place for solitude.
 
 **Do not abandon people in the name of autonomy.** Continuing to offer a service that has been declined ten times is not paternalism. It is presence. The eleventh time may be the time the offer is accepted, and even if it never is, being asked is part of being seen.
 

@@ -27,7 +27,7 @@ It is important to be clear about what this is and is not.
 
 It is a common law doctrine, not a statutory one. In New Zealand, the *Care of Children Act 2004* sets out that a person aged 16 or over may consent to medical, surgical, or dental procedures as if they were of full age [2]. For those under 16, the statutory framework is silent on capacity - and into that silence the common law steps, in the form of Gillick.
 
-It is a test of capacity, not of age. A ten-year-old is not Gillick competent for the same reason a ten-year-old cannot understand a mortgage - not because of a rule, but because of developmental reality. A mature fifteen-year-old discussing contraception in coherent, considered terms may well be. The assessment is individual and contextual every time.
+It is a test of capacity, not of age. A ten-year-old is not Gillick competent for the same reason a ten-year-old cannot understand a mortgage: developmental reality, not an arbitrary rule. A mature fifteen-year-old discussing contraception in coherent, considered terms may well be. The assessment is individual and contextual every time.
 
 It is primarily a doctrine about consent, not refusal. This distinction matters enormously and is where many clinicians get things wrong. We will come to it.
 
@@ -37,7 +37,7 @@ In 1982, Victoria Gillick - a Catholic mother of ten children in Norfolk - wrote
 
 She lost at first instance. She won at the Court of Appeal. She lost, ultimately and decisively, in the House of Lords, in a judgment handed down in October 1985. [1]
 
-The Lords held, 3 to 2, that the parental right to make decisions for a child existed not as an independent right but as a function of the child's own need for care and protection - and that it yielded, progressively, as the child developed the maturity and understanding to make their own decisions. Lord Scarman wrote the majority's most-cited passage:
+The Lords held, 3 to 2, that the parental right to make decisions for a child was a function of the child's own need for care and protection, derivative rather than independent - and that it yielded, progressively, as the child developed the maturity and understanding to make their own decisions. Lord Scarman wrote the majority's most-cited passage:
 
 *"The parental right to determine whether or not their minor child below the age of 16 will have medical treatment terminates if and when the child achieves a sufficient understanding and intelligence to enable him or her to understand fully what is proposed."* [1]
 
@@ -109,7 +109,7 @@ This is a straightforward Gillick competent consultation. She satisfies the Fras
 
 The younger the person, the more carefully you should document your capacity assessment. At 14, you should be more thorough in your conversation: does she understand the mechanism of the pill? Does she understand what to do if she misses a dose? Does she understand the failure rate? Does she understand that the pill does not protect against STIs? Does she understand what pregnancy would mean for her?
 
-You should also, sensitively, explore whether the relationship she is in is one of her choosing - not as an interrogation but as good clinical practice. Statutory rape provisions in New Zealand (under the *Crimes Act 1961*) mean that sexual activity with a person under 16 by someone significantly older is criminal, and while your obligation is primarily to the young person in front of you, a 14-year-old whose "boyfriend" is 30 is a different clinical situation from a 14-year-old in a relationship with a peer. If you have concerns, document them. If you have serious concerns, consider whether a referral to Child, Youth and Family services is warranted - but this is a separate question from whether to prescribe.
+You should also, sensitively, explore whether the relationship she is in is one of her choosing — a routine part of good clinical practice, approached with care rather than accusation. Statutory rape provisions in New Zealand (under the *Crimes Act 1961*) mean that sexual activity with a person under 16 by someone significantly older is criminal, and while your obligation is primarily to the young person in front of you, a 14-year-old whose "boyfriend" is 30 is a different clinical situation from a 14-year-old in a relationship with a peer. If you have concerns, document them. If you have serious concerns, consider whether a referral to Child, Youth and Family services is warranted - but this is a separate question from whether to prescribe.
 
 **Scenario 3: A 16-year-old refusing psychiatric medication**
 
@@ -151,7 +151,7 @@ A few principles worth keeping close.
 
 **You are not required to act against your clinical judgment.** If you are genuinely uncertain whether a young person has the capacity to make a particular decision, it is appropriate to seek input - from a colleague, a paediatrician, an ethics service. Uncertainty is not a reason to default to either blanket provision or blanket refusal.
 
-**Young people are not a category to be processed.** The Gillick judgment matters not because it gave clinicians a box to tick but because it reflected something true: that adolescent development is real, that a 15-year-old is not a 6-year-old, and that the clinical relationship works better when it treats the person in front of you as a moral agent whose view of their own life counts.
+**Young people are not a category to be processed.** The Gillick judgment matters because it reflected something true: that adolescent development is real, that a 15-year-old is not a 6-year-old, and that the clinical relationship works better when it treats the person in front of you as a moral agent whose view of their own life counts. The contribution is not a box to tick.
 
 Victoria Gillick lost her case. But the minority arguments she forced into the legal record - about the limits of parental exclusion, about the weight of irreversibility, about the difficulty of predicting whether a 15-year-old's values will look the same at 25 - are still alive in the case law and still worth sitting with.
 

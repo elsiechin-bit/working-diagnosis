@@ -38,7 +38,7 @@ summary:
 
 <p>Neuroimaging studies, including the large ABCD cohort and meta-analyses of structural MRI data, consistently show that children with ADHD have, on average, smaller total brain volume, with the most reliable differences in the caudate nucleus, putamen, and cerebellar vermis.<sup>4</sup> The prefrontal cortex (PFC)  -  the region most associated with executive function, working memory, and response inhibition  -  shows both volumetric reduction and, crucially, delayed cortical maturation.<sup>5</sup></p>
 
-<p>That last point matters more than the volume difference. Shaw and colleagues at the NIMH showed that peak cortical thickness in children with ADHD lags behind typically-developing peers by an average of three years  -  the median age of attaining peak thickness in the prefrontal cortex was 10.5 years in ADHD versus 7.5 years in controls.<sup>5</sup> This reframes ADHD not as a fixed deficit but as a maturational delay. Some of these children do, in fact, catch up. The subset who don't are the ones more likely to carry an adult diagnosis.</p>
+<p>That last point matters more than the volume difference. Shaw and colleagues at the NIMH showed that peak cortical thickness in children with ADHD lags behind typically-developing peers by an average of three years  -  the median age of attaining peak thickness in the prefrontal cortex was 10.5 years in ADHD versus 7.5 years in controls.<sup>5</sup> This reframes ADHD as a maturational delay rather than a fixed deficit. Some of these children do, in fact, catch up. The subset who don't are the ones more likely to carry an adult diagnosis.</p>
 
 <h3>Circuits</h3>
 
@@ -95,9 +95,9 @@ summary:
 
 <p>He is six. He cannot yet have been assessed by a paediatrician, because the wait in our DHB catchment is four to six months. His mother wants to know if she should push for a diagnosis, or wait and see.</p>
 
-<p>I tell her what I actually think: that the behaviour she is describing is consistent with ADHD, that six is young but not too young to evaluate, that a diagnosis  -  if it comes  -  is not a life sentence but a map, and that medication is neither the first step nor necessarily the destination. I refer to Community Paediatrics. I give her the SNAP-IV to take to the teacher. I talk about what the school can put in place under their Universal Design for Learning obligations without waiting for a diagnosis.</p>
+<p>I tell her what I actually think: that the behaviour she is describing is consistent with ADHD, that six is young but not too young to evaluate, that a diagnosis  -  if it comes  -  is a map, something that orients rather than confines, and that medication is neither the first step nor necessarily the destination. I refer to Community Paediatrics. I give her the SNAP-IV to take to the teacher. I talk about what the school can put in place under their Universal Design for Learning obligations without waiting for a diagnosis.</p>
 
-<p>And I note, for myself, that the science here is actually quite beautiful  -  a prefrontal cortex that is three years behind the clock, a dopamine signal that fires perfectly for Minecraft and poorly for waiting in line, a child who is not broken but whose reward architecture is tuned to a frequency the classroom doesn't broadcast on.</p>
+<p>And I note, for myself, that the science here is actually quite beautiful  -  a prefrontal cortex that is three years behind the clock, a dopamine signal that fires perfectly for Minecraft and poorly for waiting in line, a child whose reward architecture is perfectly functional, tuned to a frequency the classroom doesn't broadcast on.</p>
 
 <p>He'll probably be fine. I want to be honest about how much of that is evidence and how much is clinical intuition. It's some of both.</p>
 

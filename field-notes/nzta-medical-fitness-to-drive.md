@@ -87,7 +87,7 @@ Syncope associated with a documented arrhythmia follows the arrhythmia-specific 
 
 ### Diabetes
 
-The driving standards in diabetes are primarily about hypoglycaemia risk. The concern is not hyperglycaemia  -  which is unlikely to produce the abrupt loss of consciousness that makes driving dangerous  -  but hypoglycaemia in insulin-treated patients, which can do exactly this.
+The driving standards in diabetes are primarily about hypoglycaemia risk. The concern centres on hypoglycaemia in insulin-treated patients, which can produce the abrupt loss of consciousness that makes driving dangerous. Hyperglycaemia alone is unlikely to do this.
 
 **Group 1, insulin-treated diabetes:**
 

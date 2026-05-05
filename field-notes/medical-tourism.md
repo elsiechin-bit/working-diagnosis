@@ -88,7 +88,7 @@ This is where we can add the most value and often where we feel least prepared.
 
 **Pre-operative assessment is appropriate.** An ECG, baseline bloods, and medication review before major elective surgery overseas are the same things you'd do before domestic private surgery. Frame it that way.
 
-**Ask about accreditation.** Joint Commission International (JCI) accreditation is the most widely recognised international standard. It is not a guarantee, but its presence is meaningful. Its absence should prompt further scrutiny.<sup>12</sup>
+**Ask about accreditation.** Joint Commission International (JCI) accreditation is the most widely recognised international standard. Its presence is meaningful; its absence should prompt further scrutiny. It is not a guarantee in either direction.<sup>12</sup>
 
 **DVT prophylaxis conversation.** Patients need to understand the flight risk in unambiguous terms. If they are proceeding, establish a plan  -  compression stockings, timing of the return flight, whether prophylactic LMWH is warranted given their individual risk factors. Document the conversation.
 
@@ -120,7 +120,7 @@ The RACS position is worth reading: it explicitly calls on governments to reduce
 
 ## Bottom line
 
-Medical tourism is a rational response to a system under pressure. The savings are real. The risks are also real, and they are unevenly distributed  -  falling hardest on patients who can least afford complications. As GPs we are not gatekeepers for overseas procedures, but we are the best-placed clinicians to reduce harm on both sides of the trip. That means engaging, not abstaining.
+Medical tourism is a rational response to a system under pressure. The savings are real. The risks are also real, and they are unevenly distributed  -  falling hardest on patients who can least afford complications. As GPs we are the best-placed clinicians to reduce harm on both sides of the trip — our role is to engage, not to gatekeep or to abstain.
 
 When Mrs T came back  -  knee replaced, walking well, no complications  -  she was grateful for the preparation. She'd taken her operative notes. She'd waited eight days before flying. She'd come in for a two-week review. The DVT prophylaxis conversation had made her nervous enough to be careful.
 

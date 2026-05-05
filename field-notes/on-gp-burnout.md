@@ -90,7 +90,7 @@ A few things I think hold up under scrutiny.
 
 **Knowing when to seek help.** GP rates of mental ill-health, suicidal ideation, and completed suicide are higher than population baseline, and significantly higher in some studies for female physicians than for matched-age peers in other professions. The reasons are well-rehearsed: high workload, easy access to information about means, professional reluctance to seek help, concerns about MCNZ implications of disclosure. The Medical Council of New Zealand and the various physician health programmes  -  including the Doctors' Health Advisory Service  -  exist for this reason. They are confidential, they are colleague-staffed, and they are the right call long before the situation feels desperate enough to warrant it. The single most evidence-supported predictor of seeking help in time is having decided in advance that you would.
 
-**Structural advocacy.** The work of arguing for capitation reweighting, for funded clerical support, for reduced compliance burden, for sustainable workforce policy, is not separate from the work of managing burnout. It is the work. Every individual GP cannot fix the system, but the College, the GP Leaders' Forum, and the various sector advocacy bodies do meaningful work that depends on members staying engaged enough to support it.
+**Structural advocacy.** The work of arguing for capitation reweighting, for funded clerical support, for reduced compliance burden, for sustainable workforce policy, is the work of managing burnout — inseparable from it. Every individual GP cannot fix the system, but the College, the GP Leaders' Forum, and the various sector advocacy bodies do meaningful work that depends on members staying engaged enough to support it.
 
 ## A closing note
 

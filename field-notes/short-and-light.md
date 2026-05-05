@@ -59,7 +59,7 @@ The assessment is mostly clinical. I want to know:
 
 - Growth trajectory  -  ideally at least two height measurements 6–12 months apart, plotted accurately
 - Mid-parental height and family growth pattern (particularly pubertal timing in parents)
-- Diet in some detail  -  not a lecture, but a real picture of a typical day's eating
+- Diet in some detail  -  a genuine picture of a typical day's eating, without moralising
 - Energy, mood, school performance, sport participation
 - Any symptoms that could point to a systemic cause
 - Pubertal staging on examination, and bone age x-ray if there is real clinical concern

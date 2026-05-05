@@ -117,7 +117,7 @@ The explanation that tends to land is physiological: "Your autonomic nervous sys
 
 What does not tend to land, and actively damages the therapeutic relationship: "Have you thought about seeing a psychologist?" as the first response to a positive standing test. Or: "A lot of people with this kind of symptom find exercise helps" without acknowledging that exercise is genuinely difficult and must be approached with specific modifications.
 
-The concept of post-exertional malaise - symptom exacerbation following physical or cognitive exertion beyond the patient's current threshold - needs to be explicitly acknowledged. Patients who are told to push through will push through and feel worse, will then feel blamed for not getting better, and will disengage from care. Understanding that pacing is not avoidance but a genuine clinical strategy changes the conversation.
+The concept of post-exertional malaise - symptom exacerbation following physical or cognitive exertion beyond the patient's current threshold - needs to be explicitly acknowledged. Patients who are told to push through will push through and feel worse, will then feel blamed for not getting better, and will disengage from care. Understanding that pacing is a genuine clinical strategy — and not a synonym for avoidance — changes the conversation.
 
 ## Part IX - The New Zealand specifics
 

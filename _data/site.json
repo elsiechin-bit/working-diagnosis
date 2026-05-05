@@ -13,6 +13,7 @@
     { "label": "Mental Health", "url": "/mental-health/" },
     { "label": "Vaccines", "url": "/vaccines/" },
     { "label": "Travel", "url": "/travel/" },
+    { "divider": true },
     { "label": "Field Notes", "url": "/field-notes/" },
     { "label": "Handouts", "url": "/handouts/" },
     { "label": "Resources", "url": "/resources/" },

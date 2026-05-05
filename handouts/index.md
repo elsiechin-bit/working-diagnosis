@@ -4,7 +4,7 @@ layout: topic.njk
 description: A growing library of patient-facing handouts for NZ patients  -  free to print or email. Organised by clinical area.
 ---
 
-<p>These handouts are written for a Year 8 reading level, grounded in NZ guidelines, and free to print, email, or work through with patients during a consult. Items marked <span class="hl-soon">coming soon</span> are planned but not yet written  -  until then, the best free NZ patient information sits at <a href="https://www.healthnavigator.org.nz">Health Navigator NZ</a> and <a href="https://bpac.org.nz/patients.aspx">BPAC patient information</a>.</p>
+<p>These handouts are grounded in NZ guidelines, and free to print, email, or work through with patients during a consult. Items marked <span class="hl-soon">coming soon</span> are planned but not yet written  -  until then, the usual pages I use: <a href="https://healthify.nz/">Healthify NZ</a> · <a href="https://bpac.org.nz/patients.aspx">BPAC patient information</a> · <a href="https://www.kidshealth.org.nz/">KidsHealth NZ</a> · <a href="https://www.mymedicines.nz/cdhb">MyMedicines NZ</a> · <a href="https://healthed.govt.nz/">HealthEd</a> · <a href="https://www.medsafe.govt.nz/consumers/educational-material.asp">Medsafe consumer information</a>.</p>
 
 <nav aria-label="Jump to section">
   <ul class="handouts-jump">
