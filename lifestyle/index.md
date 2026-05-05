@@ -5,8 +5,8 @@ layout: topic.njk
 pillar: Lifestyle
 ---
 
-<p>Lifestyle medicine is not wellness culture. It is the clinical application of evidence around physical activity, sleep, alcohol, weight, and social connection  -  the inputs that shape cardiovascular risk, metabolic health, mental wellbeing, and longevity more than most of the prescriptions we write.</p>
-    <p>These pages are written for consultation support, not patient self-diagnosis. Use them to anchor a conversation, not end one.</p>
+<p>Physical inactivity is the fourth leading cause of global mortality. Sleeping under 6 hours a night raises all-cause mortality by around 12%. Alcohol contributes to roughly 800 deaths a year in New Zealand, with no threshold below which cancer risk does not rise. Around 34% of NZ adults are obese and 34% overweight. Loneliness carries a mortality risk comparable to smoking 15 cigarettes a day.</p>
+    <p>These pages cover NZ guideline thresholds, the underlying evidence, and what fits inside a 15-minute consult.</p>
 
     <ul class="pillar-list-inline">
       <li><a href="/lifestyle/physical-activity/">Physical activity</a></li>

@@ -204,6 +204,9 @@ a:hover { color: var(--green); }
 .footer-item summary:hover { color: var(--green); }
 .footer-item p { font-size: 13px; line-height: 1.65; color: var(--ink-mute); margin: 10px 0 4px; }
 .footer-contact { font-size: 13px; color: var(--ink-mute); border-top: 1px solid var(--rule); padding-top: 14px; margin: 0; }
+.footer-copy { font-size: 13px; color: var(--ink-mute); margin: 8px 0 0; }
+.footer-junk { font-size: 1em; opacity: 0.2; text-decoration: none; margin-left: 6px; display: inline-block; transition: opacity 0.25s; }
+.footer-junk:hover { opacity: 0.9; }
 @media (max-width: 600px) { .footer-disclosures { grid-template-columns: 1fr; } }
 
 .kofi-widget-overlay { position: fixed !important; bottom: 24px !important; right: 24px !important; z-index: 9999; }

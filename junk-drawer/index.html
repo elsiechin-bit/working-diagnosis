@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junk Drawer — Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+
+    /* masthead */
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-brand em{font-style:italic;color:var(--green)}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+
+    /* hero */
+    .hero{max-width:680px;margin:0 auto;padding:3.5rem 2rem 2rem}
+    .drawer-icon{font-size:2.2rem;margin-bottom:1.1rem;display:block}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-dek{color:var(--ink-soft);font-size:1rem;max-width:540px;line-height:1.65}
+
+    /* section */
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 5rem}
+    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.4rem;margin:3rem 0 .3rem;color:var(--ink)}
+    .section-lead{color:var(--ink-mute);font-size:.9rem;font-style:italic;margin-bottom:1.75rem;line-height:1.6}
+
+    /* film cards */
+    .film-grid{display:flex;flex-direction:column;gap:1.25rem}
+    .film-card{background:var(--warm);border:1px solid var(--rule);border-radius:8px;padding:1.4rem 1.6rem}
+    .film-meta{display:flex;align-items:baseline;gap:.75rem;margin-bottom:.55rem;flex-wrap:wrap}
+    .film-title{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--ink);letter-spacing:-.01em}
+    .film-year{font-family:'JetBrains Mono',monospace;font-size:.67rem;color:var(--ink-mute);letter-spacing:.06em}
+    .film-condition{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);background:rgba(184,113,79,.08);border:1px solid rgba(184,113,79,.25);border-radius:3px;padding:2px 8px;margin-bottom:.85rem}
+    .film-accuracy{display:flex;align-items:center;gap:.6rem;margin-bottom:.85rem}
+    .acc-dots{display:flex;gap:3px}
+    .acc-dot{width:8px;height:8px;border-radius:50%}
+    .acc-dot.on{background:var(--green)}
+    .acc-dot.off{background:var(--rule)}
+    .acc-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute)}
+    .film-body{font-size:.93rem;color:var(--ink-soft);line-height:1.7}
+    .film-body p+p{margin-top:.65rem}
+    .film-caveat{font-family:'JetBrains Mono',monospace;font-size:.64rem;color:var(--ink-mute);margin-top:.85rem;padding-top:.7rem;border-top:1px solid var(--rule);line-height:1.55}
+    .film-caveat::before{content:"caveat — ";text-transform:uppercase;letter-spacing:.08em;color:var(--ochre)}
+
+    /* stub grid */
+    .stubs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+    @media(max-width:580px){.stubs{grid-template-columns:1fr}}
+    .stub{border:1px dashed var(--rule);border-radius:8px;padding:1.3rem 1.4rem}
+    .stub-icon{font-size:1.6rem;margin-bottom:.6rem;display:block}
+    .stub-title{font-family:'Fraunces',serif;font-weight:400;font-size:1.05rem;color:var(--ink);margin-bottom:.4rem}
+    .stub-desc{font-size:.86rem;color:var(--ink-mute);line-height:1.58}
+    .stub-wip{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rule);margin-top:.7rem;display:block}
+
+    /* footer */
+    .page-footer{border-top:1px solid var(--rule);padding:2rem;text-align:center;margin-top:2rem}
+    .page-footer a{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .page-footer a:hover{color:var(--green)}
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working <em>Diagnosis</em>.</a>
+  <a href="/" class="masthead-crumb">&#8592; Home</a>
+</header>
+
+<div class="hero">
+  <span class="drawer-icon">🗃️</span>
+  <p class="kicker">miscellaneous &nbsp;·&nbsp; non-clinical &nbsp;·&nbsp; mostly</p>
+  <h1>The Junk <em>Drawer</em></h1>
+  <p class="hero-dek">Things that didn't fit anywhere else. Clinical curiosities, whimsical tangents, and the kind of content that gets written at 11pm on a Wednesday when the actual pages feel too hard.</p>
+</div>
+
+<div class="page-body">
+
+  <h2 class="section-h2">Cinema as Consultation</h2>
+  <p class="section-lead">Films and series with the most clinically accurate depictions of specific conditions. Useful for recommending to patients, for teaching, or for justifying film-watching as informal CPD.</p>
+
+  <div class="film-grid">
+
+    <div class="film-card">
+      <div class="film-meta">
+        <span class="film-title">Still Alice</span>
+        <span class="film-year">2014</span>
+      </div>
+      <span class="film-condition">Early-onset Alzheimer's disease</span>
+      <div class="film-accuracy">
+        <div class="acc-dots">
+          <div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div>
+        </div>
+        <span class="acc-label">5 / 5 &nbsp;— excellent</span>
+      </div>
+      <div class="film-body">
+        <p>Julianne Moore won the Oscar, but the real achievement is clinical fidelity. The film traces early-onset familial Alzheimer's from first symptom to late-stage disease with unusual honesty: the word-finding failures, navigational confusion, preserved affect long after declarative memory has gone. The Alzheimer's Association consulted on the production.</p>
+        <p>The scene in which Alice records a video message to her future self — instructions for suicide when she no longer recognises her family — is one of the most ethically honest depictions of advance care planning in mainstream cinema. Worth knowing about when these conversations come up in consult.</p>
+      </div>
+    </div>
+
+    <div class="film-card">
+      <div class="film-meta">
+        <span class="film-title">The Diving Bell and the Butterfly</span>
+        <span class="film-year">2007</span>
+      </div>
+      <span class="film-condition">Locked-in syndrome (pontine stroke)</span>
+      <div class="film-accuracy">
+        <div class="acc-dots">
+          <div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div>
+        </div>
+        <span class="acc-label">5 / 5 &nbsp;— exceptional</span>
+      </div>
+      <div class="film-body">
+        <p>Based on Jean-Dominique Bauby's memoir, dictated by blinking. After a massive pontine stroke, Bauby retained intact cognition while losing all voluntary motor control except his left eyelid. Julian Schnabel shot much of the film from the patient's point of view, which is not a gimmick but a clinical education tool.</p>
+        <p>The communication system is accurately depicted: a speech therapist reads out letters by frequency; one blink for yes, two for no. The film also captures the experience of receiving prognostic information while being fully conscious and unable to respond in real time. This is what locked-in syndrome is actually like.</p>
+      </div>
+    </div>
+
+    <div class="film-card">
+      <div class="film-meta">
+        <span class="film-title">Amour</span>
+        <span class="film-year">2012</span>
+      </div>
+      <span class="film-condition">Stroke / aphasia / progressive cognitive decline</span>
+      <div class="film-accuracy">
+        <div class="acc-dots">
+          <div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div>
+        </div>
+        <span class="acc-label">5 / 5 &nbsp;— unsentimental and precise</span>
+      </div>
+      <div class="film-body">
+        <p>Michael Haneke depicts the aftermath of stroke in an elderly woman with clinical precision and no sentimentality. The initial transient episodes (likely TIA), the first major stroke with right hemiplegia and expressive aphasia, subsequent progression, swallowing difficulties, pressure area complications, and cognitive blunting are all there, and all accurate.</p>
+        <p>Uniquely useful for the caregiver's perspective: the slow absorption of a partner's identity into the role of nurse, the shame, the anger. This is one to know about when supporting the spouses of stroke patients, who often present to GP with depression that is in fact caregiver burnout.</p>
+      </div>
+    </div>
+
+    <div class="film-card">
+      <div class="film-meta">
+        <span class="film-title">Temple Grandin</span>
+        <span class="film-year">2010 &nbsp;· &nbsp;HBO</span>
+      </div>
+      <span class="film-condition">Autism spectrum disorder</span>
+      <div class="film-accuracy">
+        <div class="acc-dots">
+          <div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div>
+        </div>
+        <span class="acc-label">5 / 5 &nbsp;— supervised by the subject</span>
+      </div>
+      <div class="film-body">
+        <p>Temple Grandin herself supervised production and verified the portrayal of her sensory experiences and cognitive style. The visual thinking sequence — abstract concepts rendered as images, memories accessed like video clips — achieves a specificity that clinical textbooks rarely manage. The squeeze machine is explained as a sensory regulation tool, not a curiosity.</p>
+        <p>Useful for explaining to families that autism is not a single thing, and that what looks like social indifference may be a processing difference rather than a relational one.</p>
+      </div>
+      <div class="film-caveat">Depicts one person's experience. Grandin's profile does not represent all autistic experience, and the film occasionally slides toward inspiration narrative. Worth naming when recommending it.</div>
+    </div>
+
+    <div class="film-card">
+      <div class="film-meta">
+        <span class="film-title">Wit</span>
+        <span class="film-year">2001 &nbsp;·&nbsp; HBO</span>
+      </div>
+      <span class="film-condition">Ovarian cancer / end-of-life care</span>
+      <div class="film-accuracy">
+        <div class="acc-dots">
+          <div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div>
+        </div>
+        <span class="acc-label">5 / 5 &nbsp;— used in medical schools</span>
+      </div>
+      <div class="film-body">
+        <p>Emma Thompson as a literary scholar receiving aggressive chemotherapy for stage IV ovarian cancer. Based on Margaret Edson's Pulitzer Prize-winning play. The film is used in medical schools internationally, not primarily for oncology but for communication skills, informed consent, and the meaning of "full code."</p>
+        <p>The resuscitation scene alone justifies a watch: an unwitnessed arrest, the code team arriving, the patient's expressed wishes overridden because the chart wasn't updated. It is accurate. It happens. It is the reason advance care planning conversations matter in every GP visit with an elderly or seriously unwell patient.</p>
+      </div>
+    </div>
+
+    <div class="film-card">
+      <div class="film-meta">
+        <span class="film-title">Awakenings</span>
+        <span class="film-year">1990</span>
+      </div>
+      <span class="film-condition">Post-encephalitic parkinsonism / L-DOPA response</span>
+      <div class="film-accuracy">
+        <div class="acc-dots">
+          <div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot off"></div>
+        </div>
+        <span class="acc-label">4 / 5 &nbsp;— faithful to Sacks</span>
+      </div>
+      <div class="film-body">
+        <p>Based on Oliver Sacks' 1973 account of his work with survivors of the 1917 encephalitis lethargica epidemic. The catatonic states, the dramatic initial L-DOPA responses, and the subsequent "tribulations" — dyskinesias, tolerance, psychiatric complications — are depicted accurately. Robin Williams plays the Sacks analogue with unusual restraint.</p>
+        <p>Genuinely useful for illustrating dopamine's role in motor initiation and the narrow therapeutic window of L-DOPA, particularly when discussing treatment expectations with Parkinson's patients starting therapy.</p>
+      </div>
+      <div class="film-caveat">The long-term outcomes were worse than the film suggests. Most patients deteriorated significantly after the initial honeymoon period. Sacks wrote about this more honestly in the book.</div>
+    </div>
+
+    <div class="film-card">
+      <div class="film-meta">
+        <span class="film-title">Unrest</span>
+        <span class="film-year">2017 &nbsp;·&nbsp; Documentary</span>
+      </div>
+      <span class="film-condition">ME / CFS</span>
+      <div class="film-accuracy">
+        <div class="acc-dots">
+          <div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div>
+        </div>
+        <span class="acc-label">5 / 5 &nbsp;— made by a patient</span>
+      </div>
+      <div class="film-body">
+        <p>Jennifer Brea directed this documentary from a wheelchair and a bed. She filmed herself during crashes. She interviewed researchers. She documented the medical disbelief she encountered. It is on Netflix and should be watched by any clinician who has used the word "deconditioning" near a patient with post-viral fatigue, or who is uncertain whether ME is a real thing.</p>
+        <p>The PACE trial controversy is handled fairly. The film does not pretend to resolve it. It simply shows what severe ME looks like, which is something that does not come through in clinical notes.</p>
+      </div>
+      <div class="film-caveat">Necessarily one-sided on the biopsychosocial model debate. This is a patient film, not a systematic review. Worth watching with that framing in mind.</div>
+    </div>
+
+    <div class="film-card">
+      <div class="film-meta">
+        <span class="film-title">My Left Foot</span>
+        <span class="film-year">1989</span>
+      </div>
+      <span class="film-condition">Cerebral palsy (spastic quadriplegia)</span>
+      <div class="film-accuracy">
+        <div class="acc-dots">
+          <div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div><div class="acc-dot on"></div>
+        </div>
+        <span class="acc-label">5 / 5 &nbsp;— extensively researched</span>
+      </div>
+      <div class="film-body">
+        <p>Daniel Day-Lewis spent months working with physiotherapists and adults with CP. The spastic movement patterns, dysarthric speech, and the preserved and acute intellect are rendered accurately. Christy Brown, the film's subject, was a real person who became a celebrated writer and painter.</p>
+        <p>Clinically useful for understanding the disconnect between motor presentation and cognitive capacity — a distinction that remains relevant to how patients with CP are approached in healthcare settings, where there is a persistent tendency to address carers rather than patients directly.</p>
+      </div>
+    </div>
+
+  </div><!-- /film-grid -->
+
+  <h2 class="section-h2" style="margin-top:4rem">Things to add when the real pages are done</h2>
+  <p class="section-lead">Future stubs. Suggestions welcome via the email in the footer.</p>
+
+  <div class="stubs">
+
+    <div class="stub">
+      <span class="stub-icon">👤</span>
+      <p class="stub-title">Eponyms With Backstories</p>
+      <p class="stub-desc">Conditions named after real people who were, in many cases, not the first to describe them, or were actively unpleasant. Cushing's syndrome. Reiter's syndrome. The complicated history of medical naming.</p>
+      <span class="stub-wip">Not yet written</span>
+    </div>
+
+    <div class="stub">
+      <span class="stub-icon">📄</span>
+      <p class="stub-title">Case Reports That Sound Fabricated</p>
+      <p class="stub-desc">Real PubMed-indexed cases. Unusual presentations, improbable foreign bodies, drug interactions nobody anticipated, and the occasional spontaneous resolution that defies pathophysiological explanation.</p>
+      <span class="stub-wip">Not yet written</span>
+    </div>
+
+    <div class="stub">
+      <span class="stub-icon">⚠️</span>
+      <p class="stub-title">Things Medicine Got Badly Wrong</p>
+      <p class="stub-desc">Thalidomide. Lobotomy. Hormone replacement therapy (version one). Routine tonsillectomy. The confidence with which these were practised is instructive about the confidence with which we currently practise.</p>
+      <span class="stub-wip">Not yet written</span>
+    </div>
+
+    <div class="stub">
+      <span class="stub-icon">🦠</span>
+      <p class="stub-title">Medical Myths That Turned Out True</p>
+      <p class="stub-desc">Barry Marshall drank a petri dish of H. pylori and gave himself gastritis to prove a point. Fecal transplants. Maggot debridement. The history of ideas medicine dismissed before reluctantly accepting them.</p>
+      <span class="stub-wip">Not yet written</span>
+    </div>
+
+    <div class="stub">
+      <span class="stub-icon">💊</span>
+      <p class="stub-title">Drugs With Unexpected Side Effects</p>
+      <p class="stub-desc">Finasteride and persistent sexual dysfunction. Isotretinoin and mood. Minoxidil, which is also a hair-growth drug. Rifampicin and its effect on every other medication. The pharmacological equivalent of surprise.</p>
+      <span class="stub-wip">Not yet written</span>
+    </div>
+
+    <div class="stub">
+      <span class="stub-icon">🗺️</span>
+      <p class="stub-title">Geography of Strange Diseases</p>
+      <p class="stub-desc">Kuru. Nodding syndrome. Dhat. Conditions shaped by specific geography, diet, or cultural context. What the disease map reveals about the relationship between place and illness.</p>
+      <span class="stub-wip">Not yet written</span>
+    </div>
+
+    <div class="stub">
+      <span class="stub-icon">🩺</span>
+      <p class="stub-title">Signs Named After the Weirdest Things</p>
+      <p class="stub-desc">The Grey Turner sign. Cullen's sign. Trousseau's sign of malignancy (different from Trousseau's sign of latent tetany, by a different Trousseau). A tour of the physical examination's more arcane vocabulary.</p>
+      <span class="stub-wip">Not yet written</span>
+    </div>
+
+    <div class="stub">
+      <span class="stub-icon">📺</span>
+      <p class="stub-title">TV Medicine: Accurate vs. Theatre</p>
+      <p class="stub-desc">House MD gets the diseases right and the process completely wrong. Scrubs is surprisingly accurate about medical culture and grief. ER is the gold standard. A proper ranking, with receipts.</p>
+      <span class="stub-wip">Not yet written</span>
+    </div>
+
+  </div>
+
+</div><!-- /page-body -->
+
+<footer class="page-footer">
+  <a href="/">&#8592; Back to Working Diagnosis</a>
+</footer>
+
+</body>
+</html>

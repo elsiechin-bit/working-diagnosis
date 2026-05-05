@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bedwetting (Nocturnal Enuresis) — Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+    .hero{max-width:680px;margin:0 auto;padding:2.5rem 2rem 1.75rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+    .print-bar{max-width:680px;margin:0 auto;padding:.75rem 2rem;display:flex;justify-content:flex-end}
+    .print-btn{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--rule);color:var(--ink-mute);padding:.45rem 1rem;border-radius:50px;cursor:pointer;transition:all .15s}
+    .print-btn:hover{color:var(--green);border-color:var(--green)}
+    .glance{background:var(--warm);border-radius:14px;padding:1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
+    .glance-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
+    .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+    .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
+    .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
+    .acc-item.open .chevron{transform:rotate(90deg)}
+    .acc-body{display:none;padding:1.25rem 1.4rem 1.5rem;background:var(--paper);border-top:1px solid var(--rule);font-size:.95rem;color:var(--ink-soft);line-height:1.72}
+    .acc-item.open .acc-body{display:block}
+    .acc-body p+p{margin-top:.75rem}
+    .acc-body ul,.acc-body ol{padding-left:1.25rem;margin:.5rem 0}
+    .acc-body li{margin-bottom:.3rem}
+    .data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.9rem}
+    .data-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.7rem 1rem;background:var(--deep);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+    .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:nth-child(even) td{background:var(--warm)}
+    .alert-box{background:#FDF6EE;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
+    .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
+    .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
+    .alert-box ul{padding-left:1.25rem}
+    .alert-box ul li{margin-bottom:.4rem}
+    .resources{background:var(--warm);border-radius:12px;padding:1.5rem;margin-top:2rem}
+    .resources-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+    .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
+    .resources a:hover{text-decoration:underline}
+    .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
+    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
+    .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
+    .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1.5rem 2rem 2rem}
+    .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
+    .refs-toggle:hover{color:var(--green)}
+    .refs-list{display:none;margin-top:1rem}
+    .refs-list.on{display:block}
+    .refs-list ol{padding-left:1.4rem}
+    .refs-list li{font-size:.8rem;color:var(--ink-mute);line-height:1.6;margin-bottom:.45rem}
+    .page-footer{text-align:center;font-size:.8rem;color:var(--ink-mute);padding:1.25rem 2rem 2rem;border-top:1px solid var(--rule);max-width:680px;margin:0 auto}
+    @media print{
+      .masthead-crumb,.print-bar,.refs-section,.page-footer{display:none}
+      .acc-body{display:block!important;padding:.4rem 0}
+      .acc-head{background:none!important;font-size:1rem;padding:.5rem 0;border-bottom:1px solid #ccc;border-radius:0}
+      .acc-item{border:none;margin-bottom:.5rem;border-radius:0}
+      body{font-size:.85rem}
+      .alert-box,.data-table{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/paeds/" class="masthead-crumb">Paediatrics</a>
+</header>
+
+<div class="hero">
+  <p class="kicker">❍ Paediatrics</p>
+  <h1><em>Bedwetting</em> in children</h1>
+  <p class="hero-lead">Nocturnal enuresis is common, normal, and not the child's fault. Most children grow out of it. For those who need support, effective treatments are available.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+
+  <div class="glance">
+    <div>
+      <p class="glance-label">How common</p>
+      <p class="glance-value">1 in 7</p>
+      <p class="glance-desc">Five-year-olds who wet the bed most nights</p>
+    </div>
+    <div>
+      <p class="glance-label">Grows out of it</p>
+      <p class="glance-value">~15%</p>
+      <p class="glance-desc">Of affected children become dry each year without treatment</p>
+    </div>
+    <div>
+      <p class="glance-label">Alarm success</p>
+      <p class="glance-value">~70%</p>
+      <p class="glance-desc">Achieve dryness with a bedwetting alarm over 3 months</p>
+    </div>
+    <div>
+      <p class="glance-label">Family history</p>
+      <p class="glance-value">44%</p>
+      <p class="glance-desc">Risk if one parent had bedwetting as a child</p>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-head">What is bedwetting and why does it <em>happen?</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Bedwetting (nocturnal enuresis) is when a child aged 5 years or older passes urine involuntarily during sleep. It is one of the most common conditions in childhood and affects children of all temperaments and backgrounds. It is not caused by laziness, defiance, deep sleeping as a deliberate choice, or emotional problems. It is a developmental issue, and it is not the child's fault.</p>
+      <p>Three biological factors come together to cause bedwetting. The first is that the body produces more urine at night than the bladder can comfortably hold. This happens because a hormone called vasopressin (ADH) is normally released at night to reduce urine production, and in children who wet the bed, this night-time rise in vasopressin is often delayed or lower than in other children. The second factor is a smaller functional bladder capacity, meaning the bladder sends a "full" signal before it has reached a typical adult volume. The third factor is difficulty waking from sleep in response to those bladder signals. When all three occur together, the bladder empties before the child wakes.</p>
+      <p>There is a strong genetic component. If one parent wet the bed as a child, their child has approximately a 44 percent chance of bedwetting. If both parents had it, the risk rises to about 77 percent. This genetic link is reassuring because it means children from families with a history of bedwetting almost always grow out of it, just as their parents did.</p>
+      <p>Most children with bedwetting will achieve dryness naturally over time. Approximately 15 percent of children who wet the bed at age 5 become dry each year without any treatment. By age 10, only about 5 percent of children are still affected. By the teenage years, fewer than 2 percent continue to wet the bed.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Primary versus <em>secondary</em> bedwetting <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Understanding the difference between primary and secondary bedwetting matters because they have different causes and management approaches.</p>
+      <p><strong>Primary nocturnal enuresis</strong> is when a child has never been reliably dry at night for more than 6 consecutive months. This is the most common form, affecting the great majority of children who wet the bed. It reflects the developmental factors described above: a maturing bladder, sleep arousal system, and vasopressin rhythm. Primary bedwetting is almost never caused by a medical condition or psychological problem. It simply takes longer for some children's bodies to make the transition to consistent night-time dryness.</p>
+      <p><strong>Secondary nocturnal enuresis</strong> is when a child who had been reliably dry at night for at least 6 consecutive months starts wetting again. Secondary bedwetting is more likely to have a specific underlying cause and warrants a conversation with your GP. Common causes include:</p>
+      <ul>
+        <li><strong>Constipation:</strong> this is the single most common treatable cause. A full rectum sits directly behind the bladder and can reduce its capacity significantly. Ask your GP about this if your child has infrequent or hard stools.</li>
+        <li><strong>Urinary tract infection (UTI):</strong> particularly in girls. Look for burning or stinging when passing urine, frequency, or unusual-smelling urine.</li>
+        <li><strong>Emotional stress or change:</strong> starting school, a new sibling, family disruption, or bullying can trigger a return to bedwetting in previously dry children.</li>
+        <li><strong>Diabetes mellitus:</strong> increased thirst and large volumes of pale urine alongside bedwetting warrants a urine glucose check.</li>
+        <li><strong>Sleep-disordered breathing:</strong> snoring and breathing pauses during sleep can disrupt normal vasopressin secretion and contribute to bedwetting.</li>
+      </ul>
+      <p>If secondary bedwetting is new or associated with other symptoms like daytime wetting, pain, increased thirst, or emotional changes, arrange a GP appointment sooner rather than later.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">What families can do <em>at home</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Before turning to specialist treatments, there are several practical steps that form the foundation of bedwetting management. These are appropriate for all children and should be maintained alongside any other treatment used.</p>
+      <p><strong>Fluid intake during the day:</strong> encourage your child to drink 6 to 8 drinks (mostly water) spread through the day. Children who drink too little can develop a bladder that is not used to holding a normal volume, which worsens bedwetting. Do reduce fluids in the last 1 to 2 hours before bed, but do not restrict fluids overall during the day.</p>
+      <p><strong>Before-bed routine:</strong> encourage your child to use the toilet twice before sleep, about 30 minutes apart, to fully empty the bladder. Avoid caffeinated drinks (fizzy drinks, energy drinks) in the afternoon and evening as these increase urine production.</p>
+      <p><strong>Bowel health:</strong> constipation significantly worsens bedwetting and must be addressed first. Aim for soft, regular stools. Increase fruit, vegetables, and water. If constipation is present, treating it is the most important first step and often alone leads to improvement in bedwetting.</p>
+      <p><strong>Reward charts:</strong> for children aged 5 to about 8, a star chart for agreed targets (such as using the toilet before bed, or drinking well during the day) can be motivating. Focus the chart on things the child can control, not wet versus dry nights. Praise any effort and progress. Do not punish wet nights or express disappointment. Bedwetting causes enough distress already and needs warmth and reassurance from parents.</p>
+      <p><strong>Practical management:</strong> a waterproof mattress protector keeps the mattress dry. Having a spare set of bedding and pyjamas ready reduces the disruption of a wet night. Involve older children appropriately in changing sheets as a matter-of-fact routine, not as punishment. Pull-up pants at night are reasonable to reduce distress and washing, though they do not treat bedwetting. Some families phase them out once other treatment is underway.</p>
+      <p><strong>Lifting:</strong> waking your child to use the toilet before you go to bed is commonly done but does not treat the underlying problem and has not been shown to improve long-term outcomes. It can also disrupt the child's sleep cycle. It is a reasonable short-term coping strategy but is not a treatment.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Bedwetting <em>alarms</em> - the most effective long-term treatment <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>The bedwetting alarm (enuresis alarm) is the most effective long-term treatment for nocturnal enuresis and is the first-line recommendation in international guidelines. When used consistently, about 65 to 70 percent of children achieve dryness. It also has the lowest relapse rate of any treatment.</p>
+      <p><strong>How it works:</strong> a moisture sensor is worn in the underwear or placed on a bedside mat. When urine begins to flow, a loud alarm sounds or vibrates. Over weeks and months, the brain gradually learns to respond to the sensation of a full bladder and either wakes the child before voiding or suppresses the urge during sleep. It is a process of conditioning rather than a quick fix.</p>
+      <p><strong>What makes it succeed:</strong> the child should be at least 7 years old and motivated to become dry. Younger children often do not have the arousal awareness to benefit fully. The child (not just the parents) should want to try the alarm. A parent will usually need to help wake the child in the early weeks, especially if the child sleeps deeply. The alarm needs to be used every single night. Progress should be tracked.</p>
+      <p><strong>What to expect:</strong> initial weeks often bring little change. Many children sleep through the alarm at first. Gradually, the child begins to wake at the alarm, then before it, and eventually wakes spontaneously or stays dry. Full dryness is usually achieved after 8 to 16 weeks. If there is no progress at all after 4 weeks of consistent use, a GP review is worthwhile.</p>
+      <p><strong>Relapse:</strong> about 1 in 6 children who become dry with the alarm relapse within 6 months. If this occurs, the alarm can be restarted successfully and relapse rates on the second course are lower.</p>
+      <p><strong>Types:</strong> wearable alarms (body-worn, clip to underwear) and bedside mat alarms are both available. Wearable alarms tend to be more effective because the signal is closer to the child. Both types are available in NZ through pharmacies and medical suppliers such as Continence NZ. Some DHBs and community health services have loan alarm programmes.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">When <em>medications</em> are used <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Medications are not a cure for bedwetting but can be useful in specific situations. They are generally considered after behavioural and alarm approaches, or alongside them.</p>
+      <p><strong>Desmopressin (DDAVP, Minirin):</strong> desmopressin is a synthetic version of vasopressin, the hormone that normally reduces urine production overnight. It is very effective at reducing or stopping bedwetting on the nights it is taken. It works from the first dose and is particularly useful for short-term situations such as sleepovers, school camps, or travel where managing bedwetting at home is not practical. Desmopressin is available as a tablet taken before bedtime. It is funded in NZ on prescription.</p>
+      <p>The most important safety instruction with desmopressin is fluid restriction: your child must not drink more than a small glass of water in the 8 hours after taking the tablet. Desmopressin reduces urine output; drinking large amounts of fluid while on the medication can cause the body to retain water and lower blood sodium (hyponatraemia), which in rare cases causes headache, confusion, or seizures. This is easily prevented by following the fluid restriction.</p>
+      <p>Desmopressin does not produce a lasting cure. When the medication is stopped, bedwetting typically returns. For this reason, it is primarily used situationally or as a bridge while awaiting the alarm to take effect. Some guidelines recommend combining desmopressin with the alarm for faster results in children with high urine output at night.</p>
+      <p><strong>Other medications:</strong> oxybutynin (an anticholinergic) is occasionally used when there is a clear overactive bladder component alongside bedwetting, such as daytime urgency, frequency, or a very small functional bladder capacity. Imipramine (a tricyclic antidepressant) was previously used for bedwetting but is no longer recommended for routine use because of relapse rates and potential cardiac toxicity in overdose. These medications are only prescribed by a GP after assessment and are not first-line options.</p>
+    </div>
+  </div>
+
+  <h2 class="section-h2">Comparing <em>management</em> approaches</h2>
+  <p class="section-lead">A quick guide to which approach suits your child's situation and what to expect.</p>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Approach</th>
+        <th>Best for</th>
+        <th>Typical timeframe</th>
+        <th>Long-term cure?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fluid, bowel, and bladder routine</td>
+        <td>All children as a first step and alongside any other treatment</td>
+        <td>Ongoing</td>
+        <td>Foundation - essential but rarely sufficient alone</td>
+      </tr>
+      <tr>
+        <td>Reward chart</td>
+        <td>Children aged 5 to 8 for motivation and habit-building</td>
+        <td>2 to 3 months</td>
+        <td>Modest improvement; reinforces healthy habits</td>
+      </tr>
+      <tr>
+        <td>Bedwetting alarm</td>
+        <td>Children aged 7 or over who are motivated; primary long-term treatment</td>
+        <td>8 to 16 weeks of consistent use</td>
+        <td>Yes - approximately 70% achieve lasting dryness</td>
+      </tr>
+      <tr>
+        <td>Desmopressin</td>
+        <td>Short-term use (camps, sleepovers); add-on to alarm; children who decline alarm</td>
+        <td>Immediate effect; review after 3 months</td>
+        <td>No - returns when stopped; useful situationally</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <p class="alert-head">&#9888; See your GP if your child has any of the following</p>
+    <ul>
+      <li>Bedwetting that started again after 6 or more months of being reliably dry at night (secondary enuresis)</li>
+      <li>Daytime wetting, urgency, or urinating very frequently</li>
+      <li>Pain, burning, or stinging when passing urine</li>
+      <li>Noticeably increased thirst alongside large volumes of pale urine (rule out diabetes)</li>
+      <li>Constipation, soiling, or infrequent bowel movements</li>
+      <li>Loud snoring or pauses in breathing during sleep</li>
+      <li>Significant emotional distress, school refusal, or behavioural change related to bedwetting</li>
+      <li>No improvement after 4 weeks of consistent bedwetting alarm use</li>
+      <li>A child who is 10 or older and has not responded to home measures</li>
+    </ul>
+    <p style="margin-top:.75rem;font-size:.88rem;color:var(--ink-mute)">You can also call Healthline on 0800 611 116 any time (free, 24/7) to speak to a registered nurse about whether your child needs assessment sooner.</p>
+  </div>
+
+  <div class="resources">
+    <p class="resources-head">NZ Resources</p>
+    <a href="https://kidshealth.org.nz">KidsHealth NZ</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Practical, family-focused information about bedwetting, alarms, and support for children and teenagers.</p>
+    <a href="https://continence.org.nz">Continence NZ</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Information on bedwetting alarms, loan programmes, and specialist referral pathways across New Zealand.</p>
+    <a href="https://healthify.org.nz">Healthify NZ</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Trusted NZ health information on enuresis, with links to local support services.</p>
+    <a href="https://healthline.org.nz">Healthline: 0800 611 116</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Free, 24/7 nurse advice line for families unsure whether their child needs assessment.</p>
+  </div>
+
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">References &#9660;</button>
+  <div class="refs-list" id="refs">
+    <ol>
+      <li>National Institute for Health and Care Excellence. Bedwetting in under 19s: recognition and management. NICE clinical guideline CG111. London: NICE; 2010. Updated 2022.</li>
+      <li>Neveus T, Fonseca E, Franco I, Kawauchi A, Kovacevic L, Nieuwhof-Leppink A, et al. Management and treatment of nocturnal enuresis - an updated standardization document from the International Children's Continence Society. J Pediatr Urol. 2020;16(1):10-9.</li>
+      <li>Glazener CMA, Evans JHC, Peto RE. Alarm interventions for nocturnal enuresis in children. Cochrane Database Syst Rev. 2005;(2):CD002911.</li>
+      <li>Caldwell PHY, Deshpande AV, Von Gontard A. Management of nocturnal enuresis. BMJ. 2013;347:f6259.</li>
+      <li>Robson WL. Clinical practice. Evaluation and management of enuresis. N Engl J Med. 2009;360(14):1429-36.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="page-footer">
+  Written for general information only. This page does not replace a conversation with your own GP or health professional.
+</footer>
+
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+</body>
+</html>

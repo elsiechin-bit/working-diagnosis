@@ -8,24 +8,24 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 
 <nav aria-label="Jump to section">
   <ul class="handouts-jump">
-    <li><a href="#lifestyle">Lifestyle</a></li>
+    <li><a href="/lifestyle/">Lifestyle</a></li>
     <li><a href="#respiratory">Respiratory</a></li>
     <li><a href="#cardiovascular">Cardiovascular</a></li>
     <li><a href="#diabetes-endocrine">Diabetes &amp; Endocrine</a></li>
     <li><a href="#gastro">Gastroenterology</a></li>
-    <li><a href="#msk">MSK</a></li>
-    <li><a href="#mental-health">Mental Health</a></li>
-    <li><a href="#dermatology">Dermatology</a></li>
-    <li><a href="#gynae">Gynae</a></li>
+    <li><a href="/musculoskeletal/">MSK</a></li>
+    <li><a href="/mental-health/">Mental Health</a></li>
+    <li><a href="/dermatology/">Dermatology</a></li>
+    <li><a href="/gynaecology/">Gynae</a></li>
     <li><a href="#mens-health">Men's Health</a></li>
-    <li><a href="#paeds">Paeds</a></li>
-    <li><a href="#geriatrics">Geriatrics</a></li>
+    <li><a href="/paediatrics/">Paeds</a></li>
+    <li><a href="/geriatrics/">Geriatrics</a></li>
     <li><a href="#ent">ENT</a></li>
     <li><a href="#eyes">Eyes</a></li>
     <li><a href="#neurology">Neurology</a></li>
     <li><a href="#infections">Infections</a></li>
-    <li><a href="#vaccines">Vaccines</a></li>
-    <li><a href="#travel">Travel</a></li>
+    <li><a href="/vaccines/">Vaccines</a></li>
+    <li><a href="/travel/">Travel</a></li>
     <li><a href="#nutrition">Nutrition</a></li>
     <li><a href="#general">General Practice</a></li>
   </ul>
@@ -33,7 +33,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 
 
 <div class="handout-section" id="lifestyle">
-  <p class="handout-section-label">❍ <a href="/lifestyle/">Lifestyle pillar →</a></p>
   <h2>Lifestyle</h2>
   <ul class="handout-list">
     <li><a href="/handouts/sleep-hygiene/">Sleep hygiene  -  setting up for better sleep</a></li>
@@ -156,7 +155,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 
 
 <div class="handout-section" id="msk">
-  <p class="handout-section-label">❍ <a href="/musculoskeletal/">MSK pillar →</a></p>
   <h2>Musculoskeletal</h2>
   <ul class="handout-list">
     <li><a href="/handouts/lower-back-pain/">Lower back pain  -  why it gets better, and how to help</a></li>
@@ -181,7 +179,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 
 
 <div class="handout-section" id="mental-health">
-  <p class="handout-section-label">❍ <a href="/mental-health/">Mental Health pillar →</a></p>
   <h2>Mental Health</h2>
   <ul class="handout-list">
     <li><a href="/handouts/depression/">Depression  -  what it is and what actually helps</a></li>
@@ -211,7 +208,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 
 
 <div class="handout-section" id="dermatology">
-  <p class="handout-section-label">❍ <a href="/dermatology/">Dermatology pillar →</a></p>
   <h2>Dermatology</h2>
   <ul class="handout-list">
     <li>Sun safety in NZ  -  the UV index and slip, slop, slap, wrap <span class="hl-soon">coming soon</span></li>
@@ -237,7 +233,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 
 
 <div class="handout-section" id="gynae">
-  <p class="handout-section-label">❍ <a href="/gynaecology/">Gynae pillar →</a></p>
   <h2>Gynaecology &amp; Women's Health</h2>
   <ul class="handout-list">
     <li>Cervical screening  -  the NZ HPV test explained <span class="hl-soon">coming soon</span></li>
@@ -272,7 +267,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 
 
 <div class="handout-section" id="geriatrics">
-  <p class="handout-section-label">❍ <a href="/geriatrics/">Geriatrics pillar →</a></p>
   <h2>Geriatrics &amp; Older Adult Health</h2>
   <ul class="handout-list">
     <li><a href="/handouts/respite-care/">Respite care in NZ  -  funding, options, and how to access it</a></li>

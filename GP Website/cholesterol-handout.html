@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Your Cholesterol Results — Patient Handout</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans', 'Noto Sans CJK SC',
+                   'Noto Sans Arabic', 'Noto Sans Devanagari', 'Noto Sans Thai',
+                   'Noto Sans Khmer', sans-serif;
+      background: #EDE7D8;
+      color: #1A1F1C;
+      padding: 1.5rem 1rem;
+    }
+
+    /* ── Language Picker ── */
+    .lang-picker {
+      max-width: 980px;
+      margin: 0 auto 1.5rem;
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .lang-picker-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6B7A75;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .lang-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .lang-btn {
+      padding: 0.35rem 0.85rem;
+      border: 1.5px solid #D9D1BD;
+      border-radius: 2rem;
+      background: white;
+      cursor: pointer;
+      font-size: 0.82rem;
+      color: #3A4540;
+      font-family: inherit;
+      transition: all 0.15s;
+      line-height: 1.3;
+    }
+    .lang-btn:hover { border-color: #2F6B5C; color: #2F6B5C; }
+    .lang-btn.active { background: #2F6B5C; border-color: #2F6B5C; color: #fff; }
+
+    /* ── Handout Card ── */
+    .handout-section {
+      display: none;
+      max-width: 980px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .handout-section.active { display: block; }
+
+    /* Header */
+    .hd-header {
+      background: #2F6B5C;
+      color: white;
+      padding: 2rem 2.5rem 1.8rem;
+    }
+    .hd-kicker {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 0.5rem;
+    }
+    .hd-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.7rem;
+    }
+    .hd-intro {
+      font-size: 0.93rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.88);
+      max-width: 700px;
+    }
+
+    /* Body */
+    .hd-body { padding: 1.8rem 2.5rem; }
+
+    .sec-heading {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+      color: #2F6B5C;
+      margin: 1.6rem 0 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #E4DBC4;
+    }
+
+    /* Table */
+    .chol-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-bottom: 0.5rem;
+    }
+    .chol-table thead th {
+      background: #1F4A3F;
+      color: white;
+      padding: 0.55rem 0.85rem;
+      text-align: left;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .chol-table thead th.col-target { text-align: center; width: 170px; }
+    .chol-table tbody td {
+      padding: 0.65rem 0.85rem;
+      border-bottom: 1px solid #EBEBDF;
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    .chol-table tbody td.col-target {
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .row-total  td { background: #EBF5FB; }
+    .row-ldl    td { background: #FDF0EF; }
+    .row-hdl    td { background: #EBF7EF; }
+    .row-trig   td { background: #FEF9EE; }
+    .type-name  { font-weight: 700; }
+    .type-sub   { font-size: 0.76rem; color: #6B7A75; margin-top: 0.15rem; }
+    .target-ldl { color: #C0392B; }
+    .target-hdl { color: #1F6B3F; }
+    .target-tot { color: #1A5276; }
+    .target-tri { color: #784212; }
+
+    /* Tips */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem;
+      margin-top: 0.5rem;
+    }
+    .tip-item {
+      background: #F5F1E8;
+      border-left: 3px solid #2F6B5C;
+      padding: 0.6rem 0.85rem;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.86rem;
+      line-height: 1.45;
+      color: #3A4540;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: #EDE7D8;
+      border: 1.5px solid #D9D1BD;
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin-top: 1.4rem;
+      font-size: 0.86rem;
+      line-height: 1.6;
+      color: #3A4540;
+    }
+    .disclaimer strong { color: #2F6B5C; }
+
+    /* Footer */
+    .hd-footer {
+      background: #1A1F1C;
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 0.65rem 1rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+    }
+
+    /* RTL */
+    .rtl .hd-header,
+    .rtl .hd-body   { direction: rtl; text-align: right; }
+    .rtl .chol-table thead th { text-align: right; }
+    .rtl .chol-table thead th.col-target { text-align: center; }
+    .rtl .tip-item { border-left: none; border-right: 3px solid #2F6B5C; border-radius: 6px 0 0 6px; }
+    .rtl .sec-heading { text-align: right; }
+
+    /* Print */
+    @media print {
+      body { background: white; padding: 0; }
+      .lang-picker { display: none; }
+      .handout-section {
+        display: block !important;
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        page-break-before: always;
+        break-before: page;
+      }
+      .handout-section:first-of-type {
+        page-break-before: auto;
+        break-before: auto;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 660px) {
+      .hd-header, .hd-body { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .hd-title { font-size: 1.35rem; }
+      .tips-grid { grid-template-columns: 1fr; }
+      .chol-table { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     LANGUAGE PICKER
+═══════════════════════════════════════════════ -->
+<div class="lang-picker">
+  <div class="lang-picker-label">Select Language / Choose Language</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="showLang('en')">English</button>
+    <button class="lang-btn" onclick="showLang('zh')">中文</button>
+    <button class="lang-btn" onclick="showLang('hi')">हिंदी</button>
+    <button class="lang-btn" onclick="showLang('tl')">Tagalog</button>
+    <button class="lang-btn" onclick="showLang('ar')">العربية</button>
+    <button class="lang-btn" onclick="showLang('ja')">日本語</button>
+    <button class="lang-btn" onclick="showLang('ko')">한국어</button>
+    <button class="lang-btn" onclick="showLang('sm')">Gagana Samoa</button>
+    <button class="lang-btn" onclick="showLang('fj')">iTaukei</button>
+    <button class="lang-btn" onclick="showLang('mi')">Te Reo Māori</button>
+    <button class="lang-btn" onclick="showLang('id')">Bahasa Indonesia</button>
+    <button class="lang-btn" onclick="showLang('fr')">Français</button>
+    <button class="lang-btn" onclick="showLang('it')">Italiano</button>
+    <button class="lang-btn" onclick="showLang('es')">Español</button>
+    <button class="lang-btn" onclick="showLang('km')">ភាសាខ្មែរ</button>
+    <button class="lang-btn" onclick="showLang('th')">ภาษาไทย</button>
+    <button class="lang-btn" onclick="showLang('pl')">Polski</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     ENGLISH
+═══════════════════════════════════════════════ -->
+<div class="handout-section active" id="lang-en" lang="en">
+  <div class="hd-header">
+    <div class="hd-kicker">Patient Handout — Cholesterol</div>
+    <h1 class="hd-title">Understanding Your Cholesterol Results</h1>
+    <p class="hd-intro">Cholesterol is a fatty substance found in your blood. Your body needs some cholesterol to work properly, but too much increases the risk of heart disease and stroke. This guide helps you understand what your results mean.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">Your Cholesterol Numbers</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th class="col-target">Target Level</th>
+          <th>What it means</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Total Cholesterol</div><div class="type-sub">Overall amount in blood</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>The combined total of all cholesterol types in your blood.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">LDL Cholesterol</div><div class="type-sub">"Bad" cholesterol</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>Carries cholesterol to artery walls. High levels raise heart disease risk.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">HDL Cholesterol</div><div class="type-sub">"Good" cholesterol</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (men)<br>&gt; 1.2 (women) mmol/L</td>
+          <td>Removes cholesterol from the blood and carries it to the liver. Higher is better.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Triglycerides</div><div class="type-sub">Blood fats</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>A type of fat stored in the blood. Often raised by excess sugar and alcohol.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">How to Improve Your Cholesterol</div>
+    <div class="tips-grid">
+      <div class="tip-item">Eat more vegetables, fruit, and whole grains daily.</div>
+      <div class="tip-item">Choose healthy fats: olive oil, nuts, fish, avocado.</div>
+      <div class="tip-item">Reduce saturated fat: fatty meats, butter, full-fat dairy, and processed foods.</div>
+      <div class="tip-item">Exercise regularly — aim for 30 minutes on most days.</div>
+      <div class="tip-item">Stop smoking. It lowers HDL and damages blood vessels.</div>
+      <div class="tip-item">Limit alcohol. Excess alcohol raises triglycerides.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Talk to your doctor.</strong> Your doctor will set personal targets based on your overall cardiovascular risk. These numbers are a general guide only. Please discuss your results and any concerns with your GP.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; For clinical use — values based on NZ Heart Foundation guidelines &nbsp;|&nbsp; Targets may vary by individual cardiovascular risk</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     CHINESE SIMPLIFIED 简体中文
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-zh" lang="zh-Hans">
+  <div class="hd-header">
+    <div class="hd-kicker">患者须知 — 胆固醇</div>
+    <h1 class="hd-title">了解您的胆固醇检测结果</h1>
+    <p class="hd-intro">胆固醇是血液中的一种脂肪物质。您的身体需要一定量的胆固醇才能正常运作，但过多的胆固醇会增加患心脏病和中风的风险。本指南帮助您了解检测结果的含义。</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">您的胆固醇数值</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>类型</th>
+          <th class="col-target">目标值</th>
+          <th>含义</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">总胆固醇</div><div class="type-sub">血液中胆固醇总量</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>血液中所有类型胆固醇的总和。</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">低密度脂蛋白胆固醇（LDL）</div><div class="type-sub">"坏"胆固醇</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>将胆固醇运送到动脉壁。水平过高会增加心脏病风险。</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">高密度脂蛋白胆固醇（HDL）</div><div class="type-sub">"好"胆固醇</div></td>
+          <td class="col-target target-hdl">&gt; 1.0（男）<br>&gt; 1.2（女）mmol/L</td>
+          <td>将胆固醇从血液中清除并运送至肝脏。数值越高越好。</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">甘油三酯</div><div class="type-sub">血液中的脂肪</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>储存在血液中的一种脂肪。过多的糖分和酒精会使其升高。</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">如何改善您的胆固醇水平</div>
+    <div class="tips-grid">
+      <div class="tip-item">每天多吃蔬菜、水果和全谷物。</div>
+      <div class="tip-item">选择健康脂肪：橄榄油、坚果、鱼类、牛油果。</div>
+      <div class="tip-item">减少饱和脂肪摄入：肥肉、黄油、全脂乳制品和加工食品。</div>
+      <div class="tip-item">坚持运动，每天争取30分钟。</div>
+      <div class="tip-item">戒烟。吸烟会降低好胆固醇并损伤血管。</div>
+      <div class="tip-item">限制饮酒。过量饮酒会使甘油三酯升高。</div>
+    </div>
+    <div class="disclaimer">
+      <strong>请与您的医生沟通。</strong> 您的医生会根据您的整体心血管风险为您制定个人目标值。以上数值仅供参考，请向您的全科医生咨询您的具体情况。
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; 临床用途 — 参考新西兰心脏基金会指南 &nbsp;|&nbsp; 个人目标因心血管风险不同而有所差异</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     HINDI हिंदी
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-hi" lang="hi">
+  <div class="hd-header">
+    <div class="hd-kicker">रोगी सूचना पत्र — कोलेस्ट्रॉल</div>
+    <h1 class="hd-title">अपने कोलेस्ट्रॉल परिणामों को समझें</h1>
+    <p class="hd-intro">कोलेस्ट्रॉल आपके रक्त में पाया जाने वाला एक वसायुक्त पदार्थ है। आपके शरीर को सामान्य रूप से काम करने के लिए कुछ कोलेस्ट्रॉल की आवश्यकता है, लेकिन अत्यधिक मात्रा हृदय रोग और स्ट्रोक के जोखिम को बढ़ा सकती है।</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">आपके कोलेस्ट्रॉल के मान</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>प्रकार</th>
+          <th class="col-target">लक्ष्य स्तर</th>
+          <th>अर्थ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">कुल कोलेस्ट्रॉल</div><div class="type-sub">रक्त में कुल मात्रा</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>रक्त में सभी प्रकार के कोलेस्ट्रॉल का कुल योग।</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">एलडीएल कोलेस्ट्रॉल</div><div class="type-sub">"खराब" कोलेस्ट्रॉल</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>धमनियों की दीवारों पर जमा होता है। अधिक होने से हृदय रोग का खतरा बढ़ता है।</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">एचडीएल कोलेस्ट्रॉल</div><div class="type-sub">"अच्छा" कोलेस्ट्रॉल</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (पुरुष)<br>&gt; 1.2 (महिला) mmol/L</td>
+          <td>रक्त से कोलेस्ट्रॉल हटाकर यकृत तक पहुँचाता है। जितना अधिक, उतना बेहतर।</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">ट्राइग्लिसराइड्स</div><div class="type-sub">रक्त वसा</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>रक्त में संग्रहीत एक प्रकार की वसा। अधिक चीनी और शराब से बढ़ती है।</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">कोलेस्ट्रॉल सुधारने के उपाय</div>
+    <div class="tips-grid">
+      <div class="tip-item">प्रतिदिन अधिक सब्जियाँ, फल और साबुत अनाज खाएँ।</div>
+      <div class="tip-item">स्वस्थ वसा चुनें: जैतून का तेल, मेवे, मछली, एवोकाडो।</div>
+      <div class="tip-item">संतृप्त वसा कम करें: वसायुक्त मांस, मक्खन, पूर्ण वसा डेयरी और प्रसंस्कृत खाद्य पदार्थ।</div>
+      <div class="tip-item">नियमित व्यायाम करें — अधिकांश दिनों में 30 मिनट का लक्ष्य रखें।</div>
+      <div class="tip-item">धूम्रपान बंद करें। यह अच्छे कोलेस्ट्रॉल को घटाता है।</div>
+      <div class="tip-item">शराब सीमित करें। अत्यधिक शराब ट्राइग्लिसराइड्स बढ़ाती है।</div>
+    </div>
+    <div class="disclaimer">
+      <strong>अपने डॉक्टर से बात करें।</strong> आपके डॉक्टर आपके समग्र हृदय स्वास्थ्य के आधार पर व्यक्तिगत लक्ष्य निर्धारित करेंगे। ये संख्याएँ केवल एक सामान्य मार्गदर्शिका हैं। कृपया अपने जीपी से विस्तार से चर्चा करें।
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; नैदानिक उपयोग के लिए — न्यूज़ीलैंड हार्ट फाउंडेशन दिशानिर्देशों पर आधारित</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     TAGALOG
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-tl" lang="tl">
+  <div class="hd-header">
+    <div class="hd-kicker">Impormasyon para sa Pasyente — Kolesterol</div>
+    <h1 class="hd-title">Pag-unawa sa Inyong mga Resulta ng Kolesterol</h1>
+    <p class="hd-intro">Ang kolesterol ay isang uri ng taba na matatagpuan sa inyong dugo. Kailangan ng inyong katawan ng ilang kolesterol upang gumana nang maayos, ngunit ang labis nito ay maaaring magpataas ng panganib ng sakit sa puso at stroke.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">Ang Inyong mga Bilang ng Kolesterol</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Uri</th>
+          <th class="col-target">Target na Antas</th>
+          <th>Kahulugan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Kabuuang Kolesterol</div><div class="type-sub">Kabuuang dami sa dugo</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>Ang pinagsama-samang lahat ng uri ng kolesterol sa inyong dugo.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">LDL Kolesterol</div><div class="type-sub">"Masamang" kolesterol</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>Nagdadala ng kolesterol sa mga pader ng ugat. Ang mataas na antas ay nagpapataas ng panganib sa puso.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">HDL Kolesterol</div><div class="type-sub">"Mabuting" kolesterol</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (lalaki)<br>&gt; 1.2 (babae) mmol/L</td>
+          <td>Nag-aalis ng kolesterol mula sa dugo at nagdadala nito sa atay. Mas mataas ay mas mabuti.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Triglycerides</div><div class="type-sub">Taba sa dugo</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>Isang uri ng taba na nakaimbak sa dugo. Mataas kapag labis ang asukal at alkohol.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">Paano Mapabuti ang Inyong Kolesterol</div>
+    <div class="tips-grid">
+      <div class="tip-item">Kumain ng mas maraming gulay, prutas, at buong butil araw-araw.</div>
+      <div class="tip-item">Pumili ng malusog na taba: langis ng olibo, mani, isda, abokado.</div>
+      <div class="tip-item">Bawasan ang saturated fat: mataba na karne, mantikilya, full-fat na gatas, at mga processed na pagkain.</div>
+      <div class="tip-item">Mag-ehersisyo nang regular — target na 30 minuto sa karamihan ng mga araw.</div>
+      <div class="tip-item">Tumigil sa paninigarilyo. Nagpapababa ito ng mabuting kolesterol.</div>
+      <div class="tip-item">Limitahan ang alkohol. Nagpapataas ito ng triglycerides.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Makipag-usap sa inyong doktor.</strong> Magtatatakda ang inyong doktor ng personal na mga target batay sa inyong kabuuang kalusugan ng puso. Ang mga numerong ito ay pangkalahatang gabay lamang. Mangyaring talakayin ang inyong mga resulta sa inyong GP.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; Para sa klinikal na paggamit — batay sa NZ Heart Foundation guidelines</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     ARABIC العربية  (RTL)
+═══════════════════════════════════════════════ -->
+<div class="handout-section rtl" id="lang-ar" lang="ar" dir="rtl">
+  <div class="hd-header">
+    <div class="hd-kicker">نشرة للمريض — الكوليسترول</div>
+    <h1 class="hd-title">فهم نتائج الكوليسترول لديك</h1>
+    <p class="hd-intro">الكوليسترول مادة دهنية موجودة في الدم. يحتاج جسمك إلى قدر معين من الكوليسترول كي يعمل بشكل سليم، غير أن الزيادة المفرطة تزيد من خطر الإصابة بأمراض القلب والسكتة الدماغية.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">أرقام الكوليسترول لديك</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>النوع</th>
+          <th class="col-target">المستوى المستهدف</th>
+          <th>المعنى</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">الكوليسترول الكلي</div><div class="type-sub">الإجمالي في الدم</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>مجموع جميع أنواع الكوليسترول في دمك.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">كوليسترول LDL</div><div class="type-sub">الكوليسترول "الضار"</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>يحمل الكوليسترول إلى جدران الشرايين. المستوى المرتفع يزيد خطر أمراض القلب.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">كوليسترول HDL</div><div class="type-sub">الكوليسترول "المفيد"</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (رجال)<br>&gt; 1.2 (نساء) mmol/L</td>
+          <td>يُزيل الكوليسترول من الدم ويحمله إلى الكبد. كلما ارتفع كلما كان أفضل.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">الدهون الثلاثية</div><div class="type-sub">دهون الدم</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>نوع من الدهون المخزنة في الدم. ترتفع عند الإفراط في السكر والكحول.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">كيف تحسّن مستوى الكوليسترول لديك</div>
+    <div class="tips-grid">
+      <div class="tip-item">تناوَل كميات أكبر من الخضروات والفاكهة والحبوب الكاملة يومياً.</div>
+      <div class="tip-item">اختر الدهون الصحية: زيت الزيتون والمكسرات والأسماك والأفوكادو.</div>
+      <div class="tip-item">قلّل من الدهون المشبعة: اللحوم الدهنية والزبدة ومنتجات الألبان كاملة الدسم والأطعمة المصنّعة.</div>
+      <div class="tip-item">مارس الرياضة بانتظام — استهدف 30 دقيقة معظم الأيام.</div>
+      <div class="tip-item">أقلع عن التدخين. يخفّض كوليسترول HDL ويضر الأوعية الدموية.</div>
+      <div class="tip-item">حدّ من الكحول. الإفراط فيه يرفع الدهون الثلاثية.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>تحدّث مع طبيبك.</strong> سيحدد طبيبك أهدافاً شخصية بناءً على خطر الإصابة بأمراض القلب لديك بشكل عام. هذه الأرقام مجرد إرشادات عامة. يُرجى مناقشة نتائجك مع طبيبك.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; للاستخدام السريري — استناداً إلى إرشادات مؤسسة القلب في نيوزيلندا</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     JAPANESE 日本語
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-ja" lang="ja">
+  <div class="hd-header">
+    <div class="hd-kicker">患者向け説明書 — コレステロール</div>
+    <h1 class="hd-title">コレステロール検査結果の見方</h1>
+    <p class="hd-intro">コレステロールは血液中に含まれる脂肪性の物質です。体が正常に機能するためにある程度のコレステロールは必要ですが、多すぎると心臓病や脳卒中のリスクが高まります。</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">コレステロールの数値</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>種類</th>
+          <th class="col-target">目標値</th>
+          <th>意味</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">総コレステロール</div><div class="type-sub">血液中のコレステロール総量</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>血液中のすべての種類のコレステロールの合計。</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">LDL（悪玉）コレステロール</div><div class="type-sub">"悪玉"</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>動脈壁にコレステロールを運びます。高いと心臓病のリスクが上がります。</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">HDL（善玉）コレステロール</div><div class="type-sub">"善玉"</div></td>
+          <td class="col-target target-hdl">&gt; 1.0（男性）<br>&gt; 1.2（女性）mmol/L</td>
+          <td>血液からコレステロールを除去し、肝臓へ運びます。高いほど良好です。</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">中性脂肪（トリグリセリド）</div><div class="type-sub">血液中の脂肪</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>血液に蓄積される脂肪の一種。糖分やアルコールの過剰摂取で上昇します。</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">コレステロールを改善するために</div>
+    <div class="tips-grid">
+      <div class="tip-item">野菜・果物・全粒穀物を毎日多く食べましょう。</div>
+      <div class="tip-item">健康的な脂質を選びましょう：オリーブオイル、ナッツ、魚、アボカド。</div>
+      <div class="tip-item">飽和脂肪酸を減らしましょう：脂身の多い肉、バター、全脂乳製品、加工食品。</div>
+      <div class="tip-item">定期的に運動しましょう — ほとんどの日に30分を目標に。</div>
+      <div class="tip-item">禁煙しましょう。喫煙はHDLを下げ、血管を傷めます。</div>
+      <div class="tip-item">アルコールを控えましょう。過剰摂取で中性脂肪が上がります。</div>
+    </div>
+    <div class="disclaimer">
+      <strong>担当医にご相談ください。</strong> 担当医があなたの総合的な心血管リスクをもとに個別の目標値を設定します。この数値はあくまでも一般的な目安です。検査結果についてはかかりつけ医に詳しく相談してください。
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; 臨床使用向け — NZハートファウンデーションガイドライン準拠</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     KOREAN 한국어
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-ko" lang="ko">
+  <div class="hd-header">
+    <div class="hd-kicker">환자 안내문 — 콜레스테롤</div>
+    <h1 class="hd-title">콜레스테롤 검사 결과 이해하기</h1>
+    <p class="hd-intro">콜레스테롤은 혈액 속에 있는 지방성 물질입니다. 신체가 정상적으로 기능하려면 어느 정도의 콜레스테롤이 필요하지만, 너무 많으면 심장 질환과 뇌졸중의 위험이 높아집니다.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">콜레스테롤 수치</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>종류</th>
+          <th class="col-target">목표 수치</th>
+          <th>의미</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">총 콜레스테롤</div><div class="type-sub">혈액 내 총량</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>혈액 내 모든 종류의 콜레스테롤 합계.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">LDL 콜레스테롤</div><div class="type-sub">"나쁜" 콜레스테롤</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>동맥 벽에 콜레스테롤을 운반합니다. 수치가 높으면 심장 질환 위험이 증가합니다.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">HDL 콜레스테롤</div><div class="type-sub">"좋은" 콜레스테롤</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (남성)<br>&gt; 1.2 (여성) mmol/L</td>
+          <td>혈액에서 콜레스테롤을 제거해 간으로 운반합니다. 높을수록 좋습니다.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">중성지방 (트리글리세리드)</div><div class="type-sub">혈중 지방</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>혈액에 저장되는 지방의 일종. 과도한 당분과 알코올 섭취로 높아집니다.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">콜레스테롤 개선 방법</div>
+    <div class="tips-grid">
+      <div class="tip-item">채소, 과일, 통곡물을 매일 더 많이 드세요.</div>
+      <div class="tip-item">건강한 지방을 선택하세요: 올리브 오일, 견과류, 생선, 아보카도.</div>
+      <div class="tip-item">포화 지방을 줄이세요: 지방이 많은 육류, 버터, 전유 유제품, 가공식품.</div>
+      <div class="tip-item">규칙적으로 운동하세요 — 대부분의 날에 30분을 목표로 하세요.</div>
+      <div class="tip-item">금연하세요. 흡연은 HDL을 낮추고 혈관을 손상시킵니다.</div>
+      <div class="tip-item">음주를 줄이세요. 과도한 알코올은 중성지방을 높입니다.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>담당 의사와 상담하세요.</strong> 담당 의사가 전반적인 심혈관 위험을 고려하여 개인 목표치를 설정해 드립니다. 이 수치는 일반적인 가이드라인에 불과합니다. 검사 결과에 대해 의사와 자세히 상의하세요.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; 임상용 — 뉴질랜드 심장 재단 지침 기반</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SAMOAN — Gagana Samoa
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-sm" lang="sm">
+  <div class="hd-header">
+    <div class="hd-kicker">Faamatalaga mo le Maʻi — Kolesterolo</div>
+    <h1 class="hd-title">Malamalama i au Faʻaiʻuga Kolesterolo</h1>
+    <p class="hd-intro">O le kolesterolo o se mea gaʻo o loʻo maua i totonu o lou toto. E manaʻomia e lou tino ni kolesterolo ina ia galue lelei, ae afai e tele, e mafai ona faʻateleina le aʻafia i faʻamaʻi o le fatu ma le taia.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">O au Numera o Kolesterolo</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Ituaiga</th>
+          <th class="col-target">Faʻatatau</th>
+          <th>Uiga</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Kolesterolo Atoa</div><div class="type-sub">Aofaʻi i le toto</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>Le aofaʻi o kolesterolo uma i lou toto.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">LDL Kolesterol</div><div class="type-sub">Kolesterolo "leaga"</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>Feaveaʻi kolesterolo i puipui o uʻamea toto. Afai e maualuga, e faʻateleina ai le aʻafia i faʻamaʻi o le fatu.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">HDL Kolesterol</div><div class="type-sub">Kolesterolo "lelei"</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (tane)<br>&gt; 1.2 (fafine) mmol/L</td>
+          <td>Aveese kolesterolo mai le toto. O le sili atu, o le mea lea e sili atu ai.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Triglycerides</div><div class="type-sub">Gaʻo i le toto</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>O se ituaiga gaʻo o loʻo teuina i le toto. E maualuga pe a inu tele suka ma ava malosi.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">Auala e Faʻaleleia ai le Kolesterolo</div>
+    <div class="tips-grid">
+      <div class="tip-item">Taumafai meaʻai fou, fualaʻau faisua, ma falaoa atoa i aso taʻitasi.</div>
+      <div class="tip-item">Filifili gaʻo manuia: suauu olive, nati, iʻa, avokato.</div>
+      <div class="tip-item">Faʻaitiitia gaʻo faʻamaʻi: aano gaʻo, pata, susu gaʻo, meaʻai faʻatupuina.</div>
+      <div class="tip-item">Faia ni faʻataʻitaʻiga faʻaletino — tatau i le 30 minute i aso uma.</div>
+      <div class="tip-item">Taofi le mea ulaula. E faʻaititia ai le HDL lelei.</div>
+      <div class="tip-item">Faʻaitiitia le inu ava malosi. E faʻateleina ai triglycerides.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Fetalai ma lau fomaʻi.</strong> O lau fomaʻi o le a faʻatuina ni faʻatatau patino e faʻavae i luga o lou soifua maloloina fatu. O nei numera o ni faʻamatalaga lautele. Fesili i lau fomaʻi e uiga i ou faʻaiʻuga.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; Mo faʻaaogaina faʻafaigaluega — faʻavae i luga o NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     FIJIAN — iTaukei
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-fj" lang="fj">
+  <div class="hd-header">
+    <div class="hd-kicker">Itukutuku ni Veivakacaucautaki — Kolisiterolo</div>
+    <h1 class="hd-title">Kila na Nomu I-tukutuku ni Kolisiterolo</h1>
+    <p class="hd-intro">O kolisiterolo o dua na kena i-vakutu dina na uto e tiko ena tomota. E gadrevi na nomudra yago me vakadewataka vinaka, ia ka levu saraga, e rawa ni vakayagataka na veika eso me caka na mate ni yava kei na vere.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">Na Nomu Naba ni Kolisiterolo</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Itutu</th>
+          <th class="col-target">Tikina e Gadrevi</th>
+          <th>Tikina</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Kolisiterolo Dina Dina</div><div class="type-sub">Kece ena tomota</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>Kolisiterolo kece vata ena tomota.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">LDL Kolisiterolo</div><div class="type-sub">Kolisiterolo "ca"</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>Vakalewai kolisiterolo ki na veiqaravi ni dra. Ka sega ni vinaka ka maualulu.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">HDL Kolisiterolo</div><div class="type-sub">Kolisiterolo "vinaka"</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (tagane)<br>&gt; 1.2 (yalewa) mmol/L</td>
+          <td>Kauta vakasobu kolisiterolo mai na tomota. E sega ni rawa ni maualulu.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Triglycerides</div><div class="type-sub">Uto ena tomota</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>Dua na kena i-vakutu na uto ena tomota. E dau sivi cake ena isu ni suka kei na wainidranu.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">Idini me Vakavinaka na Kolisiterolo</div>
+    <div class="tips-grid">
+      <div class="tip-item">Kana kena levu na vunavuna, fua, kei na kakana vinaka i na siga taucoko.</div>
+      <div class="tip-item">Digitaka na uto vinaka: sucu olive, niu, ika, avokato.</div>
+      <div class="tip-item">Vakayagataka vakaciwa na uto ca: kakana na levu ni uto, bata, sucu levu uto, kakana e karavi.</div>
+      <div class="tip-item">Cakava na vakatokai e dinau — digitaka na 30 miniti i na siga taucoko.</div>
+      <div class="tip-item">Vakadonuya na masimasi. E vakamalumalumutaka na HDL vinaka.</div>
+      <div class="tip-item">Vakayagataka vakaciwa na wai ni vula. E digitaka cake na triglycerides.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Talanoa ki na nomu touboci.</strong> Na nomu touboci e na digitaka na tikina nomudra e taukeni ki vei kemuni. O na naba oqo tikoga na itukutuku vakatotolo. Talanoa ki na nomu touboci e kena tikina na i-tukutuku oqo vei iko.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; Veiqaravi ni touboci — fakataki i na NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     TE REO MĀORI
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-mi" lang="mi">
+  <div class="hd-header">
+    <div class="hd-kicker">Pānui Hauora mō te Tūroro — Kolhesiterōra</div>
+    <h1 class="hd-title">Te Māramatanga o Ō Hua Kolhesiterōra</h1>
+    <p class="hd-intro">Ko te kolhesiterōra he mea ngako kei roto i tō toto. Me whai tō tinana i ētahi kolhesiterōra kia pai ai te mahi, engari ki te nui rawa ake, ka piki ake te tūraru o ngā mate manawa me te taha.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">Ō Nama Kolhesiterōra</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Momo</th>
+          <th class="col-target">Taumata Whāia</th>
+          <th>Tikanga</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Kolhesiterōra Katoa</div><div class="type-sub">Ahuatanga i roto i te toto</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>Te nui o ngā momo kolhesiterōra katoa i roto i tō toto.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">LDL Kolhesiterōra</div><div class="type-sub">"Kino" kolhesiterōra</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>Ka kawe kolhesiterōra ki ngā pakitara o ngā ia toto. Ka piki ake te tūraru o ngā mate manawa.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">HDL Kolhesiterōra</div><div class="type-sub">"Pai" kolhesiterōra</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (tāne)<br>&gt; 1.2 (wāhine) mmol/L</td>
+          <td>Ka tango kolhesiterōra i te toto, ka kawe ki te ate. He pai ake mēnā he nui ake.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Turakoraiteripaiti</div><div class="type-sub">Ngako i roto i te toto</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>He momo ngako e tiakina ana i roto i te toto. Ka piki ake mā te huka me te waipiro nui.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">Me Pēhea te Whakapai i Tōu Kolhesiterōra</div>
+    <div class="tips-grid">
+      <div class="tip-item">Kai kia nui ake ngā huawhenua, hua rākau, me ngā kākano katoa ia rā ia rā.</div>
+      <div class="tip-item">Kōwhirihia ngā ngako ora: hinu oriwa, nati, ika, awokāto.</div>
+      <div class="tip-item">Whakahekea ngā ngako momona: mīti ngako, pata, miraka momona, kai whakaritea.</div>
+      <div class="tip-item">Whakahaere kia ōrite — whāia ngā miniti 30 i ia rā.</div>
+      <div class="tip-item">Muia te kai paipa. Ka whakaheke i te HDL pai.</div>
+      <div class="tip-item">Whakahekea te inu waipiro. Ka piki ake te turakoraiteripaiti.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Kōrero ki tō rata.</strong> Ka tautuhia e tō rata ngā whāinga ake mōu e hāngai ana ki tō hauora ngākau whānui. He aratohu noa ēnei nama. Kōrero ki tō rata mō te tikanga o ēnei hua mōu.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; Mō te whakamahi hauora — i runga i ngā aratohu NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     BAHASA INDONESIA
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-id" lang="id">
+  <div class="hd-header">
+    <div class="hd-kicker">Lembar Informasi Pasien — Kolesterol</div>
+    <h1 class="hd-title">Memahami Hasil Kolesterol Anda</h1>
+    <p class="hd-intro">Kolesterol adalah zat lemak yang terdapat dalam darah Anda. Tubuh membutuhkan sejumlah kolesterol untuk berfungsi dengan baik, tetapi terlalu banyak dapat meningkatkan risiko penyakit jantung dan stroke.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">Angka Kolesterol Anda</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Jenis</th>
+          <th class="col-target">Target Kadar</th>
+          <th>Arti</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Kolesterol Total</div><div class="type-sub">Jumlah keseluruhan dalam darah</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>Jumlah gabungan seluruh jenis kolesterol dalam darah Anda.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">Kolesterol LDL</div><div class="type-sub">Kolesterol "jahat"</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>Membawa kolesterol ke dinding arteri. Kadar tinggi meningkatkan risiko penyakit jantung.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">Kolesterol HDL</div><div class="type-sub">Kolesterol "baik"</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (pria)<br>&gt; 1.2 (wanita) mmol/L</td>
+          <td>Membuang kolesterol dari darah ke hati. Semakin tinggi semakin baik.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Trigliserida</div><div class="type-sub">Lemak darah</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>Jenis lemak yang tersimpan dalam darah. Meningkat akibat konsumsi gula dan alkohol berlebih.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">Cara Memperbaiki Kolesterol Anda</div>
+    <div class="tips-grid">
+      <div class="tip-item">Perbanyak konsumsi sayuran, buah, dan biji-bijian utuh setiap hari.</div>
+      <div class="tip-item">Pilih lemak sehat: minyak zaitun, kacang-kacangan, ikan, alpukat.</div>
+      <div class="tip-item">Kurangi lemak jenuh: daging berlemak, mentega, susu berlemak penuh, makanan olahan.</div>
+      <div class="tip-item">Olahraga teratur — targetkan 30 menit di sebagian besar hari.</div>
+      <div class="tip-item">Berhenti merokok. Merokok menurunkan HDL dan merusak pembuluh darah.</div>
+      <div class="tip-item">Batasi alkohol. Kelebihan alkohol meningkatkan trigliserida.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Konsultasikan dengan dokter Anda.</strong> Dokter Anda akan menetapkan target pribadi berdasarkan risiko kardiovaskular Anda secara keseluruhan. Angka-angka ini hanya panduan umum. Diskusikan hasil Anda dengan dokter umum Anda.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; Untuk penggunaan klinis — berdasarkan panduan NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     FRENCH — Français
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-fr" lang="fr">
+  <div class="hd-header">
+    <div class="hd-kicker">Fiche Patient — Cholestérol</div>
+    <h1 class="hd-title">Comprendre vos Résultats de Cholestérol</h1>
+    <p class="hd-intro">Le cholestérol est une substance grasse présente dans le sang. L'organisme a besoin d'un certain cholestérol pour fonctionner correctement, mais un excès peut augmenter le risque de maladies cardiaques et d'AVC.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">Vos Chiffres de Cholestérol</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th class="col-target">Niveau cible</th>
+          <th>Signification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Cholestérol total</div><div class="type-sub">Quantité totale dans le sang</div></td>
+          <td class="col-target target-tot">&lt; 4,0 mmol/L</td>
+          <td>Somme de tous les types de cholestérol dans votre sang.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">Cholestérol LDL</div><div class="type-sub">"Mauvais" cholestérol</div></td>
+          <td class="col-target target-ldl">&lt; 2,5 mmol/L</td>
+          <td>Transporte le cholestérol vers les parois artérielles. Un niveau élevé augmente le risque cardiaque.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">Cholestérol HDL</div><div class="type-sub">"Bon" cholestérol</div></td>
+          <td class="col-target target-hdl">&gt; 1,0 (hommes)<br>&gt; 1,2 (femmes) mmol/L</td>
+          <td>Élimine le cholestérol du sang vers le foie. Plus il est élevé, mieux c'est.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Triglycérides</div><div class="type-sub">Graisses sanguines</div></td>
+          <td class="col-target target-tri">&lt; 1,7 mmol/L</td>
+          <td>Type de graisse stockée dans le sang. Augmente avec l'excès de sucre et d'alcool.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">Comment Améliorer votre Cholestérol</div>
+    <div class="tips-grid">
+      <div class="tip-item">Mangez plus de légumes, de fruits et de céréales complètes chaque jour.</div>
+      <div class="tip-item">Choisissez des graisses saines : huile d'olive, noix, poisson, avocat.</div>
+      <div class="tip-item">Réduisez les graisses saturées : viandes grasses, beurre, produits laitiers entiers, aliments transformés.</div>
+      <div class="tip-item">Faites de l'exercice régulièrement — visez 30 minutes la plupart des jours.</div>
+      <div class="tip-item">Arrêtez de fumer. Cela abaisse le bon cholestérol et endommage les vaisseaux sanguins.</div>
+      <div class="tip-item">Limitez l'alcool. L'excès augmente les triglycérides.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Parlez à votre médecin.</strong> Votre médecin établira des objectifs personnels selon votre risque cardiovasculaire global. Ces chiffres ne sont qu'un guide général. Discutez de vos résultats avec votre médecin généraliste.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; Usage clinique — d'après les recommandations de la NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     ITALIAN — Italiano
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-it" lang="it">
+  <div class="hd-header">
+    <div class="hd-kicker">Scheda Informativa per il Paziente — Colesterolo</div>
+    <h1 class="hd-title">Capire i Tuoi Risultati del Colesterolo</h1>
+    <p class="hd-intro">Il colesterolo è una sostanza grassa presente nel sangue. Il corpo ha bisogno di una certa quantità di colesterolo per funzionare correttamente, ma un eccesso può aumentare il rischio di malattie cardiache e ictus.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">I Tuoi Valori del Colesterolo</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th class="col-target">Livello Target</th>
+          <th>Significato</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Colesterolo Totale</div><div class="type-sub">Quantità totale nel sangue</div></td>
+          <td class="col-target target-tot">&lt; 4,0 mmol/L</td>
+          <td>La somma di tutti i tipi di colesterolo nel sangue.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">Colesterolo LDL</div><div class="type-sub">Colesterolo "cattivo"</div></td>
+          <td class="col-target target-ldl">&lt; 2,5 mmol/L</td>
+          <td>Trasporta il colesterolo alle pareti delle arterie. Livelli elevati aumentano il rischio cardiaco.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">Colesterolo HDL</div><div class="type-sub">Colesterolo "buono"</div></td>
+          <td class="col-target target-hdl">&gt; 1,0 (uomini)<br>&gt; 1,2 (donne) mmol/L</td>
+          <td>Rimuove il colesterolo dal sangue verso il fegato. Più è alto, meglio è.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Trigliceridi</div><div class="type-sub">Grassi nel sangue</div></td>
+          <td class="col-target target-tri">&lt; 1,7 mmol/L</td>
+          <td>Un tipo di grasso immagazzinato nel sangue. Aumenta con eccesso di zucchero e alcol.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">Come Migliorare il Tuo Colesterolo</div>
+    <div class="tips-grid">
+      <div class="tip-item">Mangia più verdura, frutta e cereali integrali ogni giorno.</div>
+      <div class="tip-item">Scegli grassi sani: olio d'oliva, frutta secca, pesce, avocado.</div>
+      <div class="tip-item">Riduci i grassi saturi: carni grasse, burro, latticini interi, cibi trasformati.</div>
+      <div class="tip-item">Fai attività fisica regolarmente — punta a 30 minuti quasi ogni giorno.</div>
+      <div class="tip-item">Smetti di fumare. Abbassa il colesterolo buono e danneggia i vasi sanguigni.</div>
+      <div class="tip-item">Limita l'alcol. L'eccesso aumenta i trigliceridi.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Parla con il tuo medico.</strong> Il tuo medico stabilirà obiettivi personalizzati in base al tuo rischio cardiovascolare complessivo. Questi valori sono solo una guida generale. Discuti i tuoi risultati con il tuo medico di base.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; Uso clinico — basato sulle linee guida NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SPANISH — Español
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-es" lang="es">
+  <div class="hd-header">
+    <div class="hd-kicker">Folleto para el Paciente — Colesterol</div>
+    <h1 class="hd-title">Cómo Interpretar sus Resultados de Colesterol</h1>
+    <p class="hd-intro">El colesterol es una sustancia grasa que se encuentra en la sangre. Su cuerpo necesita cierta cantidad de colesterol para funcionar correctamente, pero un exceso puede aumentar el riesgo de enfermedades cardíacas y accidentes cerebrovasculares.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">Sus Valores de Colesterol</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th class="col-target">Nivel Objetivo</th>
+          <th>Significado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Colesterol Total</div><div class="type-sub">Cantidad total en sangre</div></td>
+          <td class="col-target target-tot">&lt; 4,0 mmol/L</td>
+          <td>La suma de todos los tipos de colesterol en su sangre.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">Colesterol LDL</div><div class="type-sub">Colesterol "malo"</div></td>
+          <td class="col-target target-ldl">&lt; 2,5 mmol/L</td>
+          <td>Lleva el colesterol a las paredes de las arterias. Los niveles altos aumentan el riesgo cardíaco.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">Colesterol HDL</div><div class="type-sub">Colesterol "bueno"</div></td>
+          <td class="col-target target-hdl">&gt; 1,0 (hombres)<br>&gt; 1,2 (mujeres) mmol/L</td>
+          <td>Elimina el colesterol de la sangre y lo lleva al hígado. Cuanto más alto, mejor.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Triglicéridos</div><div class="type-sub">Grasas en sangre</div></td>
+          <td class="col-target target-tri">&lt; 1,7 mmol/L</td>
+          <td>Un tipo de grasa almacenada en la sangre. Aumenta con el exceso de azúcar y alcohol.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">Cómo Mejorar su Colesterol</div>
+    <div class="tips-grid">
+      <div class="tip-item">Coma más verduras, frutas y cereales integrales cada día.</div>
+      <div class="tip-item">Elija grasas saludables: aceite de oliva, nueces, pescado, aguacate.</div>
+      <div class="tip-item">Reduzca las grasas saturadas: carnes grasas, mantequilla, lácteos enteros, alimentos procesados.</div>
+      <div class="tip-item">Haga ejercicio regularmente — apunte a 30 minutos la mayoría de los días.</div>
+      <div class="tip-item">Deje de fumar. Baja el colesterol bueno y daña los vasos sanguíneos.</div>
+      <div class="tip-item">Limite el alcohol. El exceso eleva los triglicéridos.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Hable con su médico.</strong> Su médico establecerá objetivos personales según su riesgo cardiovascular general. Estos valores son solo una guía. Comente sus resultados con su médico de cabecera.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; Uso clínico — basado en las directrices de NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     KHMER — ភាសាខ្មែរ
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-km" lang="km">
+  <div class="hd-header">
+    <div class="hd-kicker">សៀវភៅណែនាំអ្នកជំងឺ — កូឡេស្តេរ៉ុល</div>
+    <h1 class="hd-title">ការយល់ដឹងអំពីលទ្ធផលកូឡេស្តេរ៉ុលរបស់អ្នក</h1>
+    <p class="hd-intro">កូឡេស្តេរ៉ុលជាសារធាតុខ្លាញ់ដែលមាននៅក្នុងឈាម។ រាងកាយត្រូវការកូឡេស្តេរ៉ុលខ្លះដើម្បីដំណើរការបានត្រឹមត្រូវ ប៉ុន្តែច្រើនពេកអាចបង្កើនហានិភ័យនៃជំងឺបេះដូង និងដាច់សរសៃឈាមខួរក្បាល។</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">លទ្ធផលកូឡេស្តេរ៉ុលរបស់អ្នក</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>ប្រភេទ</th>
+          <th class="col-target">កម្រិតគោលដៅ</th>
+          <th>អត្ថន័យ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">កូឡេស្តេរ៉ុលសរុប</div><div class="type-sub">បរិមាណសរុបក្នុងឈាម</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>បរិមាណកូឡេស្តេរ៉ុលសរុបគ្រប់ប្រភេទក្នុងឈាម។</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">LDL កូឡេស្តេរ៉ុល</div><div class="type-sub">កូឡេស្តេរ៉ុល "អាក្រក់"</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>នាំកូឡេស្តេរ៉ុលទៅកាន់ជញ្ជាំងសរសៃឈាម។ ការកើនឡើងបង្កើនហានិភ័យបេះដូង។</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">HDL កូឡេស្តេរ៉ុល</div><div class="type-sub">កូឡេស្តេរ៉ុល "ល្អ"</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (ប្រុស)<br>&gt; 1.2 (ស្រី) mmol/L</td>
+          <td>ដកយកកូឡេស្តេរ៉ុលចេញពីឈាម។ កម្រិតខ្ពស់ជាងល្អជាង។</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">ទ្រីគ្លីសេរីត</div><div class="type-sub">ខ្លាញ់ក្នុងឈាម</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>ប្រភេទខ្លាញ់ក្នុងឈាម។ កើនឡើងពីការញ៉ាំស្ករ និងស្រានៅច្រើន។</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">របៀបធ្វើអោយប្រសើរឡើងនូវកូឡេស្តេរ៉ុល</div>
+    <div class="tips-grid">
+      <div class="tip-item">ញ៉ាំបន្លែ ផ្លែឈើ និងធញ្ញជាតិគ្រាប់ពេញឱ្យបានច្រើនជារៀងរាល់ថ្ងៃ។</div>
+      <div class="tip-item">ជ្រើសរើសខ្លាញ់ល្អ: ប្រេងអូលីវ គ្រាប់ ត្រី អាវ័រ។</div>
+      <div class="tip-item">កាត់បន្ថយខ្លាញ់: សាច់ខ្លាញ់ ប៊ឺ ផលិតផលទឹកដោះគោ ម្ហូបកែច្នៃ។</div>
+      <div class="tip-item">ហាត់ប្រាណជាទៀងទាត់ — គោលដៅ 30 នាទីភាគច្រើននៃថ្ងៃ។</div>
+      <div class="tip-item">ឈប់ជក់បារី។ វាបន្ថយ HDL ល្អ។</div>
+      <div class="tip-item"> កំណត់ការផឹកស្រា។ ស្រានៅច្រើនបង្កើនទ្រីគ្លីសេរីត។</div>
+    </div>
+    <div class="disclaimer">
+      <strong>ពិភាក្សាជាមួយវេជ្ជបណ្ឌិតរបស់អ្នក។</strong> វេជ្ជបណ្ឌិតនឹងកំណត់គោលដៅផ្ទាល់ខ្លួនដោយផ្អែកលើសុខភាពបេះដូងរបស់អ្នក។ ចំនួនទាំងនេះជាការណែនាំទូទៅប៉ុណ្ណោះ។
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; សម្រាប់ប្រើប្រាស់ផ្នែកវេជ្ជសាស្ត្រ — យោងតាមគោលការណ៍ NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     THAI — ภาษาไทย
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-th" lang="th">
+  <div class="hd-header">
+    <div class="hd-kicker">เอกสารสำหรับผู้ป่วย — คอเลสเตอรอล</div>
+    <h1 class="hd-title">ทำความเข้าใจผลคอเลสเตอรอลของคุณ</h1>
+    <p class="hd-intro">คอเลสเตอรอลเป็นสารไขมันที่พบในเลือด ร่างกายต้องการคอเลสเตอรอลในระดับหนึ่งเพื่อทำงานได้อย่างถูกต้อง แต่หากมีมากเกินไปจะเพิ่มความเสี่ยงต่อโรคหัวใจและโรคหลอดเลือดสมอง</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">ค่าคอเลสเตอรอลของคุณ</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>ประเภท</th>
+          <th class="col-target">ระดับเป้าหมาย</th>
+          <th>ความหมาย</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">คอเลสเตอรอลรวม</div><div class="type-sub">ปริมาณทั้งหมดในเลือด</div></td>
+          <td class="col-target target-tot">&lt; 4.0 mmol/L</td>
+          <td>ปริมาณรวมของคอเลสเตอรอลทุกชนิดในเลือด</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">LDL คอเลสเตอรอล</div><div class="type-sub">คอเลสเตอรอล "ไม่ดี"</div></td>
+          <td class="col-target target-ldl">&lt; 2.5 mmol/L</td>
+          <td>นำคอเลสเตอรอลไปยังผนังหลอดเลือดแดง ระดับสูงเพิ่มความเสี่ยงโรคหัวใจ</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">HDL คอเลสเตอรอล</div><div class="type-sub">คอเลสเตอรอล "ดี"</div></td>
+          <td class="col-target target-hdl">&gt; 1.0 (ชาย)<br>&gt; 1.2 (หญิง) mmol/L</td>
+          <td>กำจัดคอเลสเตอรอลออกจากเลือดสู่ตับ ยิ่งสูงยิ่งดี</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">ไตรกลีเซอไรด์</div><div class="type-sub">ไขมันในเลือด</div></td>
+          <td class="col-target target-tri">&lt; 1.7 mmol/L</td>
+          <td>ไขมันชนิดหนึ่งที่สะสมในเลือด สูงขึ้นเมื่อรับน้ำตาลและแอลกอฮอล์มากเกิน</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">วิธีปรับปรุงระดับคอเลสเตอรอล</div>
+    <div class="tips-grid">
+      <div class="tip-item">รับประทานผัก ผลไม้ และธัญพืชไม่ขัดสีให้มากขึ้นทุกวัน</div>
+      <div class="tip-item">เลือกไขมันที่ดี: น้ำมันมะกอก ถั่ว ปลา อโวคาโด</div>
+      <div class="tip-item">ลดไขมันอิ่มตัว: เนื้อสัตว์ติดมัน เนย ผลิตภัณฑ์นมไขมันเต็ม อาหารแปรรูป</div>
+      <div class="tip-item">ออกกำลังกายสม่ำเสมอ — ตั้งเป้าหมาย 30 นาทีในวันส่วนใหญ่</div>
+      <div class="tip-item">เลิกสูบบุหรี่ สูบบุหรี่ลด HDL และทำลายหลอดเลือด</div>
+      <div class="tip-item">จำกัดการดื่มแอลกอฮอล์ การดื่มมากเกินเพิ่มไตรกลีเซอไรด์</div>
+    </div>
+    <div class="disclaimer">
+      <strong>พูดคุยกับแพทย์ของคุณ</strong> แพทย์จะกำหนดเป้าหมายส่วนตัวตามความเสี่ยงโรคหัวใจและหลอดเลือดโดยรวม ตัวเลขเหล่านี้เป็นเพียงแนวทางทั่วไป กรุณาปรึกษาแพทย์เกี่ยวกับผลของคุณ
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; สำหรับใช้ทางคลินิก — อ้างอิงตามแนวทาง NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     POLISH — Polski
+═══════════════════════════════════════════════ -->
+<div class="handout-section" id="lang-pl" lang="pl">
+  <div class="hd-header">
+    <div class="hd-kicker">Ulotka dla Pacjenta — Cholesterol</div>
+    <h1 class="hd-title">Jak Rozumieć Wyniki Cholesterolu</h1>
+    <p class="hd-intro">Cholesterol to tłuszczowa substancja znajdująca się we krwi. Organizm potrzebuje pewnej ilości cholesterolu, aby prawidłowo funkcjonować, ale nadmiar może zwiększyć ryzyko chorób serca i udaru mózgu.</p>
+  </div>
+  <div class="hd-body">
+    <div class="sec-heading">Twoje Wartości Cholesterolu</div>
+    <table class="chol-table">
+      <thead>
+        <tr>
+          <th>Rodzaj</th>
+          <th class="col-target">Poziom docelowy</th>
+          <th>Znaczenie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-total">
+          <td><div class="type-name">Cholesterol całkowity</div><div class="type-sub">Łączna ilość we krwi</div></td>
+          <td class="col-target target-tot">&lt; 4,0 mmol/L</td>
+          <td>Suma wszystkich rodzajów cholesterolu we krwi.</td>
+        </tr>
+        <tr class="row-ldl">
+          <td><div class="type-name">Cholesterol LDL</div><div class="type-sub">"Zły" cholesterol</div></td>
+          <td class="col-target target-ldl">&lt; 2,5 mmol/L</td>
+          <td>Transportuje cholesterol do ścian tętnic. Wysoki poziom zwiększa ryzyko chorób serca.</td>
+        </tr>
+        <tr class="row-hdl">
+          <td><div class="type-name">Cholesterol HDL</div><div class="type-sub">"Dobry" cholesterol</div></td>
+          <td class="col-target target-hdl">&gt; 1,0 (mężczyźni)<br>&gt; 1,2 (kobiety) mmol/L</td>
+          <td>Usuwa cholesterol z krwi i transportuje go do wątroby. Im wyższy, tym lepiej.</td>
+        </tr>
+        <tr class="row-trig">
+          <td><div class="type-name">Trójglicerydy</div><div class="type-sub">Tłuszcze we krwi</div></td>
+          <td class="col-target target-tri">&lt; 1,7 mmol/L</td>
+          <td>Rodzaj tłuszczu gromadzony we krwi. Rośnie przy nadmiarze cukru i alkoholu.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sec-heading">Jak Poprawić Poziom Cholesterolu</div>
+    <div class="tips-grid">
+      <div class="tip-item">Jedz więcej warzyw, owoców i produktów pełnoziarnistych każdego dnia.</div>
+      <div class="tip-item">Wybieraj zdrowe tłuszcze: oliwa z oliwek, orzechy, ryby, awokado.</div>
+      <div class="tip-item">Ogranicz tłuszcze nasycone: tłuste mięso, masło, pełnotłuste produkty mleczne, przetworzona żywność.</div>
+      <div class="tip-item">Regularnie ćwicz — dąż do 30 minut przez większość dni.</div>
+      <div class="tip-item">Rzuć palenie. Obniża dobry cholesterol i niszczy naczynia krwionośne.</div>
+      <div class="tip-item">Ogranicz alkohol. Nadmiar zwiększa trójglicerydy.</div>
+    </div>
+    <div class="disclaimer">
+      <strong>Porozmawiaj z lekarzem.</strong> Lekarz ustali indywidualne cele na podstawie Twojego ogólnego ryzyka sercowo-naczyniowego. Podane liczby to ogólna wskazówka. Omów wyniki ze swoim lekarzem pierwszego kontaktu.
+    </div>
+  </div>
+  <div class="hd-footer">workingdiagnosis.xyz &nbsp;|&nbsp; Do użytku klinicznego — na podstawie wytycznych NZ Heart Foundation</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════ -->
+<script>
+  function showLang(code) {
+    document.querySelectorAll('.handout-section').forEach(function(s) {
+      s.classList.remove('active');
+    });
+    document.querySelectorAll('.lang-btn').forEach(function(b) {
+      b.classList.remove('active');
+    });
+    var target = document.getElementById('lang-' + code);
+    if (target) target.classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

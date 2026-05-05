@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endometriosis | Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+    .hero{max-width:680px;margin:0 auto;padding:2.5rem 2rem 1.75rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+    .print-bar{max-width:680px;margin:0 auto;padding:.75rem 2rem;display:flex;justify-content:flex-end}
+    .print-btn{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--rule);color:var(--ink-mute);padding:.45rem 1rem;border-radius:50px;cursor:pointer;transition:all .15s}
+    .print-btn:hover{color:var(--green);border-color:var(--green)}
+    .glance{background:var(--warm);border-radius:14px;padding:1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
+    .glance-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
+    .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+    .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
+    .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
+    .acc-item.open .chevron{transform:rotate(90deg)}
+    .acc-body{display:none;padding:1.25rem 1.4rem 1.5rem;background:var(--paper);border-top:1px solid var(--rule);font-size:.95rem;color:var(--ink-soft);line-height:1.72}
+    .acc-item.open .acc-body{display:block}
+    .acc-body p+p{margin-top:.75rem}
+    .acc-body ul,.acc-body ol{padding-left:1.25rem;margin:.5rem 0}
+    .acc-body li{margin-bottom:.3rem}
+    .data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.9rem}
+    .data-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.7rem 1rem;background:var(--deep);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+    .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:nth-child(even) td{background:var(--warm)}
+    .alert-box{background:#FDF6EE;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
+    .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
+    .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
+    .alert-box ul{padding-left:1.25rem}
+    .alert-box ul li{margin-bottom:.4rem}
+    .resources{background:var(--warm);border-radius:12px;padding:1.5rem;margin-top:2rem}
+    .resources-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+    .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
+    .resources a:hover{text-decoration:underline}
+    .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
+    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
+    .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
+    .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1.5rem 2rem 2rem}
+    .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
+    .refs-toggle:hover{color:var(--green)}
+    .refs-list{display:none;margin-top:1rem}
+    .refs-list.on{display:block}
+    .refs-list ol{padding-left:1.4rem}
+    .refs-list li{font-size:.8rem;color:var(--ink-mute);line-height:1.6;margin-bottom:.45rem}
+    .page-footer{text-align:center;font-size:.8rem;color:var(--ink-mute);padding:1.25rem 2rem 2rem;border-top:1px solid var(--rule);max-width:680px;margin:0 auto}
+    @media print{
+      .masthead-crumb,.print-bar,.refs-section,.page-footer{display:none}
+      .acc-body{display:block!important;padding:.4rem 0}
+      .acc-head{background:none!important;font-size:1rem;padding:.5rem 0;border-bottom:1px solid #ccc;border-radius:0}
+      .acc-item{border:none;margin-bottom:.5rem;border-radius:0}
+      body{font-size:.85rem}
+      .alert-box,.data-table{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/gynae/" class="masthead-crumb">Gynae</a>
+</header>
+
+<div class="hero">
+  <div class="kicker">❍ Women's Health</div>
+  <h1>Endome<em>triosis</em></h1>
+  <p class="hero-lead">Endometriosis affects roughly one in ten women of reproductive age, yet it takes an average of seven to ten years to diagnose. Understanding what it is, what it feels like, and what can be done about it is the first step toward getting the care you deserve.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+
+  <div class="glance">
+    <div>
+      <div class="glance-label">Prevalence</div>
+      <div class="glance-value">1 in 10</div>
+      <div class="glance-desc">Women of reproductive age worldwide</div>
+    </div>
+    <div>
+      <div class="glance-label">Diagnosis delay</div>
+      <div class="glance-value">7-10 yrs</div>
+      <div class="glance-desc">Average time from symptoms to diagnosis</div>
+    </div>
+    <div>
+      <div class="glance-label">Fertility</div>
+      <div class="glance-value">25-50%</div>
+      <div class="glance-desc">Of women investigated for infertility have endometriosis</div>
+    </div>
+    <div>
+      <div class="glance-label">Staging</div>
+      <div class="glance-value">I-IV</div>
+      <div class="glance-desc">ASRM classification from minimal to severe</div>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-head">
+      What is endometriosis?
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Endometriosis is a condition in which tissue very similar to the lining of the uterus (the endometrium) grows outside the uterus. The most common sites are the ovaries, the fallopian tubes, the ligaments that support the uterus, and the tissue lining the inside of the pelvis. In more severe cases it can involve the bowel, bladder, or other nearby structures. Rarely it is found in distant sites.</p>
+      <p>Like the uterine lining, these deposits respond to the hormones of the menstrual cycle: they thicken and break down each month. But unlike the uterine lining, the blood and tissue have nowhere to go. The result is inflammation, scarring, and over time the development of fibrous adhesions that can bind organs together and distort pelvic anatomy. On the ovaries, trapped blood can form cysts called endometriomas, sometimes called chocolate cysts because of the colour of the old blood they contain.</p>
+      <p>The cause is not fully understood. The leading theory is retrograde menstruation, where some menstrual blood flows backward through the fallopian tubes into the pelvis rather than leaving the body. But because retrograde menstruation is quite common and endometriosis is not universal, immune dysfunction and genetic susceptibility are also clearly involved. There is a significant heritable component: having a first-degree relative with endometriosis increases your risk substantially.</p>
+      <p>It is important to understand that stage (severity) does not necessarily predict symptoms. Some women with extensive, deeply infiltrating endometriosis have minimal pain. Others with only small deposits are severely debilitated. This disconnect between anatomy and symptoms is one of the things that makes endometriosis genuinely challenging to manage.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Symptoms: what to look for
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>The hallmark symptom is pelvic pain, but it takes many forms. Pain that is severe enough to disrupt daily life, worsening over time, or not well controlled by standard pain relief is the most important thing to recognise and bring to your doctor.</p>
+      <p><strong>Painful periods (dysmenorrhoea)</strong> are the most common symptom. The key feature is that the pain is out of proportion to what would be expected for normal menstruation. It often begins before the period starts and persists throughout, sometimes into the days after. Many women are told for years that severe period pain is simply normal. It is common, but severe, disabling period pain is not something you should have to accept without investigation.</p>
+      <p><strong>Chronic pelvic pain</strong> unrelated to the menstrual cycle affects many women with endometriosis. This can include a constant dull ache, sharp or stabbing pains, or pain that radiates into the lower back or legs.</p>
+      <p><strong>Pain during or after sex (dyspareunia)</strong> is particularly associated with endometriosis involving the ligaments behind the uterus or the tissue between the vagina and bowel. Deep pain during penetration, or aching that persists for hours after sex, is a red flag symptom that warrants assessment.</p>
+      <p><strong>Bowel and bladder symptoms</strong> are common and frequently overlooked. These include pain when opening the bowel, particularly around the time of a period; a sensation of pressure or urgency; and occasionally blood in the urine or stools during menstruation if the bladder or bowel is involved. These symptoms often lead women to be investigated for irritable bowel syndrome for years before endometriosis is considered.</p>
+      <p><strong>Heavy periods</strong> and irregular bleeding can occur, though they are less specific to endometriosis than pain.</p>
+      <p><strong>Fatigue</strong> is a frequently reported and underappreciated symptom. It can be profound and is not simply explained by anaemia from heavy periods. Chronic pain and inflammation are exhausting in their own right.</p>
+      <p><strong>Difficulty becoming pregnant</strong> may be the presenting concern, particularly in women whose pain has been dismissed or who have had milder symptoms. Endometriosis is found in a substantial proportion of women investigated for infertility, and it can affect conception in several ways.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      How is it diagnosed?
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Endometriosis can only be definitively diagnosed by laparoscopy: a surgical procedure under general anaesthetic in which a thin camera is passed into the abdomen through a small incision. Direct visualisation of the pelvis, with biopsy of suspicious deposits, is the gold standard. This is important to understand, because it means a completely normal blood test or ultrasound does not rule out endometriosis.</p>
+      <p>In practice, the diagnostic journey usually starts with a clinical assessment: a detailed history of your symptoms (when pain occurs, its relationship to your cycle, its severity and character, how it affects your life) and a pelvic examination. Your GP or gynaecologist may then arrange imaging.</p>
+      <p><strong>Transvaginal ultrasound</strong> performed by an experienced operator can detect endometriomas on the ovaries and deep infiltrating endometriosis involving the bowel or bladder. However, it cannot reliably detect superficial endometriosis deposits on the pelvic lining, which are extremely common. A normal ultrasound does not exclude the diagnosis.</p>
+      <p><strong>MRI</strong> of the pelvis can provide more detailed information about deep disease and is particularly useful before surgery to map the extent of involvement. It is not a screening test, but it helps surgical planning.</p>
+      <p><strong>Blood tests</strong> are not diagnostic. CA-125, a protein sometimes measured in the context of ovarian cancer, is frequently elevated in endometriosis but is non-specific and should not be used as a screening or diagnostic tool in isolation.</p>
+      <p>The average time from symptom onset to diagnosis has historically been seven to ten years globally. This reflects how thoroughly menstrual pain has been normalised, how often women are told severe pain is just part of life, and how genuinely difficult endometriosis is to diagnose without surgery. If your symptoms fit and investigations are unremarkable, this does not mean you do not have endometriosis. A referral to a gynaecologist with an interest in pelvic pain is the appropriate next step.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Treatment: pain, hormones, and surgery
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>There is currently no cure for endometriosis. Treatment aims to control symptoms, prevent progression, and preserve fertility where relevant. The right approach depends on symptom severity, current fertility plans, disease stage, and personal preference. Many women need a combination of strategies, and treatment often needs revisiting over time.</p>
+      <p><strong>Pain relief</strong> is the starting point. Anti-inflammatory medicines (NSAIDs such as ibuprofen or naproxen) are most effective for period pain when started one to two days before the period begins, rather than waiting for pain to arrive. Paracetamol can be used alongside them. Stronger pain management may be needed and should be discussed with your GP.</p>
+      <p><strong>Hormonal treatment</strong> works by suppressing the menstrual cycle, reducing the stimulation of endometriosis deposits and limiting further growth. Options include:</p>
+      <ul>
+        <li>The combined oral contraceptive pill (taken continuously without a break to prevent periods altogether) is a common first-line choice and is effective for many women.</li>
+        <li>Progestins (progesterone-based medicines such as norethisterone or medroxyprogesterone) can reduce pain significantly and may cause periods to stop.</li>
+        <li>The levonorgestrel intrauterine device (Mirena IUD) is highly effective for pelvic pain and reduces menstrual bleeding substantially.</li>
+        <li>GnRH agonists (such as goserelin or leuprorelin) are used in more severe disease. They suppress ovarian function and induce a temporary menopause-like state, which is very effective at controlling endometriosis but causes menopausal side effects. When used for longer than a few months, add-back hormone therapy is prescribed to protect bone density and manage symptoms.</li>
+      </ul>
+      <p>Hormonal treatments do not eliminate endometriosis deposits, and symptoms typically return once treatment is stopped. They are a long-term management strategy, not a permanent fix.</p>
+      <p><strong>Surgery</strong> is considered when medical treatment has not adequately controlled symptoms, when fertility is a concern, or when the diagnosis needs confirmation. Laparoscopic surgery to remove (excise) or destroy (ablate) endometriosis deposits and divide adhesions can significantly reduce pain and improve fertility outcomes. Excision is generally preferred over ablation because it removes the tissue entirely and allows it to be examined, but both approaches have a role depending on the location and depth of disease. Disease can recur after surgery, and repeat procedures may be needed.</p>
+      <p>For women with very severe disease affecting the bowel or bladder, surgery is more complex and should be performed by a specialist team with experience in deeply infiltrating endometriosis.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Endometriosis and fertility
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Endometriosis can affect fertility in several ways. Adhesions and scarring may distort pelvic anatomy, block fallopian tubes, or impair the movement of eggs. Endometriomas on the ovaries can reduce ovarian reserve over time, both directly and as a consequence of surgery to remove them. Inflammation in the pelvic environment may affect egg quality and implantation.</p>
+      <p>That said, many women with endometriosis, including those with moderate or severe disease, conceive naturally. The impact on fertility is not inevitable, and mild endometriosis in particular may have little practical effect on the ability to fall pregnant. The relationship between endometriosis and infertility is real but probabilistic, not certain.</p>
+      <p>Surgical treatment, particularly removal of endometriomas and adhesions, is associated with improved natural conception rates and is generally recommended before attempting IVF when there is significant disease. However, surgery on the ovaries also carries a risk of reducing ovarian reserve, which needs to be weighed carefully, especially in women who plan to use IVF. This is a decision that benefits from a conversation with a gynaecologist who can assess your individual situation.</p>
+      <p>IVF outcomes in women with endometriosis are generally good, though success rates are somewhat lower than in women without the condition. Referral to a fertility specialist is appropriate if you have been trying to conceive for twelve months without success (or six months if you are over 35), and particularly if endometriosis is known or suspected.</p>
+      <p>If you have endometriosis and are not yet ready to conceive but fertility is important to you in the future, it is worth discussing ovarian reserve testing and fertility preservation options with a gynaecologist. Endometriosis can progress over time, and having a clear picture of your ovarian reserve while it is still good gives you more options.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Living well with endometriosis
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Endometriosis is a chronic condition, and managing it well over the long term is as much about lifestyle and self-knowledge as it is about medication or surgery. Many women find that combining medical treatment with practical self-management makes a meaningful difference.</p>
+      <p><strong>Heat</strong> is one of the simplest and most consistently reported strategies. A hot water bottle or heat pack on the lower abdomen or back during painful episodes is genuinely helpful, not just as comfort but because warmth reduces muscle spasm and improves blood flow.</p>
+      <p><strong>Pelvic floor physiotherapy</strong> is underused and underrecognised. Chronic pelvic pain causes the pelvic floor muscles to tighten and guard over time, which compounds pain and can contribute to dyspareunia. A physiotherapist with a pelvic health interest can assess for pelvic floor dysfunction and provide targeted treatment, including internal release techniques and exercises.</p>
+      <p><strong>Pain education</strong> matters. Chronic pain in endometriosis involves both peripheral inflammation and central sensitisation, where the nervous system becomes primed to amplify pain signals. Understanding this mechanism can reduce the fear associated with pain, which itself reduces the pain experience. Psychological approaches including cognitive behavioural therapy (CBT) and pain-focused mindfulness have evidence in chronic pelvic pain and are worth considering alongside medical treatment.</p>
+      <p><strong>Diet and lifestyle</strong> have no proven direct effect on endometriosis tissue itself, but anti-inflammatory eating patterns, regular exercise, and good sleep all reduce systemic inflammation and improve pain tolerance and mood. There is no specific endometriosis diet that the evidence supports, despite what you may read online; however, a whole-food diet with minimal ultra-processed food is reasonable general advice.</p>
+      <p><strong>Know your cycle.</strong> Tracking symptoms in relation to your cycle helps you and your doctor understand your pattern, plan around difficult days, and identify whether treatment is working. It can also be useful evidence if you are seeking a referral or a diagnosis.</p>
+      <p><strong>Endometriosis NZ</strong> (endometriosis.org.nz) provides peer support, education, and a helpline. Connecting with others who have the same condition is not a substitute for medical care but it is genuinely valuable, particularly for the mental health burden of living with a painful, often invisible, chronic condition.</p>
+    </div>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Treatment type</th>
+        <th>Examples</th>
+        <th>Best suited to</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NSAIDs</td>
+        <td>Ibuprofen, naproxen</td>
+        <td>Period pain; start 1-2 days before period</td>
+      </tr>
+      <tr>
+        <td>Combined pill</td>
+        <td>Taken continuously (no break)</td>
+        <td>Pain management; preventing periods</td>
+      </tr>
+      <tr>
+        <td>Progestin</td>
+        <td>Norethisterone, Mirena IUD</td>
+        <td>Pain and bleeding; Mirena especially effective</td>
+      </tr>
+      <tr>
+        <td>GnRH agonists</td>
+        <td>Goserelin, leuprorelin</td>
+        <td>Severe disease; pre-surgical suppression</td>
+      </tr>
+      <tr>
+        <td>Laparoscopic surgery</td>
+        <td>Excision or ablation</td>
+        <td>Confirmed disease; pain uncontrolled; fertility</td>
+      </tr>
+      <tr>
+        <td>Pelvic physio</td>
+        <td>Pelvic floor rehabilitation</td>
+        <td>Dyspareunia; pelvic floor dysfunction</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <div class="alert-head">When to see your GP</div>
+    <p>See your GP if you have any of the following:</p>
+    <ul>
+      <li>Period pain severe enough to affect work, school, or daily activities</li>
+      <li>Pelvic pain that worsens over time or is not controlled by standard pain relief</li>
+      <li>Pain during or after sex (particularly deep pain)</li>
+      <li>Bowel or bladder symptoms that occur consistently around your period</li>
+      <li>Trying to conceive for 12 months without success (or 6 months if you are over 35), particularly with a history of pelvic pain</li>
+      <li>A first-degree relative (mother or sister) with diagnosed endometriosis</li>
+    </ul>
+    <p>You do not need to wait until symptoms are severe to seek help. Endometriosis is easier to manage when identified and treated early.</p>
+  </div>
+
+  <div class="resources">
+    <div class="resources-head">NZ Resources</div>
+    <a href="https://endometriosis.org.nz">Endometriosis New Zealand</a>
+    <a href="https://bpac.org.nz">BPAC NZ (GP clinical resources)</a>
+    <a href="https://healthinfo.org.nz">Health Info NZ (Te Whatu Ora)</a>
+    <p>Endometriosis NZ operates a helpline at 0800 733 277 and provides peer support groups throughout New Zealand. If you would like a referral to a gynaecologist with a specialist interest in pelvic pain or endometriosis, ask your GP. HealthPathways (available to your GP) contains NZ-specific management guidance.</p>
+  </div>
+
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">Show references</button>
+  <div id="refs" class="refs-list">
+    <ol>
+      <li>Zondervan KT, Becker CM, Missmer SA. Endometriosis. N Engl J Med. 2020;382(13):1244-56.</li>
+      <li>Nnoaham KE, Hummelshoj L, Webster P, d'Hooghe T, de Cicco Nardone F, de Cicco Nardone C, et al. Impact of endometriosis on quality of life and work productivity: a multicenter study across ten countries. Fertil Steril. 2011;96(2):366-73.</li>
+      <li>Vercellini P, Vigano P, Somigliana E, Fedele L. Endometriosis: pathogenesis and treatment. Nat Rev Endocrinol. 2014;10(5):261-75.</li>
+      <li>Dunselman GA, Vermeulen N, Becker C, Calhaz-Jorge C, D'Hooghe T, De Bie B, et al. ESHRE guideline: management of women with endometriosis. Hum Reprod. 2014;29(3):400-12.</li>
+      <li>Johnson NP, Hummelshoj L, Adamson GD, Keckstein J, Taylor HS, Abrao MS, et al. World Endometriosis Society consensus on the classification of endometriosis. Hum Reprod. 2017;32(2):315-24.</li>
+      <li>Practice Committee of the American Society for Reproductive Medicine. Endometriosis and infertility: a committee opinion. Fertil Steril. 2012;98(3):591-8.</li>
+      <li>Aredo JV, Heyrana KJ, Karp BI, Shah JP, Stratton P. Relating chronic pelvic pain and endometriosis to signs of sensitization and myofascial pain and dysfunction. Semin Reprod Med. 2017;35(1):88-97.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <p>This page is written for general information and does not replace a conversation with your own GP or specialist, who knows your full history and circumstances.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+
+</body>
+</html>
