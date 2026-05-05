@@ -15,4 +15,5 @@ pillar: Lifestyle
       <li><a href="/lifestyle/weight-metabolic-health/">Weight &amp; metabolic health</a></li>
       <li><a href="/lifestyle/sunlight-vitamin-d/">Sunlight &amp; vitamin D</a></li>
       <li><a href="/lifestyle/social-connection/">Social connection</a></li>
+      <li><a href="/lifestyle/sedation-stacking/">The Fog Machine</a></li>
     </ul>
