@@ -14,21 +14,6 @@
           "name": "CHA2DS2-VASc",
           "url": "/workshop/tools/cha2ds2-vasc/",
           "blurb": "Stroke risk in atrial fibrillation and anticoagulation decision support."
-        },
-        {
-          "name": "HAS-BLED",
-          "url": "/workshop/tools/has-bled/",
-          "blurb": "Bleeding risk in patients on anticoagulation for AF."
-        },
-        {
-          "name": "Wells Criteria (DVT & PE)",
-          "url": "/workshop/tools/wells-criteria/",
-          "blurb": "DVT and PE risk stratification with D-dimer guidance."
-        },
-        {
-          "name": "6 Minute Walk Distance Score",
-          "url": "/workshop/tools/6mwd/",
-          "blurb": "Predicted distance by age and sex; prognostic interpretation."
         }
       ]
     },
@@ -37,18 +22,8 @@
       "items": [
         {
           "name": "Paediatric Dosage Calculator",
-          "url": "/workshop/tools/paeds-dosage/",
+          "url": "/workshop/tools/paediatric-doses/",
           "blurb": "Weight-based dosing for the everyday paediatric formulary."
-        },
-        {
-          "name": "Paediatric Growth Charts",
-          "url": "/workshop/tools/growth-charts/",
-          "blurb": "Plot weight, length, head circumference, BMI."
-        },
-        {
-          "name": "Developmental Milestones",
-          "url": "/workshop/tools/milestones/",
-          "blurb": "Quick-reference age-banded developmental checks."
         }
       ]
     },
@@ -74,11 +49,6 @@
           "name": "Benzodiazepine Conversion",
           "url": "/workshop/tools/benzo-conversion/",
           "blurb": "Diazepam-equivalent dose and tapering strategies."
-        },
-        {
-          "name": "COMM (Opioid Monitoring)",
-          "url": "/workshop/tools/comm/",
-          "blurb": "Current Opioid Misuse Measure for risk assessment."
         }
       ]
     },
@@ -98,28 +68,18 @@
         {
           "name": "Prescriptions Outside NZ",
           "url": "/workshop/tools/rx-outside-nz/",
-          "blurb": "Medicines prescribed overseas that are unavailable, unfunded, or differently restricted in NZ — with local equivalents."
+          "blurb": "Medicines prescribed overseas that are unavailable, unfunded, or differently restricted in NZ -- with local equivalents."
+        },
+        {
+          "name": "Anticholinergic Burden",
+          "url": "/workshop/tools/anticholinergic-burden/",
+          "blurb": "Cumulative ACB score across a patient medication list, with STOPP flags and deprescribing guidance."
         }
       ]
     },
     {
       "name": "Geriatrics",
       "items": [
-        {
-          "name": "Cognitive Scores (mini-ACE, MMSE)",
-          "url": "/workshop/tools/cognitive-scores/",
-          "blurb": "Mini-ACE, MMSE, education-adjusted and non-English variants."
-        },
-        {
-          "name": "CIRS-G (Cumulative Illness Rating)",
-          "url": "/workshop/tools/cirs-g/",
-          "blurb": "Comorbidity burden and risk stratification in older adults."
-        },
-        {
-          "name": "DASI (Activity Status Index)",
-          "url": "/workshop/tools/dasi/",
-          "blurb": "Functional capacity and perioperative risk estimation."
-        },
         {
           "name": "Geriatric Assessment Toolkit",
           "url": "/workshop/tools/geriatric-assessment/",
@@ -137,28 +97,13 @@
         },
         {
           "name": "Due Date Estimator",
-          "url": "/workshop/tools/due-date/",
-          "blurb": "Naegele's rule and gestational age by LMP or ultrasound."
+          "url": "/workshop/tools/edd/",
+          "blurb": "Naegele rule and gestational age by LMP or ultrasound."
         },
         {
           "name": "CTS-6 (Carpal Tunnel Score)",
           "url": "/workshop/tools/cts-6/",
-          "blurb": "Kamath & Stothard six-item weighted score for CTS probability."
-        }
-      ]
-    },
-    {
-      "name": "Resources",
-      "items": [
-        {
-          "name": "Useful Resources",
-          "url": "/workshop/resources/",
-          "blurb": "Curated links: NZF, BPAC, HealthPathways, UpToDate, guidelines."
-        },
-        {
-          "name": "Patient Handouts",
-          "url": "/workshop/handouts/",
-          "blurb": "Printable patient education and shared decision-making resources."
+          "blurb": "Kamath and Stothard six-item weighted score for CTS probability."
         }
       ]
     }
