@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>COPD Medication Selector — Working Diagnosis</title>
+  <title>COPD Medication Selector  -  Working Diagnosis</title>
   <meta name="description" content="NZ GP tool for COPD medication selection guided by BPAC and GOLD staging. Browse NZF-subsidised respiratory medicines.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,27 +53,13 @@ eleventyExcludeFromCollections: true
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
     /* ─── Masthead ──────────────────────────────────── */
-    .masthead {
-      border-bottom: 1px solid var(--rule);
-      padding: 22px 0 18px;
-      margin-bottom: 48px;
-    }
-    .masthead-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .brand {
-      font-family: var(--serif-display);
-      font-weight: 600;
-      font-size: 1.3rem;
-      color: var(--ink);
-      letter-spacing: -0.01em;
-    }
+    .masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+    .masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
     .brand em { font-style: italic; color: var(--green); }
-    .brand a { color: inherit; }
+    .primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+    .primary-nav a:hover { color: var(--green); }
 
     /* ─── Tool Container ────────────────────────────── */
     .tool-container {
@@ -156,7 +142,7 @@ eleventyExcludeFromCollections: true
       margin-bottom: 24px;
     }
 
-    /* FIX: direct child label only — avoids contaminating radio-item labels */
+    /* FIX: direct child label only  -  avoids contaminating radio-item labels */
     .form-group > label {
       display: block;
       font-family: var(--mono);
@@ -167,7 +153,7 @@ eleventyExcludeFromCollections: true
       margin-bottom: 8px;
     }
 
-    /* FIX: select only — radios must NOT inherit width/padding from this rule */
+    /* FIX: select only  -  radios must NOT inherit width/padding from this rule */
     .form-group select {
       width: 100%;
       padding: 10px 12px;
@@ -437,8 +423,12 @@ eleventyExcludeFromCollections: true
 <body>
 
   <header class="masthead">
-    <div class="wrap masthead-row">
+    <div class="masthead-row">
       <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/workshop/">Workshop</a>
+      </nav>
     </div>
   </header>
 
@@ -461,7 +451,7 @@ eleventyExcludeFromCollections: true
             <div class="form-group">
               <label for="status">Diagnosis Status</label>
               <select id="status">
-                <option value="">— Select —</option>
+                <option value=""> -  Select  - </option>
                 <option value="new">New diagnosis</option>
                 <option value="established">Established COPD</option>
               </select>
@@ -470,7 +460,7 @@ eleventyExcludeFromCollections: true
             <div class="form-group">
               <label for="smoke">Smoking Status</label>
               <select id="smoke">
-                <option value="">— Select —</option>
+                <option value=""> -  Select  - </option>
                 <option value="current">Current smoker</option>
                 <option value="former">Former smoker</option>
                 <option value="never">Never smoked</option>
@@ -517,9 +507,9 @@ eleventyExcludeFromCollections: true
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
+    <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
       <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
-      <p class="footer-meta">An internet workshop for general practice.</p>
+      <p>An internet workshop for general practice.</p>
     </div>
   </footer>
 
@@ -528,7 +518,7 @@ eleventyExcludeFromCollections: true
     let medicineDb = null;
 
     // ─── Fetch NZF database ─────────────────────────────
-    // FIX: path corrected to /assets/ — Eleventy only passthrough-copies
+    // FIX: path corrected to /assets/  -  Eleventy only passthrough-copies
     // the assets/ folder. The original copd-selector-integrated.html used
     // /data/nzf-respiratory-db.json which would 404 because _data/ is
     // Eleventy's data-cascade folder and is NOT served as static files.
@@ -538,7 +528,7 @@ eleventyExcludeFromCollections: true
         if (!res.ok) throw new Error('HTTP ' + res.status);
         medicineDb = await res.json();
       } catch (err) {
-        console.warn('NZF database unavailable — showing generic guidance only.', err);
+        console.warn('NZF database unavailable  -  showing generic guidance only.', err);
         medicineDb = null;
       }
     }
@@ -577,7 +567,7 @@ eleventyExcludeFromCollections: true
       if (smokeValue !== 'current') return '';
       return '<div class="cessation-box"><p>' +
         '<strong>❍ Active smoker:</strong> Smoking cessation is the single most effective ' +
-        'intervention in COPD — it slows FEV₁ decline and reduces exacerbation risk. ' +
+        'intervention in COPD  -  it slows FEV₁ decline and reduces exacerbation risk. ' +
         'Offer brief advice every visit. Consider pharmacotherapy: varenicline (Champix), ' +
         'bupropion (Zyban), or NRT (patches, gum, lozenges). Refer to a dedicated cessation service.' +
         '</p></div>';
@@ -613,164 +603,6 @@ eleventyExcludeFromCollections: true
       }
 
       if (group === 'D') {
-        // Show all triple options — Trimbow is funded, Trelegy is not.
+        // Show all triple options  -  Trimbow is funded, Trelegy is not.
         // Badge on each card communicates funding status clearly.
-        return { main: db.TRIPLE.medicines, rescue: saba };
-      }
-
-      return { main: [], rescue: [] };
-    }
-
-    // ─── Per-group content ──────────────────────────────
-    function goldContent(group, meds) {
-      var mainCards   = renderMedCards(meds.main);
-      var rescueCards = renderMedCards(meds.rescue);
-
-      // Fallback text if database failed to load
-      var fallbacks = {
-        A: 'Database unavailable — Tiotropium (Spiriva) 18 µg daily or Glycopyrronium (Seebri) 50 µg daily.',
-        B: 'Database unavailable — Anoro Ellipta (vilanterol/umeclidinium) 25/62.5 µg daily or Ultibro Breezhaler (indacaterol/glycopyrronium) 110/50 µg daily.',
-        C: 'Database unavailable — Anoro Ellipta or Ultibro Breezhaler once daily.',
-        D: 'Database unavailable — Trimbow (budesonide/glycopyrronium/formoterol) 87/9/4.8 µg, 2 puffs twice daily.'
-      };
-      var mainFallback   = mainCards   || '<p style="color:var(--ink-mute)">' + fallbacks[group] + '</p>';
-      var rescueFallback = rescueCards || '<p style="color:var(--ink-mute)">Salbutamol (Asmol / Ventolin) 100 µg as needed.</p>';
-
-      var configs = {
-        A: {
-          title: 'GOLD Group A',
-          sub:   'Low symptoms · Low exacerbation risk',
-          maintenance:
-            '<h3>Maintenance Therapy</h3>' +
-            '<p><strong>First-line:</strong> LAMA monotherapy.</p>' +
-            '<div class="info-box"><p><strong>BPAC / NZ guidance:</strong> LAMA is preferred over ' +
-            'LABA as monotherapy in COPD. Tiotropium is well established and cost-effective on the ' +
-            'NZ schedule. Glycopyrronium (Seebri) is an alternative with rapid onset (~5 min).</p></div>' +
-            mainFallback,
-          rescue:
-            '<h3>Rescue Therapy</h3>' +
-            '<p>Short-acting β₂-agonist as needed.</p>' +
-            rescueFallback,
-          extra: ''
-        },
-        B: {
-          title: 'GOLD Group B',
-          sub:   'High symptoms · Low exacerbation risk',
-          maintenance:
-            '<h3>Maintenance Therapy</h3>' +
-            '<p><strong>First-line:</strong> Dual LABA/LAMA combination.</p>' +
-            '<div class="info-box"><p><strong>Rationale:</strong> Dual LABA/LAMA provides superior ' +
-            'dyspnoea relief vs monotherapy. Once-daily single-inhaler regimens improve adherence. ' +
-            'LABA monotherapy is not recommended in COPD.</p></div>' +
-            mainFallback,
-          rescue:
-            '<h3>Rescue Therapy</h3>' +
-            '<p>Short-acting β₂-agonist as needed. If exacerbations develop, reassess for escalation to GOLD C/D.</p>' +
-            rescueFallback,
-          extra: ''
-        },
-        C: {
-          title: 'GOLD Group C',
-          sub:   'Low symptoms · High exacerbation risk',
-          maintenance:
-            '<h3>Maintenance Therapy</h3>' +
-            '<p><strong>First-line:</strong> Dual LABA/LAMA combination.</p>' +
-            '<div class="info-box"><p><strong>BPAC guidance on ICS:</strong> ICS is NOT indicated ' +
-            'here unless there are asthma features or eosinophils ≥100 cells/µL. Overuse of ICS ' +
-            'in COPD increases pneumonia and oral candidiasis risk.</p></div>' +
-            mainFallback,
-          rescue:
-            '<h3>Rescue Therapy</h3>' +
-            '<p>Short-acting β₂-agonist as needed. Prompt review and escalation if exacerbations persist despite dual therapy.</p>' +
-            rescueFallback,
-          extra: ''
-        },
-        D: {
-          title: 'GOLD Group D',
-          sub:   'High symptoms · High exacerbation risk',
-          maintenance:
-            '<h3>Maintenance Therapy</h3>' +
-            '<p><strong>First-line:</strong> Triple therapy — ICS/LABA/LAMA.</p>' +
-            '<div class="info-box"><p><strong>ICS justification:</strong> Triple therapy reduces ' +
-            'exacerbations vs dual therapy in GOLD D. Benefit is strongest with eosinophils ' +
-            '≥100 cells/µL or ≥2 exacerbations/year despite dual therapy. ' +
-            '<strong>Trimbow</strong> is the funded option in NZ primary care.</p></div>' +
-            '<div class="warning-box"><p><strong>Trelegy Ellipta</strong> (once-daily triple) is ' +
-            'not routinely funded in NZ — specialist initiation required. Use Trimbow first-line.</p></div>' +
-            mainFallback,
-          rescue:
-            '<h3>Rescue Therapy</h3>' +
-            '<p>Short-acting β₂-agonist as needed. Consider ipratropium (Atrovent) as adjunct if required.</p>' +
-            rescueFallback,
-          extra:
-            '<h3>Additional Considerations</h3>' +
-            '<ul>' +
-            '<li><strong>Roflumilast (Daxas):</strong> Consider in chronic bronchitis phenotype with ≥2 exacerbations/year. Oral PDE-4 inhibitor; ~10% relative reduction in exacerbations. GI side effects common. Funded if criteria met.</li>' +
-            '<li><strong>Pulmonary rehabilitation:</strong> Refer if dyspnoea is limiting activity.</li>' +
-            '<li><strong>Vaccination:</strong> Pneumovax 23, Prevenar 13, annual influenza, COVID boosters.</li>' +
-            '<li><strong>Written action plan:</strong> Provide exacerbation plan (when to start rescue prednisolone/antibiotics).</li>' +
-            '</ul>'
-        }
-      };
-
-      return configs[group];
-    }
-
-    // ─── Main render function ───────────────────────────
-    // FIX: single render function called on every input change.
-    // The original copd-selector-integrated.html rendered a duplicate rescue
-    // section — both rescueGuide (which already contained the Rescue h3) AND
-    // a separate "Rescue Medications" h3 + rescueMedicinesHtml were injected.
-    // Here, rescue content is unified into one section per group.
-    function render() {
-      var status    = document.getElementById('status').value;
-      var smoke     = document.getElementById('smoke').value;
-      var exacValue = document.querySelector('input[name="exacerbations"]:checked').value;
-      var sympValue = document.querySelector('input[name="symptoms"]:checked').value;
-      var main      = document.getElementById('mainContent');
-
-      if (!status) {
-        main.innerHTML =
-          '<div class="result-card active">' +
-          '<p style="color:var(--ink-mute);text-align:center;padding:16px 0;">' +
-          'Select a diagnosis status to view recommended inhaler therapy.' +
-          '</p></div>';
-        return;
-      }
-
-      var group   = getGoldGroup(exacValue, sympValue);
-      var meds    = getMeds(group);
-      var content = goldContent(group, meds);
-
-      main.innerHTML =
-        '<div class="result-card active">' +
-          '<h2>' + content.title + '</h2>' +
-          '<div class="gold-group">' + content.sub + '</div>' +
-          content.maintenance +
-          content.rescue +
-          content.extra +
-          cessationNote(smoke) +
-          '<div class="ref-note">' +
-            'GOLD 2024 Strategy Document · BPAC NZ · NZ Pharmaceutical Schedule (May 2026) · ' +
-            '<a href="https://www.nzf.org.nz" target="_blank" rel="noopener">nzf.org.nz</a>' +
-          '</div>' +
-        '</div>';
-    }
-
-    // ─── Initialise ─────────────────────────────────────
-    // Load DB first, then render — ensures medicine cards appear immediately
-    // on first selection rather than requiring a second interaction.
-    loadDatabase().then(render);
-
-    document.getElementById('status').addEventListener('change', render);
-    document.getElementById('smoke').addEventListener('change', render);
-    document.querySelectorAll('input[name="exacerbations"]').forEach(function(r) {
-      r.addEventListener('change', render);
-    });
-    document.querySelectorAll('input[name="symptoms"]').forEach(function(r) {
-      r.addEventListener('change', render);
-    });
-  </script>
-
-</body>
-</html>
+        return { main: db.TRIPLE.medicines, resc

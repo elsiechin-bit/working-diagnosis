@@ -1,17 +1,23 @@
 ---
-title: Chronic kidney disease — management in general practice, 2024 update
+title: Chronic kidney disease  -  management in general practice, 2024 update
 dek: Staging, the four pillars of nephroprotection, the SGLT2 inhibitor evidence that changed everything, managing complications, prescribing safely, and when to refer.
-date: 2026-05-03
+date: 2026-04-14
 category: Clinical Conditions
+summary:
+  - "The 2024 KDIGO framework defines four pillars of CKD management: RAS blockade, blood pressure below 120 mmHg (SPRINT target), SGLT2 inhibition, and finerenone for diabetic CKD."
+  - "DAPA-CKD established that SGLT2 inhibitors slow CKD progression in patients without diabetes; empagliflozin and dapagliflozin can be continued down to eGFR 20 for renoprotection."
+  - "Do not dual-block the renin-angiotensin system (ONTARGET evidence); if hyperkalaemia prevents RAS use, potassium binders (patiromer, ZS-9) can enable continuation of renoprotective therapy."
+  - "Nitrofurantoin is contraindicated at eGFR below 45; the SADMAN sick day rules apply -- withhold metformin, NSAIDs, diuretics, and ACEi/ARB during intercurrent illness."
+  - "After an acute kidney injury, arrange follow-up at three months with eGFR and urine ACR; refer to nephrology at eGFR below 30 or with evidence of rapid progression."
 ---
 
-The management of chronic kidney disease has undergone more substantive change in the past five years than in the preceding two decades. The SGLT2 inhibitor trials — CREDENCE, DAPA-CKD, and EMPA-KIDNEY — have established a nephroprotective drug class that works across the spectrum of CKD, including in patients without diabetes. The FLOW trial established GLP-1 receptor agonists as an additional nephroprotective option in diabetic kidney disease. Finerenone, a non-steroidal mineralocorticoid receptor antagonist, has added a fourth pillar to the treatment of diabetic CKD. The 2024 KDIGO guidelines have consolidated these findings into updated recommendations that now differ substantially from what was current practice in 2018.
+The management of chronic kidney disease has undergone more substantive change in the past five years than in the preceding two decades. The SGLT2 inhibitor trials  -  CREDENCE, DAPA-CKD, and EMPA-KIDNEY  -  have established a nephroprotective drug class that works across the spectrum of CKD, including in patients without diabetes. The FLOW trial established GLP-1 receptor agonists as an additional nephroprotective option in diabetic kidney disease. Finerenone, a non-steroidal mineralocorticoid receptor antagonist, has added a fourth pillar to the treatment of diabetic CKD. The 2024 KDIGO guidelines have consolidated these findings into updated recommendations that now differ substantially from what was current practice in 2018.
 
-CKD affects approximately 10 percent of the adult population in New Zealand, and most of it is managed entirely in general practice [1]. Māori and Pacific peoples bear a disproportionate burden, driven by higher rates of diabetes and hypertension in these populations and compounded by barriers to early diagnosis and treatment. The GP who manages CKD well — identifying it early, applying nephroprotective treatment systematically, managing complications before they become advanced, and referring at the right time — has a substantial impact on disease trajectory. The GP who is not current with the evidence may still be using a four-pillars framework that is missing two of the pillars.
+CKD affects approximately 10 percent of the adult population in New Zealand, and most of it is managed entirely in general practice [1]. Māori and Pacific peoples bear a disproportionate burden, driven by higher rates of diabetes and hypertension in these populations and compounded by barriers to early diagnosis and treatment. The GP who manages CKD well  -  identifying it early, applying nephroprotective treatment systematically, managing complications before they become advanced, and referring at the right time  -  has a substantial impact on disease trajectory. The GP who is not current with the evidence may still be using a four-pillars framework that is missing two of the pillars.
 
 This note covers staging and risk stratification, the evidence for current nephroprotective therapy, managing CKD complications, prescribing safely in impaired renal function, acute kidney injury in the community, when to refer, and the equity picture in New Zealand.
 
-## Part I — Staging, classification, and risk stratification
+## Part I  -  Staging, classification, and risk stratification
 
 The KDIGO classification system, now universally used, defines CKD as abnormalities of kidney structure or function present for more than three months, with implications for health [2]. It classifies patients on two axes.
 
@@ -40,11 +46,11 @@ The KDIGO heat map combines these axes into a four-colour risk stratification (l
 
 The standard monitoring panel at each review: eGFR, urine ACR, blood pressure, electrolytes (including potassium and bicarbonate), haemoglobin. From G3b: phosphate, calcium, PTH, 25-OH vitamin D, iron studies.
 
-## Part II — The four pillars of nephroprotection
+## Part II  -  The four pillars of nephroprotection
 
 **1. Renin-angiotensin system (RAS) blockade**
 
-ACE inhibitors and angiotensin receptor blockers remain the foundation of CKD treatment in patients with proteinuria. The evidence for nephroprotection — reduction in progression to dialysis and slowing of eGFR decline — is strongest in diabetic kidney disease with proteinuria (A2 and A3) and in non-diabetic proteinuric CKD [2]. Use in CKD without proteinuria (A1) is primarily for blood pressure management rather than specific nephroprotection.
+ACE inhibitors and angiotensin receptor blockers remain the foundation of CKD treatment in patients with proteinuria. The evidence for nephroprotection  -  reduction in progression to dialysis and slowing of eGFR decline  -  is strongest in diabetic kidney disease with proteinuria (A2 and A3) and in non-diabetic proteinuric CKD [2]. Use in CKD without proteinuria (A1) is primarily for blood pressure management rather than specific nephroprotection.
 
 Practical points:
 - An eGFR drop of up to 30% within 2–4 weeks of starting or increasing an ACEi/ARB is acceptable and does not indicate harm; it reflects the haemodynamic effect of reducing glomerular hypertension and is associated with better long-term outcomes. Only stop if the decline exceeds this threshold, is accompanied by hyperkalaemia (K+ >5.5–6.0 mmol/L), or occurs in the context of AKI.
@@ -55,15 +61,15 @@ Practical points:
 
 Target BP in CKD has been revised toward more aggressive control. KDIGO 2021 recommends a target systolic BP of <120 mmHg if tolerated, based on SPRINT trial sub-group analyses in CKD patients [4,5]. The previous standard of <130/80 is now a minimum rather than a target. This is a substantive change from previous guidelines and has not been universally adopted in practice.
 
-In clinical reality, achieving <120 mmHg systolic in CKD patients — who are often on multiple antihypertensives — may require careful titration and monitoring. The most important practical steps are: maximise the RAS blocker, consider adding a calcium channel blocker or diuretic as the second agent, and review adherence before adding further agents. White-coat hypertension is common; home blood pressure monitoring provides a more accurate picture of true ambulatory control.
+In clinical reality, achieving <120 mmHg systolic in CKD patients  -  who are often on multiple antihypertensives  -  may require careful titration and monitoring. The most important practical steps are: maximise the RAS blocker, consider adding a calcium channel blocker or diuretic as the second agent, and review adherence before adding further agents. White-coat hypertension is common; home blood pressure monitoring provides a more accurate picture of true ambulatory control.
 
-**3. SGLT2 inhibitors — the evidence base**
+**3. SGLT2 inhibitors  -  the evidence base**
 
 This is the most important update in CKD management in a generation, and the one most likely to represent a gap in current practice.
 
 The CREDENCE trial (2019) established that canagliflozin significantly reduced the composite of dialysis, kidney transplant, doubling of serum creatinine, and death from renal or cardiovascular causes in T2DM patients with CKD and proteinuria (ACR ≥30 mg/mmol, eGFR 30–90) [6]. The trial was stopped early due to overwhelming efficacy.
 
-The DAPA-CKD trial (2020) extended the evidence substantially. Dapagliflozin reduced kidney failure, sustained ≥50% eGFR decline, and death from kidney or cardiovascular causes compared to placebo — and crucially, this benefit was present in patients without diabetes (approximately one-third of the trial population) [7]. This was the first major trial to demonstrate nephroprotective benefit of an SGLT2 inhibitor in non-diabetic CKD.
+The DAPA-CKD trial (2020) extended the evidence substantially. Dapagliflozin reduced kidney failure, sustained ≥50% eGFR decline, and death from kidney or cardiovascular causes compared to placebo  -  and crucially, this benefit was present in patients without diabetes (approximately one-third of the trial population) [7]. This was the first major trial to demonstrate nephroprotective benefit of an SGLT2 inhibitor in non-diabetic CKD.
 
 The EMPA-KIDNEY trial (2022–2023) confirmed these findings with empagliflozin across a broad CKD population including patients with eGFR as low as 20 mL/min/1.73m² and very low levels of proteinuria, further extending the indication [8].
 
@@ -71,13 +77,13 @@ The EMPA-KIDNEY trial (2022–2023) confirmed these findings with empagliflozin 
 
 Key prescribing points for SGLT2i in CKD:
 - Do not initiate if eGFR <20 (insufficient filtration for the drug to act; risk of DKA in stressed state outweighs benefit)
-- If eGFR falls below 20 after initiation, the drug may be continued for cardiorenal protection — the "treat-through" approach — until dialysis is initiated
+- If eGFR falls below 20 after initiation, the drug may be continued for cardiorenal protection  -  the "treat-through" approach  -  until dialysis is initiated
 - SGLT2 inhibitors should be held during intercurrent illness with significant dehydration risk, surgical procedures, or prolonged fasting (euglycaemic DKA risk)
 - In patients with T2DM, SGLT2i provide cardiovascular and renal benefit; glycaemic efficacy diminishes as eGFR falls (eGFR <45 is below the threshold for glycaemic efficacy but not for cardiorenal benefit)
 
 **Pharmac funding in New Zealand:** dapagliflozin (Forxiga) and empagliflozin (Jardiance) have received funded listings in NZ. The specific indications and any criteria for the CKD listing should be confirmed against current Pharmac schedules, as funded indications change. As of mid-2020s, dapagliflozin has funded indications for both T2DM and CKD with proteinuria.
 
-**4. Finerenone — the fourth pillar in diabetic CKD**
+**4. Finerenone  -  the fourth pillar in diabetic CKD**
 
 Finerenone is a non-steroidal, selective mineralocorticoid receptor antagonist (MRA) with a different selectivity profile from spironolactone and eplerenone. The FIDELIO-DKD (2020) and FIGARO-DKD (2021) trials, combined in the FIDELITY analysis, demonstrated significant reduction in kidney and cardiovascular events in T2DM patients with CKD on maximally tolerated RAS blockade [9,10].
 
@@ -85,15 +91,15 @@ Compared to steroidal MRAs, finerenone has a lower risk of gynaecomastia and a m
 
 Finerenone (Kerendia) has received regulatory approval in multiple jurisdictions. Pharmac funding in New Zealand should be verified against the current schedule; availability may be via Special Authority or may not yet be funded. In patients where finerenone is indicated but not funded, the clinical conversation about access may be necessary.
 
-## Part III — GLP-1 receptor agonists in diabetic kidney disease
+## Part III  -  GLP-1 receptor agonists in diabetic kidney disease
 
 The FLOW trial (2024) examined semaglutide in patients with T2DM and CKD (eGFR 50–75 with ACR ≥300 mg/g, or eGFR 25–50 with ACR ≥100 mg/g). Semaglutide significantly reduced the composite kidney endpoint, with a relative risk reduction of approximately 24% for the primary kidney outcome [11]. The trial was also stopped early for efficacy.
 
-This establishes semaglutide — and potentially the GLP-1 class — as having nephroprotective effects beyond glycaemic control, though the mechanism is less well-characterised than for SGLT2 inhibitors and may include reduction in body weight, blood pressure, and inflammation. GLP-1 receptor agonists are now considered part of the management algorithm for high-risk diabetic CKD patients, used alongside SGLT2 inhibitors rather than instead of them.
+This establishes semaglutide  -  and potentially the GLP-1 class  -  as having nephroprotective effects beyond glycaemic control, though the mechanism is less well-characterised than for SGLT2 inhibitors and may include reduction in body weight, blood pressure, and inflammation. GLP-1 receptor agonists are now considered part of the management algorithm for high-risk diabetic CKD patients, used alongside SGLT2 inhibitors rather than instead of them.
 
 GLP-1 receptor agonists do not require dose reduction in CKD and are generally safe through most CKD stages; renal function monitoring is still appropriate given the importance of hydration status.
 
-## Part IV — Managing CKD complications
+## Part IV  -  Managing CKD complications
 
 **Cardiovascular disease.** CKD is an independent and powerful cardiovascular risk factor. From G3 onwards, patients should be considered at high to very high cardiovascular risk regardless of their traditional Framingham-based risk score; many calculators underestimate CV risk in CKD. Statin therapy is recommended for most CKD patients not on dialysis [2]. Aspirin for primary prevention follows the same evolving guidelines as the general population; for secondary prevention, CKD does not alter the indication. SGLT2 inhibitors and GLP-1 agonists provide additional cardiovascular risk reduction in diabetic CKD beyond their nephroprotective effects.
 
@@ -107,15 +113,15 @@ GLP-1 receptor agonists do not require dose reduction in CKD and are generally s
 
 **CKD-mineral bone disease (CKD-MBD).** Reduced active vitamin D, phosphate retention, secondary hyperparathyroidism, and disordered bone metabolism begin from G3b. Assessment: phosphate, calcium, PTH, 25-OH vitamin D from G3b annually (more frequently in G4–5). Management:
 - Correct 25-OH vitamin D deficiency (colecalciferol supplementation)
-- Dietary phosphate restriction and phosphate binders from G4 (calcium carbonate is commonly used but calcium load matters if calcification is a concern; non-calcium binders such as sevelamer may be preferred in some patients — nephrology input appropriate from G4)
+- Dietary phosphate restriction and phosphate binders from G4 (calcium carbonate is commonly used but calcium load matters if calcification is a concern; non-calcium binders such as sevelamer may be preferred in some patients  -  nephrology input appropriate from G4)
 - Active vitamin D analogues (calcitriol, alfacalcidol) for secondary hyperparathyroidism: specialist decision
 - Calcimimetics (cinacalcet) for refractory secondary or tertiary hyperparathyroidism: specialist territory
 
-**Hyperkalemia.** Elevated potassium is a common complication of CKD, RAS blockade, and SGLT2i (though SGLT2i have less hyperkalaemia risk than expected). Management principles: dietary potassium restriction, review and if possible stop potassium-raising medications (trimethoprim, NSAIDs, potassium supplements), and — importantly — consider whether RAS blockade should be continued with potassium binder support rather than stopped.
+**Hyperkalemia.** Elevated potassium is a common complication of CKD, RAS blockade, and SGLT2i (though SGLT2i have less hyperkalaemia risk than expected). Management principles: dietary potassium restriction, review and if possible stop potassium-raising medications (trimethoprim, NSAIDs, potassium supplements), and  -  importantly  -  consider whether RAS blockade should be continued with potassium binder support rather than stopped.
 
-Patiromer (Veltassa) and sodium zirconium cyclosilicate (Lokelma, ZS-9) are newer, better-tolerated potassium binders that can allow continuation of RAS blockade in patients who would otherwise need to stop it due to hyperkalaemia. This is a substantive clinical advance — stopping an ACEi/ARB because of hyperkalaemia when a potassium binder would permit continuation is not best practice. Pharmac funding status for these agents should be checked, as funding may require Special Authority criteria.
+Patiromer (Veltassa) and sodium zirconium cyclosilicate (Lokelma, ZS-9) are newer, better-tolerated potassium binders that can allow continuation of RAS blockade in patients who would otherwise need to stop it due to hyperkalaemia. This is a substantive clinical advance  -  stopping an ACEi/ARB because of hyperkalaemia when a potassium binder would permit continuation is not best practice. Pharmac funding status for these agents should be checked, as funding may require Special Authority criteria.
 
-## Part V — Prescribing safely in CKD
+## Part V  -  Prescribing safely in CKD
 
 CKD changes the pharmacokinetics of a large number of drugs. The key principle is that reduced GFR reduces renal clearance of drugs and their metabolites, increasing the risk of accumulation and toxicity. The following are the most clinically important adjustments in general practice:
 
@@ -124,42 +130,42 @@ CKD changes the pharmacokinetics of a large number of drugs. The key principle i
 - *Nitrofurantoin*: contraindicated at eGFR <45 mL/min. At reduced eGFR, it neither achieves therapeutic urinary concentrations (so is ineffective) nor is adequately cleared (so is toxic). Using nitrofurantoin for UTI in a patient with G3b CKD is a common prescribing error.
 - *Metformin*: risk of lactic acidosis in acute illness or contrast exposure at reduced eGFR. Current guidance: continue at eGFR 30–45 with care, halve dose consideration; stop at eGFR <30; hold before iodinated contrast and restart 48 hours after if eGFR is stable.
 - *Colchicine*: accumulates in renal failure; reduce dose significantly in G3–4; avoid in G5.
-- *Some anticoagulants*: dabigatran is 80% renally cleared and is contraindicated at eGFR <30; rivaroxaban, apixaban, and edoxaban all require dose adjustment — apixaban is generally the preferred DOAC in CKD. Warfarin does not require dose reduction for renal function per se but CKD increases bleeding risk.
+- *Some anticoagulants*: dabigatran is 80% renally cleared and is contraindicated at eGFR <30; rivaroxaban, apixaban, and edoxaban all require dose adjustment  -  apixaban is generally the preferred DOAC in CKD. Warfarin does not require dose reduction for renal function per se but CKD increases bleeding risk.
 
 **Drugs requiring dose reduction:**
 - *Gabapentin and pregabalin*: almost entirely renally cleared; dose reduction required from G3a; significant toxicity (sedation, confusion, falls) at standard doses in CKD.
 - *Allopurinol*: reduce starting dose; titrate more cautiously in G3b and below.
-- *Opioids*: morphine's active metabolite (morphine-6-glucuronide) accumulates in CKD; prefer opioids with less problematic metabolite profiles in advanced CKD (fentanyl, hydromorphone — specialist guidance for severe CKD).
+- *Opioids*: morphine's active metabolite (morphine-6-glucuronide) accumulates in CKD; prefer opioids with less problematic metabolite profiles in advanced CKD (fentanyl, hydromorphone  -  specialist guidance for severe CKD).
 - *Digoxin*: renally cleared; reduced dose required; monitor levels.
-- *Trimethoprim/co-trimoxazole*: trimethoprim blocks tubular creatinine secretion, raising serum creatinine without affecting true GFR — this effect is often mistaken for worsening CKD. More importantly, trimethoprim also blocks potassium excretion and can cause clinically significant hyperkalaemia in CKD, particularly in patients on RAS blockers. Use with caution from G3b; consider alternatives.
+- *Trimethoprim/co-trimoxazole*: trimethoprim blocks tubular creatinine secretion, raising serum creatinine without affecting true GFR  -  this effect is often mistaken for worsening CKD. More importantly, trimethoprim also blocks potassium excretion and can cause clinically significant hyperkalaemia in CKD, particularly in patients on RAS blockers. Use with caution from G3b; consider alternatives.
 
 **Iodinated contrast and CKD:** The risk of contrast-induced nephropathy (CIN) with modern low- and iso-osmolality agents is lower than historical estimates, but remains relevant in patients with eGFR <45 and particularly <30 [12]. Precautions: ensure adequate hydration before and after, hold NSAIDs and metformin, use the lowest necessary contrast volume, and check eGFR 48–72 hours after.
 
 **Gadolinium contrast in MRI:** nephrogenic systemic fibrosis (NSF) is a risk with older group 1 gadolinium agents in advanced CKD (eGFR <30). Modern macrocyclic agents (gadobutrol, gadoterate, gadoteridol) have a substantially safer profile. Standard linear gadolinium agents should be avoided in G4–5 CKD; macrocyclic agents may be used with caution. Radiology departments should be applying appropriate protocols, but awareness of the patient's CKD stage before ordering contrast-enhanced MRI is appropriate.
 
-## Part VI — Acute kidney injury in the community
+## Part VI  -  Acute kidney injury in the community
 
 Acute kidney injury (AKI) is defined as a rise in creatinine of ≥26.5 µmol/L within 48 hours, a rise to ≥1.5× the known or estimated baseline within 7 days, or urine output <0.5 mL/kg/hr for ≥6 hours [13]. Community-presenting AKI is commonly pre-renal (volume depletion, reduced cardiac output, NSAID use) or intrinsic (drug-induced, infection-related) and is managed by addressing the precipitant.
 
-**The sick day rule — the "SADMAN" approach.** Patients with CKD (and their family members/caregivers) benefit from a pre-emptive plan for intercurrent illness. The pneumonic SADMAN lists the drugs to hold during episodes of significant vomiting, diarrhoea, fever, or reduced oral intake:
+**The sick day rule  -  the "SADMAN" approach.** Patients with CKD (and their family members/caregivers) benefit from a pre-emptive plan for intercurrent illness. The pneumonic SADMAN lists the drugs to hold during episodes of significant vomiting, diarrhoea, fever, or reduced oral intake:
 
-- **S** — Sulfonamides/trimethoprim
-- **A** — ACE inhibitors
-- **D** — Diuretics
-- **M** — Metformin
-- **A** — ARBs
-- **N** — NSAIDs (and *add* SGLT2 inhibitors to this list, as they should also be held)
+- **S**  -  Sulfonamides/trimethoprim
+- **A**  -  ACE inhibitors
+- **D**  -  Diuretics
+- **M**  -  Metformin
+- **A**  -  ARBs
+- **N**  -  NSAIDs (and *add* SGLT2 inhibitors to this list, as they should also be held)
 
 This should be documented in the patient's records, explained verbally at an appropriate consultation, and ideally provided as a written reference. Emergency department presentations with AKI in patients on these medications due to gastroenteritis are a largely preventable problem.
 
-**AKI as a CKD risk factor:** An episode of AKI — even if apparently fully resolved — accelerates long-term CKD progression and is an independent risk factor for future CKD [13]. All patients who have had significant AKI should have eGFR and ACR checked at 3 months post-recovery and then monitored as per the KDIGO heat map. This follow-up is often not arranged, and the patient who had "a bit of a kidney problem when they were in hospital" may not have had their long-term renal function adequately assessed.
+**AKI as a CKD risk factor:** An episode of AKI  -  even if apparently fully resolved  -  accelerates long-term CKD progression and is an independent risk factor for future CKD [13]. All patients who have had significant AKI should have eGFR and ACR checked at 3 months post-recovery and then monitored as per the KDIGO heat map. This follow-up is often not arranged, and the patient who had "a bit of a kidney problem when they were in hospital" may not have had their long-term renal function adequately assessed.
 
-## Part VII — When to refer to nephrology
+## Part VII  -  When to refer to nephrology
 
 The following indications warrant nephrology referral:
 
 *Timely referral (within weeks to months):*
-- eGFR <30 (G4) — for pre-dialysis education, RRT modality planning, and vascular access if haemodialysis anticipated
+- eGFR <30 (G4)  -  for pre-dialysis education, RRT modality planning, and vascular access if haemodialysis anticipated
 - Rapid progression: eGFR decline >5 mL/min/1.73m² per year, or loss of >25% eGFR within 12 months
 - Proteinuria ACR >30 mg/mmol of uncertain cause, particularly if not explained by diabetes or hypertension
 - Suspected glomerulonephritis (haematuria with proteinuria, dysmorphic red cells on urine microscopy, or a clinical picture suggesting primary glomerular disease)
@@ -172,29 +178,29 @@ The following indications warrant nephrology referral:
 - Severe or symptomatic hyperkalaemia not controlled with conservative measures
 - Unexplained AKI not responding to initial management
 
-*Shared care from G3b:* many patients with G3b and above benefit from periodic nephrology review even if not urgently unwell — co-management of CKD-MBD, anaemia, and complex medication decisions.
+*Shared care from G3b:* many patients with G3b and above benefit from periodic nephrology review even if not urgently unwell  -  co-management of CKD-MBD, anaemia, and complex medication decisions.
 
-**Starting the conversation about RRT.** Patients approaching G5 who have not yet begun pre-dialysis education are late to the conversation. Ideally, RRT options — peritoneal dialysis, home haemodialysis, satellite haemodialysis, conservative kidney management — should be explored well before dialysis is imminent. New Zealand has a relatively strong home dialysis culture compared to many countries, and presenting the full range of options is both a clinical and an ethical obligation. For patients who have multiple comorbidities, advanced age, or who decline dialysis, conservative kidney management (managing symptoms and complications without renal replacement) is a legitimate and dignified choice that should be presented honestly.
+**Starting the conversation about RRT.** Patients approaching G5 who have not yet begun pre-dialysis education are late to the conversation. Ideally, RRT options  -  peritoneal dialysis, home haemodialysis, satellite haemodialysis, conservative kidney management  -  should be explored well before dialysis is imminent. New Zealand has a relatively strong home dialysis culture compared to many countries, and presenting the full range of options is both a clinical and an ethical obligation. For patients who have multiple comorbidities, advanced age, or who decline dialysis, conservative kidney management (managing symptoms and complications without renal replacement) is a legitimate and dignified choice that should be presented honestly.
 
-## Part VIII — Equity: CKD in Māori and Pacific populations
+## Part VIII  -  Equity: CKD in Māori and Pacific populations
 
 CKD is not equitably distributed in New Zealand, and the inequity is substantial. Māori and Pacific peoples are two to three times more likely to develop end-stage kidney disease requiring dialysis than non-Māori, non-Pacific New Zealanders [14]. The primary drivers are higher prevalence of type 2 diabetes and hypertension in these populations, but barriers to early detection, access to specialist care, and uptake of evidence-based treatment also contribute.
 
 The inequity in dialysis rates translates into an inequity in transplant access. Māori and Pacific patients are underrepresented on the kidney transplant waiting list relative to their dialysis burden, a disparity that reflects multiple factors including cross-matching challenges, differing rates of live donor transplant, and access issues.
 
 The practical implications for general practice:
-- Annual eGFR and ACR screening for all patients with diabetes, hypertension, or cardiovascular disease — this is not a specialist function and should be embedded in GP chronic disease management
+- Annual eGFR and ACR screening for all patients with diabetes, hypertension, or cardiovascular disease  -  this is not a specialist function and should be embedded in GP chronic disease management
 - Earlier proactive intervention in high-risk populations rather than waiting for symptomatic or advanced disease
-- Cultural competence in CKD conversations — home dialysis may be particularly difficult for some Māori and Pacific patients living in multigenerational households or in rural settings without the physical space or infrastructure; conservative management decisions deserve the same respect in all patients
+- Cultural competence in CKD conversations  -  home dialysis may be particularly difficult for some Māori and Pacific patients living in multigenerational households or in rural settings without the physical space or infrastructure; conservative management decisions deserve the same respect in all patients
 - Awareness that the burdens of CKD management (dietary restrictions, fluid restrictions, multiple medications, dialysis schedules) fall unevenly across socioeconomic and cultural lines, and that treatment plans need to be negotiated, not prescribed
 
 ## A working summary
 
 The landscape has changed. The core of CKD management is now a four-pillar framework for patients with diabetic CKD (RAS blockade, blood pressure control, SGLT2 inhibitors, finerenone), and a three-pillar framework for non-diabetic CKD with proteinuria (RAS blockade, BP control, SGLT2 inhibitors). GLP-1 receptor agonists are a fifth arm in T2DM with high-risk CKD.
 
-The most common gap in current practice is failure to initiate SGLT2 inhibitors in eligible CKD patients — either because of the prior habit of reserving them for glycaemic management at higher eGFRs, or uncertainty about funding indications, or unfamiliarity with the DAPA-CKD evidence for non-diabetic CKD.
+The most common gap in current practice is failure to initiate SGLT2 inhibitors in eligible CKD patients  -  either because of the prior habit of reserving them for glycaemic management at higher eGFRs, or uncertainty about funding indications, or unfamiliarity with the DAPA-CKD evidence for non-diabetic CKD.
 
-The most common monitoring gap is not checking urine ACR — managing a patient's eGFR without knowing their albuminuria category is managing without half the clinical picture.
+The most common monitoring gap is not checking urine ACR  -  managing a patient's eGFR without knowing their albuminuria category is managing without half the clinical picture.
 
 The most important prescribing warning is nitrofurantoin below eGFR 45 and NSAIDs in G3b and above.
 

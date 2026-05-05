@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTS-6 Carpal Tunnel Score — Working Diagnosis</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper:       #F5F1E8;
+  --paper-warm:  #EDE7D8;
+  --paper-deep:  #E4DBC4;
+  --ink:         #1A1F1C;
+  --ink-soft:    #3A4540;
+  --ink-mute:    #6B7A75;
+  --faint:       #A39E8E;
+  --rule:        #D9D1BD;
+  --green:       #2F6B5C;
+  --green-deep:  #1F4A3F;
+  --ochre:       #B8714F;
+
+  /* probability tiers */
+  --low:         #2F6B5C;
+  --low-l:       #E4EFE9;
+  --mid:         #B8714F;
+  --mid-l:       #F4E5D6;
+  --high:        #9A2A2A;
+  --high-l:      #F2DCDC;
+
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+/* ── Masthead ── */
+.wd-masthead {
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 24px 18px;
+  background: var(--paper);
+}
+.wd-masthead-row {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.wd-brand {
+  font-family: var(--font-d);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.wd-brand em { font-style: italic; color: var(--green); }
+.wd-back {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.wd-back:hover { color: var(--green); }
+
+/* ── Tool header ── */
+.hdr {
+  background: var(--paper);
+  padding: 48px 24px 32px;
+  border-bottom: 1px solid var(--rule);
+}
+.hdr-inner { max-width: 1080px; margin: 0 auto; }
+.hdr-eye {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 18px;
+}
+.hdr-eye::before { content: "❍ "; color: var(--green); letter-spacing: 0; margin-right: 4px; }
+.hdr-title {
+  font-family: var(--font-d);
+  font-weight: 500;
+  font-size: clamp(36px, 5vw, 52px);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: var(--ink);
+}
+.hdr-title em { font-style: italic; color: var(--green); font-weight: 500; }
+.hdr-sub {
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin-top: 18px;
+  line-height: 1.55;
+  max-width: 720px;
+}
+
+/* ── Main layout ── */
+.tool-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 36px 24px 64px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 780px) {
+  .tool-wrap { grid-template-columns: 1fr; }
+  .tool-sidebar { order: -1; }
+}
+
+/* ── Section head ── */
+.sh {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sh::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+/* ── Context card ── */
+.ctx-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+.ctx-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 520px) { .ctx-row { grid-template-columns: 1fr; } }
+.ctx-group label {
+  font-family: var(--font-m);
+  font-size: 0.62rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: block;
+  margin-bottom: 6px;
+}
+.ctx-group select {
+  width: 100%;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 9px 12px;
+  font-family: var(--font-b);
+  font-size: 0.93rem;
+  color: var(--ink);
+  background: var(--paper);
+  outline: none;
+  transition: border-color 0.15s;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7A75' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+.ctx-group select:focus { border-color: var(--green); }
+
+/* ── Item cards ── */
+.item-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--rule);
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.15s, border-left-color 0.15s;
+  user-select: none;
+}
+.item-card:hover { box-shadow: 0 3px 12px -6px rgba(26,31,28,0.18); }
+.item-card.active {
+  border-left-color: var(--green);
+  background: #EBF2EE;
+}
+.item-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+}
+.item-check {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--rule);
+  border-radius: 3px;
+  background: var(--paper);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.item-card.active .item-check {
+  background: var(--green);
+  border-color: var(--green);
+}
+.item-check svg { display: none; }
+.item-card.active .item-check svg { display: block; }
+.item-content { flex: 1; }
+.item-name {
+  font-family: var(--font-d);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.item-note {
+  font-size: 0.88rem;
+  color: var(--ink-mute);
+  line-height: 1.45;
+}
+.item-weight {
+  font-family: var(--font-m);
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  color: var(--ink-mute);
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 3px 9px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.item-card.active .item-weight {
+  color: var(--green-deep);
+  background: #D0E8DC;
+  border-color: rgba(47,107,92,0.3);
+}
+.item-type {
+  font-family: var(--font-m);
+  font-size: 0.58rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-left: 4px;
+}
+
+/* ── Sidebar ── */
+.tool-sidebar { position: sticky; top: 24px; }
+
+/* Score card */
+.score-card {
+  background: var(--ink);
+  border-radius: 4px;
+  padding: 26px 24px;
+  margin-bottom: 16px;
+  color: var(--paper);
+}
+.score-label {
+  font-family: var(--font-m);
+  font-size: 0.62rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #B8B5AC;
+  margin-bottom: 10px;
+}
+.score-number {
+  font-family: var(--font-d);
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 4px;
+  transition: color 0.25s;
+}
+.score-max {
+  font-family: var(--font-m);
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  color: #6B7A75;
+  margin-bottom: 20px;
+}
+.score-bar-track {
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--green);
+  width: 0%;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+.result-band {
+  border-radius: 3px;
+  padding: 14px 16px;
+  transition: all 0.25s;
+}
+.result-band.tier-nil {
+  background: rgba(255,255,255,0.06);
+}
+.result-band.tier-low {
+  background: rgba(47,107,92,0.22);
+}
+.result-band.tier-mid {
+  background: rgba(184,113,79,0.22);
+}
+.result-band.tier-high {
+  background: rgba(154,42,42,0.22);
+}
+.result-tier {
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: #D9D1BD;
+}
+.result-tier.tier-nil  { color: #6B7A75; }
+.result-tier.tier-low  { color: #7BBFAA; }
+.result-tier.tier-mid  { color: #D9A07A; }
+.result-tier.tier-high { color: #D98080; }
+.result-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #B8B5AC;
+}
+.result-text strong { color: #D9D1BD; }
+.result-text.tier-low  strong { color: #7BBFAA; }
+.result-text.tier-mid  strong { color: #D9A07A; }
+.result-text.tier-high strong { color: #D98080; }
+
+/* Items active summary */
+.items-active-count {
+  font-family: var(--font-m);
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #4A5550;
+  margin-top: 14px;
+  text-align: center;
+}
+
+/* Reset button */
+.btn-reset {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-mute);
+  padding: 10px;
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: 16px;
+}
+.btn-reset:hover { border-color: var(--ink); color: var(--ink); }
+
+/* Cutoff guide */
+.cutoff-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+.cutoff-title {
+  font-family: var(--font-m);
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 12px;
+}
+.cutoff-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.88rem;
+}
+.cutoff-row:last-child { border-bottom: none; padding-bottom: 0; }
+.cutoff-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cutoff-score {
+  font-family: var(--font-m);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+  width: 36px;
+  flex-shrink: 0;
+}
+.cutoff-desc { color: var(--ink-soft); line-height: 1.4; }
+
+/* Evidentiary note */
+.evbanner {
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ochre);
+  border-radius: 0 3px 3px 0;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.evbanner strong { color: var(--ink); font-weight: 500; }
+
+/* ── Footer ── */
+.wd-footer {
+  margin-top: 48px;
+  padding: 36px 24px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-m);
+  font-size: 0.72rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.5px;
+}
+.wd-footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.wd-footer-inner a { color: var(--ink-soft); }
+.wd-footer-inner a:hover { color: var(--green); }
+.refs {
+  font-family: var(--font-m);
+  font-size: 0.63rem;
+  color: var(--faint);
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  margin-top: 22px;
+  max-width: 680px;
+}
+.refs span { color: var(--ochre); }
+
+.disc {
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  color: var(--faint);
+  text-align: center;
+  padding: 14px 0 6px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 680px) {
+  .hdr-title { font-size: 1.8rem; }
+  .tool-wrap { padding: 24px 18px 48px; gap: 24px; }
+  .tool-sidebar { position: static; }
+}
+</style>
+</head>
+<body>
+
+<header class="wd-masthead">
+  <div class="wd-masthead-row">
+    <a href="/" class="wd-brand">Working <em>Diagnosis</em>.</a>
+    <a href="/" class="wd-back">← Back to homepage</a>
+  </div>
+</header>
+
+<div class="hdr">
+  <div class="hdr-inner">
+    <div class="hdr-eye">Musculoskeletal · GP Tools</div>
+    <h1 class="hdr-title">CTS-6 <em>Scoring</em> Tool.</h1>
+    <p class="hdr-sub">The Kamath &amp; Stothard six-item weighted score for estimating the probability of carpal tunnel syndrome. Intended for GP consultation support — not patient self-assessment. Nerve conduction studies remain the gold standard for confirmation.</p>
+  </div>
+</div>
+
+<div class="tool-wrap">
+
+  <!-- ── LEFT COLUMN ── -->
+  <div class="tool-main">
+
+    <div class="evbanner">
+      <strong>Clinical context.</strong> Score each item for the hand being assessed. Two items are history; four are examination findings. A score &gt;12 carries ~80% probability of CTS on NCS; a score ≤5 makes CTS unlikely. For bilateral symptoms, score each hand separately.
+    </div>
+
+    <!-- Context inputs -->
+    <div class="sh">Context</div>
+    <div class="ctx-card">
+      <div class="ctx-row">
+        <div class="ctx-group">
+          <label>Hand assessed</label>
+          <select id="hand-select">
+            <option value="">— select —</option>
+            <option value="right">Right</option>
+            <option value="left">Left</option>
+            <option value="bilateral">Bilateral (scoring dominant)</option>
+          </select>
+        </div>
+        <div class="ctx-group">
+          <label>Dominant hand</label>
+          <select id="dom-select">
+            <option value="">— select —</option>
+            <option value="right">Right-handed</option>
+            <option value="left">Left-handed</option>
+            <option value="ambidextrous">Ambidextrous</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- History items -->
+    <div class="sh">History</div>
+
+    <div class="item-card" data-weight="4.0" data-id="0" role="checkbox" aria-checked="false" tabindex="0">
+      <div class="item-top">
+        <div class="item-check">
+          <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+            <path d="M1.5 5L4.5 8L10.5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="item-content">
+          <div class="item-name">Nocturnal numbness <span class="item-type">Hx</span></div>
+          <div class="item-note">Numbness or tingling at night; wakes the patient or present on waking. Classic "shaking out the hand" pattern.</div>
+        </div>
+        <div class="item-weight">4.0 pts</div>
+      </div>
+    </div>
+
+    <div class="item-card" data-weight="3.5" data-id="1" role="checkbox" aria-checked="false" tabindex="0">
+      <div class="item-top">
+        <div class="item-check">
+          <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+            <path d="M1.5 5L4.5 8L10.5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="item-content">
+          <div class="item-name">Numbness in median nerve distribution <span class="item-type">Hx</span></div>
+          <div class="item-note">Symptoms primarily in thumb, index, middle, and radial ring finger (volar surface). Symptoms outside this distribution reduce likelihood.</div>
+        </div>
+        <div class="item-weight">3.5 pts</div>
+      </div>
+    </div>
+
+    <!-- Examination items -->
+    <div class="sh" style="margin-top:8px;">Examination</div>
+
+    <div class="item-card" data-weight="5.0" data-id="2" role="checkbox" aria-checked="false" tabindex="0">
+      <div class="item-top">
+        <div class="item-check">
+          <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+            <path d="M1.5 5L4.5 8L10.5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="item-content">
+          <div class="item-name">Thenar muscle weakness or atrophy <span class="item-type">Exam</span></div>
+          <div class="item-note">Abductor pollicis brevis strength ≤4/5 on MRC scale, or visible wasting of the thenar eminence. Late finding — indicates significant nerve compromise.</div>
+        </div>
+        <div class="item-weight">5.0 pts</div>
+      </div>
+    </div>
+
+    <div class="item-card" data-weight="5.0" data-id="3" role="checkbox" aria-checked="false" tabindex="0">
+      <div class="item-top">
+        <div class="item-check">
+          <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+            <path d="M1.5 5L4.5 8L10.5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="item-content">
+          <div class="item-name">Positive Phalen test <span class="item-type">Exam</span></div>
+          <div class="item-note">Wrist held in full flexion for 60 seconds reproduces numbness or tingling in the median nerve distribution. Sensitivity ~68–80%, specificity ~59–73%.</div>
+        </div>
+        <div class="item-weight">5.0 pts</div>
+      </div>
+    </div>
+
+    <div class="item-card" data-weight="4.0" data-id="4" role="checkbox" aria-checked="false" tabindex="0">
+      <div class="item-top">
+        <div class="item-check">
+          <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+            <path d="M1.5 5L4.5 8L10.5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="item-content">
+          <div class="item-name">Positive Tinel sign <span class="item-type">Exam</span></div>
+          <div class="item-note">Percussion over the carpal tunnel at the wrist reproduces tingling in the median nerve distribution. Sensitivity ~50–58%, specificity ~67–77%.</div>
+        </div>
+        <div class="item-weight">4.0 pts</div>
+      </div>
+    </div>
+
+    <div class="item-card" data-weight="4.5" data-id="5" role="checkbox" aria-checked="false" tabindex="0">
+      <div class="item-top">
+        <div class="item-check">
+          <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+            <path d="M1.5 5L4.5 8L10.5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="item-content">
+          <div class="item-name">Loss of 2-point discrimination <span class="item-type">Exam</span></div>
+          <div class="item-note">Static 2PD &gt;5 mm on the volar pulp of index or middle finger (median nerve territory). Indicates significant sensory nerve fibre loss; least reliable item inter-rater.</div>
+        </div>
+        <div class="item-weight">4.5 pts</div>
+      </div>
+    </div>
+
+    <!-- References -->
+    <div class="refs">
+      <span>References —</span> Kamath V &amp; Stothard J. A clinical questionnaire for the diagnosis of carpal tunnel syndrome. <em>J Hand Surg Br.</em> 2003;28(5):455-9. · Atroshi I et al. Diagnostic properties of nerve conduction tests in population-based carpal tunnel syndrome. <em>BMC Musculoskelet Disord.</em> 2003;4:9. · Graham B et al. Validity and responsiveness of the CTS-6. <em>J Hand Surg Am.</em> 2006. · Meems M et al. Sensitivity, specificity, and reliability of CTS-6 administered by medical assistants. <em>Am J Surg.</em> 2024.
+    </div>
+
+    <div class="disc">For GP consultation support only · Not for patient self-assessment · Clinical findings must be interpreted in context</div>
+  </div>
+
+  <!-- ── RIGHT COLUMN (sidebar) ── -->
+  <div class="tool-sidebar">
+
+    <div class="score-card">
+      <div class="score-label">CTS-6 Score</div>
+      <div class="score-number" id="score-display">0</div>
+      <div class="score-max">/ 26.0 points</div>
+      <div class="score-bar-track">
+        <div class="score-bar-fill" id="score-bar"></div>
+      </div>
+      <div class="result-band tier-nil" id="result-band">
+        <div class="result-tier tier-nil" id="result-tier">No items selected</div>
+        <div class="result-text tier-nil" id="result-text">Tick positive findings above to generate a probability estimate.</div>
+      </div>
+      <div class="items-active-count" id="items-count">0 of 6 items positive</div>
+    </div>
+
+    <button class="btn-reset" id="btn-reset">↺ Reset all items</button>
+
+    <div class="cutoff-card">
+      <div class="cutoff-title">Score interpretation</div>
+      <div class="cutoff-row">
+        <div class="cutoff-dot" style="background:var(--low);"></div>
+        <div class="cutoff-score">≤ 5</div>
+        <div class="cutoff-desc">CTS unlikely. NCS probably not required for diagnosis.</div>
+      </div>
+      <div class="cutoff-row">
+        <div class="cutoff-dot" style="background:var(--mid);"></div>
+        <div class="cutoff-score">6–12</div>
+        <div class="cutoff-desc">Equivocal. ~25% probability. NCS may be useful.</div>
+      </div>
+      <div class="cutoff-row">
+        <div class="cutoff-dot" style="background:var(--high);"></div>
+        <div class="cutoff-score">&gt; 12</div>
+        <div class="cutoff-desc">Likely CTS. ~80% probability. Consider treatment or pre-surgical NCS.</div>
+      </div>
+    </div>
+
+    <div class="cutoff-card">
+      <div class="cutoff-title">Complementary tools</div>
+      <div class="cutoff-row" style="align-items:flex-start;">
+        <div class="cutoff-dot" style="background:var(--faint); margin-top:5px;"></div>
+        <div class="cutoff-desc"><strong style="font-family:var(--font-m);font-size:0.68rem;display:block;margin-bottom:3px;">Katz Hand Diagram</strong>Classic / Probable / Possible / Unlikely classification. Highest accuracy of all clinical instruments when correctly categorised.</div>
+      </div>
+      <div class="cutoff-row" style="align-items:flex-start;">
+        <div class="cutoff-dot" style="background:var(--faint); margin-top:5px;"></div>
+        <div class="cutoff-desc"><strong style="font-family:var(--font-m);font-size:0.68rem;display:block;margin-bottom:3px;">BCTQ / Boston CTS-Q</strong>11-item symptom severity scale + 8-item functional scale. Better suited to monitoring treatment response than diagnosis.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="wd-footer">
+  <div class="wd-footer-inner">
+    <span>Working Diagnosis — GP Tools · CTS-6 Scoring Tool</span>
+    <a href="/">workingdiagnosis.xyz</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const items = document.querySelectorAll('.item-card');
+  const scoreDisplay = document.getElementById('score-display');
+  const scoreBar = document.getElementById('score-bar');
+  const resultBand = document.getElementById('result-band');
+  const resultTier = document.getElementById('result-tier');
+  const resultText = document.getElementById('result-text');
+  const itemsCount = document.getElementById('items-count');
+  const btnReset = document.getElementById('btn-reset');
+
+  const TIERS = {
+    nil: {
+      band: 'tier-nil',
+      tier: 'No items selected',
+      text: 'Tick positive findings above to generate a probability estimate.',
+      barColor: '#4A5550',
+    },
+    low: {
+      band: 'tier-low',
+      tier: 'CTS Unlikely',
+      text: '<strong>Score ≤ 5.</strong> Carpal tunnel syndrome is less likely. Review the differential (cervical radiculopathy C6/C7, thoracic outlet syndrome, peripheral neuropathy, de Quervain\'s) and consider whether the clinical picture warrants nerve conduction studies.',
+      barColor: '#2F6B5C',
+    },
+    mid: {
+      band: 'tier-mid',
+      tier: 'Equivocal — ~25% probability',
+      text: '<strong>Score 6–12.</strong> Intermediate probability. Nerve conduction studies are likely to be helpful to confirm or exclude CTS before committing to treatment or surgical referral.',
+      barColor: '#B8714F',
+    },
+    high: {
+      band: 'tier-high',
+      tier: 'Likely CTS — ~80% probability',
+      text: '<strong>Score &gt; 12.</strong> High probability of CTS on nerve conduction testing. Consider a trial of conservative management (splinting, corticosteroid injection) or referral for specialist review and pre-surgical NCS.',
+      barColor: '#9A2A2A',
+    },
+  };
+
+  function getTier(score, anyActive) {
+    if (!anyActive) return 'nil';
+    if (score <= 5)  return 'low';
+    if (score <= 12) return 'mid';
+    return 'high';
+  }
+
+  function update() {
+    let total = 0;
+    let active = 0;
+    items.forEach(card => {
+      if (card.classList.contains('active')) {
+        total += parseFloat(card.dataset.weight);
+        active++;
+      }
+    });
+
+    const score = Math.round(total * 10) / 10;
+    scoreDisplay.textContent = score.toFixed(1);
+    scoreBar.style.width = (score / 26 * 100) + '%';
+
+    const tierKey = getTier(score, active > 0);
+    const t = TIERS[tierKey];
+
+    scoreBar.style.background = t.barColor;
+
+    // Update score number colour
+    const colorMap = { nil: '#D9D1BD', low: '#7BBFAA', mid: '#D9A07A', high: '#D98080' };
+    scoreDisplay.style.color = colorMap[tierKey];
+
+    // Swap band classes
+    resultBand.className = 'result-band ' + t.band;
+    resultTier.className = 'result-tier ' + t.band;
+    resultTier.textContent = t.tier;
+    resultText.className = 'result-text ' + t.band;
+    resultText.innerHTML = t.text;
+
+    itemsCount.textContent = active + ' of 6 items positive';
+  }
+
+  function toggleCard(card) {
+    const isActive = card.classList.toggle('active');
+    card.setAttribute('aria-checked', isActive.toString());
+    update();
+  }
+
+  items.forEach(card => {
+    card.addEventListener('click', () => toggleCard(card));
+    card.addEventListener('keydown', e => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        toggleCard(card);
+      }
+    });
+  });
+
+  btnReset.addEventListener('click', () => {
+    items.forEach(card => {
+      card.classList.remove('active');
+      card.setAttribute('aria-checked', 'false');
+    });
+    document.getElementById('hand-select').value = '';
+    document.getElementById('dom-select').value = '';
+    update();
+  });
+
+  update();
+})();
+</script>
+
+<script src="/assets/workshop-gate.js"></script>
+</body>
+</html>

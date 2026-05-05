@@ -11,9 +11,11 @@
     { "label": "Gynae", "url": "/gynaecology/" },
     { "label": "Dermatology", "url": "/dermatology/" },
     { "label": "Mental Health", "url": "/mental-health/" },
-    { "label": "Vaccines", "url": "/vaccines/" },   
+    { "label": "Vaccines", "url": "/vaccines/" },
     { "label": "Travel", "url": "/travel/" },
     { "label": "Field Notes", "url": "/field-notes/" },
-    { "label": "Resources", "url": "/resources/" }
+    { "label": "Handouts", "url": "/handouts/" },
+    { "label": "Resources", "url": "/resources/" },
+    { "label": "About", "url": "/about/" }
   ]
 }

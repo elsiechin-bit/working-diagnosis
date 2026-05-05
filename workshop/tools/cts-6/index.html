@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CTS-6 Carpal Tunnel Score — Working Diagnosis</title>
+<title>CTS-6 Carpal Tunnel Score  -  Working Diagnosis</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,36 +54,13 @@ a { color: var(--green-deep); text-decoration: none; }
 a:hover { color: var(--green); }
 
 /* ── Masthead ── */
-.wd-masthead {
-  border-bottom: 1px solid var(--rule);
-  padding: 22px 24px 18px;
-  background: var(--paper);
-}
-.wd-masthead-row {
-  max-width: 1080px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.wd-brand {
-  font-family: var(--font-d);
-  font-weight: 600;
-  font-size: 1.3rem;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-.wd-brand em { font-style: italic; color: var(--green); }
-.wd-back {
-  font-family: var(--font-m);
-  font-size: 0.7rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-}
-.wd-back:hover { color: var(--green); }
+.masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+.masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+.primary-nav a:hover { color: var(--green); }
 
 /* ── Tool header ── */
 .hdr {
@@ -445,25 +422,8 @@ a:hover { color: var(--green); }
 .evbanner strong { color: var(--ink); font-weight: 500; }
 
 /* ── Footer ── */
-.wd-footer {
-  margin-top: 48px;
-  padding: 36px 24px;
-  border-top: 1px solid var(--rule);
-  font-family: var(--font-m);
-  font-size: 0.72rem;
-  color: var(--ink-mute);
-  letter-spacing: 0.5px;
-}
-.wd-footer-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-.wd-footer-inner a { color: var(--ink-soft); }
-.wd-footer-inner a:hover { color: var(--green); }
+.site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--font-m); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
+.site-footer p { margin: 0 0 6px; }
 .refs {
   font-family: var(--font-m);
   font-size: 0.63rem;
@@ -494,10 +454,13 @@ a:hover { color: var(--green); }
 </head>
 <body>
 
-<header class="wd-masthead">
-  <div class="wd-masthead-row">
-    <a href="/" class="wd-brand">Working <em>Diagnosis</em>.</a>
-    <a href="/" class="wd-back">← Back to homepage</a>
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/workshop/">Workshop</a>
+    </nav>
   </div>
 </header>
 
@@ -505,7 +468,7 @@ a:hover { color: var(--green); }
   <div class="hdr-inner">
     <div class="hdr-eye">Musculoskeletal · GP Tools</div>
     <h1 class="hdr-title">CTS-6 <em>Scoring</em> Tool.</h1>
-    <p class="hdr-sub">The Kamath &amp; Stothard six-item weighted score for estimating the probability of carpal tunnel syndrome. Intended for GP consultation support — not patient self-assessment. Nerve conduction studies remain the gold standard for confirmation.</p>
+    <p class="hdr-sub">The Kamath &amp; Stothard six-item weighted score for estimating the probability of carpal tunnel syndrome. Intended for GP consultation support  -  not patient self-assessment. Nerve conduction studies remain the gold standard for confirmation.</p>
   </div>
 </div>
 
@@ -525,7 +488,7 @@ a:hover { color: var(--green); }
         <div class="ctx-group">
           <label>Hand assessed</label>
           <select id="hand-select">
-            <option value="">— select —</option>
+            <option value=""> -  select  - </option>
             <option value="right">Right</option>
             <option value="left">Left</option>
             <option value="bilateral">Bilateral (scoring dominant)</option>
@@ -534,7 +497,7 @@ a:hover { color: var(--green); }
         <div class="ctx-group">
           <label>Dominant hand</label>
           <select id="dom-select">
-            <option value="">— select —</option>
+            <option value=""> -  select  - </option>
             <option value="right">Right-handed</option>
             <option value="left">Left-handed</option>
             <option value="ambidextrous">Ambidextrous</option>
@@ -588,7 +551,7 @@ a:hover { color: var(--green); }
         </div>
         <div class="item-content">
           <div class="item-name">Thenar muscle weakness or atrophy <span class="item-type">Exam</span></div>
-          <div class="item-note">Abductor pollicis brevis strength ≤4/5 on MRC scale, or visible wasting of the thenar eminence. Late finding — indicates significant nerve compromise.</div>
+          <div class="item-note">Abductor pollicis brevis strength ≤4/5 on MRC scale, or visible wasting of the thenar eminence. Late finding  -  indicates significant nerve compromise.</div>
         </div>
         <div class="item-weight">5.0 pts</div>
       </div>
@@ -641,7 +604,7 @@ a:hover { color: var(--green); }
 
     <!-- References -->
     <div class="refs">
-      <span>References —</span> Kamath V &amp; Stothard J. A clinical questionnaire for the diagnosis of carpal tunnel syndrome. <em>J Hand Surg Br.</em> 2003;28(5):455-9. · Atroshi I et al. Diagnostic properties of nerve conduction tests in population-based carpal tunnel syndrome. <em>BMC Musculoskelet Disord.</em> 2003;4:9. · Graham B et al. Validity and responsiveness of the CTS-6. <em>J Hand Surg Am.</em> 2006. · Meems M et al. Sensitivity, specificity, and reliability of CTS-6 administered by medical assistants. <em>Am J Surg.</em> 2024.
+      <span>References  - </span> Kamath V &amp; Stothard J. A clinical questionnaire for the diagnosis of carpal tunnel syndrome. <em>J Hand Surg Br.</em> 2003;28(5):455-9. · Atroshi I et al. Diagnostic properties of nerve conduction tests in population-based carpal tunnel syndrome. <em>BMC Musculoskelet Disord.</em> 2003;4:9. · Graham B et al. Validity and responsiveness of the CTS-6. <em>J Hand Surg Am.</em> 2006. · Meems M et al. Sensitivity, specificity, and reliability of CTS-6 administered by medical assistants. <em>Am J Surg.</em> 2024.
     </div>
 
     <div class="disc">For GP consultation support only · Not for patient self-assessment · Clinical findings must be interpreted in context</div>
@@ -700,10 +663,10 @@ a:hover { color: var(--green); }
   </div>
 </div>
 
-<footer class="wd-footer">
-  <div class="wd-footer-inner">
-    <span>Working Diagnosis — GP Tools · CTS-6 Scoring Tool</span>
-    <a href="/">workingdiagnosis.xyz</a>
+<footer class="site-footer">
+  <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+    <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
+    <p>An internet workshop for general practice.</p>
   </div>
 </footer>
 
@@ -733,13 +696,13 @@ a:hover { color: var(--green); }
     },
     mid: {
       band: 'tier-mid',
-      tier: 'Equivocal — ~25% probability',
+      tier: 'Equivocal  -  ~25% probability',
       text: '<strong>Score 6–12.</strong> Intermediate probability. Nerve conduction studies are likely to be helpful to confirm or exclude CTS before committing to treatment or surgical referral.',
       barColor: '#B8714F',
     },
     high: {
       band: 'tier-high',
-      tier: 'Likely CTS — ~80% probability',
+      tier: 'Likely CTS  -  ~80% probability',
       text: '<strong>Score &gt; 12.</strong> High probability of CTS on nerve conduction testing. Consider a trial of conservative management (splinting, corticosteroid injection) or referral for specialist review and pre-surgical NCS.',
       barColor: '#9A2A2A',
     },

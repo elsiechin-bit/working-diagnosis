@@ -1,21 +1,12 @@
 ---
 title: Fitness to Drive
-description: Medical fitness to drive assessment in general practice — NZTA standards, condition-specific obligations, the notification process, and managing the difficult conversation.
+description: Medical fitness to drive assessment in general practice  -  NZTA standards, condition-specific obligations, the notification process, and managing the difficult conversation.
 layout: topic.njk
 pillar: Geriatrics
 ---
 
-<div class="topic">
-  <div class="topic-header">
-    <p class="pillar-label">Geriatrics</p>
-    <h1>Fitness <em>to drive</em>.</h1>
-    <p class="topic-dek">One of the harder conversations in geriatric general practice — and one the NZTA makes a professional obligation, not a personal preference.</p>
-  </div>
-
-  <div class="topic-body">
-
-    <p>
-      Driving carries profound practical, psychological, and social significance for older adults — independence, identity, and connection to community are all entangled with the ability to get behind the wheel. Raising fitness-to-drive concerns therefore requires both clinical rigour and relational skill. It is also a legal obligation. GPs have an ethical and legal duty to advise patients who are medically unfit to drive, and to notify the New Zealand Transport Agency (NZTA) if the patient does not comply and poses a serious ongoing road safety risk.<sup>1</sup>
+<p>
+      Driving carries profound practical, psychological, and social significance for older adults  -  independence, identity, and connection to community are all entangled with the ability to get behind the wheel. Raising fitness-to-drive concerns therefore requires both clinical rigour and relational skill. It is also a legal obligation. GPs have an ethical and legal duty to advise patients who are medically unfit to drive, and to notify the New Zealand Transport Agency (NZTA) if the patient does not comply and poses a serious ongoing road safety risk.<sup>1</sup>
     </p>
 
     <p>
@@ -23,7 +14,7 @@ pillar: Geriatrics
     </p>
 
     <p>
-      <strong>Dementia and driving</strong> deserves special attention. A diagnosis of dementia does not automatically disqualify a person from driving — early dementia with preserved insight, judgment, and motor function may be compatible with continued driving for a period. However, it triggers mandatory referral to the NZTA for assessment, which typically involves an on-road driving evaluation. The GP's role is to notify the NZTA that the patient has a medical condition requiring assessment, not to make the final fitness determination. Document this notification and the clinical reasoning.
+      <strong>Dementia and driving</strong> deserves special attention. A diagnosis of dementia does not automatically disqualify a person from driving  -  early dementia with preserved insight, judgment, and motor function may be compatible with continued driving for a period. However, it triggers mandatory referral to the NZTA for assessment, which typically involves an on-road driving evaluation. The GP's role is to notify the NZTA that the patient has a medical condition requiring assessment, not to make the final fitness determination. Document this notification and the clinical reasoning.
     </p>
 
     <p>
@@ -31,11 +22,11 @@ pillar: Geriatrics
     </p>
 
     <p>
-      The conversation itself is easier when it is framed around safety and an objective assessment process rather than a personal judgment. "I need to refer you to NZTA for an assessment — this is something I'm required to do for anyone with your diagnosis, and it will give a clearer picture of your current driving ability" is more constructive than "I think you should stop driving." Where possible, involve family with the patient's consent — they are often waiting for someone else to raise the issue and can provide both support and collateral history.
+      The conversation itself is easier when it is framed around safety and an objective assessment process rather than a personal judgment. "I need to refer you to NZTA for an assessment  -  this is something I'm required to do for anyone with your diagnosis, and it will give a clearer picture of your current driving ability" is more constructive than "I think you should stop driving." Where possible, involve family with the patient's consent  -  they are often waiting for someone else to raise the issue and can provide both support and collateral history.
     </p>
 
     <p>
-      Planning for life without driving is a clinical task, not an afterthought. At the same time as raising driving fitness, it is worth exploring what support structures are available: family transport, community transport services, mobility parking permits (for passengers, not drivers), and local voluntary transport schemes. The practical impact of driving cessation on independence and social participation is real — acknowledging this while addressing safety is the clinical ideal.
+      Planning for life without driving is a clinical task, not an afterthought. At the same time as raising driving fitness, it is worth exploring what support structures are available: family transport, community transport services, mobility parking permits (for passengers, not drivers), and local voluntary transport schemes. The practical impact of driving cessation on independence and social participation is real  -  acknowledging this while addressing safety is the clinical ideal.
     </p>
 
     <div class="topic-refs">
@@ -47,6 +38,3 @@ pillar: Geriatrics
 3. Land Transport Act 1998. Wellington: New Zealand Government; 1998. Available at: legislation.govt.nz
 
     </div>
-
-  </div>
-</div>

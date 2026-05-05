@@ -5,16 +5,7 @@ pillar: Vaccines
 description: The New Zealand immunisation schedule, travel vaccines, and consultation guidance for general practice.
 ---
 
-<div class="topic">
-  <div class="topic-header">
-    <p class="pillar-label">Vaccines</p>
-    <h1>Immunisation in general practice</h1>
-    <p class="topic-dek">The national schedule, catch-up logic, travel vaccines, and the conversations that make them stick.</p>
-  </div>
-
-  <div class="topic-body">
-
-    <p>Vaccination is one of the clearest wins in medicine — cost-effective, safe, and backed by decades of population-level evidence. In general practice, the challenge is rarely clinical; it's logistical and conversational. Who's due? Who's missed? Who needs reassurance rather than information?</p>
+<p>Vaccination is one of the clearest wins in medicine  -  cost-effective, safe, and backed by decades of population-level evidence. In general practice, the challenge is rarely clinical; it's logistical and conversational. Who's due? Who's missed? Who needs reassurance rather than information?</p>
 
     <p>This section covers the NZ immunisation schedule, travel vaccine planning, and practical guidance for consultation. Clinical content is referenced to Health New Zealand and BPAC. For country-specific travel risk, always check <a href="https://www.safetravel.govt.nz" target="_blank" rel="noopener">SafeTravel NZ</a> and the <a href="https://immune.org.nz" target="_blank" rel="noopener">Immunisation Advisory Centre (IMAC)</a> before each consultation.</p>
 
@@ -22,9 +13,9 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
 
     <h2 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 1.25rem;">The national immunisation schedule</h2>
 
-    <p>The schedule below reflects the <strong>NZ National Immunisation Schedule, August 2025</strong> (Health NZ / HealthEd NIP8860). All vaccines on the schedule are funded for eligible children and adolescents. Some adult vaccines carry eligibility criteria — check current funding status before ordering.</p>
+    <p>The schedule below reflects the <strong>NZ National Immunisation Schedule, August 2025</strong> (Health NZ / HealthEd NIP8860). All vaccines on the schedule are funded for eligible children and adolescents. Some adult vaccines carry eligibility criteria  -  check current funding status before ordering.</p>
 
-    <p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre);">❍ Schedule — funded vaccines by age</p>
+    <p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre);">❍ Schedule  -  funded vaccines by age</p>
 
     <table style="width:100%; border-collapse: collapse; font-size: 0.95rem; margin-bottom: 2rem;">
       <thead>
@@ -47,7 +38,7 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
         </tr>
         <tr style="border-bottom: 1px solid var(--rule);">
           <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">6 weeks</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Rotavirus <em>(1st dose — must be given before 15 weeks)</em></td>
+          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Rotavirus <em>(1st dose  -  must be given before 15 weeks)</em></td>
           <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Rotarix® (oral)</td>
         </tr>
         <tr style="border-bottom: 1px solid var(--rule);">
@@ -62,7 +53,7 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
         </tr>
         <tr style="border-bottom: 1px solid var(--rule);">
           <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">3 months</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Rotavirus <em>(2nd dose — must be given before 25 weeks)</em></td>
+          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Rotavirus <em>(2nd dose  -  must be given before 25 weeks)</em></td>
           <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Rotarix® (oral)</td>
         </tr>
         <tr style="border-bottom: 1px solid var(--rule);">
@@ -127,7 +118,7 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
         </tr>
         <tr style="border-bottom: 1px solid var(--rule);">
           <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">11–12 years</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Human papillomavirus (HPV) — 2 doses, 6 months apart</td>
+          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Human papillomavirus (HPV)  -  2 doses, 6 months apart</td>
           <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Gardasil® 9</td>
         </tr>
         <tr style="border-bottom: 1px solid var(--rule);">
@@ -152,23 +143,23 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
         </tr>
         <tr>
           <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Shingles (zoster) — 2 doses, 2–6 months apart</td>
+          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Shingles (zoster)  -  2 doses, 2–6 months apart</td>
           <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Shingrix®</td>
         </tr>
       </tbody>
     </table>
 
-    <p style="font-size: 0.85rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em;">Source: Health NZ / HealthEd NIP8860, August 2025.¹ Schedule is subject to change — verify funding status via the <a href="https://www.tewhatuora.govt.nz/for-health-professionals/clinical-guidance/immunisation-handbook" target="_blank" rel="noopener" style="color: var(--ink-mute);">Immunisation Handbook 2025</a> before each consultation.</p>
+    <p style="font-size: 0.85rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em;">Source: Health NZ / HealthEd NIP8860, August 2025.¹ Schedule is subject to change  -  verify funding status via the <a href="https://www.tewhatuora.govt.nz/for-health-professionals/clinical-guidance/immunisation-handbook" target="_blank" rel="noopener" style="color: var(--ink-mute);">Immunisation Handbook 2025</a> before each consultation.</p>
 
     <h3 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.75rem;">A few things worth knowing at a glance</h3>
 
-    <p><strong>Rotarix timing is strict.</strong> The first oral dose must be given before 15 weeks, the second before 25 weeks. Once a baby ages out, the window closes — this is one of the few schedule items with a hard upper limit.</p>
+    <p><strong>Rotarix timing is strict.</strong> The first oral dose must be given before 15 weeks, the second before 25 weeks. Once a baby ages out, the window closes  -  this is one of the few schedule items with a hard upper limit.</p>
 
-    <p><strong>MenB is now funded for all infants ≤12 months.</strong> Bexsero® became universally funded from 1 March 2024. The funded catch-up programme for babies who missed it has since closed — eligibility for unfunded catch-up should be discussed individually.</p>
+    <p><strong>MenB is now funded for all infants ≤12 months.</strong> Bexsero® became universally funded from 1 March 2024. The funded catch-up programme for babies who missed it has since closed  -  eligibility for unfunded catch-up should be discussed individually.</p>
 
     <p><strong>MenACWY changed product in 2024.</strong> Neisvac-C was replaced by Nimenrix (MenACWY) from 1 July 2024 as a hard changeover.² This matters for patients asking about their or their child's prior vaccination history.</p>
 
-    <p><strong>Shingrix® at 65 is two doses.</strong> The recombinant adjuvanted vaccine (RZV) is the funded option. Schedule the second dose 2–6 months after the first. Unlike the older live Zostavax, Shingrix is safe for immunocompromised patients — though funding criteria may differ.</p>
+    <p><strong>Shingrix® at 65 is two doses.</strong> The recombinant adjuvanted vaccine (RZV) is the funded option. Schedule the second dose 2–6 months after the first. Unlike the older live Zostavax, Shingrix is safe for immunocompromised patients  -  though funding criteria may differ.</p>
 
     <p><strong>HPV at 11–12 is two doses only if started before age 15.</strong> Three doses are required if the course starts at 15 or older, or in immunocompromised individuals.³</p>
 
@@ -178,11 +169,11 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
 
     <h2 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 1.25rem;">Travel vaccines</h2>
 
-    <p>Travel vaccines in NZ are <strong>not subsidised</strong> — patients pay for vaccine and administration costs unless the vaccine is already on the funded schedule for another indication.⁴ Frame that expectation early in the consultation.</p>
+    <p>Travel vaccines in NZ are <strong>not subsidised</strong>  -  patients pay for vaccine and administration costs unless the vaccine is already on the funded schedule for another indication.⁴ Frame that expectation early in the consultation.</p>
 
-    <p>The goal of a travel consultation is to identify the individual's risk profile — destination, duration, activities, accommodation type, health status — and match vaccines and prophylaxis accordingly. Use the <a href="https://www.safetravel.govt.nz" target="_blank" rel="noopener">SafeTravel NZ</a> destination pages and NZF country-specific malaria prophylaxis guidance alongside IMAC resources. CDC Travelers' Health is a useful secondary reference for outbreak alerts.</p>
+    <p>The goal of a travel consultation is to identify the individual's risk profile  -  destination, duration, activities, accommodation type, health status  -  and match vaccines and prophylaxis accordingly. Use the <a href="https://www.safetravel.govt.nz" target="_blank" rel="noopener">SafeTravel NZ</a> destination pages and NZF country-specific malaria prophylaxis guidance alongside IMAC resources. CDC Travelers' Health is a useful secondary reference for outbreak alerts.</p>
 
-    <p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre);">❍ Common travel vaccines — quick reference</p>
+    <p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre);">❍ Common travel vaccines  -  quick reference</p>
 
     <table style="width:100%; border-collapse: collapse; font-size: 0.92rem; margin-bottom: 1.5rem;">
       <thead>
@@ -216,7 +207,7 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
           <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Yellow fever</td>
           <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Sub-Saharan Africa, tropical South America</td>
           <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Single dose, valid for life; must be given ≥10 days before entry to endemic areas</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">Yes — many countries require IHR certificate</td>
+          <td style="padding: 10px 0; color: var(--ink-soft);">Yes  -  many countries require IHR certificate</td>
         </tr>
         <tr style="border-bottom: 1px solid var(--rule);">
           <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Japanese encephalitis</td>
@@ -234,12 +225,12 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
           <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Meningococcal ACWY</td>
           <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Sub-Saharan Africa meningitis belt; Hajj/Umrah (certificate required); student accommodation contexts</td>
           <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Single dose (Nimenrix or Menveo); allow ≥2–3 weeks before travel</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">Yes — Hajj/Umrah entry requirement</td>
+          <td style="padding: 10px 0; color: var(--ink-soft);">Yes  -  Hajj/Umrah entry requirement</td>
         </tr>
         <tr style="border-bottom: 1px solid var(--rule);">
           <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Cholera / traveller's diarrhoea</td>
           <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Endemic regions, disaster zones; offers partial protection against ETEC</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Dukoral oral — 2 doses 1–6 weeks apart; complete at least 1 week before travel</td>
+          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Dukoral oral  -  2 doses 1–6 weeks apart; complete at least 1 week before travel</td>
           <td style="padding: 10px 0; color: var(--ink-soft);">No</td>
         </tr>
         <tr>
@@ -257,19 +248,19 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
 
     <p>Aim for a travel consultation at least 6–8 weeks before departure, and ideally 3 months for complex itineraries. Some vaccines require multiple doses over weeks (Japanese encephalitis, pre-exposure rabies, hepatitis B standard course). If a patient presents late, prioritise by destination risk and allow at least one dose of single-dose vaccines such as hepatitis A, even if the booster for lifelong protection comes later.</p>
 
-    <p>The travel consultation is also an opportunity to check routine vaccine status — particularly MMR, which remains a gap in many NZ adults born between the late 1960s and early 1990s. With measles circulating globally in 2024–25, this check is worth making explicit.⁷</p>
+    <p>The travel consultation is also an opportunity to check routine vaccine status  -  particularly MMR, which remains a gap in many NZ adults born between the late 1960s and early 1990s. With measles circulating globally in 2024–25, this check is worth making explicit.⁷</p>
 
     <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
 
     <h2 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 1.25rem;">Useful resources</h2>
 
     <ul style="padding-left: 1.25rem; color: var(--ink-soft); line-height: 2;">
-      <li><a href="https://www.tewhatuora.govt.nz/for-health-professionals/clinical-guidance/immunisation-handbook" target="_blank" rel="noopener">Immunisation Handbook 2025</a> — Health NZ (the authoritative clinical reference)</li>
-      <li><a href="https://immune.org.nz" target="_blank" rel="noopener">Immunisation Advisory Centre (IMAC)</a> — NZ-specific guidance, factsheets, clinical queries</li>
-      <li><a href="https://www.safetravel.govt.nz" target="_blank" rel="noopener">SafeTravel NZ</a> — MFAT travel advisories by destination</li>
-      <li><a href="https://nzf.org.nz" target="_blank" rel="noopener">New Zealand Formulary</a> — malaria prophylaxis by country, vaccine interactions</li>
-      <li><a href="https://bpac.org.nz" target="_blank" rel="noopener">BPAC NZ</a> — clinical articles on vaccination in practice</li>
-      <li><a href="https://wwwnc.cdc.gov/travel" target="_blank" rel="noopener">CDC Travelers' Health</a> — outbreak alerts and destination risk summaries</li>
+      <li><a href="https://www.tewhatuora.govt.nz/for-health-professionals/clinical-guidance/immunisation-handbook" target="_blank" rel="noopener">Immunisation Handbook 2025</a>  -  Health NZ (the authoritative clinical reference)</li>
+      <li><a href="https://immune.org.nz" target="_blank" rel="noopener">Immunisation Advisory Centre (IMAC)</a>  -  NZ-specific guidance, factsheets, clinical queries</li>
+      <li><a href="https://www.safetravel.govt.nz" target="_blank" rel="noopener">SafeTravel NZ</a>  -  MFAT travel advisories by destination</li>
+      <li><a href="https://nzf.org.nz" target="_blank" rel="noopener">New Zealand Formulary</a>  -  malaria prophylaxis by country, vaccine interactions</li>
+      <li><a href="https://bpac.org.nz" target="_blank" rel="noopener">BPAC NZ</a>  -  clinical articles on vaccination in practice</li>
+      <li><a href="https://wwwnc.cdc.gov/travel" target="_blank" rel="noopener">CDC Travelers' Health</a>  -  outbreak alerts and destination risk summaries</li>
     </ul>
 
     <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
@@ -277,13 +268,10 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
     <p style="font-size: 0.8rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em; line-height: 1.8;">
       <strong>References</strong><br>
       1. Health New Zealand / HealthEd. The National Immunisation Schedule (NIP8860). Auckland: Health NZ; August 2025. Available from: https://healthed.govt.nz/products/the-national-immunisation-schedule-nip8860<br>
-      2. Health New Zealand. Immunisation Programme updates — MenACWY product change July 2024. Wellington: Health NZ; 2024. Available from: https://www.tewhatuora.govt.nz/health-services-and-programmes/vaccine-information/immunisation-programme-updates<br>
+      2. Health New Zealand. Immunisation Programme updates  -  MenACWY product change July 2024. Wellington: Health NZ; 2024. Available from: https://www.tewhatuora.govt.nz/health-services-and-programmes/vaccine-information/immunisation-programme-updates<br>
       3. Health New Zealand. Immunisation Handbook 2025. Wellington: Health NZ; 2025. Available from: https://www.tewhatuora.govt.nz/for-health-professionals/clinical-guidance/immunisation-handbook<br>
       4. BPAC NZ. Travel consultation essentials: for departures and arrivals. Best Practice Journal. 2015;72. Available from: https://bpac.org.nz/bpj/2015/december/travel.aspx<br>
       5. Immunisation Advisory Centre (IMAC). Travel vaccination. Auckland: University of Auckland; 2024. Available from: https://immune.org.nz/vaccines/travel-vaccination<br>
       6. World Health Organization. International Travel and Health. Geneva: WHO; 2024. Available from: https://www.who.int/ith<br>
-      7. Centers for Disease Control and Prevention. Global Measles — Travel Notice. Atlanta: CDC; 28 May 2025. Available from: https://wwwnc.cdc.gov/travel
+      7. Centers for Disease Control and Prevention. Global Measles  -  Travel Notice. Atlanta: CDC; 28 May 2025. Available from: https://wwwnc.cdc.gov/travel
     </p>
-
-  </div>
-</div>

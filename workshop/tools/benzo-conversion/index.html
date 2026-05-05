@@ -1,0 +1,889 @@
+---
+title: Benzodiazepine Conversion Calculator
+layout: base.njk
+permalink: /workshop/tools/benzo-conversion/
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benzodiazepine Conversion Calculator - Working Diagnosis</title>
+  <meta name="description" content="Benzodiazepine equivalence conversion to diazepam. Tapering guidance, switching protocols, and dependence management for NZ GP practice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --paper: #F5F1E8;
+      --paper-warm: #EDE7D8;
+      --paper-deep: #E4DBC4;
+      --ink: #1A1F1C;
+      --soft: #3A4540;
+      --ink-mute: #6B7A75;
+      --green: #2F6B5C;
+      --green-deep: #1F4A3F;
+      --ochre: #B8714F;
+      --rule: #D9D1BD;
+      --serif-display: "Fraunces", serif;
+      --serif-body: "Newsreader", serif;
+      --mono: "JetBrains Mono", monospace;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.01) 2px, rgba(0,0,0,.01) 4px);
+    }
+
+    /* ─── Masthead ─────────────────────────────────── */
+    .masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+    .masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
+    .brand em { font-style: italic; color: var(--green); }
+    .primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+    .primary-nav a:hover { color: var(--green); }
+
+    .wrap { max-width: 56rem; margin: 0 auto; padding: 0 1.5rem 3rem; }
+
+    h1 { font-family: var(--serif-display); font-size: 2.5rem; font-weight: 600; line-height: 1.2; margin-bottom: 0.5rem; color: var(--ink); }
+
+    .tagline {
+      font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink-mute);
+      margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule);
+    }
+
+    .section { margin-bottom: 2.5rem; }
+
+    h2 { font-family: var(--serif-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--ink); }
+    h3 { font-family: var(--serif-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--ink); }
+
+    .kicker { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.5rem; }
+
+    .alert {
+      padding: 1rem; background: var(--paper-warm); border-left: 3px solid var(--ochre);
+      margin-bottom: 1.5rem; font-size: 0.95rem;
+    }
+    .alert strong { color: var(--ochre); }
+    .alert em { font-style: italic; color: var(--soft); }
+
+    .form-group { margin-bottom: 1.5rem; }
+    label { display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--ink); font-family: var(--serif-body); }
+
+    select, input[type="number"] {
+      width: 100%; padding: 0.75rem;
+      border: 1px solid var(--rule); background: white;
+      color: var(--ink); font-family: var(--serif-body); font-size: 1rem;
+    }
+    select:focus, input[type="number"]:focus {
+      outline: none; border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(47, 107, 92, 0.1);
+    }
+
+    .input-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; }
+    @media (max-width: 36rem) { .input-row { grid-template-columns: 1fr; } }
+
+    button.calc-btn {
+      padding: 0.875rem 2rem; background: var(--green); color: white; border: none;
+      font-family: var(--mono); font-size: 0.875rem; text-transform: uppercase;
+      letter-spacing: 0.05em; cursor: pointer; transition: background 0.2s;
+    }
+    button.calc-btn:hover { background: var(--green-deep); }
+
+    /* Output */
+    .output-section { display: none; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+    .output-section.active { display: block; }
+
+    .equiv-hero {
+      background: var(--green-deep); color: white;
+      padding: 1.5rem; margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .equiv-hero-label { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.25rem; }
+    .equiv-hero-value { font-family: var(--mono); font-size: 2.5rem; font-weight: 500; line-height: 1; }
+    .equiv-hero-unit { font-family: var(--serif-body); font-size: 1rem; opacity: 0.85; margin-top: 0.25rem; }
+    .equiv-hero-arrow { font-size: 1.5rem; opacity: 0.5; }
+    .equiv-hero-context { font-size: 0.9rem; opacity: 0.85; max-width: 26rem; }
+
+    /* Dose range badge */
+    .dose-badge {
+      display: inline-block; font-family: var(--mono); font-size: 0.7rem;
+      letter-spacing: 0.05em; text-transform: uppercase; padding: 0.2rem 0.6rem;
+      border-radius: 2px; margin-bottom: 1.25rem;
+    }
+    .dose-badge.low      { background: rgba(47,107,92,0.12); color: var(--green-deep); border: 1px solid var(--green); }
+    .dose-badge.medium   { background: rgba(184,113,79,0.1); color: var(--ochre); border: 1px solid var(--ochre); }
+    .dose-badge.high     { background: rgba(184,113,79,0.18); color: var(--ochre); border: 1px solid var(--ochre); }
+    .dose-badge.very-high{ background: rgba(180,50,30,0.12); color: #a83222; border: 1px solid #a83222; }
+
+    /* Half-life pill */
+    .halflife-pill {
+      display: inline-block; font-family: var(--mono); font-size: 0.68rem;
+      letter-spacing: 0.05em; text-transform: uppercase; padding: 0.2rem 0.6rem;
+      border: 1px solid var(--rule); color: var(--ink-mute); margin-left: 0.5rem;
+    }
+    .halflife-pill.ultrashort { border-color: #a83222; color: #a83222; background: rgba(180,50,30,0.06); }
+    .halflife-pill.short      { border-color: var(--ochre); color: var(--ochre); background: rgba(184,113,79,0.08); }
+    .halflife-pill.intermediate { border-color: var(--ink-mute); color: var(--soft); }
+    .halflife-pill.long       { border-color: var(--green); color: var(--green); background: rgba(47,107,92,0.06); }
+
+    /* Conversion grid */
+    .conversion-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+      gap: 1rem; margin-bottom: 2rem;
+    }
+    .conversion-card {
+      background: var(--paper-warm); border: 1px solid var(--rule);
+      padding: 1.1rem; border-radius: 2px;
+    }
+    .conversion-card.reference { background: white; border: 2px solid var(--green); }
+    .conversion-card.caution   { border-color: var(--ochre); }
+    .card-label { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-mute); margin-bottom: 0.4rem; }
+    .card-dose  { font-family: var(--mono); font-size: 1.9rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.15rem; line-height: 1; }
+    .card-unit  { font-size: 0.85rem; color: var(--soft); margin-bottom: 0.5rem; }
+    .card-note  { font-size: 0.78rem; color: var(--ink-mute); line-height: 1.4; }
+    .card-warn  { font-size: 0.72rem; color: var(--ochre); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 0.4rem; }
+
+    /* Info box */
+    .info-box { background: var(--paper-warm); border: 1px solid var(--rule); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .info-box p { margin-bottom: 0.75rem; }
+    .info-box p:last-child { margin-bottom: 0; }
+
+    /* Threshold bar */
+    .threshold-bar { margin: 1.25rem 0; }
+    .threshold-track {
+      height: 8px; background: linear-gradient(to right, #a8d5c9 0%, var(--ochre) 40%, #c0573c 70%, #8b1a0a 100%);
+      border-radius: 4px; position: relative; margin-bottom: 0.5rem;
+    }
+    .threshold-marker {
+      position: absolute; top: -4px; width: 16px; height: 16px;
+      background: var(--ink); border: 2px solid white; border-radius: 50%;
+      transform: translateX(-50%); transition: left 0.3s ease;
+    }
+    .threshold-labels { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--ink-mute); }
+
+    /* Guidance sections */
+    .moa-section {
+      background: var(--paper-deep); border-left: 3px solid var(--green);
+      padding: 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;
+    }
+    .moa-title { font-weight: 600; font-family: var(--serif-display); font-size: 1rem; color: var(--green-deep); margin-bottom: 0.5rem; }
+
+    .caution-box { background: rgba(184,113,79,0.1); border-left: 3px solid var(--ochre); padding: 1rem; margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .caution-box strong { color: var(--ochre); }
+
+    /* Table */
+    .table-wrapper { overflow-x: auto; margin-bottom: 1.5rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    table th { background: var(--paper-deep); padding: 0.6rem 0.75rem; text-align: left; font-weight: 600; border-bottom: 1px solid var(--rule); font-family: var(--serif-body); }
+    table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--paper-deep); vertical-align: top; }
+    table tr:last-child td { border-bottom: none; }
+    table tr.highlight-row td { background: rgba(47,107,92,0.06); }
+    table tr.zdrug-row td { background: rgba(184,113,79,0.05); }
+    .mono-cell { font-family: var(--mono); font-size: 0.8rem; }
+
+    /* Toggle sections */
+    .toggle-btn {
+      background: var(--paper-warm); border: 1px solid var(--rule); padding: 0.75rem; width: 100%;
+      text-align: left; cursor: pointer; font-family: var(--serif-body); font-size: 0.95rem;
+      transition: background 0.2s; color: var(--ink); margin-bottom: 0;
+    }
+    .toggle-btn:hover { background: var(--paper-deep); }
+    .toggle-content { display: none; padding: 1rem 0; }
+    .toggle-content.open { display: block; }
+
+    /* Refs */
+    .ref-list { margin-top: 1.5rem; font-size: 0.85rem; color: var(--soft); }
+    .ref-list ol { margin-left: 1.5rem; line-height: 1.8; }
+    .ref-list li { margin-bottom: 0.75rem; }
+
+    .footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); font-size: 0.85rem; color: var(--ink-mute); }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (max-width: 36rem) { .grid-2 { grid-template-columns: 1fr; } }
+
+    ul.body-list { margin-left: 1.5rem; line-height: 1.7; margin-bottom: 0.75rem; }
+    ul.body-list li { margin-bottom: 0.25rem; }
+
+    /* ─── Footer ───────────────────────────────────── */
+    .site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
+    .site-footer p { margin: 0 0 6px; }
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="masthead-row">
+      <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/workshop/">Workshop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <h1>Benzodiazepine Conversion Calculator</h1>
+    <div class="tagline">❍ Diazepam-equivalent dosing · switching and tapering strategies</div>
+
+    <div class="alert">
+      <strong>Consultation support tool.</strong> Equivalences are <em>approximate</em> and vary between individuals and sources. They do not account for individual pharmacokinetics, duration of use, cross-tolerance, or clinical context. <strong>Benzodiazepine switching and tapering should be individualised.</strong> Z-drug (zopiclone) equivalences are particularly uncertain. Always apply clinical judgement. Refer to HealthPathways and BPAC NZ for current NZ guidance.
+    </div>
+
+    <!-- INPUT -->
+    <div class="section">
+      <div class="kicker">❍ Step 1: Enter current benzodiazepine dose</div>
+
+      <div class="form-group">
+        <label for="input-benzo">Current benzodiazepine</label>
+        <select id="input-benzo">
+          <option value="">Choose drug&hellip;</option>
+          <optgroup label="Long-acting (&gt;24 h)">
+            <option value="diazepam">Diazepam (Valium)</option>
+            <option value="clonazepam">Clonazepam (Rivotril)</option>
+            <option value="nitrazepam">Nitrazepam (Mogadon)</option>
+            <option value="clobazam">Clobazam (Frisium)</option>
+            <option value="chlordiazepoxide">Chlordiazepoxide (Librium)</option>
+          </optgroup>
+          <optgroup label="Intermediate-acting (12&ndash;24 h)">
+            <option value="lorazepam">Lorazepam (Ativan)</option>
+            <option value="alprazolam">Alprazolam (Xanax)</option>
+          </optgroup>
+          <optgroup label="Short-acting (&lt;12 h)">
+            <option value="temazepam">Temazepam</option>
+            <option value="oxazepam">Oxazepam</option>
+          </optgroup>
+          <optgroup label="Z-drug (partial cross-tolerance)">
+            <option value="zopiclone">Zopiclone (Imovane)</option>
+          </optgroup>
+          <optgroup label="Ultra-short / procedural">
+            <option value="midazolam">Midazolam (Versed)</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="input-row">
+        <div class="form-group">
+          <label for="input-dose">Total daily dose</label>
+          <input type="number" id="input-dose" placeholder="e.g., 2" min="0" step="0.25">
+        </div>
+        <div class="form-group">
+          <label for="input-unit">Unit</label>
+          <select id="input-unit">
+            <option value="mg">mg</option>
+            <option value="mcg">mcg</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate Equivalences</button>
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="output" class="output-section">
+
+      <div class="section">
+        <div class="kicker">❍ Diazepam equivalent</div>
+        <h2>Conversion Result</h2>
+
+        <div class="equiv-hero" id="equiv-hero">
+          <div>
+            <div class="equiv-hero-label">Input dose</div>
+            <div class="equiv-hero-value" id="hero-input-dose">-</div>
+            <div class="equiv-hero-unit" id="hero-input-drug">-</div>
+          </div>
+          <div class="equiv-hero-arrow">&#8594;</div>
+          <div>
+            <div class="equiv-hero-label">Diazepam equivalent</div>
+            <div class="equiv-hero-value" id="hero-diaz-dose">-</div>
+            <div class="equiv-hero-unit">mg diazepam / day</div>
+          </div>
+          <div id="hero-context" class="equiv-hero-context"></div>
+        </div>
+
+        <div id="dose-badge-container"></div>
+
+        <div class="threshold-bar">
+          <div class="threshold-track">
+            <div class="threshold-marker" id="threshold-marker" style="left: 0%"></div>
+          </div>
+          <div class="threshold-labels">
+            <span>Low therapeutic</span>
+            <span>Standard range</span>
+            <span>High dose</span>
+            <span>Dependence risk</span>
+          </div>
+        </div>
+
+        <div class="info-box" id="clinical-context-box"></div>
+      </div>
+
+      <!-- CONVERSION GRID -->
+      <div class="section">
+        <div class="kicker">❍ Equivalent doses for other agents</div>
+        <h2>Approximate Equivalent Doses</h2>
+        <p style="margin-bottom: 1.5rem; color: var(--soft); font-size: 0.95rem;">
+          These doses produce approximately equivalent sedative-anxiolytic effect. Half-life, onset, dependence potential, and clinical use differ significantly between agents. Zopiclone equivalence is approximate and less well-established.
+        </p>
+        <div class="conversion-grid" id="conversions-grid"></div>
+      </div>
+
+      <!-- DRUG PROFILE -->
+      <div class="section">
+        <div class="kicker">❍ Pharmacology of input drug</div>
+        <h2>Drug Profile</h2>
+        <div id="drug-profile-box"></div>
+      </div>
+
+    </div>
+
+    <!-- REFERENCE TABLE (always visible) -->
+    <div class="section">
+      <div class="kicker">❍ Reference</div>
+      <h2>Benzodiazepine Equivalence Table</h2>
+      <p style="margin-bottom: 1.25rem; color: var(--soft); font-size: 0.95rem; font-style: italic;">
+        Approximate oral doses equivalent to diazepam 5 mg. Source: Ashton Manual<sup>1</sup>, NZF.<sup>2</sup> Individual variation is significant.
+      </p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Equiv. to diazepam 5 mg</th>
+              <th>Half-life</th>
+              <th>Active metabolites</th>
+              <th>NZ notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>Diazepam</strong> &#9733;</td>
+              <td>5 mg <em>(reference)</em></td>
+              <td class="mono-cell">20&ndash;100 h</td>
+              <td>Yes (desmethyldiazepam, t&frac12; 36&ndash;200 h)</td>
+              <td>Preferred agent for structured tapering. Smooth offset due to long half-life and active metabolites. Funded. Class C CD.</td>
+            </tr>
+            <tr>
+              <td><strong>Clonazepam</strong></td>
+              <td>0.5 mg</td>
+              <td class="mono-cell">18&ndash;50 h</td>
+              <td>Minor</td>
+              <td>High potency (10&times; diazepam). Used in epilepsy and anxiety. Funded (restricted). Class C CD.</td>
+            </tr>
+            <tr>
+              <td><strong>Lorazepam</strong></td>
+              <td>1 mg</td>
+              <td class="mono-cell">10&ndash;20 h</td>
+              <td>No</td>
+              <td>No active metabolites - predictable kinetics. LOT drug (preferred in elderly/hepatic impairment). Funded. Class C CD.</td>
+            </tr>
+            <tr>
+              <td><strong>Oxazepam</strong></td>
+              <td>15 mg</td>
+              <td class="mono-cell">4&ndash;15 h</td>
+              <td>No</td>
+              <td>LOT drug. Low potency, no hepatic oxidation. Short half-life means inter-dose withdrawal with regular use. Funded. Class C CD.</td>
+            </tr>
+            <tr>
+              <td><strong>Temazepam</strong></td>
+              <td>10 mg</td>
+              <td class="mono-cell">8&ndash;22 h</td>
+              <td>Minor</td>
+              <td>LOT drug. Short-acting hypnotic. Higher abuse potential. Funded (capsules only to reduce injection misuse). Class B2 CD.</td>
+            </tr>
+            <tr>
+              <td><strong>Nitrazepam</strong></td>
+              <td>5 mg</td>
+              <td class="mono-cell">15&ndash;38 h</td>
+              <td>Minor</td>
+              <td>Long-acting hypnotic. Next-day sedation common, especially in elderly. Funded. Class C CD.</td>
+            </tr>
+            <tr>
+              <td><strong>Alprazolam</strong></td>
+              <td>0.5 mg</td>
+              <td class="mono-cell">6&ndash;27 h</td>
+              <td>Minor</td>
+              <td>High potency. High dependence risk. Inter-dose withdrawal common. Not funded in NZ (private only). Class C CD.</td>
+            </tr>
+            <tr>
+              <td><strong>Chlordiazepoxide</strong></td>
+              <td>25 mg</td>
+              <td class="mono-cell">5&ndash;30 h</td>
+              <td>Yes (active metabolites incl. desmethyldiazepam)</td>
+              <td>Low potency. Mainly used for alcohol withdrawal. Largely replaced by diazepam in NZ. Class C CD.</td>
+            </tr>
+            <tr>
+              <td><strong>Clobazam</strong></td>
+              <td>10 mg</td>
+              <td class="mono-cell">18&ndash;42 h</td>
+              <td>Yes (norclobazam, t&frac12; 40&ndash;114 h)</td>
+              <td>1,5-benzodiazepine. Adjunctive epilepsy therapy only. Funded (Special Authority). Class C CD.</td>
+            </tr>
+            <tr>
+              <td><strong>Midazolam</strong></td>
+              <td>7.5 mg <em>(parenteral)</em></td>
+              <td class="mono-cell">1&ndash;4 h</td>
+              <td>Minor</td>
+              <td>Ultra-short-acting. IV/IM/SC/buccal only - oral bioavailability very low. Procedural sedation and palliative use. Class B2 CD.</td>
+            </tr>
+            <tr class="zdrug-row">
+              <td><strong>Zopiclone</strong> <em>(Z-drug)</em></td>
+              <td>7.5 mg <em>(approx.)</em></td>
+              <td class="mono-cell">3.5&ndash;6.5 h</td>
+              <td>Minor</td>
+              <td>Not a benzodiazepine - acts on GABA-A receptor. Partial cross-tolerance. Equivalence approximate. Widely used hypnotic in NZ. Not a controlled drug.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CLINICAL GUIDANCE -->
+    <div class="section">
+      <div class="kicker">❍ Clinical guidance</div>
+      <h2>Switching, Tapering, and Dependence</h2>
+
+      <div class="caution-box">
+        <strong>Never stop abruptly.</strong> Abrupt cessation of benzodiazepines after regular use can cause severe withdrawal including seizures and delirium. Taper all patients who have been using benzodiazepines regularly for more than 2&ndash;4 weeks.
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Why switch to diazepam for tapering?</button>
+      <div class="toggle-content">
+        <div class="moa-section">
+          <div class="moa-title">Diazepam as the Tapering Agent of Choice</div>
+          <p>Diazepam is preferred for structured benzodiazepine tapering because of its long half-life (20&ndash;100 h) and active metabolite desmethyldiazepam (half-life 36&ndash;200 h). This produces stable plasma levels with gradual self-tapering between doses, minimising peaks and troughs that cause inter-dose withdrawal symptoms.<sup>1</sup></p>
+          <p><strong>Practical advantages of diazepam for tapering:</strong></p>
+          <ul class="body-list">
+            <li>Available in 2 mg and 5 mg tablets, allowing fine-grained dose reduction</li>
+            <li>Liquid preparation (2 mg/mL) available on special order for very small dose steps</li>
+            <li>Smooth blood level decline reduces rebound anxiety and withdrawal severity</li>
+            <li>Funded in NZ; less abuse liability than short-acting agents at equivalent doses</li>
+          </ul>
+          <p><strong>How to switch:</strong> Calculate the diazepam equivalent of the current daily dose using this tool. Switch to the equivalent diazepam dose (usually in 2&ndash;4 divided doses daily to maintain stable levels). Stabilise on diazepam for 1&ndash;2 weeks before beginning the taper. Some patients may need a brief period at a slightly lower equivalent dose if they are distressed by the switch.</p>
+          <p><em>Note: Patients on short-acting, high-potency benzos (especially alprazolam and lorazepam) may experience more difficulty switching and may need specialist input for complex cases.</em></p>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Tapering strategies and dose reduction schedules</button>
+      <div class="toggle-content">
+        <div class="moa-section">
+          <div class="moa-title">General Principles of Benzodiazepine Tapering</div>
+          <p><strong>Ashton Protocol (most widely referenced):</strong> Reduce dose by approximately 10% of the current dose every 1&ndash;4 weeks. This percentage-based approach means reductions become progressively smaller in absolute terms as the dose decreases - which is appropriate, as withdrawal is often most intense in the final stages.<sup>1</sup></p>
+          <p><strong>Rate of taper:</strong> Most patients tolerate a taper lasting 3&ndash;12 months. Patients on high doses or who have been taking benzodiazepines for many years may require longer (up to 2&ndash;3 years in some cases). There is no single correct speed - the patient's comfort and functioning should guide the pace.</p>
+          <p><strong>Practical reduction steps using diazepam:</strong></p>
+          <ul class="body-list">
+            <li><strong>Starting dose &gt;30 mg/day:</strong> Reduce by 2&ndash;5 mg every 1&ndash;2 weeks</li>
+            <li><strong>20&ndash;30 mg/day:</strong> Reduce by 2 mg every 1&ndash;2 weeks</li>
+            <li><strong>10&ndash;20 mg/day:</strong> Reduce by 1&ndash;2 mg every 2 weeks</li>
+            <li><strong>5&ndash;10 mg/day:</strong> Reduce by 1 mg every 2&ndash;4 weeks</li>
+            <li><strong>Below 5 mg/day:</strong> Use 0.5 mg steps or liquid diazepam; reduce every 4 weeks or slower as needed</li>
+          </ul>
+          <p><strong>Pausing the taper:</strong> If withdrawal symptoms are severe, hold the current dose for 2&ndash;4 weeks before continuing. Do not increase the dose unless there is a compelling reason (e.g., risk of seizures). Remind patients that temporary worsening does not mean the taper cannot succeed.</p>
+          <p><strong>Monitoring:</strong> Review monthly during the taper. Assess for withdrawal symptoms, mood, sleep, and anxiety. Watch for relapse of the underlying condition that benzodiazepines were originally prescribed for.</p>
+          <p><strong>BPAC NZ guidance</strong> recommends a collaborative approach, shared decision-making, and written tapering schedules provided to patients. Brief psychological interventions (CBT, motivational interviewing) significantly improve taper success rates.<sup>3</sup></p>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Benzodiazepine dependence and withdrawal syndrome</button>
+      <div class="toggle-content">
+        <div class="moa-section">
+          <div class="moa-title">Understanding Dependence and Withdrawal</div>
+          <p><strong>Physical dependence</strong> (neuroadaptation to GABA-A receptor downregulation) develops within 2&ndash;4 weeks of regular use at therapeutic doses. This is distinct from addiction (compulsive drug-seeking behaviour), though the two can co-exist.</p>
+          <p><strong>Risk factors for dependence:</strong> Higher dose, longer duration, short-acting agents (more pronounced peaks and troughs), concurrent alcohol use, anxiety disorders, and previous substance use history.</p>
+          <p><strong>Withdrawal syndrome - symptoms:</strong></p>
+          <ul class="body-list">
+            <li><strong>Common:</strong> Anxiety, insomnia, irritability, tremor, sweating, palpitations, muscle tension, headache</li>
+            <li><strong>Perceptual:</strong> Paraesthesias, hypersensitivity to light, sound and touch, depersonalisation</li>
+            <li><strong>Severe (less common):</strong> Seizures, delirium, psychosis - particularly with abrupt cessation or rapid taper</li>
+          </ul>
+          <p><strong>Timing of withdrawal by half-life:</strong></p>
+          <ul class="body-list">
+            <li><strong>Short-acting (oxazepam, temazepam):</strong> Withdrawal begins within 12&ndash;24 h, peaks at 1&ndash;3 days</li>
+            <li><strong>Intermediate-acting (lorazepam, alprazolam):</strong> Onset 24&ndash;48 h, peaks 3&ndash;5 days</li>
+            <li><strong>Long-acting (diazepam):</strong> Onset 3&ndash;7 days, peaks 1&ndash;2 weeks; more protracted but generally milder</li>
+          </ul>
+          <p><strong>Post-acute withdrawal syndrome (PAWS):</strong> Prolonged anxiety, insomnia, cognitive difficulties, and mood disturbance can persist for weeks to months after cessation, particularly with long-term use. Reassure patients this is time-limited and will resolve. PAWS is a major driver of relapse.</p>
+          <p><strong>Seizure risk:</strong> Most significant with abrupt withdrawal from high doses or long-term use. If seizure risk is high (prior withdrawal seizures, epilepsy, high-dose use, concomitant alcohol withdrawal), admit for supervised withdrawal.</p>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Special populations: elderly, hepatic impairment, pregnancy</button>
+      <div class="toggle-content">
+        <div class="moa-section">
+          <div class="moa-title">Special Populations</div>
+          <p><strong>Elderly patients:</strong> Use the lowest effective dose. Benzodiazepines significantly increase fall and fracture risk, cognitive impairment, and motor vehicle accident risk in older adults.<sup>4</sup> The LOT drugs - <strong>L</strong>orazepam, <strong>O</strong>xazepam, <strong>T</strong>emazepam - are preferred because they lack active metabolites and do not require hepatic oxidation. Avoid long-acting agents (diazepam, nitrazepam, chlordiazepoxide) as sedation accumulates. Reduce doses by 50% as a starting point. Include in STOPP/START review (see Geriatric Assessment tool).</p>
+          <p><strong>Hepatic impairment:</strong> Avoid agents requiring oxidative hepatic metabolism (diazepam, chlordiazepoxide, clonazepam, nitrazepam). LOT drugs undergo glucuronidation, which is preserved in hepatic disease, and are therefore preferred. Use with caution in severe hepatic failure regardless of agent.</p>
+          <p><strong>Renal impairment:</strong> Benzodiazepines are generally safe in mild-to-moderate renal impairment. Reduce doses in severe renal impairment (eGFR &lt;30). Active metabolites may accumulate.</p>
+          <p><strong>Pregnancy:</strong> Benzodiazepines cross the placenta. Use should be minimised, particularly in the first trimester (teratogenicity risk remains debated but is a precautionary concern) and near term (neonatal withdrawal syndrome, floppy infant syndrome, respiratory depression). If benzodiazepine use is unavoidable, use the lowest effective dose and taper before delivery if possible. Discuss with obstetric team. Benzodiazepines are not recommended during breastfeeding.<sup>2</sup></p>
+          <p><strong>Concurrent alcohol use disorder:</strong> Cross-tolerance means higher than usual doses may be required for alcohol withdrawal. Benzodiazepine use in patients who drink heavily requires careful monitoring for combined CNS depression. See alcohol withdrawal section below.</p>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Alcohol withdrawal - diazepam dosing in NZ practice</button>
+      <div class="toggle-content">
+        <div class="moa-section">
+          <div class="moa-title">Diazepam for Alcohol Withdrawal Syndrome (AWS)</div>
+          <p>Diazepam is the first-line agent for alcohol withdrawal in NZ. Both symptom-triggered (CIWA-Ar guided) and fixed-schedule approaches are used depending on the clinical context.<sup>5,6</sup></p>
+          <p><strong>Indications for admission:</strong> Seizure history, prior severe withdrawal (delirium tremens), multiple previous detoxifications, high alcohol intake (&gt;30 standard drinks/day), significant medical comorbidity, CIWA-Ar score &gt;15, or unable to manage safely in community.</p>
+          <p><strong>Community withdrawal (mild AWS, CIWA-Ar &lt;10):</strong></p>
+          <ul class="body-list">
+            <li>Diazepam 5&ndash;10 mg every 4&ndash;6 h as needed for withdrawal symptoms</li>
+            <li>Daily review; reducing doses over 5&ndash;7 days</li>
+            <li>Thiamine 100 mg oral daily (minimum) - use IM if absorption uncertain</li>
+            <li>Check HealthPathways Canterbury for current community detox protocol</li>
+          </ul>
+          <p><strong>Inpatient withdrawal (moderate AWS, CIWA-Ar 10&ndash;15):</strong></p>
+          <ul class="body-list">
+            <li>Diazepam 10&ndash;20 mg every 4&ndash;6 h symptom-triggered (CIWA-Ar guided)</li>
+            <li>Or front-loading: diazepam 20 mg every 1&ndash;2 h until CIWA-Ar &lt;8, then PRN</li>
+            <li>Thiamine 100 mg IV/IM TDS for at least 3 days (Pabrinex if available) - give before glucose</li>
+            <li>Monitor for delirium tremens and respiratory depression</li>
+          </ul>
+          <p><strong>Severe AWS / Delirium Tremens:</strong> ICU or high-dependency setting. High-dose diazepam (up to 60&ndash;120 mg/day or more in refractory DT). Phenobarbitone as add-on if benzodiazepine-refractory. Specialist management required.</p>
+          <p><em>Note: Diazepam accumulation can occur with front-loading doses in patients with hepatic impairment. Monitor closely. Some services use lorazepam (shorter acting, no active metabolites) in significant hepatic disease.</em></p>
+        </div>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Zopiclone and Z-drugs - deprescribing considerations</button>
+      <div class="toggle-content">
+        <div class="moa-section">
+          <div class="moa-title">Z-drugs in NZ Practice</div>
+          <p>Zopiclone (7.5 mg) is the most widely prescribed hypnotic in NZ and acts on GABA-A receptors via a binding site overlapping with benzodiazepines. Despite initial marketing as non-habit-forming, it produces physical dependence, tolerance, and a withdrawal syndrome similar to short-acting benzodiazepines.<sup>7</sup></p>
+          <p><strong>Deprescribing zopiclone:</strong></p>
+          <ul class="body-list">
+            <li>Reduce dose gradually over 4&ndash;8 weeks minimum</li>
+            <li>Zopiclone 7.5 mg can be halved to 3.75 mg as a first step</li>
+            <li>For patients unable to reduce directly, switching to a low-dose diazepam equivalent (approximately 5 mg) may be used, then taper diazepam - though this conversion is less well-established than benzo-to-benzo switches</li>
+            <li>Address sleep hygiene and CBT-I (Cognitive Behavioural Therapy for Insomnia) concurrently</li>
+          </ul>
+          <p><strong>CBT-I</strong> is the most effective long-term treatment for chronic insomnia and should be offered to all patients being weaned off hypnotics. BPAC NZ has patient resources available.<sup>3</sup></p>
+          <p><strong>Melatonin (Circadin 2 mg MR)</strong> is funded in NZ for short-term use in patients aged &ge;55 years as a hypnotic - may assist transition off zopiclone in appropriate patients.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="section">
+      <div class="kicker">❍ Sources</div>
+      <h2>References</h2>
+      <div class="ref-list">
+        <ol>
+          <li>Ashton CH. Benzodiazepines: How they work and how to withdraw (The Ashton Manual). Newcastle University; 2002 [revised 2011]. Available from: https://www.benzo.org.uk/manual/ [cited 2025].</li>
+          <li>New Zealand Formulary (NZF). Benzodiazepines and related drugs. Wellington: NZF; 2025. Available from: https://nzf.org.nz [cited 2025].</li>
+          <li>Best Practice Advisory Centre New Zealand (BPAC NZ). Benzodiazepine and zopiclone deprescribing. Dunedin: BPAC NZ; 2022. Available from: https://bpac.org.nz [cited 2025].</li>
+          <li>American Geriatrics Society 2023 updated AGS Beers Criteria for potentially inappropriate medication use in older adults. J Am Geriatr Soc. 2023;71(7):2052&ndash;81.</li>
+          <li>Haber PS, Lintzeris N, Proude E, Lopatko O. Quick Reference Guide to the Treatment of Alcohol Problems. Canberra: Commonwealth of Australia; 2009.</li>
+          <li>New Zealand Guidelines Group. Alcohol Use Disorder Identification and Brief Intervention. Wellington: NZGG; 2011.</li>
+          <li>Dündar Y, Dodd S, Strobl J, Boland A, Dickson R, Walley T. Comparative efficacy of newer hypnotic drugs for the short-term management of insomnia: a systematic review and meta-analysis. Hum Psychopharmacol. 2004;19(5):305&ndash;22.</li>
+          <li>Lader M, Tylee A, Donoghue J. Withdrawing benzodiazepines in primary care. CNS Drugs. 2009;23(1):19&ndash;34.</li>
+          <li>Rang HP, Ritter JM, Flower RJ, Henderson G. Rang &amp; Dale's Pharmacology. 9th ed. Edinburgh: Elsevier; 2019. Chapter 43: Anxiolytic and hypnotic drugs.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>Disclaimer:</strong> This tool provides approximate benzodiazepine equivalences for consultation support only. It does not replace clinical judgement, specialist input, or individual patient assessment. Equivalence ratios vary between sources and do not account for individual pharmacokinetics, duration and pattern of use, cross-tolerance, or underlying medical conditions. Zopiclone equivalences are approximate and less well-validated. This page is intended for use by registered clinicians in Aotearoa New Zealand. Refer to the NZF, BPAC NZ, and HealthPathways for current NZ-specific guidance.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+      <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
+      <p>An internet workshop for general practice.</p>
+    </div>
+  </footer>
+
+  <script>
+    const benzos = {
+      diazepam: {
+        label: 'Diazepam',
+        diagFactor: 1.0,
+        equivDose: 5,
+        halflife: 'long',
+        halflifeLabel: '20&ndash;100 h (+ active metabolites)',
+        halflifeShort: '20-100 h',
+        cd: true,
+        cdClass: 'Class C CD',
+        note: 'Reference drug for conversion. Long half-life with active metabolites (desmethyldiazepam, t½ 36&ndash;200 h) produces smooth, gradual offset. Preferred agent for structured tapering.',
+        availability: 'Oral tablets (2 mg, 5 mg); IV/IM injection. Funded NZ. Class C controlled drug.',
+        caution: false,
+        zdrug: false
+      },
+      clonazepam: {
+        label: 'Clonazepam',
+        diagFactor: 10,
+        equivDose: 0.5,
+        halflife: 'long',
+        halflifeLabel: '18&ndash;50 h',
+        halflifeShort: '18-50 h',
+        cd: true,
+        cdClass: 'Class C CD',
+        note: 'High potency (10&times; diazepam). Long-acting. Used for epilepsy and anxiety disorders. Inter-dose withdrawal less common than short-acting agents, but high potency makes fine-grained tapering difficult.',
+        availability: 'Oral tablets (0.5 mg, 2 mg). Funded (restricted). Class C controlled drug.',
+        caution: false,
+        zdrug: false
+      },
+      lorazepam: {
+        label: 'Lorazepam',
+        diagFactor: 5,
+        equivDose: 1,
+        halflife: 'intermediate',
+        halflifeLabel: '10&ndash;20 h',
+        halflifeShort: '10-20 h',
+        cd: true,
+        cdClass: 'Class C CD',
+        note: 'No active metabolites - predictable kinetics. Preferred in hepatic impairment and elderly (LOT drug). Used IV for status epilepticus. Inter-dose withdrawal can occur with multiple daily dosing.',
+        availability: 'Oral tablets (1 mg, 2.5 mg); IV/IM injection. Funded NZ. Class C controlled drug.',
+        caution: false,
+        zdrug: false
+      },
+      oxazepam: {
+        label: 'Oxazepam',
+        diagFactor: 0.333,
+        equivDose: 15,
+        halflife: 'short',
+        halflifeLabel: '4&ndash;15 h',
+        halflifeShort: '4-15 h',
+        cd: true,
+        cdClass: 'Class C CD',
+        note: 'Short-acting, low potency, no active metabolites. LOT drug. No hepatic oxidation required. Short half-life means significant inter-dose withdrawal with regular use. Switching to diazepam before tapering is recommended.',
+        availability: 'Oral tablets (15 mg, 30 mg). Funded NZ. Class C controlled drug.',
+        caution: false,
+        zdrug: false
+      },
+      temazepam: {
+        label: 'Temazepam',
+        diagFactor: 0.5,
+        equivDose: 10,
+        halflife: 'short',
+        halflifeLabel: '8&ndash;22 h',
+        halflifeShort: '8-22 h',
+        cd: true,
+        cdClass: 'Class B2 CD',
+        note: 'Short-acting hypnotic. LOT drug. No significant active metabolites. Higher abuse potential - supplied in capsules to reduce injection misuse. Daytime rebound anxiety common with regular use.',
+        availability: 'Oral capsules (10 mg). Funded NZ. Class B2 controlled drug.',
+        caution: false,
+        zdrug: false
+      },
+      nitrazepam: {
+        label: 'Nitrazepam',
+        diagFactor: 1.0,
+        equivDose: 5,
+        halflife: 'long',
+        halflifeLabel: '15&ndash;38 h',
+        halflifeShort: '15-38 h',
+        cd: true,
+        cdClass: 'Class C CD',
+        note: 'Long-acting hypnotic. Significant next-day sedation ("hangover effect"), particularly in elderly. Less commonly prescribed now than temazepam. Accumulation risk with nightly use.',
+        availability: 'Oral tablets (5 mg). Funded NZ. Class C controlled drug.',
+        caution: false,
+        zdrug: false
+      },
+      alprazolam: {
+        label: 'Alprazolam',
+        diagFactor: 10,
+        equivDose: 0.5,
+        halflife: 'intermediate',
+        halflifeLabel: '6&ndash;27 h',
+        halflifeShort: '6-27 h',
+        cd: true,
+        cdClass: 'Class C CD',
+        note: 'High potency, high dependence risk. Inter-dose withdrawal common with TDS/QDS dosing schedules. Not funded in NZ. Switching to diazepam prior to tapering strongly recommended.',
+        availability: 'Oral tablets (0.25 mg, 0.5 mg, 1 mg). NOT funded NZ - private prescription only. Class C controlled drug.',
+        caution: true,
+        cautionText: 'High dependence risk - not funded NZ',
+        zdrug: false
+      },
+      chlordiazepoxide: {
+        label: 'Chlordiazepoxide',
+        diagFactor: 0.2,
+        equivDose: 25,
+        halflife: 'long',
+        halflifeLabel: '5&ndash;30 h (+ active metabolites 36&ndash;200 h)',
+        halflifeShort: '5-30 h (+metabolites)',
+        cd: true,
+        cdClass: 'Class C CD',
+        note: 'Low potency. Active metabolites include desmethyldiazepam (same as diazepam). Historically used for alcohol withdrawal; largely replaced by diazepam in NZ practice. Large tablet numbers required at therapeutic doses.',
+        availability: 'Oral capsules (5 mg, 10 mg, 25 mg). Available NZ. Class C controlled drug.',
+        caution: false,
+        zdrug: false
+      },
+      clobazam: {
+        label: 'Clobazam',
+        diagFactor: 0.5,
+        equivDose: 10,
+        halflife: 'long',
+        halflifeLabel: '18&ndash;42 h (norclobazam 40&ndash;114 h)',
+        halflifeShort: '18-42 h (+metabolites)',
+        cd: true,
+        cdClass: 'Class C CD',
+        note: '1,5-benzodiazepine. Adjunctive epilepsy therapy only. Very long-acting active metabolite (norclobazam). Not used for anxiety or insomnia in NZ. Funded under Special Authority for epilepsy.',
+        availability: 'Oral tablets (10 mg). Funded (Special Authority - epilepsy only). Class C controlled drug.',
+        caution: true,
+        cautionText: 'Epilepsy use only - Special Authority',
+        zdrug: false
+      },
+      midazolam: {
+        label: 'Midazolam',
+        diagFactor: 0.667,
+        equivDose: 7.5,
+        halflife: 'ultrashort',
+        halflifeLabel: '1&ndash;4 h',
+        halflifeShort: '1-4 h',
+        cd: true,
+        cdClass: 'Class B2 CD',
+        note: 'Ultra-short-acting. Oral bioavailability &lt;40% - equivalences for oral use are not valid. Used for procedural sedation, conscious sedation, and SC infusion in palliative care only. Not used for anxiety or insomnia.',
+        availability: 'IV/IM injection; buccal solution (Buccolam). Funded NZ. Class B2 controlled drug.',
+        caution: true,
+        cautionText: 'IV/IM/SC/buccal only - oral NA',
+        zdrug: false,
+        procedural: true
+      },
+      zopiclone: {
+        label: 'Zopiclone',
+        diagFactor: 0.667,
+        equivDose: 7.5,
+        halflife: 'short',
+        halflifeLabel: '3.5&ndash;6.5 h',
+        halflifeShort: '3.5-6.5 h',
+        cd: false,
+        cdClass: 'Not a CD',
+        note: 'Z-drug (non-benzodiazepine GABA-A agonist). NOT a benzodiazepine. Partial cross-tolerance with benzodiazepines. Equivalence to diazepam is approximate and less well-established than benzo-to-benzo conversions. Use conversion with caution.',
+        availability: 'Oral tablets (3.75 mg, 7.5 mg). Funded NZ. Not a controlled drug.',
+        caution: true,
+        cautionText: 'Z-drug - approximate equivalence only',
+        zdrug: true
+      }
+    };
+
+    const conversionOrder = ['diazepam', 'clonazepam', 'lorazepam', 'temazepam', 'oxazepam', 'nitrazepam', 'alprazolam', 'zopiclone'];
+
+    const doseContexts = [
+      { max: 5,    badge: 'low',       label: 'Low therapeutic range',    text: 'Low therapeutic equivalent. Typical anxiolytic starting doses. Physical dependence possible after 2-4 weeks of daily use even at this range.',                                  pct: 10 },
+      { max: 15,   badge: 'low',       label: 'Standard therapeutic range', text: 'Standard anxiolytic/hypnotic range. Regular use at this level will produce physical dependence. Structured tapering will be required if stopping.',                             pct: 30 },
+      { max: 30,   badge: 'medium',    label: 'High therapeutic dose',    text: 'Above standard therapeutic range. Significant physical dependence likely. Abrupt cessation carries risk of severe withdrawal. Structured diazepam taper strongly recommended.',    pct: 55 },
+      { max: 60,   badge: 'high',      label: 'High dose - dependence likely', text: 'High-dose range. Physical dependence established. Withdrawal may include seizures if abrupt. Taper slowly - this may take 6-12+ months. Consider specialist input.',       pct: 75 },
+      { max: 9999, badge: 'very-high', label: 'Very high dose',           text: 'Very high diazepam equivalent. Severe withdrawal risk including delirium and seizures. Inpatient or closely supervised community withdrawal. Specialist referral recommended.',    pct: 92 }
+    ];
+
+    function getHalflifePill(hl) {
+      const labels = { ultrashort: 'Ultra-short', short: 'Short-acting', intermediate: 'Intermediate', long: 'Long-acting' };
+      return `<span class="halflife-pill ${hl}">${labels[hl] || hl}</span>`;
+    }
+
+    function calculate() {
+      const benzoKey = document.getElementById('input-benzo').value;
+      const doseRaw  = parseFloat(document.getElementById('input-dose').value);
+      const unit     = document.getElementById('input-unit').value;
+
+      if (!benzoKey || isNaN(doseRaw) || doseRaw <= 0) {
+        alert('Please select a benzodiazepine and enter a valid dose.');
+        return;
+      }
+
+      const drug = benzos[benzoKey];
+
+      if (drug.procedural && benzoKey === 'midazolam') {
+        alert('Midazolam is an ultra-short-acting agent used for procedural sedation and palliative care by IV/IM/SC/buccal route. Oral bioavailability is low and variable. Oral diazepam equivalences are not clinically applicable for midazolam. This tool cannot provide a meaningful conversion for midazolam.');
+        return;
+      }
+
+      let doseInMg = unit === 'mcg' ? doseRaw / 1000 : doseRaw;
+      const diagEquiv    = doseInMg * drug.diagFactor;
+      const diagRounded  = Math.round(diagEquiv * 10) / 10;
+
+      // Hero
+      document.getElementById('hero-input-dose').textContent = doseRaw + ' ' + unit;
+      document.getElementById('hero-input-drug').textContent = drug.label + ' / day';
+      document.getElementById('hero-diaz-dose').textContent  = diagRounded;
+
+      // Dose context badge
+      const ctx = doseContexts.find(c => diagEquiv <= c.max) || doseContexts[doseContexts.length - 1];
+      document.getElementById('dose-badge-container').innerHTML =
+        `<div class="dose-badge ${ctx.badge}">${ctx.label}</div>${getHalflifePill(drug.halflife)}`;
+
+      document.getElementById('hero-context').innerHTML =
+        diagRounded + ' mg diazepam equivalent/day &mdash; ' + ctx.label.toLowerCase() + '.';
+
+      // Threshold marker
+      const pct = Math.min(ctx.pct, 93);
+      document.getElementById('threshold-marker').style.left = pct + '%';
+
+      // Clinical context box
+      const withdrawalRisk = diagEquiv >= 30 ? 'High risk of severe withdrawal including seizures if stopped abruptly. Slow taper mandatory - consider specialist input.' :
+                             diagEquiv >= 10 ? 'Significant physical dependence likely. Structured taper required before stopping. Never stop abruptly.' :
+                             'Physical dependence possible after regular use. Gradual taper recommended. Do not stop abruptly.';
+
+      const zdNote = drug.zdrug ? '<p><strong>Z-drug note:</strong> Zopiclone equivalences are approximate. Cross-tolerance with benzodiazepines is partial. Use this conversion as a guide only when planning a switch to diazepam for structured tapering.</p>' : '';
+
+      document.getElementById('clinical-context-box').innerHTML = `
+        <h3>Clinical Context - ${diagRounded} mg diazepam equivalent/day</h3>
+        <p>${ctx.text}</p>
+        <p><strong>Withdrawal risk:</strong> ${withdrawalRisk}</p>
+        <p><strong>Tapering:</strong> If stopping, switch to diazepam equivalent dose, stabilise 1-2 weeks, then reduce by ~10% every 1-4 weeks. Total taper duration typically ${diagEquiv >= 30 ? '6-18+ months' : diagEquiv >= 10 ? '3-12 months' : '4-12 weeks'}.</p>
+        ${zdNote}
+      `;
+
+      // Conversion grid
+      let convHtml = '';
+      conversionOrder.forEach(key => {
+        const s = benzos[key];
+        if (key === benzoKey) {
+          convHtml += `
+            <div class="conversion-card reference">
+              <div class="card-label">${s.label} &#9733; (input)</div>
+              <div class="card-dose">${doseRaw}</div>
+              <div class="card-unit">${unit}/day</div>
+              <div class="card-note">${getHalflifePill(s.halflife)}</div>
+            </div>`;
+        } else {
+          const targetDose    = diagEquiv / s.diagFactor;
+          const targetRounded = Math.round(targetDose * 100) / 100;
+          convHtml += `
+            <div class="conversion-card${s.caution || s.zdrug ? ' caution' : ''}">
+              <div class="card-label">${s.label}${s.zdrug ? ' (Z-drug)' : ''}</div>
+              <div class="card-dose">${targetRounded}</div>
+              <div class="card-unit">mg/day</div>
+              <div class="card-note">${s.note.split('.')[0]}.</div>
+              ${getHalflifePill(s.halflife)}
+              ${s.caution ? `<div class="card-warn">&#9888; ${s.cautionText}</div>` : ''}
+            </div>`;
+        }
+      });
+      document.getElementById('conversions-grid').innerHTML = convHtml;
+
+      // Drug profile
+      document.getElementById('drug-profile-box').innerHTML = `
+        <div class="info-box">
+          <h3>${drug.label}</h3>
+          <p>${drug.note}</p>
+          <p>
+            <strong>Half-life:</strong> ${drug.halflifeLabel}<br>
+            <strong>Controlled drug status:</strong> ${drug.cdClass}<br>
+            <strong>NZ availability:</strong> ${drug.availability}
+          </p>
+          <p><strong>Diazepam equivalence:</strong> ${drug.equivDose} mg ${drug.label} &equiv; 5 mg diazepam (ratio: 1 mg ${drug.label} = ${Math.round(drug.diagFactor * 100) / 100} mg diazepam equivalent).</p>
+        </div>`;
+
+      document.getElementById('output').classList.add('active');
+      document.getElementById('output').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleSection(btn) {
+      const content = btn.nextElementSibling;
+      content.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

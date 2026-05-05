@@ -1,0 +1,423 @@
+---
+permalink: /workshop/guidelines/obesity/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obesity and Weight Management  -  Working Diagnosis</title>
+<meta name="description" content="NZ vs AU vs NICE 2023 guideline comparison for obesity and weight management. GLP-1 access, bariatric surgery, assessment frameworks, and the equity dimension of restricted funded treatment in NZ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #F5F1E8;
+  --warm:       #EDE7D8;
+  --deep:       #E4DBC4;
+  --ink:        #1A1F1C;
+  --soft:       #3A4540;
+  --mute:       #6B7A75;
+  --rule:       #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --au-blue:    #1A5CAD;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px);
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+.masthead { border-bottom: 1px solid var(--rule); padding: 20px 32px; background: var(--paper); position: sticky; top: 0; z-index: 50; }
+.masthead-row { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.68rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.primary-nav a:hover { color: var(--green); }
+.primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
+
+.page-wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px 80px; }
+
+.page-header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.back-link { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); display: inline-block; margin-bottom: 24px; }
+.back-link:hover { color: var(--green); }
+.page-kicker { font-family: var(--font-m); font-size: 0.65rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
+.page-kicker::before { content: "❍ "; }
+.page-title { font-family: var(--font-d); font-weight: 500; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; }
+.page-title em { font-style: italic; color: var(--green); }
+.page-dek { font-family: var(--font-b); font-size: 1.05rem; color: var(--soft); max-width: 580px; line-height: 1.55; margin-bottom: 22px; }
+.page-meta { display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); }
+
+.div-summary { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin: 36px 0; }
+@media (max-width: 600px) { .div-summary { grid-template-columns: 1fr; } }
+.div-col { padding: 24px 28px; }
+.div-col:first-child { border-right: 1px solid var(--rule); }
+.div-col-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 7px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-agree { background: var(--green); }
+.dot-diverge { background: var(--ochre); }
+.div-list { list-style: none; padding: 0; }
+.div-list li { font-family: var(--font-b); font-size: 15px; color: var(--soft); padding: 6px 0; border-bottom: 1px solid rgba(217,209,189,.5); line-height: 1.4; }
+.div-list li:last-child { border-bottom: none; }
+
+.section-head { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 44px 0 16px; }
+.section-head::before { content: "❍ "; }
+
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--rule); margin-bottom: 44px; }
+.cmp-table { width: 100%; border-collapse: collapse; min-width: 660px; }
+.cmp-table thead th { padding: 13px 16px; text-align: left; font-family: var(--font-m); font-size: 0.56rem; letter-spacing: 1.8px; text-transform: uppercase; background: var(--warm); border-bottom: 1px solid var(--rule); }
+.cmp-table thead .th-domain { color: var(--mute); width: 148px; }
+.cmp-table thead .th-nz    { color: var(--green-deep); border-left: 3px solid var(--green); }
+.cmp-table thead .th-au    { color: var(--au-blue);    border-left: 3px solid var(--au-blue); }
+.cmp-table thead .th-int   { color: var(--soft);       border-left: 3px solid var(--rule); }
+.cmp-table tbody tr { border-top: 1px solid var(--rule); }
+.cmp-table tbody tr:nth-child(even) { background: rgba(237,231,216,.28); }
+.cmp-table tbody td { padding: 13px 16px; vertical-align: top; font-family: var(--font-b); font-size: 15px; line-height: 1.5; }
+.cmp-table .td-domain { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); line-height: 1.55; }
+.cmp-table .td-nz  { border-left: 3px solid rgba(47,107,92,.12); }
+.cmp-table .td-au  { border-left: 3px solid rgba(26,92,173,.12); }
+.cmp-table .td-int { border-left: 3px solid var(--rule); }
+.cmp-table tr.row-hi .td-nz { border-left-color: var(--ochre); background: rgba(184,113,79,.035); }
+
+.chip { display: inline-block; font-family: var(--font-m); font-size: 0.52rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 6px; margin-left: 5px; vertical-align: middle; border-radius: 2px; }
+.chip-funded     { background: rgba(47,107,92,.1);  color: var(--green-deep); }
+.chip-restricted { background: rgba(184,113,79,.12); color: var(--ochre); }
+.chip-nil        { background: rgba(140,30,30,.1);   color: #7A1C1C; }
+.chip-au         { background: rgba(26,92,173,.1);   color: var(--au-blue); }
+
+.nz-notes { background: rgba(237,231,216,.5); border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 28px 32px; margin-bottom: 32px; }
+.nz-notes-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); margin-bottom: 20px; }
+.nz-notes h3 { font-family: var(--font-d); font-weight: 500; font-size: 1rem; margin: 22px 0 8px; color: var(--ink); }
+.nz-notes h3:first-of-type { margin-top: 0; }
+.nz-notes p { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 8px; }
+.nz-notes ul { padding-left: 18px; margin-bottom: 8px; }
+.nz-notes li { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 5px; }
+
+.bottom-line { border: 1px solid var(--ink); border-left: 3px solid var(--ink); padding: 24px 28px; margin-bottom: 40px; }
+.bottom-line-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 16px; }
+.bottom-line ol { padding-left: 20px; }
+.bottom-line li { font-family: var(--font-b); font-size: 15.5px; color: var(--soft); line-height: 1.55; margin-bottom: 9px; }
+
+.sources { border-top: 1px solid var(--rule); padding-top: 28px; }
+.sources-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; }
+.sources ol { padding-left: 20px; }
+.sources li { font-family: var(--font-b); font-size: 13.5px; color: var(--mute); line-height: 1.6; margin-bottom: 6px; }
+
+.site-footer { border-top: 1px solid var(--rule); max-width: 1080px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-family: var(--font-m); font-size: 0.62rem; color: var(--mute); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Site navigation">
+      <a href="/lifestyle/">Lifestyle</a>
+      <a href="/musculoskeletal/">MSK</a>
+      <a href="/paediatrics/">Paeds</a>
+      <a href="/geriatrics/">Geriatrics</a>
+      <a href="/gynaecology/">Gynae</a>
+      <a href="/dermatology/">Derm</a>
+      <a href="/mental-health/">Mental Health</a>
+      <a href="/vaccines/">Vaccines</a>
+      <a href="/travel/">Travel</a>
+      <a href="/workshop/" class="is-current">Workbench</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <a href="/workshop/guidelines/" class="back-link">← Guideline Comparisons</a>
+    <p class="page-kicker">Metabolic</p>
+    <h1 class="page-title">Obesity and weight management - <em>a treatment gap</em></h1>
+    <p class="page-dek">NICE 2023 and RACGP 2024 both position GLP-1 receptor agonists as a standard component of obesity care for eligible patients. In NZ, these agents are not funded for obesity. PHARMAC funds semaglutide and dulaglutide only for type 2 diabetes under Special Authority criteria. The pharmacological treatment gap between NZ and comparable health systems is the widest of any condition in this guideline comparison series.</p>
+    <div class="page-meta">
+      <span>Reviewed May 2026</span>
+      <span>MoH NZ 2022</span>
+      <span>RACGP 2024</span>
+      <span>NICE NG246 2023</span>
+    </div>
+  </div>
+
+  <p style="font-family: var(--font-m); font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); margin: 28px 0 -8px;">Scope: assessment and management of overweight and obesity in adults. Excludes obesity in children and adolescents, and eating disorders.</p>
+
+  <!-- Agree / Diverge -->
+  <div class="div-summary">
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-agree"></span>Where they agree</p>
+      <ul class="div-list">
+        <li>Obesity is a chronic, relapsing condition with a strong biological basis; language should be non-stigmatising and person-centred</li>
+        <li>BMI is an imperfect measure; waist circumference and cardiometabolic risk should be assessed alongside it; lower BMI thresholds apply for South Asian, Maori, and Pacific populations</li>
+        <li>Multicomponent lifestyle interventions combining dietary change, physical activity, and behavioural support produce better outcomes than any single component</li>
+        <li>Bariatric surgery is the most effective long-term weight loss intervention and should be offered to eligible patients; access is the limiting factor</li>
+        <li>Weight loss of 5-10% produces clinically meaningful improvements in blood pressure, glycaemia, lipids, sleep apnoea, and joint symptoms regardless of absolute starting BMI<sup>4</sup></li>
+        <li>Comorbidity-driven care: focus management on the conditions obesity is driving (T2D, hypertension, sleep apnoea, OA), not weight as an end in itself</li>
+      </ul>
+    </div>
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-diverge"></span>Where they diverge</p>
+      <ul class="div-list">
+        <li>GLP-1 receptor agonists for obesity: NICE 2023 recommends semaglutide 2.4mg weekly (Wegovy) within a specialist programme; RACGP 2024 supports GLP-1 use; NZ has no funded GLP-1 indication for obesity — semaglutide for weight management costs $400-500/month privately</li>
+        <li>Bariatric surgery access: NICE recommends considering surgery at BMI ≥35 with comorbidities, or BMI ≥40; AU has both public and private access; NZ public bariatric surgery is severely limited and highly variable by DHB/region</li>
+        <li>Orlistat: NICE retains orlistat as a pharmacological option; NZ orlistat is funded with Special Authority (BMI ≥30 with comorbidity, or BMI ≥28 in certain populations); modestly effective and commonly poorly tolerated</li>
+        <li>NICE 2023 includes tirzepatide (dual GIP/GLP-1 agonist) in the pathway; not available in NZ or AU for obesity</li>
+        <li>Specialist obesity services: NICE assumes access to a specialist weight management service for pharmacotherapy; no equivalent funded pathway in NZ primary care</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="section-head">Comparison</p>
+  <div class="cmp-wrap">
+    <table class="cmp-table" aria-label="Guideline comparison: obesity and weight management">
+      <thead>
+        <tr>
+          <th class="th-domain">Domain</th>
+          <th class="th-nz">NZ — MoH 2022</th>
+          <th class="th-au">AU — RACGP 2024</th>
+          <th class="th-int">International — NICE NG246 2023</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="td-domain">Assessment framework and BMI thresholds</td>
+          <td class="td-nz">
+            BMI ≥30 kg/m² defines obesity in general populations. Lower thresholds apply:<br><br>
+            <strong>Maori, Pacific, and South Asian peoples: BMI ≥27.5</strong> for clinical action. These populations carry higher cardiometabolic risk at lower BMI due to differences in body fat distribution and metabolic risk at equivalent BMI values.<br><br>
+            Assess waist circumference (action threshold: &gt;80 cm women, &gt;94 cm men in general population; &gt;80 cm women, &gt;90 cm men in Asian, Maori, and Pacific peoples). Assess for comorbidities, sleep apnoea, depression, and eating disorder features at initial evaluation.
+          </td>
+          <td class="td-au">
+            Similar. RACGP 2024 emphasises that BMI alone is an inadequate tool and should be supplemented by waist-to-height ratio, body composition, and clinical context. Lower BMI thresholds for Aboriginal and Torres Strait Islander peoples (similar principle to NZ ethnic-specific thresholds).<br><br>
+            RACGP recommends the 5As framework (Ask, Assess, Advise, Agree, Assist) to structure weight management conversations in a non-stigmatising way.
+          </td>
+          <td class="td-int">
+            NICE NG246: BMI ≥30 (or ≥25 with significant health risk) for offering weight management support. Assess comorbidities, psychological health, eating behaviours, and readiness to change.<br><br>
+            NICE uses an "obesity-related conditions" framework rather than just BMI: people with BMI 25-29.9 and a high-risk comorbidity (T2D, hypertension, sleep apnoea) should be offered the same treatment intensity as people with BMI ≥30.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Language and framing</td>
+          <td class="td-nz">
+            MoH 2022 uses person-first, non-stigmatising language throughout: "person living with obesity" rather than "obese person." Acknowledges the social, environmental, and biological determinants of weight and cautions against framing obesity as a simple failure of willpower or discipline.<br><br>
+            NZ guidance is explicit that weight stigma from clinicians is harmful and a barrier to engagement with care.
+          </td>
+          <td class="td-au">
+            RACGP 2024 similarly emphasises person-centred language, non-judgmental consultation style, and recognition of weight bias in healthcare. Recommends asking permission before discussing weight: "Would it be alright to talk about your weight today?" is presented as a useful framing tool.
+          </td>
+          <td class="td-int">
+            NICE NG246: use respectful, non-stigmatising language. Recognise that obesity is a complex, chronic condition influenced by genetics, environment, and socioeconomic factors. Do not use terms that imply personal blame. NICE recommends healthcare organisations audit their environments and communications for weight stigma.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Lifestyle and behavioural interventions</td>
+          <td class="td-nz">
+            Multicomponent programmes combining dietary modification, increased physical activity, and behavioural change support produce the best outcomes. In NZ primary care, structured programmes are limited:<br><br>
+            <strong>Green Prescription</strong>: physical activity referral programme, available through PHOs. <strong>Healthy Families NZ</strong>: community-level initiative. <strong>Dietitian referral</strong>: funded for some indications; access varies. Self-management support through brief motivational interviewing in primary care is the most commonly available approach.<span class="chip chip-restricted">Access limited</span>
+          </td>
+          <td class="td-au">
+            RACGP: multicomponent lifestyle programmes as first-line for all. Better access to structured programmes through Medicare chronic disease management items (CDM) and allied health referral (up to 5 subsidised dietitian visits per year under a care plan). Commercial programmes (eg WW, Jenny Craig) acknowledged as having evidence of modest short-term benefit.<span class="chip chip-au">Allied health subsidised</span>
+          </td>
+          <td class="td-int">
+            NICE NG246: offer multicomponent lifestyle interventions as part of a structured programme. Specify behavioural change techniques (self-monitoring, goal setting, relapse prevention) as essential components. Very low calorie diets (800 kcal/day) under medical supervision are an option for short-term use in selected patients. NICE assumes access to a structured weight management service; acknowledges many people will not reach specialist services.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">GLP-1 receptor agonists for obesity</td>
+          <td class="td-nz">
+            <strong>Not funded for obesity in NZ.</strong> Semaglutide (Wegovy 2.4mg weekly) and liraglutide (Saxenda 3mg daily) are not on the PHARMAC schedule for weight management.<span class="chip chip-nil">Not funded</span><br><br>
+            Semaglutide and dulaglutide are funded under Special Authority for type 2 diabetes only. A patient who meets the T2D criteria can access funded GLP-1 therapy, which has the dual benefit of glucose lowering and weight loss, but the obesity indication itself is not funded.<br><br>
+            Private cost: semaglutide 2.4mg (Wegovy) approximately $400-500/month. Ozempic (semaglutide 1mg, diabetes formulation) has been used off-label for weight management, creating supply shortages for patients with T2D.
+          </td>
+          <td class="td-au">
+            <strong>Semaglutide 2.4mg (Wegovy)</strong> is TGA-approved for obesity and available in Australia.<span class="chip chip-au">TGA approved</span><br><br>
+            As of 2024, Wegovy is not PBS-listed for obesity; it is available privately at significant cost (approximately AUD $400-500/month). Liraglutide 3mg (Saxenda) is also TGA-approved for obesity but not PBS-funded.<br><br>
+            RACGP 2024 supports prescribing GLP-1 agonists for obesity in eligible patients (BMI ≥30, or ≥27 with comorbidity) and recommends them as an adjunct to lifestyle intervention. PBS listing under review.
+          </td>
+          <td class="td-int">
+            NICE NG246 recommends <strong>semaglutide 2.4mg weekly</strong> (Wegovy) as an option for adults with BMI ≥35 (or ≥30 with high-risk comorbidity) in a specialist weight management service, as an adjunct to a reduced-calorie diet and physical activity programme.<br><br>
+            Also includes <strong>tirzepatide</strong> (Mounjaro, dual GIP/GLP-1 agonist) following its approval in the UK for weight management. Liraglutide 3mg remains an option. NICE notes the SUSTAIN and STEP trial evidence base showing 12-15% body weight reduction with semaglutide 2.4mg.<sup>5</sup> NHS England has restricted access due to supply constraints and prioritised T2D use.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Orlistat</td>
+          <td class="td-nz">
+            Funded with Special Authority:<span class="chip chip-restricted">Special Authority</span><br><br>
+            Criteria: BMI ≥30 kg/m² with at least one comorbidity (T2D, hypertension, dyslipidaemia, sleep apnoea, OA); OR BMI ≥28 in Maori, Pacific, and South Asian peoples with a comorbidity.<br><br>
+            Practical limitations: GI side effects (oily stools, faecal urgency, steatorrhoea) lead to high discontinuation rates. Modest efficacy: average 3-4 kg additional weight loss vs placebo at 12 months.<sup>6</sup> Remains the only funded pharmacological option for obesity in NZ in the absence of funded GLP-1 access.
+          </td>
+          <td class="td-au">
+            Available but not PBS-subsidised for obesity. Available over the counter (Xenical 120mg three times daily with meals). RACGP 2024 acknowledges orlistat's modest efficacy and poor tolerability; recommends it only where other interventions have failed and where the patient understands the side-effect profile. It is not a frontline recommendation given the superior efficacy of GLP-1 agonists.
+          </td>
+          <td class="td-int">
+            NICE NG246: orlistat remains an option but is explicitly placed below GLP-1 agonists in the treatment hierarchy due to inferior efficacy and tolerability. Consider orlistat only if GLP-1 agonists are contraindicated or not tolerated. Recommend alongside dietary change; maximum benefit occurs when fat intake is kept below 30% of calories to minimise GI side effects.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Bariatric surgery</td>
+          <td class="td-nz">
+            Bariatric surgery is the most effective long-term intervention for severe obesity and is associated with remission of T2D, hypertension, and sleep apnoea.<sup>7</sup><br><br>
+            NZ public access is <strong>severely limited</strong> and highly variable by region. Some DHBs (now Health NZ regions) provide publicly funded bariatric surgery for patients with BMI ≥40 (or ≥35 with significant comorbidity); others have no funded pathway or waitlists of multiple years.<span class="chip chip-nil">Very limited public access</span><br><br>
+            Private surgery available at major centres ($20,000-30,000 NZD). This is accessible to a small minority of patients who need it.
+          </td>
+          <td class="td-au">
+            Better public and private access than NZ. Most Australian states have publicly funded bariatric programmes with waitlists. Private insurance covers bariatric surgery for most policies. RACGP 2024 recommends referral for surgical assessment when BMI ≥40 (or ≥35 with significant comorbidity), or BMI ≥30 with poorly controlled T2D.<span class="chip chip-au">Public + private access</span><br><br>
+            Sleeve gastrectomy and Roux-en-Y gastric bypass are most commonly performed. RACGP emphasises that surgery is a tool within a comprehensive programme, not a standalone intervention.
+          </td>
+          <td class="td-int">
+            NICE NG246: offer referral for bariatric surgical assessment to adults with BMI ≥40 (all comers), or BMI 35-39.9 with a significant obesity-related comorbidity, or BMI 30-34.9 in people of South Asian, Chinese, other Asian, Middle Eastern, Black African, or African-Caribbean family background with T2D.<br><br>
+            NICE emphasises that surgery should be considered earlier in the pathway for people with T2D: a RYGB at BMI 35 is more effective for T2D remission than years of additional pharmacotherapy.<sup>7</sup> Recommends expedited referral for people with recent-onset T2D.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Dietitian and multidisciplinary team</td>
+          <td class="td-nz">
+            Dietitian referral can be made through primary care. Community dietitian services are available through DHB/Health NZ, but access is rationed - typically prioritised for eating disorders, renal disease, and high-risk diabetes rather than weight management per se. Private dietitian consultation: $100-180/session.<br><br>
+            A brief dietary assessment and advice within the GP consult is more realistic for most patients in NZ. Use of dietary tracking apps (MyFitnessPal, Cronometer) as self-management tools.
+          </td>
+          <td class="td-au">
+            RACGP: structured MDT approach for complex cases. Allied health access subsidised through CDM plans (5 visits/year for dietitian, exercise physiologist, or psychologist). Exercise physiologist referral for patients with mobility limitations or comorbidities. Psychology referral for binge eating, emotional eating, or significant mental health comorbidity.<span class="chip chip-au">CDM plan</span>
+          </td>
+          <td class="td-int">
+            NICE NG246: specialist weight management programmes should include dietitian, clinical psychologist, and exercise specialist input. For complex cases (BMI ≥40 or significant comorbidity), tier 3 or tier 4 specialist services should be accessible. NICE acknowledges that service provision varies considerably across the NHS and that the guideline's recommendations exceed current service capacity in many areas.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Comorbidity-first framing</td>
+          <td class="td-nz">
+            MoH 2022 frames weight management as a component of managing obesity-related conditions, not as a cosmetic or appearance goal. In primary care, the entry point is usually a comorbidity (T2D, hypertension, sleep apnoea, OA, PCOS, reflux) rather than weight per se.<br><br>
+            This framing is clinically useful: it shifts the focus to measurable health outcomes (HbA1c, blood pressure, AHI, pain scores) rather than weight, which reduces the risk of reinforcing weight stigma and maintains therapeutic relevance even when weight loss is modest.
+          </td>
+          <td class="td-au">
+            RACGP 2024 similarly emphasises comorbidity-driven goals. Outcome measures include reduction in cardiovascular risk, HbA1c improvement, blood pressure control, and reduced medication burden rather than weight alone. Acknowledges that even modest weight loss (3-5%) can produce clinically meaningful improvements in cardiometabolic markers.
+          </td>
+          <td class="td-int">
+            NICE NG246: frame goals around health improvement, not weight as a number. Agree individualised goals with the patient. Recognise that some people may not achieve large amounts of weight loss but still benefit significantly from the programme through improved fitness, comorbidity control, and quality of life. Do not withdraw support if weight loss targets are not met.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Weight maintenance and long-term support</td>
+          <td class="td-nz">
+            Weight regain after loss is the rule, not the exception - driven by physiological compensatory mechanisms (reduced resting metabolic rate, increased appetite hormones) that persist long after active weight loss.<sup>8</sup> Long-term follow-up and support is needed but poorly resourced in NZ primary care.<br><br>
+            Annual review incorporating BMI, waist circumference, comorbidity status, and medication review. Avoid framing weight regain as failure; normalise it and refocus on the evidence-based interventions available.
+          </td>
+          <td class="td-au">
+            RACGP: long-term support is essential. Acknowledge the biological tendency to weight regain. GLP-1 therapy, where used, should be continued long-term; stopping it leads to weight regain in most patients (as shown in the STEP 4 withdrawal trial). Structured long-term follow-up through GP chronic disease management plans.
+          </td>
+          <td class="td-int">
+            NICE NG246: continued support after initial intervention. For people on pharmacotherapy (GLP-1 agonists), continue as long as ongoing benefit is demonstrated and side effects are tolerable. Review at 12 weeks and 6 months; discontinue if less than 5% weight loss achieved by 12 weeks (on GLP-1) as this predicts non-response. Weight maintenance interventions (continued behavioural support, pharmacotherapy, or surgery) are distinct from weight loss interventions and should be offered separately.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Mental health and eating disorders</td>
+          <td class="td-nz">
+            Screen for depression and anxiety at initial assessment and at reviews - these are both causes and consequences of obesity and significantly affect engagement with lifestyle interventions. Screen for binge eating disorder (BED) and emotional eating using a brief validated tool (SCOFF, or ask directly about episodes of uncontrolled eating).<br><br>
+            Do not offer very low calorie diets, orlistat, or refer for bariatric surgery without first screening for and addressing BED. Surgery does not treat the eating behaviour and outcomes are significantly worse in patients with untreated BED.
+          </td>
+          <td class="td-au">
+            RACGP 2024: systematic screen for mental health comorbidities including BED, depression, anxiety, and body image disturbance. Psychology referral under CDM plan for significant mental health comorbidity. Bariatric surgery programmes require psychological assessment as part of the workup; most programmes will not proceed to surgery with active untreated BED.
+          </td>
+          <td class="td-int">
+            NICE NG246: routinely assess mental wellbeing, eating behaviours, and psychological factors at each contact. Do not use weight-loss programmes that could reinforce disordered eating. Refer for psychological support before progressing to intensive interventions in people with significant mental health comorbidity or eating disorder features. NICE explicitly excludes people with an active eating disorder from weight management pharmacotherapy.
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-head">NZ clinical context</p>
+  <div class="nz-notes">
+    <p class="nz-notes-label">PHARMAC funding and population-specific considerations</p>
+
+    <h3>The funded treatment gap: what is actually available in NZ</h3>
+    <p>NZ has the third-highest obesity prevalence in the OECD.<sup>1</sup> It also has the narrowest funded pharmacological options for treating it. In 2025, the funded interventions for obesity management in NZ primary care are:</p>
+    <ul>
+      <li><strong>Orlistat</strong> 120mg three times daily: Special Authority (BMI ≥30 with comorbidity, or ≥28 in Maori, Pacific, and South Asian peoples with comorbidity). Modest efficacy, poorly tolerated, high discontinuation rates.</li>
+      <li><strong>Semaglutide or dulaglutide</strong>: funded only for type 2 diabetes under Special Authority. A patient with both T2D and obesity can access funded GLP-1 therapy, which addresses both conditions. A patient with obesity alone, or with prediabetes, cannot.</li>
+      <li><strong>Bariatric surgery</strong>: publicly funded in some Health NZ regions with BMI ≥40 or ≥35 with significant comorbidity, but access is highly variable and waitlists are long. The programme is not nationally standardised.</li>
+      <li><strong>Green Prescription</strong>: physical activity support; available through PHOs, modest effect size as a standalone intervention.</li>
+      <li><strong>Dietitian referral</strong>: available but access-limited in community settings; most readily accessed through hospital outpatient services or privately.</li>
+    </ul>
+    <p>There is no funded equivalent in NZ to the UK NHS specialist weight management service pathway or the Australian CDM allied health model for obesity. Clinicians reading NICE NG246 or the RACGP 2024 guidelines should be aware that much of what those documents recommend is not available to most NZ patients at no cost.</p>
+
+    <h3>Ozempic, Wegovy, and the supply problem</h3>
+    <p>Semaglutide (Ozempic 1mg, funded for T2D) has been used off-label for weight management in patients without T2D, including by patients paying privately through telehealth services. This has created real and documented supply shortages for funded T2D patients who depend on Ozempic for glycaemic control. This is a prescribing ethics issue worth being aware of: clinicians prescribing Ozempic off-label for obesity in patients without T2D contribute to supply pressure on a drug that patients with T2D cannot do without.</p>
+    <p>Wegovy (semaglutide 2.4mg) is a separate, higher-dose formulation approved for weight management in some jurisdictions. It is not on the NZ schedule. It is available privately through specialist or telehealth prescribers at approximately $400-500/month as of 2025. Verify current availability through PHARMAC updates.</p>
+
+    <h3>Maori and Pacific peoples: obesity, BMI thresholds, and equity</h3>
+    <p>Obesity prevalence among Maori (47%) and Pacific peoples (67%) in NZ is substantially higher than among New Zealand European (30%).<sup>1</sup> This is not primarily a lifestyle difference. Factors include: socioeconomic deprivation (obesogenic food environments are clustered in low-income areas); the impact of colonisation on traditional food systems and physical activity patterns; and biological differences in body fat distribution and metabolic risk at equivalent BMI.</p>
+    <p>The lower BMI threshold for clinical action in Maori, Pacific, and South Asian peoples (BMI ≥27.5 rather than ≥30) reflects the evidence that cardiometabolic risk begins at a lower BMI in these populations. In practice, this threshold is not consistently applied in NZ primary care. Ensure that the ethnic-adjusted threshold is used in any obesity assessment.</p>
+    <p>The access gap for pharmacotherapy and bariatric surgery falls disproportionately on Maori and Pacific patients, who have higher prevalence of obesity and its comorbidities but are less likely to access private healthcare. This is an equity issue that the current funded landscape does not adequately address.</p>
+
+    <h3>What to do when patients ask about semaglutide they have read about</h3>
+    <p>Patients will frequently ask about semaglutide or "Ozempic" for weight loss, having read about it in media coverage of celebrity use or clinical trials. A useful framework for this conversation:</p>
+    <ul>
+      <li>Acknowledge the evidence: GLP-1 agonists are genuinely effective for weight loss, with average 12-15% body weight reduction in trial settings. The evidence is real and the interest is appropriate.</li>
+      <li>Explain the NZ situation: it is not funded for obesity, and the private cost is significant and ongoing - stopping leads to weight regain in most patients.</li>
+      <li>If the patient has T2D, PCOS, or another condition for which GLP-1 therapy might be funded: explore that pathway. Check current PHARMAC criteria.</li>
+      <li>Focus the conversation on what is available: lifestyle programme, Green Prescription, dietitian if accessible, orlistat if appropriate, and the long-term plan including monitoring and comorbidity management.</li>
+      <li>Do not frame the funded options as equivalent to GLP-1 therapy - they are not. Be honest that NZ's funded treatment landscape lags international evidence.</li>
+    </ul>
+  </div>
+
+  <p class="section-head">Bottom line for NZ practice</p>
+  <div class="bottom-line">
+    <p class="bottom-line-label">What this means in the consulting room</p>
+    <ol>
+      <li>Apply the ethnic-adjusted BMI threshold: for Maori, Pacific, and South Asian patients, begin clinical assessment and offer support at BMI ≥27.5, not ≥30. This is NZ-specific guidance that affects a significant proportion of the population.</li>
+      <li>Frame management around comorbidities, not weight. Agree measurable goals (HbA1c, blood pressure, AHI, pain scores) that are meaningful to the patient and not dependent on achieving a specific number on the scale. Even 3-5% weight loss produces clinically significant comorbidity improvement.</li>
+      <li>Screen for binge eating disorder and significant mental health comorbidity before starting orlistat, very low calorie diets, or referring for bariatric surgery. These interventions do not treat disordered eating and outcomes are substantially worse without prior psychological assessment.</li>
+      <li>If the patient has T2D: check PHARMAC Special Authority criteria for semaglutide or dulaglutide. A funded GLP-1 for their diabetes also addresses their obesity. The criteria are worth knowing precisely because they represent the most effective pharmacological option available in the NZ funded landscape.</li>
+      <li>For patients with BMI ≥40 (or ≥35 with significant comorbidity): make a bariatric surgery referral even if you are uncertain about local access. Document the referral. The outcome is uncertain but the referral is correct; the access barriers are a system problem, not a clinical reason to withhold the recommendation.</li>
+    </ol>
+  </div>
+
+  <div class="sources">
+    <p class="sources-label">Sources</p>
+    <ol>
+      <li>Ministry of Health. New Zealand Health Survey 2022/23. Wellington: Ministry of Health; 2023.</li>
+      <li>Royal Australian College of General Practitioners. Obesity prevention and management: clinical guideline. East Melbourne: RACGP; 2024.</li>
+      <li>National Institute for Health and Care Excellence. Obesity: identification, assessment and management (NG246). London: NICE; 2023. Available from: nice.org.uk</li>
+      <li>Garvey WT, Mechanick JI, Brett EM, et al. American Association of Clinical Endocrinologists and American College of Endocrinology comprehensive clinical practice guidelines for medical care of patients with obesity. Endocr Pract. 2016;22(Suppl 3):1-203.</li>
+      <li>Wilding JPH, Batterham RL, Calanna S, et al. Once-weekly semaglutide in adults with overweight or obesity (STEP 1). N Engl J Med. 2021;384(11):989-1002.</li>
+      <li>Rucker D, Padwal R, Li SK, et al. Long term pharmacotherapy for obesity and overweight: updated meta-analysis. BMJ. 2007;335(7631):1194-9.</li>
+      <li>Schauer PR, Bhatt DL, Kirwan JP, et al. Bariatric surgery versus intensive medical therapy for diabetes (STAMPEDE): 5-year outcomes of a randomised trial. N Engl J Med. 2017;376(7):641-51.</li>
+      <li>Sumithran P, Prendergast LA, Delbridge E, et al. Long-term persistence of hormonal adaptations to weight loss. N Engl J Med. 2011;365(17):1597-604.</li>
+    </ol>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <span class="footer-brand">Working Diagnosis · workingdiagnosis.xyz</span>
+</footer>
+
+</body>
+</html>

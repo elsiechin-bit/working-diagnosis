@@ -1,0 +1,255 @@
+---
+title: Patient Handouts
+layout: topic.njk
+description: A growing library of patient-facing handouts for NZ patients  -  free to print or email. Organised by clinical area.
+---
+
+<p>These handouts are written for a Year 8 reading level, grounded in NZ guidelines, and free to print, email, or work through with patients during a consult. Items marked <span class="hl-soon">coming soon</span> are planned but not yet written  -  until then, the best free NZ patient information sits at <a href="https://www.healthnavigator.org.nz">Health Navigator NZ</a> and <a href="https://bpac.org.nz/patients.aspx">BPAC patient information</a>.</p>
+
+<nav aria-label="Jump to section">
+  <ul class="handouts-jump">
+    <li><a href="#lifestyle">Lifestyle</a></li>
+    <li><a href="#respiratory">Respiratory</a></li>
+    <li><a href="#cardiovascular">Cardiovascular</a></li>
+    <li><a href="#diabetes-endocrine">Diabetes &amp; Endocrine</a></li>
+    <li><a href="#gastro">Gastroenterology</a></li>
+    <li><a href="#msk">MSK</a></li>
+    <li><a href="#mental-health">Mental Health</a></li>
+    <li><a href="#dermatology">Dermatology</a></li>
+    <li><a href="#gynae">Gynae</a></li>
+    <li><a href="#mens-health">Men's Health</a></li>
+    <li><a href="#paeds">Paeds</a></li>
+    <li><a href="#geriatrics">Geriatrics</a></li>
+    <li><a href="#ent">ENT</a></li>
+    <li><a href="#eyes">Eyes</a></li>
+    <li><a href="#neurology">Neurology</a></li>
+    <li><a href="#infections">Infections</a></li>
+    <li><a href="#vaccines">Vaccines</a></li>
+    <li><a href="#travel">Travel</a></li>
+    <li><a href="#nutrition">Nutrition</a></li>
+    <li><a href="#general">General Practice</a></li>
+  </ul>
+</nav>
+
+
+<div class="handout-section" id="lifestyle">
+  <p class="handout-section-label">❍ <a href="/lifestyle/">Lifestyle pillar →</a></p>
+  <h2>Lifestyle</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/sleep-hygiene/">Sleep hygiene  -  setting up for better sleep</a></li>
+    <li>Alcohol in NZ  -  what is a standard drink? <span class="hl-soon">coming soon</span></li>
+    <li>Getting active  -  the NZ physical activity guidelines <span class="hl-soon">coming soon</span></li>
+    <li>Stopping smoking  -  your options and what works <span class="hl-soon">coming soon</span></li>
+    <li>Vaping  -  what we know about the risks <span class="hl-soon">coming soon</span></li>
+    <li>Weight and metabolic health  -  a non-diet approach <span class="hl-soon">coming soon</span></li>
+    <li>Vitamin D and sunlight in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Managing stress  -  practical strategies <span class="hl-soon">coming soon</span></li>
+    <li>Social connection and loneliness  -  why it matters for health <span class="hl-soon">coming soon</span></li>
+    <li>Screen time and sleep  -  what the evidence says <span class="hl-soon">coming soon</span></li>
+    <li>Sitting less  -  the risks of sedentary behaviour <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/healthy-living/">Health Navigator  -  Healthy Living</a> · <a href="https://www.quit.org.nz">Quit.org.nz</a> · <a href="https://www.alcohol.org.nz">Alcohol Drug Helpline</a></p>
+</div>
+
+
+<div class="handout-section" id="respiratory">
+  <p class="handout-section-label">❍ Respiratory</p>
+  <h2>Respiratory</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/common-cold/">Upper respiratory infection (common cold)  -  self-care at home</a></li>
+    <li>Sore throat and tonsillitis  -  when antibiotics are needed <span class="hl-soon">coming soon</span></li>
+    <li>Sinusitis  -  self-care and when to seek help <span class="hl-soon">coming soon</span></li>
+    <li>Allergic rhinitis (hayfever)  -  managing symptoms year-round <span class="hl-soon">coming soon</span></li>
+    <li>Acute bronchitis  -  why antibiotics usually do not help <span class="hl-soon">coming soon</span></li>
+    <li>Asthma in adults  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Asthma  -  using your inhaler and spacer correctly <span class="hl-soon">coming soon</span></li>
+    <li>Asthma action plan  -  what to do when symptoms worsen <span class="hl-soon">coming soon</span></li>
+    <li>COPD  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>COPD  -  managing breathlessness and preventing exacerbations <span class="hl-soon">coming soon</span></li>
+    <li>Pneumonia  -  recovery at home and what to watch for <span class="hl-soon">coming soon</span></li>
+    <li>COVID-19  -  isolation and home care in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Long COVID  -  symptoms and what helps <span class="hl-soon">coming soon</span></li>
+    <li>Obstructive sleep apnoea  -  getting assessed and treated <span class="hl-soon">coming soon</span></li>
+    <li>Chronic cough  -  common causes and what to expect <span class="hl-soon">coming soon</span></li>
+    <li>Pulmonary embolism  -  warning signs and what to do <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/r/respiratory/">Health Navigator  -  Respiratory</a> · <a href="https://www.asthma.org.nz">Asthma and Respiratory Foundation NZ</a> · <a href="https://www.lung.org.nz">Lung Foundation NZ</a></p>
+</div>
+
+
+<div class="handout-section" id="cardiovascular">
+  <p class="handout-section-label">❍ Cardiovascular</p>
+  <h2>Cardiovascular</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/high-blood-pressure/">High blood pressure (hypertension)  -  what the numbers mean</a></li>
+    <li>Blood pressure medicines  -  what to expect <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/cholesterol-cardiovascular-risk/">Understanding cholesterol and cardiovascular risk</a></li>
+    <li>Statins  -  why they are prescribed and common concerns <span class="hl-soon">coming soon</span></li>
+    <li>Your cardiovascular risk score  -  what it means <span class="hl-soon">coming soon</span></li>
+    <li>Heart attack  -  warning signs and calling 111 <span class="hl-soon">coming soon</span></li>
+    <li>After a heart attack  -  recovery, medicines, and lifestyle <span class="hl-soon">coming soon</span></li>
+    <li>Angina  -  understanding and managing chest pain <span class="hl-soon">coming soon</span></li>
+    <li>Atrial fibrillation (AF)  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Blood thinners (anticoagulants)  -  warfarin and DOACs explained <span class="hl-soon">coming soon</span></li>
+    <li>Heart failure  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Heart failure  -  daily weight monitoring and fluid management <span class="hl-soon">coming soon</span></li>
+    <li>Stroke  -  FAST signs and calling 111 <span class="hl-soon">coming soon</span></li>
+    <li>TIA (transient ischaemic attack)  -  what happened and what to do next <span class="hl-soon">coming soon</span></li>
+    <li>Deep vein thrombosis (DVT)  -  recognising and preventing clots <span class="hl-soon">coming soon</span></li>
+    <li>Peripheral arterial disease (PAD)  -  foot care and risk reduction <span class="hl-soon">coming soon</span></li>
+    <li>Varicose veins  -  management and when to seek help <span class="hl-soon">coming soon</span></li>
+    <li>Cardiac rehabilitation in NZ  -  what to expect <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz">Heart Foundation NZ</a> · <a href="https://www.stroke.org.nz">Stroke Foundation NZ</a> · <a href="https://www.healthnavigator.org.nz/health-a-z/h/heart-disease/">Health Navigator  -  Heart Disease</a></p>
+</div>
+
+
+<div class="handout-section" id="diabetes-endocrine">
+  <p class="handout-section-label">❍ Diabetes &amp; Endocrine</p>
+  <h2>Diabetes &amp; Endocrine</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/type-2-diabetes/">Type 2 diabetes  -  understanding your diagnosis</a></li>
+    <li>Prediabetes  -  what it means and how to act now <span class="hl-soon">coming soon</span></li>
+    <li>Blood glucose monitoring  -  how and when to check <span class="hl-soon">coming soon</span></li>
+    <li>HbA1c  -  what the result means <span class="hl-soon">coming soon</span></li>
+    <li>Metformin  -  how it works and common side effects <span class="hl-soon">coming soon</span></li>
+    <li>Hypoglycaemia (low blood sugar)  -  recognising and treating <span class="hl-soon">coming soon</span></li>
+    <li>Diabetic foot care  -  daily checks and preventing complications <span class="hl-soon">coming soon</span></li>
+    <li>Diabetes and kidney health  -  protecting your kidneys <span class="hl-soon">coming soon</span></li>
+    <li>Diabetes and eye health  -  why annual checks matter <span class="hl-soon">coming soon</span></li>
+    <li>Type 1 diabetes  -  overview for patients in primary care <span class="hl-soon">coming soon</span></li>
+    <li>Hypothyroidism (underactive thyroid)  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Levothyroxine  -  taking your thyroid medicine correctly <span class="hl-soon">coming soon</span></li>
+    <li>Hyperthyroidism (overactive thyroid)  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Thyroid nodules and goitre  -  what to expect <span class="hl-soon">coming soon</span></li>
+    <li>Vitamin D deficiency  -  symptoms, testing, and treatment in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Metabolic syndrome  -  what it is and what changes help <span class="hl-soon">coming soon</span></li>
+    <li>Adrenal insufficiency  -  sick day rules and steroid cover <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.diabetes.org.nz">Diabetes NZ</a> · <a href="https://www.healthnavigator.org.nz/health-a-z/d/diabetes-type-2/">Health Navigator  -  Type 2 Diabetes</a> · <a href="https://www.thyroid.org.nz">Thyroid NZ</a></p>
+</div>
+
+
+<div class="handout-section" id="gastro">
+  <p class="handout-section-label">❍ Gastroenterology</p>
+  <h2>Gastroenterology</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/reflux-gord/">Reflux (GORD)  -  symptoms, triggers, and treatment</a></li>
+    <li>Peptic ulcer disease and Helicobacter pylori <span class="hl-soon">coming soon</span></li>
+    <li>Coeliac disease  -  understanding the gluten-free diet <span class="hl-soon">coming soon</span></li>
+    <li>Irritable bowel syndrome (IBS)  -  self-management strategies <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/constipation/">Constipation in adults  -  causes, diet, and laxatives</a></li>
+    <li>Haemorrhoids (piles)  -  treatment and prevention <span class="hl-soon">coming soon</span></li>
+    <li>Rectal bleeding  -  when to seek help <span class="hl-soon">coming soon</span></li>
+    <li>Diverticular disease  -  diet and managing flares <span class="hl-soon">coming soon</span></li>
+    <li>Fatty liver disease (MASLD)  -  what it means and what helps <span class="hl-soon">coming soon</span></li>
+    <li>The NZ bowel screening programme  -  what to expect <span class="hl-soon">coming soon</span></li>
+    <li>Nausea and vomiting  -  common causes and home care <span class="hl-soon">coming soon</span></li>
+    <li>Inflammatory bowel disease  -  overview (Crohn's and colitis) <span class="hl-soon">coming soon</span></li>
+    <li>Hepatitis B  -  understanding chronic infection in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Hepatitis C  -  treatment options available in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Gallstones  -  symptoms and when surgery is needed <span class="hl-soon">coming soon</span></li>
+    <li>Pancreatitis  -  what to expect and recovery <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/d/digestive-health/">Health Navigator  -  Digestive Health</a> · <a href="https://www.crohnsandcolitis.org.nz">Crohn's &amp; Colitis NZ</a> · <a href="https://www.nsu.govt.nz/bowel-screening">NZ Bowel Screening Programme</a></p>
+</div>
+
+
+<div class="handout-section" id="msk">
+  <p class="handout-section-label">❍ <a href="/musculoskeletal/">MSK pillar →</a></p>
+  <h2>Musculoskeletal</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/lower-back-pain/">Lower back pain  -  why it gets better, and how to help</a></li>
+    <li>Acute neck pain  -  self-care at home <span class="hl-soon">coming soon</span></li>
+    <li>Knee osteoarthritis  -  what it is and what helps <span class="hl-soon">coming soon</span></li>
+    <li>Hip osteoarthritis  -  what it is and what helps <span class="hl-soon">coming soon</span></li>
+    <li>Shoulder pain  -  rotator cuff and impingement <span class="hl-soon">coming soon</span></li>
+    <li>Frozen shoulder (adhesive capsulitis)  -  stages and treatment <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/gout-acute-attack/">Gout  -  managing an acute attack</a></li>
+    <li>Gout  -  preventing future attacks (diet and allopurinol) <span class="hl-soon">coming soon</span></li>
+    <li>Plantar heel pain (plantar fasciitis) <span class="hl-soon">coming soon</span></li>
+    <li>Tennis elbow and golfer's elbow  -  lateral and medial epicondylalgia <span class="hl-soon">coming soon</span></li>
+    <li>Osteoporosis  -  understanding your bone density result <span class="hl-soon">coming soon</span></li>
+    <li>Rheumatoid arthritis  -  overview and management in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Fibromyalgia  -  understanding widespread pain <span class="hl-soon">coming soon</span></li>
+    <li>Exercise and chronic pain  -  why keeping moving matters <span class="hl-soon">coming soon</span></li>
+    <li>Ankle sprain  -  RICE, return to activity, and when to x-ray <span class="hl-soon">coming soon</span></li>
+    <li>ACC  -  understanding your cover in NZ <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/m/musculoskeletal/">Health Navigator  -  Musculoskeletal</a> · <a href="https://www.acc.co.nz/im-injured/">ACC  -  I'm Injured</a> · <a href="https://arthritis.org.nz">Arthritis NZ</a></p>
+</div>
+
+
+<div class="handout-section" id="mental-health">
+  <p class="handout-section-label">❍ <a href="/mental-health/">Mental Health pillar →</a></p>
+  <h2>Mental Health</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/depression/">Depression  -  what it is and what actually helps</a></li>
+    <li><a href="/handouts/anxiety/">Anxiety  -  understanding it and managing it</a></li>
+    <li>Panic attacks  -  what to do in the moment <span class="hl-soon">coming soon</span></li>
+    <li>Social anxiety  -  what it is and where to get help <span class="hl-soon">coming soon</span></li>
+    <li>Grief and loss  -  what to expect <span class="hl-soon">coming soon</span></li>
+    <li>Stress and burnout  -  recognising it and recovering <span class="hl-soon">coming soon</span></li>
+    <li>Sleep and mental health <span class="hl-soon">coming soon</span></li>
+    <li>Postnatal depression and postnatal anxiety <span class="hl-soon">coming soon</span></li>
+    <li>ADHD in adults  -  getting assessed in NZ <span class="hl-soon">coming soon</span></li>
+    <li>ADHD in children  -  understanding the diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Autism spectrum  -  adults receiving a late diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Eating disorders  -  recognising them and getting help in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Bipolar disorder  -  overview for patients and families <span class="hl-soon">coming soon</span></li>
+    <li>OCD  -  what it is and effective treatments <span class="hl-soon">coming soon</span></li>
+    <li>PTSD  -  recognising symptoms and getting support <span class="hl-soon">coming soon</span></li>
+    <li>Problem gambling  -  getting help in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Alcohol and mental health <span class="hl-soon">coming soon</span></li>
+    <li>If you are struggling  -  getting help in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Supporting someone who is struggling <span class="hl-soon">coming soon</span></li>
+    <li>When a family member has a mental illness <span class="hl-soon">coming soon</span></li>
+    <li>Mindfulness  -  a brief practical introduction <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.depression.org.nz">depression.org.nz</a> · <a href="https://www.anxiety.org.nz">anxiety.org.nz</a> · <a href="https://1737.org.nz">1737  -  free call or text, any time</a> · <a href="https://www.lifeline.org.nz">Lifeline NZ</a> · <a href="https://www.mentalhealth.org.nz">Mental Health Foundation NZ</a></p>
+</div>
+
+
+<div class="handout-section" id="dermatology">
+  <p class="handout-section-label">❍ <a href="/dermatology/">Dermatology pillar →</a></p>
+  <h2>Dermatology</h2>
+  <ul class="handout-list">
+    <li>Sun safety in NZ  -  the UV index and slip, slop, slap, wrap <span class="hl-soon">coming soon</span></li>
+    <li>Skin cancer  -  know what to look for (the ABCDE rule) <span class="hl-soon">coming soon</span></li>
+    <li>Melanoma  -  early detection and mole monitoring <span class="hl-soon">coming soon</span></li>
+    <li>When to return  -  what changes in a mole matter <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/eczema/">Eczema (atopic dermatitis)  -  skin care and flare management</a></li>
+    <li>Topical steroid creams  -  how to use them correctly <span class="hl-soon">coming soon</span></li>
+    <li>Psoriasis  -  understanding your condition and triggers <span class="hl-soon">coming soon</span></li>
+    <li>Acne  -  what works and what does not <span class="hl-soon">coming soon</span></li>
+    <li>Rosacea  -  triggers and treatment <span class="hl-soon">coming soon</span></li>
+    <li>Tinea  -  ringworm, athlete's foot, and jock itch <span class="hl-soon">coming soon</span></li>
+    <li>Impetigo (school sores)  -  treatment and return to school <span class="hl-soon">coming soon</span></li>
+    <li>Warts and verrucae  -  treatment options <span class="hl-soon">coming soon</span></li>
+    <li>Molluscum contagiosum  -  what to expect <span class="hl-soon">coming soon</span></li>
+    <li>Wound care at home  -  cleaning, dressing, signs of infection <span class="hl-soon">coming soon</span></li>
+    <li>Scabies  -  treatment and contact management <span class="hl-soon">coming soon</span></li>
+    <li>Urticaria (hives)  -  causes and management <span class="hl-soon">coming soon</span></li>
+    <li>Hair loss  -  common causes and what helps <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.skincancer.org.nz">Melanoma NZ</a> · <a href="https://www.dermnet.com">DermNet  -  patient information</a> · <a href="https://www.healthnavigator.org.nz/health-a-z/s/skin/">Health Navigator  -  Skin</a></p>
+</div>
+
+
+<div class="handout-section" id="gynae">
+  <p class="handout-section-label">❍ <a href="/gynaecology/">Gynae pillar →</a></p>
+  <h2>Gynaecology &amp; Women's Health</h2>
+  <ul class="handout-list">
+    <li>Cervical screening  -  the NZ HPV test explained <span class="hl-soon">coming soon</span></li>
+    <li>Contraception  -  your options at a glance <span class="hl-soon">coming soon</span></li>
+    <li>Emergency contraception  -  the morning-after pill and IUD <span class="hl-soon">coming soon</span></li>
+    <li>The combined oral contraceptive pill  -  starting and side effects <span class="hl-soon">coming soon</span></li>
+    <li>The IUD (intrauterine device)  -  copper and hormonal options <span class="hl-soon">coming soon</span></li>
+    <li>Perimenopause  -  what is happening and what helps <span class="hl-soon">coming soon</span></li>
+    <li>Menopause  -  symptoms, HRT, and non-hormonal options <span class="hl-soon">coming soon</span></li>
+    <li>Pelvic floor exercises  -  a practical guide <span class="hl-soon">coming soon</span></li>
+    <li>Endometriosis  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Polycystic ovarian syndrome (PCOS) <span class="hl-soon">coming soon</span></li>
+    <li>Painful periods (dysmenorrhoea)  -  causes and relief <span class="hl-soon">coming soon</span></li>
+    <li>Heavy periods (menorrhagia)  -  causes and treatment options <span class="hl-soon">coming soon</span></li>
+    <li>Vaginal discharge  -  what is normal, what is not <span class="hl-soon">coming soon</span>

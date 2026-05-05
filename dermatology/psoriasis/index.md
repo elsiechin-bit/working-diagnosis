@@ -5,12 +5,6 @@ pillar: Dermatology
 description: Managing psoriasis in general practice, including comorbidities and when to refer for systemic therapy.
 ---
 
-<div class="topic-header">
-  <p class="pillar-label">Dermatology</p>
-  <h1>Psoriasis</h1>
-  <p class="topic-dek">A systemic inflammatory disease with skin as its most visible organ. Managing psoriasis well in primary care means treating the patient, not just the plaques.</p>
-</div>
-
 <div class="topic-with-aside">
 <div class="topic-body">
 
@@ -21,17 +15,17 @@ description: Managing psoriasis in general practice, including comorbidities and
 
 <h2>Management in primary care</h2>
 <ul class="derm-feature-list">
-  <li><strong>Topical corticosteroids</strong> — first-line for mild-to-moderate plaque psoriasis. Potent or very potent formulations for body plaques; moderate for face and flexures.</li>
-  <li><strong>Vitamin D analogues</strong> (calcipotriol) — often combined with TCS. Calcipotriol/betamethasone dipropionate fixed-dose combination (Daivobet) is PHARMAC-funded and highly effective for scalp and body plaques.</li>
-  <li><strong>Emollients</strong> — adjunct to reduce scale and itch; not curative.</li>
-  <li><strong>Screen for psoriatic arthritis</strong> at every visit — inflammatory joint symptoms, dactylitis, enthesitis. Early DMARD therapy changes outcomes.</li>
+  <li><strong>Topical corticosteroids</strong>  -  first-line for mild-to-moderate plaque psoriasis. Potent or very potent formulations for body plaques; moderate for face and flexures.</li>
+  <li><strong>Vitamin D analogues</strong> (calcipotriol)  -  often combined with TCS. Calcipotriol/betamethasone dipropionate fixed-dose combination (Daivobet) is PHARMAC-funded and highly effective for scalp and body plaques.</li>
+  <li><strong>Emollients</strong>  -  adjunct to reduce scale and itch; not curative.</li>
+  <li><strong>Screen for psoriatic arthritis</strong> at every visit  -  inflammatory joint symptoms, dactylitis, enthesitis. Early DMARD therapy changes outcomes.</li>
 </ul>
 
 <h2>When to refer</h2>
-<p>Moderate-to-severe psoriasis not responding to optimised topicals; psoriatic arthritis; patient requesting phototherapy or biologics (IL-17i, IL-23i, TNF inhibitors — several are PHARMAC-funded with criteria).</p>
+<p>Moderate-to-severe psoriasis not responding to optimised topicals; psoriatic arthritis; patient requesting phototherapy or biologics (IL-17i, IL-23i, TNF inhibitors  -  several are PHARMAC-funded with criteria).</p>
 
 <div class="topic-handouts">
-  <p>📋 <a href="#">Patient handout — Understanding psoriasis (coming soon)</a></p>
+  <p>📋 <a href="#">Patient handout  -  Understanding psoriasis (coming soon)</a></p>
 </div>
 
 </div>
@@ -39,9 +33,9 @@ description: Managing psoriasis in general practice, including comorbidities and
   <p class="aside-kicker">Clinician links</p>
   <p class="aside-title">NZ resources</p>
   <ul class="aside-links">
-    <li><a href="https://www.bpac.org.nz/2018/psoriasis.aspx" target="_blank" rel="noopener">BPAC — Psoriasis in primary care</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways — Psoriasis</a></li>
-    <li><a href="https://www.pharmac.govt.nz" target="_blank" rel="noopener">PHARMAC — Biologic criteria</a></li>
+    <li><a href="https://www.bpac.org.nz/2018/psoriasis.aspx" target="_blank" rel="noopener">BPAC  -  Psoriasis in primary care</a></li>
+    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways  -  Psoriasis</a></li>
+    <li><a href="https://www.pharmac.govt.nz" target="_blank" rel="noopener">PHARMAC  -  Biologic criteria</a></li>
   </ul>
 </aside>
 </div>

@@ -9,7 +9,7 @@ description: Weight- and age-based paediatric dose calculator with WHO growth ch
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paediatric Dose Calculator — Working Diagnosis</title>
+<title>Paediatric Dose Calculator  -  Working Diagnosis</title>
 <meta name="description" content="Weight- and age-based paediatric dose calculator with WHO growth charts. NZ general practice clinical aid.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@ html{font-size:17px}
   --green-deep:#1F4A3F;
   --ochre:#B8714F;
 
-  /* Calculator-internal aliases — preserve original variable names so the
+  /* Calculator-internal aliases  -  preserve original variable names so the
      rest of the stylesheet works unchanged. */
   --bg:var(--paper);
   --card:var(--paper-cream);
@@ -46,23 +46,23 @@ html{font-size:17px}
   --muted:var(--ink-mute);
   --muted-soft:#a8a08e;
 
-  /* Functional accents — mapped to WD palette */
+  /* Functional accents  -  mapped to WD palette */
   --navy:var(--ink);
   --teal:var(--green);
   --safe:var(--green);
   --warn:var(--ochre);
   --danger:#a05858;
 
-  /* Tinted input fields — cognitive cues (blue=weight, ochre=age, lilac=height).
+  /* Tinted input fields  -  cognitive cues (blue=weight, ochre=age, lilac=height).
      Kept distinct because clinicians recognise these by colour at a glance. */
   --wt-bg:#dce6ec;--wt-bd:#a8bfca;--wt-tx:#243848;
   --ag-bg:#ecdcc0;--ag-bd:#c4a87a;--ag-tx:#3e2c14;
   --ht-bg:#dcd6e4;--ht-bd:#a8a4c0;--ht-tx:#302848;
 
-  /* Highlighter yellow — search matches + active selection. Kept for visibility. */
+  /* Highlighter yellow  -  search matches + active selection. Kept for visibility. */
   --hi:#ffe14c;--hi-bd:#e8c426;--hi-tx:#1a1410;
 
-  /* Type stack — Working Diagnosis */
+  /* Type stack  -  Working Diagnosis */
   --serif:'Newsreader','Georgia',serif;
   --display:'Fraunces','Georgia',serif;
   --mono:'JetBrains Mono',ui-monospace,monospace;
@@ -112,38 +112,14 @@ mark.hi,.hi{
   font-style:normal;
 }
 
-/* ── Working Diagnosis strip ────────────────────────────────── */
-.wd-strip{
-  background:var(--paper-warm);
-  border-bottom:1px solid var(--rule);
-  margin:0 -24px;
-  padding:11px 28px;
-}
-.wd-strip-inner{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:16px;flex-wrap:wrap;
-  max-width:1080px;margin:0 auto;
-}
-.wd-brand{
-  font-family:var(--display);
-  font-weight:600;
-  color:var(--ink);
-  text-decoration:none;
-  font-size:1rem;
-  letter-spacing:-0.005em;
-  line-height:1;
-}
-.wd-brand em{font-style:italic;color:var(--green)}
-.wd-back{
-  font-family:var(--mono);
-  font-size:.7rem;
-  font-weight:500;
-  text-transform:uppercase;
-  letter-spacing:.13em;
-  color:var(--ink-mute);
-  text-decoration:none;
-}
-.wd-back:hover{color:var(--green)}
+/* ── Masthead ────────────────────────────────── */
+.masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+.masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.brand { font-family: var(--display); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+.primary-nav a:hover { color: var(--green); }
 
 /* ── Header (paper, not navy) ───────────────────────────────── */
 .hdr{
@@ -541,7 +517,7 @@ mark.hi,.hi{
 .card-action:hover{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
 .card-action.flash{background:var(--hi);color:var(--hi-tx);border-color:var(--hi-bd)}
 
-/* Badges (kept muted hues — clinically useful category cues) */
+/* Badges (kept muted hues  -  clinically useful category cues) */
 .badge-row{display:flex;gap:5px;align-items:flex-start;flex-wrap:wrap;flex-shrink:0;padding-top:2px}
 .badge{
   font-family:var(--mono);
@@ -1050,19 +1026,26 @@ body.compact .meta{gap:8px}
   border-radius:50%;
 }
 .trend-pill button:hover{background:var(--danger);color:#fff}
+
+/* ── Site Footer ────────────────────────────────────────────────── */
+.site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
+.site-footer p { margin: 0 0 6px; }
 </style>
 </head>
 <body>
 
-<header class="wd-strip">
-  <div class="wd-strip-inner">
-    <a href="/" class="wd-brand">Working <em>Diagnosis</em>.</a>
-    <a href="/" class="wd-back">← Back to site</a>
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/workshop/">Workshop</a>
+    </nav>
   </div>
 </header>
 
 <div class="app">
-<header class="hdr">
+<div class="hdr">
   <div class="hdr-row1">
     <div class="branding">
       <h1>Paediatric Dose Calculator</h1>
@@ -1091,13 +1074,13 @@ body.compact .meta{gap:8px}
     <button class="tab on" id="tab-drugs" role="tab" aria-selected="true" onclick="setView('drugs')">Drugs</button>
     <button class="tab" id="tab-growth" role="tab" aria-selected="false" onclick="setView('growth')">Growth Charts</button>
   </div>
-</header>
+</div>
 
 <div id="drugs-controls">
   <div class="hdr-row-presentation">
     <label class="presentation-label">Or start with a presentation:</label>
     <select id="presentation-select" onchange="setPresentation(this.value)">
-      <option value="">— Choose a clinical presentation —</option>
+      <option value=""> -  Choose a clinical presentation  - </option>
     </select>
     <button class="hbtn-mini" onclick="setPresentation('')" id="presentation-clear" hidden>✕ Clear</button>
   </div>
@@ -1874,17 +1857,17 @@ const PARENT_WARNINGS={
   'paracetamol':['Do NOT exceed the maximum dose.','Do not give more than 5 doses in 24 hours.','Check other medicines for paracetamol (cold/flu products often contain it).','If your child has liver problems, ask your GP first.','Seek urgent medical advice if accidental overdose.'],
   'ibuprofen':['Always give with food or milk.','Do not give if your child is dehydrated, vomiting, or has chickenpox.','Do not give to children under 3 months or under 5 kg.','Stop and contact your GP if your child develops black/bloody stools, vomits blood, or has tummy pain.','Avoid combining with other anti-inflammatory medicines.'],
   'amoxicillin':['Complete the full course even if your child feels better.','Take regularly at the prescribed times for steady levels in the body.','Side effects: diarrhoea or rash are common but usually mild.','Stop and contact your GP urgently if your child develops a widespread rash, swelling of face/lips, or breathing difficulty.','Tell your GP if there is any history of penicillin allergy.'],
-  'flucloxacillin':['Give 30–60 minutes BEFORE food or 2 hours after — food reduces absorption.','Complete the full course as prescribed.','Stop and seek urgent advice if yellow eyes/skin, dark urine, or severe fatigue (rare liver effects).','Tell your GP if there is any history of penicillin allergy.'],
+  'flucloxacillin':['Give 30–60 minutes BEFORE food or 2 hours after  -  food reduces absorption.','Complete the full course as prescribed.','Stop and seek urgent advice if yellow eyes/skin, dark urine, or severe fatigue (rare liver effects).','Tell your GP if there is any history of penicillin allergy.'],
   'coamoxiclav':['Take with food to reduce stomach upset.','Complete the full course.','Diarrhoea is more common than with plain amoxicillin.','Stop and seek urgent advice for severe diarrhoea, jaundice, or rash.'],
   'cefalexin':['Complete the full course.','Take with or without food.','Diarrhoea may occur, usually mild.','Tell your GP about any previous antibiotic allergies.'],
   'azithromycin':['Take 30–60 minutes before food OR 2 hours after.','Complete the full course (even short 3- or 5-day courses).','Diarrhoea, nausea, and stomach pain are common.','Stop and contact GP for severe diarrhoea, irregular heartbeat, or hearing changes.'],
-  'erythromycin':['Take with food to reduce nausea.','Complete the full course.','Stomach upset is common but usually settles.','Many drug interactions — tell your GP all other medicines your child is taking.'],
+  'erythromycin':['Take with food to reduce nausea.','Complete the full course.','Stomach upset is common but usually settles.','Many drug interactions  -  tell your GP all other medicines your child is taking.'],
   'trimethoprim':['Complete the full course.','Drink plenty of water.','Mild rash or stomach upset can occur.','Stop and contact GP for severe rash, mouth ulcers, or unusual bruising/bleeding.'],
-  'nitrofurantoin':['Give with food (improves absorption and reduces nausea).','May turn urine dark yellow or brown — this is harmless.','Stop and contact GP immediately for breathing difficulty, persistent cough, or yellow skin/eyes.','Not suitable for kidney infection — see GP if back pain or fever.'],
+  'nitrofurantoin':['Give with food (improves absorption and reduces nausea).','May turn urine dark yellow or brown  -  this is harmless.','Stop and contact GP immediately for breathing difficulty, persistent cough, or yellow skin/eyes.','Not suitable for kidney infection  -  see GP if back pain or fever.'],
   'metronidazole':['Take with or after food to reduce nausea.','AVOID alcohol for 48 hours after the last dose (in adolescents).','May give a metallic taste in mouth.','Complete the full course.'],
   'prednisolone':['Give in the morning with food.','Complete the prescribed short course (usually 3 days).','Do not stop early, but no taper is needed for short courses ≤ 5 days.','May cause increased appetite, mood changes, or trouble sleeping during the course.','If your child has been exposed to chickenpox or measles and is on steroids, contact your GP.'],
-  'salbutamol':['Use a spacer if at all possible — much more effective than puffer alone.','Give 1 puff at a time, 5–6 breaths through spacer between puffs.','If your child needs salbutamol more than every 4 hours, or you are using more than 6–8 puffs at a time, seek urgent medical care.','Mild shakiness or fast heartbeat is normal and settles within 30 minutes.','Bring the spacer to all asthma reviews.'],
-  'ondansetron':['Place ODT (wafer) on the tongue — let it dissolve, do not chew.','Most children only need 1–2 doses.','If vomiting persists despite ondansetron, return to the GP or ED.','May cause headache or constipation.','Seek urgent care for any irregular heartbeat or fainting.'],
+  'salbutamol':['Use a spacer if at all possible  -  much more effective than puffer alone.','Give 1 puff at a time, 5–6 breaths through spacer between puffs.','If your child needs salbutamol more than every 4 hours, or you are using more than 6–8 puffs at a time, seek urgent medical care.','Mild shakiness or fast heartbeat is normal and settles within 30 minutes.','Bring the spacer to all asthma reviews.'],
+  'ondansetron':['Place ODT (wafer) on the tongue  -  let it dissolve, do not chew.','Most children only need 1–2 doses.','If vomiting persists despite ondansetron, return to the GP or ED.','May cause headache or constipation.','Seek urgent care for any irregular heartbeat or fainting.'],
   'mebendazole':['Treat ALL household members on the same day.','Wash bedding, towels and underwear in hot water on treatment day.','Cut your child\u2019s nails short and discourage scratching.','Hand-washing before food and after toilet is critical.','Repeat dose in 2 weeks to catch any newly hatched worms.'],
   'loratadine':['Once-daily dosing, can give any time of day.','Non-sedating but mild drowsiness can occur in some children.','Effects begin within 1–3 hours.','Safe for daily use during allergy season.']
 };
@@ -2026,7 +2009,7 @@ function buildParentHTML(p){
   else{doseLine=calc.fxD||'See dose'}
   if(volTxt&&prepName)volLine=`<div class="pp-vol">≈ ${volTxt} of ${prepName}</div>`;
   const warnings=PARENT_WARNINGS[drug.id]||[];
-  const warnHTML=warnings.length?`<div class="pp-warnings"><h3>Important — please read</h3><ul>${warnings.map(w=>`<li>${e(w)}</li>`).join('')}</ul></div>`:'';
+  const warnHTML=warnings.length?`<div class="pp-warnings"><h3>Important  -  please read</h3><ul>${warnings.map(w=>`<li>${e(w)}</li>`).join('')}</ul></div>`:'';
   return`<div class="parent-print">
 <div class="pp-head">
 <div class="pp-name">${e(drug.name)}</div>
@@ -2236,8 +2219,8 @@ function calcFlags(drug,wt,ageY,dose,reg){
     const exp=expectedWeight(ageY);
     if(exp){
       const ratio=wt/exp;
-      if(ratio<0.7)flags.push({type:'warn',text:`Weight low for age (~${exp.toFixed(0)} kg expected) — verify`});
-      else if(ratio>1.5)flags.push({type:'warn',text:`Weight high for age (~${exp.toFixed(0)} kg expected) — verify`});
+      if(ratio<0.7)flags.push({type:'warn',text:`Weight low for age (~${exp.toFixed(0)} kg expected)  -  verify`});
+      else if(ratio>1.5)flags.push({type:'warn',text:`Weight high for age (~${exp.toFixed(0)} kg expected)  -  verify`});
     }
   }
   return flags;
@@ -2295,9 +2278,9 @@ function renderCard(d,q,presKey,presNote){
     if(reg.preps&&reg.preps.length&&calc.dose){
       const opts=reg.preps.map((p,pi)=>{
         const v=calcVol(calc.dose,p.mpm);
-        return`<option value="${pi}" data-mpm="${p.mpm}">${e(p.lbl)} → ${v?v+' mL':'—'}</option>`;
+        return`<option value="${pi}" data-mpm="${p.mpm}">${e(p.lbl)} → ${v?v+' mL':' - '}</option>`;
       }).join('');
-      html+=`<div class="vol-row"><span class="vol-lbl">Volume:</span><select class="prep-sel" onchange="updVol(this,${calc.dose})">${opts}</select><span class="vol-val">${e(reg.preps[0]?.mpm?calcVol(calc.dose,reg.preps[0].mpm)+' mL':'—')}</span></div>`;
+      html+=`<div class="vol-row"><span class="vol-lbl">Volume:</span><select class="prep-sel" onchange="updVol(this,${calc.dose})">${opts}</select><span class="vol-val">${e(reg.preps[0]?.mpm?calcVol(calc.dose,reg.preps[0].mpm)+' mL':' - ')}</span></div>`;
     }
     if(reg.notes)html+=`<div class="notes">${e(reg.notes)}</div>`;
     if(!calc.ph){html+=`<div class="card-actions"><button class="card-action" onclick="copyParentInstructions(this)">📋 Copy parent text</button><button class="card-action" onclick="printCard(this)">🖨 Print parent sheet</button></div>`}
@@ -2307,7 +2290,7 @@ function renderCard(d,q,presKey,presNote){
   return html;
 }
 function copyVal(el,v){navigator.clipboard.writeText(String(v)).then(()=>{el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),700)})}
-function updVol(sel,dose){const mpm=+sel.options[sel.selectedIndex].dataset.mpm;const v=calcVol(dose,mpm);sel.parentElement.querySelector('.vol-val').textContent=v?v+' mL':'—'}
+function updVol(sel,dose){const mpm=+sel.options[sel.selectedIndex].dataset.mpm;const v=calcVol(dose,mpm);sel.parentElement.querySelector('.vol-val').textContent=v?v+' mL':' - '}
 
 function renderFeverCombo(q){
   const wt=+$('wt').value,ageY=getAgeYears();
@@ -2319,7 +2302,7 @@ function renderFeverCombo(q){
   const ibuDose=ageY>=0.25?Math.min(400,Math.round(wt*7.5*10)/10):null;
   if(!ibuDose)return'';
   return`<div class="combo-card">
-<div class="combo-title">Pain & Fever — combination</div>
+<div class="combo-title">Pain & Fever  -  combination</div>
 <div class="combo-sub">Alternate every 3 hours for ongoing fever or pain</div>
 <div class="combo-grid">
 <div class="combo-drug"><div class="combo-drug-name">Paracetamol</div><div class="combo-drug-dose">${paraDose} mg</div><div class="combo-drug-freq">Every 4–6 h, max 4×/day</div></div>
@@ -2384,7 +2367,7 @@ function renderCats(){
 }
 function renderPresentations(){
   const sel=$('presentation-select');if(!sel)return;
-  sel.innerHTML='<option value="">— Choose a clinical presentation —</option>'+Object.entries(PRESENTATIONS).map(([k,v])=>`<option value="${k}">${e(v.label)}</option>`).join('');
+  sel.innerHTML='<option value=""> -  Choose a clinical presentation  - </option>'+Object.entries(PRESENTATIONS).map(([k,v])=>`<option value="${k}">${e(v.label)}</option>`).join('');
 }
 
 // ── Init ───────────────────────────────────────────────────────
@@ -2407,5 +2390,13 @@ renderCats();renderPresentations();renderEmptyCharts();render();
 })();
 </script>
 <script src="/assets/workshop-gate.js"></script>
+
+<footer class="site-footer">
+  <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+    <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
+    <p>An internet workshop for general practice.</p>
+  </div>
+</footer>
+
 </body>
 </html>

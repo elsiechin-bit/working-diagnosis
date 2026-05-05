@@ -334,7 +334,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
   <!-- C: Congestive heart failure -->
   <div class="form-section">
-    <div class="form-section-title">C — Cardiac</div>
+    <div class="form-section-title">C  -  Cardiac</div>
     <div class="form-group">
       <label>
         <input type="checkbox" id="chf" name="chf" value="1">
@@ -348,7 +348,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
   <!-- H: Hypertension -->
   <div class="form-section">
-    <div class="form-section-title">H — Hypertension</div>
+    <div class="form-section-title">H  -  Hypertension</div>
     <div class="form-group">
       <label>
         <input type="checkbox" id="htn" name="htn" value="1">
@@ -362,7 +362,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
   <!-- A₂: Age -->
   <div class="form-section">
-    <div class="form-section-title">A₂ — Age</div>
+    <div class="form-section-title">A₂  -  Age</div>
     <div class="form-group">
       <label>
         <input type="checkbox" id="age75" name="age75" value="2">
@@ -385,7 +385,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
       <label>
         <input type="radio" name="ageNote" value="note" style="visibility: hidden; position: absolute;">
         <div class="form-label-text">
-          <small style="color: var(--ink-mute); font-style: normal; display: block; margin-top: 8px;">Both age categories are mutually exclusive — select only one.</small>
+          <small style="color: var(--ink-mute); font-style: normal; display: block; margin-top: 8px;">Both age categories are mutually exclusive  -  select only one.</small>
         </div>
       </label>
     </div>
@@ -393,7 +393,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
   <!-- D: Diabetes -->
   <div class="form-section">
-    <div class="form-section-title">D — Diabetes</div>
+    <div class="form-section-title">D  -  Diabetes</div>
     <div class="form-group">
       <label>
         <input type="checkbox" id="dm" name="dm" value="1">
@@ -407,7 +407,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
   <!-- S₂: Stroke / TIA / thromboembolism -->
   <div class="form-section">
-    <div class="form-section-title">S₂ — Stroke History</div>
+    <div class="form-section-title">S₂  -  Stroke History</div>
     <div class="form-group">
       <label>
         <input type="checkbox" id="stroke2" name="stroke2" value="2">
@@ -421,7 +421,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
   <!-- VA: Vascular disease & Age (65–74) -->
   <div class="form-section">
-    <div class="form-section-title">VA — Vascular & Age</div>
+    <div class="form-section-title">VA  -  Vascular & Age</div>
     <div class="form-group">
       <label>
         <input type="checkbox" id="vascular" name="vascular" value="1">
@@ -444,7 +444,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
   <!-- Sc: Sex category (female) -->
   <div class="form-section">
-    <div class="form-section-title">Sc — Sex Category</div>
+    <div class="form-section-title">Sc  -  Sex Category</div>
     <div class="form-group">
       <label>
         <input type="checkbox" id="female" name="female" value="1">
@@ -472,7 +472,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
   <!-- Annual stroke risk table -->
   <div style="margin: 24px 0; padding: 16px; background: rgba(26, 31, 28, 0.03); border-radius: 4px;">
     <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 12px;">Annual Stroke Risk</div>
-    <div style="font-size: 16px; color: var(--ink); margin-bottom: 4px;"><strong id="annualRisk">—</strong></div>
+    <div style="font-size: 16px; color: var(--ink); margin-bottom: 4px;"><strong id="annualRisk"> - </strong></div>
     <div style="font-size: 13px; color: var(--ink-mute); line-height: 1.5;">Based on large randomised trials (ARISTOTLE, ROCKET-AF, RE-LY, ENGAGE)</div>
   </div>
 
@@ -575,7 +575,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
     <div class="pearl">
       <strong>Paroxysmal AF carries the same stroke risk</strong>
-      <p>Many GPs assume paroxysmal AF is "lower risk" than persistent. This is incorrect—stroke risk is determined by CHA₂DS₂-VASc score, not AF type. However, some patients with AF triggered by treatable causes (alcohol, overweight, sleep apnoea) may have lower recurrence if triggers are addressed.</p>
+      <p>Many GPs assume paroxysmal AF is "lower risk" than persistent. This is incorrect - stroke risk is determined by CHA₂DS₂-VASc score, not AF type. However, some patients with AF triggered by treatable causes (alcohol, overweight, sleep apnoea) may have lower recurrence if triggers are addressed.</p>
     </div>
 
     <div class="pearl">

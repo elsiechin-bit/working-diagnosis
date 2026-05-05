@@ -3,22 +3,28 @@ title: Notes on the obesity question in NZ
 dek: A working GP between population and clinic, in the year GLP-1s went from rare to routine.
 description: Obesity as a public health problem, the limits of clinical intervention, and what the new pharmacological era means for equity in NZ.
 category: Clinical Conditions
-date: 2026-05-02
+date: 2026-04-18
+summary:
+  - "34.2% of NZ adults are obese (2024/25 Health Survey), with a steep deprivation gradient (46.8% in the most deprived areas vs 27.6% in the least); Maori and Pacific populations are disproportionately affected by well-documented structural inequities."
+  - "The evidence is clear that obesity is primarily an environmental problem: adult obesity in NZ has roughly tripled since the late 1970s -- willpower has not changed, but the food environment has been systematically engineered toward caloric overconsumption."
+  - "GLP-1 receptor agonists (semaglutide, tirzepatide) represent a genuine pharmacological shift: 15-22% weight loss in trials, durable over two years, with cardiovascular mortality benefit in SELECT -- but current NZ funding restrictions limit access mainly to patients with diabetes."
+  - "Bariatric surgery remains the most effective long-term intervention for severe obesity, with 50-70% excess weight loss and remission rates for type 2 diabetes approaching 80% in RYGB; public access in NZ is severely rationed."
+  - "Weight-neutral framing in clinical consultations (focusing on metabolic risk, functional capacity, and wellbeing rather than a target number on the scales) produces better engagement and less harm than weight-centric approaches."
 ---
 
-The latest New Zealand Health Survey (2024/25) reports that 34.2% of adults are obese — up from 31.3% five years earlier — alongside 11.7% of children aged 2 to 14 [1]. The deprivation gradient is steep: 46.8% obesity in the most deprived neighbourhoods versus 27.6% in the least [1]. Obesity prevalence is substantially higher among Māori and Pacific populations than among non-Māori-non-Pacific New Zealanders, reflecting persistent and well-documented health inequities [1,2].
+The latest New Zealand Health Survey (2024/25) reports that 34.2% of adults are obese  -  up from 31.3% five years earlier  -  alongside 11.7% of children aged 2 to 14 [1]. The deprivation gradient is steep: 46.8% obesity in the most deprived neighbourhoods versus 27.6% in the least [1]. Obesity prevalence is substantially higher among Māori and Pacific populations than among non-Māori-non-Pacific New Zealanders, reflecting persistent and well-documented health inequities [1,2].
 
 These are big, uncomfortable numbers, and they aren't slowing down.
 
-The cost picture is consistent with the population picture. A 2021 Hāpai Te Hauora estimate put obesity-related healthcare spending at around $2 billion per year — roughly 8% of NZ's total health budget [3]. The mechanisms are familiar: type 2 diabetes, ischaemic heart disease, certain cancers, obstructive sleep apnoea, osteoarthritis (and the lengthening orthopaedic queues that follow it), and a long tail of mental health and quality-of-life impact.
+The cost picture is consistent with the population picture. A 2021 Hāpai Te Hauora estimate put obesity-related healthcare spending at around $2 billion per year  -  roughly 8% of NZ's total health budget [3]. The mechanisms are familiar: type 2 diabetes, ischaemic heart disease, certain cancers, obstructive sleep apnoea, osteoarthritis (and the lengthening orthopaedic queues that follow it), and a long tail of mental health and quality-of-life impact.
 
 ## Why this is a public health question, not a personal one
 
-The standard narrative — that obesity is fundamentally a problem of individual willpower or motivation — does not survive contact with the data. Adult obesity in NZ has roughly tripled since the late 1970s [4]. People's willpower didn't collectively collapse over four decades. What changed was the environment.
+The standard narrative  -  that obesity is fundamentally a problem of individual willpower or motivation  -  does not survive contact with the data. Adult obesity in NZ has roughly tripled since the late 1970s [4]. People's willpower didn't collectively collapse over four decades. What changed was the environment.
 
 The food environment in high-income countries since the 1980s has been engineered for caloric availability, palatability, and convenience. Energy-dense, ultra-processed foods have become cheaper relative to wages, more aggressively marketed (especially to children), and physically more accessible. This is the "obesogenic environment" framing Swinburn and colleagues have spent two decades documenting [4,5].
 
-The implication is uncomfortable but, I think, correct: when an environment systematically nudges a population toward weight gain, the resulting weight distribution is a property of the environment, not a property of individual virtue. This doesn't mean individual choice is irrelevant. It means that policy levers acting on environments — taxation, marketing restrictions, food labelling, urban planning — will move population outcomes in a way that exhortation to eat less and move more won't [5,6].
+The implication is uncomfortable but, I think, correct: when an environment systematically nudges a population toward weight gain, the resulting weight distribution is a property of the environment, not a property of individual virtue. This doesn't mean individual choice is irrelevant. It means that policy levers acting on environments  -  taxation, marketing restrictions, food labelling, urban planning  -  will move population outcomes in a way that exhortation to eat less and move more won't [5,6].
 
 NZ has done very little of this. We have no sugar-sweetened beverage tax. We have only voluntary industry agreements on reformulation and marketing. The Childhood Obesity Plan launched in 2015 was assessed by independent researchers as having significant gaps in scope and weak targets [5]. More than thirty countries now have a sugar-sweetened beverage levy, including the UK (2018), France, Mexico, and Chile [6,7]. We don't.
 
@@ -32,9 +38,9 @@ The honest answer for a long time was: not much that worked durably for most peo
 
 **Lifestyle interventions.** Sustained 5% body-weight loss is associated with metabolic improvement; 10–15% sustained loss is typically required for type 2 diabetes remission [8]. The DiRECT trial showed that structured primary-care weight management can achieve T2D remission in 46% of participants at one year [9]. These are real results. They are also, in unselected primary care without intensive support, hard to replicate consistently. Most lifestyle programmes show 2–4 kg average weight loss at 12 months that diminishes further out [10].
 
-**Bariatric surgery.** This is the most effective intervention we have for severe obesity, with sustained weight loss, T2D remission rates of 50–70% at five years, and reductions in all-cause mortality [11]. Public access in NZ is severely constrained. National rates of publicly funded bariatric procedures sit at around 2.7 per 1,000 people with morbid obesity — less than half the rate in the UK or Australia [12]. There is roughly 16-fold variation in access between regions; researchers have called it a postcode lottery [12]. And — most uncomfortable — Māori and Pacific patients are less likely to receive publicly funded bariatric surgery than European patients even after adjusting for comorbidities [13]. The standard referral threshold remains BMI ≥40, or BMI ≥35 with one obesity-related condition [11].
+**Bariatric surgery.** This is the most effective intervention we have for severe obesity, with sustained weight loss, T2D remission rates of 50–70% at five years, and reductions in all-cause mortality [11]. Public access in NZ is severely constrained. National rates of publicly funded bariatric procedures sit at around 2.7 per 1,000 people with morbid obesity  -  less than half the rate in the UK or Australia [12]. There is roughly 16-fold variation in access between regions; researchers have called it a postcode lottery [12]. And  -  most uncomfortable  -  Māori and Pacific patients are less likely to receive publicly funded bariatric surgery than European patients even after adjusting for comorbidities [13]. The standard referral threshold remains BMI ≥40, or BMI ≥35 with one obesity-related condition [11].
 
-**Pharmacotherapy, until recently.** Funded GLP-1 receptor agonists in NZ (dulaglutide, low-dose liraglutide) have been available since 2021 only for type 2 diabetes, with the Special Authority criteria I've discussed elsewhere [8,14]. Weight-specific GLP-1 RAs — Saxenda (high-dose liraglutide), and later Wegovy (semaglutide) — have been available for self-funded prescription only, at $400–600 per month [15,16].
+**Pharmacotherapy, until recently.** Funded GLP-1 receptor agonists in NZ (dulaglutide, low-dose liraglutide) have been available since 2021 only for type 2 diabetes, with the Special Authority criteria I've discussed elsewhere [8,14]. Weight-specific GLP-1 RAs  -  Saxenda (high-dose liraglutide), and later Wegovy (semaglutide)  -  have been available for self-funded prescription only, at $400–600 per month [15,16].
 
 That picture changed materially in the last 18 months.
 
@@ -42,7 +48,7 @@ That picture changed materially in the last 18 months.
 
 Two things have happened more or less simultaneously.
 
-First, the evidence base for GLP-1 RAs in obesity widened beyond glycaemic control. The STEP-1 trial of once-weekly semaglutide 2.4 mg in adults with overweight or obesity (without diabetes) showed a mean 14.9% body-weight reduction at 68 weeks, versus 2.4% on placebo [17]. The SELECT trial then showed that semaglutide reduced major adverse cardiovascular events by 20% in patients with overweight or obesity and established cardiovascular disease but no diabetes [18]. The SURMOUNT trials of tirzepatide (a dual GIP/GLP-1 agonist) showed greater weight loss again — around 22% mean reduction at maximal dose at 72 weeks — with meaningful cardiometabolic benefits [19].
+First, the evidence base for GLP-1 RAs in obesity widened beyond glycaemic control. The STEP-1 trial of once-weekly semaglutide 2.4 mg in adults with overweight or obesity (without diabetes) showed a mean 14.9% body-weight reduction at 68 weeks, versus 2.4% on placebo [17]. The SELECT trial then showed that semaglutide reduced major adverse cardiovascular events by 20% in patients with overweight or obesity and established cardiovascular disease but no diabetes [18]. The SURMOUNT trials of tirzepatide (a dual GIP/GLP-1 agonist) showed greater weight loss again  -  around 22% mean reduction at maximal dose at 72 weeks  -  with meaningful cardiometabolic benefits [19].
 
 Second, NZ regulatory and funding processes started to move. Medsafe approved Wegovy and (in late 2025) Mounjaro for chronic weight management. Pharmac established the Obesity Treatments Advisory Group in 2025; in December that year the group provisionally recommended funding semaglutide for chronic weight management in people with high BMI and associated comorbidities, subject to Special Authority criteria [16]. As of early 2026, neither Wegovy nor Mounjaro is publicly funded; both are available privately at substantial monthly cost [16,20].
 
@@ -54,13 +60,13 @@ It is also the most expensive weight-related intervention we have ever had in ro
 
 Here's where the public-health frame and the clinical frame collide.
 
-If GLP-1 RAs are funded for obesity in NZ — and likely, eventually, they will be — the criteria will determine who benefits. Restrictive criteria (BMI ≥35 with established CVD, say) will produce CV benefit and probably be cost-effective, but will exclude most people with severe obesity. Generous criteria will benefit far more people but will be unaffordable within Pharmac's fixed budget.
+If GLP-1 RAs are funded for obesity in NZ  -  and likely, eventually, they will be  -  the criteria will determine who benefits. Restrictive criteria (BMI ≥35 with established CVD, say) will produce CV benefit and probably be cost-effective, but will exclude most people with severe obesity. Generous criteria will benefit far more people but will be unaffordable within Pharmac's fixed budget.
 
-In either case, the people most likely to qualify and the people most able to navigate the system tend to be different from the people most affected by the obesogenic environment. Without an explicit equity criterion — analogous to the ethnicity criterion built into the diabetes Special Authority — funded GLP-1 RAs risk widening, rather than narrowing, the health gaps they were supposed to address.
+In either case, the people most likely to qualify and the people most able to navigate the system tend to be different from the people most affected by the obesogenic environment. Without an explicit equity criterion  -  analogous to the ethnicity criterion built into the diabetes Special Authority  -  funded GLP-1 RAs risk widening, rather than narrowing, the health gaps they were supposed to address.
 
 There's also a quieter ethical problem. A pharmacological solution is, in some sense, a way of letting the food environment off the hook. If we can buy our way out of the population-level consequences of obesogenic policy with $5,000–10,000 per patient per year of medication, the political pressure to fix the upstream system reduces. The drug cost (eventually) lands on the public health budget. The food industry continues to externalise the costs of its products. We treat the symptom and call it progress.
 
-I don't think this means GLP-1 RAs shouldn't be funded — they should, and on serious equity criteria. But funding them as a substitute for, rather than alongside, structural action would be a significant moral failure.
+I don't think this means GLP-1 RAs shouldn't be funded  -  they should, and on serious equity criteria. But funding them as a substitute for, rather than alongside, structural action would be a significant moral failure.
 
 ## What this looks like in clinic
 
@@ -68,7 +74,7 @@ A few things I think follow for ordinary practice now.
 
 First, treat obesity as a chronic condition, not a moral one. The framing matters for the patient and for the consult. Weight stigma is itself associated with worse health outcomes, and stigma in healthcare settings is well-documented [21].
 
-Second, don't lead with weight when it isn't the presenting issue. "Have you considered losing weight?" as a non-sequitur is rarely useful and often actively harmful — it teaches people to avoid the GP, not to lose weight.
+Second, don't lead with weight when it isn't the presenting issue. "Have you considered losing weight?" as a non-sequitur is rarely useful and often actively harmful  -  it teaches people to avoid the GP, not to lose weight.
 
 Third, do offer real interventions when they're indicated and wanted. This includes referral pathways for bariatric surgery (yes, with the access issues; refer anyway), the few funded structured lifestyle programmes that exist, and an honest conversation about self-funded GLP-1 RAs for those who can afford them and meet clinical criteria.
 
@@ -80,7 +86,7 @@ Finally, document and advocate. If the system isn't fit for purpose, the data tr
 
 Obesity is the rare condition where the population-level evidence and the individual-level evidence point in different policy directions. At population level, the answer is upstream: tax, regulate, restructure environments, give people a fairer fight. At individual level, the answer is increasingly pharmacological and surgical, and the evidence base for that has never been stronger.
 
-A coherent policy response uses both. The current NZ response uses neither well — it leaves most environmental policy on the shelf while making the most effective medications unaffordable for most of the people who would benefit. That's not a clinical problem. It's a political one.
+A coherent policy response uses both. The current NZ response uses neither well  -  it leaves most environmental policy on the shelf while making the most effective medications unaffordable for most of the people who would benefit. That's not a clinical problem. It's a political one.
 
 Working GPs don't get to fix it from the consult room. We do get to name it accurately when we see it.
 

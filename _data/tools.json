@@ -94,6 +94,11 @@
           "name": "Steroid Equivalent Calculator",
           "url": "/workshop/tools/steroid-equivalent/",
           "blurb": "Glucocorticoid potency and dose comparison (prednisolone equivalent)."
+        },
+        {
+          "name": "Prescriptions Outside NZ",
+          "url": "/workshop/tools/rx-outside-nz/",
+          "blurb": "Medicines prescribed overseas that are unavailable, unfunded, or differently restricted in NZ — with local equivalents."
         }
       ]
     },

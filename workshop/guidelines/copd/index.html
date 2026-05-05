@@ -1,0 +1,366 @@
+---
+permalink: /workshop/guidelines/copd/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COPD  -  Working Diagnosis</title>
+<meta name="description" content="NZ vs AU vs GOLD 2024 guideline comparison for COPD management in primary care. Classification systems, inhaler therapy, eosinophil-guided ICS use, and PHARMAC funded options.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #F5F1E8;
+  --warm:       #EDE7D8;
+  --deep:       #E4DBC4;
+  --ink:        #1A1F1C;
+  --soft:       #3A4540;
+  --mute:       #6B7A75;
+  --rule:       #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --au-blue:    #1A5CAD;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px);
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+.masthead { border-bottom: 1px solid var(--rule); padding: 20px 32px; background: var(--paper); position: sticky; top: 0; z-index: 50; }
+.masthead-row { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.68rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.primary-nav a:hover { color: var(--green); }
+.primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
+
+.page-wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px 80px; }
+
+.page-header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.back-link { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); display: inline-block; margin-bottom: 24px; }
+.back-link:hover { color: var(--green); }
+.page-kicker { font-family: var(--font-m); font-size: 0.65rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
+.page-kicker::before { content: "❍ "; }
+.page-title { font-family: var(--font-d); font-weight: 500; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; }
+.page-title em { font-style: italic; color: var(--green); }
+.page-dek { font-family: var(--font-b); font-size: 1.05rem; color: var(--soft); max-width: 580px; line-height: 1.55; margin-bottom: 22px; }
+.page-meta { display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); }
+
+.div-summary { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin: 36px 0; }
+@media (max-width: 600px) { .div-summary { grid-template-columns: 1fr; } }
+.div-col { padding: 24px 28px; }
+.div-col:first-child { border-right: 1px solid var(--rule); }
+.div-col-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 7px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-agree { background: var(--green); }
+.dot-diverge { background: var(--ochre); }
+.div-list { list-style: none; padding: 0; }
+.div-list li { font-family: var(--font-b); font-size: 15px; color: var(--soft); padding: 6px 0; border-bottom: 1px solid rgba(217,209,189,.5); line-height: 1.4; }
+.div-list li:last-child { border-bottom: none; }
+
+.section-head { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 44px 0 16px; }
+.section-head::before { content: "❍ "; }
+
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--rule); margin-bottom: 44px; }
+.cmp-table { width: 100%; border-collapse: collapse; min-width: 660px; }
+.cmp-table thead th { padding: 13px 16px; text-align: left; font-family: var(--font-m); font-size: 0.56rem; letter-spacing: 1.8px; text-transform: uppercase; background: var(--warm); border-bottom: 1px solid var(--rule); }
+.cmp-table thead .th-domain { color: var(--mute); width: 148px; }
+.cmp-table thead .th-nz    { color: var(--green-deep); border-left: 3px solid var(--green); }
+.cmp-table thead .th-au    { color: var(--au-blue);    border-left: 3px solid var(--au-blue); }
+.cmp-table thead .th-int   { color: var(--soft);       border-left: 3px solid var(--rule); }
+.cmp-table tbody tr { border-top: 1px solid var(--rule); }
+.cmp-table tbody tr:nth-child(even) { background: rgba(237,231,216,.28); }
+.cmp-table tbody td { padding: 13px 16px; vertical-align: top; font-family: var(--font-b); font-size: 15px; line-height: 1.5; }
+.cmp-table .td-domain { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); line-height: 1.55; }
+.cmp-table .td-nz  { border-left: 3px solid rgba(47,107,92,.12); }
+.cmp-table .td-au  { border-left: 3px solid rgba(26,92,173,.12); }
+.cmp-table .td-int { border-left: 3px solid var(--rule); }
+.cmp-table tr.row-hi .td-nz { border-left-color: var(--ochre); background: rgba(184,113,79,.035); }
+
+.chip { display: inline-block; font-family: var(--font-m); font-size: 0.52rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 6px; margin-left: 5px; vertical-align: middle; border-radius: 2px; }
+.chip-funded     { background: rgba(47,107,92,.1);  color: var(--green-deep); }
+.chip-restricted { background: rgba(184,113,79,.12); color: var(--ochre); }
+.chip-nil        { background: rgba(140,30,30,.1);   color: #7A1C1C; }
+.chip-au         { background: rgba(26,92,173,.1);   color: var(--au-blue); }
+
+.nz-notes { background: rgba(237,231,216,.5); border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 28px 32px; margin-bottom: 32px; }
+.nz-notes-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); margin-bottom: 20px; }
+.nz-notes h3 { font-family: var(--font-d); font-weight: 500; font-size: 1rem; margin: 22px 0 8px; color: var(--ink); }
+.nz-notes h3:first-of-type { margin-top: 0; }
+.nz-notes p { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 8px; }
+.nz-notes ul { padding-left: 18px; margin-bottom: 8px; }
+.nz-notes li { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 5px; }
+
+.bottom-line { border: 1px solid var(--ink); border-left: 3px solid var(--ink); padding: 24px 28px; margin-bottom: 40px; }
+.bottom-line-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 16px; }
+.bottom-line ol { padding-left: 20px; }
+.bottom-line li { font-family: var(--font-b); font-size: 15.5px; color: var(--soft); line-height: 1.55; margin-bottom: 9px; }
+
+.sources { border-top: 1px solid var(--rule); padding-top: 28px; }
+.sources-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; }
+.sources ol { padding-left: 20px; }
+.sources li { font-family: var(--font-b); font-size: 13.5px; color: var(--mute); line-height: 1.6; margin-bottom: 6px; }
+
+.site-footer { border-top: 1px solid var(--rule); max-width: 1080px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-family: var(--font-m); font-size: 0.62rem; color: var(--mute); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Site navigation">
+      <a href="/lifestyle/">Lifestyle</a>
+      <a href="/musculoskeletal/">MSK</a>
+      <a href="/paediatrics/">Paeds</a>
+      <a href="/geriatrics/">Geriatrics</a>
+      <a href="/gynaecology/">Gynae</a>
+      <a href="/dermatology/">Derm</a>
+      <a href="/mental-health/">Mental Health</a>
+      <a href="/vaccines/">Vaccines</a>
+      <a href="/travel/">Travel</a>
+      <a href="/workshop/" class="is-current">Workbench</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <a href="/workshop/guidelines/" class="back-link">← Guideline Comparisons</a>
+    <p class="page-kicker">Respiratory</p>
+    <h1 class="page-title">COPD - <em>primary care management</em></h1>
+    <p class="page-dek">How NZ, Australian, and GOLD 2024 guidelines approach diagnosis, classification, and inhaler therapy for COPD - and where PHARMAC funded options shape what is practically achievable in NZ.</p>
+    <div class="page-meta">
+      <span>Reviewed May 2026</span>
+      <span>BPAC NZ 2021</span>
+      <span>COPDX 2023</span>
+      <span>GOLD 2024</span>
+    </div>
+  </div>
+
+  <!-- Scope note -->
+  <p style="font-family: var(--font-m); font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); margin: 28px 0 -8px;">Scope: stable COPD management in primary care. Acute exacerbations covered in the exacerbation management row. Does not cover surgical or bronchoscopic interventions.</p>
+
+  <!-- Agree / Diverge -->
+  <div class="div-summary">
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-agree"></span>Where they agree</p>
+      <ul class="div-list">
+        <li>Post-bronchodilator FEV1/FVC &lt;0.70 confirms obstruction; spirometry is required for diagnosis</li>
+        <li>Smoking cessation is the single most effective intervention at any stage</li>
+        <li>SABA (salbutamol) as reliever for all patients regardless of maintenance therapy</li>
+        <li>Long-acting bronchodilators (LAMA and/or LABA) are the backbone of maintenance therapy; routine ICS monotherapy is not recommended</li>
+        <li>Pulmonary rehabilitation improves exercise capacity and quality of life and is underutilised</li>
+        <li>Annual influenza vaccination and pneumococcal vaccination recommended for all COPD patients</li>
+      </ul>
+    </div>
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-diverge"></span>Where they diverge</p>
+      <ul class="div-list">
+        <li>Classification: GOLD 2024 uses ABE groups (replacing ABCD); BPAC 2021 and COPDX use earlier ABCD-based frameworks</li>
+        <li>GOLD 2024 preferentially recommends LAMA/LABA dual therapy for symptomatic Group B; NZ practice typically initiates LAMA alone and steps up</li>
+        <li>Eosinophil-guided ICS use: GOLD 2024 provides specific cutoffs (100 and 300 cells/µL); BPAC 2021 is less prescriptive</li>
+        <li>Roflumilast: PBS-listed in AU for severe chronic bronchitis phenotype; not funded in NZ</li>
+        <li>Single-inhaler triple therapy (ICS/LABA/LAMA): available in AU and recommended by GOLD; not funded in NZ as a combination device</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="section-head">Comparison</p>
+  <div class="cmp-wrap">
+    <table class="cmp-table" aria-label="Guideline comparison: COPD primary care management">
+      <thead>
+        <tr>
+          <th class="th-domain">Domain</th>
+          <th class="th-nz">NZ  -  BPAC 2021</th>
+          <th class="th-au">AU  -  COPDX 2023</th>
+          <th class="th-int">International  -  GOLD 2024</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="td-domain">Diagnosis</td>
+          <td class="td-nz">Post-bronchodilator spirometry with <strong>FEV1/FVC &lt;0.70</strong> in a patient with relevant symptoms (dyspnoea, chronic cough, sputum production) and/or risk factors (smoking, occupational exposure). Clinical diagnosis alone is insufficient.</td>
+          <td class="td-au">Identical threshold. Spirometry is essential; underdiagnosis in primary care is explicitly flagged. COPDX emphasises confirming irreversibility to distinguish from asthma.</td>
+          <td class="td-int">Post-BD FEV1/FVC &lt;0.70. GOLD 2024 reiterates that a fixed ratio is practical but slightly overestimates obstruction in older adults. Confirms spirometry is required; symptom-only diagnosis is not acceptable.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Classification system</td>
+          <td class="td-nz">Uses severity grades (GOLD 1-4 by FEV1%) and <strong>ABCD groups</strong> based on symptoms (mMRC/CAT) and exacerbation history. BPAC 2021 predates the 2023 GOLD update that replaced ABCD with ABE.</td>
+          <td class="td-au">COPDX 2023 incorporates an updated ABCD-derived framework. Emphasises individualised assessment of symptom burden and exacerbation risk as the primary treatment drivers.</td>
+          <td class="td-int">GOLD 2024 uses <strong>ABE groups</strong>: Group A (low symptoms, low exacerbation risk), Group B (high symptoms, low risk), Group E (any exacerbation risk, regardless of symptom burden). Lung function grade (1-4) now used separately for prognosis and research, not to direct treatment initiation.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Initial therapy  -  low symptoms (Group A)</td>
+          <td class="td-nz">A short-acting bronchodilator used as needed. If persistent, step up to a long-acting bronchodilator. SABA (salbutamol) or SAMA (ipratropium) as first option.<span class="chip chip-funded">Funded</span></td>
+          <td class="td-au">Short-acting bronchodilator as needed. Ipratropium preferred over SABA in some phenotypes. Early consideration of a long-acting agent if symptoms persist despite PRN use.</td>
+          <td class="td-int">Group A: offer a bronchodilator (short- or long-acting) and reassess response. The choice of short vs long-acting is based on symptom persistence. Start with SABA or SAMA for intermittent symptoms.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Initial therapy  -  symptomatic (Group B)</td>
+          <td class="td-nz">
+            Long-acting bronchodilator monotherapy: prefer <strong>LAMA</strong> (tiotropium) or LABA (indacaterol).<span class="chip chip-funded">Funded</span><br><br>
+            In practice, tiotropium is the most commonly initiated long-acting agent in NZ primary care for symptomatic COPD.
+          </td>
+          <td class="td-au">
+            Long-acting bronchodilator monotherapy: LAMA preferred for most patients due to superior exacerbation prevention vs LABA alone. Dual LAMA/LABA (e.g. tiotropium + indacaterol/glycopyrronium) for persistent high symptom burden.<span class="chip chip-au">PBS</span>
+          </td>
+          <td class="td-int">
+            Group B: <strong>LAMA or LABA, or LAMA/LABA</strong>. GOLD 2024 explicitly states that LAMA/LABA dual therapy should be considered as initial therapy for patients with high symptom burden (CAT ≥20 or mMRC ≥2), rather than waiting to step up. Single agent if symptoms are less severe.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Exacerbation prevention (Group E)</td>
+          <td class="td-nz">
+            Step up from LAMA to <strong>LAMA + ICS/LABA</strong> combination for patients with recurrent exacerbations. Separate inhalers required as single-device triple therapy is not funded.<span class="chip chip-funded">Funded</span><span class="chip chip-restricted">Separate inhalers only</span><br><br>
+            ICS-containing therapy (e.g. budesonide/formoterol or fluticasone/salmeterol) combined with tiotropium achieves triple coverage using two funded devices.
+          </td>
+          <td class="td-au">
+            LAMA/LABA as initial escalation. Triple therapy (ICS/LABA/LAMA) for persistent exacerbations despite dual bronchodilation, or if blood eosinophils &gt;300 cells/µL.<span class="chip chip-au">PBS</span><br><br>
+            Single-inhaler triple therapy devices (e.g. beclomethasone/formoterol/glycopyrronium; fluticasone furoate/umeclidinium/vilanterol) are PBS-listed in AU.
+          </td>
+          <td class="td-int">
+            Group E: <strong>LAMA/LABA</strong> as initial escalation. Consider adding ICS if blood eosinophils &gt;300 cells/µL, or if on LAMA/LABA with ongoing exacerbations and eos 100-300 cells/µL. Triple therapy (ICS/LABA/LAMA) if further exacerbations on LAMA/LABA. De-escalate ICS if pneumonia risk is high or eos &lt;100 cells/µL.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Blood eosinophils and ICS</td>
+          <td class="td-nz">BPAC 2021 notes that ICS should be added for patients with frequent exacerbations, but does not provide specific eosinophil count thresholds. Clinical judgement and exacerbation history guide the decision.</td>
+          <td class="td-au">COPDX 2023 incorporates eosinophil-guided ICS decisions aligned with GOLD. Blood eosinophils &gt;300 cells/µL: ICS is likely beneficial. Eosinophils &lt;100 cells/µL: ICS benefit is minimal and pneumonia risk may outweigh it.</td>
+          <td class="td-int">
+            GOLD 2024 provides explicit thresholds:<br>
+            &lt;100 cells/µL: ICS unlikely to benefit; avoid<br>
+            100-300 cells/µL: consider ICS if exacerbations persist despite dual BD<br>
+            &gt;300 cells/µL: ICS strongly supported<br><br>
+            Peripheral blood eosinophils are a reliable biomarker for predicting ICS response in COPD.<sup>1</sup>
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Roflumilast</td>
+          <td class="td-nz">Not funded by PHARMAC. Cannot be prescribed in routine NZ practice without Special Authority or self-funding at significant cost.<span class="chip chip-nil">Not funded</span></td>
+          <td class="td-au">PBS-listed. Indicated for severe COPD (FEV1 &lt;50% predicted) with chronic bronchitis phenotype and frequent exacerbations (≥2/year), despite optimised inhaled therapy. Used as an add-on to bronchodilator therapy.<span class="chip chip-au">PBS</span></td>
+          <td class="td-int">Roflumilast (PDE4 inhibitor) reduces exacerbations in the chronic bronchitis phenotype with FEV1 &lt;50% predicted and frequent exacerbations. GOLD 2024 recommends it as an add-on for this specific subgroup on maximal inhaled therapy. Side effects (nausea, weight loss) limit use.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Azithromycin prophylaxis</td>
+          <td class="td-nz">BPAC 2021 does not recommend routine azithromycin prophylaxis in primary care. Specialist consideration warranted for frequent exacerbators where other options are exhausted.</td>
+          <td class="td-au">Specialist-initiated. Low-dose azithromycin (250mg three times weekly or 500mg daily) for former smokers with recurrent exacerbations refractory to optimised inhaled therapy. QTc and hearing assessment required before starting.</td>
+          <td class="td-int">GOLD 2024: azithromycin prophylaxis (250mg daily or 500mg three times weekly) reduces exacerbation frequency in former smokers with recurrent exacerbations on maximal therapy. Contraindicated in current smokers (increased lung cancer risk). Cardiac and audiological monitoring required.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Pulmonary rehabilitation</td>
+          <td class="td-nz">Strongly recommended for all patients with mMRC ≥2 or significant functional limitation. Access in NZ is geographically uneven; community and hospital-based programmes vary in availability. Referral should be made when available.</td>
+          <td class="td-au">Strongly recommended post-exacerbation (within 4 weeks of discharge) and for stable patients with mMRC ≥2. COPDX highlights that post-exacerbation PR reduces rehospitalisation. Telehealth-based PR increasingly available.</td>
+          <td class="td-int">GOLD 2024: one of the most effective non-pharmacological interventions. Recommended after hospitalisation for exacerbation (within 4 weeks). Reduces symptoms, improves exercise capacity, and reduces hospital admissions. Home-based programmes are acceptable where supervised programmes are unavailable.<sup>2</sup></td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Exacerbation management</td>
+          <td class="td-nz">Increase SABA frequency. Prednisolone 40mg daily for <strong>5 days</strong> if moderate-severe. Antibiotic only if purulent sputum plus increased dyspnoea or sputum volume (not for all exacerbations). Amoxicillin or doxycycline first-line.<span class="chip chip-funded">Funded</span></td>
+          <td class="td-au">Largely aligned. Prednisolone 37.5-50mg daily for 5 days. Antibiotic only if bacterial exacerbation features present. Choice guided by local resistance and patient allergy history. Admission thresholds clearly defined.</td>
+          <td class="td-int">GOLD 2024: prednisolone 40mg for 5 days (longer courses add adverse effects without benefit). Antibiotics only when bacterial features are present (purulent sputum, increased sputum, increased dyspnoea, or C-reactive protein &gt;10 mg/L). Procalcitonin may guide antibiotic use. Avoid over-treating mild viral exacerbations.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Vaccinations</td>
+          <td class="td-nz">Annual influenza vaccine. Pneumococcal vaccination (13-valent then 23-valent, or 20-valent PCV). COVID-19 vaccination for all eligible patients. RSV vaccination should be discussed with eligible older adults.<span class="chip chip-funded">Funded</span></td>
+          <td class="td-au">Influenza annually. Pneumococcal as per national schedule. Pertussis (dTpa) in some guidelines. COVID-19 for eligible patients.</td>
+          <td class="td-int">GOLD 2024: influenza and pneumococcal vaccination strongly recommended. COVID-19 vaccination recommended. RSV vaccination (RSVpreF or mRNA-1345) recommended for adults aged 60 and over, including those with COPD. Pertussis vaccination in some populations.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-head">NZ clinical context</p>
+  <div class="nz-notes">
+    <p class="nz-notes-label">PHARMAC funding and population-specific considerations</p>
+
+    <h3>Funded inhaler options in NZ</h3>
+    <p>PHARMAC funds a defined set of COPD inhalers. The practical pharmacotherapy ladder in NZ differs from what GOLD 2024 or COPDX describe because certain agents and combination devices are not funded.</p>
+    <ul>
+      <li><strong>SABA:</strong> Salbutamol (MDI and nebules) is funded without restriction. First-line reliever for all patients.</li>
+      <li><strong>SAMA:</strong> Ipratropium is funded and remains a useful short-acting option, particularly in older patients or where SABA is insufficient alone.</li>
+      <li><strong>LAMA:</strong> Tiotropium (Spiriva Respimat and HandiHaler) is funded for COPD. This is the cornerstone long-acting agent for NZ prescribers. Umeclidinium and glycopyrronium are not funded.</li>
+      <li><strong>LABA:</strong> Indacaterol (Onbrez Breezhaler) is funded for COPD as LABA monotherapy. Salmeterol and formoterol are funded primarily within ICS/LABA combinations.</li>
+      <li><strong>ICS/LABA combinations:</strong> Budesonide/formoterol (Symbicort) and fluticasone propionate/salmeterol (generic) are funded. These are typically combined with tiotropium to achieve triple coverage using two separate devices.</li>
+      <li><strong>Single-inhaler triple therapy</strong> (ICS/LABA/LAMA combination devices such as Trelegy or Trimbow): <span class="chip chip-nil">Not funded</span>. Triple therapy is achievable in NZ by prescribing tiotropium alongside a funded ICS/LABA inhaler, but there is no single-device option on the PHARMAC schedule.</li>
+      <li><strong>Roflumilast</strong> (Daxas): <span class="chip chip-nil">Not funded</span>. Patients meeting GOLD criteria for roflumilast cannot access it through standard funded channels. Consider referral to respiratory medicine for those with severe chronic bronchitis and frequent exacerbations where this agent might otherwise be indicated.</li>
+    </ul>
+
+    <h3>The ABCD vs ABE classification gap</h3>
+    <p>BPAC NZ 2021 uses the GOLD ABCD classification system. GOLD updated its framework in 2023, replacing ABCD with ABE - where Group E captures all patients with significant exacerbation risk regardless of symptom level. This change emphasises that exacerbation risk should drive treatment escalation independently of symptoms. NZ clinicians using BPAC 2021 as their primary reference should be aware that GOLD 2024 recommendations (particularly for Group B initial therapy with LAMA/LABA dual bronchodilation) may not be reflected in current BPAC guidance. The practical implication is that GOLD 2024 is more aggressive about dual bronchodilation upfront in symptomatic patients.</p>
+
+    <h3>Maori and Pacific peoples</h3>
+    <p>COPD rates are disproportionately higher in Maori and Pacific populations in NZ, partly attributable to higher smoking prevalence historically, occupational exposures, and socioeconomic factors. Diagnosis is often delayed. Spirometry interpretation should account for the fact that reference ranges are derived predominantly from European cohorts; some have argued that fixed-ratio criteria may over-diagnose obstruction in some Pacific phenotypes, though this remains debated. Pulmonary rehabilitation access is often more limited in communities with higher Maori and Pacific COPD burden - consider telehealth or community options where available.</p>
+
+    <h3>Practical prescribing sequence in NZ</h3>
+    <p>A reasonable PHARMAC-aligned treatment ladder for primary care:</p>
+    <ul>
+      <li>Step 1: Salbutamol PRN (all patients)</li>
+      <li>Step 2: Add tiotropium for persistent symptoms (LAMA)</li>
+      <li>Step 3: Add ICS/LABA (budesonide/formoterol or fluticasone/salmeterol) if exacerbations persist despite tiotropium, or if blood eosinophils &gt;300 cells/µL</li>
+      <li>Step 4: Consider referral to respiratory medicine for frequent exacerbations on triple therapy, possible roflumilast (unfunded, patient self-funds), or pulmonary rehabilitation coordination</li>
+    </ul>
+    <p>Also see the <a href="/workshop/tools/copd/">COPD Management tool</a> in the Workbench for a GOLD-staged inhaler guide with NZF-funded options.</p>
+  </div>
+
+  <p class="section-head">Bottom line for NZ practice</p>
+  <div class="bottom-line">
+    <p class="bottom-line-label">What this means in the consulting room</p>
+    <ol>
+      <li>Confirm the diagnosis with spirometry. A clinical-only diagnosis of COPD is not sufficient and leads to both over- and under-treatment. If spirometry has never been done, arrange it.</li>
+      <li>Tiotropium is your workhorse LAMA in NZ. It is funded, effective, and well-tolerated. Initiate it once a patient has symptoms that SABA alone is not controlling. You do not need to wait until FEV1 is severely reduced.</li>
+      <li>For patients with frequent exacerbations on tiotropium: add a funded ICS/LABA inhaler. This effectively delivers triple therapy (LAMA + ICS + LABA) using two devices. Single-inhaler triple therapy is not available on PHARMAC.</li>
+      <li>Check blood eosinophils in patients with recurrent exacerbations before adding ICS-containing therapy. If eosinophils are consistently below 100 cells/µL, ICS is unlikely to help and increases pneumonia risk - do not escalate to ICS-containing therapy in this group.</li>
+      <li>Roflumilast is not funded in NZ. For patients with severe chronic bronchitis and frequent exacerbations who are not responding to optimised inhaled therapy, refer to respiratory medicine rather than trying to source this agent through non-standard pathways.</li>
+    </ol>
+  </div>
+
+  <div class="sources">
+    <p class="sources-label">Sources</p>
+    <ol>
+      <li>BPAC NZ. Chronic obstructive pulmonary disease: update on management. Best Practice Journal. 2021;(97). Available from: bpac.org.nz</li>
+      <li>Yang IA, Brown JL, George J, et al. COPD-X Australian and New Zealand guidelines for the diagnosis and management of COPD: 2017 update. Med J Aust. 2017;207(10):436-442. [COPDX updated to v2.66, 2023. Available from: copdx.org.au]</li>
+      <li>Global Initiative for Chronic Obstructive Lung Disease. Global strategy for the diagnosis, management, and prevention of chronic obstructive pulmonary disease: 2024 report. Available from: goldcopd.org</li>
+      <li>Pascoe S, Locantore N, Dransfield MT, et al. Blood eosinophil counts, exacerbations, and response to the addition of inhaled fluticasone furoate to vilanterol in patients with COPD: a secondary analysis of data from two parallel randomised controlled trials. Lancet Respir Med. 2015;3(6):435-442.</li>
+      <li>PHARMAC. New Zealand Pharmaceutical Schedule. Available from: pharmac.govt.nz [accessed 2025].</li>
+    </ol>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <span class="footer-brand">Working Diagnosis · workingdiagnosis.xyz</span>
+</footer>
+
+</body>
+</html>

@@ -1,216 +1,159 @@
 ---
 title: Paediatrics
-description: Child health for the NZ general practice consultation — developmental surveillance, common illness, immunisation, and when to refer.
-layout: topic.njk
+layout: topic
 pillar: Paeds
+description: Common conditions in child health for the NZ GP consultation - fever, respiratory, development, ENT, and when to refer.
+permalink: /paediatrics/
 ---
 
-<div class="topic">
+Children are not small adults. The same symptom at 6 weeks, 18 months, and 12 years carries a different differential, a different investigation threshold, and a different conversation with the family. This section maps common presentations by topic area with links to individual condition pages.
 
-  <div class="topic-header">
-    <p class="pillar-label">❍ Paeds</p>
-    <h1>Child health in<br><em>general practice.</em></h1>
-    <p class="topic-dek">From the newborn check to the school-age child — developmental surveillance, common illness, immunisation, and the art of knowing when to refer.</p>
-  </div>
+---
 
-  <div class="paeds-body">
+## Fever and Infection
 
-    <!-- ── SECTION 1: Developmental Surveillance ── -->
-    <section class="paeds-section">
-      <div class="paeds-section-head">
-        <span class="section-label">01 — Developmental Surveillance</span>
-        <h2>Is this child <em>on track?</em></h2>
-      </div>
+Fever is the most common reason children present to general practice. Most are viral and self-limiting. The job is identifying the minority with serious bacterial infection (SBI) - meningitis, sepsis, urinary tract infection, pneumonia, osteomyelitis - without over-investigating or over-treating the majority.
 
-      <div class="paeds-audience-grid">
+### Common presentations
 
-        <div class="paeds-block paeds-block--gp">
-          <span class="audience-tag audience-tag--gp">For clinicians</span>
-          <p>The Well Child Tamariki Ora (WCTO) schedule provides structured surveillance contacts from birth to age 5. Core contacts occur at 4–6 weeks, 3 months, 5 months, 7 months, 9–10 months, 12 months, 15 months, and 4–5 years. Each contact includes developmental, growth, and family wellbeing checks. In NZ, these are delivered primarily by Plunket, community nurses, and GPs — not always the same provider, so the GP visit is often the integration point for a fragmented picture.</p>
-          <p>Use the <strong>Schedule of Early Childhood Immunisation (SECI)</strong> timing alongside WCTO contacts — they frequently overlap and a combined approach reduces missed opportunities.</p>
-          <p>Red flags that warrant prompt developmental paediatric referral at any age include: loss of previously acquired skills (regression is never benign without a clear cause), absent social smile by 8 weeks, no babble by 9 months, no words by 16 months, no 2-word phrases by 24 months, or any concern from the parent. Parental instinct has strong positive predictive value — treat it seriously.</p>
-          <p class="paeds-source">NZ Ministry of Health. <em>Well Child Tamariki Ora Programme Practitioner Handbook.</em> 2021 edition. Wellington: Ministry of Health; 2021.<sup>1</sup></p>
-        </div>
+- **Fever without focus** - the commonest scenario; viral illness in a child who looks reasonably well. Age under 3 months with any fever warrants same-day secondary care review. The NICE Traffic Light system provides a structured approach to risk stratification across age groups.[^1]
+- **Urinary tract infection** - underdiagnosed in young children. Consider in any child under 3 years with unexplained fever lasting more than 2 days, or any child with urinary symptoms. Bag specimens are unreliable for culture; clean-catch or catheter specimen if toilet training is incomplete.
+- **Viral URTI and the antibiotic conversation** - the majority of childhood illness is viral. Antibiotics do not shorten the course of viral URTI and create resistance. A clear explanation of the natural history is often more valuable than a prescription.
+- **Meningococcal disease** - non-blanching rash with fever is a 111 call until proven otherwise. Know the glass test; teach it to parents.
 
-        <div class="paeds-block paeds-block--parent">
-          <span class="audience-tag audience-tag--parent">For whānau</span>
-          <p>Your Well Child book (the blue one) is the single best record of your child's growth and development. Bring it to every GP, Plunket, and hospital visit — it belongs to you, not the clinic.</p>
-          <p>Every child develops at their own pace, but there are ages where we'd expect most children to reach certain milestones. If something feels off — your child isn't making eye contact, isn't responding to your voice, or has lost a skill they had before — tell your GP or Plunket nurse at the next visit, or ring Healthline on <strong>0800 611 116</strong> if you're worried sooner.</p>
-          <p>You can also use our <a href="/workshop/tools/milestones/">Developmental Milestones tool</a> to see age-banded expectations.</p>
-        </div>
+### Red flags in the febrile child
 
-      </div>
-    </section>
+- Age under 3 months, temperature 38°C or above - secondary care same day
+- Non-blanching rash with fever - 111 immediately
+- Bulging fontanelle, neck stiffness, photophobia
+- Altered consciousness, very difficult to rouse
+- Oxygen saturations below 92% in air
+- Capillary refill time more than 2 seconds
+- Bile-stained vomiting
 
-    <!-- ── SECTION 2: Fever in Children ── -->
-    <section class="paeds-section">
-      <div class="paeds-section-head">
-        <span class="section-label">02 — Fever</span>
-        <h2>The child with a <em>temperature.</em></h2>
-      </div>
+---
 
-      <div class="paeds-audience-grid">
+## Respiratory
 
-        <div class="paeds-block paeds-block--gp">
-          <span class="audience-tag audience-tag--gp">For clinicians</span>
-          <p>Fever (≥38°C) in children under 5 is one of the most common presentations in NZ general practice. The majority are viral and self-limiting, but identifying the minority with serious bacterial infection (SBI) — meningitis, sepsis, urinary tract infection, pneumonia, osteomyelitis — is the clinical task.</p>
-          <p>For children under 3 months, a temperature ≥38°C is a red flag requiring same-day assessment and a low threshold for secondary care review. Infants in this age group may have SBI with no localising signs. The NICE Traffic Light system (UK) provides a validated structured approach and translates well to NZ practice: assess colour, activity, respiratory effort, hydration, and the presence of specific features (non-blanching rash, bulging fontanelle, neck stiffness, focal neurology).<sup>2</sup></p>
-          <p>UTI is underdiagnosed in young children with fever and no source. Consider urine dipstick/MC&S for any child under 3 years with unexplained fever ≥2 days, especially girls and uncircumcised boys.<sup>3</sup> Midstream urine is difficult in non-toilet-trained children — a clean-catch specimen or catheter sample is more reliable than a bag specimen for culture.</p>
-          <p>Antipyretics (paracetamol or ibuprofen) improve comfort but do not reduce febrile convulsion risk and should not be used primarily to prevent them. Alternating paracetamol and ibuprofen is commonly done but evidence for additive benefit over monotherapy is modest.<sup>4</sup></p>
-          <p class="paeds-source">See references 2–4 below.</p>
-        </div>
+Acute respiratory illness is the single most common reason children present in NZ general practice. The clinical task is distinguishing viral URTI (the vast majority) from bronchiolitis, croup, pneumonia, and early asthma.
 
-        <div class="paeds-block paeds-block--parent">
-          <span class="audience-tag audience-tag--parent">For whānau</span>
-          <p>Fever is the body fighting infection — it's a sign the immune system is working, not the enemy itself. The height of the fever matters less than how your child looks and behaves.</p>
-          <p><strong>Go to the emergency department or call 111 immediately if your child:</strong></p>
-          <ul class="paeds-list">
-            <li>Has a rash that doesn't fade when you press a glass against it</li>
-            <li>Is hard to wake or very floppy</li>
-            <li>Has a stiff neck or is sensitive to light</li>
-            <li>Is breathing fast or working hard to breathe</li>
-            <li>Has a bulging soft spot (fontanelle) on their head</li>
-            <li>Is under 3 months old with any fever ≥38°C</li>
-          </ul>
-          <p><strong>See your GP or Plunket nurse the same day if:</strong></p>
-          <ul class="paeds-list">
-            <li>Your child is under 6 months with a fever</li>
-            <li>The fever has lasted more than 3 days</li>
-            <li>Your child is not passing urine, or seems very dry</li>
-            <li>You're not sure what's causing it and you're worried</li>
-          </ul>
-          <p>Paracetamol (Pamol) or ibuprofen (Nurofen for Children) helps your child feel more comfortable. Use weight-based dosing on the packet. Don't use aspirin in children under 16.</p>
-        </div>
+### Common presentations
 
-      </div>
-    </section>
+- **Bronchiolitis** - RSV-driven, peaks June to August in NZ. Affects mainly children under 2, with under-6-month infants most at risk of apnoea and respiratory failure. Management is supportive; salbutamol, steroids, and antibiotics have no evidence of benefit.[^2] Nirsevimab (Beyfortus) is funded from 2024 for eligible infants entering their first RSV season - check current IMAC eligibility criteria.
+- **Croup** - laryngotracheobronchitis causing the characteristic barking cough and inspiratory stridor. Single dose oral dexamethasone 0.15 mg/kg (minimum) to 0.6 mg/kg (maximum 10 mg) is highly effective and the standard of care in NZ.[^3] Most mild croup can be managed at home after dexamethasone.
+- **Childhood wheeze and asthma** - recurrent wheeze in under-5s is not reliably classified as asthma; viral-induced wheeze is common and many children do not progress to atopic asthma. A trial of salbutamol via spacer is both diagnostic and therapeutic.
+- **Pneumonia** - bacterial pneumonia is less common than viral LRTI but presents with higher fever, more focal signs, and a more unwell child. Chest X-ray is not required to diagnose pneumonia clinically in most cases. Amoxicillin is first-line for community-acquired pneumonia in children.[^4]
 
-    <!-- ── SECTION 3: Immunisation ── -->
-    <section class="paeds-section">
-      <div class="paeds-section-head">
-        <span class="section-label">03 — Immunisation</span>
-        <h2>The NZ childhood <em>schedule.</em></h2>
-      </div>
+### Respiratory red flags
 
-      <div class="paeds-audience-grid">
+- Respiratory rate consistently above age-expected norms (over 60 in infants, over 50 in 1-5 years)
+- Subcostal, intercostal, or sternal recession indicating increased work of breathing
+- Oxygen saturations below 92% in air
+- Feeding significantly compromised in an infant
+- Silent chest on auscultation in a wheeze presentation
 
-        <div class="paeds-block paeds-block--gp">
-          <span class="audience-tag audience-tag--gp">For clinicians</span>
-          <p>New Zealand's National Immunisation Schedule is funded and administered via general practice and community immunisation services. As of 2025, the schedule includes vaccines at 6 weeks, 3 months, 5 months, 12 months, 15 months, and 4 years, with adolescent boosters (HPV, Tdap, meningococcal ACWY) at ages 11–12.<sup>5</sup></p>
-          <p>Key NZ-specific points: <strong>Rotavirus</strong> (Rotarix) is funded from 6 weeks — the first dose must be given before 15 weeks of age due to intussusception risk with late initiation. <strong>MenB</strong> (Bexsero) is funded for infants from 2023 — two primary doses at 3 and 5 months, booster at 12–15 months. <strong>Varicella</strong> is funded at 15 months and 11 years (catch-up for seronegative children).<sup>5</sup></p>
-          <p>Use the <a href="https://www.immune.org.nz/" target="_blank">Immunisation Advisory Centre (IMAC)</a> and the NZ Formulary (NZF) for up-to-date schedule details, catch-up guidance, and special risk group recommendations (e.g., premature infants, immunocompromised children). IMAC also maintains a clinician helpline for complex immunisation queries.</p>
-          <p>Missed vaccines: use the IMAC catch-up schedules rather than restarting. For children with incomplete or unknown vaccination history, serological testing is rarely required — catch-up is almost always the right approach.<sup>5</sup></p>
-          <p class="paeds-source">5. Immunisation Advisory Centre (IMAC). <em>New Zealand Immunisation Schedule.</em> Auckland: University of Auckland; 2025. Available from: https://www.immune.org.nz/</p>
-        </div>
+---
 
-        <div class="paeds-block paeds-block--parent">
-          <span class="audience-tag audience-tag--parent">For whānau</span>
-          <p>Vaccines in New Zealand are free for babies and children under the National Immunisation Schedule. Your GP or nurse gives most of them at your Well Child visits.</p>
-          <p>It's normal for your baby to be unsettled or have a sore leg after vaccines. Paracetamol (Pamol) can help with discomfort — ask your nurse for the right dose for your baby's weight. A fever over 39°C after immunisation that doesn't settle with Pamol, or any symptoms that worry you, is worth a call to Healthline (0800 611 116) or your GP.</p>
-          <p>If you've missed a vaccine, don't worry — most can be caught up. Talk to your GP or practice nurse and they'll check your child's record and plan catch-up doses.</p>
-          <p>For independent information about vaccines in New Zealand, <a href="https://www.immune.org.nz/" target="_blank">immune.org.nz</a> (IMAC) is a good starting point.</p>
-        </div>
+## Ear, Nose and Throat
 
-      </div>
-    </section>
+New Zealand has among the highest rates of childhood ear disease in the developed world, particularly in Maori and Pacific children. Chronic suppurative otitis media (CSOM) affects around 4% of Maori and Pacific children compared with under 1% of New Zealand European children.[^5] This disparity is a health equity issue, and active surveillance is warranted in at-risk populations.
 
-    <!-- ── SECTION 4: Respiratory Illness ── -->
-    <section class="paeds-section">
-      <div class="paeds-section-head">
-        <span class="section-label">04 — Respiratory Illness</span>
-        <h2>Coughs, wheeze, and <em>bronchiolitis.</em></h2>
-      </div>
+### Common presentations
 
-      <div class="paeds-audience-grid">
+- **Acute otitis media (AOM)** - the NZ guideline recommends watchful waiting with adequate analgesia for most children aged 2 years and over with mild-to-moderate AOM. Antibiotics (amoxicillin 40 mg/kg/day in 3 divided doses for 5 days) are indicated for children under 2, bilateral AOM, AOM with perforation, and children with significant comorbidities.[^6]
+- **Otitis media with effusion (OME, glue ear)** - watchful waiting for 3 months is appropriate. Refer for audiological assessment and ENT review if effusion persists beyond 3 months with associated hearing loss affecting development, behaviour, or schooling. Decongestants and antihistamines have no evidence of benefit.
+- **CSOM** - perforated eardrum with discharge lasting more than 2 weeks. Topical ciprofloxacin ear drops are first-line; dry mopping keeps the canal clear. ENT referral for all persistent CSOM. Systemic antibiotics are not routinely indicated unless mastoiditis or systemic infection is present.
+- **Tonsillitis and peritonsillar abscess** - most tonsillitis is viral (Centor/FeverPAIN scores guide the antibiotic decision). Trismus, unilateral uvular deviation, and muffled voice suggest peritonsillar abscess requiring urgent ENT review.
 
-        <div class="paeds-block paeds-block--gp">
-          <span class="audience-tag audience-tag--gp">For clinicians</span>
-          <p>Acute respiratory illness is the single most common reason children present to NZ general practice. The clinical spectrum runs from self-limiting viral upper respiratory tract infection (URTI) to bronchiolitis, croup, pneumonia, and early asthma — distinguishing between these is the daily work of paediatric GP medicine.</p>
-          <p><strong>Bronchiolitis</strong> (predominantly RSV) peaks in NZ winter (June–August) and is the leading cause of infant hospitalisation. It affects mainly children under 2, with the under-6-months group most at risk of apnoea and respiratory failure. There is no proven specific treatment — management is supportive: hydration, positioning, supplemental oxygen if saturations fall below 92% in air, and admission if feeding is significantly compromised. Salbutamol, steroids, and antibiotics have no evidence of benefit in bronchiolitis and should not be routinely used.<sup>6</sup> NiV/RSV monoclonal antibody (nirsevimab, Beyfortus) was introduced to the NZ funded schedule in 2024 for infants entering their first RSV season — check current eligibility criteria with IMAC or the NZF.<sup>5</sup></p>
-          <p><strong>Croup</strong> (laryngotracheobronchitis): managed with a single dose of dexamethasone 0.15–0.6 mg/kg orally (max 10 mg). Nebulised adrenaline for moderate–severe cases awaiting definitive care. Most mild croup settles at home after dexamethasone without need for admission.<sup>7</sup></p>
-          <p><strong>Recurrent wheeze</strong> in children under 5 is not reliably classified as asthma — viral-induced wheeze is common and many children do not go on to have atopic asthma. A trial of salbutamol puffer with spacer is diagnostically and therapeutically useful. A clear response supports an asthma diagnosis; non-response should prompt reconsideration.</p>
-          <p class="paeds-source">6. Ralston SL, et al. <em>Clinical Practice Guideline: The Diagnosis, Management, and Prevention of Bronchiolitis.</em> Pediatrics. 2014;134(5):e1474–e1502.<br>7. HealthPathways NZ. Croup. Canterbury DHB; updated 2023.</p>
-        </div>
+---
 
-        <div class="paeds-block paeds-block--parent">
-          <span class="audience-tag audience-tag--parent">For whānau</span>
-          <p>Most coughs and colds in children are caused by viruses. Antibiotics don't help with viral illnesses, and your GP will only prescribe them when there's clear evidence of a bacterial infection like an ear infection or pneumonia.</p>
-          <p><strong>Bronchiolitis</strong> is a chest infection common in babies under 2, especially in winter. It usually causes a runny nose, then a chesty cough with fast or noisy breathing. Most babies can be managed at home with small, frequent feeds and keeping them upright — but you should go to hospital if your baby is breathing very fast, their skin is pulling in between the ribs when they breathe, they won't take fluids, or they seem unusually sleepy and hard to rouse.</p>
-          <p><strong>Croup</strong> causes a barking cough and sometimes a noisy, high-pitched sound when your child breathes in (stridor). It usually comes on at night. Sitting with your child in cool night air or a steamy bathroom may help. A single dose of oral steroid from your GP works well. Go to the emergency department immediately if your child is struggling hard to breathe, has blue lips, or is drooling and can't swallow.</p>
-        </div>
+## Development and Behaviour
 
-      </div>
-    </section>
+Developmental and behavioural concerns are among the most complex and time-intensive presentations in paediatric general practice. The GP often holds a longitudinal view that specialist services lack.
 
-    <!-- ── SECTION 5: Ear Infections ── -->
-    <section class="paeds-section">
-      <div class="paeds-section-head">
-        <span class="section-label">05 — Ear Health</span>
-        <h2>Otitis media and <em>glue ear.</em></h2>
-      </div>
+### Common presentations
 
-      <div class="paeds-audience-grid">
+- **Developmental surveillance** - the Well Child Tamariki Ora (WCTO) schedule provides structured contacts from birth to age 5. The GP visit is often the integration point for a fragmented picture across Plunket, childcare, and specialist services. Red flags at any contact include regression (loss of previously acquired skills - never benign without a clear cause), absent social smile by 8 weeks, no babble by 9 months, no words by 16 months, no two-word phrases by 24 months.[^7]
+- **Autism spectrum disorder (ASD)** - presentations range from classic early childhood signs (no joint attention by 12 months, no pointing by 14 months, no functional two-word phrases by 24 months) to late diagnosis in higher-functioning children whose difficulties emerge at school. Referral to paediatrics for formal assessment; in NZ this often involves long waitlists, and the GP has a role in supporting the family and coordinating early intervention in the interim.
+- **ADHD** - the most common neurodevelopmental condition presenting to NZ GPs. Diagnosis requires symptoms in at least two settings, onset before age 12, and significant functional impairment. The Vanderbilt or Conners scales aid assessment. Methylphenidate is first-line pharmacotherapy and is subsidised in NZ.
+- **Speech and language delay** - distinguish between isolated speech delay (pronunciation) and language delay (comprehension and expression). Refer early - speech-language therapy has the best evidence when started before age 3. Check hearing first; glue ear is a common and treatable cause of apparent language delay.
+- **School refusal** - usually driven by anxiety, separation difficulties, or bullying rather than truancy. A collaborative approach with school guidance and CAMHS is often needed.
 
-        <div class="paeds-block paeds-block--gp">
-          <span class="audience-tag audience-tag--gp">For clinicians</span>
-          <p>New Zealand has among the highest rates of ear disease in the developed world, particularly in Māori and Pacific children. Chronic suppurative otitis media (CSOM) — defined as a perforated eardrum with discharge lasting more than 2 weeks — affects around 4% of Māori and Pacific children compared with under 1% of New Zealand European children.<sup>8</sup> This disparity is a health equity issue, not simply a clinical one.</p>
-          <p><strong>Acute otitis media (AOM)</strong>: the NZ guideline recommends a "wait and see" approach with adequate analgesia for most children ≥2 years with mild-to-moderate AOM. Antibiotics (amoxicillin 40 mg/kg/day in 3 divided doses for 5 days) are indicated for children under 2 years, bilateral AOM, AOM with perforation, or AOM in children with significant comorbidities.<sup>9</sup></p>
-          <p><strong>Otitis media with effusion (OME, "glue ear")</strong>: watchful waiting for 3 months is appropriate for most children. Refer for audiological assessment and ENT review if the effusion persists beyond 3 months and is associated with hearing loss affecting development, behaviour, or schooling. Decongestants and antihistamines have no evidence of benefit.</p>
-          <p><strong>CSOM</strong>: topical ciprofloxacin ear drops are first-line; dry mopping to keep the ear dry is important. Systemic antibiotics are not routinely indicated unless there is evidence of systemic infection or mastoiditis. ENT referral for all persistent CSOM.</p>
-          <p class="paeds-source">8. Ministry of Health NZ. <em>Otitis Media Guidance for Primary Care.</em> Wellington: Ministry of Health; 2020.<br>9. BPAC NZ. <em>Otitis media in children — when to treat.</em> Best Practice Journal. 2022.</p>
-        </div>
+---
 
-        <div class="paeds-block paeds-block--parent">
-          <span class="audience-tag audience-tag--parent">For whānau</span>
-          <p>Ear infections are very common in young children. They often follow a cold and cause ear pain, sometimes with fever. Many ear infections clear up on their own without antibiotics — your GP will advise you based on your child's age and how they look.</p>
-          <p>If your child's ear is leaking discharge (pus), see your GP that day — this usually means the eardrum has perforated, which needs treatment with ear drops. Keep the ear dry: use a dry cotton ball as a plug when bathing, and keep your child out of swimming pools while it's discharging.</p>
-          <p><strong>Glue ear</strong> is when fluid builds up behind the eardrum without infection. It doesn't hurt, but it can muffle hearing and make it hard for your child to follow conversations — parents often notice this before teachers do. It's common in children aged 2–5 and usually resolves on its own. If it persists, your GP may refer your child for a hearing test.</p>
-          <p>If you're in a Māori or Pacific whānau, ear disease is something we see and manage a lot in New Zealand — please bring your child in even for mild hearing concerns. Early treatment protects language and learning.</p>
-        </div>
+## Gastrointestinal
 
-      </div>
-    </section>
+### Common presentations
 
-    <!-- ── SECTION 6: When to Refer ── -->
-    <section class="paeds-section paeds-section--referral">
-      <div class="paeds-section-head">
-        <span class="section-label">06 — Referral thresholds</span>
-        <h2>Knowing when to <em>escalate.</em></h2>
-      </div>
-      <div class="paeds-block paeds-block--gp paeds-block--full">
-        <span class="audience-tag audience-tag--gp">For clinicians</span>
-        <p>A non-exhaustive list of presentations warranting urgent or semi-urgent paediatric referral in NZ primary care:</p>
-        <ul class="paeds-list paeds-list--clinical">
-          <li><strong>Any infant under 3 months</strong> with fever ≥38°C — same-day secondary care</li>
-          <li><strong>Non-blanching rash</strong> with fever — 111 / emergency department</li>
-          <li><strong>Developmental regression</strong> — any loss of acquired skills, at any age</li>
-          <li><strong>Failure to thrive</strong> — weight consistently below the 0.4th centile, or crossing ≥2 centile lines downward, without explanation</li>
-          <li><strong>Suspected NAI</strong> (non-accidental injury) — follow local safeguarding pathway; do not delay</li>
-          <li><strong>Persistent wheeze unresponsive to salbutamol</strong> — reconsider the diagnosis (foreign body, vascular ring, tracheomalacia)</li>
-          <li><strong>CSOM with mastoid tenderness</strong>, facial palsy, or meningism — urgent ENT/ED</li>
-          <li><strong>Scrotal pain in boys</strong> — testicular torsion until proven otherwise; do not wait for USS</li>
-          <li><strong>Limp in a febrile child</strong> — septic arthritis / osteomyelitis until proven otherwise</li>
-          <li><strong>New-onset seizure</strong> (excluding simple febrile convulsion with full recovery) — same-day review</li>
-        </ul>
-        <p>HealthPathways Canterbury provides detailed local referral criteria and is the most up-to-date resource for NZ regional thresholds. Access via your DHB/Health NZ login.</p>
-      </div>
-    </section>
+- **Gastroenteritis and dehydration** - oral rehydration solution (ORS) remains the cornerstone of management for mild-to-moderate dehydration. Ondansetron (0.15 mg/kg, max 8 mg orally) reduces vomiting and hospitalisation in children with moderate gastroenteritis and is now widely used in NZ primary care, though it is not funded for outpatient use.[^8] Assess dehydration severity; children under 6 months dehydrate rapidly and have a lower threshold for secondary care.
+- **Constipation** - functional constipation is very common in childhood. The Bristol Stool Chart is useful for objective description. Macrogol (Movicol Paediatric or equivalent) is first-line and is well-tolerated; dietary advice alone is rarely sufficient once constipation is established.
+- **Abdominal pain** - functional recurrent abdominal pain is common in school-age children (5-12 years) and is associated with anxiety and psychosocial stressors. Investigation should be guided by red flags (nocturnal pain waking the child, weight loss, blood in stool, right iliac fossa tenderness, family history of IBD). Non-specific periumbilical pain in a well child without red flags does not require investigation.
+- **Mesenteric adenitis** - often the clinical diagnosis when a child presents with periumbilical pain, low-grade fever, and recent viral illness. Clinically indistinguishable from early appendicitis; observation and safety-netting are essential.
 
-    <!-- ── References ── -->
-    <section class="paeds-references">
-      <span class="section-label">References</span>
-      <ol class="reference-list">
-        <li>Ministry of Health NZ. <em>Well Child Tamariki Ora Programme Practitioner Handbook.</em> Wellington: Ministry of Health; 2021.</li>
-        <li>National Institute for Health and Care Excellence (NICE). <em>Fever in under 5s: assessment and initial management.</em> NICE guideline NG143. London: NICE; 2021.</li>
-        <li>National Institute for Health and Care Excellence (NICE). <em>Urinary tract infection in under 16s: diagnosis and management.</em> NICE guideline CG54. London: NICE; 2007, updated 2022.</li>
-        <li>Wong T, et al. Alternating antipyretics for fever management in children: a systematic review. <em>Paediatrics & Child Health.</em> 2013;18(1):25–30.</li>
-        <li>Immunisation Advisory Centre (IMAC). <em>New Zealand Immunisation Schedule.</em> Auckland: University of Auckland; 2025. Available from: https://www.immune.org.nz/</li>
-        <li>Ralston SL, et al. Clinical Practice Guideline: The Diagnosis, Management, and Prevention of Bronchiolitis. <em>Pediatrics.</em> 2014;134(5):e1474–e1502.</li>
-        <li>HealthPathways NZ. <em>Croup.</em> Canterbury: Health New Zealand; updated 2023.</li>
-        <li>Ministry of Health NZ. <em>Otitis Media Guidance for Primary Care.</em> Wellington: Ministry of Health; 2020.</li>
-        <li>BPAC NZ. Otitis media in children — when to treat. <em>Best Practice Journal.</em> 2022. Available from: https://bpac.org.nz/</li>
-      </ol>
-    </section>
+---
 
-  </div>
-</div>
+## Adolescent Health
+
+Adolescents present unique consultation challenges: confidentiality, Gillick competence, and conditions that span paediatrics, mental health, and adult medicine simultaneously.
+
+### Common presentations
+
+- **Adolescent mental health** - depression, anxiety, eating disorders, and self-harm peak in the teenage years. Brief validated screening tools (PHQ-A for depression, GAD-7 for anxiety) aid detection. Most NZ adolescents access mental health support via school-based services, youth health services, or CAMHS; the GP coordinates and holds the longitudinal picture.
+- **Contraception and sexual health** - under-16 year olds can consent to contraception under Gillick competence if they demonstrate understanding. Long-acting reversible contraception (LARC) is the most effective and is available via Family Planning and most NZ GP practices.
+- **Eating disorders** - most present first to GPs. Early identification and a non-stigmatising response are critical; outcomes are better with early intervention. For bulimia nervosa, GP-guided CBT (NICE-recommended) is a reasonable starting point. For anorexia nervosa with medical compromise, early paediatric referral is essential.
+- **Substance use** - alcohol and cannabis are the most common substances in NZ adolescents. CRAFFT screening (or equivalent) in adolescents with relevant presentations. Brief motivational interviewing can be done within a standard consult.
+
+---
+
+## Cross-cutting: When to escalate
+
+A non-exhaustive list of presentations warranting urgent or same-day paediatric referral:
+
+- Any infant under 3 months with fever 38°C or above
+- Non-blanching rash with fever - 111
+- Developmental regression (any age, any skill)
+- Failure to thrive - weight consistently below the 0.4th centile, or crossing two or more centile lines downward without explanation
+- Suspected non-accidental injury - follow local safeguarding pathway without delay
+- Scrotal pain in boys - testicular torsion until proven otherwise; do not wait for ultrasound
+- Limp in a febrile child - septic arthritis and osteomyelitis until proven otherwise
+- New-onset seizure other than simple febrile convulsion with full recovery - same-day review
+- Persistent wheeze unresponsive to salbutamol - consider foreign body, vascular ring, or tracheomalacia
+
+HealthPathways Canterbury provides detailed local referral thresholds and is the most current resource for NZ regional practice.
+
+---
+
+## Individual topic pages
+
+### Fever and Infection
+- [Fever Assessment in Children](/paediatrics/fever/)
+- [Febrile Convulsions](/paediatrics/febrile-convulsion/)
+- [Urinary Tract Infections in Children](/paediatrics/uti/)
+
+### Respiratory
+- [Bronchiolitis](/paediatrics/bronchiolitis/)
+- [Croup](/paediatrics/croup/)
+- [Childhood Asthma and Recurrent Wheeze](/paediatrics/childhood-asthma/)
+
+### Ear, Nose and Throat
+- [Acute Otitis Media](/paediatrics/otitis-media/)
+- [Glue Ear (Otitis Media with Effusion)](/paediatrics/glue-ear/)
+
+### Development and Behaviour
+- [Developmental Surveillance and Milestones](/paediatrics/developmental-surveillance/)
+- [ADHD in Children](/paediatrics/adhd/)
+
+### Gastrointestinal
+- [Gastroenteritis and Oral Rehydration](/paediatrics/gastroenteritis/)
+- [Constipation in Children](/paediatrics/constipation/)
+
+---
+
+[^1]: National Institute for Health and Care Excellence (NICE). Fever in under 5s: assessment and initial management. NICE guideline NG143. London: NICE; 2021.
+[^2]: Ralston SL, Lieberthal AS, Meissner HC, et al. Clinical practice guideline: the diagnosis, management, and prevention of bronchiolitis. Pediatrics. 2014;134(5):e1474-e1502.
+[^3]: HealthPathways NZ. Croup. Canterbury: Health New Zealand; updated 2023.
+[^4]: BPAC NZ. Community-acquired pneumonia in children. Best Practice Journal. 2020. Available from: https://bpac.org.nz/
+[^5]: Ministry of Health NZ. Otitis media guidance for primary care. Wellington: Ministry of Health; 2020.
+[^6]: BPAC NZ. Otitis media in children - when to treat. Best Practice Journal. 2022. Available from: https://bpac.org.nz/
+[^7]: Ministry of Health NZ. Well Child Tamariki Ora programme practitioner handbook. Wellington: Ministry of Health; 2021.
+[^8]: Freedman SB, Adler M, Seshadri R, et al. Oral ondansetron for gastroenteritis in a pediatric emergency department. N Engl J Med. 2006;354(16):1698-1705.

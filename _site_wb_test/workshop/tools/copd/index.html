@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COPD Medication Selector — Working Diagnosis</title>
+  <meta name="description" content="An internet workshop for general practice">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+  <header class="masthead">
+  <div class="wrap masthead-row">
+    <a href="/" class="brand">
+      <span class="brand-name">Working <em>Diagnosis</em>.</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      
+        <a href="/lifestyle/">Lifestyle</a>
+      
+        <a href="/musculoskeletal/">MSK</a>
+      
+        <a href="/paediatrics/">Paeds</a>
+      
+        <a href="/geriatrics/">Geriatrics</a>
+      
+        <a href="/gynaecology/">Gynae</a>
+      
+        <a href="/dermatology/">Dermatology</a>
+      
+        <a href="/mental-health/">Mental Health</a>
+      
+        <a href="/vaccines/">Vaccines</a>
+      
+        <a href="/travel/">Travel</a>
+      
+        <a href="/field-notes/">Field Notes</a>
+      
+        <a href="/handouts/">Handouts</a>
+      
+        <a href="/resources/">Resources</a>
+      
+    </nav>
+  </div>
+</header>
+
+  <div class="page-wrapper">
+    <main class="main-content">
+      <!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COPD Medication Selector — Working Diagnosis</title>
+  <meta name="description" content="NZ GP tool for COPD medication selection guided by BPAC and GOLD staging. Browse NZF-subsidised respiratory medicines.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Tokens ────────────────────────────────────── */
+    :root {
+      --paper:      #F5F1E8;
+      --paper-warm: #EDE7D8;
+      --ink:        #1A1F1C;
+      --ink-soft:   #3A4540;
+      --ink-mute:   #6B7A75;
+      --green:      #2F6B5C;
+      --green-deep: #1F4A3F;
+      --ochre:      #B8714F;
+      --rule:       #D9D1BD;
+      --alert:      #C84C3C;
+
+      --serif-display: 'Fraunces', Georgia, serif;
+      --serif-body:    'Newsreader', Georgia, serif;
+      --mono:          'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+
+    /* ─── Reset ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    /* ─── Base ──────────────────────────────────────── */
+    body {
+      font-family: var(--serif-body);
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--green-deep); text-decoration: none; }
+    a:hover { color: var(--green); }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ─── Masthead ──────────────────────────────────── */
+    .masthead {
+      border-bottom: 1px solid var(--rule);
+      padding: 22px 0 18px;
+      margin-bottom: 48px;
+    }
+    .masthead-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .brand {
+      font-family: var(--serif-display);
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .brand em { font-style: italic; color: var(--green); }
+    .brand a { color: inherit; }
+
+    /* ─── Tool Container ────────────────────────────── */
+    .tool-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .tool-header {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .tool-kicker {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ochre);
+      margin: 0 0 14px;
+    }
+
+    .tool-title {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      color: var(--ink);
+    }
+
+    .tool-dek {
+      font-size: 1.1rem;
+      color: var(--ink-soft);
+      margin: 0;
+      max-width: 680px;
+      line-height: 1.5;
+    }
+
+    /* ─── Layout ────────────────────────────────────── */
+    .copd-layout {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 820px) {
+      .copd-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    .copd-sidebar {
+      position: sticky;
+      top: 24px;
+    }
+
+    @media (max-width: 820px) {
+      .copd-sidebar { position: static; }
+    }
+
+    /* ─── Input Panel ───────────────────────────────── */
+    .input-panel {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 24px;
+    }
+
+    .input-panel h3 {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 18px;
+      margin: 0 0 20px;
+      color: var(--ink);
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    /* FIX: direct child label only — avoids contaminating radio-item labels */
+    .form-group > label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 8px;
+    }
+
+    /* FIX: select only — radios must NOT inherit width/padding from this rule */
+    .form-group select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      font-family: var(--serif-body);
+      font-size: 16px;
+      color: var(--ink);
+      background: white;
+    }
+
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 0 2px rgba(47, 107, 92, 0.1);
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .radio-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* FIX: radios keep natural browser sizing */
+    .radio-item input[type="radio"] {
+      width: auto;
+      margin: 0;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .radio-item label {
+      margin: 0;
+      font-family: var(--serif-body);
+      font-size: 16px;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    /* ─── Result Area ───────────────────────────────── */
+    .copd-main {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .result-card {
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 32px;
+      display: none;
+    }
+
+    .result-card.active {
+      display: block;
+      animation: slideIn 200ms ease-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .result-card h2 {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 28px;
+      margin: 0 0 8px;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .result-card .gold-group {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ochre);
+      margin: 0 0 24px;
+    }
+
+    .result-card h3 {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 20px;
+      margin: 28px 0 14px;
+      color: var(--green-deep);
+      letter-spacing: -0.005em;
+    }
+
+    .result-card p {
+      margin: 0 0 16px;
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .result-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .result-card li {
+      padding: 10px 0 10px 20px;
+      position: relative;
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .result-card li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    /* ─── Medicine Cards ────────────────────────────── */
+    .med-options {
+      margin: 16px 0 24px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .med-option {
+      padding: 16px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .med-option:last-child { border-bottom: none; }
+    .med-option:hover { background: rgba(47, 107, 92, 0.025); }
+
+    .med-info { flex: 1; }
+
+    .med-name {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 17px;
+      color: var(--ink);
+      margin: 0 0 3px;
+    }
+
+    .med-generic {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--ink-mute);
+      margin: 0 0 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .med-details {
+      font-size: 15px;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      margin: 0 0 8px;
+    }
+
+    .med-badge {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 3px;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .med-badge.subsidised {
+      background: rgba(47, 107, 92, 0.12);
+      color: var(--green-deep);
+    }
+
+    .med-badge.unsubsidised {
+      background: rgba(200, 76, 60, 0.1);
+      color: var(--alert);
+    }
+
+    .med-notes {
+      flex: 0 0 160px;
+    }
+
+    .med-notes p {
+      font-size: 14px;
+      color: var(--ink-mute);
+      line-height: 1.5;
+      margin: 0;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .med-option { flex-direction: column; align-items: flex-start; }
+      .med-notes { flex: 1 1 100%; }
+      .med-notes p { text-align: left; }
+    }
+
+    /* ─── Info / Warning / Cessation Boxes ─────────── */
+    .info-box {
+      background: rgba(47, 107, 92, 0.05);
+      border-left: 3px solid var(--green);
+      padding: 14px 16px;
+      margin: 16px 0;
+      border-radius: 2px;
+    }
+    .info-box p { margin: 0; font-size: 16px; color: var(--ink-soft); }
+    .info-box strong { color: var(--green-deep); }
+
+    .warning-box {
+      background: rgba(200, 76, 60, 0.05);
+      border-left: 3px solid var(--alert);
+      padding: 14px 16px;
+      margin: 16px 0;
+      border-radius: 2px;
+    }
+    .warning-box p { margin: 0; font-size: 16px; color: var(--ink-soft); }
+    .warning-box strong { color: var(--alert); }
+
+    .cessation-box {
+      background: rgba(184, 113, 79, 0.07);
+      border-left: 3px solid var(--ochre);
+      padding: 14px 16px;
+      margin: 20px 0 0;
+      border-radius: 2px;
+    }
+    .cessation-box p { margin: 0; font-size: 16px; color: var(--ink-soft); }
+    .cessation-box strong { color: var(--ochre); }
+
+    /* ─── Reference Note ────────────────────────────── */
+    .ref-note {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--ink-mute);
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ─── Footer ────────────────────────────────────── */
+    .site-footer {
+      margin-top: 64px;
+      padding: 40px 0;
+      border-top: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      color: var(--ink-mute);
+    }
+    .site-footer p { margin: 0 0 6px; }
+    .footer-meta { font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap masthead-row">
+      <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="tool-container">
+
+      <div class="tool-header">
+        <p class="tool-kicker">❍ Workshop / Respiratory</p>
+        <h1 class="tool-title">COPD Medication Selector</h1>
+        <p class="tool-dek">GOLD-staged inhaler therapy with NZF-subsidised medicine options. Enter patient profile to see current maintenance and rescue recommendations.</p>
+      </div>
+
+      <div class="copd-layout">
+
+        <!-- ─── Sidebar ──────────────────────────────── -->
+        <aside class="copd-sidebar">
+          <div class="input-panel">
+            <h3>Patient Profile</h3>
+
+            <div class="form-group">
+              <label for="status">Diagnosis Status</label>
+              <select id="status">
+                <option value="">— Select —</option>
+                <option value="new">New diagnosis</option>
+                <option value="established">Established COPD</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="smoke">Smoking Status</label>
+              <select id="smoke">
+                <option value="">— Select —</option>
+                <option value="current">Current smoker</option>
+                <option value="former">Former smoker</option>
+                <option value="never">Never smoked</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Exacerbation History</label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="exac-0" name="exacerbations" value="0" checked>
+                  <label for="exac-0">0–1 per year</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="exac-2plus" name="exacerbations" value="2plus">
+                  <label for="exac-2plus">≥2 per year</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Dyspnoea / Symptoms</label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="symp-mild" name="symptoms" value="mild" checked>
+                  <label for="symp-mild">Mild (mMRC 0–1)</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="symp-severe" name="symptoms" value="severe">
+                  <label for="symp-severe">Severe (mMRC ≥2)</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ─── Main Content ─────────────────────────── -->
+        <article class="copd-main" id="mainContent">
+          <!-- Populated by JavaScript -->
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
+      <p class="footer-meta">An internet workshop for general practice.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ─── State ──────────────────────────────────────────
+    let medicineDb = null;
+
+    // ─── Fetch NZF database ─────────────────────────────
+    // FIX: path corrected to /assets/ — Eleventy only passthrough-copies
+    // the assets/ folder. The original copd-selector-integrated.html used
+    // /data/nzf-respiratory-db.json which would 404 because _data/ is
+    // Eleventy's data-cascade folder and is NOT served as static files.
+    async function loadDatabase() {
+      try {
+        const res = await fetch('/assets/nzf-respiratory-db.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        medicineDb = await res.json();
+      } catch (err) {
+        console.warn('NZF database unavailable — showing generic guidance only.', err);
+        medicineDb = null;
+      }
+    }
+
+    // ─── Medicine card renderer ─────────────────────────
+    function renderMedCards(medicines) {
+      if (!medicines || medicines.length === 0) return '';
+      const rows = medicines.map(function(med) {
+        const badgeClass = med.subsidised ? 'subsidised' : 'unsubsidised';
+        const badgeText  = med.subsidised ? 'Funded' : 'Not funded';
+        return '<div class="med-option">' +
+          '<div class="med-info">' +
+            '<div class="med-name">' + (med.brandName || med.genericName) + '</div>' +
+            '<div class="med-generic">' + med.genericName + ' ' + med.strength + '</div>' +
+            '<div class="med-details">' + med.formulation + ' · ' + med.frequency + '</div>' +
+            '<span class="med-badge ' + badgeClass + '">' + badgeText + '</span>' +
+          '</div>' +
+          '<div class="med-notes"><p>' + med.notes + '</p></div>' +
+        '</div>';
+      });
+      return '<div class="med-options">' + rows.join('') + '</div>';
+    }
+
+    // ─── GOLD staging ───────────────────────────────────
+    function getGoldGroup(exacValue, sympValue) {
+      const lowExac = exacValue === '0';
+      const highSymp = sympValue === 'severe';
+      if  (lowExac && !highSymp) return 'A';
+      if  (lowExac &&  highSymp) return 'B';
+      if (!lowExac && !highSymp) return 'C';
+      return 'D';
+    }
+
+    // ─── Smoking cessation note ─────────────────────────
+    function cessationNote(smokeValue) {
+      if (smokeValue !== 'current') return '';
+      return '<div class="cessation-box"><p>' +
+        '<strong>❍ Active smoker:</strong> Smoking cessation is the single most effective ' +
+        'intervention in COPD — it slows FEV₁ decline and reduces exacerbation risk. ' +
+        'Offer brief advice every visit. Consider pharmacotherapy: varenicline (Champix), ' +
+        'bupropion (Zyban), or NRT (patches, gum, lozenges). Refer to a dedicated cessation service.' +
+        '</p></div>';
+    }
+
+    // ─── Medicine filter per GOLD group ─────────────────
+    // Returns only options appropriate for NZ primary care.
+    // Combination-only or specialist-restricted agents are excluded from GOLD A.
+    // Unfunded agents appear in GOLD D with unsubsidised badge (for completeness).
+    function getMeds(group) {
+      if (!medicineDb) return { main: [], rescue: [] };
+      var db = medicineDb.categories;
+      var saba = db.SABA.medicines.filter(function(m) { return m.id === 'salb-100'; });
+
+      if (group === 'A') {
+        // Subsidised LAMA monotherapy only.
+        // Exclude aclidinium (twice-daily, not funded for GP).
+        // Exclude umeclidinium (combination-only, not available standalone).
+        return {
+          main:   db.LAMA.medicines.filter(function(m) {
+            return m.subsidised && (m.id === 'tio-18' || m.id === 'gly-50');
+          }),
+          rescue: saba
+        };
+      }
+
+      if (group === 'B' || group === 'C') {
+        // Subsidised LABA/LAMA combinations only. Exclude duaklir (not funded).
+        return {
+          main:   db.LABA_LAMA.medicines.filter(function(m) { return m.subsidised; }),
+          rescue: saba
+        };
+      }
+
+      if (group === 'D') {
+        // Show all triple options — Trimbow is funded, Trelegy is not.
+        // Badge on each card communicates funding status clearly.
+        return { main: db.TRIPLE.medicines, resc
+    </main>
+
+    <aside class="sidebar-tools">
+      <div class="tools-aside" aria-label="GP Tools">
+  <p class="aside-kicker">Quick access</p>
+  <h2 class="aside-title">GP Tools</h2>
+
+  
+    <details class="tools-group">
+      <summary class="tools-group__header">Cardiovascular</summary>
+      <ul class="tools-list">
+        
+          <li>
+            <a href="/workshop/tools/cv-risk/" class="tool-link">
+              <span class="tool-name">Cardiovascular Risk Stratification</span>
+              <span class="tool-blurb">Framingham, SCORE2, and NZ cardiovascular risk assessment.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/cha2ds2-vasc/" class="tool-link">
+              <span class="tool-name">CHA2DS2-VASc</span>
+              <span class="tool-blurb">Stroke risk in atrial fibrillation and anticoagulation decision support.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/has-bled/" class="tool-link">
+              <span class="tool-name">HAS-BLED</span>
+              <span class="tool-blurb">Bleeding risk in patients on anticoagulation for AF.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/wells-criteria/" class="tool-link">
+              <span class="tool-name">Wells Criteria (DVT &amp; PE)</span>
+              <span class="tool-blurb">DVT and PE risk stratification with D-dimer guidance.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/6mwd/" class="tool-link">
+              <span class="tool-name">6 Minute Walk Distance Score</span>
+              <span class="tool-blurb">Predicted distance by age and sex; prognostic interpretation.</span>
+            </a>
+          </li>
+        
+      </ul>
+    </details>
+  
+    <details class="tools-group">
+      <summary class="tools-group__header">Paediatrics</summary>
+      <ul class="tools-list">
+        
+          <li>
+            <a href="/workshop/tools/paeds-dosage/" class="tool-link">
+              <span class="tool-name">Paediatric Dosage Calculator</span>
+              <span class="tool-blurb">Weight-based dosing for the everyday paediatric formulary.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/growth-charts/" class="tool-link">
+              <span class="tool-name">Paediatric Growth Charts</span>
+              <span class="tool-blurb">Plot weight, length, head circumference, BMI.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/milestones/" class="tool-link">
+              <span class="tool-name">Developmental Milestones</span>
+              <span class="tool-blurb">Quick-reference age-banded developmental checks.</span>
+            </a>
+          </li>
+        
+      </ul>
+    </details>
+  
+    <details class="tools-group">
+      <summary class="tools-group__header">Mental Health</summary>
+      <ul class="tools-list">
+        
+          <li>
+            <a href="/workshop/tools/substance-risk/" class="tool-link">
+              <span class="tool-name">Substance Risk Calculator</span>
+              <span class="tool-blurb">AUDIT, AUDIT-C, ASSIST and a few quick risk indices.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/antidepressant-weaning/" class="tool-link">
+              <span class="tool-name">Antidepressant Weaning</span>
+              <span class="tool-blurb">Tapering schedules and withdrawal risk by agent.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/psychotropic-selector/" class="tool-link">
+              <span class="tool-name">Psychotropic Selector</span>
+              <span class="tool-blurb">Side-effect profile and safety comparison by class and indication.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/benzo-conversion/" class="tool-link">
+              <span class="tool-name">Benzodiazepine Conversion</span>
+              <span class="tool-blurb">Diazepam-equivalent dose and tapering strategies.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/comm/" class="tool-link">
+              <span class="tool-name">COMM (Opioid Monitoring)</span>
+              <span class="tool-blurb">Current Opioid Misuse Measure for risk assessment.</span>
+            </a>
+          </li>
+        
+      </ul>
+    </details>
+  
+    <details class="tools-group">
+      <summary class="tools-group__header">Medications</summary>
+      <ul class="tools-list">
+        
+          <li>
+            <a href="/workshop/tools/opioid-converter/" class="tool-link">
+              <span class="tool-name">Opioid Converter</span>
+              <span class="tool-blurb">Morphine-equivalent dose conversion across opioid therapies.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/steroid-equivalent/" class="tool-link">
+              <span class="tool-name">Steroid Equivalent Calculator</span>
+              <span class="tool-blurb">Glucocorticoid potency and dose comparison (prednisolone equivalent).</span>
+            </a>
+          </li>
+        
+      </ul>
+    </details>
+  
+    <details class="tools-group">
+      <summary class="tools-group__header">Geriatrics</summary>
+      <ul class="tools-list">
+        
+          <li>
+            <a href="/workshop/tools/cognitive-scores/" class="tool-link">
+              <span class="tool-name">Cognitive Scores (mini-ACE, MMSE)</span>
+              <span class="tool-blurb">Mini-ACE, MMSE, education-adjusted and non-English variants.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/cirs-g/" class="tool-link">
+              <span class="tool-name">CIRS-G (Cumulative Illness Rating)</span>
+              <span class="tool-blurb">Comorbidity burden and risk stratification in older adults.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/dasi/" class="tool-link">
+              <span class="tool-name">DASI (Activity Status Index)</span>
+              <span class="tool-blurb">Functional capacity and perioperative risk estimation.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/geriatric-assessment/" class="tool-link">
+              <span class="tool-name">Geriatric Assessment Toolkit</span>
+              <span class="tool-blurb">FRAIL, Katz ADL, Lawton IADL, and Rockwood CFS for frailty and functional assessment.</span>
+            </a>
+          </li>
+        
+      </ul>
+    </details>
+  
+    <details class="tools-group">
+      <summary class="tools-group__header">General</summary>
+      <ul class="tools-list">
+        
+          <li>
+            <a href="/workshop/tools/copd/" class="tool-link">
+              <span class="tool-name">COPD Management</span>
+              <span class="tool-blurb">GOLD-staged inhaler therapy with NZF-subsidised medicine options.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/due-date/" class="tool-link">
+              <span class="tool-name">Due Date Estimator</span>
+              <span class="tool-blurb">Naegele&#39;s rule and gestational age by LMP or ultrasound.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/tools/cts-6/" class="tool-link">
+              <span class="tool-name">CTS-6 (Carpal Tunnel Score)</span>
+              <span class="tool-blurb">Kamath &amp; Stothard six-item weighted score for CTS probability.</span>
+            </a>
+          </li>
+        
+      </ul>
+    </details>
+  
+    <details class="tools-group">
+      <summary class="tools-group__header">Resources</summary>
+      <ul class="tools-list">
+        
+          <li>
+            <a href="/workshop/resources/" class="tool-link">
+              <span class="tool-name">Useful Resources</span>
+              <span class="tool-blurb">Curated links: NZF, BPAC, HealthPathways, UpToDate, guidelines.</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop/handouts/" class="tool-link">
+              <span class="tool-name">Patient Handouts</span>
+              <span class="tool-blurb">Printable patient education and shared decision-making resources.</span>
+            </a>
+          </li>
+        
+      </ul>
+    </details>
+  
+</div>
+
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+  <div class="wrap">
+    <p>
+      <strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026
+    </p>
+    <p class="footer-meta">
+      By a GP. Evidence-based. Content sourced against guidelines and primary evidence. Synthesised for maximum efficiency.
+    </p>
+    <p class="footer-meta">
+      An internet workshop for general practice.
+    </p>
+    <p class="footer-disclaimer">
+    </p>
+  </div>
+</footer>
+
+  <script src="/

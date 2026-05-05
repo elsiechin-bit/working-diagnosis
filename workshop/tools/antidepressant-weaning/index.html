@@ -19,16 +19,16 @@ eleventyExcludeFromCollections: true
     
     :root {
       --paper: #F5F1E8;
-      --warm: #EDE7D8;
-      --deep: #E4DBC4;
+      --paper-warm: #EDE7D8;
+      --paper-deep: #E4DBC4;
       --ink: #1A1F1C;
       --soft: #3A4540;
-      --mute: #6B7A75;
+      --ink-mute: #6B7A75;
       --green: #2F6B5C;
       --green-deep: #1F4A3F;
       --ochre: #B8714F;
       --rule: #D9D1BD;
-      
+
       --serif-display: "Fraunces", serif;
       --serif-body: "Newsreader", serif;
       --mono: "JetBrains Mono", monospace;
@@ -44,29 +44,14 @@ eleventyExcludeFromCollections: true
         repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.01) 2px, rgba(0,0,0,.01) 4px);
     }
     
-    .header {
-      border-bottom: 1px solid var(--rule);
-      padding: 2rem 1.5rem;
-      margin-bottom: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    
-    .header-brand {
-      font-family: var(--serif-display);
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-    
-    .header-nav {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--mute);
-    }
+    /* ─── Masthead ─────────────────────────────────── */
+    .masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+    .masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
+    .brand em { font-style: italic; color: var(--green); }
+    .primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+    .primary-nav a:hover { color: var(--green); }
     
     .wrap {
       max-width: 52rem;
@@ -88,7 +73,7 @@ eleventyExcludeFromCollections: true
       font-size: 0.75rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--mute);
+      color: var(--ink-mute);
       margin-bottom: 2rem;
       padding-bottom: 1.5rem;
       border-bottom: 1px solid var(--rule);
@@ -137,7 +122,7 @@ eleventyExcludeFromCollections: true
     
     .mode-btn:hover {
       border-color: var(--green);
-      background: var(--warm);
+      background: var(--paper-warm);
     }
     
     .mode-btn.active {
@@ -205,7 +190,7 @@ eleventyExcludeFromCollections: true
     
     .alert {
       padding: 1rem;
-      background: var(--warm);
+      background: var(--paper-warm);
       border-left: 3px solid var(--ochre);
       margin-bottom: 1.5rem;
       font-size: 0.95rem;
@@ -234,7 +219,7 @@ eleventyExcludeFromCollections: true
     }
     
     .schedule-table th {
-      background: var(--deep);
+      background: var(--paper-deep);
       padding: 0.75rem;
       text-align: left;
       font-weight: 600;
@@ -243,7 +228,7 @@ eleventyExcludeFromCollections: true
     
     .schedule-table td {
       padding: 0.75rem;
-      border-bottom: 1px solid var(--deep);
+      border-bottom: 1px solid var(--paper-deep);
     }
     
     .schedule-table tr:last-child td {
@@ -269,7 +254,7 @@ eleventyExcludeFromCollections: true
     }
     
     .info-box {
-      background: var(--warm);
+      background: var(--paper-warm);
       border: 1px solid var(--rule);
       padding: 1.25rem;
       margin-bottom: 1.5rem;
@@ -292,7 +277,7 @@ eleventyExcludeFromCollections: true
     }
     
     .moa {
-      background: var(--deep);
+      background: var(--paper-deep);
       border-left: 3px solid var(--green);
       padding: 1rem;
       margin-bottom: 1rem;
@@ -323,7 +308,7 @@ eleventyExcludeFromCollections: true
     }
     
     .toggle-moa {
-      background: var(--warm);
+      background: var(--paper-warm);
       border: 1px solid var(--rule);
       padding: 0.75rem;
       width: 100%;
@@ -336,7 +321,7 @@ eleventyExcludeFromCollections: true
     }
     
     .toggle-moa:hover {
-      background: var(--deep);
+      background: var(--paper-deep);
     }
     
     .moa-content {
@@ -365,7 +350,7 @@ eleventyExcludeFromCollections: true
       padding-top: 2rem;
       border-top: 1px solid var(--rule);
       font-size: 0.85rem;
-      color: var(--mute);
+      color: var(--ink-mute);
     }
     
     .ref-list {
@@ -382,13 +367,22 @@ eleventyExcludeFromCollections: true
     .ref-list li {
       margin-bottom: 0.5rem;
     }
+
+    /* ─── Footer ───────────────────────────────────── */
+    .site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
+    .site-footer p { margin: 0 0 6px; }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="header-brand">Working Diagnosis</div>
-    <div class="header-nav">Workshop / Tools</div>
+  <header class="masthead">
+    <div class="masthead-row">
+      <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/workshop/">Workshop</a>
+      </nav>
+    </div>
   </header>
 
   <main class="wrap">
@@ -609,6 +603,13 @@ eleventyExcludeFromCollections: true
 
   </main>
 
+  <footer class="site-footer">
+    <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+      <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
+      <p>An internet workshop for general practice.</p>
+    </div>
+  </footer>
+
   <script>
     // Drug data: half-life (hours), discontinuation risk, notes
     const drugData = {
@@ -694,7 +695,7 @@ eleventyExcludeFromCollections: true
       for (let i = 0; i < schedule.length; i++) {
         const s = schedule[i];
         const prev = i > 0 ? schedule[i - 1].dose : dose;
-        const change = i === 0 ? '—' : (s.dose === 0 ? 'Stop' : `−${Math.round((prev - s.dose) * 10) / 10}`);
+        const change = i === 0 ? ' - ' : (s.dose === 0 ? 'Stop' : `−${Math.round((prev - s.dose) * 10) / 10}`);
         tableHtml += `
           <tr>
             <td><span class="week-label">Week ${s.week}</span></td>
@@ -766,8 +767,8 @@ eleventyExcludeFromCollections: true
       let tableHtml = `
         <tr>
           <th>Week</th>
-          <th>${fromDrug} (stopping) — mg</th>
-          <th>${toDrug} (starting) — mg</th>
+          <th>${fromDrug} (stopping)  -  mg</th>
+          <th>${toDrug} (starting)  -  mg</th>
         </tr>
       `;
 

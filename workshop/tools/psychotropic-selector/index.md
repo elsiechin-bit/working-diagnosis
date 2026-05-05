@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Psychotropic Drug Selector — Working Diagnosis</title>
+  <title>Psychotropic Drug Selector  -  Working Diagnosis</title>
   <meta name="description" content="Interactive clinician reference: psychotropic drugs by indication, class, and patient factors. NZ-focused dosing, costs, interactions.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

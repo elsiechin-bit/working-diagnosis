@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Steroid Equivalence Calculator — Working Diagnosis</title>
+  <title>Steroid Equivalence Calculator  -  Working Diagnosis</title>
   <meta name="description" content="Glucocorticoid potency and prednisolone-equivalent dose conversion. NZF and BPAC guidance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +19,11 @@ eleventyExcludeFromCollections: true
 
     :root {
       --paper: #F5F1E8;
-      --warm: #EDE7D8;
-      --deep: #E4DBC4;
+      --paper-warm: #EDE7D8;
+      --paper-deep: #E4DBC4;
       --ink: #1A1F1C;
       --soft: #3A4540;
-      --mute: #6B7A75;
+      --ink-mute: #6B7A75;
       --green: #2F6B5C;
       --green-deep: #1F4A3F;
       --ochre: #B8714F;
@@ -42,16 +42,14 @@ eleventyExcludeFromCollections: true
       background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.01) 2px, rgba(0,0,0,.01) 4px);
     }
 
-    .header {
-      border-bottom: 1px solid var(--rule);
-      padding: 2rem 1.5rem;
-      margin-bottom: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .header-brand { font-family: var(--serif-display); font-size: 1.5rem; font-weight: 600; color: var(--ink); }
-    .header-nav { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mute); }
+    /* ─── Masthead ─────────────────────────────────── */
+    .masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+    .masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
+    .brand em { font-style: italic; color: var(--green); }
+    .primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+    .primary-nav a:hover { color: var(--green); }
 
     .wrap { max-width: 56rem; margin: 0 auto; padding: 0 1.5rem 3rem; }
 
@@ -59,7 +57,7 @@ eleventyExcludeFromCollections: true
 
     .tagline {
       font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--mute);
+      text-transform: uppercase; color: var(--ink-mute);
       margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule);
     }
 
@@ -71,7 +69,7 @@ eleventyExcludeFromCollections: true
     .kicker { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.5rem; }
 
     .alert {
-      padding: 1rem; background: var(--warm); border-left: 3px solid var(--ochre);
+      padding: 1rem; background: var(--paper-warm); border-left: 3px solid var(--ochre);
       margin-bottom: 1.5rem; font-size: 0.95rem;
     }
     .alert strong { color: var(--ochre); }
@@ -133,20 +131,20 @@ eleventyExcludeFromCollections: true
       gap: 1rem; margin-bottom: 2rem;
     }
     .conversion-card {
-      background: var(--warm); border: 1px solid var(--rule);
+      background: var(--paper-warm); border: 1px solid var(--rule);
       padding: 1.1rem; border-radius: 2px;
     }
     .conversion-card.reference { background: white; border: 2px solid var(--green); }
     .conversion-card.caution   { border-color: var(--ochre); }
-    .card-label { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mute); margin-bottom: 0.4rem; }
+    .card-label { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-mute); margin-bottom: 0.4rem; }
     .card-dose  { font-family: var(--mono); font-size: 1.9rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.15rem; line-height: 1; }
     .card-unit  { font-size: 0.85rem; color: var(--soft); margin-bottom: 0.5rem; }
-    .card-note  { font-size: 0.78rem; color: var(--mute); line-height: 1.4; }
+    .card-note  { font-size: 0.78rem; color: var(--ink-mute); line-height: 1.4; }
     .card-warn  { font-size: 0.72rem; color: var(--ochre); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 0.4rem; }
 
     /* Mineralocorticoid activity dots */
     .mineral-row { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; }
-    .mineral-label { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mute); }
+    .mineral-label { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-mute); }
     .mineral-dots span {
       display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 2px;
       background: var(--rule);
@@ -157,11 +155,11 @@ eleventyExcludeFromCollections: true
     .duration-pill {
       display: inline-block; font-family: var(--mono); font-size: 0.65rem;
       letter-spacing: 0.05em; text-transform: uppercase; padding: 0.15rem 0.45rem;
-      border: 1px solid var(--rule); color: var(--mute); margin-top: 0.3rem;
+      border: 1px solid var(--rule); color: var(--ink-mute); margin-top: 0.3rem;
     }
 
     /* Info box */
-    .info-box { background: var(--warm); border: 1px solid var(--rule); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .info-box { background: var(--paper-warm); border: 1px solid var(--rule); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 0.95rem; }
     .info-box p { margin-bottom: 0.75rem; }
     .info-box p:last-child { margin-bottom: 0; }
 
@@ -176,11 +174,11 @@ eleventyExcludeFromCollections: true
       background: var(--ink); border: 2px solid white; border-radius: 50%;
       transform: translateX(-50%); transition: left 0.3s ease;
     }
-    .threshold-labels { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--mute); }
+    .threshold-labels { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--ink-mute); }
 
     /* Moa / guidance section */
     .moa-section {
-      background: var(--deep); border-left: 3px solid var(--green);
+      background: var(--paper-deep); border-left: 3px solid var(--green);
       padding: 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6;
     }
     .moa-title { font-weight: 600; font-family: var(--serif-display); font-size: 1rem; color: var(--green-deep); margin-bottom: 0.5rem; }
@@ -191,19 +189,19 @@ eleventyExcludeFromCollections: true
     /* Table */
     .table-wrapper { overflow-x: auto; margin-bottom: 1.5rem; }
     table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-    table th { background: var(--deep); padding: 0.6rem 0.75rem; text-align: left; font-weight: 600; border-bottom: 1px solid var(--rule); font-family: var(--serif-body); }
-    table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--deep); vertical-align: top; }
+    table th { background: var(--paper-deep); padding: 0.6rem 0.75rem; text-align: left; font-weight: 600; border-bottom: 1px solid var(--rule); font-family: var(--serif-body); }
+    table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--paper-deep); vertical-align: top; }
     table tr:last-child td { border-bottom: none; }
     table tr.highlight-row td { background: rgba(47,107,92,0.06); }
     .mineral-cell { font-family: var(--mono); font-size: 0.78rem; }
 
     /* Toggle sections */
     .toggle-btn {
-      background: var(--warm); border: 1px solid var(--rule); padding: 0.75rem; width: 100%;
+      background: var(--paper-warm); border: 1px solid var(--rule); padding: 0.75rem; width: 100%;
       text-align: left; cursor: pointer; font-family: var(--serif-body); font-size: 0.95rem;
       transition: background 0.2s; color: var(--ink); margin-bottom: 0;
     }
-    .toggle-btn:hover { background: var(--deep); }
+    .toggle-btn:hover { background: var(--paper-deep); }
     .toggle-content { display: none; padding: 1rem 0; }
     .toggle-content.open { display: block; }
 
@@ -212,19 +210,28 @@ eleventyExcludeFromCollections: true
     .ref-list ol { margin-left: 1.5rem; line-height: 1.8; }
     .ref-list li { margin-bottom: 0.75rem; }
 
-    .footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); font-size: 0.85rem; color: var(--mute); }
+    .footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); font-size: 0.85rem; color: var(--ink-mute); }
 
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
     @media (max-width: 36rem) { .grid-2 { grid-template-columns: 1fr; } }
 
     .highlight { background: rgba(47,107,92,0.1); padding: 0 0.2rem; }
+
+    /* ─── Footer ───────────────────────────────────── */
+    .site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
+    .site-footer p { margin: 0 0 6px; }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="header-brand">Working Diagnosis</div>
-    <div class="header-nav">Workshop / Tools</div>
+  <header class="masthead">
+    <div class="masthead-row">
+      <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/workshop/">Workshop</a>
+      </nav>
+    </div>
   </header>
 
   <main class="wrap">
@@ -292,13 +299,13 @@ eleventyExcludeFromCollections: true
         <div class="equiv-hero" id="equiv-hero">
           <div>
             <div class="equiv-hero-label">Input dose</div>
-            <div class="equiv-hero-value" id="hero-input-dose">—</div>
-            <div class="equiv-hero-unit" id="hero-input-drug">—</div>
+            <div class="equiv-hero-value" id="hero-input-dose"> - </div>
+            <div class="equiv-hero-unit" id="hero-input-drug"> - </div>
           </div>
           <div class="equiv-hero-arrow">→</div>
           <div>
             <div class="equiv-hero-label">Prednisolone equivalent</div>
-            <div class="equiv-hero-value" id="hero-pred-dose">—</div>
+            <div class="equiv-hero-value" id="hero-pred-dose"> - </div>
             <div class="equiv-hero-unit">mg prednisolone / day</div>
           </div>
           <div id="hero-context" class="equiv-hero-context"></div>
@@ -327,7 +334,7 @@ eleventyExcludeFromCollections: true
         <div class="kicker">❍ Equivalent doses for other glucocorticoids</div>
         <h2>Equianalgesic Steroid Doses</h2>
         <p style="margin-bottom: 1.5rem; color: var(--soft); font-size: 0.95rem;">
-          These doses produce equivalent <strong>anti-inflammatory (glucocorticoid) effect</strong>. Mineralocorticoid activity, duration, and side-effect profile differ — see cards below. Fludrocortisone is excluded (primarily mineralocorticoid).
+          These doses produce equivalent <strong>anti-inflammatory (glucocorticoid) effect</strong>. Mineralocorticoid activity, duration, and side-effect profile differ  -  see cards below. Fludrocortisone is excluded (primarily mineralocorticoid).
         </p>
         <div class="conversion-grid" id="conversions-grid"></div>
       </div>
@@ -335,7 +342,7 @@ eleventyExcludeFromCollections: true
       <!-- MINERALOCORTICOID TABLE -->
       <div class="section">
         <div class="kicker">❍ Adrenal axis and receptor profile</div>
-        <h2>Steroid Properties — Your Input Drug</h2>
+        <h2>Steroid Properties  -  Your Input Drug</h2>
         <div id="drug-profile-box"></div>
       </div>
 
@@ -435,7 +442,7 @@ eleventyExcludeFromCollections: true
             </tr>
             <tr>
               <td><strong>Fludrocortisone</strong></td>
-              <td>—</td>
+              <td> - </td>
               <td>10× (GC)<br><em>but see note</em></td>
               <td class="mineral-cell">++++ very high</td>
               <td>Intermediate</td>
@@ -452,7 +459,7 @@ eleventyExcludeFromCollections: true
       <h2>HPA Axis Suppression &amp; Clinical Thresholds</h2>
 
       <div class="caution-box">
-        <strong>HPA suppression risk:</strong> Prednisolone ≥5 mg/day (or equivalent) for more than 3 weeks causes significant HPA suppression. Never stop abruptly after prolonged courses — taper and monitor for adrenal insufficiency.
+        <strong>HPA suppression risk:</strong> Prednisolone ≥5 mg/day (or equivalent) for more than 3 weeks causes significant HPA suppression. Never stop abruptly after prolonged courses  -  taper and monitor for adrenal insufficiency.
       </div>
 
       <button class="toggle-btn" onclick="toggleSection(this)">Physiologic dose thresholds and what they mean clinically</button>
@@ -491,7 +498,7 @@ eleventyExcludeFromCollections: true
           <p><strong>Short courses (&lt;3 weeks, any dose):</strong> Can usually stop abruptly unless high dose. No taper required.</p>
           <p><strong>Longer courses or uncertainty:</strong> Taper by 10–20% every 1–2 weeks. Slow the taper as you approach physiologic doses (≤5–7.5 mg prednisolone/day).</p>
           <p><strong>Near physiologic doses:</strong> Reduce by 1 mg prednisolone every 2–4 weeks. Some patients require 6–12+ months to wean off completely (especially polymyalgia rheumatica, adrenal insufficiency recovery).</p>
-          <p><strong>Monitoring during taper:</strong> Symptoms of adrenal insufficiency include fatigue, nausea, joint pain, hypotension, and dizziness — especially on dose reduction days. Consider morning cortisol testing when at ≤5 mg/day prednisolone equivalent.</p>
+          <p><strong>Monitoring during taper:</strong> Symptoms of adrenal insufficiency include fatigue, nausea, joint pain, hypotension, and dizziness  -  especially on dose reduction days. Consider morning cortisol testing when at ≤5 mg/day prednisolone equivalent.</p>
           <p><strong>Steroid-sparing agents:</strong> For diseases requiring long-term steroids, consider early introduction of DMARDs (methotrexate, azathioprine, hydroxychloroquine) to allow dose reduction. Discuss with specialist.</p>
         </div>
       </div>
@@ -501,7 +508,7 @@ eleventyExcludeFromCollections: true
         <div class="moa-section">
           <div class="moa-title">Side Effects to Anticipate</div>
           <p><strong>Osteoporosis (most preventable serious risk):</strong> For ≥7.5 mg prednisolone/day expected for ≥3 months: start calcium + vitamin D supplementation (calcium 1000–1500 mg/day, vitamin D 800–1000 IU/day) and consider bisphosphonate (alendronate first-line in NZ if eligible). DXA at baseline if prolonged course anticipated.<sup>4</sup></p>
-          <p><strong>Diabetes / hyperglycaemia:</strong> Screen fasting glucose at baseline; monitor especially with doses &gt;10 mg/day. Post-lunch glucose rise most prominent — check at 4–6 h post-dose. Adjust hypoglycaemic therapy accordingly.</p>
+          <p><strong>Diabetes / hyperglycaemia:</strong> Screen fasting glucose at baseline; monitor especially with doses &gt;10 mg/day. Post-lunch glucose rise most prominent  -  check at 4–6 h post-dose. Adjust hypoglycaemic therapy accordingly.</p>
           <p><strong>Cardiovascular:</strong> Hypertension, dyslipidaemia, and fluid retention occur with medium-to-high doses. Monitor BP and lipids; favour steroids with low mineralocorticoid activity (dexamethasone, methylprednisolone) where mineralocorticoid effects are undesirable.</p>
           <p><strong>Infection risk:</strong> Immunosuppression significant at &gt;15–20 mg prednisolone/day. Consider PCP prophylaxis (trimethoprim/sulfamethoxazole 80/400 mg 3× weekly) if anticipated prolonged high-dose course.</p>
           <p><strong>Gastric protection:</strong> Steroid alone does not significantly increase peptic ulcer risk, but combined with NSAIDs markedly increases risk. Add PPI if concurrent NSAID use or high GI risk.<sup>5</sup></p>
@@ -511,7 +518,7 @@ eleventyExcludeFromCollections: true
         </div>
       </div>
 
-      <button class="toggle-btn" onclick="toggleSection(this)">Which steroid to choose — NZ clinical context</button>
+      <button class="toggle-btn" onclick="toggleSection(this)">Which steroid to choose  -  NZ clinical context</button>
       <div class="toggle-content">
         <div class="moa-section">
           <div class="moa-title">Common Indications by Steroid Choice</div>
@@ -532,7 +539,7 @@ eleventyExcludeFromCollections: true
       <h2>References</h2>
       <div class="ref-list">
         <ol>
-          <li>New Zealand Formulary (NZF). Corticosteroids — equivalent anti-inflammatory doses. Wellington: NZF; 2024. Available from: https://nzf.org.nz [cited 2025].</li>
+          <li>New Zealand Formulary (NZF). Corticosteroids  -  equivalent anti-inflammatory doses. Wellington: NZF; 2024. Available from: https://nzf.org.nz [cited 2025].</li>
           <li>Griggs RC, Moxley RT, Mendell JR, et al. Prednisone in Duchenne dystrophy: a randomized, controlled trial defining the time course and dose response. Clinical Investigation in Duchenne Dystrophy Group. Arch Neurol. 1991;48(4):383–8.</li>
           <li>RECOVERY Collaborative Group. Dexamethasone in hospitalized patients with Covid-19. N Engl J Med. 2021;384(8):693–704.</li>
           <li>Compston J. Glucocorticoid-induced osteoporosis: an update. Curr Rheumatol Rep. 2020;22(1):7.</li>
@@ -550,6 +557,13 @@ eleventyExcludeFromCollections: true
 
   </main>
 
+  <footer class="site-footer">
+    <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+      <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
+      <p>An internet workshop for general practice.</p>
+    </div>
+  </footer>
+
   <script>
     const steroids = {
       hydrocortisone: {
@@ -560,7 +574,7 @@ eleventyExcludeFromCollections: true
         mineralLabel: 'Moderate (++)',
         duration: 'short',
         durationLabel: '8–12 h',
-        note: 'Identical to endogenous cortisol. Significant mineralocorticoid activity — expect sodium retention and potassium loss at higher doses.',
+        note: 'Identical to endogenous cortisol. Significant mineralocorticoid activity  -  expect sodium retention and potassium loss at higher doses.',
         availability: 'Oral tablets (10 mg, 20 mg); IV/IM injection. Funded NZ.',
         caution: false
       },
@@ -608,7 +622,7 @@ eleventyExcludeFromCollections: true
         mineralLabel: 'Trace (±)',
         duration: 'intermediate',
         durationLabel: '12–36 h',
-        note: 'Minimal mineralocorticoid activity — preferred when fluid retention is a concern. Available oral (Medrone) and IV/IM (Solu-Medrol, Depo-Medrol). IV pulse therapy: 500–1000 mg for MS relapse, severe lupus, vasculitis.',
+        note: 'Minimal mineralocorticoid activity  -  preferred when fluid retention is a concern. Available oral (Medrone) and IV/IM (Solu-Medrol, Depo-Medrol). IV pulse therapy: 500–1000 mg for MS relapse, severe lupus, vasculitis.',
         availability: 'Oral tablets; IV/IM injection. Funded IV/IM; oral funded restricted.',
         caution: false
       },
@@ -623,7 +637,7 @@ eleventyExcludeFromCollections: true
         note: 'No mineralocorticoid activity. Mainly used as IM depot (Kenacort-A 40 mg/mL) for intra-articular injection and systemic depot effect lasting 3–4 weeks. Not typically used as regular oral steroid.',
         availability: 'IM injection (Kenacort-A 10/40 mg/mL). Restricted funded.',
         caution: true,
-        cautionText: 'Depot IM/IA use — not standard oral'
+        cautionText: 'Depot IM/IA use  -  not standard oral'
       },
       deflazacort: {
         label: 'Deflazacort',
@@ -670,10 +684,10 @@ eleventyExcludeFromCollections: true
         mineralLabel: 'Very high (++++)',
         duration: 'intermediate',
         durationLabel: '12–24 h',
-        note: 'Primarily a mineralocorticoid — used for adrenal insufficiency (Addison\'s disease), salt-wasting congenital adrenal hyperplasia, and orthostatic hypotension. Usual dose 50–200 mcg/day. NOT used for glucocorticoid (anti-inflammatory) effect.',
+        note: 'Primarily a mineralocorticoid  -  used for adrenal insufficiency (Addison\'s disease), salt-wasting congenital adrenal hyperplasia, and orthostatic hypotension. Usual dose 50–200 mcg/day. NOT used for glucocorticoid (anti-inflammatory) effect.',
         availability: 'Oral tablets (0.1 mg). Funded NZ.',
         caution: true,
-        cautionText: 'Mineralocorticoid — not interchangeable'
+        cautionText: 'Mineralocorticoid  -  not interchangeable'
       }
     };
 
@@ -714,7 +728,7 @@ eleventyExcludeFromCollections: true
       const drug = steroids[steroidKey];
       let doseInMg = unit === 'mcg' ? doseRaw / 1000 : doseRaw;
 
-      // Special case: fludrocortisone — cannot convert to prednisolone equiv in standard way
+      // Special case: fludrocortisone  -  cannot convert to prednisolone equiv in standard way
       if (steroidKey === 'fludrocortisone') {
         alert('Fludrocortisone is primarily a mineralocorticoid and is not interchangeable with glucocorticoids for anti-inflammatory dosing. It is used for adrenal and mineralocorticoid replacement at 50–200 mcg/day. A prednisolone equivalence is not clinically applicable.');
         return;
@@ -733,7 +747,7 @@ eleventyExcludeFromCollections: true
       document.getElementById('dose-badge-container').innerHTML = `<div class="dose-badge ${ctx.badge}">${ctx.label}</div>`;
 
       document.getElementById('hero-context').textContent =
-        predRounded + ' mg prednisolone/day — ' + ctx.label.toLowerCase() + ' range.';
+        predRounded + ' mg prednisolone/day  -  ' + ctx.label.toLowerCase() + ' range.';
 
       // Threshold marker position (log-ish scale capped at 100mg)
       const pct = Math.min(ctx.pct + (predEquiv / ctx.max) * 10, 95);
@@ -741,7 +755,7 @@ eleventyExcludeFromCollections: true
 
       // Clinical context box
       document.getElementById('clinical-context-box').innerHTML = `
-        <h3>Clinical Context — ${predRounded} mg prednisolone equivalent/day</h3>
+        <h3>Clinical Context  -  ${predRounded} mg prednisolone equivalent/day</h3>
         <p>${ctx.text}</p>
         <p><strong>HPA suppression:</strong> ${predEquiv >= 5 ? 'Likely if course &gt;3 weeks. Apply sick day rules. Taper before stopping.' : 'Low risk with short courses. Taper recommended if prolonged use (&gt;3 weeks).'}</p>
         <p><strong>Bone protection:</strong> ${predEquiv >= 7.5 ? 'Recommend calcium, vitamin D, and consider bisphosphonate (alendronate) if course expected &gt;3 months (see BPAC NZ guidance).' : 'Consider if course will exceed 3 months.'}</p>

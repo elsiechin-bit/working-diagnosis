@@ -1,21 +1,12 @@
 ---
 title: Social Connection
-description: Social isolation and loneliness in general practice — the health effects, who is at risk in New Zealand, and practical approaches to social prescribing.
+description: Social isolation and loneliness in general practice  -  the health effects, who is at risk in New Zealand, and practical approaches to social prescribing.
 layout: topic.njk
 pillar: Lifestyle
 ---
 
-<div class="topic">
-  <div class="topic-header">
-    <p class="pillar-label">Lifestyle Medicine</p>
-    <h1>Social <em>connection</em>.</h1>
-    <p class="topic-dek">Loneliness carries a mortality risk comparable to smoking fifteen cigarettes a day. It is also invisible in most health assessments.</p>
-  </div>
-
-  <div class="topic-body">
-
-    <p>
-      Social isolation and loneliness are not the same thing, though they frequently co-occur. Social isolation is an objective state — few social contacts and limited participation in community life. Loneliness is a subjective experience — the distressing feeling that one's social needs are not being met. Either can exist without the other: a person can feel profoundly lonely in a crowded household, and someone who lives alone and rarely goes out may feel neither isolated nor lonely. Both, however, carry significant health consequences and both are common in New Zealand primary care populations.
+<p>
+      Social isolation and loneliness are not the same thing, though they frequently co-occur. Social isolation is an objective state  -  few social contacts and limited participation in community life. Loneliness is a subjective experience  -  the distressing feeling that one's social needs are not being met. Either can exist without the other: a person can feel profoundly lonely in a crowded household, and someone who lives alone and rarely goes out may feel neither isolated nor lonely. Both, however, carry significant health consequences and both are common in New Zealand primary care populations.
     </p>
 
     <p>
@@ -23,19 +14,19 @@ pillar: Lifestyle
     </p>
 
     <p>
-      Who is most at risk in New Zealand? Older adults living alone (particularly men, who typically have smaller social networks than women and whose networks often contract sharply on retirement or bereavement), people in the first year after a significant loss (bereavement, relationship breakdown, loss of employment), migrants and refugees who have not yet built local connections, disabled people with limited community access, and people in rural and provincial communities where services are sparse and transport is limited. Māori and Pacific peoples report higher rates of social connection through whānau and community — but this can mask significant isolation when these networks are disrupted by migration, urbanisation, or family breakdown.
+      Who is most at risk in New Zealand? Older adults living alone (particularly men, who typically have smaller social networks than women and whose networks often contract sharply on retirement or bereavement), people in the first year after a significant loss (bereavement, relationship breakdown, loss of employment), migrants and refugees who have not yet built local connections, disabled people with limited community access, and people in rural and provincial communities where services are sparse and transport is limited. Māori and Pacific peoples report higher rates of social connection through whānau and community  -  but this can mask significant isolation when these networks are disrupted by migration, urbanisation, or family breakdown.
     </p>
 
     <p>
-      Asking about social connection in a GP consultation is not intrusive — most patients welcome the question. Simple screens like "How often do you feel lonely?" or "Is there someone you can talk to if you're having a difficult time?" open a conversation that most people have been waiting for. The three-item UCLA Loneliness Scale is a validated brief instrument, though a single direct question performs reasonably well as a screen. Document the finding — it is clinically relevant information with the same standing as blood pressure or sleep quality.
+      Asking about social connection in a GP consultation is not intrusive  -  most patients welcome the question. Simple screens like "How often do you feel lonely?" or "Is there someone you can talk to if you're having a difficult time?" open a conversation that most people have been waiting for. The three-item UCLA Loneliness Scale is a validated brief instrument, though a single direct question performs reasonably well as a screen. Document the finding  -  it is clinically relevant information with the same standing as blood pressure or sleep quality.
     </p>
 
     <p>
-      Social prescribing — the structured referral of patients to community, social, and creative activities as part of their healthcare — has growing evidence and is increasingly available in New Zealand through link worker and community connector services in some PHOs and localities. Practical options vary significantly by geography but may include: community exercise groups, Men's Sheds, local libraries and book clubs, Age Concern visiting services, volunteer roles, faith communities, befriending programmes, and peer support groups for specific conditions. The Green Prescription (GRASP) programme through Sport NZ can also serve a social as well as physical function when group-based activities are chosen.
+      Social prescribing  -  the structured referral of patients to community, social, and creative activities as part of their healthcare  -  has growing evidence and is increasingly available in New Zealand through link worker and community connector services in some PHOs and localities. Practical options vary significantly by geography but may include: community exercise groups, Men's Sheds, local libraries and book clubs, Age Concern visiting services, volunteer roles, faith communities, befriending programmes, and peer support groups for specific conditions. The Green Prescription (GRASP) programme through Sport NZ can also serve a social as well as physical function when group-based activities are chosen.
     </p>
 
     <p>
-      The consultation can itself be part of the intervention. For patients who present frequently without a clear biomedical driver, acknowledging the social dimension directly — "I notice you come in quite often, and I wonder if part of that is that you don't have many people to talk to" — opens a different kind of conversation. It is not a deflection from clinical care. It is clinical care.
+      The consultation can itself be part of the intervention. For patients who present frequently without a clear biomedical driver, acknowledging the social dimension directly  -  "I notice you come in quite often, and I wonder if part of that is that you don't have many people to talk to"  -  opens a different kind of conversation. It is not a deflection from clinical care. It is clinical care.
     </p>
 
     <div class="topic-refs">
@@ -47,6 +38,3 @@ pillar: Lifestyle
 3. Puntaric E, Petric D, Curkovic M, et al. Social prescribing: evidence and recommendations. *Psychiatr Danub.* 2023;35(Suppl 2):365–370.
 
     </div>
-
-  </div>
-</div>
