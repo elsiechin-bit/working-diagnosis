@@ -23,6 +23,9 @@ pillar: Mental Health
 
 <p>In NZ, secondary mental health services hold ongoing care for most patients with psychosis and bipolar I. The GP role is monitoring metabolic effects of antipsychotics (weight, glucose, lipids, prolactin where indicated), medication adherence, and physical health -- a genuinely important function that is often under-resourced. Clozapine monitoring in particular carries specific requirements; ensure the patient is enrolled in the appropriate registry.</p>
 
+<p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.25rem;">&#10022; Patient resource</p>
+<p><a href="/mental-health/psychosis-bipolar/patient-handout.html">Patient handout: Psychosis and bipolar disorder &#8212; what to know &#8594;</a></p>
+
 <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
 
 <p style="font-size: 0.8rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em; line-height: 1.8;">

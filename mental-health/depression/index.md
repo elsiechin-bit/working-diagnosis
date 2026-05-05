@@ -19,6 +19,9 @@ pillar: Mental Health
 
 <p>Treatment-resistant depression (failure of two adequate antidepressant trials) should prompt specialist liaison. In NZ, psychiatry waitlists are long -- document clearly when you have reached this threshold so the referral can be appropriately triaged.</p>
 
+<p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.25rem;">❍ Patient resource</p>
+<p><a href="/handouts/depression/">Patient handout: Depression — what it is and what actually helps →</a></p>
+
 <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
 
 <p style="font-size: 0.8rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em; line-height: 1.8;">

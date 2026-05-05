@@ -64,6 +64,7 @@ permalink: /gynaecology/cervical-screening/
   </ul>
   <p class="aside-title" style="margin-top:1.25rem;">Patient information</p>
   <ul class="aside-links">
+    <li><a href="/gynaecology/cervical-screening/patient-handout.html">Cervical screening — patient handout</a></li>
     <li><a href="https://www.tewhatuora.govt.nz" target="_blank" rel="noopener">Te Whatu Ora: Cervical screening for patients</a></li>
     <li><a href="https://www.health.govt.nz/your-health/pregnancy-and-kids/immunisation" target="_blank" rel="noopener">MoH: HPV immunisation programme</a></li>
   </ul>

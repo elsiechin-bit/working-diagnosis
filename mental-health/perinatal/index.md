@@ -21,6 +21,9 @@ pillar: Mental Health
 
 <p>Postpartum psychosis is a psychiatric emergency: rapid onset within days of delivery, confusion, emotional lability, perceptual disturbance, and behaviour that is out of character. It requires same-day secondary care referral without exception. Maternal suicide is a real risk in the perinatal period and is underestimated by clinicians -- do not let the context of new motherhood lower your threshold for direct enquiry.</p>
 
+<p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.25rem;">&#10022; Patient resource</p>
+<p><a href="/mental-health/perinatal/patient-handout.html">Patient handout: Mental health in pregnancy and after birth &#8594;</a></p>
+
 <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
 
 <p style="font-size: 0.8rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em; line-height: 1.8;">

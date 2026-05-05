@@ -252,6 +252,11 @@ description: The New Zealand immunisation schedule, travel vaccines, and consult
 
     <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
 
+    <p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.25rem;">❍ Patient resource</p>
+    <p><a href="/vaccines/patient-handout.html">Patient handout: How vaccines work and the NZ immunisation schedule →</a></p>
+
+    <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
+
     <h2 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 1.25rem;">Useful resources</h2>
 
     <ul style="padding-left: 1.25rem; color: var(--ink-soft); line-height: 2;">

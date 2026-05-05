@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perinatal Mental Health — Working Diagnosis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F5F1E8; --warm: #EDE7D8; --deep: #E4DBC4;
+      --ink: #1A1F1C; --ink-soft: #3A4540; --ink-mute: #6B7A75;
+      --green: #2F6B5C; --green-deep: #1F4A3F;
+      --ochre: #B8714F; --rule: #D9D1BD;
+      --serif-display: 'Fraunces', serif;
+      --serif-body: 'Newsreader', serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--serif-body); font-size: 1rem; line-height: 1.7; }
+    .masthead { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 1px solid var(--rule); background: var(--paper); }
+    .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+    .masthead-crumb { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
+    .hero { padding: 3rem 2rem 2rem; max-width: 720px; margin: 0 auto; }
+    .kicker { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.75rem; }
+    .hero h1 { font-family: var(--serif-display); font-weight: 300; font-size: 2.5rem; line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 1rem; }
+    .hero h1 em { font-style: italic; color: var(--green); }
+    .hero-lead { color: var(--ink-soft); font-size: 1.1rem; line-height: 1.6; max-width: 600px; }
+    .print-bar { max-width: 720px; margin: 0 auto; padding: 0 2rem 1rem; }
+    .print-btn { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; background: none; border: 1px solid var(--rule); color: var(--ink-mute); padding: 0.4rem 1rem; cursor: pointer; border-radius: 3px; }
+    .print-btn:hover { border-color: var(--ink-mute); color: var(--ink); }
+    .page-body { max-width: 720px; margin: 0 auto; padding: 0 2rem 3rem; }
+    .glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; margin-bottom: 2.5rem; }
+    .glance-item { background: var(--warm); padding: 1.25rem 1rem; }
+    .glance-num { font-family: var(--serif-display); font-weight: 600; font-size: 2rem; color: var(--green-deep); line-height: 1; margin-bottom: 0.3rem; }
+    .glance-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-mute); line-height: 1.4; }
+    .acc-item { border: 1px solid var(--rule); border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+    .acc-head { width: 100%; background: var(--warm); border: none; padding: 1rem 1.25rem; text-align: left; font-family: var(--serif-display); font-weight: 600; font-size: 1rem; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .acc-head::after { content: '+'; font-family: var(--mono); font-size: 1.2rem; color: var(--ink-mute); }
+    .acc-item.open .acc-head::after { content: '−'; }
+    .acc-body { display: none; padding: 1.25rem; background: var(--paper); color: var(--ink-soft); line-height: 1.75; }
+    .acc-body p { margin-bottom: 0.75rem; }
+    .acc-body p:last-child { margin-bottom: 0; }
+    .acc-body ul, .acc-body ol { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    .acc-body li { margin-bottom: 0.4rem; }
+    .acc-item.open .acc-body { display: block; }
+    .alert-box { background: var(--deep); border-left: 4px solid var(--ochre); border-radius: 0 6px 6px 0; padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
+    .alert-title { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.5rem; }
+    .alert-box p, .alert-box li { color: var(--ink-soft); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.4rem; }
+    .alert-box ul { padding-left: 1.25rem; }
+    .alert-box strong { color: var(--ink); }
+    .resources { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+    .resources h3 { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.75rem; }
+    .resources ul { list-style: none; padding: 0; }
+    .resources li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.9rem; color: var(--ink-soft); }
+    .resources li:last-child { border-bottom: none; }
+    .resources a { color: var(--green); text-decoration: none; }
+    .refs-section { max-width: 720px; margin: 0 auto; padding: 0 2rem 3rem; }
+    .refs-toggle { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; background: none; border: none; color: var(--ink-mute); cursor: pointer; padding: 0; }
+    #refs { display: none; margin-top: 1rem; font-size: 0.78rem; color: var(--ink-mute); line-height: 1.8; }
+    #refs.on { display: block; }
+    #refs p { margin-bottom: 0.4rem; }
+    .page-footer { max-width: 720px; margin: 0 auto; padding: 1.5rem 2rem; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-mute); }
+    @media print {
+      .masthead-crumb, .print-bar, .refs-section, .page-footer { display: none; }
+      .acc-body { display: block !important; padding: .4rem 0; }
+      .acc-head { background: none !important; font-size: 1rem; padding: .5rem 0; border-bottom: 1px solid #ccc; border-radius: 0; }
+      .acc-item { border: none; margin-bottom: .5rem; border-radius: 0; }
+      body { font-size: .85rem; }
+      .alert-box { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="masthead">
+  <a href="#" class="brand">Working Diagnosis</a>
+  <div class="masthead-crumb">Mental Health</div>
+</div>
+
+<div class="hero">
+  <div class="kicker">O Your mental health matters too</div>
+  <h1>Mental health in pregnancy and <em>after birth</em></h1>
+  <p class="hero-lead">One in five mothers and one in ten partners experience depression or anxiety during pregnancy or in the first year after birth. This is not your fault. It is a common, recognised medical condition, and effective help is available.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+
+  <div class="glance">
+    <div class="glance-item">
+      <div class="glance-num">1 in 5</div>
+      <div class="glance-label">new mothers affected</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-num">1 in 10</div>
+      <div class="glance-label">partners affected</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-num">Leading</div>
+      <div class="glance-label">indirect cause of maternal mortality</div>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <button class="acc-head">What does perinatal depression and anxiety feel like?</button>
+    <div class="acc-body">
+      <p>Perinatal depression and anxiety are not the same as the "baby blues." The baby blues are common (affecting up to 80% of new mothers), appear in the first few days after birth, and settle within two weeks without treatment. Perinatal depression and anxiety are different: they persist, they interfere with daily functioning, and they are not simply a response to tiredness or life change.</p>
+      <p><strong>Symptoms of perinatal depression include:</strong></p>
+      <ul>
+        <li>Persistent low mood or feeling empty</li>
+        <li>Loss of interest in the baby or in things you used to enjoy</li>
+        <li>Crying frequently</li>
+        <li>Feeling like you are not a good parent or that your baby would be better off without you</li>
+        <li>Difficulty sleeping even when you have the chance</li>
+        <li>Withdrawing from friends and family</li>
+        <li>Feeling hopeless about the future</li>
+      </ul>
+      <p><strong>Perinatal anxiety includes:</strong></p>
+      <ul>
+        <li>Persistent worry that feels uncontrollable</li>
+        <li>Physical symptoms such as racing heart, difficulty breathing, or nausea</li>
+        <li>Panic attacks</li>
+        <li>Fear of being alone with the baby</li>
+        <li>Intrusive thoughts about harm coming to the baby (these thoughts are distressing and do not mean you will act on them)</li>
+      </ul>
+      <p>You do not have to be feeling completely broken to ask for help. If something feels wrong, it is worth raising it.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <button class="acc-head">The EPDS — what it is and why your midwife or GP might use it</button>
+    <div class="acc-body">
+      <p>The Edinburgh Postnatal Depression Scale (EPDS) is a short questionnaire your GP, midwife, or Well Child nurse may offer you during pregnancy or after birth. It asks about your mood and feelings over the past week. It is not a diagnostic test — it is a structured way of starting a conversation. A higher score means your GP will want to talk with you further; it does not automatically mean you have depression. Completing it honestly is more useful than answering in a way you think is expected. Partners may be offered this or a similar questionnaire too.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <button class="acc-head">Treatment — what your options are</button>
+    <div class="acc-body">
+      <p>Psychological therapies (talking therapies) are the first choice for mild to moderate perinatal depression and anxiety. CBT and interpersonal therapy are effective and can be accessed in NZ through Primary Mental Health funding and some DHB perinatal services.</p>
+      <p>Medication is sometimes the right choice, particularly for moderate to severe illness, or for people with pre-existing mental health conditions. The decision about medication in pregnancy or while breastfeeding is one to make with your GP or specialist. What is important to know: untreated severe depression in pregnancy also carries risks — to the mother's health, the pregnancy, and the developing baby. The goal is to find the safest approach for your specific situation, not to avoid all medication categorically.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <button class="acc-head">Postpartum psychosis — recognise this emergency</button>
+    <div class="acc-body">
+      <p>Postpartum psychosis is rare (affecting approximately 1 in 1,000 new mothers) but is a psychiatric emergency. It typically develops very rapidly — within hours to days of giving birth.</p>
+      <p><strong>Symptoms include:</strong></p>
+      <ul>
+        <li>Confusion or disorientation</li>
+        <li>Severe mood swings (agitation or elation alternating with deep depression)</li>
+        <li>Not needing sleep or being unable to sleep</li>
+        <li>Hearing or seeing things others cannot</li>
+        <li>Holding beliefs that seem bizarre or out of character</li>
+        <li>Behaviour that is significantly out of character</li>
+      </ul>
+      <p>This is not the same as postnatal depression. It requires same-day assessment by a mental health team. If in doubt, go to the emergency department.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <button class="acc-head">Partners matter too</button>
+    <div class="acc-body">
+      <p>Partners (fathers, non-birthing parents) can experience perinatal depression and anxiety too — affecting around 10% of partners. It is often missed because partners do not attend routine postnatal checks, and because the focus is understandably on the person who gave birth.</p>
+      <p><strong>Symptoms may include:</strong></p>
+      <ul>
+        <li>Withdrawal</li>
+        <li>Irritability</li>
+        <li>Feeling disconnected from the baby or their partner</li>
+        <li>Increased alcohol use</li>
+        <li>Difficulty at work</li>
+      </ul>
+      <p>If you are a partner and recognising this in yourself, your GP is the right starting point. If your partner has perinatal mental health difficulties, looking after your own wellbeing is not selfish — it makes you more able to support them.</p>
+    </div>
+  </div>
+
+  <div class="alert-box">
+    <div class="alert-title">Postpartum psychosis is a psychiatric emergency</div>
+    <p>If in the first weeks after birth you notice:</p>
+    <ul>
+      <li>rapid onset of confusion or disorientation</li>
+      <li>talking or behaving in a way that is very out of character</li>
+      <li>not sleeping for days</li>
+      <li>hearing or seeing things others cannot</li>
+    </ul>
+    <p>Call your midwife or GP immediately, or go to the emergency department. Do not wait to see if it settles. This is treatable but requires urgent assessment.</p>
+  </div>
+
+  <div class="resources">
+    <h3>Where to get support</h3>
+    <ul>
+      <li><strong>Perinatal Anxiety and Depression Aotearoa (PADA):</strong> <a href="https://pada.org.nz">pada.org.nz</a> — NZ-specific support and resources</li>
+      <li><strong>1737</strong> — free call or text, 24/7</li>
+      <li><strong>Plunket:</strong> 0800 933 922 — Well Child support and advice for new parents</li>
+      <li><strong>Healthline:</strong> 0800 611 116</li>
+      <li><strong>Post and Antenatal Depression Association (PANDA):</strong> <a href="https://panda.org.au">panda.org.au</a> — Australian, relevant for NZ residents</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">Show references</button>
+  <div id="refs">
+    <p>1. Bauer A, Parsonage M, Knapp M, Iemmi V, Adelaja B. Costs of perinatal mental health problems. London: Centre for Mental Health; 2014.</p>
+    <p>2. MBRRACE-UK. Saving lives, improving mothers' care: lessons learned to inform maternity care from the UK and Ireland Confidential Enquiries into Maternal Deaths and Morbidity 2018-20. Oxford: National Perinatal Epidemiology Unit; 2022.</p>
+    <p>3. New Zealand College of Midwives. Perinatal mental health screening guidance. Christchurch: NZCOM; 2021.</p>
+    <p>4. Wisner KL, Sit DK, McShea MC, et al. Onset timing, thoughts of self-harm, and diagnoses in postpartum women with screen-positive depression findings. JAMA Psychiatry. 2013;70(5):490-8.</p>
+    <p>5. Paulson JF, Bazemore SD. Prenatal and postpartum depression in fathers and its association with maternal depression. JAMA. 2010;303(19):1961-9.</p>
+  </div>
+</div>
+
+<div class="page-footer">
+  Working Diagnosis patient handout. Last reviewed: May 2026. Always consult your GP or midwife for clinical advice.
+</div>
+
+<script>
+  document.querySelectorAll('.acc-head').forEach(h=>{
+    h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+  });
+  function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+
+</body>
+</html>

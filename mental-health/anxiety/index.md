@@ -19,6 +19,9 @@ pillar: Mental Health
 
 <p>Health anxiety (illness anxiety disorder, formerly hypochondriasis) is a high-consultation, high-investigation condition that is frequently managed by reassurance -- which paradoxically reinforces the cycle. Brief CBT-based approaches, including an explanation of the reassurance trap, are more effective than repeated investigation or dismissal. Validate the distress while redirecting attention from symptom monitoring.</p>
 
+<p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.25rem;">&#10022; Patient resource</p>
+<p><a href="/mental-health/anxiety/patient-handout.html">Patient handout: Anxiety &#8212; when worry won&#8217;t switch off &#8594;</a></p>
+
 <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
 
 <p style="font-size: 0.8rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em; line-height: 1.8;">

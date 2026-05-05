@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low Back Pain — Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+    .hero{max-width:680px;margin:0 auto;padding:2.5rem 2rem 1.75rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+    .print-bar{max-width:680px;margin:0 auto;padding:.75rem 2rem;display:flex;justify-content:flex-end}
+    .print-btn{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--rule);color:var(--ink-mute);padding:.45rem 1rem;border-radius:50px;cursor:pointer;transition:all .15s}
+    .print-btn:hover{color:var(--green);border-color:var(--green)}
+    .glance{background:var(--warm);border-radius:14px;padding:1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
+    .glance-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
+    .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+    .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
+    .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
+    .acc-item.open .chevron{transform:rotate(90deg)}
+    .acc-body{display:none;padding:1.25rem 1.4rem 1.5rem;background:var(--paper);border-top:1px solid var(--rule);font-size:.95rem;color:var(--ink-soft);line-height:1.72}
+    .acc-item.open .acc-body{display:block}
+    .acc-body p+p{margin-top:.75rem}
+    .acc-body ul,.acc-body ol{padding-left:1.25rem;margin:.5rem 0}
+    .acc-body li{margin-bottom:.3rem}
+    .data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.9rem}
+    .data-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.7rem 1rem;background:var(--deep);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+    .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:nth-child(even) td{background:var(--warm)}
+    .alert-box{background:#FDF6EE;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
+    .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
+    .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
+    .alert-box ul{padding-left:1.25rem}
+    .alert-box ul li{margin-bottom:.4rem}
+    .resources{background:var(--warm);border-radius:12px;padding:1.5rem;margin-top:2rem}
+    .resources-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+    .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
+    .resources a:hover{text-decoration:underline}
+    .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
+    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
+    .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
+    .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1.5rem 2rem 2rem}
+    .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
+    .refs-toggle:hover{color:var(--green)}
+    .refs-list{display:none;margin-top:1rem}
+    .refs-list.on{display:block}
+    .refs-list ol{padding-left:1.4rem}
+    .refs-list li{font-size:.8rem;color:var(--ink-mute);line-height:1.6;margin-bottom:.45rem}
+    .page-footer{text-align:center;font-size:.8rem;color:var(--ink-mute);padding:1.25rem 2rem 2rem;border-top:1px solid var(--rule);max-width:680px;margin:0 auto}
+    @media print{
+      .masthead-crumb,.print-bar,.refs-section,.page-footer{display:none}
+      .acc-body{display:block!important;padding:.4rem 0}
+      .acc-head{background:none!important;font-size:1rem;padding:.5rem 0;border-bottom:1px solid #ccc;border-radius:0}
+      .acc-item{border:none;margin-bottom:.5rem;border-radius:0}
+      body{font-size:.85rem}
+      .alert-box,.data-table{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/msk/" class="masthead-crumb">MSK</a>
+</header>
+
+<div class="hero">
+  <p class="kicker">❍ Musculoskeletal</p>
+  <h1>Low <em>Back</em> Pain</h1>
+  <p class="hero-lead">Most back pain is non-specific, self-limiting, and improves with movement and time. Imaging is rarely needed.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+  <div class="glance">
+    <div>
+      <p class="glance-label">Extremely common</p>
+      <p class="glance-value">80%</p>
+      <p class="glance-desc">Of adults have back pain at some point</p>
+    </div>
+    <div>
+      <p class="glance-label">Usually benign</p>
+      <p class="glance-value">95%</p>
+      <p class="glance-desc">Non-specific, no serious structural cause</p>
+    </div>
+    <div>
+      <p class="glance-label">Good prognosis</p>
+      <p class="glance-value">Most</p>
+      <p class="glance-desc">Improve within 6 weeks with activity</p>
+    </div>
+    <div>
+      <p class="glance-label">ACC coverage</p>
+      <p class="glance-value">NZ</p>
+      <p class="glance-desc">Covers injury-related acute back pain</p>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-head">Types of back <em>pain</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Back pain is usually classified as non-specific or specific, depending on whether a clear cause can be identified through examination and investigation.</p>
+      <p><strong>Non-specific back pain</strong> is by far the most common type, accounting for about 80 to 90 percent of presentations. "Non-specific" means that no single anatomical lesion or diagnosis can be found to fully explain the pain. There is no fracture, no prolapsed disc pressing on a nerve root, no infection, and no obvious inflammatory or rheumatological disease. This does not mean the pain is imaginary or that nothing is wrong. Rather, it means that the pain originates from a combination of factors such as muscle strain, ligament sprain, minor disc bulging, or patterns of movement that put stress on the spine. Non-specific back pain often improves with time and appropriate management, regardless of what any imaging shows.</p>
+      <p><strong>Specific back pain</strong> is much less common and occurs when a clear structural or systemic cause is identified. This might include a vertebral fracture, a prolapsed intervertebral disc compressing a nerve root, spinal stenosis, infection, or malignancy. Specific back pain usually requires targeted investigation and may benefit from specialist opinion. The presence of red flags (see later) suggests specific pathology and warrants urgent evaluation.</p>
+      <p><strong>Referred pain</strong> is pain felt in the back but actually originating from another organ. For example, kidney stones, pelvic inflammatory disease, or aortic aneurysm can present as back pain. A careful history and examination help identify referred pain, and appropriate investigations will be guided by clinical suspicion.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Why does my back <em>hurt?</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Understanding the anatomy of the back helps explain why it hurts and why recovery is possible. The spine is made up of vertebrae (bones) separated by intervertebral discs, with strong ligaments holding everything together and muscles surrounding the whole structure. Nerves pass through the spine to reach the legs and abdomen. In most cases of acute back pain, the problem is muscular or ligamentous strain from overuse, awkward movement, poor posture, or minor trauma. The tissues inflame and swell, causing pain, stiffness, and reduced movement.</p>
+      <p><strong>Discs and pain:</strong> Intervertebral discs sit between the vertebrae and act as shock absorbers. They consist of a tough outer ring (annulus fibrosus) and a softer gel-like centre (nucleus pulposus). With age or repetitive strain, the disc can bulge outward or even rupture (herniate). A bulging disc might press on nearby nerves, causing pain that radiates down the leg (sciatica). Importantly, many people have significant disc changes on MRI but no pain at all, while others have severe pain with minimal disc changes. Pain does not always correlate with the degree of structural damage visible on imaging.</p>
+      <p><strong>Muscle and ligament strain:</strong> Muscles and ligaments support the spine and keep it stable. Strain from overexertion, poor lifting technique, or prolonged bad posture can cause acute pain. The body responds with inflammation, which is part of the healing process. Most muscular and ligamentous pain improves within days to weeks.</p>
+      <p><strong>Pain perception:</strong> The brain's interpretation of pain is crucial. Stress, poor sleep, anxiety, and depression can all amplify pain signals, making the same physical stimulus feel more painful. Conversely, distraction, confidence in recovery, and an understanding that pain will improve can reduce pain perception. This is why addressing sleep, stress, and mood can significantly improve back pain outcomes.</p>
+      <p><strong>Movement and recovery:</strong> Contrary to old advice to rest when your back hurts, modern evidence shows that staying active promotes recovery. Movement promotes blood flow, prevents muscle deconditioning, and helps restore confidence in the spine. Gentle movement or returning to normal activities as soon as tolerated accelerates healing far more than prolonged bed rest.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Self-management: what actually <em>helps</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>The single most important thing you can do for acute back pain is to stay active. This does not mean pushing through severe pain, but rather moving gently within your tolerance and gradually returning to normal activities. Rest for more than a day or two actually worsens outcomes and prolongs pain.</p>
+      <p><strong>Stay active and keep moving:</strong> Walking, gentle stretching, and returning to your normal routine as soon as you can manage are the cornerstones of recovery. Start with short sessions, perhaps 5 to 10 minutes of walking, and gradually increase. Movement prevents your muscles from becoming weak and stiff, maintains your confidence in your spine, and speeds recovery. Most people with acute back pain feel better within days if they move gently and regularly.</p>
+      <p><strong>Pain relief:</strong> Over-the-counter paracetamol or ibuprofen can help manage pain while you continue moving. Ibuprofen is an NSAID and may be particularly helpful if inflammation is part of the problem, but avoid it if you have a history of ulcers, asthma, or kidney disease, or if you are dehydrated. Muscle relaxants such as benzodiazepines may help short-term but are not recommended long-term because they encourage rest and can become habit-forming.</p>
+      <p><strong>Heat and ice:</strong> Heat feels good for muscular back pain and can ease stiffness. You might use a hot water bottle or take a warm shower. Ice is less commonly helpful for muscular back pain but some people find it soothing in the first 24 to 48 hours after an acute injury.</p>
+      <p><strong>Posture and ergonomics:</strong> Avoid prolonged slouching or forward bending, as these place stress on the discs and ligaments. Instead, maintain a neutral spine when sitting, keep your monitor at eye level, and take regular breaks to move. Good ergonomics helps prevent relapse but will not cure acute pain by itself.</p>
+      <p><strong>Physiotherapy:</strong> A physiotherapist can teach you exercises to strengthen your core, improve flexibility, and restore confidence in movement. They can also provide hands-on treatment such as massage or manipulation. Evidence suggests that physiotherapy is more effective than passive treatments like traction, and combined with staying active, it gives excellent outcomes<sup>2</sup>.</p>
+      <p><strong>Sleep and stress:</strong> Poor sleep worsens pain perception, and back pain disrupts sleep, creating a vicious cycle. Prioritise sleep hygiene: keep your bedroom cool and dark, avoid screens before bed, and consider a supportive mattress. Stress management through relaxation, mindfulness, or exercise also helps reduce pain perception.</p>
+      <p><strong>Treatments with weak or no evidence:</strong> Bed rest, traction, ultrasound, and spinal manipulation have not been shown to outperform staying active and structured exercise. While some people feel better after these treatments, the improvement is often due to the attention and reassurance rather than the treatment itself.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">When imaging is <em>needed</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Most acute back pain does not require X-rays or MRI scans. In fact, early imaging often does more harm than good because it can reveal incidental findings that are not causing your pain but provoke anxiety and unnecessary further testing.</p>
+      <p><strong>Non-specific back pain:</strong> If you have typical mechanical back pain with no red flags, imaging is not recommended in the first 4 to 6 weeks. The natural history of non-specific back pain is improvement, and imaging findings often do not change management. Many people have bulging discs, spondylosis, or other "abnormalities" visible on MRI but no pain, while others have severe pain with relatively normal imaging. This mismatch shows that imaging does not always explain pain.</p>
+      <p><strong>When imaging is warranted:</strong> Imaging should be considered if you have red flags suggesting fracture, infection, malignancy, or cauda equina syndrome. These include sudden onset after significant trauma in someone at risk of osteoporosis, fever or unexplained weight loss, progressive neurological deficit, or saddle anaesthesia with bladder dysfunction. Your GP will decide if imaging is needed based on your clinical presentation.</p>
+      <p><strong>What imaging shows:</strong> X-rays show bone but not discs or nerve roots well. They are useful mainly for detecting fractures or severe degenerative changes. MRI shows discs, nerves, and soft tissues in detail and is more useful if nerve root compression is suspected. However, MRI also reveals age-related changes that are common in people without back pain, which can be misleading and anxiety-provoking. A normal or abnormal MRI does not predict recovery or determine whether you need surgery.</p>
+      <p><strong>The bottom line:</strong> In the vast majority of cases, you can recover from back pain without imaging. Reassurance about the benign nature of your pain and early mobilisation and exercise are far more important than a scan.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Treatments from your <em>GP</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Your GP can offer several approaches to managing back pain, tailored to your symptoms and how they are affecting you.</p>
+      <p><strong>Analgesia:</strong> Paracetamol is a reasonable first-line pain reliever. NSAIDs like ibuprofen may be particularly helpful if you have inflammatory pain, but avoid them if contraindicated. Muscle relaxants such as benzodiazepines or baclofen may reduce muscle spasm and pain in the short term but have side effects and risk of dependence, so they are not recommended for prolonged use. Opioid painkillers are generally not recommended for non-specific back pain as they do not improve outcomes and carry significant risks of dependence and side effects.</p>
+      <p><strong>Referral to physiotherapy:</strong> Your GP can refer you to a physiotherapist or physiotherapy service (including HealthPathways online physio in some regions). Structured exercise programmes and hands-on treatment have strong evidence for improving back pain and preventing relapse<sup>2</sup>.</p>
+      <p><strong>Pain education and cognitive behavioural approaches:</strong> For chronic back pain, understanding the nature of your pain, recognising unhelpful thought patterns, and building confidence in your ability to manage pain are powerful tools. Your GP may discuss these approaches or refer you to a pain management programme.</p>
+      <p><strong>Spinal injections:</strong> Epidural corticosteroid injections may provide short-term pain relief in sciatica but the evidence for long-term benefit is limited. They are sometimes used as a bridge to get people moving and engaged in physiotherapy, rather than as a sole treatment.</p>
+      <p><strong>Surgery:</strong> Surgery is rarely indicated for non-specific back pain and is considered only for specific diagnoses such as severe nerve root compression not responding to conservative treatment, or cauda equina syndrome (a surgical emergency). Fusion surgery has variable outcomes and is not routinely recommended. For most people, non-surgical management is more effective and safer.</p>
+    </div>
+  </div>
+
+  <h2 class="section-h2">Red flags: when to seek <em>urgent</em> help</h2>
+  <p class="section-lead">Most back pain is benign, but certain features suggest serious underlying pathology and require prompt assessment.</p>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Symptom</th>
+        <th>Possible concern</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bladder or bowel dysfunction, saddle anaesthesia</td>
+        <td>Cauda equina syndrome</td>
+        <td>Go to Emergency Department immediately</td>
+      </tr>
+      <tr>
+        <td>Fever, unintentional weight loss, night sweats</td>
+        <td>Infection or malignancy</td>
+        <td>See GP same day</td>
+      </tr>
+      <tr>
+        <td>Severe pain after significant trauma, or history of osteoporosis</td>
+        <td>Vertebral fracture</td>
+        <td>See GP same day, likely X-ray needed</td>
+      </tr>
+      <tr>
+        <td>History of cancer, progressive neurological deficit</td>
+        <td>Metastatic disease or cord compression</td>
+        <td>See GP urgently, imaging likely needed</td>
+      </tr>
+      <tr>
+        <td>Thoracic (upper back) pain, sudden onset, unremitting</td>
+        <td>Aortic aneurysm, malignancy</td>
+        <td>Go to Emergency Department or call 111</td>
+      </tr>
+      <tr>
+        <td>Progressive neurological deficit in the legs</td>
+        <td>Cord or nerve root compression</td>
+        <td>See GP urgently</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <p class="alert-head">⚠ Go to ED immediately if you have:</p>
+    <ul>
+      <li>Sudden loss of bladder or bowel control combined with back pain</li>
+      <li>Numbness in the groin, genital area, or inner thighs (saddle distribution)</li>
+      <li>Sudden inability to move your legs or progressive weakness</li>
+    </ul>
+    <p style="margin-top:.75rem;font-size:.88rem;color:var(--ink-mute)">These symptoms may indicate cauda equina syndrome, a medical emergency requiring urgent surgical evaluation. Call 111 or go directly to the Emergency Department.</p>
+  </div>
+
+  <div class="resources">
+    <p class="resources-head">NZ Resources</p>
+    <a href="https://acc.co.nz">ACC Back Pain Information</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Coverage and information for work and sports-related back injuries.</p>
+    <a href="https://healthify.org.nz">Healthify NZ (Health Navigator)</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Trusted NZ health information on back pain management and physiotherapy.</p>
+    <a href="https://www.healthline.org.nz">Healthline: 0800 611 116</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Free, 24/7 phone health advice.</p>
+    <a href="https://bpac.org.nz">BPAC NZ</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Evidence-based information for GPs on back pain management.</p>
+  </div>
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">References ▾</button>
+  <div class="refs-list" id="refs">
+    <ol>
+      <li>Maher C, Underwood M, Buchbinder R. Non-specific low back pain. Lancet. 2017;389(10070):736-47.</li>
+      <li>Hayden JA, Ellis J, Ogilvie R, Malmivaara A, van Tulder MW. Exercise therapy for chronic low back pain. Cochrane Database Syst Rev. 2021;10:CD009790.</li>
+      <li>Traeger AC, Lee H, Hubscher M, et al. Effect of intensive patient education vs placebo patient education on outcomes in patients with acute low back pain. JAMA Neurol. 2019;76(2):161-9.</li>
+      <li>National Institute for Health and Care Excellence. Low back pain and sciatica in over 16s: assessment and management. NICE guideline NG59. London: NICE; 2016.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="page-footer">
+  Written for general information only. This page does not replace a conversation with your own GP.
+</footer>
+
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+</body>
+</html>

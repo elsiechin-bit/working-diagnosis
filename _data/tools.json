@@ -56,6 +56,11 @@
       "name": "Medications",
       "items": [
         {
+          "name": "Adult NZF Browser",
+          "url": "/workshop/tools/adult-nzf/",
+          "blurb": "GP-relevant medicines with PHARMAC funding status, prescriber requirements, and NZ dosing. Filterable by category, funding, and prescriber type."
+        },
+        {
           "name": "Opioid Converter",
           "url": "/workshop/tools/opioid-converter/",
           "blurb": "Conversion across 9 opioid agents including transdermal patches. Aligned to NZ HealthPathways guidance."

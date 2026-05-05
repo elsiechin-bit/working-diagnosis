@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Health | Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+    .hero{max-width:680px;margin:0 auto;padding:2.5rem 2rem 1.75rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+    .print-bar{max-width:680px;margin:0 auto;padding:.75rem 2rem;display:flex;justify-content:flex-end}
+    .print-btn{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--rule);color:var(--ink-mute);padding:.45rem 1rem;border-radius:50px;cursor:pointer;transition:all .15s}
+    .print-btn:hover{color:var(--green);border-color:var(--green)}
+    .glance{background:var(--warm);border-radius:14px;padding:1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
+    .glance-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
+    .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+    .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
+    .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
+    .acc-item.open .chevron{transform:rotate(90deg)}
+    .acc-body{display:none;padding:1.25rem 1.4rem 1.5rem;background:var(--paper);border-top:1px solid var(--rule);font-size:.95rem;color:var(--ink-soft);line-height:1.72}
+    .acc-item.open .acc-body{display:block}
+    .acc-body p+p{margin-top:.75rem}
+    .acc-body ul,.acc-body ol{padding-left:1.25rem;margin:.5rem 0}
+    .acc-body li{margin-bottom:.3rem}
+    .data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.9rem}
+    .data-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.7rem 1rem;background:var(--deep);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+    .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:nth-child(even) td{background:var(--warm)}
+    .alert-box{background:#FDF6EE;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
+    .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
+    .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
+    .alert-box ul{padding-left:1.25rem}
+    .alert-box ul li{margin-bottom:.4rem}
+    .resources{background:var(--warm);border-radius:12px;padding:1.5rem;margin-top:2rem}
+    .resources-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+    .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
+    .resources a:hover{text-decoration:underline}
+    .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
+    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
+    .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
+    .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1.5rem 2rem 2rem}
+    .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
+    .refs-toggle:hover{color:var(--green)}
+    .refs-list{display:none;margin-top:1rem}
+    .refs-list.on{display:block}
+    .refs-list ol{padding-left:1.4rem}
+    .refs-list li{font-size:.8rem;color:var(--ink-mute);line-height:1.6;margin-bottom:.45rem}
+    .page-footer{text-align:center;font-size:.8rem;color:var(--ink-mute);padding:1.25rem 2rem 2rem;border-top:1px solid var(--rule);max-width:680px;margin:0 auto}
+    @media print{
+      .masthead-crumb,.print-bar,.refs-section,.page-footer{display:none}
+      .acc-body{display:block!important;padding:.4rem 0}
+      .acc-head{background:none!important;font-size:1rem;padding:.5rem 0;border-bottom:1px solid #ccc;border-radius:0}
+      .acc-item{border:none;margin-bottom:.5rem;border-radius:0}
+      body{font-size:.85rem}
+      .alert-box,.data-table{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+
+<div class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/" class="masthead-crumb">Home</a>
+</div>
+
+<div class="hero">
+  <div class="kicker">❍ Travel Health</div>
+  <h1>Preparing for <em>safe</em> travel abroad</h1>
+  <p class="hero-lead">International travel poses specific health risks that are often preventable. The key is planning early, understanding what vaccines and precautions you need, and recognising warning signs after you return home.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+
+  <div class="glance">
+    <div>
+      <div class="glance-label">See your GP</div>
+      <div class="glance-value">6-8 weeks</div>
+      <div class="glance-desc">Before departure, ideally, to allow time for vaccine courses</div>
+    </div>
+    <div>
+      <div class="glance-label">Traveller's diarrhea</div>
+      <div class="glance-value">20-60%</div>
+      <div class="glance-desc">Of travellers to high-risk regions are affected</div>
+    </div>
+    <div>
+      <div class="glance-label">Travel insurance</div>
+      <div class="glance-value">Essential</div>
+      <div class="glance-desc">Medical evacuation from Asia or Pacific can cost $100,000+</div>
+    </div>
+    <div>
+      <div class="glance-label">Free NZ vaccines</div>
+      <div class="glance-value">Some</div>
+      <div class="glance-desc">Hepatitis A, typhoid, MMR may be subsidised depending on destination</div>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-head">Before you go <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Ideally, see your GP or a travel medicine clinic 6-8 weeks before departure. This allows time for vaccine courses (some require multiple doses spaced weeks apart). Bring a list of your current medications, any medical conditions, and your vaccination history.</p>
+      <p>Key questions your GP will ask: destination(s), duration, type of travel (backpacker versus resort), rural versus urban, activities planned (swimming, animal contact, high altitude), pregnancy status, immune status.</p>
+      <p>Travel insurance with medical evacuation cover is strongly recommended for any international travel. Medical evacuation from Asia or the Pacific can cost well over $100,000.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Vaccines for travel <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Some vaccines are required for entry to certain countries (yellow fever certificate). Most travel vaccines are recommended based on your destination and activities.</p>
+      <p><strong>Common travel vaccines:</strong></p>
+      <ul>
+        <li><strong>Hepatitis A</strong> — food and water-borne, highly effective vaccine</li>
+        <li><strong>Typhoid</strong> — food and water-borne, especially South Asia</li>
+        <li><strong>Hepatitis B</strong> — blood-borne, sexual contact; recommended if unvaccinated</li>
+        <li><strong>Rabies</strong> — pre-exposure for animal contact in endemic countries</li>
+        <li><strong>Japanese encephalitis</strong> — rural Asia</li>
+        <li><strong>Meningococcal</strong> — sub-Saharan Africa, Hajj pilgrims</li>
+      </ul>
+      <p>Malaria is not vaccine-preventable but antimalarial medications are highly effective when taken correctly. Some vaccines (hepatitis A, MMR) may be partially subsidised through NZ's schedule.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Food, water and hygiene <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Traveller's diarrhea affects up to 60% of travellers to high-risk regions (South and Southeast Asia, sub-Saharan Africa, Latin America).<sup>1</sup> The mantra: boil it, cook it, peel it, or forget it.</p>
+      <p><strong>Safe options:</strong> Bottled water from sealed bottles, hot drinks, cooked food served hot, fruits you peel yourself.</p>
+      <p><strong>Risky options:</strong> Tap water (including ice), salads and raw vegetables washed in tap water, shellfish, buffet food that has been sitting out.</p>
+      <p>Hand hygiene is critical. Bring oral rehydration sachets. Antibiotics (usually azithromycin or ciprofloxacin) can shorten severe diarrhea but should be reserved for severe cases. Bismuth subsalicylate has some preventive evidence but is not standard in NZ practice.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">During travel: sun, insects, altitude <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p><strong>Sun:</strong> UV is higher at altitude and near the equator. Use SPF 30+ and cover up. Heat exhaustion is a real risk in tropical climates.</p>
+      <p><strong>Insects:</strong> Dengue has no prophylaxis available; avoid mosquito bites especially at dawn and dusk. Malaria prophylaxis is essential in endemic areas; take as prescribed and continue after return. Zika poses risk in pregnancy.</p>
+      <p><strong>Altitude:</strong> Ascend gradually above 3000 metres. Recognise acute mountain sickness (headache, nausea, fatigue); if severe (ataxia, confusion, chest symptoms), descend immediately. Acetazolamide can be prescribed for prophylaxis.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">After you return <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Many travel-acquired infections have incubation periods that mean symptoms appear after return home. Fever after travel from a malaria-endemic region is a medical emergency until proven otherwise.</p>
+      <p>See your GP promptly for: fever, persistent diarrhea (more than 5-7 days), jaundice, unusual skin lesions, respiratory symptoms. <strong>Always mention your travel history to any health professional you see.</strong></p>
+    </div>
+  </div>
+
+  <h2 class="section-h2">Travel health by region</h2>
+  <p class="section-lead">Regional variation in risk guides your vaccination and prophylaxis strategy.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Region</th>
+        <th>Key risks</th>
+        <th>Key precautions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Southeast Asia</td>
+        <td>Dengue, rabies, hepatitis A/B, typhoid, malaria (some areas)</td>
+        <td>Insect repellent, hepatitis A/typhoid vaccines, malaria prophylaxis if rural</td>
+      </tr>
+      <tr>
+        <td>South Asia</td>
+        <td>Typhoid, hepatitis A/B, malaria, air quality</td>
+        <td>Vaccines, bottled water, malaria prophylaxis</td>
+      </tr>
+      <tr>
+        <td>Sub-Saharan Africa</td>
+        <td>Malaria, yellow fever, typhoid, hepatitis A</td>
+        <td>Yellow fever certificate, malaria prophylaxis, vaccines</td>
+      </tr>
+      <tr>
+        <td>Pacific Islands</td>
+        <td>Dengue, leptospirosis, hepatitis A</td>
+        <td>Insect repellent, avoid freshwater exposure</td>
+      </tr>
+      <tr>
+        <td>Central and South America</td>
+        <td>Yellow fever (Amazon), typhoid, hepatitis A, altitude</td>
+        <td>Vaccines, altitude awareness, water safety</td>
+      </tr>
+      <tr>
+        <td>Eastern Europe, Middle East</td>
+        <td>Hepatitis A, rabies</td>
+        <td>Hepatitis A vaccine, avoid animal contact</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <div class="alert-head">See a doctor urgently if you have</div>
+    <ul>
+      <li>Fever (especially within 3 months of returning from a malaria-endemic area)</li>
+      <li>Persistent diarrhea or blood in stools</li>
+      <li>Jaundice (yellowing of skin or eyes)</li>
+      <li>Unexplained rash or skin lesion</li>
+      <li>Shortness of breath</li>
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="resources-head">Resources</div>
+    <a href="https://traveldoctor.co.nz">Travel Doctor NZ</a>
+    <a href="https://safetravel.govt.nz">NZ Ministry of Foreign Affairs (SafeTravel)</a>
+    <a href="https://healthify.nz">Healthify NZ — travel health</a>
+    <p>Healthline: <strong>0800 611 116</strong></p>
+  </div>
+
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">Show references</button>
+  <div id="refs" class="refs-list">
+    <ol>
+      <li>Steffen R, Hill DR, DuPont HL. Traveler's diarrhea: a clinical review. JAMA. 2015;313(1):71-80.</li>
+      <li>Connor BA, Schwartz E. Typhoid and paratyphoid fever in travellers. Lancet Infect Dis. 2005;5(10):623-8.</li>
+      <li>World Health Organization. International Travel and Health. Geneva: WHO; 2012 (updated annually). Available at: who.int/travel-advice</li>
+      <li>Freedman DO, Weld LH, Kozarsky PE, et al. Spectrum of disease and relation to place of exposure among ill returned travelers. N Engl J Med. 2006;354(2):119-30.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="page-footer">
+  <p>This page is not a substitute for seeing your GP. Always discuss your specific travel plans with a healthcare professional before departure.</p>
+</div>
+
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+
+</body>
+</html>

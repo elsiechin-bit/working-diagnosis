@@ -1,0 +1,1300 @@
+---
+permalink: /workshop/tools/adult-nzf/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adult NZF Browser - Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:      #F5F1E8;
+      --warm:       #EDE7D8;
+      --deep:       #E4DBC4;
+      --ink:        #1A1F1C;
+      --soft:       #3A4540;
+      --mute:       #6B7A75;
+      --green:      #2F6B5C;
+      --green-deep: #1F4A3F;
+      --ochre:      #B8714F;
+      --rule:       #D9D1BD;
+      --radius:     5px;
+      --ff-display: 'Fraunces', Georgia, serif;
+      --ff-body:    'Newsreader', Georgia, serif;
+      --ff-mono:    'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--ff-body);
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ── Masthead ── */
+    .site-head {
+      background: var(--ink);
+      border-bottom: 2px solid var(--green);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-head__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 3.25rem;
+    }
+    .site-head__brand {
+      text-decoration: none;
+      font-family: var(--ff-display);
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--paper);
+      letter-spacing: -0.01em;
+    }
+    .site-head__brand em {
+      font-style: italic;
+      color: #7ecfba;
+    }
+    .site-head__nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .site-head__nav a {
+      font-family: var(--ff-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--rule);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .site-head__nav a:hover { color: var(--paper); }
+
+    /* ── Page layout ── */
+    .page-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .page-head {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1.25rem;
+    }
+    .page-head .kicker {
+      font-family: var(--ff-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ochre);
+      margin-bottom: 0.35rem;
+    }
+    .page-head h1 {
+      font-family: var(--ff-display);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+    .page-head h1 em {
+      font-style: italic;
+      color: var(--green);
+    }
+    .page-head .dek {
+      margin-top: 0.5rem;
+      color: var(--soft);
+      font-size: 0.975rem;
+      max-width: 56ch;
+    }
+
+    /* ── Controls ── */
+    .controls {
+      background: var(--warm);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .search-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .search-row input {
+      flex: 1;
+      font-family: var(--ff-body);
+      font-size: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: var(--paper);
+      color: var(--ink);
+      outline: none;
+    }
+    .search-row input:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 2px rgba(47,107,92,0.15);
+    }
+    .search-clear {
+      font-family: var(--ff-mono);
+      font-size: 0.7rem;
+      padding: 0.4rem 0.7rem;
+      background: none;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      cursor: pointer;
+      color: var(--mute);
+    }
+    .search-clear:hover { border-color: var(--ochre); color: var(--ochre); }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .filter-label {
+      font-family: var(--ff-mono);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--mute);
+      min-width: 5rem;
+    }
+
+    .pill {
+      font-family: var(--ff-mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.65rem;
+      border-radius: 2rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      color: var(--soft);
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .pill:hover { border-color: var(--green); color: var(--green); }
+    .pill.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: white;
+    }
+    .pill.active-ochre {
+      background: var(--ochre);
+      border-color: var(--ochre);
+      color: white;
+    }
+    .pill.active-sa {
+      background: #8a6a3a;
+      border-color: #8a6a3a;
+      color: white;
+    }
+    .pill.active-uf {
+      background: var(--mute);
+      border-color: var(--mute);
+      color: white;
+    }
+    .pill.active-spec {
+      background: #7a4a5c;
+      border-color: #7a4a5c;
+      color: white;
+    }
+
+    /* ── Results bar ── */
+    .results-bar {
+      font-family: var(--ff-mono);
+      font-size: 0.7rem;
+      color: var(--mute);
+      margin-bottom: 1rem;
+    }
+    .results-bar strong { color: var(--soft); }
+
+    /* ── Drug grid ── */
+    .drug-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    /* ── Drug card ── */
+    .drug-card {
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+    .drug-card:hover {
+      border-color: var(--green);
+      box-shadow: 0 2px 8px rgba(47,107,92,0.08);
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .card-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .badge {
+      font-family: var(--ff-mono);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.45rem;
+      border-radius: 2rem;
+      white-space: nowrap;
+    }
+    .badge-F   { background: #d6f0e8; color: var(--green-deep); border: 1px solid #a8ddd0; }
+    .badge-SA  { background: #f5e6d3; color: #7a4a20; border: 1px solid #e0c4a0; }
+    .badge-UF  { background: #efefef; color: #555; border: 1px solid #d0d0d0; }
+    .badge-R   { background: #fde8e8; color: #8a2020; border: 1px solid #f0b8b8; }
+    .badge-GP  { background: #e0f0ee; color: #1f5a50; border: 1px solid #a8d8d0; }
+    .badge-SPEC{ background: #f0e0ea; color: #7a2050; border: 1px solid #d8a8c0; }
+
+    .card-cat-tag {
+      font-family: var(--ff-mono);
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--mute);
+      text-align: right;
+      line-height: 1.3;
+    }
+
+    .drug-name {
+      font-family: var(--ff-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    .drug-al {
+      font-size: 0.78rem;
+      color: var(--mute);
+      font-style: italic;
+      margin-top: -0.25rem;
+    }
+
+    .drug-inds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .ind-tag {
+      font-family: var(--ff-mono);
+      font-size: 0.6rem;
+      padding: 0.1rem 0.4rem;
+      background: var(--warm);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      color: var(--soft);
+    }
+
+    .dose-block {
+      border-left: 3px solid var(--green);
+      padding: 0.5rem 0.65rem;
+      background: var(--warm);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .dose-text {
+      font-size: 0.865rem;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+    .dose-form {
+      font-size: 0.775rem;
+      color: var(--mute);
+      font-style: italic;
+    }
+
+    .drug-notes {
+      font-size: 0.8rem;
+      color: var(--soft);
+      line-height: 1.5;
+      border-top: 1px solid var(--rule);
+      padding-top: 0.45rem;
+    }
+
+    /* ── Empty state ── */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--mute);
+      font-style: italic;
+    }
+
+    /* ── Back link ── */
+    .back-link {
+      margin-top: 2.5rem;
+      font-family: var(--ff-mono);
+      font-size: 0.75rem;
+    }
+    .back-link a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    .back-link a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .drug-grid { grid-template-columns: 1fr; }
+      .site-head__nav { display: none; }
+      .filter-label { min-width: unset; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="site-head__inner">
+    <a href="/" class="site-head__brand">Working<em>Diagnosis</em></a>
+    <nav class="site-head__nav">
+      <a href="/lifestyle/">Lifestyle</a>
+      <a href="/msk/">MSK</a>
+      <a href="/vaccines/">Vaccines</a>
+      <a href="/workshop/">Workshop</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-wrap">
+  <div class="page-head">
+    <p class="kicker">&#10023; Workshop</p>
+    <h1>Adult NZF <em>Browser</em></h1>
+    <p class="dek">GP-relevant medicines with NZ funding status, prescriber requirements, and dosing. Based on NZF and PHARMAC schedule. For consultation support - verify against current NZF for prescribing decisions.</p>
+  </div>
+
+  <div class="controls">
+    <div class="search-row">
+      <input type="search" id="searchInput" placeholder="Search drug name, alias, or indication..." autocomplete="off">
+      <button class="search-clear" id="clearBtn">Clear</button>
+    </div>
+    <div class="filter-row" id="catRow">
+      <span class="filter-label">Category</span>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Funding</span>
+      <button class="pill active" data-group="fund" data-val="all">All</button>
+      <button class="pill" data-group="fund" data-val="F">Funded</button>
+      <button class="pill" data-group="fund" data-val="SA">Special Auth</button>
+      <button class="pill" data-group="fund" data-val="UF">Unfunded</button>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Prescriber</span>
+      <button class="pill active" data-group="rx" data-val="all">All</button>
+      <button class="pill" data-group="rx" data-val="GP">GP</button>
+      <button class="pill" data-group="rx" data-val="SPEC">Specialist</button>
+    </div>
+  </div>
+
+  <p class="results-bar"><strong id="resultCount">-</strong> medicines shown</p>
+
+  <div class="drug-grid" id="drugGrid"></div>
+
+  <p class="back-link"><a href="/workshop/">&larr; Workshop</a></p>
+</main>
+
+<script>
+const CATS = [
+  {id:'all',       lbl:'All'},
+  {id:'common',    lbl:'&#9733; Common'},
+  {id:'Analgesics & NSAIDs',          lbl:'Analgesics & NSAIDs'},
+  {id:'Antibacterials',               lbl:'Antibacterials'},
+  {id:'Antifungals & Antivirals',     lbl:'Antifungals & Antivirals'},
+  {id:'Respiratory',                  lbl:'Respiratory'},
+  {id:'Cardiovascular',               lbl:'Cardiovascular'},
+  {id:'Endocrine & Metabolic',        lbl:'Endocrine & Metabolic'},
+  {id:'Gastrointestinal',             lbl:'Gastrointestinal'},
+  {id:'CNS & Psychiatry',             lbl:'CNS & Psychiatry'},
+  {id:'Musculoskeletal & Rheumatology', lbl:'MSK & Rheumatology'},
+  {id:'Dermatology',                  lbl:'Dermatology'},
+  {id:'Gynaecology & Reproductive',   lbl:'Gynaecology & Reproductive'},
+  {id:'Urology',                      lbl:'Urology'},
+  {id:'Vitamins & Haematological',    lbl:'Vitamins & Haematological'},
+  {id:'Antiparasitics',               lbl:'Antiparasitics'},
+  {id:'Ophthalmic & Otic',            lbl:'Ophthalmic & Otic'},
+];
+
+// f: F=Funded, SA=Special Authority, UF=Unfunded, R=Restricted
+// rx: GP=GP can initiate, SPEC=Specialist initiation required
+// c: 1=common (starred)
+const D = [
+
+  // ── ANALGESICS & NSAIDs ──
+  {id:'paracetamol', name:'Paracetamol', al:['Panadol','acetaminophen'],
+   cat:'Analgesics & NSAIDs', ind:['Pain','Fever'],
+   f:'F', rx:'GP', c:1,
+   dose:'500mg - 1g oral every 4 - 6 hours. Max 4g/day.',
+   form:'Tabs 500mg; liquid 250mg/5mL; suppositories 125mg, 500mg',
+   notes:'First-line analgesic and antipyretic. Safe in renal impairment and pregnancy. Reduce max to 2g/day in hepatic impairment, chronic alcohol use, or weight under 50kg.'},
+
+  {id:'ibuprofen', name:'Ibuprofen', al:['Nurofen','Brufen'],
+   cat:'Analgesics & NSAIDs', ind:['Pain','Inflammation','Fever','Dysmenorrhoea'],
+   f:'F', rx:'GP', c:1,
+   dose:'200 - 400mg oral every 6 - 8 hours with food. Max 2.4g/day.',
+   form:'Tabs 200mg, 400mg; liquid 100mg/5mL; topical gel 5%',
+   notes:'Avoid in renal impairment, peptic ulcer disease, heart failure, and third trimester of pregnancy. Use lowest effective dose for shortest duration.'},
+
+  {id:'naproxen', name:'Naproxen', al:['Naprosyn','Naprogesic'],
+   cat:'Analgesics & NSAIDs', ind:['Pain','Inflammation','Gout','Dysmenorrhoea'],
+   f:'F', rx:'GP', c:0,
+   dose:'250 - 500mg oral twice daily. Acute gout: max 1g/day for 5 days.',
+   form:'Tabs 250mg, 500mg',
+   notes:'Longer half-life than ibuprofen; twice-daily dosing. Slightly lower GI risk than some NSAIDs. Avoid in severe renal or hepatic impairment.'},
+
+  {id:'diclofenac', name:'Diclofenac', al:['Voltaren'],
+   cat:'Analgesics & NSAIDs', ind:['Pain','Osteoarthritis','Inflammation'],
+   f:'F', rx:'GP', c:0,
+   dose:'Oral: 25 - 50mg three times daily with food. Topical 1% gel: 2 - 4g to affected area three to four times daily.',
+   form:'Tabs 25mg, 50mg; topical gel 1%',
+   notes:'Topical formulation for localised OA (knee, hand) reduces systemic exposure. Oral form carries same cardiovascular and GI risks as other NSAIDs.'},
+
+  {id:'tramadol', name:'Tramadol', al:['Tramal','Zydol'],
+   cat:'Analgesics & NSAIDs', ind:['Moderate to severe pain'],
+   f:'F', rx:'GP', c:0,
+   dose:'Immediate-release: 50 - 100mg every 4 - 6 hours. SR: 100 - 200mg twice daily. Max 400mg/day.',
+   form:'Capsules 50mg; SR tabs 100mg, 150mg, 200mg',
+   notes:'Weak opioid plus SNRI mechanism. Risk of serotonin syndrome with SSRIs/SNRIs. Lowers seizure threshold. Reduce dose in renal or hepatic impairment. Schedule 8 controlled medicine.'},
+
+  {id:'codeine', name:'Codeine', al:[],
+   cat:'Analgesics & NSAIDs', ind:['Mild to moderate pain'],
+   f:'F', rx:'GP', c:0,
+   dose:'15 - 60mg oral every 4 - 6 hours. Max 240mg/day.',
+   form:'Tabs 15mg, 30mg; combination products with paracetamol',
+   notes:'Prodrug requiring CYP2D6 for conversion to morphine. Ultra-rapid metabolisers at toxicity risk; poor metabolisers get no effect. Avoid in children under 12 and breastfeeding. Schedule 8.'},
+
+  {id:'morphine', name:'Morphine', al:['Sevredol','MS Contin'],
+   cat:'Analgesics & NSAIDs', ind:['Severe pain','Palliative care'],
+   f:'F', rx:'GP', c:0,
+   dose:'IR: 2.5 - 10mg oral every 4 hours. SR: 15 - 30mg every 12 hours. Titrate to effect.',
+   form:'IR tabs 10mg, 20mg; SR tabs 15mg, 30mg, 60mg, 100mg; oral liquid 10mg/5mL; injection',
+   notes:'Start low in opioid-naive patients. Accumulates in renal impairment - reduce dose and frequency. Schedule 8 controlled substance.'},
+
+  {id:'oxycodone', name:'Oxycodone', al:['Endone','OxyContin','Targin'],
+   cat:'Analgesics & NSAIDs', ind:['Moderate to severe pain'],
+   f:'F', rx:'GP', c:0,
+   dose:'IR: 5 - 10mg every 4 - 6 hours. SR: 10 - 20mg every 12 hours.',
+   form:'IR tabs 5mg, 10mg; SR tabs 10mg, 20mg, 40mg, 80mg; Targin (with naloxone)',
+   notes:'Schedule 8. Targin (oxycodone/naloxone combination) reduces opioid-induced constipation. Caution in respiratory compromise and hepatic impairment.'},
+
+  {id:'gabapentin', name:'Gabapentin', al:['Neurontin'],
+   cat:'Analgesics & NSAIDs', ind:['Neuropathic pain','Epilepsy'],
+   f:'F', rx:'GP', c:0,
+   dose:'Start 300mg nocte; increase to 300mg three times daily over 1 - 2 weeks. Max 3.6g/day.',
+   form:'Capsules 100mg, 300mg, 400mg; tabs 600mg, 800mg',
+   notes:'Titrate slowly to reduce sedation and dizziness. Dose reduction required in renal impairment. Potential for misuse and dependence. Effective for post-herpetic neuralgia and diabetic neuropathy.'},
+
+  {id:'amitriptyline-pain', name:'Amitriptyline (low dose - pain)', al:[],
+   cat:'Analgesics & NSAIDs', ind:['Neuropathic pain','Fibromyalgia','Migraine prophylaxis'],
+   f:'F', rx:'GP', c:0,
+   dose:'Start 10 - 25mg nocte. Increase by 10mg every 1 - 2 weeks. Usual range 10 - 75mg nocte.',
+   form:'Tabs 10mg, 25mg, 50mg',
+   notes:'At low doses used for pain modulation, not as antidepressant. Anticholinergic side effects common. Avoid in elderly due to falls risk. ECG before starting if any cardiac history.'},
+
+  // ── ANTIBACTERIALS ──
+  {id:'amoxicillin', name:'Amoxicillin', al:['Amoxil','Ibiamox'],
+   cat:'Antibacterials', ind:['RTI','Otitis media','Strep throat','Dental infections'],
+   f:'F', rx:'GP', c:1,
+   dose:'250 - 500mg oral three times daily for 5 - 7 days. Otitis media/dental: 500mg three times daily for 5 days.',
+   form:'Capsules 250mg, 500mg; liquid 125mg/5mL, 250mg/5mL; sachets',
+   notes:'Broad-spectrum penicillin. Add clavulanate for beta-lactamase-producing organisms. Approximately 10% cross-reactivity with cephalosporins if confirmed penicillin allergy.'},
+
+  {id:'amoxicillin-clav', name:'Amoxicillin-clavulanate', al:['Augmentin','co-amoxiclav'],
+   cat:'Antibacterials', ind:['Sinusitis','Pneumonia','Bite wounds','Pyelonephritis','Skin infections'],
+   f:'F', rx:'GP', c:1,
+   dose:'875/125mg oral twice daily for 5 - 7 days.',
+   form:'Tabs 875/125mg; suspension 400/57mg/5mL',
+   notes:'Extended spectrum over amoxicillin alone. Take with food to reduce GI side effects. Avoid if history of jaundice or hepatic impairment with previous exposure to amoxicillin-clavulanate.'},
+
+  {id:'flucloxacillin', name:'Flucloxacillin', al:['Floxapen'],
+   cat:'Antibacterials', ind:['Cellulitis','Impetigo','MSSA skin infections'],
+   f:'F', rx:'GP', c:1,
+   dose:'250 - 500mg oral four times daily, 30 - 60 min before food. Severe: 500mg - 1g four times daily.',
+   form:'Capsules 250mg, 500mg; liquid 125mg/5mL',
+   notes:'Drug of choice for MSSA skin and soft tissue infections. Must be taken fasting for optimal absorption. Not effective against MRSA.'},
+
+  {id:'cefalexin', name:'Cefalexin', al:['Keflex','Rilexine'],
+   cat:'Antibacterials', ind:['Skin infections','UTI','RTI'],
+   f:'F', rx:'GP', c:1,
+   dose:'250 - 500mg oral four times daily for 5 - 7 days.',
+   form:'Capsules 250mg, 500mg; liquid 125mg/5mL, 250mg/5mL',
+   notes:'First-generation cephalosporin. Good skin and soft tissue coverage. Safe in penicillin allergy unless anaphylaxis. Safe in pregnancy.'},
+
+  {id:'trimethoprim', name:'Trimethoprim', al:['Alprim'],
+   cat:'Antibacterials', ind:['Uncomplicated UTI','UTI prophylaxis'],
+   f:'F', rx:'GP', c:1,
+   dose:'Treatment: 300mg once daily at night for 3 days (females) or 7 days (males). Prophylaxis: 150mg nocte.',
+   form:'Tabs 150mg, 300mg',
+   notes:'First-line for uncomplicated UTI in women. Avoid in first trimester (folate antagonist). Check local resistance patterns. Dose adjustment needed in renal impairment.'},
+
+  {id:'nitrofurantoin', name:'Nitrofurantoin', al:['Macrobid'],
+   cat:'Antibacterials', ind:['UTI treatment and prophylaxis'],
+   f:'F', rx:'GP', c:1,
+   dose:'Treatment: 100mg MR twice daily for 5 days. Prophylaxis: 50 - 100mg nocte.',
+   form:'Capsules 50mg; MR capsules 100mg',
+   notes:'Good for most uropathogens except Proteus and Pseudomonas. Avoid if eGFR below 30mL/min (ineffective). Take with food. Avoid in third trimester. Risk of pulmonary toxicity with long-term use.'},
+
+  {id:'doxycycline', name:'Doxycycline', al:['Doxylin','Vibramycin'],
+   cat:'Antibacterials', ind:['RTI','STI (chlamydia)','Acne','Rosacea','Malaria prophylaxis'],
+   f:'F', rx:'GP', c:1,
+   dose:'100mg once or twice daily. Chlamydia: 100mg twice daily for 7 days. Take with full glass of water, remain upright 30 min.',
+   form:'Tabs 50mg, 100mg',
+   notes:'Avoid in pregnancy and children under 12. Food reduces nausea but dairy reduces absorption. Photosensitivity - advise sun protection. Oesophageal ulceration risk if not taken correctly.'},
+
+  {id:'azithromycin', name:'Azithromycin', al:['Zithromax'],
+   cat:'Antibacterials', ind:['RTI','Chlamydia','CAP'],
+   f:'F', rx:'GP', c:1,
+   dose:'RTI: 500mg daily for 3 days. Chlamydia: 1g stat. CAP: 500mg day 1, then 250mg daily x4.',
+   form:'Tabs 250mg, 500mg; liquid 200mg/5mL',
+   notes:'Macrolide with prolonged tissue half-life. Caution with QT-prolonging medicines. Not first-line for many infections due to resistance concerns.'},
+
+  {id:'metronidazole', name:'Metronidazole', al:['Flagyl','Rozex'],
+   cat:'Antibacterials', ind:['Anaerobic infections','BV','Trichomonas','Giardia','C. difficile (mild)','Dental infections'],
+   f:'F', rx:'GP', c:1,
+   dose:'BV/Trichomonas: 400mg twice daily x5 - 7 days (or 2g stat for trichomonas). Giardia: 400mg three times daily x5 - 7 days. Dental/anaerobes: 400mg three times daily x7 days.',
+   form:'Tabs 200mg, 400mg; vaginal gel 0.75%; IV',
+   notes:'No alcohol during treatment and for 48 hours after (disulfiram-like reaction). Metallic taste common. Vaginal gel for BV. Avoid in first trimester if possible.'},
+
+  {id:'ciprofloxacin', name:'Ciprofloxacin', al:['Ciproxin'],
+   cat:'Antibacterials', ind:['UTI','Pyelonephritis','Gastroenteritis'],
+   f:'F', rx:'GP', c:0,
+   dose:'250 - 500mg twice daily for 3 - 14 days depending on indication. Pyelonephritis: 500mg twice daily for 7 days.',
+   form:'Tabs 250mg, 500mg; eye/ear drops',
+   notes:'Reserve for appropriate indications. Avoid in children, pregnancy, and tendon disorders. Risk of peripheral neuropathy, tendinitis, aortic aneurysm with prolonged use. Multiple drug interactions.'},
+
+  // ── ANTIFUNGALS & ANTIVIRALS ──
+  {id:'fluconazole', name:'Fluconazole', al:['Diflucan','Canesten Oral'],
+   cat:'Antifungals & Antivirals', ind:['Vaginal candidiasis','Oropharyngeal candidiasis','Tinea'],
+   f:'F', rx:'GP', c:1,
+   dose:'Vaginal candida: 150mg stat. Oropharyngeal: 50mg daily for 7 - 14 days. Onychomycosis: 50mg weekly for 6 - 12 months.',
+   form:'Capsules 50mg, 150mg, 200mg; liquid 50mg/5mL',
+   notes:'Inhibits CYP2C9 and CYP3A4 - check warfarin, statin, and phenytoin interactions. Single 150mg dose is curative for most vaginal candida. Monitor liver function for prolonged courses.'},
+
+  {id:'terbinafine', name:'Terbinafine', al:['Lamisil'],
+   cat:'Antifungals & Antivirals', ind:['Tinea unguium','Tinea pedis','Tinea corporis'],
+   f:'F', rx:'GP', c:1,
+   dose:'Onychomycosis: 250mg oral daily for 6 weeks (fingernails) or 12 weeks (toenails). Topical 1%: apply daily for 1 - 2 weeks.',
+   form:'Tabs 250mg; cream 1%; spray 1%',
+   notes:'Oral terbinafine has the best evidence for toenail onychomycosis. Check LFT before and during oral treatment. Interacts with CYP2D6 substrates. Topical for tinea pedis and corporis.'},
+
+  {id:'aciclovir', name:'Aciclovir', al:['Zovirax'],
+   cat:'Antifungals & Antivirals', ind:['HSV (oral and genital)','Shingles (VZV)'],
+   f:'F', rx:'GP', c:1,
+   dose:'Genital HSV episode: 200mg 5x daily x5 days (or 400mg three times daily). Shingles: 800mg 5x daily x7 days (start within 72 hours). HSV suppression: 400mg twice daily.',
+   form:'Tabs 200mg, 400mg, 800mg; cream 5%; eye ointment 3%',
+   notes:'Most effective when started early - within 72 hours of rash onset for shingles. Adequate hydration important to prevent crystalluria. Dose reduction in renal impairment.'},
+
+  {id:'valaciclovir', name:'Valaciclovir', al:['Valtrex'],
+   cat:'Antifungals & Antivirals', ind:['HSV (oral and genital)','Shingles (VZV)'],
+   f:'F', rx:'GP', c:1,
+   dose:'Genital HSV episode: 500mg twice daily x5 days. Shingles: 1g three times daily x7 days. HSV suppression: 500mg daily.',
+   form:'Tabs 500mg',
+   notes:'Prodrug of aciclovir with better oral bioavailability and simpler dosing. Preferred over aciclovir for adult shingles. Same antiviral spectrum and renal precautions as aciclovir.'},
+
+  {id:'oseltamivir', name:'Oseltamivir', al:['Tamiflu'],
+   cat:'Antifungals & Antivirals', ind:['Influenza A and B'],
+   f:'SA', rx:'GP', c:0,
+   dose:'Treatment: 75mg twice daily for 5 days. Prophylaxis: 75mg daily for 10 days. Start within 48 hours of symptom onset.',
+   form:'Capsules 30mg, 45mg, 75mg; suspension 12mg/mL',
+   notes:'Special Authority: for treatment in high-risk patients (elderly, immunocompromised, pregnant, severe illness). Most effective when started early. Dose reduction in renal impairment.'},
+
+  // ── RESPIRATORY ──
+  {id:'salbutamol', name:'Salbutamol', al:['Ventolin','Respigen'],
+   cat:'Respiratory', ind:['Asthma (rescue)','COPD (rescue)'],
+   f:'F', rx:'GP', c:1,
+   dose:'Rescue: 2 - 4 puffs MDI (100mcg/puff) every 4 - 6 hours as needed. Acute severe: 4 - 8 puffs every 20 minutes (x3), then reassess.',
+   form:'MDI 100mcg/puff; nebuliser solution 2.5mg/2.5mL; Accuhaler 200mcg',
+   notes:'Short-acting beta-2 agonist. Use of more than 2 canisters/month indicates inadequately controlled asthma - step up preventer. Always use with spacer for MDI.'},
+
+  {id:'budesonide', name:'Budesonide', al:['Pulmicort','Rhinocort'],
+   cat:'Respiratory', ind:['Asthma (preventer)','Allergic rhinitis (nasal spray)'],
+   f:'F', rx:'GP', c:1,
+   dose:'Inhaled asthma: 200 - 400mcg twice daily. Poorly controlled: up to 800mcg/day. Nasal: 64 - 128mcg per nostril once daily.',
+   form:'Turbuhaler 100mcg, 200mcg, 400mcg; nasal spray 64mcg/puff',
+   notes:'Rinse mouth after inhaled use to reduce oropharyngeal candidiasis. Safe in pregnancy. Growth monitoring in children on high doses.'},
+
+  {id:'budesonide-formoterol', name:'Budesonide-formoterol', al:['Symbicort'],
+   cat:'Respiratory', ind:['Asthma (SMART therapy)','COPD'],
+   f:'SA', rx:'GP', c:1,
+   dose:'SMART (asthma): 1 - 2 puffs twice daily (preventer) plus 1 - 2 puffs as needed (reliever). Max 12 puffs/day. COPD: 2 puffs twice daily.',
+   form:'Turbuhaler 100/6mcg, 200/6mcg; pMDI 80/4.5mcg, 160/4.5mcg',
+   notes:'Special Authority for SMART therapy. Formoterol has rapid onset suitable for both maintenance and rescue use. Reduces exacerbations compared with fixed-dose ICS/LABA regimens.'},
+
+  {id:'fluticasone', name:'Fluticasone', al:['Flixotide','Flixonase'],
+   cat:'Respiratory', ind:['Asthma (preventer)','Allergic rhinitis (nasal spray)'],
+   f:'F', rx:'GP', c:0,
+   dose:'Inhaled: 100 - 500mcg twice daily. Nasal: 50mcg per nostril once daily (up to twice daily).',
+   form:'MDI 50mcg, 125mcg, 250mcg/puff; Accuhaler 100mcg, 250mcg, 500mcg; nasal spray 50mcg/puff',
+   notes:'Potent ICS - rinse mouth after use. Adrenal suppression possible at high doses. Nasal spray effective for allergic and non-allergic rhinitis with negligible systemic absorption.'},
+
+  {id:'tiotropium', name:'Tiotropium', al:['Spiriva'],
+   cat:'Respiratory', ind:['COPD (maintenance)'],
+   f:'SA', rx:'GP', c:1,
+   dose:'Handihaler: 18mcg inhaled once daily. Respimat: 5mcg (2 puffs) once daily.',
+   form:'Handihaler capsules 18mcg; Respimat 2.5mcg/puff',
+   notes:'Special Authority for COPD. Long-acting anticholinergic; once-daily dosing. Handihaler capsules are for inhalation only - never swallow. Caution in narrow-angle glaucoma and urinary retention.'},
+
+  {id:'montelukast', name:'Montelukast', al:['Singulair'],
+   cat:'Respiratory', ind:['Asthma (add-on)','Allergic rhinitis'],
+   f:'SA', rx:'GP', c:0,
+   dose:'Adults: 10mg oral once daily at bedtime.',
+   form:'Tabs 10mg; chewable tabs 4mg (2 - 5 yr), 5mg (6 - 14 yr)',
+   notes:'Special Authority. Neuropsychiatric effects reported (mood change, nightmares, suicidal ideation) - counsel patients explicitly before prescribing. Useful add-on particularly with co-existing allergic rhinitis.'},
+
+  {id:'prednisolone-resp', name:'Prednisolone (systemic - respiratory)', al:[],
+   cat:'Respiratory', ind:['Asthma exacerbation','COPD exacerbation'],
+   f:'F', rx:'GP', c:1,
+   dose:'Asthma exacerbation: 40 - 50mg oral daily for 5 days (no taper needed for courses under 2 weeks). COPD exacerbation: 30mg daily for 5 days.',
+   form:'Tabs 1mg, 5mg, 25mg; liquid 5mg/mL',
+   notes:'Short courses (5 days) do not need tapering. Prolonged courses require gradual taper and HPA axis consideration. Adrenal crisis risk with abrupt cessation of long-term corticosteroid use.'},
+
+  {id:'cetirizine', name:'Cetirizine', al:['Zyrtec','Allerid'],
+   cat:'Respiratory', ind:['Allergic rhinitis','Urticaria','Hay fever'],
+   f:'F', rx:'GP', c:1,
+   dose:'10mg oral once daily.',
+   form:'Tabs 10mg; liquid 1mg/mL',
+   notes:'Second-generation antihistamine. Less sedating than first-generation but not sedation-free in all patients. Reduce dose in severe renal impairment.'},
+
+  {id:'loratadine', name:'Loratadine', al:['Claratyne'],
+   cat:'Respiratory', ind:['Allergic rhinitis','Urticaria'],
+   f:'F', rx:'GP', c:1,
+   dose:'10mg oral once daily.',
+   form:'Tabs 10mg; liquid 1mg/mL',
+   notes:'Second-generation antihistamine. Non-sedating in most patients. First-line antihistamine in pregnancy. Convenient once-daily dosing.'},
+
+  // ── CARDIOVASCULAR ──
+  {id:'aspirin-ap', name:'Aspirin (antiplatelet)', al:['Cartia','Angettes'],
+   cat:'Cardiovascular', ind:['Secondary CVD prevention','ACS','Stroke/TIA prevention'],
+   f:'F', rx:'GP', c:1,
+   dose:'Secondary prevention: 75 - 100mg oral once daily. ACS: 300mg loading dose, then 100mg daily.',
+   form:'EC tabs 75mg, 100mg; dispersible 300mg',
+   notes:'Do not use for primary prevention in average-risk patients. Enteric-coated for chronic use. Reye syndrome risk in children with viral illness. Dual antiplatelet therapy post-ACS as per cardiologist direction.'},
+
+  {id:'atorvastatin', name:'Atorvastatin', al:['Lipitor','Lorstat'],
+   cat:'Cardiovascular', ind:['Dyslipidaemia','Cardiovascular risk reduction'],
+   f:'F', rx:'GP', c:1,
+   dose:'10 - 80mg oral once daily (usually evening). Start 10 - 20mg; titrate to lipid targets.',
+   form:'Tabs 10mg, 20mg, 40mg, 80mg',
+   notes:'Most potent statin for LDL reduction. Check CK if muscle symptoms. Interactions with azole antifungals and macrolides (myopathy risk). Teratogenic - avoid in pregnancy.'},
+
+  {id:'amlodipine', name:'Amlodipine', al:['Norvasc','Istin'],
+   cat:'Cardiovascular', ind:['Hypertension','Angina'],
+   f:'F', rx:'GP', c:1,
+   dose:'5 - 10mg oral once daily. Start 5mg; increase after 1 - 2 weeks if needed.',
+   form:'Tabs 5mg, 10mg',
+   notes:'Calcium channel blocker. Peripheral oedema common (dose-dependent). Long half-life; once daily. No significant rebound on cessation.'},
+
+  {id:'metoprolol', name:'Metoprolol', al:['Lopresor','Betaloc'],
+   cat:'Cardiovascular', ind:['Hypertension','Angina','Heart failure','Atrial fibrillation (rate control)'],
+   f:'F', rx:'GP', c:1,
+   dose:'Hypertension: 50 - 100mg twice daily (IR) or 50 - 200mg once daily (CR). Heart failure: start 12.5 - 25mg/day, titrate slowly.',
+   form:'Tabs 50mg, 100mg; CR tabs 23.75mg, 47.5mg, 95mg, 190mg',
+   notes:'Cardioselective beta-blocker. Do not stop abruptly (rebound ischaemia). Bronchospasm risk at high doses - caution in asthma/COPD. Masks hypoglycaemia signs in diabetics.'},
+
+  {id:'lisinopril', name:'Lisinopril', al:['Zestril','Prinivil'],
+   cat:'Cardiovascular', ind:['Hypertension','Heart failure','Diabetic nephropathy','Post-MI'],
+   f:'F', rx:'GP', c:1,
+   dose:'Start 2.5 - 5mg once daily; increase every 2 - 4 weeks to target 10 - 40mg once daily.',
+   form:'Tabs 2.5mg, 5mg, 10mg, 20mg',
+   notes:'ACE inhibitor. Check renal function and potassium 1 - 2 weeks after starting. Dry cough in approximately 10% - switch to ARB. Contraindicated in bilateral renal artery stenosis and all trimesters of pregnancy.'},
+
+  {id:'ramipril', name:'Ramipril', al:['Tritace','Ramace'],
+   cat:'Cardiovascular', ind:['Hypertension','Heart failure','CVD risk reduction'],
+   f:'F', rx:'GP', c:0,
+   dose:'Start 1.25 - 2.5mg once daily; target 5 - 10mg once daily.',
+   form:'Capsules 1.25mg, 2.5mg, 5mg, 10mg',
+   notes:'ACE inhibitor. HOPE trial cardiovascular risk reduction data. Capsules can be opened and mixed with water if needed. Same monitoring as lisinopril.'},
+
+  {id:'irbesartan', name:'Irbesartan', al:['Avapro','Karvea'],
+   cat:'Cardiovascular', ind:['Hypertension','Diabetic nephropathy'],
+   f:'F', rx:'GP', c:1,
+   dose:'150mg once daily; increase to 300mg once daily if needed.',
+   form:'Tabs 75mg, 150mg, 300mg',
+   notes:'ARB - use when ACE inhibitor not tolerated (particularly cough). Monitor renal function and potassium. Contraindicated in pregnancy.'},
+
+  {id:'candesartan', name:'Candesartan', al:['Atacand'],
+   cat:'Cardiovascular', ind:['Hypertension','Heart failure'],
+   f:'F', rx:'GP', c:0,
+   dose:'Start 4 - 8mg once daily; target 8 - 32mg once daily.',
+   form:'Tabs 4mg, 8mg, 16mg, 32mg',
+   notes:'ARB with strong heart failure evidence (CHARM trial). Same class precautions as other ARBs. Avoid in pregnancy.'},
+
+  {id:'indapamide', name:'Indapamide', al:['Natrilix'],
+   cat:'Cardiovascular', ind:['Hypertension'],
+   f:'F', rx:'GP', c:1,
+   dose:'1.5mg SR once daily (preferred) or 2.5mg once daily. Morning dosing.',
+   form:'Tabs 2.5mg; SR tabs 1.5mg',
+   notes:'Thiazide-like diuretic. Fewer metabolic effects than hydrochlorothiazide. Monitor electrolytes. Hyponatraemia risk particularly in elderly.'},
+
+  {id:'furosemide', name:'Furosemide', al:['Lasix','Frusemide'],
+   cat:'Cardiovascular', ind:['Heart failure','Oedema','Hypertension (resistant)'],
+   f:'F', rx:'GP', c:1,
+   dose:'20 - 80mg oral once daily in the morning. Titrate to symptom control. Can give twice daily for resistant oedema.',
+   form:'Tabs 20mg, 40mg, 500mg; injection 10mg/mL',
+   notes:'Loop diuretic. Monitor electrolytes (potassium, sodium). Effective even in significant CKD unlike thiazides. Morning dosing to avoid nocturia.'},
+
+  {id:'warfarin', name:'Warfarin', al:['Coumadin','Marevan'],
+   cat:'Cardiovascular', ind:['Atrial fibrillation','VTE treatment and prevention','Mechanical heart valves'],
+   f:'F', rx:'GP', c:1,
+   dose:'Individualised by INR monitoring. Usual maintenance 3 - 9mg/day. Target INR 2 - 3 (AF, VTE) or 2.5 - 3.5 (mechanical valves).',
+   form:'Tabs 1mg, 2mg, 3mg, 5mg',
+   notes:'Narrow therapeutic index. Multiple drug and food interactions (vitamin K foods, many medicines). Consider DOACs for AF if suitable. Reversal: vitamin K, FFP, or Beriplex (urgent).'},
+
+  {id:'rivaroxaban', name:'Rivaroxaban', al:['Xarelto'],
+   cat:'Cardiovascular', ind:['AF stroke prevention','VTE treatment and prevention'],
+   f:'SA', rx:'GP', c:1,
+   dose:'AF: 20mg once daily with evening meal (CrCl >50) or 15mg once daily (CrCl 15 - 50). DVT/PE: 15mg twice daily x21 days, then 20mg daily. Prophylaxis: 10mg daily.',
+   form:'Tabs 10mg, 15mg, 20mg',
+   notes:'Special Authority. Factor Xa inhibitor; no routine monitoring required. Avoid if CrCl below 15. Reversal agent: andexanet alfa (limited NZ availability).'},
+
+  {id:'apixaban', name:'Apixaban', al:['Eliquis'],
+   cat:'Cardiovascular', ind:['AF stroke prevention','VTE treatment and prevention'],
+   f:'SA', rx:'GP', c:1,
+   dose:'AF: 5mg twice daily (or 2.5mg twice daily if 2 of: age 80+, weight 60kg or under, creatinine 133 or above). VTE: 10mg twice daily x7 days, then 5mg twice daily.',
+   form:'Tabs 2.5mg, 5mg',
+   notes:'Special Authority. Factor Xa inhibitor. Generally preferred DOAC (fewer GI side effects). Check dose reduction criteria for AF carefully. Reversal: andexanet alfa.'},
+
+  {id:'gtn', name:'Glyceryl trinitrate (GTN)', al:['Nitrolingual','Anginine'],
+   cat:'Cardiovascular', ind:['Acute angina','Coronary vasospasm'],
+   f:'F', rx:'GP', c:1,
+   dose:'Sublingual spray: 400mcg (1 spray). Repeat after 5 minutes if no relief. Call ambulance after 3 doses. Patch: 5 - 15mg per 24 hours.',
+   form:'Sublingual spray 400mcg/dose; sublingual tabs 500mcg; transdermal patches',
+   notes:'Sit down before use - hypotension common. Patch-free interval overnight to prevent tolerance. Absolute contraindication within 24 - 48 hours of PDE5 inhibitors (sildenafil, tadalafil).'},
+
+  // ── ENDOCRINE & METABOLIC ──
+  {id:'metformin', name:'Metformin', al:['Glucophage','Diabex'],
+   cat:'Endocrine & Metabolic', ind:['Type 2 diabetes mellitus'],
+   f:'F', rx:'GP', c:1,
+   dose:'Start 500mg once or twice daily with meals; increase by 500mg every 1 - 2 weeks. Usual maintenance 1 - 2g daily. Max 3g daily.',
+   form:'Tabs 500mg, 850mg, 1000mg; liquid 500mg/5mL',
+   notes:'First-line T2DM medicine. GI side effects common - take with food and start low. Hold before iodinated contrast (temporarily). Contraindicated if eGFR below 30. Long-term use associated with vitamin B12 deficiency.'},
+
+  {id:'gliclazide', name:'Gliclazide', al:['Diamicron'],
+   cat:'Endocrine & Metabolic', ind:['Type 2 diabetes mellitus'],
+   f:'F', rx:'GP', c:1,
+   dose:'MR: Start 30mg once daily with breakfast; increase by 30mg every 2 - 4 weeks. Max 120mg MR daily.',
+   form:'Tabs 80mg; MR tabs 30mg, 60mg',
+   notes:'Sulfonylurea. Hypoglycaemia risk especially in elderly, with irregular meals, or renal impairment. Lower hypoglycaemia risk than glibenclamide. Take with breakfast.'},
+
+  {id:'empagliflozin', name:'Empagliflozin', al:['Jardiance'],
+   cat:'Endocrine & Metabolic', ind:['Type 2 diabetes','Heart failure','CKD'],
+   f:'SA', rx:'GP', c:1,
+   dose:'10 - 25mg oral once daily (morning). Heart failure or CKD: 10mg once daily regardless of diabetes status.',
+   form:'Tabs 10mg, 25mg',
+   notes:'Special Authority. SGLT2 inhibitor with cardiovascular and renal protective benefits beyond glucose lowering. Genital mycotic infections common. Euglycaemic DKA risk - hold perioperatively. Avoid if eGFR below 20.'},
+
+  {id:'levothyroxine', name:'Levothyroxine', al:['Eltroxin'],
+   cat:'Endocrine & Metabolic', ind:['Hypothyroidism'],
+   f:'F', rx:'GP', c:1,
+   dose:'Start 25 - 50mcg once daily (25mcg if elderly or cardiac disease). Adjust by 25mcg every 4 - 6 weeks based on TSH.',
+   form:'Tabs 25mcg, 50mcg, 100mcg, 125mcg',
+   notes:'Take 30 - 60 minutes before food. Many drug interactions affecting absorption (calcium, iron, PPI - separate by 4 hours). TSH takes 4 - 6 weeks to stabilise after dose change.'},
+
+  {id:'alendronate', name:'Alendronate', al:['Fosamax'],
+   cat:'Endocrine & Metabolic', ind:['Osteoporosis (treatment and prevention)'],
+   f:'F', rx:'GP', c:1,
+   dose:'70mg oral once weekly. Take 30 minutes before first food/drink (plain water only) and remain upright for 30 minutes.',
+   form:'Tabs 10mg (daily), 70mg (weekly)',
+   notes:'Bisphosphonate. Risk of oesophageal ulceration if taken incorrectly. Osteonecrosis of the jaw (rare) - dental review before starting. Consider drug holiday after 5 years (atypical femoral fracture risk).'},
+
+  {id:'allopurinol', name:'Allopurinol', al:['Zyloprim','Progout'],
+   cat:'Endocrine & Metabolic', ind:['Gout prevention','Hyperuricaemia'],
+   f:'F', rx:'GP', c:1,
+   dose:'Start 50 - 100mg once daily after acute attack resolves; increase by 100mg every 4 weeks to target urate below 0.36mmol/L. Usual 200 - 300mg daily.',
+   form:'Tabs 100mg, 300mg',
+   notes:'Do not start during acute gout attack. Co-prescribe NSAID or colchicine for 3 - 6 months on initiation. HLA-B*5801 testing recommended in Southeast Asian and Han Chinese patients (severe hypersensitivity risk). Reduce dose in renal impairment.'},
+
+  {id:'colchicine', name:'Colchicine', al:['Colgout'],
+   cat:'Endocrine & Metabolic', ind:['Acute gout','Gout prophylaxis during allopurinol initiation'],
+   f:'F', rx:'GP', c:1,
+   dose:'Acute gout: 1mg stat then 500mcg after 1 hour on day 1, then 500mcg twice to three times daily until resolved (max 3 - 4 days). Prophylaxis: 500mcg once or twice daily.',
+   form:'Tabs 500mcg',
+   notes:'GI side effects dose-limiting (diarrhoea, nausea). Reduce dose in renal and hepatic impairment. Potentially serious interactions with CYP3A4 inhibitors (clarithromycin, cyclosporin) - can cause toxicity at normal doses.'},
+
+  // ── GASTROINTESTINAL ──
+  {id:'omeprazole', name:'Omeprazole', al:['Losec'],
+   cat:'Gastrointestinal', ind:['GORD','Peptic ulcer disease','H. pylori eradication','NSAID gastroprotection'],
+   f:'F', rx:'GP', c:1,
+   dose:'20 - 40mg oral once daily before breakfast. NSAID gastroprotection: 20mg daily.',
+   form:'Capsules 10mg, 20mg, 40mg; dispersible tabs',
+   notes:'PPI. Take 30 - 60 minutes before meals for best effect. Long-term risks: C. difficile, hypomagnesaemia, fractures, B12 deficiency. Review indication regularly and deprescribe when appropriate.'},
+
+  {id:'ondansetron', name:'Ondansetron', al:['Zofran'],
+   cat:'Gastrointestinal', ind:['Nausea and vomiting','Hyperemesis gravidarum','Post-operative nausea'],
+   f:'F', rx:'GP', c:1,
+   dose:'4 - 8mg oral or sublingual every 8 hours as needed.',
+   form:'Tabs 4mg, 8mg; wafers 4mg, 8mg; injection 2mg/mL',
+   notes:'5-HT3 antagonist. QT prolongation risk - avoid with other QT-prolonging medicines and in long QT syndrome. Constipation common. Wafers dissolve under tongue when vomiting prevents swallowing.'},
+
+  {id:'metoclopramide', name:'Metoclopramide', al:['Maxolon'],
+   cat:'Gastrointestinal', ind:['Nausea and vomiting','Gastroparesis','Migraine (adjunct)'],
+   f:'F', rx:'GP', c:1,
+   dose:'10mg oral three times daily, 30 minutes before meals. Maximum 5-day course for nausea.',
+   form:'Tabs 10mg; liquid 5mg/5mL; injection 5mg/mL',
+   notes:'Dopamine antagonist. Extrapyramidal reactions (acute dystonia, akathisia) especially in young women and children. Tardive dyskinesia with prolonged use. Avoid in Parkinson disease.'},
+
+  {id:'loperamide', name:'Loperamide', al:['Imodium'],
+   cat:'Gastrointestinal', ind:['Diarrhoea (acute and chronic)'],
+   f:'F', rx:'GP', c:1,
+   dose:'Acute: 4mg initially then 2mg after each loose stool. Max 16mg/day.',
+   form:'Capsules 2mg; liquid 1mg/5mL',
+   notes:'Do not use in dysentery (bloody diarrhoea) or suspected C. difficile. Use with caution in IBD flares. Constipation is the expected pharmacological effect.'},
+
+  {id:'macrogol', name:'Macrogol (polyethylene glycol)', al:['Movicol','Lax-Sachets'],
+   cat:'Gastrointestinal', ind:['Constipation','Faecal impaction'],
+   f:'F', rx:'GP', c:1,
+   dose:'Constipation: 1 - 3 sachets daily (dissolve each sachet in 125mL water). Faecal impaction: 8 sachets daily for up to 3 days.',
+   form:'Sachets (13.8g each, dissolved in 125mL water)',
+   notes:'Osmotic laxative retaining water in stool. Generally well-tolerated. Safe in pregnancy. Preferred over stimulant laxatives for regular use.'},
+
+  {id:'mebeverine', name:'Mebeverine', al:['Colofac'],
+   cat:'Gastrointestinal', ind:['IBS (abdominal cramping)','Irritable bowel syndrome'],
+   f:'F', rx:'GP', c:1,
+   dose:'135mg three times daily 20 minutes before meals, or 200mg SR twice daily.',
+   form:'Tabs 135mg; SR tabs 200mg',
+   notes:'Antispasmodic acting on GI smooth muscle. No systemic anticholinergic effects. Well-tolerated. No significant drug interactions. Take before meals for best effect.'},
+
+  // ── CNS & PSYCHIATRY ──
+  {id:'sertraline', name:'Sertraline', al:['Zoloft'],
+   cat:'CNS & Psychiatry', ind:['Depression','Anxiety disorders','PTSD','OCD','Panic disorder'],
+   f:'F', rx:'GP', c:1,
+   dose:'Start 50mg once daily; increase to 100 - 200mg after 4 - 6 weeks if needed.',
+   form:'Tabs 50mg, 100mg; oral liquid 20mg/mL',
+   notes:'SSRI. First-line for depression and most anxiety disorders. Full effect takes 4 - 6 weeks. Discontinuation syndrome if stopped abruptly - taper. First-line SSRI in pregnancy.'},
+
+  {id:'escitalopram', name:'Escitalopram', al:['Lexapro','Cipralex'],
+   cat:'CNS & Psychiatry', ind:['Depression','Anxiety disorders','Panic disorder'],
+   f:'F', rx:'GP', c:1,
+   dose:'Start 10mg once daily; increase to 20mg after 2 - 4 weeks if needed.',
+   form:'Tabs 5mg, 10mg, 20mg; oral drops',
+   notes:'SSRI with good tolerability and low drug interaction profile. QT prolongation at higher doses. Max 10mg in elderly, hepatic impairment, or with CYP2C19 inhibitors.'},
+
+  {id:'venlafaxine', name:'Venlafaxine', al:['Efexor XR'],
+   cat:'CNS & Psychiatry', ind:['Depression','Anxiety disorders','Neuropathic pain','Hot flushes'],
+   f:'F', rx:'GP', c:1,
+   dose:'Start 37.5 - 75mg once daily (XR). Increase by 75mg every 2 - 4 weeks. Usual 75 - 150mg/day. Max 225mg/day.',
+   form:'XR capsules 37.5mg, 75mg, 150mg',
+   notes:'SNRI. Monitor blood pressure - can cause hypertension. More severe discontinuation syndrome than SSRIs - taper slowly. Take with food. XR formulation preferred.'},
+
+  {id:'mirtazapine', name:'Mirtazapine', al:['Avanza','Remeron'],
+   cat:'CNS & Psychiatry', ind:['Depression (particularly with insomnia or anorexia)'],
+   f:'F', rx:'GP', c:1,
+   dose:'Start 15mg nocte; increase to 30 - 45mg after 2 - 4 weeks. Note: lower doses (7.5 - 15mg) are more sedating than higher doses.',
+   form:'Tabs 15mg, 30mg, 45mg; orodispersible tabs',
+   notes:'NaSSA mechanism. Sedation and weight gain common. Useful when insomnia or poor appetite accompany depression. Less sexual dysfunction than SSRIs. No discontinuation syndrome. Take at night.'},
+
+  {id:'amitriptyline-ad', name:'Amitriptyline (antidepressant dose)', al:['Tryptanol','Endep'],
+   cat:'CNS & Psychiatry', ind:['Depression','Neuropathic pain','Migraine prophylaxis','Nocturnal enuresis'],
+   f:'F', rx:'GP', c:0,
+   dose:'Depression: start 25mg nocte, increase to 75 - 150mg nocte. Pain/migraine: 10 - 75mg nocte.',
+   form:'Tabs 10mg, 25mg, 50mg',
+   notes:'TCA. Anticholinergic effects, sedation, and QT prolongation limit use. High lethality in overdose - caution in suicidal patients. ECG recommended if cardiac risk. Useful when comorbid pain, insomnia, or poor sleep present.'},
+
+  {id:'quetiapine', name:'Quetiapine', al:['Seroquel'],
+   cat:'CNS & Psychiatry', ind:['Bipolar disorder','Schizophrenia','Antidepressant augmentation'],
+   f:'SA', rx:'GP', c:0,
+   dose:'Bipolar/schizophrenia: 150 - 750mg/day in divided doses. Antidepressant augmentation (SA): 50 - 300mg nocte.',
+   form:'Tabs 25mg, 100mg, 200mg, 300mg; XR tabs',
+   notes:'Special Authority for augmentation. Metabolic syndrome risk (weight, blood glucose, lipids) - monitor regularly. QT prolongation. Prominent sedation at low doses. Less extrapyramidal side effects than typical antipsychotics.'},
+
+  {id:'diazepam', name:'Diazepam', al:['Valium'],
+   cat:'CNS & Psychiatry', ind:['Anxiety (short-term)','Alcohol withdrawal','Muscle spasm','Seizures'],
+   f:'F', rx:'GP', c:0,
+   dose:'Anxiety: 2 - 10mg two to three times daily (short-term only). Alcohol withdrawal: 10 - 20mg every 1 - 2 hours PRN (CIWA-guided). Muscle spasm: 2 - 5mg three times daily.',
+   form:'Tabs 2mg, 5mg; injection 5mg/mL; rectal solution',
+   notes:'Schedule 4 controlled substance. Tolerance and dependence develop rapidly - limit to short courses (under 2 weeks). Long-acting (metabolites half-life 20 - 100 hours). Do not stop abruptly in long-term users - seizure risk.'},
+
+  {id:'zopiclone', name:'Zopiclone', al:['Imovane'],
+   cat:'CNS & Psychiatry', ind:['Insomnia (short-term)'],
+   f:'F', rx:'GP', c:0,
+   dose:'3.75 - 7.5mg oral at bedtime. Start 3.75mg in elderly.',
+   form:'Tabs 3.75mg, 7.5mg',
+   notes:'Z-drug with similar risks to benzodiazepines (dependence, rebound insomnia). Bitter metallic taste common. Limit to 2 - 4 weeks. Not appropriate for long-term use. Avoid in severe hepatic disease and myasthenia gravis.'},
+
+  {id:'donepezil', name:'Donepezil', al:['Aricept'],
+   cat:'CNS & Psychiatry', ind:['Alzheimer dementia (mild to moderate)'],
+   f:'SA', rx:'GP', c:0,
+   dose:'Start 5mg once daily at bedtime; increase to 10mg after 4 - 6 weeks if tolerated.',
+   form:'Tabs 5mg, 10mg; dispersible tabs',
+   notes:'Special Authority (typically specialist-initiated then continued by GP). GI side effects common initially - take at night. Bradycardia risk. Modest clinical benefit; annual review of ongoing benefit recommended.'},
+
+  {id:'varenicline', name:'Varenicline', al:['Champix'],
+   cat:'CNS & Psychiatry', ind:['Smoking cessation'],
+   f:'SA', rx:'GP', c:1,
+   dose:'Weeks 1 - 3: 0.5mg once daily (days 1 - 3), then 0.5mg twice daily (days 4 - 7), then 1mg twice daily. Treat for 12 weeks; can extend to 24 weeks.',
+   form:'Tabs 0.5mg, 1mg',
+   notes:'Special Authority. Partial nicotinic receptor agonist - most effective pharmacotherapy for smoking cessation. Neuropsychiatric effects reported (mood change, agitation, suicidal ideation) - monitor. Take with food. Reduce dose in renal impairment.'},
+
+  // ── MUSCULOSKELETAL & RHEUMATOLOGY ──
+  {id:'methotrexate', name:'Methotrexate', al:['Methofar','Ledertrexate'],
+   cat:'Musculoskeletal & Rheumatology', ind:['Rheumatoid arthritis','Psoriasis','Psoriatic arthritis'],
+   f:'F', rx:'SPEC', c:0,
+   dose:'RA: 7.5 - 25mg oral or IM once weekly. Psoriasis: 10 - 25mg once weekly.',
+   form:'Tabs 2.5mg, 10mg; injection 25mg/mL',
+   notes:'Specialist initiation. WEEKLY DOSING ONLY - daily dosing causes fatal toxicity (must be explicit on prescription). Co-prescribe folic acid 5mg weekly to reduce side effects. Regular FBC and LFT monitoring. Teratogenic.'},
+
+  {id:'hydroxychloroquine', name:'Hydroxychloroquine', al:['Plaquenil'],
+   cat:'Musculoskeletal & Rheumatology', ind:['Rheumatoid arthritis','SLE','Sjogren syndrome'],
+   f:'F', rx:'SPEC', c:0,
+   dose:'400mg once daily or 200mg twice daily. Long-term: 5mg/kg/day by lean body weight.',
+   form:'Tabs 200mg',
+   notes:'Specialist initiation. Annual ophthalmology review after 5 years (retinal toxicity). Relatively safe in pregnancy (used for SLE). QT prolongation risk. Safe with most other DMARDs.'},
+
+  {id:'baclofen', name:'Baclofen', al:['Clofen'],
+   cat:'Musculoskeletal & Rheumatology', ind:['Muscle spasm','Spasticity'],
+   f:'F', rx:'GP', c:0,
+   dose:'Start 5mg three times daily; increase by 5mg every 3 days to 20 - 25mg three times daily. Max 100mg/day.',
+   form:'Tabs 10mg, 25mg',
+   notes:'GABA-B agonist. Reduce dose in renal impairment. Do not stop abruptly (seizures and hallucinations). Sedation common. Caution in elderly (falls) and seizure disorders.'},
+
+  // ── DERMATOLOGY ──
+  {id:'betamethasone', name:'Betamethasone valerate', al:['Betnovate','Beta'],
+   cat:'Dermatology', ind:['Eczema (moderate to severe)','Psoriasis','Contact dermatitis'],
+   f:'F', rx:'GP', c:1,
+   dose:'Apply thin layer to affected area once or twice daily for 1 - 2 weeks initially; use intermittently for maintenance.',
+   form:'Cream 0.1%; ointment 0.1%; scalp application 0.1%',
+   notes:'Potent corticosteroid. Avoid on face, flexures, or in children without specialist guidance. Skin atrophy with prolonged use. Use ointment for dry or lichenified skin, cream for weeping areas.'},
+
+  {id:'hydrocortisone', name:'Hydrocortisone (topical)', al:['Hycor','HC45'],
+   cat:'Dermatology', ind:['Mild eczema','Nappy rash','Intertrigo','Insect bites'],
+   f:'F', rx:'GP', c:1,
+   dose:'Apply thin layer to affected area two to four times daily.',
+   form:'Cream 0.5%, 1%; ointment 1%',
+   notes:'Mild corticosteroid. Safe for face and flexures. Short courses (under 2 weeks) in skin folds. Suitable for use in children. Combination products with clotrimazole useful for infected eczema with fungal component.'},
+
+  {id:'mometasone', name:'Mometasone', al:['Elocon','Nasonex'],
+   cat:'Dermatology', ind:['Moderate to severe eczema','Psoriasis','Allergic rhinitis (nasal)'],
+   f:'F', rx:'GP', c:1,
+   dose:'Skin: apply thin layer once daily. Nasal: 2 sprays per nostril once daily.',
+   form:'Cream 0.1%; ointment 0.1%; nasal spray 50mcg/puff',
+   notes:'Potent corticosteroid with once-daily dosing. Nasal spray has negligible systemic absorption - preferred for allergic rhinitis. Skin use: avoid face and flexures as for other potent topical steroids.'},
+
+  {id:'permethrin', name:'Permethrin', al:['Lyclear','Quellada'],
+   cat:'Dermatology', ind:['Scabies','Head lice'],
+   f:'F', rx:'GP', c:1,
+   dose:'Scabies (5% cream): apply to whole body below neck, leave 8 - 14 hours, wash off; repeat in 1 week. Head lice (1% lotion): apply to dry hair, leave 10 min, wash off.',
+   form:'Cream 5%; lotion/rinse 1%',
+   notes:'Treat all household contacts simultaneously for scabies. Wash bedding and clothing at high temperature. Post-scabetic itch can persist for weeks after successful treatment - does not indicate treatment failure.'},
+
+  {id:'imiquimod', name:'Imiquimod', al:['Aldara'],
+   cat:'Dermatology', ind:['Genital warts','Actinic keratosis','Superficial BCC'],
+   f:'F', rx:'GP', c:0,
+   dose:'Genital warts: 5% cream three times weekly at bedtime for up to 16 weeks. Actinic keratosis: three times weekly for 4 weeks.',
+   form:'Cream 5% (sachets)',
+   notes:'Immune response modifier (TLR-7 agonist). Local inflammatory reaction expected and indicates efficacy. Rest periods may be needed for severe local reactions. Not suitable in pregnancy.'},
+
+  {id:'mupirocin', name:'Mupirocin', al:['Bactroban'],
+   cat:'Dermatology', ind:['Impetigo','Infected eczema','MRSA nasal decolonisation'],
+   f:'F', rx:'GP', c:1,
+   dose:'Skin: apply to affected area three times daily for 5 - 10 days. MRSA nasal decolonisation: nasal ointment applied twice daily for 5 days.',
+   form:'Ointment 2%; nasal ointment 2%',
+   notes:'Topical antibiotic with specific activity against Staphylococcus and Streptococcus. Resistance is developing - reserve for appropriate indications. Do not apply to large wound areas.'},
+
+  // ── GYNAECOLOGY & REPRODUCTIVE ──
+  {id:'coc', name:'Combined oral contraceptive', al:['Levlen','Brevinor','Estelle','Microgynon'],
+   cat:'Gynaecology & Reproductive', ind:['Contraception','Dysmenorrhoea','Endometriosis','Acne'],
+   f:'F', rx:'GP', c:1,
+   dose:'One tablet daily (cyclic with 7-day break, or continuous). Start day 1 of cycle for immediate protection.',
+   form:'Various: ethinyl oestradiol 20 - 35mcg with levonorgestrel, norethisterone, or gestodene',
+   notes:'Contraindications: VTE history, migraine with aura, smoking over 35, uncontrolled hypertension, liver disease, breast cancer. BP check before prescribing. Efficacy reduced by enzyme-inducing medicines.'},
+
+  {id:'pop', name:'Progestogen-only pill (POP)', al:['Microlut','Noriday','Desorex'],
+   cat:'Gynaecology & Reproductive', ind:['Contraception (when oestrogen contraindicated)'],
+   f:'F', rx:'GP', c:0,
+   dose:'One tablet daily at the same time every day with no break. Levonorgestrel POP: 3-hour window. Desogestrel POP (Desorex): 12-hour window.',
+   form:'Tabs levonorgestrel 30mcg (Microlut); desogestrel 75mcg (Desorex)',
+   notes:'Suitable when oestrogen is contraindicated: breastfeeding, hypertension, migraine with aura, smokers over 35, VTE risk. Irregular bleeding common initially. No cardiovascular contraindications.'},
+
+  {id:'levonorgestrel-ec', name:'Levonorgestrel (emergency contraception)', al:['Postinor-2'],
+   cat:'Gynaecology & Reproductive', ind:['Emergency contraception'],
+   f:'F', rx:'GP', c:1,
+   dose:'1.5mg oral as soon as possible after unprotected intercourse, up to 72 hours. Most effective within 12 hours.',
+   form:'Tab 1.5mg (single dose); or 750mcg x2',
+   notes:'Efficacy decreases with time. Consider copper IUD insertion within 5 days for highest efficacy. Not an abortifacient. If vomiting within 3 hours of dose, repeat. Ulipristal acetate (ellaOne) effective up to 120 hours but availability varies.'},
+
+  {id:'mirena', name:'Levonorgestrel IUS (Mirena)', al:['Mirena'],
+   cat:'Gynaecology & Reproductive', ind:['Contraception','Menorrhagia','Endometriosis','HRT progestogen component'],
+   f:'F', rx:'GP', c:1,
+   dose:'Inserted by trained practitioner. Replace every 5 - 8 years depending on indication and age at insertion.',
+   form:'Intrauterine system releasing 20mcg levonorgestrel/day (52mg total)',
+   notes:'Most effective form of contraception (over 99.9%). Reduces menstrual blood loss by approximately 90%. Suitable as progestogen component of HRT in women with a uterus. Amenorrhoea is common and expected.'},
+
+  {id:'tranexamic-acid', name:'Tranexamic acid', al:['Cyklokapron'],
+   cat:'Gynaecology & Reproductive', ind:['Menorrhagia','Heavy menstrual bleeding'],
+   f:'F', rx:'GP', c:1,
+   dose:'1 - 1.5g oral three to four times daily for the first 3 - 5 days of menstruation only.',
+   form:'Tabs 500mg; injection',
+   notes:'Antifibrinolytic. Take only during menstruation (not continuously). Reduces blood loss by approximately 50%. Not hormonal. Contraindicated with history of thromboembolic disease. Can be combined with NSAIDs for additional effect.'},
+
+  // ── UROLOGY ──
+  {id:'tamsulosin', name:'Tamsulosin', al:['Flomaxtra','Omnic'],
+   cat:'Urology', ind:['Benign prostatic hyperplasia','Ureteric colic (off-label)'],
+   f:'F', rx:'GP', c:1,
+   dose:'400mcg oral once daily after the same meal each day.',
+   form:'MR capsules 400mcg',
+   notes:'Alpha-1 adrenoceptor antagonist. Postural hypotension on first dose - advise taking at bedtime initially. Intraoperative floppy iris syndrome (IFIS) - inform ophthalmologist before any eye surgery.'},
+
+  {id:'finasteride', name:'Finasteride', al:['Proscar (5mg)','Propecia (1mg)'],
+   cat:'Urology', ind:['Benign prostatic hyperplasia','Male pattern hair loss'],
+   f:'F', rx:'GP', c:1,
+   dose:'BPH: 5mg once daily (takes 3 - 6 months for symptomatic benefit). Male hair loss: 1mg once daily.',
+   form:'Tabs 1mg, 5mg',
+   notes:'5-alpha reductase inhibitor. Reduces PSA by approximately 50% - adjust reference range. Sexual dysfunction in approximately 4%. Teratogenic to male foetus - women of childbearing age must not handle crushed tablets.'},
+
+  {id:'solifenacin', name:'Solifenacin', al:['Vesicare'],
+   cat:'Urology', ind:['Overactive bladder','Urge incontinence'],
+   f:'SA', rx:'GP', c:0,
+   dose:'5mg oral once daily; increase to 10mg if inadequate response.',
+   form:'Tabs 5mg, 10mg',
+   notes:'Special Authority. Antimuscarinic. Anticholinergic side effects: dry mouth, constipation, urinary retention, blurred vision. Avoid in closed-angle glaucoma and significant bladder outflow obstruction. Caution in elderly.'},
+
+  {id:'sildenafil', name:'Sildenafil', al:['Viagra','Revatio'],
+   cat:'Urology', ind:['Erectile dysfunction','Pulmonary arterial hypertension'],
+   f:'SA', rx:'GP', c:0,
+   dose:'ED: 50mg oral 30 - 60 minutes before intercourse (range 25 - 100mg). Maximum once daily. PAH (Revatio): 20mg three times daily.',
+   form:'Tabs 25mg, 50mg, 100mg; Revatio 20mg',
+   notes:'Special Authority for PAH; ED funded under specific criteria. Absolute contraindication with nitrates or NO donors. Flushing, headache, visual changes common. Lower dose in hepatic impairment and elderly.'},
+
+  // ── VITAMINS & HAEMATOLOGICAL ──
+  {id:'ferrous-sulfate', name:'Ferrous sulfate', al:['Ferro-Gradumet'],
+   cat:'Vitamins & Haematological', ind:['Iron deficiency anaemia'],
+   f:'F', rx:'GP', c:1,
+   dose:'200mg (65mg elemental iron) one to three times daily. Preferably between meals; with food if GI intolerance.',
+   form:'Tabs 200mg; liquid 150mg/5mL',
+   notes:'Take with orange juice (vitamin C) to enhance absorption. GI side effects (constipation, nausea) common. Stools turn black. Continue for 3 - 6 months after Hb normalises to replete iron stores.'},
+
+  {id:'folic-acid', name:'Folic acid', al:[],
+   cat:'Vitamins & Haematological', ind:['Folate deficiency','Pre-conception supplement','Neural tube defect prevention'],
+   f:'F', rx:'GP', c:1,
+   dose:'Deficiency: 5mg once daily for 4 months. Pre-conception/pregnancy: 0.8mg (800mcg) once daily. High-risk (previous NTD, antiepileptics, diabetes, BMI over 30): 5mg daily.',
+   form:'Tabs 0.8mg, 5mg',
+   notes:'Standard dose 0.8mg for NTD prevention. High-risk women need 5mg daily. Start at least 1 month before conception if possible and continue for first 12 weeks.'},
+
+  {id:'hydroxocobalamin', name:'Hydroxocobalamin (Vitamin B12)', al:['Neocytamen'],
+   cat:'Vitamins & Haematological', ind:['B12 deficiency','Pernicious anaemia'],
+   f:'F', rx:'GP', c:1,
+   dose:'Loading: 1mg IM on alternate days for 2 weeks (6 doses total). Maintenance: 1mg IM every 3 months (every 2 months if neurological involvement).',
+   form:'Injection 1mg/mL',
+   notes:'Preferred over cyanocobalamin (longer duration). For dietary deficiency without pernicious anaemia, oral B12 1mg daily is an evidence-based alternative to IM injections. Verify cause before committing to lifelong IM therapy.'},
+
+  {id:'cholecalciferol', name:'Cholecalciferol (Vitamin D3)', al:['Vitamin D3'],
+   cat:'Vitamins & Haematological', ind:['Vitamin D deficiency','Osteoporosis prevention'],
+   f:'F', rx:'GP', c:1,
+   dose:'Deficiency treatment: 1.25mg (50,000 IU) oral monthly for 3 - 6 months (PHARMAC-funded). Maintenance: 25mcg (1000 IU) daily.',
+   form:'Tabs 25mcg (1000 IU); capsules 1.25mg (50,000 IU)',
+   notes:'Target 25-OH vitamin D over 50nmol/L (some guidelines recommend over 75nmol/L). Toxicity rare at standard doses. Combined calcium supplementation for osteoporosis prevention - assess dietary intake first.'},
+
+  // ── ANTIPARASITICS ──
+  {id:'ivermectin', name:'Ivermectin', al:['Kiloscabies','Stromectol'],
+   cat:'Antiparasitics', ind:['Scabies (treatment failures or crusted scabies)','Strongyloidiasis'],
+   f:'F', rx:'GP', c:0,
+   dose:'Scabies: 200mcg/kg oral stat; repeat in 2 weeks. Strongyloidiasis: 200mcg/kg oral daily for 2 days.',
+   form:'Tabs 3mg',
+   notes:'For scabies when topical treatment has failed or for institutional outbreaks. Always combine with topical permethrin for scabies. Crusted (Norwegian) scabies requires specialist advice. Avoid in pregnancy and in children under 15kg.'},
+
+  {id:'mebendazole', name:'Mebendazole', al:['Vermox'],
+   cat:'Antiparasitics', ind:['Threadworm','Roundworm','Hookworm'],
+   f:'F', rx:'GP', c:1,
+   dose:'Threadworm: 100mg stat; repeat in 2 weeks (treat whole household). Other nematodes: 100mg twice daily for 3 days.',
+   form:'Tabs 100mg (chewable); oral suspension 100mg/5mL',
+   notes:'Treat all household contacts simultaneously for threadworm. Good safety profile. Not first-line in pregnancy. Eggs survive in the environment for up to 2 weeks - strict hygiene measures essential.'},
+
+  // ── OPHTHALMIC & OTIC ──
+  {id:'chloramphenicol-eye', name:'Chloramphenicol (eye drops)', al:['Chlorsig'],
+   cat:'Ophthalmic & Otic', ind:['Bacterial conjunctivitis'],
+   f:'F', rx:'GP', c:1,
+   dose:'1 - 2 drops every 2 hours initially, reducing to every 4 - 6 hours as symptoms improve for 5 - 7 days. Ointment: three times daily and at bedtime.',
+   form:'Eye drops 0.5%; eye ointment 1%',
+   notes:'Note: most acute conjunctivitis is viral and does not benefit from antibiotics. Aplastic anaemia reported with systemic use; risk with topical use is extremely low. Broad-spectrum - effective against most common conjunctival pathogens.'},
+
+  {id:'latanoprost', name:'Latanoprost', al:['Xalatan'],
+   cat:'Ophthalmic & Otic', ind:['Open-angle glaucoma','Ocular hypertension'],
+   f:'F', rx:'GP', c:0,
+   dose:'1 drop in affected eye(s) once daily in the evening.',
+   form:'Eye drops 0.005%',
+   notes:'Prostaglandin analogue - most effective class for lowering IOP. Permanent iris colour change (increased pigmentation) possible. Eyelash growth. Refrigerate before opening; use within 4 weeks once opened.'},
+
+  {id:'otomize', name:'Otomize ear drops', al:[],
+   cat:'Ophthalmic & Otic', ind:['Otitis externa'],
+   f:'F', rx:'GP', c:0,
+   dose:'3 drops into affected ear three times daily for 5 - 7 days.',
+   form:'Ear drops (triamcinolone acetonide, neomycin, glacial acetic acid)',
+   notes:'Do not use if tympanic membrane perforation is suspected. Neomycin component can cause contact sensitisation with prolonged use. Acetic acid provides antifungal and antibacterial activity.'},
+
+];
+
+// ── Build category pills ──
+const catRow = document.getElementById('catRow');
+CATS.forEach(c => {
+  const btn = document.createElement('button');
+  btn.className = 'pill' + (c.id === 'all' ? ' active' : '');
+  btn.dataset.group = 'cat';
+  btn.dataset.val = c.id;
+  btn.innerHTML = c.lbl;
+  catRow.appendChild(btn);
+});
+
+// ── State ──
+let activeCat  = 'all';
+let activeFund = 'all';
+let activeRx   = 'all';
+let searchQ    = '';
+
+// ── Render cards ──
+function fundBadge(f) {
+  const labels = {F:'Funded', SA:'Special Auth', UF:'Unfunded', R:'Restricted'};
+  return `<span class="badge badge-${f}">${labels[f] || f}</span>`;
+}
+function rxBadge(rx) {
+  const labels = {GP:'GP', SPEC:'Specialist'};
+  return `<span class="badge badge-${rx}">${labels[rx] || rx}</span>`;
+}
+
+function buildCards() {
+  const grid = document.getElementById('drugGrid');
+  grid.innerHTML = '';
+  D.forEach(d => {
+    const div = document.createElement('article');
+    div.className = 'drug-card';
+    div.dataset.cat    = d.cat;
+    div.dataset.fund   = d.f;
+    div.dataset.rx     = d.rx;
+    div.dataset.common = d.c;
+    div.dataset.search = (d.name + ' ' + (d.al || []).join(' ') + ' ' + (d.ind || []).join(' ') + ' ' + d.cat + ' ' + (d.notes || '')).toLowerCase();
+
+    const alText = d.al && d.al.length ? d.al.join(', ') : '';
+    const inds   = (d.ind || []).map(i => `<span class="ind-tag">${i}</span>`).join('');
+
+    div.innerHTML = `
+      <div class="card-meta">
+        <div class="card-badges">${fundBadge(d.f)} ${rxBadge(d.rx)}</div>
+        <div class="card-cat-tag">${d.cat.replace('&', '&amp;')}</div>
+      </div>
+      <h3 class="drug-name">${d.name}</h3>
+      ${alText ? `<p class="drug-al">${alText}</p>` : ''}
+      ${inds ? `<div class="drug-inds">${inds}</div>` : ''}
+      <div class="dose-block">
+        <p class="dose-text">${d.dose}</p>
+        ${d.form ? `<p class="dose-form">${d.form}</p>` : ''}
+      </div>
+      ${d.notes ? `<p class="drug-notes">${d.notes}</p>` : ''}
+    `;
+    grid.appendChild(div);
+  });
+}
+
+function filterCards() {
+  let count = 0;
+  document.querySelectorAll('.drug-card').forEach(card => {
+    const cat    = card.dataset.cat;
+    const fund   = card.dataset.fund;
+    const rx     = card.dataset.rx;
+    const common = card.dataset.common;
+    const srch   = card.dataset.search;
+
+    const matchCat  = activeCat === 'all'    ? true
+                    : activeCat === 'common' ? common === '1'
+                    : cat === activeCat;
+    const matchFund = activeFund === 'all' || fund === activeFund;
+    const matchRx   = activeRx   === 'all' || rx   === activeRx;
+    const matchSrch = !searchQ || srch.includes(searchQ);
+
+    const visible = matchCat && matchFund && matchRx && matchSrch;
+    card.style.display = visible ? '' : 'none';
+    if (visible) count++;
+  });
+
+  document.getElementById('resultCount').textContent = count;
+
+  const grid  = document.getElementById('drugGrid');
+  const empty = grid.querySelector('.empty-state');
+  if (count === 0) {
+    if (!empty) {
+      const msg = document.createElement('p');
+      msg.className = 'empty-state';
+      msg.textContent = 'No medicines match the current filters.';
+      grid.appendChild(msg);
+    }
+  } else if (empty) {
+    empty.remove();
+  }
+}
+
+// ── Pill click handler ──
+document.addEventListener('click', e => {
+  const pill = e.target.closest('.pill');
+  if (!pill) return;
+
+  const group = pill.dataset.group;
+  const val   = pill.dataset.val;
+
+  document.querySelectorAll(`.pill[data-group="${group}"]`).forEach(p => {
+    p.classList.remove('active','active-ochre','active-sa','active-uf','active-spec');
+  });
+
+  let cls = 'active';
+  if (group === 'fund') {
+    if (val === 'SA')  cls = 'active-sa';
+    if (val === 'UF')  cls = 'active-uf';
+    if (val === 'F')   cls = 'active';
+  }
+  if (group === 'rx' && val === 'SPEC') cls = 'active-spec';
+
+  pill.classList.add(cls);
+
+  if (group === 'cat')  activeCat  = val;
+  if (group === 'fund') activeFund = val;
+  if (group === 'rx')   activeRx   = val;
+
+  filterCards();
+});
+
+// ── Search ──
+document.getElementById('searchInput').addEventListener('input', e => {
+  searchQ = e.target.value.trim().toLowerCase();
+  filterCards();
+});
+document.getElementById('clearBtn').addEventListener('click', () => {
+  document.getElementById('searchInput').value = '';
+  searchQ = '';
+  filterCards();
+});
+
+// ── Init ──
+buildCards();
+filterCards();
+</script>
+</body>
+</html>

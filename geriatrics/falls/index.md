@@ -29,6 +29,9 @@ pillar: Geriatrics
       Fracture risk should be quantified for all patients who have had a falls-related fracture and for any patient with a CFS ≥5. FRAX (with BMD input where available) and the GARVAN fracture risk calculator are both validated for use in New Zealand populations; GARVAN incorporates falls history, which is a meaningful advantage. Osteoporosis remains significantly undertreated in New Zealand following minimal trauma fracture  -  see the <a href="/geriatrics/osteoporosis/">osteoporosis page</a> for further detail.
     </p>
 
+    <p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.25rem;">❍ Patient resource</p>
+    <p><a href="/geriatrics/falls/patient-handout.html">Patient handout: Falls prevention for older adults →</a></p>
+
     <div class="topic-refs">
 
 **References**

@@ -23,6 +23,9 @@ pillar: Mental Health
 
 <p>Cannabis use disorder responds to motivational enhancement therapy and CBT; there is no approved pharmacotherapy. Methamphetamine use is a significant issue in NZ; presentations are often via crisis or via concern from family. Harm reduction, motivational interviewing, and connection to addiction services (CADS in Auckland; local DHB addiction services elsewhere) are the practical tools available.</p>
 
+<p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.25rem;">&#10022; Patient resource</p>
+<p><a href="/mental-health/addiction/patient-handout.html">Patient handout: Alcohol and drug problems &#8212; getting support in New Zealand &#8594;</a></p>
+
 <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
 
 <p style="font-size: 0.8rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em; line-height: 1.8;">

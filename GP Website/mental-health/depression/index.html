@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depression — Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+    .hero{max-width:680px;margin:0 auto;padding:2.5rem 2rem 1.75rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+    .print-bar{max-width:680px;margin:0 auto;padding:.75rem 2rem;display:flex;justify-content:flex-end}
+    .print-btn{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--rule);color:var(--ink-mute);padding:.45rem 1rem;border-radius:50px;cursor:pointer;transition:all .15s}
+    .print-btn:hover{color:var(--green);border-color:var(--green)}
+    .glance{background:var(--warm);border-radius:14px;padding:1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
+    .glance-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
+    .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+    .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
+    .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
+    .acc-item.open .chevron{transform:rotate(90deg)}
+    .acc-body{display:none;padding:1.25rem 1.4rem 1.5rem;background:var(--paper);border-top:1px solid var(--rule);font-size:.95rem;color:var(--ink-soft);line-height:1.72}
+    .acc-item.open .acc-body{display:block}
+    .acc-body p+p{margin-top:.75rem}
+    .acc-body ul,.acc-body ol{padding-left:1.25rem;margin:.5rem 0}
+    .acc-body li{margin-bottom:.3rem}
+    .data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.9rem}
+    .data-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.7rem 1rem;background:var(--deep);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+    .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:nth-child(even) td{background:var(--warm)}
+    .alert-box{background:#FDF6EE;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
+    .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
+    .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
+    .alert-box ul{padding-left:1.25rem}
+    .alert-box ul li{margin-bottom:.4rem}
+    .resources{background:var(--warm);border-radius:12px;padding:1.5rem;margin-top:2rem}
+    .resources-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+    .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
+    .resources a:hover{text-decoration:underline}
+    .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
+    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
+    .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
+    .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1.5rem 2rem 2rem}
+    .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
+    .refs-toggle:hover{color:var(--green)}
+    .refs-list{display:none;margin-top:1rem}
+    .refs-list.on{display:block}
+    .refs-list ol{padding-left:1.4rem}
+    .refs-list li{font-size:.8rem;color:var(--ink-mute);line-height:1.6;margin-bottom:.45rem}
+    .page-footer{text-align:center;font-size:.8rem;color:var(--ink-mute);padding:1.25rem 2rem 2rem;border-top:1px solid var(--rule);max-width:680px;margin:0 auto}
+    @media print{
+      .masthead-crumb,.print-bar,.refs-section,.page-footer{display:none}
+      .acc-body{display:block!important;padding:.4rem 0}
+      .acc-head{background:none!important;font-size:1rem;padding:.5rem 0;border-bottom:1px solid #ccc;border-radius:0}
+      .acc-item{border:none;margin-bottom:.5rem;border-radius:0}
+      body{font-size:.85rem}
+      .alert-box,.data-table{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/mental-health/" class="masthead-crumb">Mental Health</a>
+</header>
+
+<div class="hero">
+  <p class="kicker">❍ Mental Health</p>
+  <h1><em>Depression</em></h1>
+  <p class="hero-lead">Depression is a treatable medical condition that affects mood, energy, and thinking, lasting much longer than a bad day.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+  <div class="glance">
+    <div>
+      <p class="glance-label">Prevalence</p>
+      <p class="glance-value">~16%</p>
+      <p class="glance-desc">Lifetime prevalence in NZ adults</p>
+    </div>
+    <div>
+      <p class="glance-label">Treatable</p>
+      <p class="glance-value">>80%</p>
+      <p class="glance-desc">Respond to first-line treatment</p>
+    </div>
+    <div>
+      <p class="glance-label">Time to effect</p>
+      <p class="glance-value">2-6 wks</p>
+      <p class="glance-desc">For antidepressants to work</p>
+    </div>
+    <div>
+      <p class="glance-label">Not weakness</p>
+      <p class="glance-value">Medical</p>
+      <p class="glance-desc">Biological, not a character flaw</p>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-head">What is <em>depression</em>? <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Depression is more than just feeling sad or having a bad day. It is a persistent change in mood, energy, thinking, and physical sensations that lasts for at least two weeks and interferes with daily life. It can affect anyone, regardless of age, gender, or life circumstances.</p>
+      <p>The brain changes in depression involve imbalances in neurotransmitters like serotonin, noradrenaline, and dopamine, which are crucial for regulating mood and motivation. This is not weakness or personal failure. Depression also affects the hypothalamic-pituitary-adrenal (HPA) axis, which regulates stress responses, and can lead to changes in how the brain processes emotion and reward. Modern neuroscience shows that depression involves real biological changes alongside psychological and social factors.</p>
+      <p>Depression is not imaginary, and it is not something you can simply "think your way out of". It is a medical condition that responds to treatment. Recovery is possible for most people, and seeking help is a sign of strength, not weakness. Understanding that depression is treatable and that biological changes underlie the experience can be an important first step towards recovery.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Recognising the <em>symptoms</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Depression can show up in many different ways. Not everyone experiences all of these, and the pattern varies from person to person. The key is that symptoms are persistent, present most days, and affect your ability to function or enjoy things you normally would.</p>
+      <p><strong>Mood and interest:</strong> A persistent low mood or emptiness, or loss of interest or pleasure in activities you normally enjoy. Anhedonia, as it is called, can be particularly distressing because even things that used to bring joy feel flat or pointless.</p>
+      <p><strong>Energy and motivation:</strong> Severe fatigue or loss of energy is one of the most common symptoms. You might feel exhausted even after resting, struggle to get out of bed, or feel unable to start tasks. Motivation may vanish entirely.</p>
+      <p><strong>Sleep:</strong> Changes in sleep pattern are very common. Some people sleep much more than usual, while others have difficulty falling asleep or wake early in the morning and cannot return to sleep. Sleep disturbance can both cause and worsen depression.</p>
+      <p><strong>Appetite and weight:</strong> Loss of appetite and weight loss, or conversely, increased appetite and weight gain. Food may lose its taste or appeal.</p>
+      <p><strong>Thinking and concentration:</strong> Difficulty concentrating, making decisions, or remembering things. Thoughts may move slowly, or the mind may feel foggy. Some people experience racing thoughts or rumination.</p>
+      <p><strong>Feelings of worthlessness or guilt:</strong> Persistent feelings of worthlessness, excessive guilt about things that are not your fault, or harsh self-criticism. You might blame yourself for problems that are not in your control.</p>
+      <p><strong>Physical sensations:</strong> Unexplained body aches, headaches, digestive problems, or a general sense of physical heaviness. Pain is common and may accompany low mood.</p>
+      <p><strong>Agitation or slowing:</strong> Some people feel restless, fidgety, and unable to sit still. Others experience a noticeable slowing of movement, speech, or thinking.</p>
+      <p><strong>Thoughts of death:</strong> In severe depression, thoughts of death or self-harm may occur. These are medical symptoms, not weakness, and they respond to treatment. If you are having these thoughts, contact your GP or a crisis service immediately.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Getting a <em>diagnosis</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>A conversation with your GP is the first step. Your doctor will ask about your symptoms, how long they have been present, and how they affect your daily life. This is not a diagnosis based on a single visit but rather a discussion about your overall pattern of mood and function.</p>
+      <p>Your GP may use the PHQ-9, a simple 9-question screening tool that helps assess the severity of depression. Questions cover areas like mood, interest, sleep, energy, appetite, concentration, self-worth, and thoughts of harm. A PHQ-9 score helps guide treatment decisions, though the diagnosis is based on your overall presentation, not the score alone.</p>
+      <p>Your GP will also want to rule out physical causes of low mood. Blood tests may check thyroid function, vitamin B12, iron levels, and other markers, as conditions like anaemia, hypothyroidism, and vitamin deficiency can mimic depression. Once physical causes are excluded, the focus shifts to treatment and support.</p>
+      <p>Depression severity is often classified as mild, moderate, or severe, based on the number and impact of symptoms. Mild depression means symptoms are present and distressing but you can still manage daily tasks. Moderate depression significantly interferes with work, relationships, or self-care. Severe depression involves major dysfunction and may include thoughts of suicide or self-harm. Severity guides the intensity and type of treatment recommended.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">What <em>helps?</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Depression responds to treatment, and there is no single one-size-fits-all approach. Your GP may recommend a stepped approach, starting with the least intensive option and adding or changing treatment if needed.</p>
+      <p><strong>For mild depression:</strong> Watchful waiting combined with lifestyle changes is a reasonable first step. This means monitoring your mood while focusing on sleep, exercise, social connection, and structure. Many people with mild depression improve within a few weeks with these changes alone. Regular follow-up with your GP is important.</p>
+      <p><strong>Structured psychological therapy</strong> is highly effective for mild to moderate depression. Cognitive behavioural therapy (CBT) teaches you to recognise how your thoughts, feelings, and behaviours interact, and how to change unhelpful patterns. Behavioural activation encourages you to gradually re-engage in activities, even when motivation is low. Interpersonal therapy (IPT) focuses on relationships and life roles. Sessions are typically weekly, lasting 6 to 20 weeks depending on the approach and your response. Research shows these therapies work well<sup>3</sup>.</p>
+      <p><strong>Antidepressants</strong> are recommended for moderate to severe depression and are often combined with therapy. SSRIs (selective serotonin reuptake inhibitors) are first-line medications because they have fewer side effects than older antidepressants. Examples include sertraline, citalopram, and fluoxetine. They usually take 4 to 6 weeks to have full effect, and you need to take them consistently. Antidepressants are not addictive and do not cause euphoria in people with depression. If the first one does not suit you or does not help, alternatives are available. A combination of medication and therapy often works better than either alone for moderate-severe depression<sup>2</sup>.</p>
+      <p><strong>Exercise</strong> has strong evidence for reducing depression symptoms. Regular aerobic activity, strength training, or even brisk walking can improve mood and energy levels. The effect is comparable to medication for mild to moderate depression<sup>1</sup>. Aim for at least 30 minutes of moderate activity most days, though any movement is better than none.</p>
+      <p><strong>Sleep and stress management:</strong> Good sleep hygiene is crucial. This means keeping a regular sleep schedule, avoiding screens before bed, keeping the bedroom cool and dark, and limiting caffeine and alcohol. Stress management through mindfulness, meditation, or other relaxation techniques can also help. Poor sleep worsens depression, and depression disrupts sleep, so breaking this cycle is important.</p>
+      <p><strong>Social connection:</strong> Isolation makes depression worse. Staying connected with family and friends, even when it feels effortless, matters. Sometimes the hardest part of depression is reaching out, but connection can be therapeutic.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Getting better: what to <em>expect</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Recovery from depression is not a straight line. You may have days when you feel better, then days when symptoms return. This does not mean treatment is failing. Progress is measured in weeks and months, not days. Most people see meaningful improvement within 6 to 12 weeks of starting treatment, though some take longer.</p>
+      <p>When you start antidepressants, you might notice side effects before mood improves. Common early side effects include nausea, headache, or sleep changes. These often settle within the first week or two. Tell your GP if side effects are troublesome, as dose adjustments or switching medications can help.</p>
+      <p>It is normal to need more than one type of treatment. Someone might benefit from a combination of medication, therapy, exercise, and lifestyle changes. If the first antidepressant does not help, your GP will try others. Some people need to try several before finding the right fit.</p>
+      <p>Relapse is common, especially if depression was moderate or severe. This does not mean you have failed. Staying on medication for 6 to 9 months after recovery reduces relapse risk. Some people need longer-term treatment. If you have had multiple episodes, your GP may recommend staying on medication longer term to prevent recurrence.</p>
+      <p>Long-term wellbeing involves building resilience. This might include ongoing exercise, maintaining social connections, managing stress, addressing difficult life circumstances, and recognising early warning signs of relapse so you can seek help quickly. Many people continue with therapy skills or mindfulness even after depression has lifted, as these help prevent recurrence. Recovery is possible, and most people go on to lead full, meaningful lives with good support and treatment.</p>
+    </div>
+  </div>
+
+  <h2 class="section-h2">Treatment <em>options</em></h2>
+  <p class="section-lead">Different approaches work for different people and situations. Your GP will help you choose what is right for you.</p>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Approach</th>
+        <th>Best for</th>
+        <th>What to expect</th>
+        <th>Timeframe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Watchful waiting + lifestyle</td>
+        <td>Mild depression</td>
+        <td>Self-monitoring, focus on sleep, exercise, and social contact</td>
+        <td>4-8 weeks</td>
+      </tr>
+      <tr>
+        <td>CBT or therapy</td>
+        <td>Mild-moderate depression</td>
+        <td>6-20 weekly sessions, learn skills for managing mood</td>
+        <td>3-6 months</td>
+      </tr>
+      <tr>
+        <td>Antidepressants</td>
+        <td>Moderate-severe depression</td>
+        <td>Start at low dose, increase if needed, 4-6 weeks for full effect</td>
+        <td>6-9+ months</td>
+      </tr>
+      <tr>
+        <td>Combined medication + therapy</td>
+        <td>Moderate-severe or resistant depression</td>
+        <td>Medication plus weekly or fortnightly sessions</td>
+        <td>Ongoing, typically 6+ months</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <p class="alert-head">⚠ When to seek urgent help</p>
+    <ul>
+      <li>You are having thoughts of suicide or self-harm</li>
+      <li>You feel unable to keep yourself safe</li>
+      <li>Someone you know is in crisis and you are concerned for their safety</li>
+    </ul>
+    <p style="margin-top:.75rem;font-size:.88rem;color:var(--ink-mute)"><strong>Call or text 1737 anytime, free, 24/7:</strong> https://1737.org.nz. <strong>Lifeline:</strong> 0800 543 354. <strong>Samaritans:</strong> 0800 726 666. <strong>Emergency:</strong> Call 111.</p>
+  </div>
+
+  <div class="resources">
+    <p class="resources-head">NZ Resources</p>
+    <a href="https://1737.org.nz">1737 — call or text anytime</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Free, confidential support 24/7 for emotional distress or suicidal thoughts.</p>
+    <a href="https://mentalhealth.org.nz">Mental Health Foundation NZ</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Information, resources, and stories about mental health.</p>
+    <a href="https://www.healthline.org.nz">Healthline: 0800 611 116</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Free, 24/7 phone health advice from nurses.</p>
+    <a href="https://bpac.org.nz">BPAC NZ — for your GP</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Evidence-based best practice resources on depression treatment.</p>
+  </div>
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">References ▾</button>
+  <div class="refs-list" id="refs">
+    <ol>
+      <li>Kvam S, Kleppe CL, Nordhus IH, Hovland A. Exercise as a treatment for depression: a meta-analysis. J Affect Disord. 2016;202:67-86.</li>
+      <li>Cipriani A, Furukawa TA, Salanti G, et al. Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis. Lancet. 2018;391(10128):1357-66.</li>
+      <li>Cuijpers P, Berking M, Andersson G, Quigley L, Kleiboer A, Dobson KS. A meta-analysis of cognitive-behavioural therapy for adult depression, alone and in comparison with other treatments. Can J Psychiatry. 2013;58(7):376-85.</li>
+      <li>Ministry of Health New Zealand. New Zealand Health Survey 2023/24. Wellington: Ministry of Health; 2024.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="page-footer">
+  Written for general information only. This page does not replace a conversation with your own GP.
+</footer>
+
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+</body>
+</html>

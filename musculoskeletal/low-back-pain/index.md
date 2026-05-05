@@ -32,6 +32,10 @@ permalink: /msk/low-back-pain/
     <li><a href="https://www.acc.co.nz" target="_blank" rel="noopener">ACC: Musculoskeletal injury coverage</a></li>
     <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Back pain pathways</a></li>
   </ul>
+  <p class="aside-title" style="margin-top:1.25rem;">Patient handout</p>
+  <ul class="aside-links">
+    <li><a href="/handouts/lower-back-pain/">Low back pain — patient handout</a></li>
+  </ul>
 </aside>
 </div>
 

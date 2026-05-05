@@ -27,6 +27,9 @@ pillar: Mental Health
 
 <p>Youthline (0800 376 633), 1737, and the local PMHA youth stream are the primary pathways for community support. For acute risk, refer to the ED or contact the regional crisis team. CAMHS referral criteria vary by locality -- check your local HealthPathways for current thresholds.</p>
 
+<p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.25rem;">&#10022; Patient resource</p>
+<p><a href="/mental-health/youth/patient-handout.html">Patient handout: Youth mental health &#8212; getting help when things feel hard &#8594;</a></p>
+
 <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
 
 <p style="font-size: 0.8rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em; line-height: 1.8;">

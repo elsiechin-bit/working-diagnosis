@@ -50,6 +50,10 @@ permalink: /paediatrics/fever/
     <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Feverish child</a></li>
     <li><a href="https://www.healthline.govt.nz" target="_blank" rel="noopener">Healthline: 0800 611 116</a></li>
   </ul>
+  <p class="aside-title" style="margin-top:1.25rem;">Patient handout</p>
+  <ul class="aside-links">
+    <li><a href="/paediatrics/fever/patient-handout.html">Fever in children — patient handout</a></li>
+  </ul>
 </aside>
 </div>
 
