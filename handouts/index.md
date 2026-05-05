@@ -174,7 +174,7 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li>Fibromyalgia  -  understanding widespread pain <span class="hl-soon">coming soon</span></li>
     <li>Exercise and chronic pain  -  why keeping moving matters <span class="hl-soon">coming soon</span></li>
     <li>Ankle sprain  -  RICE, return to activity, and when to x-ray <span class="hl-soon">coming soon</span></li>
-    <li>ACC  -  understanding your cover in NZ <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/acc/">ACC  -  understanding your cover in NZ</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/m/musculoskeletal/">Health Navigator  -  Musculoskeletal</a> · <a href="https://www.acc.co.nz/im-injured/">ACC  -  I'm Injured</a> · <a href="https://arthritis.org.nz">Arthritis NZ</a></p>
 </div>
@@ -253,3 +253,19 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li>Painful periods (dysmenorrhoea)  -  causes and relief <span class="hl-soon">coming soon</span></li>
     <li>Heavy periods (menorrhagia)  -  causes and treatment options <span class="hl-soon">coming soon</span></li>
     <li>Vaginal discharge  -  what is normal, what is not <span class="hl-soon">coming soon</span>
+
+<div class="handout-section" id="general">
+  <p class="handout-section-label">❍ General Practice</p>
+  <h2>General Practice &amp; the NZ Health System</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/nz-health-system/">The New Zealand health system  -  a guide for patients</a></li>
+    <li>ACC  -  understanding your cover in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Your rights as a patient in NZ  -  the Code of Rights explained <span class="hl-soon">coming soon</span></li>
+    <li>Making a complaint about health care in NZ <span class="hl-soon">coming soon</span></li>
+    <li>Preparing for a GP appointment  -  making the most of 15 minutes <span class="hl-soon">coming soon</span></li>
+    <li>Shared decision-making  -  questions to ask before agreeing to treatment <span class="hl-soon">coming soon</span></li>
+    <li>Understanding your blood test results <span class="hl-soon">coming soon</span></li>
+    <li>Screening in NZ  -  what tests are recommended and when <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.tewhatuora.govt.nz">Health New Zealand  -  Te Whatu Ora</a> · <a href="https://healthify.nz/">Healthify NZ</a> · <a href="https://www.hdc.org.nz">Health and Disability Commissioner</a></p>
+</div>
