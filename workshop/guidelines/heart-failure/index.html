@@ -1,0 +1,338 @@
+---
+permalink: /workshop/guidelines/heart-failure/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heart failure - pharmacological management  -  Working Diagnosis</title>
+<meta name="description" content="NZ vs AU vs ESC guideline comparison for heart failure pharmacological management. Quadruple therapy pillars, PHARMAC funding status, sacubitril-valsartan, SGLT2 inhibitors, and HFpEF management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #F5F1E8;
+  --warm:       #EDE7D8;
+  --deep:       #E4DBC4;
+  --ink:        #1A1F1C;
+  --soft:       #3A4540;
+  --mute:       #6B7A75;
+  --rule:       #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --au-blue:    #1A5CAD;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px);
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+.masthead { border-bottom: 1px solid var(--rule); padding: 20px 32px; background: var(--paper); position: sticky; top: 0; z-index: 50; }
+.masthead-row { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.68rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.primary-nav a:hover { color: var(--green); }
+.primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
+
+.page-wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px 80px; }
+
+.page-header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.back-link { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); display: inline-block; margin-bottom: 24px; }
+.back-link:hover { color: var(--green); }
+.page-kicker { font-family: var(--font-m); font-size: 0.65rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
+.page-kicker::before { content: "❍ "; }
+.page-title { font-family: var(--font-d); font-weight: 500; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; }
+.page-title em { font-style: italic; color: var(--green); }
+.page-dek { font-family: var(--font-b); font-size: 1.05rem; color: var(--soft); max-width: 580px; line-height: 1.55; margin-bottom: 22px; }
+.page-meta { display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); }
+
+.div-summary { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin: 36px 0; }
+@media (max-width: 600px) { .div-summary { grid-template-columns: 1fr; } }
+.div-col { padding: 24px 28px; }
+.div-col:first-child { border-right: 1px solid var(--rule); }
+.div-col-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 7px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-agree { background: var(--green); }
+.dot-diverge { background: var(--ochre); }
+.div-list { list-style: none; padding: 0; }
+.div-list li { font-family: var(--font-b); font-size: 15px; color: var(--soft); padding: 6px 0; border-bottom: 1px solid rgba(217,209,189,.5); line-height: 1.4; }
+.div-list li:last-child { border-bottom: none; }
+
+.section-head { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 44px 0 16px; }
+.section-head::before { content: "❍ "; }
+
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--rule); margin-bottom: 44px; }
+.cmp-table { width: 100%; border-collapse: collapse; min-width: 660px; }
+.cmp-table thead th { padding: 13px 16px; text-align: left; font-family: var(--font-m); font-size: 0.56rem; letter-spacing: 1.8px; text-transform: uppercase; background: var(--warm); border-bottom: 1px solid var(--rule); }
+.cmp-table thead .th-domain { color: var(--mute); width: 148px; }
+.cmp-table thead .th-nz    { color: var(--green-deep); border-left: 3px solid var(--green); }
+.cmp-table thead .th-au    { color: var(--au-blue);    border-left: 3px solid var(--au-blue); }
+.cmp-table thead .th-int   { color: var(--soft);       border-left: 3px solid var(--rule); }
+.cmp-table tbody tr { border-top: 1px solid var(--rule); }
+.cmp-table tbody tr:nth-child(even) { background: rgba(237,231,216,.28); }
+.cmp-table tbody td { padding: 13px 16px; vertical-align: top; font-family: var(--font-b); font-size: 15px; line-height: 1.5; }
+.cmp-table .td-domain { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); line-height: 1.55; }
+.cmp-table .td-nz  { border-left: 3px solid rgba(47,107,92,.12); }
+.cmp-table .td-au  { border-left: 3px solid rgba(26,92,173,.12); }
+.cmp-table .td-int { border-left: 3px solid var(--rule); }
+.cmp-table tr.row-hi .td-nz { border-left-color: var(--ochre); background: rgba(184,113,79,.035); }
+
+.chip { display: inline-block; font-family: var(--font-m); font-size: 0.52rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 6px; margin-left: 5px; vertical-align: middle; border-radius: 2px; }
+.chip-funded     { background: rgba(47,107,92,.1);  color: var(--green-deep); }
+.chip-restricted { background: rgba(184,113,79,.12); color: var(--ochre); }
+.chip-nil        { background: rgba(140,30,30,.1);   color: #7A1C1C; }
+.chip-au         { background: rgba(26,92,173,.1);   color: var(--au-blue); }
+
+.nz-notes { background: rgba(237,231,216,.5); border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 28px 32px; margin-bottom: 32px; }
+.nz-notes-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); margin-bottom: 20px; }
+.nz-notes h3 { font-family: var(--font-d); font-weight: 500; font-size: 1rem; margin: 22px 0 8px; color: var(--ink); }
+.nz-notes h3:first-of-type { margin-top: 0; }
+.nz-notes p { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 8px; }
+.nz-notes ul { padding-left: 18px; margin-bottom: 8px; }
+.nz-notes li { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 5px; }
+
+.bottom-line { border: 1px solid var(--ink); border-left: 3px solid var(--ink); padding: 24px 28px; margin-bottom: 40px; }
+.bottom-line-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 16px; }
+.bottom-line ol { padding-left: 20px; }
+.bottom-line li { font-family: var(--font-b); font-size: 15.5px; color: var(--soft); line-height: 1.55; margin-bottom: 9px; }
+
+.sources { border-top: 1px solid var(--rule); padding-top: 28px; }
+.sources-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; }
+.sources ol { padding-left: 20px; }
+.sources li { font-family: var(--font-b); font-size: 13.5px; color: var(--mute); line-height: 1.6; margin-bottom: 6px; }
+
+.site-footer { border-top: 1px solid var(--rule); max-width: 1080px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-family: var(--font-m); font-size: 0.62rem; color: var(--mute); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Site navigation">
+      <a href="/lifestyle/">Lifestyle</a>
+      <a href="/musculoskeletal/">MSK</a>
+      <a href="/paediatrics/">Paeds</a>
+      <a href="/geriatrics/">Geriatrics</a>
+      <a href="/gynaecology/">Gynae</a>
+      <a href="/dermatology/">Derm</a>
+      <a href="/mental-health/">Mental Health</a>
+      <a href="/vaccines/">Vaccines</a>
+      <a href="/travel/">Travel</a>
+      <a href="/workshop/" class="is-current">Workbench</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <a href="/workshop/guidelines/" class="back-link">← Guideline Comparisons</a>
+    <p class="page-kicker">Cardiovascular</p>
+    <h1 class="page-title">Heart failure - <em>pharmacological management</em></h1>
+    <p class="page-dek">Quadruple therapy is now the international standard for HFrEF. The NZ story is about which of the four agents are funded, when, and whether primary care can initiate them.</p>
+    <div class="page-meta">
+      <span>Reviewed May 2026</span>
+      <span>Cardiac Society NZ / BPAC 2023</span>
+      <span>NHF Australia 2018 (updated)</span>
+      <span>ESC 2021</span>
+    </div>
+  </div>
+
+  <!-- Scope note -->
+  <p style="font-family: var(--font-m); font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); margin: 28px 0 -8px;">Scope: Pharmacological management of heart failure with reduced ejection fraction (HFrEF, LVEF ≤40%) and mildly reduced/preserved ejection fraction (HFmrEF/HFpEF) in adults. Does not cover acute decompensated heart failure or device therapy.</p>
+
+  <!-- Agree / Diverge -->
+  <div class="div-summary">
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-agree"></span>Where they agree</p>
+      <ul class="div-list">
+        <li>All guidelines recommend echocardiography to confirm diagnosis and classify HF by LVEF</li>
+        <li>Diuretics (furosemide) for symptom relief of congestion - not disease-modifying but essential for QoL</li>
+        <li>All four quadruple therapy pillars are recommended for HFrEF: (1) ACEi or ARNi (sacubitril-valsartan), (2) evidence-based beta-blocker (bisoprolol, carvedilol, or metoprolol succinate), (3) mineralocorticoid receptor antagonist (MRA: spironolactone or eplerenone), (4) SGLT2 inhibitor (dapagliflozin or empagliflozin)</li>
+        <li>These four drug classes reduce mortality and hospitalisation independently; the combination is additive</li>
+        <li>Target-dose titration is important - under-dosing is common and suboptimal</li>
+        <li>Cardiac rehabilitation improves outcomes and QoL for stable HF patients</li>
+      </ul>
+    </div>
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-diverge"></span>Where they diverge</p>
+      <ul class="div-list">
+        <li>Sacubitril-valsartan (Entresto): ESC 2021 recommends replacing ACEi with sacubitril-valsartan in symptomatic HFrEF on optimised background therapy. PHARMAC funds with Special Authority but criteria are restrictive</li>
+        <li>SGLT2 inhibitors: PHARMAC funding expanded in 2023-2024 to cover HFrEF, HFmrEF, and HFpEF - check current SA criteria</li>
+        <li>HFpEF management: limited disease-modifying pharmacotherapy beyond SGLT2i and diuretics; major unmet need</li>
+        <li>Ivabradine: ESC recommends for HFrEF with HR ≥70 bpm on maximum beta-blocker. PHARMAC funding: check current status</li>
+        <li>Vericiguat: ESC 2021 gives Class IIb. Not funded in NZ</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="section-head">Comparison</p>
+  <div class="cmp-wrap">
+    <table class="cmp-table" aria-label="Guideline comparison: heart failure pharmacological management">
+      <thead>
+        <tr>
+          <th class="th-domain">Domain</th>
+          <th class="th-nz">NZ  -  BPAC / Cardiac Society 2023</th>
+          <th class="th-au">AU  -  NHF 2018 (updated)</th>
+          <th class="th-int">International  -  ESC 2021</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="td-domain">Diagnosis and classification</td>
+          <td class="td-nz">
+            Echocardiography required to confirm and classify. HFrEF: LVEF ≤40%. HFmrEF: LVEF 41-49%. HFpEF: LVEF ≥50% with evidence of structural/functional abnormality and elevated BNP.<br><br>
+            BNP or NT-proBNP: useful for diagnosis in uncertain cases and for monitoring. BNP &lt;35 pg/mL or NT-proBNP &lt;125 pg/mL makes HF unlikely in non-acute setting.<span class="chip chip-funded">PHARMAC funds</span><br><br>
+            Refer for echocardiography - available via cardiology or community echocardiography services.
+          </td>
+          <td class="td-au">Consistent. NHF Australia recommends echocardiography for all patients with suspected HF. BNP/NT-proBNP as a gatekeeper before echo in uncertain cases.</td>
+          <td class="td-int">Consistent. ESC 2021 updated HFmrEF as a distinct category (LVEF 41-49%); previously called HFmEF. Elevated natriuretic peptides (BNP &gt;35 or NT-proBNP &gt;125) required for HFpEF diagnosis in non-acute setting.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">ACEi/ARNi - first pillar</td>
+          <td class="td-nz">
+            ACEi (ramipril, lisinopril - PHARMAC-funded) as initial therapy in all HFrEF. Target maximum tolerated dose (ramipril up to 10 mg daily; lisinopril up to 35 mg daily).<span class="chip chip-funded">Funded</span><br><br>
+            Sacubitril-valsartan (Entresto): funded with Special Authority - broadly: LVEF ≤40%, NYHA Class II-IV, already on optimised ACEi/ARB + beta-blocker + MRA, with specific eGFR and potassium criteria.<span class="chip chip-restricted">SA required</span> Confirm current PHARMAC SA criteria before prescribing. Transition from ACEi to sacubitril-valsartan requires 36-hour washout to avoid angioedema. Do not use ACEi + sacubitril-valsartan simultaneously.
+          </td>
+          <td class="td-au">ACEi first-line; sacubitril-valsartan PBS-listed for HFrEF with similar background therapy requirement. Transition protocol same as international.<span class="chip chip-au">PBS</span></td>
+          <td class="td-int">ACEi for all HFrEF patients (Class IA). Replace with sacubitril-valsartan in patients who remain symptomatic on optimised ACEi + beta-blocker + MRA (Class IB). The PARADIGM-HF trial showed sacubitril-valsartan reduced CV death and HF hospitalisation by 20% vs enalapril. Some guidelines now advocate initiating sacubitril-valsartan as first-line (bypassing ACEi) - not yet standard NZ/AU practice.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Beta-blocker - second pillar</td>
+          <td class="td-nz">
+            Three evidence-based beta-blockers: bisoprolol (1.25 mg → 10 mg daily), carvedilol (3.125 mg BD → 25 mg BD), metoprolol succinate (12.5-25 mg → 200 mg daily). PHARMAC funds all three.<span class="chip chip-funded">Funded</span><br><br>
+            Start LOW dose and titrate slowly (increase every 2 weeks if tolerated). Initiate only when patient is clinically stable and euvolaemic - do not start during acute decompensation. Common mistake: stopping beta-blocker during decompensation - continue unless haemodynamically compromised (significant bradycardia, severe hypotension, or cardiogenic shock).
+          </td>
+          <td class="td-au">Consistent agent selection. Same titration principles.<span class="chip chip-au">PBS</span></td>
+          <td class="td-int">Class IA for all HFrEF. Same three agents. Target doses matter: mortality benefit is dose-dependent. Do not stop beta-blocker during mild-moderate decompensation.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">MRA - third pillar</td>
+          <td class="td-nz">
+            Spironolactone 25-50 mg daily (PHARMAC-funded). Eplerenone (PHARMAC-funded with SA for post-MI HF): higher cost, less gynaecomastia.<span class="chip chip-funded">Funded</span><br><br>
+            Monitor potassium and renal function closely - hyperkalaemia is the key risk (check at 1 week, 1 month, then 3-6 monthly). Avoid if eGFR &lt;30 or K+ ≥5.0 mmol/L. The RALES trial (spironolactone) and EMPHASIS-HF (eplerenone) established mortality benefit.
+          </td>
+          <td class="td-au">Consistent. Spironolactone preferred for most; eplerenone for those with gynaecomastia or post-MI HF.<span class="chip chip-au">PBS</span></td>
+          <td class="td-int">MRA recommended for all HFrEF patients tolerating ACEi/ARB and beta-blocker (Class IA). K+ and creatinine monitoring mandatory. Finerenone (non-steroidal MRA) has emerging data in HF but is currently primarily used in T2D + CKD; not currently in mainstream HF guidelines.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">SGLT2 inhibitor - fourth pillar</td>
+          <td class="td-nz">
+            Dapagliflozin is PHARMAC-funded for HF - confirm current Special Authority criteria. As of 2023-2024, SA has been broadened beyond HFrEF to include HFmrEF and HFpEF based on DELIVER trial evidence.<span class="chip chip-restricted">SA required</span><br><br>
+            Empagliflozin has evidence for HFrEF (EMPEROR-Reduced) and HFpEF (EMPEROR-Preserved) - confirm PHARMAC funding status for HF indication separately from the T2D indication. SGLT2i benefit in HF is independent of diabetes status - these drugs reduce HF hospitalisation and CV death in patients without diabetes.
+          </td>
+          <td class="td-au">Both dapagliflozin and empagliflozin PBS-listed for HF indications (HFrEF and expanded to HFpEF based on DELIVER/EMPEROR-Preserved). No diabetes diagnosis required for HF indication.<span class="chip chip-au">PBS</span></td>
+          <td class="td-int">Dapagliflozin and empagliflozin recommended for HFrEF (Class IA) based on DAPA-HF and EMPEROR-Reduced. Subsequent HFpEF trials (DELIVER, EMPEROR-Preserved) led to Class IIa recommendation for SGLT2i in HFpEF/HFmrEF in focused 2023 update. The mechanism in HF appears independent of glycaemic effect - haemodynamic and direct myocardial effects.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">HFpEF management</td>
+          <td class="td-nz">
+            Diuretics for congestion. Treat underlying conditions (hypertension, AF, diabetes, obesity, sleep apnoea) aggressively - these drive HFpEF.<br><br>
+            SGLT2i (dapagliflozin): check current SA criteria.<span class="chip chip-restricted">Check SA criteria</span><br><br>
+            No disease-modifying pharmacotherapy with unequivocal Class I evidence beyond SGLT2i. Spironolactone has modest evidence (TOPCAT trial was positive in Americas subgroup but overall mixed). Avoid ACEi/ARB as disease-modifying therapy in isolated HFpEF (no mortality benefit).
+          </td>
+          <td class="td-au">Consistent. SGLT2i for HFpEF is the major new addition. Spironolactone considered in selected cases.</td>
+          <td class="td-int">SGLT2i receive a IIa recommendation for HFpEF (updated from ESC 2021 where no therapy had a Class I indication for HFpEF). This is the most significant recent change in HFpEF management. Treat underlying conditions aggressively.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Initiation in primary care vs secondary care</td>
+          <td class="td-nz">
+            Most HF patients in NZ are diagnosed in hospital or cardiology outpatient setting. Primary care role: titration of therapy, monitoring (U&E, eGFR, BP), managing decompensations, coordinating specialist review, and cardiac rehabilitation referral.<br><br>
+            BPAC 2023 guidance supports GP initiation of SGLT2i and sacubitril-valsartan if SA criteria are met and cardiologist has confirmed diagnosis and initiated the drug class. Annual or 6-monthly review for stable HF is appropriate in primary care.
+          </td>
+          <td class="td-au">Similar shared-care model. GPs often manage stable, optimised HF patients; specialist review for new diagnosis and drug initiation.</td>
+          <td class="td-int">No specific primary/secondary care allocation - titration and monitoring often occur in specialist HF clinics.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-head">NZ clinical context</p>
+  <div class="nz-notes">
+    <p class="nz-notes-label">Quadruple therapy in NZ: what's funded, when to initiate, and what to check</p>
+
+    <h3>The practical NZ quadruple therapy sequence</h3>
+    <p>NZ's HF pharmacotherapy landscape has been substantially updated in recent years. The four pillars of HFrEF management are now all accessible - but three of them require Special Authority or at least SA verification.</p>
+    <ul>
+      <li><strong>Step 1:</strong> Start ACEi (ramipril 1.25-2.5 mg BD, titrate to 5-10 mg BD) AND bisoprolol (1.25 mg daily, titrate to 10 mg) simultaneously or near-simultaneously - evidence supports starting both classes early in parallel rather than sequentially</li>
+      <li><strong>Step 2:</strong> Add spironolactone 25 mg daily (check K+ and eGFR first) once patient is stable on ACEi and beta-blocker</li>
+      <li><strong>Step 3:</strong> Check PHARMAC SA criteria for dapagliflozin (HF indication) and initiate if criteria met - this is now feasible in primary care for patients with confirmed HFrEF/HFmrEF/HFpEF on background therapy</li>
+      <li><strong>Step 4:</strong> Consider transition to sacubitril-valsartan: check SA criteria, stop ACEi, wait 36 hours, then start sacubitril-valsartan 24/26 mg BD and titrate</li>
+    </ul>
+
+    <h3>Monitoring at each visit</h3>
+    <p>BP, HR, weight (fluid status), eGFR, K+, Na+. The most common adverse effects requiring dose adjustment: hypotension (ACEi/ARNi, beta-blocker), hyperkalaemia (MRA, ACEi), bradycardia (beta-blocker), volume depletion (SGLT2i in hot weather or illness).</p>
+
+    <h3>When to refer acutely</h3>
+    <p>Features of decompensation - increasing dyspnoea, orthopnoea, weight gain &gt;2 kg in 2 days, new S3, worsening peripheral oedema. Most decompensations can be managed with furosemide dose increase and close telephone follow-up, but severe decompensation requires hospital.</p>
+
+    <h3>Sick day rules</h3>
+    <p>Advise patients to hold ACEi/ARB, MRA, and SGLT2i (but NOT beta-blocker) if severely dehydrated, vomiting, or with acute kidney injury - the "sick day" rule. This is especially important with SGLT2i (euglycaemic DKA risk; Fournier's gangrene risk though rare).</p>
+
+    <h3>Sacubitril-valsartan initiation in primary care</h3>
+    <p>If SA criteria are met and the cardiologist has confirmed the diagnosis, GPs can transition patients from ACEi to sacubitril-valsartan. The key is: stop ACEi, wait 36 hours to prevent angioedema, then start sacubitril-valsartan 24/26 mg BD. Do not overlap ACEi and sacubitril-valsartan. Titrate up by doubling the dose every 2-4 weeks to target 97/103 mg BD.</p>
+
+    <h3>SGLT2 inhibitor benefit is independent of diabetes</h3>
+    <p>Dapagliflozin and empagliflozin reduce hospitalisation and CV mortality in HF patients without diabetes. Do not limit SGLT2i consideration to patients with concurrent diabetes. The HF benefit is a distinct indication from the diabetes indication.</p>
+  </div>
+
+  <p class="section-head">Bottom line for NZ practice</p>
+  <div class="bottom-line">
+    <p class="bottom-line-label">What this means in the consulting room</p>
+    <ol>
+      <li>All four quadruple therapy pillars are now funded or accessible in NZ for HFrEF - ACEi/ramipril (funded), bisoprolol (funded), spironolactone (funded), dapagliflozin (funded with SA). Check PHARMAC SA for dapagliflozin HF indication at every HF review.</li>
+      <li>Start ACEi and beta-blocker early and together (or in close sequence) rather than waiting to reach maximum dose of one before starting the other - trial data supports this approach.</li>
+      <li>For patients on ACEi + beta-blocker + MRA who remain symptomatic, check sacubitril-valsartan SA criteria. If met, the transition from ACEi to sacubitril-valsartan reduces CV death and hospitalisation by ~20%.</li>
+      <li>SGLT2i benefit in HF is independent of diabetes - do not exclude patients without T2D from dapagliflozin consideration. This is a distinct HF indication.</li>
+      <li>For HFpEF: treat underlying drivers aggressively (hypertension, AF, obesity, sleep apnoea), check current SA criteria for dapagliflozin (HFpEF indication), and diurese for symptoms. This is the area with the fewest treatment options and the most need.</li>
+    </ol>
+  </div>
+
+  <div class="sources">
+    <p class="sources-label">Sources</p>
+    <ol>
+      <li>McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.</li>
+      <li>McMurray JJV, Solomon SD, Inzucchi SE, et al. Dapagliflozin in patients with heart failure and reduced ejection fraction (DAPA-HF). N Engl J Med. 2019;381(21):1995-2008.</li>
+      <li>Packer M, Anker SD, Butler J, et al. Cardiovascular and renal outcomes with empagliflozin in heart failure (EMPEROR-Reduced). N Engl J Med. 2020;383(15):1413-1424.</li>
+      <li>Solomon SD, McMurray JJV, Claggett B, et al. Dapagliflozin in heart failure with mildly reduced or preserved ejection fraction (DELIVER). N Engl J Med. 2022;387(12):1089-1098.</li>
+      <li>McMurray JJV, Packer M, Desai AS, et al. Angiotensin-neprilysin inhibition versus enalapril in heart failure (PARADIGM-HF). N Engl J Med. 2014;371(11):993-1004.</li>
+      <li>Zannad F, McMurray JJV, Krum H, et al. Eplerenone in patients with systolic heart failure and mild symptoms (EMPHASIS-HF). N Engl J Med. 2011;364(1):11-21.</li>
+      <li>Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717.</li>
+    </ol>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <span class="footer-brand">Working Diagnosis · workingdiagnosis.xyz</span>
+</footer>
+
+</body>
+</html>

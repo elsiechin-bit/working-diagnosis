@@ -6,8 +6,6 @@ description: How a GP's scribbled notes became a website.
 
 ❍ *about this site*
 
-# About
-
 Over the years I've accumulated a substantial volume of clinical notes, half-read articles, and half-formed ideas scattered across my Notes app (entries often titled "thyroid??" or "follow up re: ankle issue"), a desktop folder optimistically labelled STUDY, assorted papers in the glovebox, and an ever-expanding collection of browser tabs I fully intended to revisit. The habit of capturing things was sound. The filing system was not.
 
 At some point the volume became its own problem. Notes from a Monday clinic were indistinguishable from notes from six months ago; useful references were buried under layers of slightly less useful ones; and the glovebox situation had gotten out of hand. Something needed to change.
