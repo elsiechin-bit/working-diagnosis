@@ -49,6 +49,20 @@
     .film-caveat{font-family:'JetBrains Mono',monospace;font-size:.64rem;color:var(--ink-mute);margin-top:.85rem;padding-top:.7rem;border-top:1px solid var(--rule);line-height:1.55}
     .film-caveat::before{content:"caveat — ";text-transform:uppercase;letter-spacing:.08em;color:var(--ochre)}
 
+    /* eponym cards */
+    .eponym-grid{display:flex;flex-direction:column;gap:1.25rem}
+    .eponym-card{border:1px solid var(--rule);border-radius:8px;padding:1.4rem 1.6rem;background:var(--paper)}
+    .eponym-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.9rem;flex-wrap:wrap}
+    .eponym-person{flex:1}
+    .eponym-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;color:var(--ink);letter-spacing:-.01em;margin-bottom:.15rem}
+    .eponym-dates{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.06em;color:var(--ink-mute)}
+    .eponym-badges{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem;flex-shrink:0}
+    .eponym-condition{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:var(--green-deep);background:rgba(47,107,92,.08);border:1px solid rgba(47,107,92,.2);border-radius:3px;padding:2px 8px;white-space:nowrap}
+    .eponym-renamed{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ochre);background:rgba(184,113,79,.08);border:1px solid rgba(184,113,79,.25);border-radius:3px;padding:2px 8px;white-space:nowrap}
+    .eponym-body{font-size:.93rem;color:var(--ink-soft);line-height:1.7}
+    .eponym-body p+p{margin-top:.65rem}
+    .eponym-hook{font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:var(--ink);border-left:2px solid var(--green);padding-left:.85rem;margin-bottom:.85rem;line-height:1.5}
+
     /* stub grid */
     .stubs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
     @media(max-width:580px){.stubs{grid-template-columns:1fr}}
