@@ -269,3 +269,22 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.tewhatuora.govt.nz">Health New Zealand  -  Te Whatu Ora</a> · <a href="https://healthify.nz/">Healthify NZ</a> · <a href="https://www.hdc.org.nz">Health and Disability Commissioner</a></p>
 </div>
+
+
+<div class="handout-section" id="geriatrics">
+  <p class="handout-section-label">❍ <a href="/geriatrics/">Geriatrics pillar →</a></p>
+  <h2>Geriatrics &amp; Older Adult Health</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/respite-care/">Respite care in NZ  -  funding, options, and how to access it</a></li>
+    <li>Falls prevention at home  -  practical steps that work <span class="hl-soon">coming soon</span></li>
+    <li>Dementia  -  understanding the diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Dementia  -  practical guidance for families and carers <span class="hl-soon">coming soon</span></li>
+    <li>Moving into a rest home  -  what to expect and how funding works <span class="hl-soon">coming soon</span></li>
+    <li>Advance care planning  -  making your wishes known <span class="hl-soon">coming soon</span></li>
+    <li>Polypharmacy  -  why your medicines are being reviewed <span class="hl-soon">coming soon</span></li>
+    <li>Frailty  -  what it means and what helps <span class="hl-soon">coming soon</span></li>
+    <li>Driving and older age  -  when to have the conversation <span class="hl-soon">coming soon</span></li>
+    <li>Urinary incontinence in older adults  -  it is common and treatable <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.ageconcern.org.nz">Age Concern NZ</a> · <a href="https://www.alzheimers.org.nz">Alzheimer's NZ</a> · <a href="https://www.carersnz.org.nz">Carers NZ</a> · <a href="https://www.grey.org.nz">Grey Power NZ</a></p>
+</div>
