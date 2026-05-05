@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osteoporosis | Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+    .hero{max-width:680px;margin:0 auto;padding:2.5rem 2rem 1.75rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+    .print-bar{max-width:680px;margin:0 auto;padding:.75rem 2rem;display:flex;justify-content:flex-end}
+    .print-btn{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--rule);color:var(--ink-mute);padding:.45rem 1rem;border-radius:50px;cursor:pointer;transition:all .15s}
+    .print-btn:hover{color:var(--green);border-color:var(--green)}
+    .glance{background:var(--warm);border-radius:14px;padding:1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
+    .glance-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
+    .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+    .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
+    .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
+    .acc-item.open .chevron{transform:rotate(90deg)}
+    .acc-body{display:none;padding:1.25rem 1.4rem 1.5rem;background:var(--paper);border-top:1px solid var(--rule);font-size:.95rem;color:var(--ink-soft);line-height:1.72}
+    .acc-item.open .acc-body{display:block}
+    .acc-body p+p{margin-top:.75rem}
+    .acc-body ul,.acc-body ol{padding-left:1.25rem;margin:.5rem 0}
+    .acc-body li{margin-bottom:.3rem}
+    .data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.9rem}
+    .data-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.7rem 1rem;background:var(--deep);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+    .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:nth-child(even) td{background:var(--warm)}
+    .alert-box{background:#FDF6EE;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
+    .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
+    .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
+    .alert-box ul{padding-left:1.25rem}
+    .alert-box ul li{margin-bottom:.4rem}
+    .resources{background:var(--warm);border-radius:12px;padding:1.5rem;margin-top:2rem}
+    .resources-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+    .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
+    .resources a:hover{text-decoration:underline}
+    .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
+    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
+    .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
+    .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1.5rem 2rem 2rem}
+    .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
+    .refs-toggle:hover{color:var(--green)}
+    .refs-list{display:none;margin-top:1rem}
+    .refs-list.on{display:block}
+    .refs-list ol{padding-left:1.4rem}
+    .refs-list li{font-size:.8rem;color:var(--ink-mute);line-height:1.6;margin-bottom:.45rem}
+    .page-footer{text-align:center;font-size:.8rem;color:var(--ink-mute);padding:1.25rem 2rem 2rem;border-top:1px solid var(--rule);max-width:680px;margin:0 auto}
+    @media print{
+      .masthead-crumb,.print-bar,.refs-section,.page-footer{display:none}
+      .acc-body{display:block!important;padding:.4rem 0}
+      .acc-head{background:none!important;font-size:1rem;padding:.5rem 0;border-bottom:1px solid #ccc;border-radius:0}
+      .acc-item{border:none;margin-bottom:.5rem;border-radius:0}
+      body{font-size:.85rem}
+      .alert-box,.data-table{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/geriatrics/" class="masthead-crumb">Geriatrics</a>
+</header>
+
+<div class="hero">
+  <div class="kicker">❍ Bone Health &amp; Ageing</div>
+  <h1>Osteoporosis: <em>Assessment &amp; Management</em></h1>
+  <p class="hero-lead">Osteoporosis is common, underdiagnosed, and undertreated. It is also highly amenable to intervention. The goal is not just to increase bone density but to prevent the fractures that cause loss of independence, chronic pain, and, in the case of hip fracture, substantial mortality.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+
+  <div class="glance">
+    <div>
+      <div class="glance-label">Lifetime risk</div>
+      <div class="glance-value">1 in 3</div>
+      <div class="glance-desc">Women over 50 will have an osteoporotic fracture; 1 in 5 men</div>
+    </div>
+    <div>
+      <div class="glance-label">Hip fracture</div>
+      <div class="glance-value">20&ndash;30%</div>
+      <div class="glance-desc">One-year mortality following hip fracture in older adults</div>
+    </div>
+    <div>
+      <div class="glance-label">Treatment gap</div>
+      <div class="glance-value">&lt;20%</div>
+      <div class="glance-desc">Of patients who fracture receive appropriate investigation and treatment</div>
+    </div>
+    <div>
+      <div class="glance-label">Alendronate</div>
+      <div class="glance-value">~45%</div>
+      <div class="glance-desc">Relative risk reduction in vertebral fracture with funded first-line therapy</div>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-head">
+      What is osteoporosis?
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Osteoporosis is a systemic skeletal disease characterised by reduced bone mass and deterioration of bone microarchitecture, resulting in increased fragility and susceptibility to fracture. It is diagnosed either by bone mineral density (BMD) measurement or, clinically, by the occurrence of a fragility fracture (a fracture resulting from a force that would not normally break a healthy bone, such as a fall from standing height or less).</p>
+      <p>The World Health Organization defines osteoporosis by a T-score of &minus;2.5 or below on dual-energy X-ray absorptiometry (DEXA) scanning. The T-score expresses BMD as the number of standard deviations below or above the mean of a young adult reference population. A T-score between &minus;1.0 and &minus;2.5 is called osteopenia (low bone mass). It is important to note that most osteoporotic fractures actually occur in people with osteopenia, not osteoporosis, because that category contains far more people. This is why absolute fracture risk assessment using FRAX is more useful than T-score alone for treatment decisions.</p>
+      <p>Bone mass peaks in the late twenties and then gradually declines. In women, the rate of bone loss accelerates significantly following menopause due to loss of oestrogen's protective effect on bone turnover. Men lose bone more slowly and have a higher peak bone mass to begin with, which is why osteoporosis and fractures present roughly a decade later in men on average. However, post-fracture mortality in men is higher than in women.</p>
+      <p>Osteoporosis should be distinguished from osteomalacia, which is a failure of bone mineralisation (most commonly due to severe vitamin D deficiency) rather than loss of bone mass. Both can co-exist in older patients with poor nutrition and sun exposure.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Risk factors and who to assess
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Opportunistic case-finding in primary care is the realistic approach in New Zealand, as population screening programmes do not exist. The following groups warrant formal assessment.</p>
+      <p><strong>Strongest indications for DEXA and/or FRAX:</strong></p>
+      <ul>
+        <li>Any previous fragility fracture (the single strongest predictor of future fracture)</li>
+        <li>Long-term glucocorticoid use (prednisolone &ge;5 mg/day for &ge;3 months or equivalent)</li>
+        <li>Postmenopausal women aged 50 and over with additional clinical risk factors</li>
+        <li>Men aged 50 and over with additional clinical risk factors</li>
+        <li>Premature menopause (before age 45) or prolonged hypogonadism in men</li>
+      </ul>
+      <p><strong>Clinical risk factors incorporated in FRAX:</strong> age, female sex, low body mass index, parental history of hip fracture, current smoking, alcohol intake of three or more units per day, rheumatoid arthritis, and secondary causes of osteoporosis.</p>
+      <p><strong>Secondary causes to consider:</strong> malabsorption syndromes (coeliac disease, inflammatory bowel disease, bariatric surgery), chronic liver or kidney disease, hyperparathyroidism, hyperthyroidism, type 1 diabetes, prolonged immobility, haematological malignancy (particularly myeloma in older patients), and medications including aromatase inhibitors, androgen deprivation therapy, proton pump inhibitors with long-term use, antiepileptics (particularly enzyme-inducing agents), and high-dose medroxyprogesterone.</p>
+      <p>A useful clinical prompt: any patient presenting with a wrist, vertebral, or hip fracture following a low-energy mechanism deserves systematic assessment regardless of age. Vertebral fractures are commonly silent and may be identified incidentally on chest or abdominal imaging. Height loss of more than 4 cm from peak height, or new thoracic kyphosis, should also prompt assessment.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Diagnosis: DEXA and FRAX
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p><strong>DEXA scanning</strong> is the reference standard for BMD measurement. In New Zealand, DEXA is publicly funded for patients meeting specific criteria, including postmenopausal women over 50 with clinical risk factors, anyone with a fragility fracture, men over 50 with risk factors, and patients on long-term glucocorticoids. Scans are reported at the lumbar spine (L1-L4) and hip (total hip and femoral neck), with the lowest T-score at any site used for diagnosis.</p>
+      <p>The Z-score (standard deviations from an age-matched reference) is also reported. A Z-score below &minus;2.0 is below the expected range for age and should prompt a search for secondary causes of bone loss, regardless of the T-score.</p>
+      <p><strong>FRAX (WHO Fracture Risk Assessment Tool)</strong> calculates the 10-year probability of a major osteoporotic fracture (spine, forearm, hip, or proximal humerus) and of hip fracture specifically. It can be used with or without BMD, which makes it valuable as a screening step before deciding who needs DEXA. In New Zealand, the online tool at shef.ac.uk/FRAX should be used with the New Zealand country reference data.</p>
+      <p>PHARMAC and BPAC NZ guidance suggests treatment is warranted when the 10-year probability of a major osteoporotic fracture is &ge;20%, or hip fracture is &ge;3%, based on US NOF thresholds. However, clinical judgement matters: someone with a prior hip fracture should receive treatment without waiting for a FRAX calculation to confirm risk. Local HealthPathways guidance should be consulted for Canterbury and other regional thresholds, which may vary.</p>
+      <p>FRAX intentionally underestimates risk in certain situations: it does not account for falls history, does not differentiate between low and high glucocorticoid doses, and does not capture the fracture risk amplification of recent fracture (within the last one to two years). Adjust your clinical impression accordingly.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Baseline investigations
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Before initiating treatment, a basic secondary-cause workup is appropriate. The yield from routine investigations is meaningful: clinically significant secondary causes are found in around 30 to 40% of patients with apparent primary osteoporosis when systematically investigated.</p>
+      <p><strong>Recommended baseline bloods:</strong></p>
+      <ul>
+        <li>Full blood count (anaemia or lymphocytosis may suggest haematological cause)</li>
+        <li>Erythrocyte sedimentation rate or CRP (inflammatory disease, myeloma)</li>
+        <li>Calcium, phosphate, alkaline phosphatase (hyperparathyroidism, osteomalacia, Paget's)</li>
+        <li>Parathyroid hormone (if calcium abnormal or high clinical suspicion)</li>
+        <li>25-hydroxyvitamin D (treat deficiency before starting bisphosphonates)</li>
+        <li>Renal function and electrolytes (required before bisphosphonates; contraindicated if eGFR &lt;35 mL/min/1.73m&sup2;)</li>
+        <li>Liver function tests</li>
+        <li>Thyroid-stimulating hormone</li>
+        <li>Serum protein electrophoresis in patients over 60 (to exclude myeloma)</li>
+      </ul>
+      <p><strong>Consider additionally:</strong> testosterone and LH/FSH in men with suspected hypogonadism; tissue transglutaminase IgA antibody for coeliac disease in those with low BMI or GI symptoms; 24-hour urine calcium if hypercalciuria is suspected.</p>
+      <p>Vitamin D status deserves particular attention in New Zealand's older population. Deficiency is common, especially in residential care, in those with limited sun exposure, and in Maori and Pacific peoples with darker skin pigmentation. Severe vitamin D deficiency causes osteomalacia and produces a picture that can look similar to osteoporosis on DEXA but responds to vitamin D replacement, not bisphosphonates. Correct vitamin D deficiency before initiating bisphosphonate therapy.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Treatment: pharmacological options
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p><strong>Bisphosphonates</strong> are first-line treatment in New Zealand and are funded by PHARMAC. They inhibit osteoclast-mediated bone resorption and have the most robust evidence base for fracture prevention of any class.</p>
+      <p>Alendronate sodium 70 mg weekly is the standard first-line agent. It reduces vertebral fracture risk by approximately 45% and hip fracture risk by approximately 40% relative to placebo in high-risk patients. It must be taken correctly to minimise the risk of oesophageal irritation: taken first thing in the morning, on an empty stomach, with a full glass of water, remaining upright and not eating or drinking anything else for at least 30 minutes afterwards. It is contraindicated in active upper GI disease, oesophageal abnormalities impairing transit, and renal impairment with eGFR below 35.</p>
+      <p>Risedronate 35 mg weekly is an alternative for patients who cannot tolerate alendronate.</p>
+      <p>Zoledronate 5 mg intravenously once yearly is funded in New Zealand for patients who are unable to tolerate oral bisphosphonates or have adherence issues with weekly oral dosing. It is also the preferred agent post-hip fracture because it can be administered in hospital and has been shown to reduce re-fracture risk and all-cause mortality in that setting. Renal function must be checked before each infusion; transient flu-like symptoms (the acute phase reaction) are common after the first infusion and can be ameliorated with paracetamol.</p>
+      <p>Denosumab 60 mg subcutaneous injection every six months is funded in New Zealand for postmenopausal women with a T-score of &minus;2.5 or below and a previous osteoporotic fracture, or for those intolerant of bisphosphonates with a T-score of &minus;3.0 or below. It is a RANK ligand inhibitor that works by a different mechanism and does not require renal dose adjustment, making it useful in significant renal impairment. Crucially, denosumab must not be stopped abruptly: cessation without transitioning to a bisphosphonate results in rapid bone loss and rebound vertebral fractures within 12 to 18 months. If denosumab is to be discontinued, transition to a bisphosphonate is mandatory.</p>
+      <p>Teriparatide (an anabolic agent, recombinant PTH1-34) is funded in New Zealand only for patients with severe osteoporosis with multiple vertebral fractures and contraindications to or failure of bisphosphonate therapy. It requires daily subcutaneous injection for up to 24 months and is followed by antiresorptive therapy to consolidate the gains in bone mass.</p>
+      <p><strong>Bisphosphonate drug holidays</strong> are recommended after five years of oral bisphosphonate therapy (or three years of IV zoledronate) in lower-risk patients, because the risk of rare adverse effects (atypical femoral fractures) increases with prolonged use. Higher-risk patients (T-score below &minus;2.5, prior hip or vertebral fracture) should generally continue. Reassess at the five-year mark with DEXA and FRAX.</p>
+      <p><strong>Rare but serious adverse effects</strong> of bisphosphonates include osteonecrosis of the jaw (ONJ), which is predominantly associated with high-dose intravenous bisphosphonates in oncology patients rather than with weekly oral doses used in osteoporosis. The absolute risk with osteoporosis doses is very low (estimated 1 in 10,000 to 1 in 100,000 patient-years). Atypical subtrochanteric femoral fractures are also rare but increase with prolonged use beyond five to ten years. Patients should be advised to report thigh or groin pain, which can be a prodrome. These risks are substantially outweighed by the fracture prevention benefits in indicated patients.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Calcium and vitamin D
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Calcium and vitamin D are cofactors in bone health and are not standalone osteoporosis treatments. They should be used to correct deficiency and ensure adequate substrate for bone mineralisation, particularly when pharmacological treatment is initiated.</p>
+      <p>Adequate calcium intake is important across the lifespan. For adults over 50, dietary calcium of around 1200 mg per day is the recommended target. Dietary sources are strongly preferred over supplements: dairy foods, calcium-fortified plant milks, sardines, canned salmon with bones, tofu, and leafy green vegetables. A single serve of dairy provides approximately 300 mg of calcium. Most older adults can meet their requirements through diet without supplementation.</p>
+      <p>The evidence on calcium supplementation has become more nuanced in recent years. Systematic reviews have not shown a consistent reduction in fracture risk from calcium supplements alone in community-dwelling adults. There are also concerns that supplemental calcium (as distinct from dietary calcium) may be associated with a modest increase in cardiovascular events in some patient groups, though this remains debated. Supplements should be used to make up a genuine dietary shortfall rather than as a blanket intervention. In residential care settings, where dietary intake is often poor, supplementation is more clearly warranted.</p>
+      <p>Vitamin D sufficiency (25-hydroxyvitamin D above 50 nmol/L) is necessary for calcium absorption and bone mineralisation. Deficiency is common in older New Zealanders, particularly those in residential care or with limited outdoor exposure. A standard supplemental dose of 1000 to 2000 IU cholecalciferol (vitamin D3) daily is reasonable for those at risk. Higher doses may be needed to correct established deficiency, with follow-up levels to confirm adequacy before starting bisphosphonates. Combined calcium and vitamin D supplementation in residential care has shown modest reductions in hip fracture in some trials, suggesting this population benefits most from supplementation.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Non-pharmacological management
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Pharmacological treatment reduces fracture risk substantially but does not eliminate it. Non-pharmacological measures are complementary, not optional extras, and some (particularly falls prevention) may have as much impact on fracture outcomes as medication in the older frail patient.</p>
+      <p><strong>Exercise:</strong> Weight-bearing aerobic activity and progressive resistance training both have positive effects on bone mineral density, with resistance training showing the stronger benefit at the spine and hip. Balance training reduces falls, and reducing falls is the most direct way to prevent fracture. High-impact activities (jogging, jumping, racket sports) produce the greatest bone-loading stimulus but need to be appropriate for the individual's fitness and fall risk. In frail older adults, supervised progressive resistance and balance training (such as the Otago Exercise Programme) is the priority.</p>
+      <p><strong>Falls prevention:</strong> Fractures are the consequence of bone fragility meeting a mechanical insult, most often a fall. Comprehensive falls risk assessment and intervention (medication review, home modification, exercise, vision correction, footwear) should accompany osteoporosis management in older patients. See the <a href="/geriatrics/falls/" style="color:var(--green)">Falls Prevention</a> page for detail.</p>
+      <p><strong>Smoking:</strong> Smoking is an independent risk factor for osteoporosis and fragility fracture. Cessation at any age is beneficial, though bone mass gains are modest and slow.</p>
+      <p><strong>Alcohol:</strong> Alcohol intake above three units per day increases fracture risk through multiple mechanisms: direct toxic effect on osteoblasts, interference with calcium absorption and vitamin D metabolism, and increased falls risk. Reduction is advisable.</p>
+      <p><strong>Glucocorticoid minimisation:</strong> In patients requiring long-term glucocorticoids, the lowest effective dose and, where possible, topical or inhaled routes should be used. Any patient expected to require systemic glucocorticoids for more than three months at a dose of prednisolone 5 mg or more per day should be considered for osteoporosis prophylaxis, typically with a bisphosphonate, without waiting for DEXA confirmation of low BMD.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      The treatment gap: what to do after fracture
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>The period immediately following a fragility fracture is a critical window that is consistently underutilised in practice. Fewer than one in five patients who sustain a fragility fracture go on to receive appropriate investigation and treatment for osteoporosis. This is one of the largest and most avoidable treatment gaps in medicine.</p>
+      <p>A prior fracture is the strongest predictor of subsequent fracture. The risk of a second fracture is highest in the first one to two years after the first. Intervening promptly in this period offers the greatest absolute benefit.</p>
+      <p>After any fragility fracture, the following should occur:</p>
+      <ul>
+        <li>Baseline bloods as outlined above (secondary cause workup)</li>
+        <li>DEXA if not performed in the past two years</li>
+        <li>FRAX (noting that recent fracture may warrant treatment regardless of FRAX score)</li>
+        <li>Treatment initiated, not deferred pending specialist review in most cases</li>
+        <li>Vitamin D and calcium adequacy addressed</li>
+        <li>Comprehensive falls risk assessment</li>
+        <li>Patient education about the significance of the fracture and the rationale for treatment</li>
+      </ul>
+      <p>Fracture Liaison Services (FLS) are orthopaedic-based systems designed to identify post-fracture patients and coordinate this assessment and treatment initiation. They are available in some New Zealand centres and produce significant improvements in treatment rates. Where an FLS is available, refer proactively. Where one is not, this role falls to the GP, which means actively following up fracture patients rather than waiting for them to return.</p>
+      <p>A particular challenge is vertebral fractures, which are often silent and may be identified incidentally on imaging obtained for another purpose. When a vertebral fracture is reported radiologically, treat it with the same seriousness as a hip fracture and initiate the same assessment pathway.</p>
+    </div>
+  </div>
+
+  <h2 class="section-h2">Treatment thresholds at a glance</h2>
+  <p class="section-lead">Summarising when to initiate pharmacological therapy in primary care (New Zealand context).</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Clinical scenario</th>
+        <th>Action</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Previous fragility fracture (any site)</td>
+        <td>Treat without waiting for DEXA</td>
+        <td>Highest priority; do baseline bloods and correct deficiencies</td>
+      </tr>
+      <tr>
+        <td>T-score &le;&minus;2.5 on DEXA (any site)</td>
+        <td>Treat</td>
+        <td>Check secondary causes; assess falls risk concurrently</td>
+      </tr>
+      <tr>
+        <td>FRAX 10-year major fracture risk &ge;20% or hip fracture risk &ge;3%</td>
+        <td>Treat (with or without DEXA)</td>
+        <td>FRAX underestimates risk post-fracture; use clinical judgement</td>
+      </tr>
+      <tr>
+        <td>Long-term glucocorticoids (&ge;5 mg prednisolone for &ge;3 months)</td>
+        <td>Treat prophylactically</td>
+        <td>Do not wait for DEXA; start alendronate with glucocorticoid initiation in high-risk patients</td>
+      </tr>
+      <tr>
+        <td>Osteopenia (T-score &minus;1.0 to &minus;2.5) with no other risk factors</td>
+        <td>Lifestyle advice; reassess</td>
+        <td>Calculate FRAX; pharmacological treatment generally not indicated unless other risk factors present</td>
+      </tr>
+      <tr>
+        <td>eGFR &lt;35 mL/min/1.73m&sup2;</td>
+        <td>Avoid oral and IV bisphosphonates</td>
+        <td>Consider denosumab (does not require renal dose adjustment) with specialist input</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <div class="alert-head">Flags that should change your management</div>
+    <ul>
+      <li><strong>Denosumab discontinuation without transition:</strong> rebound vertebral fractures occur within 12 to 18 months of stopping. Always transition to a bisphosphonate.</li>
+      <li><strong>Vertebral fracture found incidentally on imaging:</strong> treat as a major fragility fracture; do not dismiss as degenerative change without formal morphometric assessment.</li>
+      <li><strong>Thigh or groin pain on bisphosphonates:</strong> stop the drug and arrange X-ray of the femur. Prodrome of atypical femoral fracture.</li>
+      <li><strong>Z-score below &minus;2.0 on DEXA:</strong> investigate for secondary cause regardless of T-score or age.</li>
+      <li><strong>Jaw pain, non-healing tooth socket, or exposed bone:</strong> stop bisphosphonate and refer to oral surgeon (osteonecrosis of the jaw, rare with low-dose oral use but report promptly).</li>
+      <li><strong>Severe vitamin D deficiency before bisphosphonate initiation:</strong> correct deficiency first. Starting a bisphosphonate in the setting of severe vitamin D deficiency risks symptomatic hypocalcaemia.</li>
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="resources-head">NZ Resources</div>
+    <a href="https://bpac.org.nz">BPAC NZ &mdash; Osteoporosis guidance for primary care</a>
+    <a href="https://osteoporosis.org.nz">Osteoporosis NZ</a>
+    <a href="https://www.sheffield.ac.uk/FRAX/tool.aspx?country=23">FRAX Tool (New Zealand)</a>
+    <a href="https://pharmac.govt.nz">PHARMAC &mdash; funded medicines schedule</a>
+    <p>Your local HealthPathways site contains Canterbury and regional-specific thresholds and referral pathways. Contact your DHB/Health NZ fracture liaison service (where available) to refer post-fracture patients for coordinated secondary prevention.</p>
+  </div>
+
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">Show references</button>
+  <div id="refs" class="refs-list">
+    <ol>
+      <li>Kanis JA, McCloskey EV, Johansson H, Cooper C, Rizzoli R, Reginster JY. European guidance for the diagnosis and management of osteoporosis in postmenopausal women. Osteoporos Int. 2013;24(1):23&ndash;57.</li>
+      <li>Black DM, Cummings SR, Karpf DB, Cauley JA, Thompson DE, Nevitt MC, et al. Randomised trial of effect of alendronate on risk of fracture in women with existing vertebral fractures. Lancet. 1996;348(9041):1535&ndash;41.</li>
+      <li>Wells GA, Cranney A, Peterson J, Boucher M, Shea B, Robinson V, et al. Alendronate for the primary and secondary prevention of osteoporotic fractures in postmenopausal women. Cochrane Database Syst Rev. 2008;1:CD001155.</li>
+      <li>Lyles KW, Colon-Emeric CS, Magaziner JS, Adachi JD, Pieper CF, Mautalen C, et al. Zoledronic acid and clinical fractures and mortality after hip fracture. N Engl J Med. 2007;357(18):1799&ndash;809.</li>
+      <li>Cummings SR, San Martin J, McClung MR, Siris ES, Eastell R, Reid IR, et al. Denosumab for prevention of fractures in postmenopausal women with osteoporosis. N Engl J Med. 2009;361(8):756&ndash;65.</li>
+      <li>Anastasilakis AD, Polyzos SA, Makras P, Aubry-Rozier B, Kaouri S, Lamy O. Clinical features of 24 patients with rebound-associated vertebral fractures after denosumab discontinuation: systematic review and additional cases. J Bone Miner Res. 2017;32(6):1291&ndash;6.</li>
+      <li>Bolland MJ, Leung W, Tai V, Bastin S, Gamble GD, Grey A, et al. Calcium intake and risk of fracture: systematic review. BMJ. 2015;351:h4580.</li>
+      <li>Gillespie LD, Robertson MC, Gillespie WJ, Sherrington C, Gates S, Clemson LM, et al. Interventions for preventing falls in older people living in the community. Cochrane Database Syst Rev. 2012;9:CD007146.</li>
+      <li>BPAC NZ. Osteoporosis: assessment and management in primary care. Best Pract J. 2021. Available from: https://bpac.org.nz</li>
+      <li>Ministry of Health NZ. Osteoporosis and musculoskeletal data. Wellington: MoH; 2023. Available from: https://www.health.govt.nz</li>
+      <li>Kanis JA on behalf of the World Health Organization Scientific Group. Assessment of osteoporosis at the primary health-care level. Technical report. Sheffield: WHO Collaborating Centre for Metabolic Bone Diseases, University of Sheffield; 2008.</li>
+      <li>Cosman F, de Beur SJ, LeBoff MS, Lewiecki EM, Tanner B, Randall S, et al. Clinician's guide to prevention and treatment of osteoporosis. Osteoporos Int. 2014;25(10):2359&ndash;81.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <p>This page is written for use in the clinical consultation and does not replace local guidelines, HealthPathways, or PHARMAC funding criteria. Verify funded indications before prescribing.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+
+</body>
+</html>
