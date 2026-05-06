@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Falls Prevention in Older Adults | Working Diagnosis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    :root{--paper:#EFF3E6;--warm:#E4EAD8;--deep:#D6E0C4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#C8D4B4;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+    body{background:var(--paper);color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem;line-height:1.7}
     .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
-    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-brand{font-family:'DM Serif Display',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
     .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
     .masthead-crumb:hover{color:var(--green)}
     .hero{max-width:680px;margin:0 auto;padding:2.5rem 2rem 1.75rem}
     .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
-    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1{font-family:'DM Serif Display',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
     .hero h1 em{font-style:italic;color:var(--green)}
     .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
     .page-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
@@ -25,10 +25,10 @@
     .print-btn:hover{color:var(--green);border-color:var(--green)}
     .glance{background:var(--warm);border-radius:14px;padding:1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
     .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
-    .glance-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
+    .glance-value{font-family:'DM Serif Display',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
     .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
     .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
-    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'DM Serif Display',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
     .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
     .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
     .acc-item.open .chevron{transform:rotate(90deg)}
@@ -42,7 +42,7 @@
     .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
     .data-table tr:last-child td{border-bottom:none}
     .data-table tr:nth-child(even) td{background:var(--warm)}
-    .alert-box{background:#FDF6EE;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
+    .alert-box{background:#F2F7EC;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
     .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
     .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
     .alert-box ul{padding-left:1.25rem}
@@ -52,7 +52,7 @@
     .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
     .resources a:hover{text-decoration:underline}
     .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
-    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
+    .section-h2{font-family:'DM Serif Display',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
     .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
     .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1.5rem 2rem 2rem}
     .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
@@ -81,8 +81,8 @@
 
 <div class="hero">
   <div class="kicker">❍ Healthy Ageing</div>
-  <h1>Falls <em>Prevention</em> in Older Adults</h1>
-  <p class="hero-lead">Falls are not an inevitable part of ageing. Most are the result of modifiable risk factors. A combination of targeted exercise, home modification, and medication review can significantly reduce your risk of falling and maintain your independence.</p>
+  <h1>Falls <em>Prevention</em></h1>
+  <p class="hero-lead">Falls are not inevitable. Most stem from modifiable risk factors. Targeted exercise, home changes, and medication review can significantly reduce your risk.</p>
 </div>
 
 <div class="print-bar">
