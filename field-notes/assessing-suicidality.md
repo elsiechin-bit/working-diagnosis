@@ -11,7 +11,7 @@ summary:
   - "The clinical task after identifying suicidality is safety planning, not just referral: a written, collaboratively developed safety plan with crisis contacts and means restriction steps reduces repeat attempts in RCT evidence."
 ---
 
-Most people who die by suicide in New Zealand have seen a GP in the year before their death. [1] A substantial proportion have seen one in the month before. This is not an indictment of general practice - it reflects that GPs are where distressed people go - but it is a fact that gives the topic of suicidality assessment a particular weight in primary care that it does not always receive in training.
+Most people who die by suicide in New Zealand have seen a GP in the year before their death. [#ref-1] A substantial proportion have seen one in the month before. This is not an indictment of general practice - it reflects that GPs are where distressed people go - but it is a fact that gives the topic of suicidality assessment a particular weight in primary care that it does not always receive in training.
 
 This note covers the clinical, contextual, and ethical territory. It is not a protocol. Protocols exist, are available from the Ministry of Health and your local DHB/Te Whatu Ora service, and should be read. This is the thinking behind the protocol - the evidence for how we ask, what we can predict, what actually reduces risk, and where the received wisdom is weaker than it appears.
 

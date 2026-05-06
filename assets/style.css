@@ -115,18 +115,19 @@ a:hover { color: var(--green); }
 .lede { font-size: clamp(20px, 2.1vw, 24px); line-height: 1.5; max-width: 680px; color: var(--ink-soft); margin-top: 32px; }
 .lede p { margin: 0 0 1em; }
 
-.pillars-grid { padding: 72px 0; border-bottom: 1px solid var(--rule); }
-.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
-@media (max-width: 760px) { .pillars { grid-template-columns: 1fr; } }
-.pillar { padding: 28px 28px 28px 0; border-right: 1px solid var(--rule); }
-.pillar:last-child { border-right: none; padding-right: 0; }
-@media (max-width: 760px) { .pillar { border-right: none; border-bottom: 1px solid var(--rule); padding: 24px 0; } .pillar:last-child { border-bottom: none; } }
-.pillar + .pillar { padding-left: 28px; }
-@media (max-width: 760px) { .pillar + .pillar { padding-left: 0; } }
-.pnum { display: inline-block; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 2px; color: var(--ochre); margin-bottom: 14px; text-transform: uppercase; }
-.pillar h3 { font-family: var(--serif-display); font-weight: 700; font-size: 28px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 14px; }
+.pillars-grid { padding: 64px 0 56px; border-bottom: 1px solid var(--rule); }
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 760px) { .pillars { grid-template-columns: 1fr; gap: 12px; } }
+.pillar { padding: 32px 28px 36px; background: var(--paper-warm); border: 1px solid var(--rule); border-top: 3px solid var(--rule); }
+.pillar--field-guide { border-top-color: var(--green); }
+.pillar--workbench { border-top-color: var(--ochre); }
+.pillar--thinking-room { border-top-color: var(--ink-soft); }
+.pnum { display: block; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; color: var(--ink-mute); margin-bottom: 16px; text-transform: uppercase; }
+.pillar h3 { font-family: var(--serif-display); font-weight: 400; font-size: 26px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 14px; }
 .pillar h3 em { font-style: italic; color: var(--green); }
-.pillar p { margin: 0 0 18px; color: var(--ink-soft); font-size: 16.5px; line-height: 1.6; }
+.pillar--workbench h3 em { color: var(--ochre); }
+.pillar--thinking-room h3 em { color: var(--ink-soft); }
+.pillar p { margin: 0 0 20px; color: var(--ink-soft); font-size: 15.5px; line-height: 1.65; }
 .more { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
 .more:hover { color: var(--green-deep); border-color: var(--green-deep); }
 

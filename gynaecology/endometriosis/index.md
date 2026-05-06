@@ -9,49 +9,84 @@ permalink: /gynaecology/endometriosis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>Endometriosis is the presence of endometrial-like tissue outside the uterus, most commonly on the ovaries, peritoneum, and pouch of Douglas. It affects approximately 10% of reproductive-age women - around 200,000 New Zealanders. Despite its prevalence, the average time from symptom onset to diagnosis remains 6-10 years internationally, including in NZ. The diagnostic delay happens primarily in primary care, where symptoms are normalised, attributed to primary dysmenorrhoea, or not investigated in the absence of a palpable mass or abnormal ultrasound. Primary care has both the problem and the solution.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>Endometriosis affects approximately 10% of reproductive-age women. The average time from symptom onset to diagnosis is 6-10 years - and that delay happens primarily in primary care, where symptoms are normalised or attributed to primary dysmenorrhoea.</li>
+    <li>Classic triad: dysmenorrhoea, deep dyspareunia, subfertility. Also: cyclical pelvic pain preceding menstruation, cyclical bowel symptoms (dyschezia), cyclical bladder symptoms, and significant fatigue.</li>
+    <li>A normal pelvic ultrasound does not exclude endometriosis. Peritoneal implants and superficial disease are below the resolution of standard ultrasound. A woman with significant dysmenorrhoea and dyspareunia and a normal scan may well have endometriosis.</li>
+    <li>Do not wait for laparoscopy to treat. Empirical hormonal suppression (COCP, progestogen) is appropriate in a woman with clinical features consistent with endometriosis. Refer without waiting for positive imaging.</li>
+  </ul>
+</div>
 
-<h2>Presentation</h2>
+<p>
+  Endometriosis is the presence of endometrial-like tissue outside the uterus, most commonly on the ovaries, peritoneum, and pouch of Douglas. It affects approximately 10% of reproductive-age women - around 200,000 New Zealanders. Despite its prevalence, average time from symptom onset to diagnosis remains 6-10 years. The diagnostic delay happens primarily in primary care, where symptoms are normalised, attributed to primary dysmenorrhoea, or not investigated in the absence of a palpable mass or abnormal ultrasound. Primary care has both the problem and the solution.
+</p>
 
-<p>The classic triad is dysmenorrhoea, dyspareunia (deep), and subfertility - though not all three are present in every case. Additional features that increase suspicion: cyclical pelvic pain that begins days before menstruation and may persist throughout the cycle; cyclical bowel symptoms (dyschezia - pain on defecation during menstruation, or cyclical bloating and altered bowel habit); cyclical bladder symptoms (dysuria, urgency, haematuria during menstruation); non-menstrual chronic pelvic pain; and fatigue, which is underappreciated as a significant symptom of endometriosis.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation: what to look for</p>
+  <p>
+    The classic triad is dysmenorrhoea, deep dyspareunia, and subfertility - though not all three are present in every case. Additional features that raise suspicion:
+  </p>
+  <ul>
+    <li>Cyclical pelvic pain that begins days before menstruation and may persist throughout the cycle</li>
+    <li>Cyclical bowel symptoms: dyschezia (pain on defecation during menstruation), or cyclical bloating and altered bowel habit</li>
+    <li>Cyclical bladder symptoms: dysuria, urgency, haematuria during menstruation</li>
+    <li>Non-menstrual chronic pelvic pain</li>
+    <li>Significant fatigue - underappreciated as a feature of endometriosis and worth asking about specifically</li>
+  </ul>
+  <p>
+    On examination: tenderness in the pouch of Douglas, uterosacral ligament nodularity, lateral displacement or fixed retroverted uterus, and adnexal tenderness all suggest endometriosis. Examination during menstruation improves sensitivity. The absence of examination findings does not exclude the diagnosis.
+  </p>
+</div>
 
-<p>The absence of abnormality on examination or ultrasound does not exclude endometriosis. Peritoneal implants and superficial endometriosis are below the resolution of standard pelvic ultrasound. Even transvaginal ultrasound by a specialist has limited sensitivity for peritoneal disease. A woman with significant dysmenorrhoea and dyspareunia and a normal ultrasound may well have endometriosis. This is one of the key facts to internalise - a normal scan is not reassurance that endometriosis is absent.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Investigation and the normal ultrasound problem</p>
+  <p>
+    The key fact to internalise: a normal pelvic ultrasound does not exclude endometriosis. Peritoneal implants and superficial disease are below the resolution of standard pelvic ultrasound. Even transvaginal ultrasound by a specialist has limited sensitivity for peritoneal disease. A woman with significant dysmenorrhoea and dyspareunia and a normal scan may well have endometriosis. Do not use a normal ultrasound to close the investigation.
+  </p>
+  <p>
+    Transvaginal ultrasound is useful for detecting endometriomas (classic appearance: homogeneous low-level internal echoes, "ground glass"), deep infiltrating endometriosis of the rectovaginal septum or bladder, and adenomyosis. An endometrioma on ultrasound is sufficient to confirm ovarian endometriosis and warrants gynaecology referral without further investigation.
+  </p>
+  <p>
+    CA125 has poor sensitivity and specificity for endometriosis diagnosis in primary care and should not be used to confirm or exclude it. MRI pelvis is more sensitive than ultrasound for deep infiltrating disease and is used in surgical planning by gynaecology - not a primary care first-line investigation.
+  </p>
+  <p>
+    Definitive diagnosis requires laparoscopy with histological confirmation. This is the gold standard. However, it is not required before starting empirical treatment.
+  </p>
+</div>
 
-<p>On examination: tenderness in the pouch of Douglas, uterosacral ligament nodularity, lateral displacement or fixed retroverted uterus, and adnexal tenderness suggest endometriosis. An endometrioma (ovarian cyst containing old blood - sometimes called a "chocolate cyst") may be palpable as an adnexal mass and is typically identified on ultrasound. Examination during menstruation improves sensitivity of clinical findings.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Empirical management in primary care</p>
+  <p>
+    Do not wait for laparoscopy to initiate treatment. Empirical hormonal suppression is appropriate where clinical features are consistent with endometriosis and there are no contraindications. This provides meaningful symptom relief while awaiting specialist review and does not significantly delay diagnosis.
+  </p>
+  <p>
+    <strong>NSAIDs:</strong> first-line analgesia for dysmenorrhoea, taken from before onset of menstruation. Effective for mild symptoms; insufficient alone for moderate-severe disease.
+  </p>
+  <p>
+    <strong>Combined oral contraceptive pill:</strong> suppresses endometrial implant stimulation. Continuous cycling (no pill-free interval) may provide better pain control than cyclic use. First-line hormonal option in primary care.
+  </p>
+  <p>
+    <strong>Progestogen-only methods:</strong> the levonorgestrel IUS (Mirena) is highly effective for endometriosis-associated pain and heavy menstrual bleeding. The desogestrel POP (Cerazette) is an alternative. Norethisterone 5 mg twice daily can be used for more aggressive suppression in women awaiting surgery. Dienogest (trialled specifically in endometriosis) is available in NZ but not funded.
+  </p>
+  <p>
+    GnRH agonists (leuprorelin, nafarelin) produce pseudo-menopause through profound oestrogen suppression. Very effective but cause significant menopausal side effects; used by specialists pre- or post-operatively, not as primary care first-line.
+  </p>
+</div>
 
-<h2>Classification and staging</h2>
-
-<p>The American Society for Reproductive Medicine (ASRM) staging (I-IV, minimal to severe) is the most widely used classification but correlates poorly with symptom severity. A woman with stage I disease may have severe pain; a woman with stage IV may present primarily with subfertility. Staging is a surgical finding, not a primary care tool. It is useful to know because it shapes surgical and fertility treatment decisions.</p>
-
-<h2>Investigation</h2>
-
-<p>Diagnosis of endometriosis is definitively surgical - laparoscopy with histological confirmation of biopsies. This remains the gold standard. However, primary care can and should initiate investigation and empirical treatment without waiting for laparoscopy.</p>
-
-<p>Transvaginal ultrasound: insensitive for peritoneal and superficial endometriosis, but useful to detect endometriomas (classic appearance: homogeneous low-level internal echoes, "ground glass" appearance), deep infiltrating endometriosis of the rectovaginal septum or bladder, and adenomyosis. An endometrioma on ultrasound is sufficient to confirm a diagnosis of ovarian endometriosis and warrants gynaecology referral without waiting for laparoscopy.</p>
-
-<p>MRI pelvis is more sensitive than ultrasound for deep infiltrating endometriosis and is used in surgical planning; it is not a first-line investigation in primary care but may be arranged by gynaecology pre-operatively.</p>
-
-<p>CA125 is elevated in some women with endometriosis but has poor sensitivity and specificity for diagnosis in primary care; it is not a useful first-line test. It should not be used to exclude or confirm endometriosis.</p>
-
-<h2>Empirical management (primary care, awaiting specialist review)</h2>
-
-<p>Do not wait for laparoscopy to initiate treatment. Empirical hormonal suppression is appropriate in a woman with clinical features consistent with endometriosis and no contraindications. This does not delay diagnosis significantly and provides meaningful symptom relief.</p>
-
-<p><strong>NSAIDs:</strong> as first-line analgesia for dysmenorrhoea, taken from before onset of menstruation. Effective for mild symptoms; insufficient alone for moderate-severe endometriosis.</p>
-
-<p><strong>Combined oral contraceptive pill:</strong> suppresses endometrial implant stimulation. Continuous cycling (no pill-free interval) may provide better pain control than cyclic use and reduces endometrioma growth in some patients. First-line hormonal option in primary care.</p>
-
-<p><strong>Progestogen-only methods:</strong> the levonorgestrel IUS (Mirena) is highly effective for endometriosis-associated pain and HMB. The desogestrel POP (Cerazette) is an alternative. Norethisterone 5 mg twice daily can be used for more aggressive suppression in women awaiting surgery. Dienogest (a progestogen specifically trialled in endometriosis) is available in NZ but not funded - cost limits use.</p>
-
-<p><strong>GnRH agonists</strong> (e.g. leuprorelin, nafarelin) produce pseudo-menopause through profound oestrogen suppression. Very effective for symptom control but cause significant menopausal side effects; used primarily by specialists pre- or post-operatively, not as first-line primary care management.</p>
-
-<h2>Fertility and endometriosis</h2>
-
-<p>Approximately 30-40% of women with endometriosis have difficulty conceiving. The mechanism is multifactorial: altered pelvic anatomy from adhesions, endometrioma affecting ovarian reserve, impaired implantation from altered endometrial receptivity, and tubal damage. Women with endometriosis who wish to conceive should be referred to a fertility specialist early - fertility surgery (excision of endometriomas, adhesiolysis) may improve natural conception rates, and IVF outcomes are comparable to those with other indications once appropriate surgical preparation is complete.</p>
-
-<h2>Referral criteria</h2>
-
-<p>Refer to gynaecology for: suspected or confirmed endometriosis where empirical medical management provides inadequate symptom control; endometrioma identified on ultrasound; suspected deep infiltrating endometriosis (severe dyschezia, cyclical haematuria, uterosacral nodularity); subfertility in the context of endometriosis; and where diagnostic laparoscopy is being considered. The referral does not need to wait for a positive ultrasound.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Fertility, staging, and referral</p>
+  <p>
+    Approximately 30-40% of women with endometriosis have difficulty conceiving. The mechanism is multifactorial: altered pelvic anatomy from adhesions, endometrioma affecting ovarian reserve, impaired implantation, and tubal damage. Women with endometriosis who wish to conceive should be referred to a fertility specialist early - fertility surgery may improve natural conception rates, and IVF outcomes are comparable to other indications once appropriate surgical preparation is complete.
+  </p>
+  <p>
+    ASRM staging (I-IV, minimal to severe) is a surgical finding that correlates poorly with symptom severity. Stage I disease can cause severe pain; stage IV may present primarily with subfertility. Staging shapes surgical and fertility decisions - it is not a primary care diagnostic tool, but knowing it exists helps interpret specialist correspondence.
+  </p>
+  <p>
+    Refer to gynaecology for: suspected endometriosis where empirical medical management provides inadequate symptom control; endometrioma identified on ultrasound; suspected deep infiltrating endometriosis (severe dyschezia, cyclical haematuria, uterosacral nodularity on examination); subfertility in the context of endometriosis; and where diagnostic laparoscopy is being considered. The referral does not need to wait for positive imaging.
+  </p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -77,9 +112,13 @@ permalink: /gynaecology/endometriosis/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Nnoaham KE, Hummelshoj L, Webster P, et al. Impact of endometriosis on quality of life and work productivity: a multicenter study across ten countries. Fertil Steril. 2011;96(2):366-373.<br>
-  <sup>2</sup> Hudelist G, Fritzer N, Thomas A, et al. Diagnostic delay for endometriosis in Austria and Germany: causes and possible consequences. Hum Reprod. 2012;27(12):3412-3416.<br>
-  <sup>3</sup> Zondervan KT, Becker CM, Missmer SA. Endometriosis. N Engl J Med. 2020;382(13):1244-1256.<br>
-  <sup>4</sup> Kennedy S, Bergqvist A, Chapron C, et al. ESHRE guideline for the diagnosis and treatment of endometriosis. Hum Reprod. 2005;20(10):2698-2704.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Nnoaham KE, Hummelshoj L, Webster P, et al. Impact of endometriosis on quality of life and work productivity: a multicenter study across ten countries. *Fertil Steril.* 2011;96(2):366-373.
+2. Hudelist G, Fritzer N, Thomas A, et al. Diagnostic delay for endometriosis in Austria and Germany: causes and possible consequences. *Hum Reprod.* 2012;27(12):3412-3416.
+3. Zondervan KT, Becker CM, Missmer SA. Endometriosis. *N Engl J Med.* 2020;382(13):1244-1256.
+4. Kennedy S, Bergqvist A, Chapron C, et al. ESHRE guideline for the diagnosis and treatment of endometriosis. *Hum Reprod.* 2005;20(10):2698-2704.
+
+</div>

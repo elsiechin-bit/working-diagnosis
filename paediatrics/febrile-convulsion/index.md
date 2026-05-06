@@ -9,38 +9,34 @@ permalink: /paediatrics/febrile-convulsion/
 <div class="topic-with-aside">
 <div class="topic-body">
 
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>Febrile convulsions affect 2-5% of children aged 6 months to 5 years. The majority are simple - brief, generalised, single episode, full recovery within an hour - and carry an excellent prognosis. Simple febrile convulsions do not cause brain damage or epilepsy.</li>
+    <li>Complex febrile convulsion: focal features, duration 15+ minutes, more than one episode in 24 hours, or incomplete recovery within an hour. Complex features require investigation to exclude meningitis, encephalitis, or structural pathology.</li>
+    <li>Antipyretics do not prevent febrile convulsions and should not be used for this purpose. They improve comfort in a feverish child but do not alter seizure risk.</li>
+    <li>The post-ictal period is normal and expected. A child who is drowsy but rousable and gradually returning to baseline after a generalised seizure does not need emergency investigation - this is physiology, not pathology.</li>
+  </ul>
+</div>
+
 <p>Febrile convulsions are the most common seizure disorder of childhood, affecting approximately 2-5% of children aged 6 months to 5 years.<sup>1</sup> The vast majority are simple febrile convulsions - brief, generalised, and without sequelae. Parental anxiety is considerable; calm, evidence-based reassurance is a core part of the consultation.</p>
 
-<h2>Presentation</h2>
-<p>A febrile convulsion occurs in a child with fever (typically above 38°C) in the absence of intracranial infection or other identifiable cause. The distinction between simple and complex febrile convulsion guides further management.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Classification, investigation, and acute management</p>
+  <p>A febrile convulsion occurs in a child with fever (typically above 38°C) in the absence of intracranial infection or other identifiable cause. The distinction between simple and complex guides further management.</p>
+  <p>A <strong>simple febrile convulsion</strong> is generalised (tonic-clonic), lasts less than 15 minutes, occurs only once in a 24-hour period, and is followed by complete recovery within an hour. Simple febrile convulsions account for approximately 70-75% of all febrile convulsions. A child with a typical simple febrile convulsion who has fully recovered and has a clear fever source (e.g. otitis media, URTI) does not require routine investigation.</p>
+  <p>A <strong>complex febrile convulsion</strong> has one or more of: focal onset or focal features during the seizure; duration 15 minutes or more (febrile status epilepticus); more than one seizure within 24 hours; incomplete recovery to baseline within 1 hour. Complex features mandate further investigation.</p>
+  <p>Lumbar puncture is indicated in children under 12 months with a febrile convulsion (meningitis may not present with classic signs in infancy), in any child with clinical features of meningitis or encephalitis (neck stiffness, photophobia, altered consciousness, bulging fontanelle, petechial rash), and in any child with a complex febrile convulsion who does not return to normal baseline promptly.<sup>3</sup> EEG and neuroimaging are not indicated after a simple febrile convulsion - these decisions are made in secondary care after complex events.</p>
+  <p>In the acute setting: position safely on the side, time the seizure, and do not cause harm by over-intervention. Buccal midazolam (0.3-0.5 mg/kg, max 10 mg) or intranasal midazolam is the agent of choice for a convulsion not terminated after 5 minutes; rectal diazepam is an alternative if midazolam is unavailable. Most simple febrile convulsions have terminated by the time the child is seen.</p>
+  <p>Refer to secondary care same day (via emergency department) for: complex febrile convulsion; infant under 12 months with first febrile convulsion; child not returned to normal baseline within 1 hour; clinical features of meningitis or encephalitis; febrile status epilepticus.</p>
+</div>
 
-<p>A <strong>simple febrile convulsion</strong> is generalised (tonic-clonic), lasts less than 15 minutes, occurs only once in a 24-hour period, and is followed by complete recovery within an hour. The child should return to their normal baseline after the post-ictal period. Simple febrile convulsions account for approximately 70-75% of all febrile convulsions.</p>
-
-<p>A <strong>complex febrile convulsion</strong> has one or more of: focal onset or focal features during the seizure; duration 15 minutes or more (febrile status epilepticus); more than one seizure within 24 hours; or incomplete recovery to baseline within 1 hour. Complex features mandate further investigation to exclude meningitis, encephalitis, or structural brain pathology.</p>
-
-<p>Risk factors for recurrence include: first febrile convulsion before 18 months; family history of febrile convulsions; relatively low temperature at the time of seizure; short duration of fever before the seizure. Approximately 30% of children will have at least one recurrence; risk is highest in the 12 months after the first episode.<sup>2</sup></p>
-
-<h2>Investigation</h2>
-<p>A child with a typical simple febrile convulsion who has fully recovered and has a clear source of fever (e.g., otitis media, URTI) does not require routine investigation. The primary investigation question is: has meningitis or encephalitis been excluded?</p>
-
-<p>Lumbar puncture (LP) is indicated in children under 12 months with a febrile convulsion (meningitis may not present with classic signs in infancy), in any child with clinical features of meningitis or encephalitis (neck stiffness, photophobia, altered consciousness, bulging fontanelle, petechial rash), and in any child with a complex febrile convulsion who does not return to normal baseline promptly.<sup>3</sup> LP is not required as routine in older children with a typical simple febrile convulsion and full recovery.</p>
-
-<p>Blood glucose at the time of the seizure is useful to exclude hypoglycaemia. FBC and CRP help guide the investigation of the fever source. EEG and neuroimaging are not indicated after a simple febrile convulsion. They may be appropriate after a complex convulsion or where the clinical picture is atypical - this decision is made in secondary care.</p>
-
-<h2>Acute management</h2>
-<p>Most simple febrile convulsions have terminated by the time the child is seen. In the acute setting, the priorities are airway positioning, timing the seizure, and not causing harm by over-intervention. Buccal midazolam (0.3-0.5 mg/kg, max 10 mg) or intranasal midazolam is the agent of choice for a convulsion that has not terminated after 5 minutes; rectal diazepam is an alternative if midazolam is unavailable.</p>
-
-<p>Families of children with a known history of febrile convulsions can be provided with emergency midazolam for home use if the child's history suggests recurrence risk. This decision is made in conjunction with the supervising paediatrician.</p>
-
-<p>Antipyretics do not prevent febrile convulsions and should not be used for this purpose. They do improve comfort in a feverish child.<sup>4</sup></p>
-
-<h2>Referral criteria</h2>
-<p>Refer to secondary care same day (via emergency department) for: any child with a complex febrile convulsion; any infant under 12 months with a first febrile convulsion; any child who has not returned to their normal baseline within 1 hour; any clinical features of meningitis or encephalitis; febrile status epilepticus (seizure lasting 30 minutes or more, or repeated seizures without recovery to baseline).</p>
-
-<p>A child with a typical simple febrile convulsion who has fully recovered, is over 12 months, and has a clear source of fever identified can be managed in primary care with safety-netting and parent education. This should include: written information about febrile convulsions; reassurance that simple febrile convulsions do not cause brain damage or epilepsy; instruction on what to do if a seizure recurs (position safely on their side, time the seizure, call 111 if it lasts more than 5 minutes); and follow-up with their GP.</p>
-
-<h2>Prognosis and reassurance</h2>
-<p>Simple febrile convulsions do not cause brain damage, intellectual disability, or epilepsy. The risk of subsequent epilepsy after a simple febrile convulsion is approximately 1-2%, only marginally above the background population risk of 0.5-1%.<sup>1</sup> The risk after complex febrile convulsions is somewhat higher (approximately 4-6% after prolonged or focal seizures) and depends on the specific features. Most children outgrow febrile convulsions by age 5-6. This information is central to the parental consultation; families are frequently terrified and benefit from hearing clear, unequivocal reassurance backed by evidence.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Prognosis, recurrence, and parental education</p>
+  <p>Risk factors for recurrence include: first febrile convulsion before 18 months; family history of febrile convulsions; relatively low temperature at the time of seizure; short duration of fever before the seizure. Approximately 30% of children will have at least one recurrence; risk is highest in the 12 months after the first episode.<sup>2</sup></p>
+  <p>Simple febrile convulsions do not cause brain damage, intellectual disability, or epilepsy. The risk of subsequent epilepsy after a simple febrile convulsion is approximately 1-2%, only marginally above the background population risk of 0.5-1%.<sup>1</sup> The risk after complex febrile convulsions is higher (approximately 4-6% after prolonged or focal seizures) and depends on specific features. Most children outgrow febrile convulsions by age 5-6.</p>
+  <p>This prognostic information is the central deliverable of the consultation. Families are frequently terrified and benefit from clear, unequivocal reassurance backed by evidence. A child with a typical simple febrile convulsion who has fully recovered, is over 12 months, and has a clear fever source can be managed in primary care. Provide written information about febrile convulsions; explain what to do if a seizure recurs (position on side, time the seizure, call 111 if it lasts more than 5 minutes); and arrange follow-up. Families with a known history and recurrence risk may be provided with buccal midazolam for home use in conjunction with a supervising paediatrician.</p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -54,9 +50,13 @@ permalink: /paediatrics/febrile-convulsion/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Subcommittee on Febrile Seizures. Febrile seizures: guideline for the neurodiagnostic evaluation of the child with a simple febrile seizure. Pediatrics. 2011;127(2):389-394.<br>
-  <sup>2</sup> Berg AT, Shinnar S. Predictors of recurrence in children with febrile seizures. J Pediatr. 1990;116(3):329-337.<br>
-  <sup>3</sup> National Institute for Health and Care Excellence (NICE). Epilepsies in children, young people and adults. NICE guideline NG217. London: NICE; 2022.<br>
-  <sup>4</sup> Strengell T, Uhari M, Tarkka R, et al. Antipyretic agents for preventing recurrences of febrile seizures: randomized controlled trial. Arch Pediatr Adolesc Med. 2009;163(9):799-804.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Subcommittee on Febrile Seizures. Febrile seizures: guideline for the neurodiagnostic evaluation of the child with a simple febrile seizure. *Pediatrics.* 2011;127(2):389-394.
+2. Berg AT, Shinnar S. Predictors of recurrence in children with febrile seizures. *J Pediatr.* 1990;116(3):329-337.
+3. National Institute for Health and Care Excellence (NICE). Epilepsies in children, young people and adults. NICE guideline NG217. London: NICE; 2022.
+4. Strengell T, Uhari M, Tarkka R, et al. Antipyretic agents for preventing recurrences of febrile seizures: randomized controlled trial. *Arch Pediatr Adolesc Med.* 2009;163(9):799-804.
+
+</div>

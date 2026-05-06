@@ -9,40 +9,102 @@ permalink: /paediatrics/childhood-asthma/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>New Zealand has one of the highest rates of asthma in the world; approximately 15% of NZ children are affected.<sup>1</sup> Asthma is the leading cause of paediatric hospital admissions in NZ and contributes substantially to school absenteeism and reduced quality of life. The GP is central to diagnosis, long-term management, and exacerbation response planning.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>NZ has one of the highest childhood asthma rates in the world - approximately 15% of children are affected. It is the leading cause of paediatric hospital admissions in NZ.</li>
+    <li>Under-5s: most wheeze is viral-induced wheeze, not persistent asthma. Features favouring atopic asthma over viral wheeze include wheeze without viral illness, atopy history, and multiple trigger types. A trial of salbutamol via spacer is both diagnostic and therapeutic.</li>
+    <li>Over-5s: step therapy matched to symptom frequency. Step 1 (intermittent): salbutamol via spacer as needed. Step 2 (mild persistent): add low-dose ICS. Step 3: add LABA or montelukast. Always with a spacer - without one, under 10% of the dose reaches the lung.</li>
+    <li>Every child with asthma needs a written asthma action plan (AAP), reviewed at least annually. This reduces hospital admissions.</li>
+    <li>Severe exacerbation: SpO2 below 92%, single-word speech, silent chest, altered consciousness. Call 111, give salbutamol immediately.</li>
+  </ul>
+</div>
 
-<h2>Presentation and diagnosis</h2>
-<p>Diagnosing asthma in children under 5 is clinically challenging because wheeze is common in this age group and most young wheezers do not go on to have persistent asthma. A significant proportion have <strong>viral-induced wheeze</strong> - episodic wheeze triggered by URTI that resolves between episodes and does not require regular preventer therapy. Features that favour atopic asthma over viral wheeze include: wheeze in the absence of viral illness, personal or family history of atopy (eczema, allergic rhinitis, food allergy), multiple trigger types (cold air, exercise, allergen exposure), persistent symptoms between episodes.</p>
+<p>
+  New Zealand has one of the highest rates of asthma in the world; approximately 15% of NZ children are affected.<sup>1</sup> Asthma is the leading cause of paediatric hospital admissions in NZ and contributes substantially to school absenteeism and reduced quality of life. The GP is central to diagnosis, long-term management, and exacerbation response planning.
+</p>
 
-<p>In children over 5, diagnosis is more reliable. Classic features: episodic wheeze, chest tightness, cough (particularly nocturnal), and breathlessness; symptoms triggered by exercise, allergen exposure, cold air, or viral illness; symptoms that vary in time and intensity; diurnal variation with worse symptoms in the morning or at night. Spirometry (FEV1/FVC ratio, reversibility with bronchodilator) can confirm the diagnosis in cooperative children over 5-6 years; a 12% or greater improvement in FEV1 after salbutamol supports bronchospasm.<sup>2</sup></p>
+<div class="tier-2">
+  <p class="tier-label">❍ Diagnosis: under-5s and the wheeze distinction</p>
+  <p>
+    Diagnosing asthma in children under 5 is clinically challenging because wheeze is common in this age group and most young wheezers do not go on to have persistent asthma. Viral-induced wheeze - episodic wheeze triggered by URTI that resolves between episodes - does not require regular preventer therapy and should not be labelled as asthma. Features that favour atopic asthma over viral wheeze include:
+  </p>
+  <ul>
+    <li>Wheeze in the absence of viral illness</li>
+    <li>Personal or family history of atopy (eczema, allergic rhinitis, food allergy)</li>
+    <li>Multiple trigger types (cold air, exercise, allergen exposure)</li>
+    <li>Persistent symptoms between episodes</li>
+  </ul>
+  <p>
+    A trial of salbutamol via MDI and spacer is both diagnostically and therapeutically useful in young children: a clear clinical response supports a bronchospasm diagnosis. Consider alternative diagnoses - foreign body, tracheomalacia, vascular ring - if wheeze is fixed, unilateral, or unresponsive to bronchodilator.
+  </p>
+</div>
 
-<p>A trial of salbutamol via spacer is both diagnostically and therapeutically useful in young children: a clear clinical response supports an asthma diagnosis.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Diagnosis: over-5s</p>
+  <p>
+    In children over 5, diagnosis is more reliable. Classic features include: episodic wheeze, chest tightness, cough (particularly nocturnal), and breathlessness; symptoms triggered by exercise, allergen exposure, cold air, or viral illness; symptoms that vary in time and intensity; diurnal variation with worse symptoms in the morning or at night.
+  </p>
+  <p>
+    Spirometry can confirm the diagnosis in cooperative children over 5-6 years. An FEV1/FVC ratio below the lower limit of normal, with a 12% or greater improvement in FEV1 after salbutamol, is diagnostic of bronchospasm.<sup>2</sup> Spirometry is not always necessary when the history is typical and there is a clear bronchodilator response clinically.
+  </p>
+  <p>
+    Alternative diagnoses to consider if the picture is atypical: wheeze that is mainly inspiratory (laryngeal or extrathoracic obstruction), wheeze with no well interval, wheeze that does not respond to bronchodilator, or features suggesting structural airway disease. Refer to paediatrics for further assessment (CT chest, flexible bronchoscopy) if an alternative diagnosis is possible.
+  </p>
+</div>
 
-<h2>Investigation</h2>
-<p>Most children with typical asthma do not require investigation beyond spirometry (in over-5s). Chest X-ray should be performed if: the diagnosis is uncertain, wheeze does not respond to bronchodilator, there is a possibility of foreign body inhalation (sudden onset, unilateral wheeze), or the child appears significantly unwell. Skin prick testing or serum-specific IgE can identify allergic triggers in children with persistent or poorly controlled asthma but are not required routinely.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Long-term management: stepwise therapy</p>
+  <p>
+    All children using inhaled medication should use a valved holding spacer. Without one, under 10% of the dose reaches the lower airway. Check spacer technique at every visit.
+  </p>
+  <p>
+    <strong>Step 1 (mild intermittent):</strong> salbutamol MDI via spacer as needed. Educate on symptom recognition and when to use reliever.
+  </p>
+  <p>
+    <strong>Step 2 (mild persistent - symptoms more than twice per week, or nocturnal symptoms more than twice per month):</strong> add regular low-dose inhaled corticosteroid (ICS). First-line in NZ: budesonide (Pulmicort) 100-200 mcg twice daily or beclometasone 100 mcg twice daily. Step down after 3 months of good control - use the minimum effective dose.<sup>2</sup>
+  </p>
+  <p>
+    <strong>Step 3 (moderate persistent, not controlled on low-dose ICS):</strong> options include increasing ICS to medium dose, adding a long-acting beta-2 agonist (LABA - not to be used without ICS in children), or adding montelukast (4 mg for ages 2-5, 5 mg for ages 6-14). Paediatric review is appropriate before initiating Step 3 in under-5s.
+  </p>
+  <p>
+    <strong>Steps 4-5:</strong> specialist paediatric respiratory management.
+  </p>
+  <p>
+    Written asthma action plans (AAPs) reduce hospital admissions and emergency presentations.<sup>4</sup> Every child with asthma should have a current written AAP, reviewed at least annually and at any significant change in management.
+  </p>
+</div>
 
-<p>Consider alternative diagnoses if: wheeze is fixed and non-responsive to salbutamol, there is no interval between episodes when the child is completely well, the wheeze is mainly inspiratory, or there are features of structural airway disease. Referral to paediatrics for further assessment (CT chest, flexible bronchoscopy) is appropriate in these cases.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Acute exacerbations</p>
+  <p>
+    Assess severity first:
+  </p>
+  <ul>
+    <li><strong>Mild:</strong> talks in sentences, SpO2 ≥95%, no significant recession</li>
+    <li><strong>Moderate:</strong> talks in phrases, SpO2 92-95%, visible intercostal or subcostal recession</li>
+    <li><strong>Severe:</strong> single words or unable to speak, SpO2 below 92%, silent chest, cyanosis, altered consciousness</li>
+  </ul>
+  <p>
+    For mild-to-moderate exacerbations in primary care: oxygen to maintain SpO2 above 94%. Salbutamol 2-10 puffs via MDI and spacer (each actuation given separately, wait 30 seconds between puffs), repeated every 20 minutes for up to 3 doses in the first hour. Oral prednisolone 1-2 mg/kg (max 40 mg) for 3 days. If not responding after the initial doses, refer to secondary care.
+  </p>
+  <p>
+    Severe exacerbation: call 111 immediately. Give salbutamol while waiting. These children deteriorate quickly.
+  </p>
+</div>
 
-<h2>Management - long-term control</h2>
-<p>Management follows a step-wise approach based on symptom frequency and severity, guided by the NZGG/GINA framework and NZ Formulary.<sup>2,3</sup></p>
-
-<p>Step 1 (mild intermittent): salbutamol metered dose inhaler (MDI) via spacer as needed. Educate on spacer use at every visit. All children using inhaled medication should use a spacer; without one, less than 10% of the dose reaches the lung.</p>
-
-<p>Step 2 (mild persistent - symptoms more than twice per week or nocturnal symptoms more than twice per month): add regular low-dose inhaled corticosteroid (ICS). First-line in NZ: budesonide (Pulmicort) 100-200 mcg twice daily or beclometasone 100 mcg twice daily. The goal is the minimum effective dose to maintain control; stepping down after 3 months of good control is appropriate.<sup>2</sup></p>
-
-<p>Step 3 (moderate persistent, not controlled on low-dose ICS): options include increasing ICS to medium dose, adding a long-acting beta2-agonist (LABA) - not to be used without ICS in children - or adding a leukotriene receptor antagonist (montelukast, 4 mg for children 2-5, 5 mg for children 6-14). Paediatric review is appropriate before initiating Step 3 treatment in children under 5.</p>
-
-<p>Step 4-5: specialist paediatric respiratory management.</p>
-
-<p>Written asthma action plans (AAPs) are an evidence-based intervention that reduce hospital admissions and emergency visits. Every child with asthma should have a current written AAP reviewed at least annually.<sup>4</sup></p>
-
-<h2>Acute exacerbations</h2>
-<p>Most mild-to-moderate exacerbations can be initiated in primary care. Oxygen to maintain saturations above 94%. Salbutamol 2-10 puffs via MDI and spacer (each actuation given separately), repeated every 20 minutes for up to 3 doses in the first hour. Oral prednisolone 1-2 mg/kg (max 40 mg) for 3 days. If not responding, refer to secondary care.</p>
-
-<p>Assess severity: mild (talks in sentences, SpO2 ≥95%), moderate (talks in phrases, SpO2 92-95%, visible recession), severe (single words or less, SpO2 below 92%, silent chest, altered consciousness). Severe exacerbation - call 111, give salbutamol immediately while waiting for ambulance.</p>
-
-<h2>Referral criteria</h2>
-<p>Refer to paediatrics for: diagnosis uncertain after assessment and trial of therapy; inadequate control despite Step 2 treatment; Step 3 treatment required in children under 5; frequent or severe exacerbations requiring hospital admission; suspected alternative diagnosis; significant parental concern about the diagnosis or management plan.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Triggers, referral, and equity</p>
+  <p>
+    Common triggers include viral respiratory infections (the most common exacerbation trigger in children), exercise, allergen exposure (house dust mite, pet dander, moulds), cold air, cigarette smoke, and strong odours. Identifying and reducing modifiable triggers is part of long-term management. Passive smoke exposure is a modifiable risk factor that worsens asthma severity significantly - address it directly.
+  </p>
+  <p>
+    Refer to paediatrics for: diagnosis uncertain after assessment and trial of therapy; inadequate control despite Step 2 treatment; Step 3 treatment required in under-5s; frequent or severe exacerbations requiring hospital admission; suspected alternative diagnosis; significant parental anxiety about the diagnosis or management plan.
+  </p>
+  <p>
+    Maori and Pacific children have higher rates of asthma hospitalisation and mortality than NZ European children, reflecting housing quality (cold, damp housing worsens asthma), household crowding, access barriers, and potentially higher rates of severe disease. Consider these factors when reviewing a Maori or Pacific child with poorly controlled asthma - housing, smoking, and access to medication are often more relevant than changing the pharmacological step.
+  </p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -57,9 +119,13 @@ permalink: /paediatrics/childhood-asthma/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Asthma and Respiratory Foundation NZ. The Burden of Asthma in New Zealand. Wellington: ARFNZ; 2020.<br>
-  <sup>2</sup> Global Initiative for Asthma (GINA). Global strategy for asthma management and prevention. Fontana, WI: GINA; 2023. Available from: https://ginasthma.org/<br>
-  <sup>3</sup> New Zealand Formulary for Children (NZFc). Respiratory prescribing in children. Auckland: New Zealand Formulary; 2024. Available from: https://nzfchildren.org.nz/<br>
-  <sup>4</sup> Gibson PG, Powell H, Coughlan J, et al. Self-management education and regular practitioner review for adults with asthma. Cochrane Database Syst Rev. 2003;(1):CD001117.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Asthma and Respiratory Foundation NZ. *The Burden of Asthma in New Zealand*. Wellington: ARFNZ; 2020.
+2. Global Initiative for Asthma (GINA). *Global strategy for asthma management and prevention*. Fontana, WI: GINA; 2023. Available from: ginasthma.org.
+3. New Zealand Formulary for Children (NZFc). *Respiratory prescribing in children*. Auckland: New Zealand Formulary; 2024. Available from: nzfchildren.org.nz.
+4. Gibson PG, Powell H, Coughlan J, et al. Self-management education and regular practitioner review for adults with asthma. *Cochrane Database Syst Rev.* 2003;(1):CD001117.
+
+</div>
