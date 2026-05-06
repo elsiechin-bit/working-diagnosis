@@ -9,23 +9,29 @@ permalink: /msk/osteoarthritis-older/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>Osteoarthritis (OA) in older adults is a progressive, degenerative joint condition affecting multiple sites with significant functional disability. A cardinal principle: radiographic severity does not correlate well with symptoms. We manage the patient, not the scan. Weight loss, activity modification, and physiotherapy remain the highest-yield interventions regardless of imaging findings.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>Radiographic severity does not correlate with symptoms - manage the patient, not the scan. Mechanical joint pain (worse with activity, better with rest) and morning stiffness under 30 minutes are the hallmarks. Stiffness lasting over 1 hour or markedly elevated inflammatory markers suggests an inflammatory arthropathy requiring different management.</li>
+    <li>Weight loss (5-10% body weight) and exercise (quadriceps strengthening for knee OA, hip abductor strengthening for hip OA) are the highest-yield long-term interventions and should be offered to every patient as first-line, not as adjuncts.<sup>1</sup></li>
+    <li>Topical diclofenac gel (PHARMAC-funded) is first-line pharmacotherapy for knee and hand OA. Oral NSAIDs require careful risk stratification in older adults (GI, renal, cardiovascular). Avoid opioids - minimal benefit, high falls risk, and addiction potential in older adults.</li>
+    <li>Refer for joint replacement when significant pain and functional limitation persist despite optimised conservative management and the patient wishes to discuss surgery. Age alone is not a contraindication; medical fitness and motivation matter more.</li>
+  </ul>
+</div>
 
-<h2>Presentation</h2>
-<p>Patients present with insidious joint pain (worse with activity, better with rest), morning stiffness lasting under 30 minutes, and progressive functional limitation. Physical examination reveals crepitus, bony enlargement, reduced range of motion, and sometimes an effusion. Multiple joints are commonly affected - knees, hips, hands, cervical and lumbar spine. Importantly, absence of systemic inflammatory features (fever, rash, weight loss) and negative inflammatory markers (ESR, CRP normal or mildly elevated) help distinguish OA from inflammatory arthropathies. Nocturnal pain and marked morning stiffness (>1 hour) suggest alternative diagnoses.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation, investigation, and management</p>
+  <p>OA in older adults is a progressive, degenerative joint condition affecting multiple sites. Patients present with insidious joint pain (worse with activity, better with rest), morning stiffness lasting under 30 minutes, and progressive functional limitation. Examination reveals crepitus, bony enlargement, reduced range of motion, and sometimes a mild effusion. Multiple joints are commonly affected - knees, hips, hands, and the cervical and lumbar spine. Absent systemic inflammatory features and normal or mildly elevated inflammatory markers (ESR, CRP) help distinguish OA from inflammatory arthropathies. Nocturnal pain and stiffness lasting over 1 hour suggest alternative diagnoses.</p>
 
-<h2>Investigation</h2>
-<p>X-rays of affected joints are appropriate when diagnosis is uncertain or surgical consultation is contemplated. Weight-bearing views are essential for knees and hips. Do not request X-rays to guide treatment decisions in asymptomatic patients. An X-ray showing advanced OA in an asymptomatic joint does not mandate intervention. Basic blood work (FBC, renal function) is useful before prescribing NSAIDs. Inflammatory markers are normal or mildly elevated in primary OA; markedly elevated ESR or CRP warrants investigation for alternative diagnoses.</p>
+  <p>X-rays of affected joints are appropriate when the diagnosis is uncertain or surgical consultation is contemplated; weight-bearing views are essential for knees and hips. Do not request X-rays to guide treatment in asymptomatic patients. Basic blood work (FBC, renal function) is useful before prescribing NSAIDs. Markedly elevated ESR or CRP warrants investigation for alternative diagnoses.</p>
 
-<h2>Management</h2>
-<p>Non-pharmacological approaches are first-line and most effective long-term. Weight loss (even 5-10% body weight) significantly reduces pain and improves function in weight-bearing joints. Physiotherapy focusing on strengthening (quadriceps for knee OA, hip abductors for hip OA) and range of motion exercises improves outcomes regardless of radiographic severity. Land-based and aquatic exercise are evidence-supported; patients benefit most from regular, sustained activity rather than passive modalities. Walking aids and orthotics can reduce pain and improve mobility.</p>
+  <p>Non-pharmacological approaches are first-line and most effective long-term. Weight loss (even 5-10% body weight) significantly reduces pain and improves function in weight-bearing joints. Physiotherapy focusing on quadriceps strengthening (knee OA) and hip abductor strengthening (hip OA) improves outcomes regardless of radiographic severity. Land-based and aquatic exercise are evidence-supported. Walking aids and orthotics reduce pain and improve mobility. Topical diclofenac gel (PHARMAC-funded) is first-line pharmacotherapy for knee and hand OA, with minimal systemic absorption. Oral NSAIDs are effective but require careful risk stratification - co-prescribe a proton pump inhibitor for patients aged over 65, with prior peptic ulcer, or on anticoagulants. Avoid opioids - they offer minimal benefit and carry high risk of falls, delirium, and addiction in older adults. Intra-articular corticosteroid injections (triamcinolone 20-40 mg) provide 2-4 weeks of relief during flares. Total joint replacement is highly effective and should not be withheld on the basis of age alone.<sup>1</sup></p>
+</div>
 
-<p>Topical NSAIDs (e.g. diclofenac gel, PHARMAC-funded) are first-line pharmacological therapy for knee and hand OA, with good efficacy and minimal systemic absorption. Oral paracetamol is inexpensive and often effective. Oral NSAIDs (ibuprofen, naproxen, PHARMAC-funded) are effective but require careful risk stratification in older adults: gastrointestinal bleeding, hypertension, renal impairment, and heart failure are significant harms. If NSAIDs are essential, co-prescribe a proton-pump inhibitor. Duloxetine (an SNRI, PHARMAC-funded with Special Authority) has modest evidence for OA pain. Tramadol and opioids offer minimal benefit, carry high risk of falls, delirium, and addiction in older adults, and are not recommended. Intra-articular corticosteroid injections (triamcinolone 20-40 mg) provide 2 - 4 weeks of pain relief during flares and can be repeated (typically 3 - 4 times yearly). Hyaluronic acid injections are not PHARMAC-funded and have limited evidence.</p>
-
-<p>Total joint replacement (hip and knee arthroplasty) is highly cost-effective and offers durable pain relief and functional restoration. Selection criteria include significant pain and functional limitation, radiographic OA, and failed optimised conservative management. Age alone is not a contraindication; medical fitness and motivation are more important. Private orthopaedic surgery is available in NZ; public waiting lists vary by region.</p>
-
-<h2>Referral criteria</h2>
-<p>Refer to orthopaedic surgery when the patient has significant pain and functional limitation despite optimised conservative management and is willing to consider surgery. Referral is not urgent but may have a substantial waiting time through public funding. Consider occupational therapy for home modifications and activities of daily living strategies in patients with functional limitation.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Referral criteria</p>
+  <p>Refer to orthopaedic surgery when the patient has significant pain and functional limitation despite optimised conservative management and is willing to consider surgery. Referral is not urgent but may involve a substantial wait through public funding. Consider occupational therapy for home modifications and activities of daily living strategies. Consider rheumatology referral if inflammatory features suggest underlying inflammatory arthropathy or the diagnosis is uncertain.</p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -40,9 +46,13 @@ permalink: /msk/osteoarthritis-older/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Bannuru RR, Osani MC, Vaysbrot EE, et al. OARSI guidelines for the non-surgical management of knee, hip, and polyarticular osteoarthritis. Osteoarthritis Cartilage. 2019;27(11):1578-1589.<br>
-  <sup>2</sup> Zhang W, Nuki G, Moskowitz RW, et al. OARSI recommendations for the management of hip and knee osteoarthritis: part III: Changes in evidence following systematic cumulative update of research published through January 2009. Osteoarthritis Cartilage. 2010;18(4):476-499.<br>
-  <sup>3</sup> National Institute for Health and Care Excellence. Osteoarthritis: care and management. NICE guideline NG226. 2020.<br>
-  <sup>4</sup> Hochberg MC. Mortality in osteoarthritis and rheumatoid arthritis: a comparative study. J Clin Epidemiol. 1997;50(3):313-319.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Bannuru RR, Osani MC, Vaysbrot EE, et al. OARSI guidelines for the non-surgical management of knee, hip, and polyarticular osteoarthritis. *Osteoarthritis Cartilage.* 2019;27(11):1578-1589.
+2. Zhang W, Nuki G, Moskowitz RW, et al. OARSI recommendations for the management of hip and knee osteoarthritis: part III. *Osteoarthritis Cartilage.* 2010;18(4):476-499.
+3. National Institute for Health and Care Excellence. Osteoarthritis: care and management. NICE guideline NG226. 2020.
+4. Hochberg MC. Mortality in osteoarthritis and rheumatoid arthritis: a comparative study. *J Clin Epidemiol.* 1997;50(3):313-319.
+
+</div>

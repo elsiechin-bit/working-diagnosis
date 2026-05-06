@@ -9,19 +9,29 @@ permalink: /msk/foot-problems-older/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>Foot pain affects 25% of older adults and is a major contributor to reduced mobility and falls risk. Common age-related foot conditions include plantar fasciitis, hallux rigidus and valgus, Morton's neuroma, and peripheral neuropathy. Foot pain, deformity, and reduced sensation each independently increase falls risk. Regular foot checks and appropriate referral to podiatry improve outcomes and prevent disability in this population.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>Foot pain affects 25% of older adults and is a major contributor to reduced mobility and falls risk.<sup>3</sup> Plantar fasciitis - the most common cause of heel pain - presents with first-step morning pain and tenderness over the medial calcaneal tuberosity. Most cases resolve within 12 months with stretching, footwear advice, and heel cups.</li>
+    <li>Diabetic foot requires annual structured surveillance in every patient with diabetes: monofilament sensation testing, palpation of pulses, and skin integrity assessment. Any ulcer, absent pulses, or loss of protective sensation warrants urgent podiatry review and consideration of vascular assessment.</li>
+    <li>Morton's neuroma (typically 3rd-4th web space): burning or tingling, a feeling of walking on a stone, and Mulder's click on examination.<sup>4</sup> Footwear modification and corticosteroid injection under ultrasound guidance are first-line; surgical excision for failed conservative management.</li>
+    <li>Regular podiatry referral for all patients with diabetes, peripheral neuropathy, or significant foot deformity. ACC and community subsidies fund podiatry services in NZ. Orthopaedic referral for hallux rigidus, hallux valgus, or Morton's neuroma not responding after 3-6 months of conservative management.</li>
+  </ul>
+</div>
 
-<h2>Presentation</h2>
-<p>Plantar fasciitis (most common cause of heel pain): first-step morning pain, worse after rest then better with walking until prolonged activity recurs pain. Tenderness over the medial calcaneal tuberosity. Hallux rigidus: limited dorsiflexion at the first metatarsophalangeal joint, pain at top of the first MTP, prominent dorsal osteophyte. Hallux valgus (bunion): lateral deviation of the great toe with medial eminence prominence; often bilateral, worsens with time. Morton's neuroma: interdigital neuroma (usually 3rd - 4th web space), burning or tingling sensation, feeling of "walking on a stone." Mulder's click on examination. Peripheral neuropathy: burning, tingling, numbness; assess in all patients with foot symptoms, particularly those with diabetes. Diabetic foot: high-risk feet need annual surveillance including sensation testing (monofilament), pulses, and skin integrity assessment.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation, investigation, and management</p>
+  <p>Foot pain affects 25% of older adults and is a major contributor to reduced mobility and falls risk.<sup>3</sup> Common age-related conditions include plantar fasciitis (first-step morning heel pain, medial calcaneal tuberosity tenderness), hallux rigidus (limited first MTP dorsiflexion, dorsal osteophyte), hallux valgus (lateral great toe deviation with medial eminence prominence), Morton's neuroma (interdigital burning or tingling, usually 3rd-4th web space, Mulder's click), and peripheral neuropathy (burning, tingling, numbness). Diabetic foot requires annual surveillance including monofilament sensation, pulse palpation, and skin integrity check. Foot pain, deformity, and reduced sensation each independently increase falls risk.</p>
 
-<h2>Investigation</h2>
-<p>Weight-bearing X-rays assess hallux rigidus (joint space narrowing, osteophytes) and valgus deformity. Stress views help identify early OA. Consider X-rays to exclude stress fracture if pain is focal and persistent despite conservative care. If neuropathy is suspected: check HbA1c (diabetes), vitamin B12 level, and alcohol history. Vascular assessment (ankle-brachial index, pulses) is appropriate if peripheral vascular disease is suspected (absent pulses, claudication, non-healing ulcers).</p>
+  <p>Weight-bearing X-rays assess hallux rigidus (joint space narrowing, osteophytes) and valgus deformity. X-rays are appropriate to exclude stress fracture when pain is focal and persistent. If neuropathy is suspected: HbA1c, vitamin B12 level, and alcohol history. Vascular assessment (ankle-brachial index, pulses) if peripheral vascular disease is suspected (absent pulses, claudication, non-healing ulcers).</p>
 
-<h2>Management</h2>
-<p>Plantar fasciitis: stretching (plantar fascia and calf, particularly morning before getting out of bed), footwear advice (supportive shoe with cushioned heel), NSAIDs, ice massage, heel cups. Most resolve within 12 months. Corticosteroid injection (via ultrasound guidance) is reserved for refractory cases and provides short-term relief (4 - 6 weeks). Extracorporeal shock wave therapy has modest evidence. Hallux rigidus: footwear modification (stiff-soled shoe, rocker bottom to reduce first MTP motion). Corticosteroid injection for acute flares. Cheilectomy (surgical removal of dorsal osteophyte) or fusion for severe cases. Hallux valgus: footwear advice (wide toe box). Surgical correction (various approaches) if functionally symptomatic and conservative measures fail. Morton's neuroma: footwear advice (wider toe box, metatarsal pad to offload the interspace). Corticosteroid injection under ultrasound guidance. Surgical excision for failed conservative management. All foot conditions benefit from proper footwear assessment and regular podiatry care, particularly in patients with diabetes or peripheral neuropathy.</p>
+  <p>Plantar fasciitis: plantar fascia and calf stretching (particularly before getting out of bed in the morning), supportive footwear with a cushioned heel, NSAIDs, ice massage, and heel cups. Corticosteroid injection under ultrasound guidance for refractory cases provides short-term relief. Hallux rigidus: stiff-soled rocker-bottom footwear reduces first MTP motion; cheilectomy or fusion for severe cases. Hallux valgus: wide toe box footwear; surgical correction for functionally symptomatic cases failing conservative management. Morton's neuroma: metatarsal pad and wider toe box footwear, corticosteroid injection under ultrasound guidance, surgical excision for failed conservative management.<sup>4</sup> All foot conditions benefit from proper footwear assessment and regular podiatry care, particularly in patients with diabetes or peripheral neuropathy.</p>
+</div>
 
-<h2>Referral criteria</h2>
-<p>Podiatry: for ongoing foot care, nail management, callus care, footwear assessment. ACC funding and community subsidies are available in NZ. Orthopaedic surgery: for surgical assessment of hallux rigidus, valgus, or Morton's neuroma not responding to conservative treatment after 3 - 6 months. Vascular surgery: if peripheral vascular disease is suspected. Endocrinology or diabetes educator: for comprehensive diabetic foot surveillance and neuropathy management.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Referral criteria</p>
+  <p>Podiatry referral for ongoing foot care, nail management, callus care, and footwear assessment - ACC funding and community subsidies are available in NZ. Orthopaedic surgery for surgical assessment of hallux rigidus, valgus, or Morton's neuroma not responding to 3-6 months of conservative treatment. Vascular surgery if peripheral vascular disease is suspected (absent pulses, ABI below 0.9, non-healing ulcer). Endocrinology or diabetes educator for comprehensive diabetic foot surveillance and neuropathy management.</p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -36,9 +46,13 @@ permalink: /msk/foot-problems-older/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Donley BG, Moore T, Sferra J, et al. The efficacy of oral nonsteroidal anti-inflammatory medication (indomethacin) and custom orthotics in the treatment of plantar fasciitis. J Bone Joint Surg Am. 2007;89(9):1921-1928.<br>
-  <sup>2</sup> Mann RA, Coughlin MJ. Surgery of the Foot and Ankle. 6th ed. Mosby; 1993.<br>
-  <sup>3</sup> Menz HB, Lord SR. The contribution of foot problems to mobility impairment and falls in community-dwelling older people. J Am Geriatr Soc. 2001;49(12):1651-1656.<br>
-  <sup>4</sup> Schmitigal M, Evers SJ, Wieland HP, et al. Validity of the diagnosis 'Morton's interdigital neuroma' based on clinical examination. Br J Gen Pract. 2005;55(519):919-923.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Donley BG, Moore T, Sferra J, et al. The efficacy of oral nonsteroidal anti-inflammatory medication (indomethacin) and custom orthotics in the treatment of plantar fasciitis. *J Bone Joint Surg Am.* 2007;89(9):1921-1928.
+2. Mann RA, Coughlin MJ. Surgery of the Foot and Ankle. 6th ed. Mosby; 1993.
+3. Menz HB, Lord SR. The contribution of foot problems to mobility impairment and falls in community-dwelling older people. *J Am Geriatr Soc.* 2001;49(12):1651-1656.
+4. Schmitigal M, Evers SJ, Wieland HP, et al. Validity of the diagnosis 'Morton's interdigital neuroma' based on clinical examination. *Br J Gen Pract.* 2005;55(519):919-923.
+
+</div>

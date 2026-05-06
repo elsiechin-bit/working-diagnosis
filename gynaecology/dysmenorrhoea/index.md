@@ -9,39 +9,40 @@ permalink: /gynaecology/dysmenorrhoea/
 <div class="topic-with-aside">
 <div class="topic-body">
 
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>Dysmenorrhoea affects 45-90% of menstruating women<sup>1</sup> and is frequently normalised and undertreated. Primary dysmenorrhoea is prostaglandin-mediated with no structural cause; secondary dysmenorrhoea arises from an underlying condition. The two must be distinguished: primary dysmenorrhoea is a diagnosis of exclusion, not a default label.</li>
+    <li>The average delay between onset of endometriosis symptoms and diagnosis is 6-10 years internationally.<sup>3</sup> Suspect secondary dysmenorrhoea when pain is worsening, onset is later in reproductive life, there is dyspareunia, dyschezia, or subfertility, or when standard treatment provides incomplete relief.</li>
+    <li>NSAIDs are first-line for primary dysmenorrhoea and work best when started the day before expected onset - not after pain is established. Around 80% of women respond.<sup>2</sup></li>
+    <li>A normal pelvic ultrasound does not exclude endometriosis. Peritoneal and superficial implants are below the resolution of standard USS. Referral should not be delayed by a negative ultrasound result.</li>
+  </ul>
+</div>
+
 <p>Dysmenorrhoea - painful menstruation - affects an estimated 45-90% of menstruating women to some degree, making it the most common gynaecological complaint worldwide. Despite its prevalence, it is frequently normalised, undertreated, and used as a reason to delay investigation. The key clinical distinction is primary versus secondary: primary dysmenorrhoea has no structural cause and is prostaglandin-mediated; secondary dysmenorrhoea arises from an underlying condition and requires investigation.</p>
 
-<h2>Presentation</h2>
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation and investigation</p>
+  <p><strong>Primary dysmenorrhoea</strong> typically begins in adolescence within one to two years of menarche as ovulatory cycles become established. Pain starts hours before or at the onset of menstruation, peaks in the first one to two days, and resolves by day two or three. It is cramping, suprapubic or lower abdominal, and may radiate to the lower back and anterior thighs. Associated features include nausea, diarrhoea, headache, and fatigue. Pelvic examination is normal. Primary dysmenorrhoea is a clinical diagnosis in an adolescent with characteristic features and no secondary red flags; investigation is not required initially.</p>
+  <p><strong>Secondary dysmenorrhoea</strong> should be suspected when onset is later in reproductive life; pain is worsening progressively; pain begins well before menstruation or persists after it; there is dyspareunia, dyschezia (painful defecation during menstruation), dysuria, or subfertility; pelvic examination is abnormal; or empirical treatment provides incomplete relief. The most common causes are endometriosis, adenomyosis, uterine fibroids, and sequelae of pelvic inflammatory disease.</p>
+  <p>Where secondary dysmenorrhoea is suspected: pelvic examination (uterosacral nodularity, fixed retroverted uterus, or adnexal tenderness suggest endometriosis; tender boggy uterus suggests adenomyosis); TVS to assess for fibroids, endometriomas, and other structural pathology. A normal ultrasound does not exclude endometriosis - diagnostic laparoscopy remains the gold standard. STI screen where PID is possible. FBC and ferritin if associated heavy bleeding.</p>
+</div>
 
-<p><strong>Primary dysmenorrhoea</strong> typically begins in adolescence, within one to two years of menarche, as ovulatory cycles become established. Pain starts hours before or at the onset of menstruation, peaks in the first one to two days, and resolves by day two or three. It is cramping, suprapubic or lower abdominal, and may radiate to the lower back and anterior thighs. Associated symptoms include nausea, diarrhoea, headache, and fatigue. Normal pelvic examination. Responds to NSAIDs and the combined oral contraceptive pill.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Management</p>
+  <p><strong>NSAIDs</strong> are the most effective first-line treatment, reducing prostaglandin synthesis.<sup>2</sup> Mefenamic acid (500 mg three times daily) and naproxen (500 mg twice daily) are commonly used; start the day before expected onset or at first signs of bleeding for maximum effect. Around 80% of women with primary dysmenorrhoea respond.</p>
+  <p><strong>Hormonal therapy:</strong> the COCP reduces endometrial prostaglandin production and suppresses ovulation. Continuous COCP cycling (no pill-free week) provides better control in women with severe dysmenorrhoea. The LNG-IUS (Mirena) is highly effective where heavy bleeding coexists. The progestogen-only pill and etonogestrel implant are alternatives for women in whom oestrogen is contraindicated.</p>
+  <p><strong>Where secondary dysmenorrhoea is suspected:</strong> empirical hormonal suppression (COCP, POP, or LNG-IUS) is appropriate while awaiting specialist review - it provides meaningful symptom relief without significantly delaying diagnosis. Referral should still proceed; hormonal treatment does not exclude endometriosis. Heat application and TENS have modest evidence as adjuncts.</p>
 
-<p><strong>Secondary dysmenorrhoea</strong> should be suspected when: onset is later in reproductive life (after years of pain-free or mild periods); pain is worsening progressively over cycles; pain begins well before menstruation or persists well after it; pain is associated with dyspareunia, dyschezia (painful defecation during menstruation), dysuria, or subfertility; there is an abnormal pelvic examination; or empirical treatment with NSAIDs and the COCP provides incomplete relief. The most common causes are endometriosis, adenomyosis, uterine fibroids, and pelvic inflammatory disease sequelae.</p>
+  <div class="topic-handouts">
+    <p>📋 <a href="#">Patient handout - Painful periods (coming soon)</a></p>
+  </div>
+</div>
 
-<p>The average delay between onset of symptoms and diagnosis of endometriosis is 6-10 years internationally. Primary dysmenorrhoea is overdiagnosed as a diagnostic label of convenience - worsening pain, failure of standard treatment, or any of the features above should prompt consideration of secondary causes and specialist referral.</p>
-
-<h2>Investigation</h2>
-
-<p>Primary dysmenorrhoea is a clinical diagnosis in an adolescent with characteristic features, normal examination, and no secondary features. Investigation is not required initially.</p>
-
-<p>Where secondary dysmenorrhoea is suspected: pelvic examination (adnexal tenderness, uterosacral nodularity, fixed retroverted uterus suggest endometriosis; enlarged irregular uterus suggests fibroids; tender boggy uterus suggests adenomyosis); transvaginal ultrasound (TVS) to assess for fibroids, adenomyosis, endometriomas, and other structural pathology. A normal ultrasound does not exclude endometriosis - peritoneal and superficial implants are below the resolution of standard ultrasound. MRI is more sensitive for deep infiltrating endometriosis and adenomyosis but is not a first-line investigation in primary care. Diagnostic laparoscopy remains the gold standard for endometriosis diagnosis.</p>
-
-<p>STI screen (chlamydia, gonorrhoea) where PID is a possibility. FBC and iron studies if associated heavy menstrual bleeding.</p>
-
-<h2>Management</h2>
-
-<p><strong>NSAIDs</strong> are the most effective first-line treatment for primary dysmenorrhoea, reducing prostaglandin synthesis. Mefenamic acid (500 mg three times daily) and naproxen (500 mg twice daily) are commonly used; best started the day before expected onset or at first signs of bleeding, not after pain is established. Around 80% of women with primary dysmenorrhoea respond to NSAIDs. NZF documents funded options.</p>
-
-<p><strong>Combined oral contraceptive pill</strong> reduces endometrial prostaglandin production and suppresses ovulation, reducing blood loss and pain. Continuous COCP cycling (no pill-free week) may provide better symptom control in women with severe dysmenorrhoea.</p>
-
-<p><strong>Levonorgestrel IUS</strong> (Mirena) is highly effective for dysmenorrhoea associated with heavy bleeding and is first-line if the patient wants long-term contraception alongside symptom control.</p>
-
-<p><strong>Where secondary dysmenorrhoea is suspected and prior to definitive diagnosis:</strong> empirical hormonal suppression (COCP, progestogen-only pill, or levonorgestrel IUS) is appropriate while awaiting specialist review. This does not delay diagnosis significantly and provides meaningful symptom relief. Referral should still be made; hormonal treatment does not exclude endometriosis.</p>
-
-<p><strong>Non-pharmacological measures</strong> with modest evidence include: heat application (heated pad or patch to lower abdomen), transcutaneous electrical nerve stimulation (TENS), and regular exercise. These are adjuncts, not substitutes for pharmacotherapy in moderate-severe dysmenorrhoea.</p>
-
-<h2>Referral criteria</h2>
-
-<p>Refer to gynaecology for: suspected endometriosis or adenomyosis; dysmenorrhoea with dyspareunia, dyschezia, or subfertility; inadequate response to NSAIDs and two cycles of hormonal therapy; abnormal pelvic examination; progressive worsening of symptoms. Referral should not be delayed by a negative pelvic ultrasound.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Referral criteria</p>
+  <p>Refer to gynaecology for: suspected endometriosis or adenomyosis; dysmenorrhoea with dyspareunia, dyschezia, or subfertility; inadequate response to NSAIDs and two cycles of hormonal therapy; abnormal pelvic examination; or progressive worsening of symptoms. Referral should not be delayed by a negative pelvic ultrasound - normal USS does not exclude endometriosis, and the average diagnostic delay of 6-10 years<sup>3</sup> reflects exactly this pattern of repeated reassurance without timely investigation.</p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -66,8 +67,12 @@ permalink: /gynaecology/dysmenorrhoea/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Ju H, Jones M, Mishra G. The prevalence and risk factors of dysmenorrhoea. Epidemiol Rev. 2014;36:104-113.<br>
-  <sup>2</sup> Marjoribanks J, Ayeleke RO, Farquhar C, Proctor M. Nonsteroidal anti-inflammatory drugs for dysmenorrhoea. Cochrane Database Syst Rev. 2015;(7):CD001751.<br>
-  <sup>3</sup> Nnoaham KE, Hummelshoj L, Webster P, et al. Impact of endometriosis on quality of life and work productivity. Fertil Steril. 2011;96(2):366-373.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Ju H, Jones M, Mishra G. The prevalence and risk factors of dysmenorrhoea. *Epidemiol Rev.* 2014;36:104-113.
+2. Marjoribanks J, Ayeleke RO, Farquhar C, Proctor M. Nonsteroidal anti-inflammatory drugs for dysmenorrhoea. *Cochrane Database Syst Rev.* 2015;(7):CD001751.
+3. Nnoaham KE, Hummelshoj L, Webster P, et al. Impact of endometriosis on quality of life and work productivity. *Fertil Steril.* 2011;96(2):366-373.
+
+</div>

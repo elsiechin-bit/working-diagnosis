@@ -9,19 +9,29 @@ permalink: /msk/osteoporosis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>Osteoporosis is defined by low bone mineral density (DEXA T-score less than or equal to -2.5) but clinically is diagnosed by any low-trauma fracture regardless of BMD. Fracture risk in older adults depends on bone density, bone quality, and fall risk. This page focuses on fracture risk assessment and treatment initiation in primary care. Primary care doctors can manage much of osteoporosis; specialist referral is appropriate when management is complex, treatment fails, or the patient is very high-risk.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>Osteoporosis is defined by a DEXA T-score of -2.5 or below, but any low-trauma fracture is a clinical diagnosis of osteoporosis regardless of BMD. Screen women aged 65+, men aged 70+, anyone with a low-trauma fracture, patients on prolonged systemic corticosteroids (>3 months), and those with rheumatoid arthritis or chronic conditions associated with bone loss.</li>
+    <li>Use the GARVAN Fracture Risk Calculator (validated in NZ populations) rather than FRAX when falls history is a significant factor - GARVAN incorporates falls, FRAX does not.<sup>1</sup> High fracture risk on GARVAN/FRAX justifies treatment even if the DEXA T-score is only mildly abnormal.</li>
+    <li>First-line pharmacotherapy: alendronate 70 mg weekly (PHARMAC-funded with Special Authority; requires DEXA T-score of -2.5 or below, or prior low-trauma fracture). Zoledronic acid IV annually for oral intolerance; denosumab for severe osteoporosis; teriparatide or romosozumab for very high-risk (specialist-initiated).</li>
+    <li>All patients with a low-trauma fracture should be referred to Fracture Liaison Services if available. Bone protection is mandatory with prolonged corticosteroid therapy: calcium, vitamin D, and alendronate (indicated for prednisolone equivalent 7.5 mg/day or more for 3 months or longer).</li>
+  </ul>
+</div>
 
-<h2>Presentation</h2>
-<p>Osteoporosis is usually asymptomatic until a fracture occurs. Screening is indicated in women age 65+, men age 70+, anyone with low-trauma fracture, those on prolonged systemic corticosteroids (>3 months), and patients with rheumatoid arthritis or chronic conditions associated with bone loss (chronic liver disease, renal disease, malabsorption). Height loss (>4 cm) or progressive kyphosis suggests multiple vertebral fractures.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation, investigation, and management</p>
+  <p>Osteoporosis is usually asymptomatic until a fracture occurs. Screening is indicated in women aged 65+, men aged 70+, anyone with a low-trauma fracture, those on prolonged systemic corticosteroids, and patients with rheumatoid arthritis or chronic conditions associated with bone loss (chronic liver disease, renal disease, malabsorption). Height loss greater than 4 cm or progressive kyphosis suggests multiple vertebral fractures.</p>
 
-<h2>Investigation</h2>
-<p>DEXA (dual-energy X-ray absorptiometry) is the standard. Obtain hip, spine, and forearm scans. Report T-scores: normal (>-1.0), osteopenia (-1.0 to -2.5), osteoporosis (<-2.5). Fracture risk tools are useful: FRAX (Fracture Risk Assessment Tool) calculates 10-year probability of major osteoporotic fracture with or without BMD. GARVAN Fracture Risk Calculator (validated in NZ populations) incorporates falls history, which FRAX does not - use GARVAN if falls risk is a major factor. High fracture risk justifies treatment even if DEXA T-score is mild. Laboratory assessment: calcium (dietary preferred; supplement if <1200 mg/day intake), vitamin D (target 25-OH vitamin D >50 nmol/L; supplement with cholecalciferol if deficient), alkaline phosphatase, renal function (relevant for bisphosphonate use).</p>
+  <p>DEXA (dual-energy X-ray absorptiometry) is the standard: obtain hip, spine, and forearm scans. T-scores: normal (above -1.0), osteopenia (-1.0 to -2.5), osteoporosis (-2.5 or below). Use the GARVAN Fracture Risk Calculator for patients with falls history (GARVAN incorporates falls; FRAX does not) - both calculate 10-year probability of major osteoporotic fracture with or without BMD.<sup>1</sup> Laboratory assessment: calcium, vitamin D (target 25-OH vitamin D above 50 nmol/L), alkaline phosphatase, and renal function (relevant for bisphosphonate use).</p>
 
-<h2>Management</h2>
-<p>Non-pharmacological: weight-bearing exercise (walking, resistance training), adequate dietary calcium and protein, smoking cessation, moderate alcohol intake, falls prevention. Vitamin D supplementation (800 - 1000 IU daily) is recommended for older adults at risk. Pharmacological treatment is indicated for: DEXA T-score less than or equal to -2.5, history of low-trauma fracture, high fracture risk on FRAX/GARVAN (varies by age and sex), or prolonged corticosteroid use. First-line: alendronate (oral weekly, PHARMAC-funded with Special Authority). Alternatives: risedronate (weekly), zoledronic acid (IV annual, useful if oral intolerance; PHARMAC-funded), denosumab (RANKL inhibitor, PHARMAC-funded for severe osteoporosis), teriparatide/romosozumab (specialist-initiated anabolic agents for very high-risk). PHARMAC Special Authority typically requires DEXA T-score less than or equal to -2.5 or prior low-trauma fracture. Atypical femoral fractures and osteonecrosis of jaw are rare; consider drug holidays after 5 years of oral bisphosphonate or 3 years of IV zoledronic acid if ongoing fracture risk is low.</p>
+  <p>Non-pharmacological: weight-bearing exercise, adequate dietary calcium and protein, smoking cessation, moderate alcohol intake, falls prevention programme. Vitamin D supplementation (800-1000 IU daily) for older adults at risk. Pharmacological treatment is indicated for: DEXA T-score -2.5 or below, history of low-trauma fracture, high fracture risk on FRAX/GARVAN, or prolonged corticosteroid use. First-line: alendronate 70 mg oral weekly (PHARMAC-funded with Special Authority). Alternatives: risedronate weekly, zoledronic acid IV annually (PHARMAC-funded; useful if oral intolerance), denosumab (PHARMAC-funded for severe osteoporosis), teriparatide and romosozumab (specialist-initiated anabolic agents for very high-risk). Consider drug holidays after 5 years of oral bisphosphonate or 3 years of IV zoledronic acid if ongoing fracture risk is low.<sup>3,4</sup></p>
+</div>
 
-<h2>Referral criteria</h2>
-<p>All patients with low-trauma fracture should be referred to Fracture Liaison Services (if available in your region). DEXA interpretation and initial treatment can be managed in primary care using BPAC guidance. Refer to rheumatology or geriatrics if patient is very high-risk, treatment is failing, or for specialist input on complex cases. Refer to endocrinology if secondary osteoporosis is suspected (hyperparathyroidism, hyperthyroidism, Cushing's, etc.).</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Referral criteria</p>
+  <p>All patients with a low-trauma fracture should be referred to Fracture Liaison Services (if available in your region). DEXA interpretation and initial treatment can be managed in primary care using BPAC guidance. Refer to rheumatology or geriatrics if the patient is very high-risk, treatment is failing, or specialist input is needed for complex cases. Refer to endocrinology if secondary osteoporosis is suspected (hyperparathyroidism, hyperthyroidism, Cushing's syndrome, or other endocrine causes).</p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -36,9 +46,13 @@ permalink: /msk/osteoporosis/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Kanis JA, Johnell O, Oden A, et al. FRAX and the assessment of fracture probability in men and women from the UK. Osteoporos Int. 2008;19(4):385-397.<br>
-  <sup>2</sup> Eisman JA, Bogoch ER, Dell R, et al. Making the first fracture the last fracture: ASBMR task force report on secondary fracture prevention. J Bone Miner Res. 2012;27(10):2039-2046.<br>
-  <sup>3</sup> Compston J, Cooper A, Cooper C, et al. UK clinical guideline for the prevention and treatment of osteoporosis in postmenopausal women and older men. Nat Rev Endocrinol. 2017;13(6):394-395.<br>
-  <sup>4</sup> Black DM, Rosen CJ. Clinical practice. Postmenopausal osteoporosis. N Engl J Med. 2016;374(3):254-262.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Kanis JA, Johnell O, Oden A, et al. FRAX and the assessment of fracture probability in men and women from the UK. *Osteoporos Int.* 2008;19(4):385-397.
+2. Eisman JA, Bogoch ER, Dell R, et al. Making the first fracture the last fracture: ASBMR task force report on secondary fracture prevention. *J Bone Miner Res.* 2012;27(10):2039-2046.
+3. Compston J, Cooper A, Cooper C, et al. UK clinical guideline for the prevention and treatment of osteoporosis in postmenopausal women and older men. *Nat Rev Endocrinol.* 2017;13(6):394-395.
+4. Black DM, Rosen CJ. Clinical practice. Postmenopausal osteoporosis. *N Engl J Med.* 2016;374(3):254-262.
+
+</div>

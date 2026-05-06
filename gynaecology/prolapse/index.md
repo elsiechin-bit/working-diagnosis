@@ -9,37 +9,34 @@ permalink: /gynaecology/prolapse/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>Pelvic organ prolapse (POP) is the descent of one or more of the pelvic organs - bladder (cystocele), uterus, rectum (rectocele), or vaginal vault after hysterectomy - into or beyond the vaginal canal. It is extremely common: approximately 50% of parous women have some degree of prolapse on examination, though only 10-20% are symptomatic. POP significantly impacts quality of life but is underreported - many women consider it a normal consequence of childbirth or ageing. Conservative management is effective and should always be the first approach.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>Approximately 50% of parous women have some degree of prolapse on examination, but only 10-20% are symptomatic. POP is underreported - many women consider it a normal consequence of childbirth or ageing. Treatment is guided by symptoms, not examination findings alone.</li>
+    <li>The first-line treatment for all symptomatic prolapse is pelvic floor muscle training (PFMT) - supervised physiotherapy. Evidence from RCTs shows significant improvement in prolapse symptoms and quality of life at 6-12 months.<sup>1</sup> Refer to a pelvic floor physiotherapist before considering surgical referral. At least 3-6 months of consistent practice is needed before assessing benefit.</li>
+    <li>Vaginal pessaries are effective long-term management for women unsuitable for or not wishing surgery. Ring pessaries suit most cystocele and uterine prolapse. Most women self-manage after initial fitting; 3-6 monthly removal and cleaning is required.</li>
+    <li>Mesh for vaginal repair has been restricted in NZ following TGA and Medsafe review. Non-mesh native tissue repairs are the preferred approach for vaginal access surgery.</li>
+  </ul>
+</div>
 
-<h2>Presentation</h2>
+<p>Pelvic organ prolapse (POP) is the descent of one or more of the pelvic organs - bladder (cystocele), uterus, rectum (rectocele), or vaginal vault after hysterectomy - into or beyond the vaginal canal. Conservative management is effective and should always be the first approach.</p>
 
-<p>The classic symptom is a dragging sensation or feeling of something coming down in the vaginal or perineal area, typically worse at the end of the day or after prolonged standing. Women may describe seeing or feeling a lump or bulge at or beyond the vaginal opening. Associated symptoms depend on the compartment involved: anterior wall prolapse (cystocele) commonly causes urinary symptoms including stress urinary incontinence, urinary frequency, incomplete bladder emptying, and the need to digitally reduce the prolapse to initiate voiding; posterior wall prolapse (rectocele) may cause incomplete bowel emptying, straining at stool, and the need to apply digital pressure to the perineum or posterior vaginal wall to defecate (splinting); uterine or vault prolapse may cause pelvic pressure and low back pain.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation, assessment, and conservative management</p>
+  <p><strong>Presentation:</strong> dragging sensation or feeling of something coming down, typically worse at end of day or after prolonged standing. Women may see or feel a lump at the vaginal opening. Anterior prolapse (cystocele): stress urinary incontinence, urinary frequency, incomplete bladder emptying, need to reduce the prolapse to void. Posterior prolapse (rectocele): incomplete bowel emptying, straining, splinting (applying digital pressure to perineum to defecate). Uterine or vault prolapse: pelvic pressure and low back pain. Symptoms fluctuate - worse with standing, coughing, straining, and better lying down.</p>
+  <p><strong>Assessment:</strong> Sims' speculum in left lateral position or supine with Valsalva. Grading: Grade I - more than 1 cm above introitus; Grade II - to within 1 cm of introitus; Grade III - beyond introitus; Grade IV - complete eversion. Include urinalysis, post-void residual if incomplete emptying is suspected, and urodynamic assessment if mixed incontinence is prominent or surgical planning is underway.</p>
+  <p><strong>Conservative management:</strong> lifestyle modification (weight reduction reduces intra-abdominal pressure; treat chronic cough; avoid constipation and heavy lifting). PFMT: supervised pelvic floor physiotherapy is first-line - refer to a physiotherapist specialising in pelvic floor before surgical referral.<sup>1</sup> In NZ, ACC covers physiotherapy for obstetric injury. Topical vaginal oestrogen in postmenopausal women improves vaginal tissue quality and response to pessary use (does not directly treat prolapse). Vaginal pessaries: silicone devices providing mechanical support - ring pessaries for anterior/uterine prolapse, shelf or Gelhorn for severe posterior prolapse. Fitting by experienced clinician; 3-6 monthly review and cleaning.</p>
 
-<p>Prolapse symptoms fluctuate - they are typically worse with prolonged standing, coughing, sneezing, and straining, and better with lying down. A significant number of women with prolapse visible on examination are asymptomatic; treatment is guided by symptoms, not examination findings alone.</p>
+  <div class="topic-handouts">
+    <p>📋 <a href="#">Patient handout - Pelvic organ prolapse (coming soon)</a></p>
+  </div>
+</div>
 
-<h2>Assessment</h2>
-
-<p>Examination is performed with the patient in the left lateral position (Sims' speculum useful) or supine with Valsalva to maximise descent. The posterior blade of a Sims' speculum is used to retract the posterior wall, allowing assessment of the anterior wall; the speculum is then reversed to assess the posterior wall. With a bivalve speculum, ask the patient to cough or bear down to demonstrate stress incontinence.</p>
-
-<p>Grading: the simplified POP-Q system is most commonly used. Grade I: prolapse within the vagina, greater than 1 cm above the introitus. Grade II: prolapse to within 1 cm of the introitus. Grade III: prolapse extends beyond the introitus. Grade IV: complete eversion or procidentia.</p>
-
-<p>Assessment should include: urinalysis (exclude UTI); post-void residual if incomplete emptying is suspected (bladder scan or in-and-out catheter); and urodynamic assessment (urology or urogynaecology) if mixed or urge incontinence is a prominent feature or surgical planning is underway.</p>
-
-<h2>Management</h2>
-
-<p><strong>Lifestyle modification:</strong> weight reduction in women with overweight or obesity reduces intra-abdominal pressure and improves symptoms. Treat chronic cough (smoking cessation, asthma review). Avoid constipation and straining at stool - dietary fibre, adequate fluid intake, and consideration of a bulking agent. Avoid heavy lifting where possible.</p>
-
-<p><strong>Pelvic floor muscle training (PFMT):</strong> supervised pelvic floor physiotherapy is the most effective conservative treatment for prolapse symptoms and should be offered to all symptomatic women before surgical referral. Evidence from randomised controlled trials shows significant improvements in prolapse symptoms, severity, and quality of life at 6-12 months. In NZ, physiotherapy referral (ideally to a physiotherapist specialising in pelvic floor) is available through ACC (for obstetric injury) and the public system. Women should be counselled that PFMT requires consistent practice over at least 3-6 months before benefit is assessed.</p>
-
-<p><strong>Topical vaginal oestrogen:</strong> in postmenopausal women, oestrogen deficiency contributes to vaginal atrophy and weakening of supporting tissues. Low-dose vaginal oestrogen (estriol cream or pessary) is safe and improves vaginal tissue quality, reducing discomfort and improving response to pessary use. It does not treat prolapse directly, though it is an appropriate adjunct that improves tissue response to other interventions.</p>
-
-<p><strong>Vaginal pessaries:</strong> silicone devices inserted into the vagina to mechanically support prolapsed tissue. Ring pessaries are the most commonly used for cystocele and uterine prolapse; shelf or Gelhorn pessaries are used for more severe posterior prolapse. Pessaries are effective long-term management for most women who are medically unsuitable for surgery, who do not wish surgery, or are awaiting surgery. Initial fitting and assessment are performed by an experienced clinician (GP with skills, gynaecologist, or continence nurse); most women self-manage after the initial fitting period. Complications: discharge, odour, bleeding, vaginal erosion (uncommon with regular review). Pessaries should be removed and cleaned (by clinician or patient) every 3-6 months.</p>
-
-<p><strong>Surgical management:</strong> indicated for women with symptomatic prolapse who have not responded to or declined conservative management and who are fit for and wish to have surgery. Surgical options include anterior and posterior colporrhaphy (native tissue repair of vaginal walls), sacrospinous ligament fixation (vault prolapse), laparoscopic sacrocolpopexy (mesh-based repair with superior durability but surgical complexity), and hysterectomy with concurrent prolapse repair. Mesh for vaginal repair has been restricted in NZ following the Australian/NZ TGA review and Medicines and Medical Devices Safety Authority (Medsafe) action - non-mesh native tissue repairs are preferred for vaginal access surgery.</p>
-
-<h2>Referral criteria</h2>
-
-<p>Refer to urogynaecology or gynaecology for: grade III-IV prolapse; prolapse significantly impairing quality of life after conservative treatment; prolapse causing urinary retention or renal impairment; patient wishing surgical assessment; and complex mixed symptoms (combined incontinence, prolapse, emptying difficulties) requiring urodynamic assessment. Continence nurse specialist referral is appropriate where available for pessary fitting support and pelvic floor physiotherapy.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Surgical options and referral criteria</p>
+  <p>Surgical management is indicated for symptomatic prolapse that has not responded to or is declined by conservative management, in women who are fit and wish surgery. Options include anterior and posterior colporrhaphy (native tissue repair), sacrospinous ligament fixation (vault prolapse), and laparoscopic sacrocolpopexy (mesh-based, superior durability). Mesh for vaginal access surgery has been restricted in NZ following TGA and Medsafe review - non-mesh native tissue repairs are preferred.</p>
+  <p><strong>Refer</strong> to urogynaecology or gynaecology for: Grade III-IV prolapse; prolapse significantly impairing quality of life after conservative treatment; prolapse causing urinary retention or renal impairment; patient wishing surgical assessment; or complex mixed symptoms requiring urodynamic assessment. Continence nurse specialist referral is appropriate for pessary fitting support and pelvic floor physiotherapy coordination.</p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -64,8 +61,12 @@ permalink: /gynaecology/prolapse/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Hagen S, Stark D, Glazener C, et al. Individualised pelvic floor muscle training in women with pelvic organ prolapse (POPPY): a multicentre randomised controlled trial. Lancet. 2014;383(9919):796-806.<br>
-  <sup>2</sup> Dietz HP. Pelvic floor trauma following vaginal delivery. Curr Opin Obstet Gynecol. 2006;18(5):528-537.<br>
-  <sup>3</sup> Haylen BT, Maher CF, Barber MD, et al. An International Urogynecological Association (IUGA)/International Continence Society (ICS) Joint Report on the Terminology for Female Pelvic Organ Prolapse (POP). Neurourol Urodyn. 2016;35(2):137-168.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Hagen S, Stark D, Glazener C, et al. Individualised pelvic floor muscle training in women with pelvic organ prolapse (POPPY): a multicentre randomised controlled trial. *Lancet.* 2014;383(9919):796-806.
+2. Dietz HP. Pelvic floor trauma following vaginal delivery. *Curr Opin Obstet Gynecol.* 2006;18(5):528-537.
+3. Haylen BT, Maher CF, Barber MD, et al. An International Urogynecological Association (IUGA)/International Continence Society (ICS) Joint Report on the Terminology for Female Pelvic Organ Prolapse (POP). *Neurourol Urodyn.* 2016;35(2):137-168.
+
+</div>

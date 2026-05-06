@@ -9,19 +9,29 @@ permalink: /msk/giant-cell-arteritis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>Giant cell arteritis (GCA) is a medical emergency when vision symptoms are present. Loss of vision can be sudden, permanent, and bilateral if untreated. Early recognition and aggressive treatment prevent devastating complications. GCA is a large-vessel vasculitis affecting the carotid and its branches, presenting with temporal headache, scalp tenderness, jaw claudication, visual disturbances, and polymyalgia rheumatica-like symptoms. It occurs almost exclusively in those over 60, female predominance 2:1, and overlaps with PMR in 15 - 20% of cases.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>GCA with vision symptoms is a same-day emergency - vision loss from arteritic anterior ischaemic optic neuropathy (AAION) can be sudden, permanent, and bilateral. Do not wait for biopsy results before starting steroids; histological changes persist for 2-4 weeks after steroids are started.<sup>1</sup></li>
+    <li>GCA without visual symptoms: prednisolone 40-60 mg/day immediately. GCA with visual symptoms or rapid progression: prednisolone 1 mg/kg/day or IV methylprednisolone 500-1000 mg/day for 3 days, plus same-day ophthalmology consultation.</li>
+    <li>Jaw claudication (pain with chewing) is highly specific for GCA. ESR is usually above 50, often above 100; CRP is also very high. Normal or mildly elevated ESR does not exclude GCA in a symptomatic patient.</li>
+    <li>Tocilizumab (IL-6 inhibitor) is PHARMAC-funded via Special Authority as a steroid-sparing agent. Refer to rheumatology for initiation. Bone protection (calcium, vitamin D, bisphosphonate) is mandatory given prolonged steroid exposure.</li>
+  </ul>
+</div>
 
-<h2>Presentation</h2>
-<p>Patients present with new-onset temporal headache (unilateral or bilateral), scalp tenderness (pain on hair brushing), jaw claudication (pain with chewing, highly specific), and visual symptoms (amaurosis fugax, diplopia, sudden monocular vision loss). Examination may reveal thickened, tender, or nodular temporal arteries. Systemic symptoms including fever, fatigue, weight loss, and PMR-like shoulder and hip pain often accompany the headache. Red flag: any vision change (even transient) or symptoms suggestive of amaurosis fugax demand same-day investigation and corticosteroid initiation.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation, investigation, and management</p>
+  <p>Giant cell arteritis is a large-vessel vasculitis affecting the carotid and its branches, occurring almost exclusively in adults over 60 with a female predominance of 2:1. It overlaps with polymyalgia rheumatica in 15-20% of cases.<sup>1</sup> Patients present with new-onset temporal headache (unilateral or bilateral), scalp tenderness (pain on hair brushing), jaw claudication (highly specific), and visual symptoms including amaurosis fugax, diplopia, or sudden monocular vision loss. Examination may reveal thickened, tender, or nodular temporal arteries. Systemic symptoms - fever, fatigue, weight loss, and PMR-like shoulder and hip girdle pain - often accompany the headache.</p>
 
-<h2>Investigation</h2>
-<p>ESR and CRP are almost always markedly elevated (ESR usually >50, often >100; CRP also very high). FBC shows normocytic anaemia and thrombocytosis. Do not delay corticosteroid therapy waiting for confirmatory biopsy if clinical suspicion is high - histological changes persist on steroids for 2 - 4 weeks. Temporal artery biopsy (gold standard) should be arranged promptly; obtain a long segment (>1 - 2 cm, avoid skip lesions). Arrange through vascular surgery or ophthalmology. If clinical suspicion is very high and biopsy will be delayed, start steroids immediately pending biopsy results. ESR alone is insufficient to exclude GCA in symptomatic patients; some present with normal or mildly elevated ESR.</p>
+  <p>ESR and CRP are almost always markedly elevated. FBC shows normocytic anaemia and thrombocytosis. Do not delay corticosteroid therapy waiting for biopsy - temporal artery biopsy (gold standard) should be arranged promptly and a long segment obtained (1-2 cm minimum, to avoid skip lesions), but this does not delay treatment. Temporal artery biopsy is arranged through vascular surgery or ophthalmology. ESR alone is insufficient to exclude GCA in a symptomatic patient; some present with normal or mildly elevated ESR.<sup>3</sup></p>
 
-<h2>Management</h2>
-<p>For GCA without visual symptoms: prednisolone 40 - 60 mg/day immediately. For GCA with visual symptoms or rapid progression: prednisolone 1 mg/kg/day or IV methylprednisolone 500 - 1000 mg/day x 3 days PLUS same-day ophthalmology consultation. Once vision is lost it rarely recovers - prevention is paramount. Tocilizumab (an IL-6 inhibitor, PHARMAC-funded via Special Authority) is a steroid-sparing agent that reduces relapse risk; refer to rheumatology for initiation. Bone protection (calcium, vitamin D, bisphosphonate) is mandatory given prolonged steroid use. Monitor ESR and CRP; taper prednisolone slowly (over months) as inflammatory markers normalise. Monitor for vascular complications (stroke, myocardial infarction) as GCA affects large vessels.</p>
+  <p>For GCA without visual symptoms: prednisolone 40-60 mg/day immediately. For GCA with visual symptoms or rapid progression: prednisolone 1 mg/kg/day or IV methylprednisolone 500-1000 mg/day for 3 days, plus same-day ophthalmology consultation. Once vision is lost it rarely recovers - prevention is paramount. Tocilizumab (PHARMAC-funded via Special Authority) is initiated by rheumatology as a steroid-sparing agent that reduces relapse risk.<sup>4</sup> Taper prednisolone slowly over months as inflammatory markers normalise. Monitor for vascular complications (stroke, myocardial infarction) as GCA affects large vessels.</p>
+</div>
 
-<h2>Referral criteria</h2>
-<p>Suspected GCA: same-day telephone discussion with rheumatology or ophthalmology. Initiate high-dose corticosteroids, arrange temporal artery biopsy urgently, and refer for specialist management. Any vision symptoms warrant same-day ophthalmology evaluation to rule out arteritic anterior ischemic optic neuropathy (AAION). This is a true ophthalmic emergency.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Referral criteria</p>
+  <p>Suspected GCA: same-day telephone discussion with rheumatology or ophthalmology. Initiate high-dose corticosteroids immediately, arrange temporal artery biopsy urgently, and refer for specialist management. Any vision symptom - even transient - warrants same-day ophthalmology evaluation to rule out arteritic anterior ischaemic optic neuropathy. This is a true ophthalmic emergency.</p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -35,9 +45,13 @@ permalink: /msk/giant-cell-arteritis/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Weyand CM, Goronzy JJ. Giant-cell arteritis and polymyalgia rheumatica. N Engl J Med. 2014;371(5):428-436.<br>
-  <sup>2</sup> Proven A, Gabriel SE, Orban T, et al. Polymyalgia rheumatica and temporal arteritis. BMJ. 2006;333(7577):1064-1067.<br>
-  <sup>3</sup> Hunder GG, Bloch DA, Michel BA, et al. The American College of Rheumatology 1990 criteria for the classification of giant cell arteritis. Arthritis Rheum. 1990;33(8):1122-1128.<br>
-  <sup>4</sup> Salvarani C, Canini S, Hunder GG. Polymyalgia rheumatica and giant-cell arteritis. Lancet. 2008;372(9634):234-245.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Weyand CM, Goronzy JJ. Giant-cell arteritis and polymyalgia rheumatica. *N Engl J Med.* 2014;371(5):428-436.
+2. Proven A, Gabriel SE, Orban T, et al. Polymyalgia rheumatica and temporal arteritis. *BMJ.* 2006;333(7577):1064-1067.
+3. Hunder GG, Bloch DA, Michel BA, et al. The American College of Rheumatology 1990 criteria for the classification of giant cell arteritis. *Arthritis Rheum.* 1990;33(8):1122-1128.
+4. Salvarani C, Canini S, Hunder GG. Polymyalgia rheumatica and giant-cell arteritis. *Lancet.* 2008;372(9634):234-245.
+
+</div>

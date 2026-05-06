@@ -9,23 +9,29 @@ permalink: /msk/meniscal-injury/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>Meniscal injuries are common in adolescent athletes and present with varying acute and chronic features. Medial meniscal tears are more frequent than lateral. Acute tears typically result from a twisting injury with the foot planted, while degenerative tears can occur with minimal trauma in older adolescents. Accurate diagnosis is essential because timely referral may allow meniscal repair rather than meniscectomy, preserving joint function.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>Meniscal swelling develops over 24-48 hours after a twisting injury (unlike ACL haemarthrosis, which is immediate). Joint line tenderness, McMurray's test, and the Thessaly test (single-leg stance with internal/external rotation) are the key clinical signs. Medial tears are more common than lateral.</li>
+    <li>X-ray first to exclude fracture and bony Segond fracture (associated with ACL injury). MRI is the gold standard for diagnosis and should be arranged if clinical suspicion is high or mechanical symptoms persist.<sup>1</sup> MRI defines tear type (stable vs unstable, peripheral vs central) and guides management.</li>
+    <li>Stable incomplete tears: 60-70% resolve with conservative management and physiotherapy. Unstable or complete tears, or persistent locking, require orthopaedic referral. Locked knee (inability to extend) warrants urgent orthopaedic review within 24-48 hours.</li>
+    <li>In young patients, meniscal conservation is paramount - meniscal deficiency accelerates osteoarthritis. Where repair is feasible, it should be strongly preferred over meniscectomy. ACC funds physiotherapy and surgical management for acute sports injuries.</li>
+  </ul>
+</div>
 
-<h2>Presentation</h2>
-<p>Acute meniscal injury presents with immediate onset pain at the joint line, swelling that typically develops over 24-48 hours (rather than the immediate haemarthrosis seen with ACL rupture), and mechanical symptoms. Patients may describe clicking, catching, or locking. An audible or palpable click (McMurray test) and joint line tenderness are helpful clinical signs. The Thessaly test (single-leg stance in slight knee flexion while internally and externally rotating the body) has good sensitivity and specificity for meniscal lesions.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation, investigation, and management</p>
+  <p>Meniscal injuries are common in adolescent athletes and present with varying features depending on acuity. Acute tears result from a twisting injury with the foot planted; degenerative tears can occur with minimal trauma in older adolescents. Acute meniscal injury presents with immediate joint line pain, swelling developing over 24-48 hours (contrasting with the immediate haemarthrosis of ACL injury), and mechanical symptoms including clicking, catching, or locking. McMurray's test (audible or palpable click with knee flexion-extension and rotation) and joint line tenderness are helpful clinical signs. The Thessaly test (single-leg stance in slight flexion with body rotation) has good sensitivity and specificity. Chronic meniscal injuries present with recurrent swelling, catching, or locking between relatively functional intervals.</p>
 
-<p>Chronic meniscal injuries present with recurrent swelling, catching, or locking. Some patients adapt and function reasonably well between episodes. A history of a twisting injury is often present but not always recalled.</p>
+  <p>Obtain plain X-rays first (AP, lateral, axial) to exclude fractures and bony Segond fracture (associated with ACL injury). MRI is the gold standard and should be arranged for high clinical suspicion or persistent mechanical symptoms. MRI defines whether the tear is stable or unstable, complete or incomplete, and peripheral or central - all of which influence management.</p>
 
-<h2>Investigation</h2>
-<p>For acute knee injuries with suspected meniscal injury, obtain plain X-rays (AP, lateral, axial) first to exclude fractures, bony Segond fractures (associated with ACL injury), and other osseous pathology. MRI is the gold standard for meniscal diagnosis and should be arranged if clinical suspicion is high or if mechanical symptoms persist.<sup>1</sup> MRI helps define whether the tear is stable or unstable, complete or incomplete, and peripheral or central.</p>
+  <p>Acute injury: RICE principle initially, then protected weight-bearing and analgesia. Stable, incomplete tears: conservative management with supervised physiotherapy; 60-70% improve without surgery. Unstable, complete, or locked tears: orthopaedic referral for repair vs partial meniscectomy. In young patients, meniscal repair is strongly preferred over meniscectomy to preserve joint function and reduce long-term osteoarthritis risk.<sup>2</sup> Return to sport after repair typically takes 4-6 months.</p>
+</div>
 
-<h2>Management</h2>
-<p>Acute meniscal injury management depends on tear characteristics, age, and activity level. Initial treatment follows the RICE principle (rest, ice, compression, elevation) with early analgesia. Protected weight-bearing with crutches if needed. Stable, incomplete tears often resolve with conservative management and supervised physiotherapy; 60-70% improve without surgery. Unstable tears, complete tears, or persistent locking require urgent orthopaedic referral for consideration of repair versus partial meniscectomy.</p>
-
-<p>In young patients, meniscal conservation is paramount because meniscal deficiency accelerates osteoarthritis. Where repair is feasible, it should be strongly considered over meniscectomy. ACC covers physiotherapy and surgical management for acute sports injuries. The post-operative rehabilitation timeline is typically 4-6 months for return to sport.</p>
-
-<h2>Referral criteria</h2>
-<p>A locked knee (inability to achieve full extension) requires urgent orthopaedic review within 24-48 hours. Acute complete or unstable tears identified on MRI warrant semi-urgent orthopaedic consultation (within 2-4 weeks) to discuss repair options while tissue is fresher. Chronic stable tears with recurrent symptoms should trial physiotherapy first; if symptoms persist or mechanical locking recurs, orthopaedic review is appropriate.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Referral criteria</p>
+  <p>Locked knee (inability to achieve full extension) requires urgent orthopaedic review within 24-48 hours. Acute complete or unstable tears on MRI warrant semi-urgent orthopaedic consultation (within 2-4 weeks) to discuss repair options while tissue is fresh. Chronic stable tears with recurrent symptoms should trial physiotherapy first; if symptoms persist or mechanical locking recurs, orthopaedic review is appropriate. ACC covers physiotherapy and surgical management for acute sports injury.</p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -39,7 +45,11 @@ permalink: /msk/meniscal-injury/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Niu NN, Tibesku CO. The diagnostic accuracy of clinical examination tests for knee meniscal lesions cannot be properly established. J Orthop Surg Res. 2014;9:98.<br>
-  <sup>2</sup> Barber-Westin SD, Noyes FR. Long-term durability, function, and quality of life of repaired second- and third-decade isolated meniscal tears. Am J Sports Med. 2017;45(14):3308-3316.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Niu NN, Tibesku CO. The diagnostic accuracy of clinical examination tests for knee meniscal lesions cannot be properly established. *J Orthop Surg Res.* 2014;9:98.
+2. Barber-Westin SD, Noyes FR. Long-term durability, function, and quality of life of repaired second- and third-decade isolated meniscal tears. *Am J Sports Med.* 2017;45(14):3308-3316.
+
+</div>
