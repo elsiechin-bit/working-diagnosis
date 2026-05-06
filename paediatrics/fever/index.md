@@ -9,36 +9,90 @@ permalink: /paediatrics/fever/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>Fever (temperature 38°C or above) is the most common reason children present to NZ general practice. The majority are caused by self-limiting viral illness. The clinical task is identifying the minority with serious bacterial infection (SBI) - urinary tract infection, pneumonia, meningitis, septicaemia, osteomyelitis - without over-investigating or creating unnecessary anxiety in families whose child is simply fighting a cold.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li><strong>Under 3 months with fever ≥38°C: same-day secondary care, no exceptions.</strong> SBI can present with no localising signs at this age and clinical appearance is unreliable.</li>
+    <li><strong>Non-blanching rash with fever: call 111.</strong> This is meningococcal disease until proven otherwise.</li>
+    <li>Use the NICE Traffic Light system: any RED feature requires same-day secondary care; any AMBER feature requires same-day GP or urgent care review; GREEN in all domains supports conservative management with safety-netting.</li>
+    <li>Antibiotics are not indicated for fever without a confirmed bacterial source. Do not prescribe empirically for viral URTI.</li>
+    <li><strong>Safety-netting triggers to give every family:</strong> rash that does not fade with pressure; unusually floppy or difficult to rouse; stiff neck or light sensitivity; seizure; very fast or laboured breathing; fever persisting beyond 5 days.</li>
+  </ul>
+</div>
 
-<h2>Presentation</h2>
-<p>Age is the most important risk-stratifying variable. Children under 3 months with any fever 38°C or above require same-day secondary care review; infants in this group can have SBI with no localising signs, and clinical appearance is an unreliable guide. Between 3 and 6 months, a low threshold for same-day GP review applies; above 6 months, a structured clinical assessment can guide management in most cases.</p>
+<p>
+  Fever (temperature ≥38°C) is the most common reason children present to NZ general practice. The vast majority are caused by self-limiting viral illness. The clinical task is identifying the minority with serious bacterial infection (SBI) - UTI, pneumonia, meningitis, septicaemia, osteomyelitis - without over-investigating well children or generating unnecessary anxiety in families whose child is simply mounting a normal immune response.
+</p>
 
-<p>The NICE Traffic Light system provides a validated framework for risk stratification across ages and is widely used in NZ practice.<sup>1</sup> It assesses five domains: colour (pallor, mottling, cyanosis), activity (arousal, response to social cues, cry), respiratory effort (rate, accessory muscle use, saturations), hydration (skin turgor, mucous membranes, urine output), and the presence of specific features (non-blanching rash, bulging fontanelle, neck stiffness, limb swelling, focal neurology). A child with any red feature requires same-day secondary care. A child with any amber feature requires same-day GP or urgent care assessment. Green features in all domains support a viral diagnosis that can be managed conservatively with safety-netting.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Age-based risk stratification</p>
+  <p>
+    Age is the primary risk-stratifying variable. Under 3 months: any fever ≥38°C requires same-day secondary care. Between 3 and 6 months: low threshold for same-day GP review for any fever ≥38°C. Over 6 months: structured clinical assessment using the NICE Traffic Light system can guide most management decisions in primary care.
+  </p>
+  <p>
+    The NICE Traffic Light system assesses five domains:<sup>1</sup>
+  </p>
+  <ul>
+    <li><strong>Colour:</strong> pallor, mottling, or cyanosis (red); pallor reported by parent (amber); normal colour (green)</li>
+    <li><strong>Activity:</strong> no response to social cues, appears ill, weak or high-pitched cry (red); not responding normally, decreased activity (amber); responds normally, content, stays awake (green)</li>
+    <li><strong>Respiratory:</strong> grunting, saturations &lt;92%, moderate-severe chest recession (red); tachypnoea, nasal flare, mild recession, SpO2 95-92% (amber); normal (green)</li>
+    <li><strong>Hydration:</strong> reduced skin turgor (red); dry mucous membranes, poor feeding, reduced urine output, capillary refill ≥3 s (amber); normal skin and eyes, moist mucous membranes (green)</li>
+    <li><strong>Other:</strong> non-blanching rash, bulging fontanelle, neck stiffness, focal neurology, limb swelling or non-weight bearing (red); fever &gt;5 days, swollen limb or joint (amber); none of the above (green)</li>
+  </ul>
+</div>
 
-<p>Source of fever: a systematic approach to identifying the source reduces missed diagnoses. Examine the ears (otitis media), throat (pharyngitis, tonsillitis), skin (cellulitis, abscess), chest (pneumonia), abdomen (UTI, appendicitis), and joints (septic arthritis) at every assessment. Urine should be tested in any child under 3 years with unexplained fever lasting more than 48 hours, any girl under 5 with fever and no source, and any uncircumcised boy under 1 year. A bag specimen is unreliable for culture - use clean-catch or catheter sampling if MC&amp;S is required.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Source identification</p>
+  <p>
+    Systematically examine for source at every assessment: ears (otitis media), throat (pharyngitis, tonsillitis), skin (cellulitis, abscess), chest (pneumonia), abdomen (UTI, appendicitis), and joints (septic arthritis). A missed septic joint in a limping febrile child is a serious error.
+  </p>
+  <p>
+    Test urine in: any child under 3 years with unexplained fever lasting more than 48 hours; any girl under 5 with fever and no identified source; any uncircumcised boy under 1 year. A bag specimen is unreliable for culture - use clean-catch or catheter sampling if MC&amp;S is required. A positive nitrite or leucocyte esterase on dipstick in a symptomatic child should prompt treatment while MC&amp;S is awaited.
+  </p>
+</div>
 
-<h2>Investigation</h2>
-<p>Investigations are guided by the clinical risk category, not by the height of the fever. In a well child over 3 months with a clear viral source (URTI features, known contact with viral illness, normal clinical examination), no investigation is required. In a child with amber features or an unexplained fever without source, urine dipstick is the minimum investigation. A positive nitrite or leucocyte esterase result on dipstick in a symptomatic child should be treated while MC&amp;S is awaited; a negative dipstick has a high negative predictive value for UTI but does not exclude it in children under 3 months.<sup>2</sup></p>
+<div class="tier-2">
+  <p class="tier-label">❍ Management and antipyretics</p>
+  <p>
+    Antipyretics improve comfort and reduce distress; they do not reduce the risk of febrile convulsion and should not be given primarily to prevent one.<sup>3</sup> Dosing is weight-based:
+  </p>
+  <ul>
+    <li><strong>Paracetamol:</strong> 15 mg/kg every 4-6 hours, maximum 4 doses per 24 hours</li>
+    <li><strong>Ibuprofen:</strong> 5-10 mg/kg every 6-8 hours (not under 3 months, use with caution in dehydration or renal impairment)</li>
+  </ul>
+  <p>
+    Alternating paracetamol and ibuprofen is common practice and generally safe; evidence for additive benefit over monotherapy is modest. Encourage oral fluids throughout. Advise parents that fever is part of a normal immune response and mild temperature elevation is not dangerous in itself.
+  </p>
+  <p>
+    Antibiotics by confirmed source: amoxicillin for AOM and non-severe community pneumonia; trimethoprim or nitrofurantoin for UTI (check local sensitivities); penicillin V or amoxicillin for streptococcal tonsillitis.
+  </p>
+</div>
 
-<p>Full blood count, CRP, and blood cultures are indicated in children with red features, in all children under 3 months with fever (in secondary care), and where the clinical picture is uncertain after examination and urine testing. CRP rises over 12-24 hours; a normal CRP within the first 24 hours of fever onset does not exclude bacterial infection. Procalcitonin (where available) may be more sensitive in the first 12 hours.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Investigation guide</p>
+  <p>
+    Investigations are guided by clinical risk category, not fever height. A well child over 3 months with a clear viral source and green features in all NICE Traffic Light domains requires no investigation.
+  </p>
+  <p>
+    In a child with amber features or unexplained fever without source: urine dipstick as minimum. FBC, CRP, and blood cultures are indicated for red features, all children under 3 months (in secondary care), and when the clinical picture remains uncertain after urine testing. Note: CRP rises over 12-24 hours and a normal result in the first 24 hours of fever does not exclude bacterial infection. Procalcitonin (where available) may be more sensitive within the first 12 hours.
+  </p>
+  <p>
+    Chest X-ray is not required to diagnose pneumonia clinically in most children. Request if SpO2 is low, respiratory examination is focal, or the child is failing to improve as expected.
+  </p>
+</div>
 
-<p>Chest X-ray is not required to diagnose pneumonia clinically in most children. Request if oxygen saturations are low, respiratory examination is focal, or the child is not improving as expected.</p>
-
-<h2>Management</h2>
-<p>Antipyretics (paracetamol or ibuprofen) improve comfort and reduce distress but do not reduce the risk of febrile convulsion and should not be used primarily to prevent one.<sup>3</sup> Dosing is weight-based: paracetamol 15 mg/kg 4-6 hourly (max 4 doses per 24 hours), ibuprofen 5-10 mg/kg 6-8 hourly (not in infants under 3 months, use with caution in dehydration). Alternating paracetamol and ibuprofen is common practice; evidence for additive benefit over monotherapy is modest but the approach is generally safe if parents understand the dosing intervals.</p>
-
-<p>Encourage oral fluids. Fever increases insensible losses and dehydration is a common complication. Parents should be advised that mild temperature elevation is part of normal immune response and is not in itself dangerous.</p>
-
-<p>Antibiotics are not indicated for fever without a confirmed bacterial source. Empirical antibiotic prescription for viral URTI drives resistance and provides no clinical benefit. If a bacterial source is identified, target treatment appropriately: amoxicillin for AOM and pneumonia, trimethoprim or nitrofurantoin for UTI (check local sensitivities), penicillin V or amoxicillin for streptococcal tonsillitis.</p>
-
-<h2>Safety-netting</h2>
-<p>Safety-netting is the most important element of managing fever in the community. Parents should be given clear, specific instructions to return or seek emergency care if: the child develops a rash that does not fade with pressure, becomes very difficult to rouse or unusually floppy, develops a stiff neck or sensitivity to light, has a seizure, is breathing very fast or working hard to breathe, or has a fever persisting beyond 5 days. Healthline (0800 611 116) is available 24 hours for parents who are unsure.</p>
-
-<h2>Referral criteria</h2>
-<p>Same-day secondary care for: any infant under 3 months with fever 38°C or above; any child with red features on the NICE Traffic Light system; non-blanching rash with fever (111 call); suspected meningitis, encephalitis, or septic arthritis; oxygen saturations below 92% in air; significantly impaired feeding in an infant; fever lasting more than 5 days without clear source (to exclude Kawasaki disease in children under 5).</p>
-
-<p>Same-day GP or urgent care for: any child 3-6 months with fever 38°C or above; any child with amber features; fever with no source after initial assessment in a child under 2; parental concern in a child who has not improved as expected.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Referral thresholds and Kawasaki disease</p>
+  <p>
+    <strong>Same-day secondary care (or 111 for non-blanching rash):</strong> under 3 months with any fever; any red NICE Traffic Light feature; non-blanching rash; suspected meningitis, encephalitis, or septic arthritis; SpO2 below 92% in air; significantly impaired feeding in an infant.
+  </p>
+  <p>
+    <strong>Same-day GP or urgent care:</strong> any child 3-6 months with fever ≥38°C; any amber NICE feature; fever with no source after assessment in a child under 2; parental concern in a child who has not improved as expected.
+  </p>
+  <p>
+    Fever persisting beyond 5 days in a child under 5 should prompt consideration of Kawasaki disease, particularly if accompanied by any of: bilateral non-purulent conjunctival injection, polymorphous rash, erythema/cracking of lips or strawberry tongue, erythema/oedema of hands and feet, cervical lymphadenopathy. Incomplete Kawasaki may present without the full classical criteria. Refer for echocardiography if suspected; coronary artery aneurysm is the principal complication.
+  </p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -52,13 +106,17 @@ permalink: /paediatrics/fever/
   </ul>
   <p class="aside-title" style="margin-top:1.25rem;">Patient handout</p>
   <ul class="aside-links">
-    <li><a href="/paediatrics/fever/patient-handout.html">Fever in children — patient handout</a></li>
+    <li><a href="/paediatrics/fever/patient-handout.html">Fever in children - patient handout</a></li>
   </ul>
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> National Institute for Health and Care Excellence (NICE). Fever in under 5s: assessment and initial management. NICE guideline NG143. London: NICE; 2021.<br>
-  <sup>2</sup> National Institute for Health and Care Excellence (NICE). Urinary tract infection in under 16s: diagnosis and management. NICE guideline CG54. London: NICE; updated 2022.<br>
-  <sup>3</sup> Purssell E. Treating fever in children: paracetamol or ibuprofen? Br J Community Nurs. 2002;7(6):316-320.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. National Institute for Health and Care Excellence. *Fever in under 5s: assessment and initial management.* NICE guideline NG143. London: NICE; 2021.
+2. National Institute for Health and Care Excellence. *Urinary tract infection in under 16s: diagnosis and management.* NICE guideline CG54. London: NICE; updated 2022.
+3. Purssell E. Treating fever in children: paracetamol or ibuprofen? *Br J Community Nurs.* 2002;7(6):316–320.
+
+</div>
