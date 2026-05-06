@@ -1,17 +1,17 @@
 /* --- Tokens ------------------------------------- */
 :root {
-  --paper:      #F5F1E8;
-  --paper-warm: #EDE7D8;
+  --paper:      #EFF3E6;
+  --paper-warm: #E4EAD8;
   --ink:        #1A1F1C;
   --ink-soft:   #3A4540;
   --ink-mute:   #6B7A75;
   --green:      #2F6B5C;
   --green-deep: #1F4A3F;
   --ochre:      #B8714F;
-  --rule:       #D9D1BD;
-  --serif-display: 'Fraunces', Georgia, serif;
-  --serif-body:    'Newsreader', Georgia, serif;
-  --sans-body:     'Inter', system-ui, -apple-system, sans-serif;
+  --rule:       #C8D4B4;
+  --serif-display: 'DM Serif Display', Georgia, serif;
+  --serif-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+  --sans-body:     'Plus Jakarta Sans', system-ui, sans-serif;
   --mono:          'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
@@ -21,6 +21,7 @@ html, body { margin: 0; padding: 0; }
 body {
   font-family: var(--serif-body);
   font-size: 17px;
+  font-weight: 500;
   line-height: 1.75;
   color: var(--ink);
   background: var(--paper);
