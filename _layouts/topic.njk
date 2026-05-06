@@ -1,13 +1,36 @@
 ---
 layout: base.njk
+hasToc: true
 ---
 
 <article class="topic">
   <header class="topic-header">
+
     {% if pillar %}<p class="pillar-label">{{ pillar }}</p>{% endif %}
+
+    {% if ctags %}
+    <div class="tag-row">
+      {% for tag in ctags %}<span class="content-tag tag-{{ tag }}">{{ tag | tagLabel }}</span>{% endfor %}
+    </div>
+    {% endif %}
+
+    {% if changes %}
+    <div class="changes-block">
+      <p class="changes-label">What changed{% if changes_date %} — {{ changes_date }}{% endif %}</p>
+      <ul class="changes-list">
+        {% for item in changes %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
     <h1>{{ title }}</h1>
     {% if description %}<p class="topic-dek">{{ description }}</p>{% endif %}
-    {% if pillar or audience %}<p class="audience-tag">{{ audience if audience else "For clinicians" }}</p>{% endif %}
+
+    <div class="topic-meta">
+      {% if pillar or audience %}<span class="audience-tag">{{ audience if audience else "For clinicians" }}</span>{% endif %}
+      <span class="reading-time">{{ readtime if readtime else content | readingTime }}</span>
+    </div>
+
   </header>
 
   <div class="topic-body">

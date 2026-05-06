@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Option C Font Variations — Working Diagnosis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..900;1,200..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #EFF3E6;
+    --ink:     #1A1F1C;
+    --ink-soft:#3A4540;
+    --ink-mute:#6B7A75;
+    --green:   #2F6B5C;
+    --ochre:   #B8714F;
+    --rule:    #C8D4B4;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #F0EDE6;
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    padding-bottom: 80px;
+  }
+
+  .page-header {
+    background: var(--ink);
+    color: #fff;
+    padding: 32px 40px 28px;
+  }
+  .page-header h1 {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #C8D4B4;
+    margin-bottom: 6px;
+    font-weight: 400;
+  }
+  .page-header p {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+  }
+
+  .variations-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .variation {
+    margin-top: 56px;
+  }
+
+  .var-label {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #D4CFC6;
+  }
+  .var-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ochre);
+  }
+  .var-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .var-stack {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-mute);
+    letter-spacing: 0.3px;
+  }
+
+  /* ---- shared page mockup shell ---- */
+  .mockup {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+
+  .mockup-nav {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mockup-body {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 0;
+  }
+  .mockup-main {
+    padding: 36px 36px 44px;
+    border-right: 1px solid var(--rule);
+  }
+  .mockup-aside {
+    padding: 28px 22px;
+    background: #E8EDE0;
+  }
+
+  /* kicker line */
+  .kicker {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.68rem;
+    color: var(--ochre);
+    margin-bottom: 14px;
+    font-family: var(--mono);
+  }
+  .kicker::before { content: "❍ "; color: var(--green); }
+
+  /* tag chips */
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 3px;
+  }
+  .tag-redflags  { background:#FAEAEA; color:#B85450; border:1px solid #E8C4C3; }
+  .tag-guidelines{ background:#E6EFF5; color:#2F5D73; border:1px solid #BDD4E0; }
+
+  /* what changed */
+  .delta-strip {
+    border-left: 3px solid var(--green);
+    background: #E4EDDE;
+    padding: 12px 16px;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 24px;
+  }
+  .delta-strip-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 7px;
+  }
+  .delta-strip ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .delta-strip li {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    display: flex;
+    gap: 7px;
+  }
+  .delta-strip li::before {
+    content: '→';
+    color: var(--green);
+    font-family: var(--mono);
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* aside */
+  .aside-kicker {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--ochre);
+    margin-bottom: 10px;
+  }
+  .aside-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 14px;
+    line-height: 1.35;
+  }
+  .aside-item {
+    padding: 9px 0;
+    border-top: 1px solid var(--rule);
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .aside-item:first-of-type { border-top: none; }
+  .aside-item strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 1px;
+  }
+
+  /* body text */
+  .body-text p {
+    color: var(--ink-soft);
+    margin-bottom: 1em;
+  }
+  .body-text p:last-child { margin-bottom: 0; }
+
+  /* ================================================================ */
+  /* VARIATION-SPECIFIC OVERRIDES */
+  /* ================================================================ */
+
+  /* V1 — Classic Atkinson */
+  .v1 .brand { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 1.1rem; }
+  .v1 .nav-links { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); display: flex; gap: 20px; }
+  .v1 .nav-links a { color: var(--ink-mute); text-decoration: none; }
+  .v1 h1 { font-family: 'Atkinson Hyperlegible', sans-serif; font-size: clamp(32px, 5vw, 50px); font-weight: 700; line-height: 1.08; letter-spacing: -0.025em; margin-bottom: 14px; }
+  .v1 .dek { font-family: 'Inter', sans-serif; font-size: 17px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 20px; }
+  .v1 .body-text { font-family: 'Inter', sans-serif; font-size: 16.5px; line-height: 1.75; }
+  .v1 .aside-title { font-family: 'Atkinson Hyperlegible', sans-serif; }
+  .v1 h2 { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -0.015em; color: var(--ink); margin: 28px 0 10px; }
+
+  /* V2 — Atkinson Next (variable) + Inter */
+  .v2 .brand { font-family: 'Atkinson Hyperlegible Next', sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; }
+  .v2 .nav-links { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); display: flex; gap: 20px; }
+  .v2 .nav-links a { color: var(--ink-mute); text-decoration: none; }
+  .v2 h1 { font-family: 'Atkinson Hyperlegible Next', sans-serif; font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 14px; }
+  .v2 .dek { font-family: 'Inter', sans-serif; font-size: 17px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 20px; font-weight: 400; }
+  .v2 .body-text { font-family: 'Inter', sans-serif; font-size: 16.5px; line-height: 1.78; }
+  .v2 .aside-title { font-family: 'Atkinson Hyperlegible Next', sans-serif; font-weight: 700; }
+  .v2 h2 { font-family: 'Atkinson Hyperlegible Next', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: var(--ink); margin: 28px 0 10px; }
+
+  /* V3 — Atkinson throughout (purist) */
+  .v3 .brand { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 1.15rem; }
+  .v3 .nav-links { font-family: 'Atkinson Hyperlegible', sans-serif; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--ink-mute); display: flex; gap: 20px; }
+  .v3 .nav-links a { color: var(--ink-mute); text-decoration: none; }
+  .v3 h1 { font-family: 'Atkinson Hyperlegible', sans-serif; font-size: clamp(30px, 5vw, 46px); font-weight: 700; line-height: 1.1; letter-spacing: -0.015em; margin-bottom: 14px; }
+  .v3 .dek { font-family: 'Atkinson Hyperlegible', sans-serif; font-size: 17.5px; color: var(--ink-soft); line-height: 1.65; margin-bottom: 20px; font-style: italic; }
+  .v3 .body-text { font-family: 'Atkinson Hyperlegible', sans-serif; font-size: 17px; line-height: 1.75; }
+  .v3 .aside-title { font-family: 'Atkinson Hyperlegible', sans-serif; }
+  .v3 h2 { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; color: var(--ink); margin: 28px 0 10px; }
+
+  /* V4 — Atkinson + Spectral body (serif hybrid) */
+  .v4 .brand { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 1.1rem; }
+  .v4 .nav-links { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); display: flex; gap: 20px; }
+  .v4 .nav-links a { color: var(--ink-mute); text-decoration: none; }
+  .v4 h1 { font-family: 'Atkinson Hyperlegible', sans-serif; font-size: clamp(30px, 5vw, 48px); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 14px; }
+  .v4 .dek { font-family: 'Spectral', serif; font-style: italic; font-size: 18px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 20px; font-weight: 300; }
+  .v4 .body-text { font-family: 'Spectral', serif; font-size: 17px; line-height: 1.8; }
+  .v4 .aside-title { font-family: 'Atkinson Hyperlegible', sans-serif; }
+  .v4 h2 { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; color: var(--ink); margin: 28px 0 10px; }
+
+  /* V5 — Atkinson + Lora body */
+  .v5 .brand { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 1.1rem; }
+  .v5 .nav-links { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); display: flex; gap: 20px; }
+  .v5 .nav-links a { color: var(--ink-mute); text-decoration: none; }
+  .v5 h1 { font-family: 'Atkinson Hyperlegible', sans-serif; font-size: clamp(30px, 5vw, 48px); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 14px; }
+  .v5 .dek { font-family: 'Lora', serif; font-size: 17.5px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 20px; font-style: italic; }
+  .v5 .body-text { font-family: 'Lora', serif; font-size: 17px; line-height: 1.78; }
+  .v5 .aside-title { font-family: 'Atkinson Hyperlegible', sans-serif; }
+  .v5 h2 { font-family: 'Atkinson Hyperlegible', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; color: var(--ink); margin: 28px 0 10px; }
+
+  /* ---- comparison strip ---- */
+  .compare-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 56px;
+    background: var(--paper);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  .compare-cell {
+    padding: 22px 18px;
+    border-right: 1px solid var(--rule);
+  }
+  .compare-cell:last-child { border-right: none; }
+  .compare-cell-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ochre);
+    margin-bottom: 12px;
+  }
+  .compare-h {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .compare-body {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+  .compare-cell.c1 .compare-h  { font-family: 'Atkinson Hyperlegible', sans-serif; }
+  .compare-cell.c1 .compare-body { font-family: 'Inter', sans-serif; }
+  .compare-cell.c2 .compare-h  { font-family: 'Atkinson Hyperlegible Next', sans-serif; font-weight: 800; }
+  .compare-cell.c2 .compare-body { font-family: 'Inter', sans-serif; }
+  .compare-cell.c3 .compare-h  { font-family: 'Atkinson Hyperlegible', sans-serif; }
+  .compare-cell.c3 .compare-body { font-family: 'Atkinson Hyperlegible', sans-serif; }
+  .compare-cell.c4 .compare-h  { font-family: 'Atkinson Hyperlegible', sans-serif; }
+  .compare-cell.c4 .compare-body { font-family: 'Spectral', serif; }
+  .compare-cell.c5 .compare-h  { font-family: 'Atkinson Hyperlegible', sans-serif; }
+  .compare-cell.c5 .compare-body { font-family: 'Lora', serif; }
+
+  .rec-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+  .rec-best { background: #E4EDDE; color: #2F6B40; border: 1px solid #B4D4BC; }
+  .rec-serif { background: #E6EFF5; color: #2F5D73; border: 1px solid #BDD4E0; }
+  .rec-note { background: #F0EDE6; color: var(--ink-mute); border: 1px solid #D4CFC6; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Working Diagnosis — Font Specimens</h1>
+  <p>Option C variations — Atkinson Hyperlegible base</p>
+</div>
+
+<div class="variations-wrap">
+
+  <!-- ======================================================== -->
+  <!-- VARIATION 1: Classic Atkinson + Inter -->
+  <!-- ======================================================== -->
+  <div class="variation v1">
+    <div class="var-label">
+      <span class="var-num">Var 01</span>
+      <span class="var-name">Classic Atkinson + Inter</span>
+      <span class="var-stack">Atkinson Hyperlegible (headings) · Inter (body) · JetBrains Mono (labels)</span>
+    </div>
+    <div class="mockup">
+      <div class="mockup-nav v1">
+        <span class="brand" style="font-family:'Atkinson Hyperlegible',sans-serif; font-weight:700; font-size:1.1rem;">Working <em style="font-style:italic; color:var(--green)">Diagnosis</em><span style="color:var(--ochre)">.</span></span>
+        <nav class="nav-links"><a href="#">MSK</a><a href="#">Travel</a><a href="#">Vaccines</a><a href="#">Workshop</a></nav>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-main">
+          <p class="kicker">Cardiovascular</p>
+          <div class="tag-row">
+            <span class="tag tag-guidelines">Guidelines</span>
+            <span class="tag tag-redflags">Red flags</span>
+          </div>
+          <div class="delta-strip">
+            <div class="delta-strip-label">What changed — Feb 2026</div>
+            <ul>
+              <li>Treatment threshold lowered to 130/80 for patients under 65 with CVD risk &gt;10%</li>
+              <li>ACEI caution now applies below eGFR 30 (previously 45)</li>
+            </ul>
+          </div>
+          <h1>Hypertension in the Over-80s</h1>
+          <p class="dek">Managing blood pressure in frail older patients requires a different calculus. The 2026 BPAC update shifts several thresholds.</p>
+          <h2>Key thresholds</h2>
+          <div class="body-text">
+            <p>Ambulatory blood pressure monitoring is now preferred over clinic readings for diagnosis in most patients. A single elevated clinic reading is insufficient to initiate treatment — the 2026 guidance is explicit on this.</p>
+            <p>In patients over 80, the treatment target is 140/90 mmHg rather than 130/80. The evidence for aggressive targets in this age group remains weak, and the falls risk is real.</p>
+          </div>
+        </div>
+        <div class="mockup-aside v1">
+          <p class="aside-kicker">❍ Quick refs</p>
+          <p class="aside-title" style="font-family:'Atkinson Hyperlegible',sans-serif;">Related tools</p>
+          <div class="aside-item"><strong>CVD risk calculator</strong>NZ primary care version</div>
+          <div class="aside-item"><strong>BPAC Hypertension 2026</strong>Full guideline PDF</div>
+          <div class="aside-item"><strong>Frailty scale (CFS)</strong>Clinical Frailty Scale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- VARIATION 2: Atkinson Hyperlegible Next (variable, bolder) -->
+  <!-- ======================================================== -->
+  <div class="variation v2">
+    <div class="var-label">
+      <span class="var-num">Var 02</span>
+      <span class="var-name">Atkinson Hyperlegible Next + Inter</span>
+      <span class="var-stack">Atkinson Hyperlegible Next variable (headings, weight 800) · Inter (body) · JetBrains Mono (labels)</span>
+    </div>
+    <div class="mockup">
+      <div class="mockup-nav v2">
+        <span class="brand">Working <em style="font-style:italic; color:var(--green)">Diagnosis</em><span style="color:var(--ochre)">.</span></span>
+        <nav class="nav-links"><a href="#">MSK</a><a href="#">Travel</a><a href="#">Vaccines</a><a href="#">Workshop</a></nav>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-main">
+          <p class="kicker">Cardiovascular</p>
+          <div class="tag-row">
+            <span class="tag tag-guidelines">Guidelines</span>
+            <span class="tag tag-redflags">Red flags</span>
+          </div>
+          <div class="delta-strip">
+            <div class="delta-strip-label">What changed — Feb 2026</div>
+            <ul>
+              <li>Treatment threshold lowered to 130/80 for patients under 65 with CVD risk &gt;10%</li>
+              <li>ACEI caution now applies below eGFR 30 (previously 45)</li>
+            </ul>
+          </div>
+          <h1>Hypertension in the Over-80s</h1>
+          <p class="dek">Managing blood pressure in frail older patients requires a different calculus. The 2026 BPAC update shifts several thresholds.</p>
+          <h2>Key thresholds</h2>
+          <div class="body-text">
+            <p>Ambulatory blood pressure monitoring is now preferred over clinic readings for diagnosis in most patients. A single elevated clinic reading is insufficient to initiate treatment — the 2026 guidance is explicit on this.</p>
+            <p>In patients over 80, the treatment target is 140/90 mmHg rather than 130/80. The evidence for aggressive targets in this age group remains weak, and the falls risk is real.</p>
+          </div>
+        </div>
+        <div class="mockup-aside v2">
+          <p class="aside-kicker">❍ Quick refs</p>
+          <p class="aside-title">Related tools</p>
+          <div class="aside-item"><strong>CVD risk calculator</strong>NZ primary care version</div>
+          <div class="aside-item"><strong>BPAC Hypertension 2026</strong>Full guideline PDF</div>
+          <div class="aside-item"><strong>Frailty scale (CFS)</strong>Clinical Frailty Scale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- VARIATION 3: Atkinson throughout (purist) -->
+  <!-- ======================================================== -->
+  <div class="variation v3">
+    <div class="var-label">
+      <span class="var-num">Var 03</span>
+      <span class="var-name">Atkinson throughout — purist</span>
+      <span class="var-stack">Atkinson Hyperlegible everywhere · JetBrains Mono (labels only)</span>
+    </div>
+    <div class="mockup">
+      <div class="mockup-nav v3">
+        <span class="brand">Working <em style="font-style:italic; color:var(--green)">Diagnosis</em><span style="color:var(--ochre)">.</span></span>
+        <nav class="nav-links" style="font-family:'Atkinson Hyperlegible',sans-serif; font-size:0.75rem; letter-spacing:0.3px;"><a href="#">MSK</a><a href="#">Travel</a><a href="#">Vaccines</a><a href="#">Workshop</a></nav>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-main">
+          <p class="kicker">Cardiovascular</p>
+          <div class="tag-row">
+            <span class="tag tag-guidelines">Guidelines</span>
+            <span class="tag tag-redflags">Red flags</span>
+          </div>
+          <div class="delta-strip">
+            <div class="delta-strip-label">What changed — Feb 2026</div>
+            <ul>
+              <li>Treatment threshold lowered to 130/80 for patients under 65 with CVD risk &gt;10%</li>
+              <li>ACEI caution now applies below eGFR 30 (previously 45)</li>
+            </ul>
+          </div>
+          <h1>Hypertension in the Over-80s</h1>
+          <p class="dek">Managing blood pressure in frail older patients requires a different calculus. The 2026 BPAC update shifts several thresholds.</p>
+          <h2>Key thresholds</h2>
+          <div class="body-text">
+            <p>Ambulatory blood pressure monitoring is now preferred over clinic readings for diagnosis in most patients. A single elevated clinic reading is insufficient to initiate treatment — the 2026 guidance is explicit on this.</p>
+            <p>In patients over 80, the treatment target is 140/90 mmHg rather than 130/80. The evidence for aggressive targets in this age group remains weak, and the falls risk is real.</p>
+          </div>
+        </div>
+        <div class="mockup-aside v3">
+          <p class="aside-kicker">❍ Quick refs</p>
+          <p class="aside-title">Related tools</p>
+          <div class="aside-item"><strong>CVD risk calculator</strong>NZ primary care version</div>
+          <div class="aside-item"><strong>BPAC Hypertension 2026</strong>Full guideline PDF</div>
+          <div class="aside-item"><strong>Frailty scale (CFS)</strong>Clinical Frailty Scale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- VARIATION 4: Atkinson headings + Spectral body (serif warmth) -->
+  <!-- ======================================================== -->
+  <div class="variation v4">
+    <div class="var-label">
+      <span class="var-num">Var 04</span>
+      <span class="var-name">Atkinson + Spectral body</span>
+      <span class="var-stack">Atkinson Hyperlegible (headings) · Spectral (body — editorial serif) · JetBrains Mono (labels)</span>
+    </div>
+    <div class="mockup">
+      <div class="mockup-nav v4">
+        <span class="brand">Working <em style="font-style:italic; color:var(--green)">Diagnosis</em><span style="color:var(--ochre)">.</span></span>
+        <nav class="nav-links"><a href="#">MSK</a><a href="#">Travel</a><a href="#">Vaccines</a><a href="#">Workshop</a></nav>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-main">
+          <p class="kicker">Cardiovascular</p>
+          <div class="tag-row">
+            <span class="tag tag-guidelines">Guidelines</span>
+            <span class="tag tag-redflags">Red flags</span>
+          </div>
+          <div class="delta-strip">
+            <div class="delta-strip-label">What changed — Feb 2026</div>
+            <ul>
+              <li>Treatment threshold lowered to 130/80 for patients under 65 with CVD risk &gt;10%</li>
+              <li>ACEI caution now applies below eGFR 30 (previously 45)</li>
+            </ul>
+          </div>
+          <h1>Hypertension in the Over-80s</h1>
+          <p class="dek">Managing blood pressure in frail older patients requires a different calculus. The 2026 BPAC update shifts several thresholds.</p>
+          <h2>Key thresholds</h2>
+          <div class="body-text">
+            <p>Ambulatory blood pressure monitoring is now preferred over clinic readings for diagnosis in most patients. A single elevated clinic reading is insufficient to initiate treatment — the 2026 guidance is explicit on this.</p>
+            <p>In patients over 80, the treatment target is 140/90 mmHg rather than 130/80. The evidence for aggressive targets in this age group remains weak, and the falls risk is real.</p>
+          </div>
+        </div>
+        <div class="mockup-aside v4">
+          <p class="aside-kicker">❍ Quick refs</p>
+          <p class="aside-title">Related tools</p>
+          <div class="aside-item"><strong>CVD risk calculator</strong>NZ primary care version</div>
+          <div class="aside-item"><strong>BPAC Hypertension 2026</strong>Full guideline PDF</div>
+          <div class="aside-item"><strong>Frailty scale (CFS)</strong>Clinical Frailty Scale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- VARIATION 5: Atkinson + Lora body -->
+  <!-- ======================================================== -->
+  <div class="variation v5">
+    <div class="var-label">
+      <span class="var-num">Var 05</span>
+      <span class="var-name">Atkinson + Lora body</span>
+      <span class="var-stack">Atkinson Hyperlegible (headings) · Lora (body — humanist serif) · JetBrains Mono (labels)</span>
+    </div>
+    <div class="mockup">
+      <div class="mockup-nav v5">
+        <span class="brand">Working <em style="font-style:italic; color:var(--green)">Diagnosis</em><span style="color:var(--ochre)">.</span></span>
+        <nav class="nav-links"><a href="#">MSK</a><a href="#">Travel</a><a href="#">Vaccines</a><a href="#">Workshop</a></nav>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-main">
+          <p class="kicker">Cardiovascular</p>
+          <div class="tag-row">
+            <span class="tag tag-guidelines">Guidelines</span>
+            <span class="tag tag-redflags">Red flags</span>
+          </div>
+          <div class="delta-strip">
+            <div class="delta-strip-label">What changed — Feb 2026</div>
+            <ul>
+              <li>Treatment threshold lowered to 130/80 for patients under 65 with CVD risk &gt;10%</li>
+              <li>ACEI caution now applies below eGFR 30 (previously 45)</li>
+            </ul>
+          </div>
+          <h1>Hypertension in the Over-80s</h1>
+          <p class="dek">Managing blood pressure in frail older patients requires a different calculus. The 2026 BPAC update shifts several thresholds.</p>
+          <h2>Key thresholds</h2>
+          <div class="body-text">
+            <p>Ambulatory blood pressure monitoring is now preferred over clinic readings for diagnosis in most patients. A single elevated clinic reading is insufficient to initiate treatment — the 2026 guidance is explicit on this.</p>
+            <p>In patients over 80, the treatment target is 140/90 mmHg rather than 130/80. The evidence for aggressive targets in this age group remains weak, and the falls risk is real.</p>
+          </div>
+        </div>
+        <div class="mockup-aside v5">
+          <p class="aside-kicker">❍ Quick refs</p>
+          <p class="aside-title">Related tools</p>
+          <div class="aside-item"><strong>CVD risk calculator</strong>NZ primary care version</div>
+          <div class="aside-item"><strong>BPAC Hypertension 2026</strong>Full guideline PDF</div>
+          <div class="aside-item"><strong>Frailty scale (CFS)</strong>Clinical Frailty Scale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- SIDE-BY-SIDE HEADING COMPARISON -->
+  <!-- ======================================================== -->
+  <div style="margin-top:64px; padding-bottom:20px; border-bottom:1px solid #D4CFC6;">
+    <p style="font-family:var(--mono); font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--ochre); margin-bottom:8px;">Side-by-side — all five at a glance</p>
+    <p style="font-size:13px; color:var(--ink-mute);">Same heading + body text in each variation for direct comparison.</p>
+  </div>
+
+  <div class="compare-strip">
+    <div class="compare-cell c1">
+      <p class="compare-cell-label">Var 01</p>
+      <p class="compare-h">Hypertension in the Over-80s</p>
+      <p class="compare-body">Ambulatory monitoring is now preferred over clinic readings in frail patients.</p>
+      <span class="rec-tag rec-best">Most accessible</span>
+    </div>
+    <div class="compare-cell c2">
+      <p class="compare-cell-label">Var 02</p>
+      <p class="compare-h">Hypertension in the Over-80s</p>
+      <p class="compare-body">Ambulatory monitoring is now preferred over clinic readings in frail patients.</p>
+      <span class="rec-tag rec-note">Most impact</span>
+    </div>
+    <div class="compare-cell c3">
+      <p class="compare-cell-label">Var 03</p>
+      <p class="compare-h">Hypertension in the Over-80s</p>
+      <p class="compare-body">Ambulatory monitoring is now preferred over clinic readings in frail patients.</p>
+      <span class="rec-tag rec-note">Most uniform</span>
+    </div>
+    <div class="compare-cell c4">
+      <p class="compare-cell-label">Var 04</p>
+      <p class="compare-h">Hypertension in the Over-80s</p>
+      <p class="compare-body">Ambulatory monitoring is now preferred over clinic readings in frail patients.</p>
+      <span class="rec-tag rec-serif">Most editorial</span>
+    </div>
+    <div class="compare-cell c5">
+      <p class="compare-cell-label">Var 05</p>
+      <p class="compare-h">Hypertension in the Over-80s</p>
+      <p class="compare-body">Ambulatory monitoring is now preferred over clinic readings in frail patients.</p>
+      <span class="rec-tag rec-serif">Warmest serif</span>
+    </div>
+  </div>
+
+  <div style="padding: 32px 0 0; max-width:680px">
+    <p style="font-family:var(--mono); font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:var(--ochre); margin-bottom:8px;">Notes</p>
+    <p style="font-size:14px; line-height:1.65; color:var(--ink-mute);">Var 01 is the safest pick — the original Atkinson Hyperlegible was specifically designed for low-vision readability and letter differentiation (b/d, p/q, i/l). Var 02 uses the newer variable version (Atkinson Hyperlegible Next) which allows heavier weights — more visual punch on headings but the same accessibility credentials. Vars 04 and 05 bring serif warmth to the body text and are closest in spirit to your current site's editorial feel, if that matters. All five share the same mono labels (JetBrains Mono), so that distinctive detail carries through.</p>
+  </div>
+
+</div>
+</body>
+</html>
