@@ -9,9 +9,9 @@
   --green-deep: #1F4A3F;
   --ochre:      #B8714F;
   --rule:       #C8D4B4;
-  --serif-display: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', system-ui, sans-serif;
-  --serif-body:    'Inter', system-ui, sans-serif;
-  --sans-body:     'Inter', system-ui, sans-serif;
+  --serif-display: 'Lora', Georgia, serif;
+  --serif-body:    'Lora', Georgia, serif;
+  --sans-body:     system-ui, -apple-system, sans-serif;
   --mono:          'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
