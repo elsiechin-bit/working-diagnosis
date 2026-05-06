@@ -1,17 +1,17 @@
 /* --- Tokens ------------------------------------- */
 :root {
-  --paper:      #EFF3E6;
-  --paper-warm: #E4EAD8;
+  --paper:      #F5F1E8;
+  --paper-warm: #EDE7D8;
   --ink:        #1A1F1C;
   --ink-soft:   #3A4540;
   --ink-mute:   #6B7A75;
   --green:      #2F6B5C;
   --green-deep: #1F4A3F;
   --ochre:      #B8714F;
-  --rule:       #C8D4B4;
-  --serif-display: 'Lora', Georgia, serif;
-  --serif-body:    'Lora', Georgia, serif;
-  --sans-body:     system-ui, -apple-system, sans-serif;
+  --rule:       #D9D1BD;
+  --serif-display: 'Fraunces', Georgia, serif;
+  --serif-body:    'Newsreader', Georgia, serif;
+  --sans-body:     'Inter', system-ui, -apple-system, sans-serif;
   --mono:          'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
