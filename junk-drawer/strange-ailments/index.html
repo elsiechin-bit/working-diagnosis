@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strange Medical Ailments — Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+
+    /* masthead */
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-brand em{font-style:italic;color:var(--green)}
+    .masthead-trail{display:flex;align-items:center;gap:.6rem;font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute)}
+    .masthead-trail a{color:var(--ink-mute);text-decoration:none}
+    .masthead-trail a:hover{color:var(--green)}
+    .masthead-trail span{color:var(--rule)}
+
+    /* hero */
+    .hero{max-width:680px;margin:0 auto;padding:3.5rem 2rem 2.5rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin-bottom:.85rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-dek{color:var(--ink-soft);font-size:1rem;max-width:560px;line-height:1.65}
+
+    /* ailment entries */
+    .ailments{max-width:680px;margin:0 auto;padding:0 2rem 5rem}
+    .ailment{padding:3rem 0;border-bottom:1px solid var(--rule)}
+    .ailment:last-of-type{border-bottom:none}
+    .ailment-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.15em;color:var(--ochre);margin-bottom:.75rem;display:block}
+    .ailment-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1.25rem;margin-bottom:.5rem;flex-wrap:wrap}
+    .ailment-name{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.5rem,3.5vw,2rem);line-height:1.1;color:var(--ink)}
+    .ailment-name em{font-style:italic;color:var(--green)}
+    .ailment-type{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:3px;white-space:nowrap;flex-shrink:0;margin-top:.35rem}
+    .type-neuro{color:var(--green-deep);background:rgba(47,107,92,.08);border:1px solid rgba(47,107,92,.2)}
+    .type-psych{color:#4a3a7c;background:rgba(74,58,124,.07);border:1px solid rgba(74,58,124,.18)}
+    .type-metabolic{color:#7c5c2a;background:rgba(124,92,42,.07);border:1px solid rgba(124,92,42,.18)}
+    .type-derma{color:#5c3a2a;background:rgba(92,58,42,.07);border:1px solid rgba(92,58,42,.18)}
+    .type-immuno{color:#2a5c7c;background:rgba(42,92,124,.07);border:1px solid rgba(42,92,124,.18)}
+    .type-genetic{color:#5c2a4a;background:rgba(92,42,74,.07);border:1px solid rgba(92,42,74,.18)}
+    .type-culture{color:var(--ink-mute);background:rgba(107,122,117,.07);border:1px solid rgba(107,122,117,.2)}
+    .ailment-hook{font-family:'Newsreader',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft);margin:1rem 0 1.25rem;line-height:1.55}
+    .ailment-body{font-size:.97rem;color:var(--ink-soft);line-height:1.72}
+    .ailment-body p+p{margin-top:.85rem}
+    .ailment-body strong{color:var(--ink);font-weight:500}
+    .ailment-note{background:var(--warm);border-left:2px solid var(--green);border-radius:0 4px 4px 0;padding:.85rem 1rem;margin-top:1.25rem;font-size:.87rem;color:var(--ink-soft);line-height:1.6}
+    .ailment-note::before{display:block;font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:.35rem;content:"GP note"}
+
+    /* footer */
+    .page-footer{border-top:1px solid var(--rule);padding:2rem;text-align:center;margin-top:1rem}
+    .page-footer a{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .page-footer a:hover{color:var(--green)}
+    .page-footer .sep{color:var(--rule);margin:0 .75rem}
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working <em>Diagnosis</em>.</a>
+  <div class="masthead-trail">
+    <a href="/junk-drawer/">Junk Drawer</a>
+    <span>&#8250;</span>
+    <span>Strange Ailments</span>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="kicker">real conditions &nbsp;·&nbsp; genuinely strange &nbsp;·&nbsp; all of them documented</p>
+  <h1>Strange <em>Medical Ailments</em></h1>
+  <p class="hero-dek">Ten conditions that exist, are documented in the peer-reviewed literature, and that most people would not believe if you described them at a dinner party. The medicine is real. The strangeness is the point.</p>
+</div>
+
+<div class="ailments">
+
+  <!-- 01 -->
+  <div class="ailment">
+    <span class="ailment-num">01</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Cotard's <em>Delusion</em></h2>
+      <span class="ailment-type type-psych">Psychiatric</span>
+    </div>
+    <p class="ailment-hook">The patient believes they are dead.</p>
+    <div class="ailment-body">
+      <p>First described by the French neurologist Jules Cotard in 1880, this rare psychiatric syndrome produces a fixed delusion of non-existence. Patients believe they have died, that their body is decomposing, that they have no blood or internal organs, or that they no longer exist as a person. In its most severe form, known as the nihilistic variant, patients may refuse to eat on the grounds that the dead have no need for food.</p>
+      <p>The delusion can occur in severe depression, schizophrenia, bipolar disorder, and organic conditions including dementia, stroke, and encephalitis. The proposed mechanism involves a dissociation between the facial recognition system and its emotional outputs: familiar faces and the patient's own reflection are processed normally but produce no accompanying sense of familiarity or emotional response, leading the brain to conclude that the self (or others) no longer exist.</p>
+      <p>What is perhaps most striking is that the delusion is ego-syntonic. Patients are not distressed by their conclusion. They have simply noticed something that they believe to be true, and they are reporting it. The difficulty is persuading them otherwise.</p>
+    </div>
+  </div>
+
+  <!-- 02 -->
+  <div class="ailment">
+    <span class="ailment-num">02</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Auto-Brewery <em>Syndrome</em></h2>
+      <span class="ailment-type type-metabolic">Metabolic</span>
+    </div>
+    <p class="ailment-hook">The patient ferments their own alcohol internally and becomes intoxicated without drinking.</p>
+    <div class="ailment-body">
+      <p>Gut fermentation syndrome, or auto-brewery syndrome, occurs when fungi colonising the gastrointestinal tract — most commonly <em>Saccharomyces cerevisiae</em> or <em>Candida</em> species — ferment dietary carbohydrates into ethanol within the gut. The ethanol is absorbed and the patient becomes drunk. They have not consumed any alcohol. Their breath smells of it regardless.</p>
+      <p>The condition was first described in the Japanese literature in the 1950s and remained obscure until a series of case reports drew attention to it. A widely cited 2019 case in <em>BMJ Open Gastroenterology</em> described a man who presented repeatedly to an emergency department with a blood alcohol level of 0.37% while insisting he had not been drinking. He had been arrested for driving while impaired on multiple occasions. Extensive investigation confirmed endogenous ethanol production. He was eventually treated with antifungals and a low-carbohydrate diet.</p>
+      <p>The practical complication is that the condition has historically been difficult to prove, and patients have not always been believed. Breathalyser readings are real. Arrests have followed. There is a small forensic medicine literature on this.</p>
+    </div>
+    <div class="ailment-note">Worth considering in patients who report symptoms of alcohol intoxication or who test positive for ethanol but deny drinking, particularly if there is a history of antibiotic use, GI dysmotility, or high-carbohydrate diet.</div>
+  </div>
+
+  <!-- 03 -->
+  <div class="ailment">
+    <span class="ailment-num">03</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Foreign Accent <em>Syndrome</em></h2>
+      <span class="ailment-type type-neuro">Neurological</span>
+    </div>
+    <p class="ailment-hook">After a stroke or brain injury, the patient sounds like they are speaking with a foreign accent. They are not.</p>
+    <div class="ailment-body">
+      <p>Foreign accent syndrome is a rare speech disorder, first described by Pierre Marie in 1907, in which acquired brain damage alters the prosody, rhythm, vowel quality, and timing of speech in ways that listeners interpret as a foreign accent. The patient has not acquired a new accent. What has changed is the motor execution of speech — the precise coordination of articulators that gives speech its characteristic sound — and the result is something that resembles, but is not, an accent from another region or country.</p>
+      <p>The most famous case is a Norwegian woman who sustained a head injury during a German bombing raid in 1940 and subsequently developed a German-sounding accent. In wartime Norway, this caused serious social consequences. She was reportedly avoided and suspected of being a collaborator. She was not German. She had never spent time in Germany. Her brain had simply been damaged in a way that altered her speech patterns.</p>
+      <p>Fewer than 100 cases are documented in the literature. Most follow stroke, though cases have been reported after traumatic brain injury, multiple sclerosis, and severe migraines. The majority resolve over months to years, though some are permanent. The condition is genuine and the patients are sometimes treated with considerable scepticism, which reflects poorly on the treaters.</p>
+    </div>
+  </div>
+
+  <!-- 04 -->
+  <div class="ailment">
+    <span class="ailment-num">04</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Alice in Wonderland <em>Syndrome</em></h2>
+      <span class="ailment-type type-neuro">Neurological</span>
+    </div>
+    <p class="ailment-hook">Objects, body parts, and the sense of time appear to be the wrong size.</p>
+    <div class="ailment-body">
+      <p>Todd's syndrome, named after the British psychiatrist John Todd who described it in 1955, is a neurological disturbance of perception in which objects appear smaller than they are (micropsia), larger than they are (macropsia), closer or further away than they are, or in which the patient's sense of their own body size is distorted. The perception of time may also be affected, moving too fast or too slowly. There is no change in visual acuity. The eyes work correctly. The problem is in how the brain processes what the eyes report.</p>
+      <p>The syndrome is most common in children and is frequently associated with migraines, occurring as an aura. It is also documented in association with Epstein-Barr virus infection (infectious mononucleosis), temporal lobe epilepsy, and certain medications. Most children with migraine-associated Alice in Wonderland syndrome outgrow it by adolescence.</p>
+      <p>The connection to Lewis Carroll is not merely nominal. Carroll was a severe migraineur and almost certainly experienced these symptoms. The specific distortions of scale and time in <em>Alice's Adventures in Wonderland</em> — Alice shrinking and growing, the White Rabbit's anxiety about time — are consistent with migraine aura phenomenology. It is possible, though not provable, that he was drawing directly on his own experience.</p>
+    </div>
+    <div class="ailment-note">In a child presenting with episodic visual disturbance where objects seem the wrong size, consider migraine with Alice in Wonderland aura before extensive investigation. Often self-resolving.</div>
+  </div>
+
+  <!-- 05 -->
+  <div class="ailment">
+    <span class="ailment-num">05</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Alien Hand <em>Syndrome</em></h2>
+      <span class="ailment-type type-neuro">Neurological</span>
+    </div>
+    <p class="ailment-hook">One hand acts purposefully and autonomously, independent of the patient's will.</p>
+    <div class="ailment-body">
+      <p>First described by the German neurologist Kurt Goldstein in 1908, alien hand syndrome occurs after damage to the corpus callosum, the supplementary motor area, or both — typically following stroke, anterior cerebral artery territory infarction, or surgical corpus callosotomy (once used to treat intractable epilepsy). The affected hand reaches for and grasps objects without the patient intending it to, unbuttons clothing the other hand has just fastened, removes spectacles, strikes or grips the patient or others, and in some cases appears to resist or interfere with the action of the other hand.</p>
+      <p>The patient is typically fully aware that the hand is acting against their wishes. This distinguishes it from other motor conditions. They can observe the hand clearly, they can name it as their own, but they cannot stop it. Some patients report an unsettling sense of estrangement from the limb and describe it in the third person. The name is accurate: the hand behaves as if it belongs to someone else.</p>
+      <p>The mechanism reflects the disruption of interhemispheric communication. The hand that is being controlled by the disconnected hemisphere is not receiving the inhibitory signals that the other hemisphere would normally provide. It acts on its own programs without suppression. The neuroscientist Michael Gazzaniga studied this extensively in split-brain patients and described the resulting dynamic as two partially independent agents sharing a body.</p>
+    </div>
+  </div>
+
+  <!-- 06 -->
+  <div class="ailment">
+    <span class="ailment-num">06</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Exploding Head <em>Syndrome</em></h2>
+      <span class="ailment-type type-neuro">Neurological</span>
+    </div>
+    <p class="ailment-hook">As the patient falls asleep or wakes, they hear an extremely loud explosion. Nothing has exploded.</p>
+    <div class="ailment-body">
+      <p>First formally documented by Silas Weir Mitchell in 1876 and named by J.M.S. Pearce in 1989, exploding head syndrome is a parasomnia occurring at sleep onset or on waking, in which the patient perceives a sudden, extremely loud noise: an explosion, gunshot, clash of cymbals, or thunderclap. The event is not painful. There is no external sound source. The patient is often left frightened and heart-racing, particularly during the first episode.</p>
+      <p>Despite its alarming name and presentation, the condition is benign and appears to be considerably more common than the small published literature suggests. Prevalence estimates from population studies range from 10 to 20% of people reporting at least one episode during their lifetime, with recurrent episodes affecting around 5%. It is not associated with neurological disease or psychiatric disorder, though it causes significant anxiety in those who experience it repeatedly.</p>
+      <p>The mechanism is not fully understood. The leading hypothesis is that it represents a failure of the neural inhibitory processes that normally occur during the transition from wakefulness to sleep, resulting in a brief burst of neural activity in auditory processing areas. Stress, sleep deprivation, and disrupted sleep schedules may increase frequency. There is no established treatment; reassurance that the condition is benign and self-limiting is often sufficient.</p>
+    </div>
+    <div class="ailment-note">Patients who present having heard a sudden explosion or gunshot while falling asleep or waking, with no other neurological symptoms and normal examination, almost certainly have exploding head syndrome. The diagnosis can be made clinically. The most important intervention is reassurance and a name for it.</div>
+  </div>
+
+  <!-- 07 -->
+  <div class="ailment">
+    <span class="ailment-num">07</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Aquagenic <em>Urticaria</em></h2>
+      <span class="ailment-type type-immuno">Immunological</span>
+    </div>
+    <p class="ailment-hook">The patient is allergic to water.</p>
+    <div class="ailment-body">
+      <p>First described in 1964, aquagenic urticaria is an extremely rare condition in which contact between water and the skin produces hives, burning, and pruritus within minutes. The reaction is not to impurities in water — it occurs with distilled water and with the patient's own sweat, saliva, and tears. Rain causes it. A shower causes it. Perspiration during exercise causes it. Crying causes it.</p>
+      <p>The mechanism remains debated. The leading hypothesis is that water acts as a vehicle, dissolving a substance present in or on the skin — possibly a hapten or an allergen of epidermal origin — which then penetrates the skin and triggers mast cell degranulation in a localised area. IgE appears to be involved in some but not all cases. The condition is not a true allergy to the water molecule itself; the immune system is responding to something else, and water is the delivery mechanism.</p>
+      <p>Fewer than a few hundred cases are documented in the world literature. Life impact is severe. Antihistamines provide partial relief in some patients. Omalizumab (anti-IgE) has shown benefit in case reports. There is no cure. The condition is not life-threatening but is profoundly disabling, particularly in climates with regular rainfall.</p>
+    </div>
+  </div>
+
+  <!-- 08 -->
+  <div class="ailment">
+    <span class="ailment-num">08</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Fibrodysplasia Ossificans <em>Progressiva</em></h2>
+      <span class="ailment-type type-genetic">Genetic</span>
+    </div>
+    <p class="ailment-hook">Muscles, tendons, and ligaments slowly turn to bone.</p>
+    <div class="ailment-body">
+      <p>FOP is caused by a gain-of-function mutation in the <em>ACVR1</em> gene, which encodes a bone morphogenetic protein receptor. The mutation causes soft connective tissues — muscles, tendons, fascia, ligaments — to undergo heterotopic ossification: they are progressively replaced by functional, cortical bone. The result is a second skeleton forming around and within the body's soft tissues, steadily immobilising the patient joint by joint over years and decades.</p>
+      <p>The ossification is triggered by tissue injury: surgical procedures, intramuscular injections, falls, and even minor bumps can provoke explosive new bone formation at the site of trauma. This creates one of the condition's most important clinical features and its most dangerous pitfall: a patient with FOP presenting with a soft-tissue swelling can easily be misdiagnosed with a tumour, and a biopsy will trigger massive irreversible ossification in the surrounding tissue. The rule in FOP is that <strong>you do not biopsy musculoskeletal lesions until FOP has been excluded</strong>. The diagnosis can be suspected from the clinical picture and the characteristic finding of congenitally malformed great toes, present from birth in almost all cases.</p>
+      <p>The condition affects approximately 1 in 2 million people. Harry Eastlack, who died of FOP in 1973 at age 39, donated his skeleton to the Mütter Museum in Philadelphia. His skeleton shows the second bony framework almost completely formed around his primary skeleton. It is one of the most extraordinary specimens in pathological anatomy.</p>
+    </div>
+    <div class="ailment-note">The hallmark is congenitally malformed great toes (short, often with a single phalanx, deviated medially) in a child with progressive soft-tissue swellings. If FOP is suspected, no biopsy, no intramuscular injections. Refer to a centre with FOP experience.</div>
+  </div>
+
+  <!-- 09 -->
+  <div class="ailment">
+    <span class="ailment-num">09</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Jumping Frenchmen <em>of Maine</em></h2>
+      <span class="ailment-type type-neuro">Neurological</span>
+    </div>
+    <p class="ailment-hook">An extreme startle syndrome in which a sudden noise causes violent, involuntary, and occasionally quite dangerous reactions.</p>
+    <div class="ailment-body">
+      <p>Described in 1878 by the American neurologist George Miller Beard, the condition was first observed among French-Canadian lumberjacks working in the Moosehead Lake region of Maine. When startled by a sudden noise or touch, affected individuals would react with violent jumping, shouting, striking out, throwing whatever object they were holding, and falling to the ground. The response was wildly disproportionate to the stimulus.</p>
+      <p>The syndrome also included echolalia (involuntary repetition of words just heard) and echopraxia (involuntary imitation of movements). If a person was given a sharp command during a startle response, they would sometimes obey it automatically, even if the command was unreasonable or potentially harmful. Beard described men who were commanded to strike their companions and did so before they could stop themselves.</p>
+      <p>The nosological status of the condition remains disputed. Some investigators regard it as a culturally shaped variant of a hyperekplexia-like neurological predisposition, amplified and reinforced by social context among a close-knit occupational group. Others consider it primarily a conditioned behavioural response. Cases have been described in other populations — the Latah response in Malaysia and Siberia shows overlapping features. What is certain is that Beard's original descriptions are vivid, the condition is real in the sense that he observed it, and it has never been seen in quite the same form since.</p>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="ailment">
+    <span class="ailment-num">10</span>
+    <div class="ailment-head">
+      <h2 class="ailment-name">Paris <em>Syndrome</em></h2>
+      <span class="ailment-type type-culture">Culture-bound</span>
+    </div>
+    <p class="ailment-hook">Tourists arrive in Paris. Paris is not what they expected. Psychiatric breakdown follows.</p>
+    <div class="ailment-body">
+      <p>Described by the Japanese psychiatrist Hiroaki Ota in 1986, Paris syndrome is a transient psychiatric condition affecting visitors to Paris — predominantly, but not exclusively, Japanese tourists — in whom the experience of the actual city produces profound disillusionment and frank psychiatric symptoms: anxiety, depersonalisation, feelings of persecution, hallucinations, and in the most severe cases, delusions.</p>
+      <p>The proposed mechanism involves the collision between an extraordinarily idealised prior image of Paris (sustained, in the case of Japanese tourists, by decades of heavily curated cultural marketing presenting the city as a kind of perfect aesthetic experience) and the reality of a large, complicated, occasionally rude European capital. The gap between expectation and reality is the precipitant. Travel fatigue, language barriers, and the destabilising effects of being far from home in unfamiliar surroundings compound it.</p>
+      <p>The French consultation-liaison psychiatry literature documents around twelve cases per year serious enough to require hospitalisation or early repatriation. The Japanese embassy in Paris reportedly maintained a 24-hour repatriation helpline for some years. Whether Paris syndrome is a distinct diagnostic entity or simply a culture-specific variant of adjustment disorder and panic is debated. What is not debated is that people have needed medical help because Paris was not what they had been led to expect. This says something about marketing, something about expectations, and something about Paris.</p>
+    </div>
+  </div>
+
+</div><!-- /ailments -->
+
+<footer class="page-footer">
+  <a href="/junk-drawer/">&#8592; Back to Junk Drawer</a>
+  <span class="sep">·</span>
+  <a href="/">Home</a>
+</footer>
+
+</body>
+</html>

@@ -52,17 +52,47 @@ a:hover { color: var(--green); }
 
 .tools-aside {
   position: sticky;
-  top: 24px;
+  top: 88px;
   background: var(--paper-warm);
   border: 1px solid var(--rule);
   border-radius: 4px;
   padding: 24px 22px;
 }
 
+/* Page TOC (left column on topic pages) */
+.page-toc {
+  width: 176px;
+  flex-shrink: 0;
+  order: -1;
+}
+.toc-nav {
+  position: sticky;
+  top: 88px;
+}
+.toc-heading {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin: 0 0 10px;
+}
+.toc-list { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--rule); }
+.toc-item { margin: 0; }
+.toc-link { display: block; padding: 4px 12px; font-size: 13px; line-height: 1.4; color: var(--ink-mute); transition: color 120ms; }
+.toc-link:hover { color: var(--green); }
+.toc-link.is-active { color: var(--green-deep); border-left: 2px solid var(--green); margin-left: -2px; }
+.toc-item--h3 .toc-link { padding-left: 22px; font-size: 12px; }
+
+/* Ensure headings clear the sticky masthead on anchor jump */
+.topic-body h2,
+.topic-body h3 { scroll-margin-top: 88px; }
+
 @media (max-width: 960px) {
   .page-wrapper { flex-direction: column; }
   .sidebar-tools { width: 100%; }
-  .tools-aside { position: static; }
+  .tools-aside { position: static; top: auto; }
+  .page-toc { display: none; }
 }
 
 .wrap { max-width: 1080px; padding: 0 24px; }

@@ -9,33 +9,32 @@ permalink: /paediatrics/glue-ear/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p>Otitis media with effusion (OME), commonly called glue ear, is a collection of non-purulent fluid in the middle ear without signs of acute infection. It is the most common cause of acquired conductive hearing loss in children and is a frequent cause of language delay, inattentiveness, and educational difficulties. OME is very common in children aged 2-5; by age 10, approximately 80% of children will have had at least one episode.</p>
+<div class="tier-1">
+  <p class="tier-label">❍ At a glance</p>
+  <ul>
+    <li>OME is the most common cause of acquired conductive hearing loss in children. It is typically painless - the presenting concern is usually hearing difficulty noted by parents or teachers, language delay, or inattentiveness.</li>
+    <li>The majority of OME resolves spontaneously within 3 months; 90% of cases in children over 2 resolve within 12 months without intervention.<sup>1</sup> Watchful waiting is appropriate for most children with recent-onset OME and mild or no hearing impact.</li>
+    <li>Decongestants, antihistamines, steroids, and antibiotics have no evidence of benefit and should not be used.<sup>2</sup> Autoinflation (Otovent device) has modest evidence in children over 4 and can be offered alongside watchful waiting.<sup>3</sup></li>
+    <li>Refer for audiometry if OME is suspected with hearing difficulty, language delay, or behavioural concern. ENT threshold: bilateral OME with hearing loss ≥25 dB in the better ear persisting beyond 3 months.</li>
+  </ul>
+</div>
 
-<h2>Presentation</h2>
-<p>OME is typically painless and may be entirely asymptomatic. The presenting concern is usually hearing difficulty, which parents may describe as: mishearing or misunderstanding speech, needing the television louder, inattentiveness at school, or poor response to being called. Teachers often notice the problem before parents. Children with OME may have delayed speech and language development, particularly if the effusion has been present from early in language acquisition.</p>
+<p>Otitis media with effusion (OME), commonly called glue ear, is a collection of non-purulent fluid in the middle ear without signs of acute infection. It is the most common cause of acquired conductive hearing loss in children and a frequent cause of language delay, inattentiveness, and educational difficulties. OME is very common in children aged 2-5; by age 10, approximately 80% of children will have had at least one episode.</p>
 
-<p>Otoscopy: the tympanic membrane may appear dull, opaque, or yellowish (the "amber drum"); there may be a visible air-fluid level or air bubbles behind the membrane; the light reflex is often distorted. Membrane mobility is reduced on pneumatic otoscopy. Importantly, the tympanic membrane is not bulging and there is no discharge - these features suggest AOM rather than OME.</p>
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation, assessment, and management</p>
+  <p>OME is typically painless and may be entirely asymptomatic. The presenting concern is usually hearing difficulty - parents may describe mishearing or misunderstanding speech, needing the television louder, inattentiveness at school, or poor response to being called. Teachers often notice the problem before parents. Children with OME may have delayed speech and language development, particularly if the effusion has been present during early language acquisition.</p>
+  <p>Otoscopy: the tympanic membrane may appear dull, opaque, or yellowish (the "amber drum"); there may be a visible air-fluid level or air bubbles behind the membrane; the light reflex is often distorted. Membrane mobility is reduced on pneumatic otoscopy. The tympanic membrane is not bulging and there is no discharge - these features suggest AOM rather than OME. Tympanometry (where available) shows a flat Type B curve indicating reduced membrane compliance from middle ear fluid.</p>
+  <p>The primary investigation is formal audiological assessment - refer any child with suspected OME and associated hearing loss for audiometry. A hearing loss of 25 dB or more in the better ear, or persistent OME on audiological review, is the threshold for considering ENT referral.</p>
+  <p>Watchful waiting is appropriate for most children with OME of recent onset and mild or no hearing impact - 90% of cases in children over 2 resolve within 12 months.<sup>1</sup> Decongestants, antihistamines, systemic or intranasal corticosteroids, and antibiotics have no evidence of benefit.<sup>2</sup> Autoinflation (Otovent balloon device, inflated through each nostril) has modest evidence in children over 4 and can be offered alongside watchful waiting.<sup>3</sup> Address treatable contributing factors: active management of concurrent allergic rhinitis (intranasal corticosteroid) can improve drainage; tobacco smoke exposure is a modifiable risk factor.</p>
+  <p>For children with persistent OME and significant hearing loss, the definitive treatment is insertion of ventilation tubes (grommets) with or without adenoidectomy. Grommets provide immediate restoration of hearing and remain in place for an average of 9-12 months before extruding. They are appropriate for bilateral OME persistent beyond 3 months with associated hearing loss (≥25 dB in the better ear) affecting development, behaviour, or schooling.</p>
+</div>
 
-<p>Tympanometry (where available) shows a flat Type B curve, indicating reduced membrane compliance from middle ear fluid. This is a useful objective finding, especially in children where otoscopy is difficult. Most NZ GP practices do not have tympanometers; consider referral to a nurse practitioner or community hearing clinic for tympanometry if OME is suspected but the otoscopic picture is unclear.</p>
-
-<h2>Investigation</h2>
-<p>The primary investigation is formal audiological assessment. Refer any child with suspected OME and associated hearing loss for audiometry. In children under 4, age-appropriate behavioural audiometry (visual reinforcement or play audiometry) is used; over 4-5, pure tone audiometry is feasible. A hearing loss of 25 dB or more in the better ear, or persistent OME on audiological review, is the threshold for considering ENT referral.</p>
-
-<p>OME is a clinical and audiological diagnosis. Routine blood tests, imaging, and nasopharyngoscopy are not required in uncomplicated cases. Nasopharyngoscopy may be considered by ENT in children with persistent bilateral OME to exclude adenoidal hypertrophy or, rarely, a nasopharyngeal mass.</p>
-
-<h2>Management</h2>
-<p>The majority of OME resolves spontaneously within 3 months; 90% of cases in children over 2 will resolve within 12 months without intervention.<sup>1</sup> A period of watchful waiting is appropriate for most children with OME of recent onset and mild or no hearing impact.</p>
-
-<p>The following have no evidence of benefit and should not be used: decongestants, antihistamines, systemic or intranasal corticosteroids, and antibiotics.<sup>2</sup> Autoinflation (Otovent balloon device, where the child inflates a small balloon through each nostril) has modest evidence of benefit in children over 4 and can be offered alongside watchful waiting.<sup>3</sup></p>
-
-<p>Address treatable contributing factors: active management of concurrent allergic rhinitis (intranasal corticosteroid) can improve drainage; tobacco smoke exposure should be discussed as a modifiable risk factor.</p>
-
-<p>For children with persistent OME and significant hearing loss, the definitive treatment is insertion of ventilation tubes (grommets) with or without adenoidectomy, performed under general anaesthesia by ENT surgeons. Grommets provide immediate restoration of hearing and remain in place for an average of 9-12 months before extruding. They are appropriate for bilateral OME persistent beyond 3 months with associated hearing loss (25 dB or more in the better ear) affecting development, behaviour, or schooling.</p>
-
-<h2>Referral criteria</h2>
-<p>Refer for audiology assessment: any child with suspected OME and associated hearing difficulty, language delay, or behavioural concern. Referral can be made directly by GPs in most NZ DHB areas.</p>
-
-<p>Refer to ENT for: bilateral OME with hearing loss of 25 dB or more in the better ear persisting beyond 3 months; OME with significant speech and language delay; OME in children with Down syndrome (prone to persistent effusion and significant hearing impact), cleft palate, or other craniofacial abnormalities; parental or school concern about the hearing impact that has not resolved with watchful waiting.</p>
+<div class="tier-3">
+  <p class="tier-label">❍ Referral criteria</p>
+  <p>Refer for audiology assessment: any child with suspected OME and associated hearing difficulty, language delay, or behavioural concern. Direct GP referral to audiology is available in most NZ DHB areas.</p>
+  <p>Refer to ENT for: bilateral OME with hearing loss ≥25 dB in the better ear persisting beyond 3 months; OME with significant speech and language delay; OME in children with Down syndrome (prone to persistent effusion and significant hearing impact), cleft palate, or other craniofacial abnormalities; parental or school concern about hearing impact that has not resolved with watchful waiting.</p>
+</div>
 
 </div>
 <aside class="topic-aside">
@@ -50,8 +49,12 @@ permalink: /paediatrics/glue-ear/
 </aside>
 </div>
 
-<p class="topic-footnotes">
-  <sup>1</sup> Browning GG, Rovers MM, Williamson I, et al. Grommets (ventilation tubes) for hearing loss associated with otitis media with effusion in children. Cochrane Database Syst Rev. 2010;(10):CD001801.<br>
-  <sup>2</sup> Griffin G, Flynn CA. Antihistamines and/or decongestants for otitis media with effusion (OME) in children. Cochrane Database Syst Rev. 2011;(9):CD003423.<br>
-  <sup>3</sup> Williamson I, Vennik J, Harnden A, et al. Effect of nasal balloon autoinflation in children with otitis media with effusion in primary care. CMAJ. 2015;187(13):961-969.
-</p>
+<div class="topic-refs">
+
+**References**
+
+1. Browning GG, Rovers MM, Williamson I, et al. Grommets (ventilation tubes) for hearing loss associated with otitis media with effusion in children. *Cochrane Database Syst Rev.* 2010;(10):CD001801.
+2. Griffin G, Flynn CA. Antihistamines and/or decongestants for otitis media with effusion (OME) in children. *Cochrane Database Syst Rev.* 2011;(9):CD003423.
+3. Williamson I, Vennik J, Harnden A, et al. Effect of nasal balloon autoinflation in children with otitis media with effusion in primary care. *CMAJ.* 2015;187(13):961-969.
+
+</div>

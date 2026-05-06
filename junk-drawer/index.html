@@ -31,6 +31,16 @@
     .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.4rem;margin:3rem 0 .3rem;color:var(--ink)}
     .section-lead{color:var(--ink-mute);font-size:.9rem;font-style:italic;margin-bottom:1.75rem;line-height:1.6}
 
+    /* sub-pages nav */
+    .drawer-nav{display:flex;flex-direction:column;gap:.6rem;margin-bottom:3.5rem;padding-bottom:3rem;border-bottom:1px solid var(--rule)}
+    .drawer-nav-label{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:.25rem}
+    .drawer-link{display:flex;align-items:baseline;gap:.85rem;padding:.7rem 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+    .drawer-link:last-child{border-bottom:none}
+    .drawer-link:hover .drawer-link-title{color:var(--green)}
+    .drawer-link-num{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--ochre);letter-spacing:.06em;flex-shrink:0}
+    .drawer-link-title{font-family:'Fraunces',serif;font-weight:500;font-size:1.05rem;color:var(--ink);transition:color .15s}
+    .drawer-link-dek{font-size:.87rem;color:var(--ink-mute);line-height:1.5}
+
     /* film cards */
     .film-grid{display:flex;flex-direction:column;gap:1.25rem}
     .film-card{background:var(--warm);border:1px solid var(--rule);border-radius:8px;padding:1.4rem 1.6rem}
@@ -94,7 +104,32 @@
 
 <div class="page-body">
 
-  <h2 class="section-h2">Cinema as Consultation</h2>
+  <div class="drawer-nav">
+    <p class="drawer-nav-label">Pages in here</p>
+    <a href="/junk-drawer/strange-ailments/" class="drawer-link">
+      <span class="drawer-link-num">01</span>
+      <div>
+        <span class="drawer-link-title">Strange Medical Ailments</span>
+        <p class="drawer-link-dek">Ten real, documented conditions that most people would not believe if you described them at a dinner party.</p>
+      </div>
+    </a>
+    <a href="#cinema" class="drawer-link">
+      <span class="drawer-link-num">02</span>
+      <div>
+        <span class="drawer-link-title">Cinema as Consultation</span>
+        <p class="drawer-link-dek">Films with the most clinically accurate depictions of specific conditions.</p>
+      </div>
+    </a>
+    <a href="#eponyms" class="drawer-link">
+      <span class="drawer-link-num">03</span>
+      <div>
+        <span class="drawer-link-title">Eponyms With Backstories</span>
+        <p class="drawer-link-dek">Conditions named after people who were wrong, unpleasant, alphabetically first, or dead.</p>
+      </div>
+    </a>
+  </div>
+
+  <h2 class="section-h2" id="cinema">Cinema as Consultation</h2>
   <p class="section-lead">Films and series with the most clinically accurate depictions of specific conditions. Useful for recommending to patients, for teaching, or for justifying film-watching as informal CPD.</p>
 
   <div class="film-grid">
@@ -248,7 +283,7 @@
 
   </div><!-- /film-grid -->
 
-  <h2 class="section-h2" style="margin-top:4rem">Eponyms With Backstories</h2>
+  <h2 class="section-h2" id="eponyms" style="margin-top:4rem">Eponyms With Backstories</h2>
   <p class="section-lead">Conditions named after real people who were, in many cases, not the first to describe them, or were actively unpleasant, or named their disease accidentally, or had no connection to medicine whatsoever.</p>
 
   <div class="eponym-grid">
