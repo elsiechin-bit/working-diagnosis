@@ -121,8 +121,8 @@ a:hover { color: var(--green); }
 .tools-group:first-of-type { border-top: none; }
 .tools-group summary { list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 9px 0; cursor: pointer; user-select: none; }
 .tools-group summary::-webkit-details-marker { display: none; }
-.tools-group__header { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; background-color: var(--green); padding: 10px 12px; font-weight: 400; }
-.tools-group__header::after { content: "�-�"; font-size: 0.65em; color: #FFFFFF; display: inline-block; transition: transform 180ms ease; margin-left: 6px; }
+.tools-group__header { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ochre); font-weight: 500; }
+.tools-group__header::after { content: "\203A"; font-family: var(--serif-display); font-size: 1.1em; color: var(--ink-mute); display: inline-block; transition: transform 180ms ease; margin-left: 6px; line-height: 1; }
 .tools-group[open] .tools-group__header::after { transform: rotate(90deg); }
 .tools-list { list-style: none; padding: 0; margin: 0 0 6px; }
 .tools-list li { border-top: 1px solid var(--rule); }
