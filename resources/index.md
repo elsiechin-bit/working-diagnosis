@@ -1,7 +1,7 @@
 ---
 title: Resources
 layout: topic.njk
-pillar: Field Notes
+pillar: Resources
 description: A working GP's curated shelf  -  podcasts, books, journals, and websites worth your time.
 ---
 

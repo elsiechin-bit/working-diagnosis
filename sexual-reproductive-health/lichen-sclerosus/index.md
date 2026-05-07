@@ -2,7 +2,7 @@
 title: Lichen Sclerosus
 description: Diagnosis and management of vulval lichen sclerosus - the clinical presentation, topical steroid regimen, long-term monitoring, and cancer surveillance.
 layout: topic.njk
-pillar: Gynae
+pillar: Gynaecology
 permalink: /gynaecology/lichen-sclerosus/
 ---
 

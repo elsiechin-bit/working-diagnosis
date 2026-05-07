@@ -2,7 +2,7 @@
 title: Vaginal Discharge & Vulvovaginitis
 description: Differential diagnosis and management of vaginal discharge in primary care - bacterial vaginosis, vulvovaginal candidiasis, trichomoniasis, and physiological discharge.
 layout: topic.njk
-pillar: Gynae
+pillar: Gynaecology
 permalink: /gynaecology/vaginal-discharge/
 ---
 

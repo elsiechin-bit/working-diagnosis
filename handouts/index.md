@@ -18,16 +18,16 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="/neurology-mental-health/">Mental Health</a></li>
     <li><a href="/dermatology/">Dermatology</a></li>
     <li><a href="/gynaecology/">Gynae</a></li>
-    <li><a href="#mens-health">Men's Health</a></li>
+    <li>Men's Health <span class="hl-soon">coming soon</span></li>
     <li><a href="/paediatrics/">Paeds</a></li>
     <li><a href="/geriatrics/">Geriatrics</a></li>
-    <li><a href="#ent">ENT</a></li>
-    <li><a href="#eyes">Eyes</a></li>
-    <li><a href="#neurology">Neurology</a></li>
-    <li><a href="#infections">Infections</a></li>
+    <li>ENT <span class="hl-soon">coming soon</span></li>
+    <li>Eyes <span class="hl-soon">coming soon</span></li>
+    <li>Neurology <span class="hl-soon">coming soon</span></li>
+    <li>Infections <span class="hl-soon">coming soon</span></li>
     <li><a href="/infectious-disease/">Vaccines</a></li>
     <li><a href="/infectious-disease/">Travel</a></li>
-    <li><a href="#nutrition">Nutrition</a></li>
+    <li>Nutrition <span class="hl-soon">coming soon</span></li>
     <li><a href="#general">General Practice</a></li>
   </ul>
 </nav>

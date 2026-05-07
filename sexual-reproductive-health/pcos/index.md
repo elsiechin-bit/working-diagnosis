@@ -2,7 +2,7 @@
 title: Polycystic Ovary Syndrome (PCOS)
 description: Diagnosis and management of PCOS in primary care - Rotterdam criteria, metabolic risk, treatment of menstrual irregularity and hyperandrogenism, and fertility.
 layout: topic.njk
-pillar: Gynae
+pillar: Gynaecology
 permalink: /gynaecology/pcos/
 ---
 

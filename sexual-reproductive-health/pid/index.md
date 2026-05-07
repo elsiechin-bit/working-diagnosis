@@ -2,7 +2,7 @@
 title: Pelvic Inflammatory Disease
 description: Diagnosis and management of PID in primary care - clinical criteria, empirical antibiotic therapy, NZ resistance patterns, and sequelae including chronic pelvic pain and ectopic pregnancy risk.
 layout: topic.njk
-pillar: Gynae
+pillar: Gynaecology
 permalink: /gynaecology/pid/
 ---
 

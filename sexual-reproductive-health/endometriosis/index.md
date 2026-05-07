@@ -2,7 +2,7 @@
 title: Endometriosis
 description: Endometriosis in primary care - recognising the clinical triad, the diagnostic delay problem, empirical management, and when and how to refer.
 layout: topic.njk
-pillar: Gynae
+pillar: Gynaecology
 permalink: /gynaecology/endometriosis/
 ---
 

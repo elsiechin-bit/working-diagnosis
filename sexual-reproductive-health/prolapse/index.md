@@ -2,7 +2,7 @@
 title: Pelvic Organ Prolapse
 description: Assessment and management of pelvic organ prolapse in primary care - types, grading, conservative management with physiotherapy and pessaries, and surgical referral.
 layout: topic.njk
-pillar: Gynae
+pillar: Gynaecology
 permalink: /gynaecology/prolapse/
 ---
 
