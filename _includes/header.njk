@@ -5,10 +5,12 @@
     </a>
     <nav class="primary-nav" aria-label="Primary">
       {% for item in site.nav %}
-        {% if item.divider %}
-          <span class="nav-sep" aria-hidden="true"></span>
-        {% else %}
-          <a href="{{ item.url }}"{% if item.row %} data-nav-row="{{ item.row }}"{% endif %}>{{ item.label }}</a>
+        {% if item.inMasthead %}
+          {% if item.divider %}
+            <span class="nav-sep" aria-hidden="true"></span>
+          {% else %}
+            <a href="{{ item.url }}">{{ item.shortLabel or item.label }}</a>
+          {% endif %}
         {% endif %}
       {% endfor %}
     </nav>
