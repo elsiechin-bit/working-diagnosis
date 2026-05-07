@@ -18,37 +18,25 @@ layout: base.njk
 <section class="pillars-grid">
   <div class="pillars">
 
-    <article class="pillar pillar--field-guide">
+    <article class="pillar pillar--field-guide" id="topics">
       <span class="pnum">01</span>
       <h3>the <em>field guide</em>.</h3>
-      <p>Nine clinical areas - conditions by specialty, what to do with them, and what patients need to know.</p>
-      <a href="#topics" class="more">Browse topics ↓</a>
+      <p>Clinical areas - conditions by specialty, what to do with them, and what patients need to know.</p>
     </article>
 
     <article class="pillar pillar--workbench">
       <span class="pnum">02</span>
       <h3>the <em>workbench</em>.</h3>
       <p>Tools for the consulting room. Calculators, guidelines, NZ prescribing quirks. Practical, occasionally niche.</p>
-      <a href="/workshop/" class="more">Open the workbench →</a>
+      <a href="/workshop/" class="more">Open the workbench &rarr;</a>
     </article>
 
     <article class="pillar pillar--thinking-room">
       <span class="pnum">03</span>
       <h3>the <em>tinkering space</em>.</h3>
       <p>Field notes, essays, handouts, experiments. The less structured end of the building.</p>
-      <a href="/field-notes/" class="more">Read recent →</a>
+      <a href="/field-notes/" class="more">Read recent &rarr;</a>
     </article>
 
   </div>
-</section>
-
-<section class="pillar-list" id="topics">
-  <h2 class="section-label">Field Guide</h2>
-  <ul class="topic-list">
-    {% for item in site.nav %}
-      {% if not item.divider %}
-        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
 </section>
