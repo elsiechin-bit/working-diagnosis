@@ -1,11 +1,16 @@
-PS C:\Users\Li\Documents\working-diagnosis> ls workshop/tools/edd/
+---
+layout: base.njk
+pageType: tool
+---
 
+<article class="tool-page">
+  <header class="tool-header">
+    {% if pillar %}<p class="pillar-label">{{ pillar }}</p>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="topic-dek">{{ description }}</p>{% endif %}
+  </header>
 
-    Directory: C:\Users\Li\Documents\working-diagnosis\workshop\tools\edd
-
-
-Mode                 LastWriteTime         Length Name                                                         
-----                 -------------         ------ ----                                                         
--a----         3/05/2026   3:19 pm          23340 index.md                                                     
-
-
+  <div class="tool-body">
+    {{ content | safe }}
+  </div>
+</article>

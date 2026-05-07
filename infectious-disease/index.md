@@ -1,7 +1,7 @@
 ---
-title: Vaccines
+title: Infectious Diseases
 layout: topic
-pillar: Vaccines
+pillar: Infectious Diseases
 description: The New Zealand immunisation schedule, travel vaccines, and consultation guidance for general practice.
 ---
 

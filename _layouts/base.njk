@@ -31,5 +31,75 @@
     <aside class="sidebar-tools" data-pagefind-ignore>
       {% if summary %}
       <div class="note-summary-aside">
-        <p class="aside-kicker">❍ At a glance</p>
-       
+        <p class="aside-kicker">&#10063; At a glance</p>
+        <div class="note-summary-aside__body">
+          {{ summary | safe }}
+        </div>
+      </div>
+      {% endif %}
+
+      {% include "tools-aside.njk" %}
+    </aside>
+    {% endif %}
+
+  </div>
+
+  {% include "footer.njk" %}
+
+  <!-- Search modal -->
+  <div id="search-modal" class="search-modal" role="dialog" aria-modal="true" aria-label="Search" hidden>
+    <div class="search-modal-backdrop" id="search-backdrop"></div>
+    <div class="search-modal-body">
+      <button class="search-modal-close" id="search-close" aria-label="Close search">&#x2715;</button>
+      <div id="search"></div>
+    </div>
+  </div>
+
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script>
+    (function () {
+      if (typeof PagefindUI !== 'undefined') {
+        new PagefindUI({ element: '#search', showSubResults: true });
+      }
+
+      var trigger  = document.getElementById('search-trigger');
+      var modal    = document.getElementById('search-modal');
+      var closeBtn = document.getElementById('search-close');
+      var backdrop = document.getElementById('search-backdrop');
+
+      function openSearch() {
+        if (!modal) return;
+        modal.hidden = false;
+        document.body.classList.add('search-open');
+        var input = modal.querySelector('input[type="text"], input:not([type])');
+        if (input) setTimeout(function () { input.focus(); }, 60);
+      }
+
+      function closeSearch() {
+        if (!modal) return;
+        modal.hidden = true;
+        document.body.classList.remove('search-open');
+      }
+
+      if (trigger)  trigger.addEventListener('click', openSearch);
+      if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+      if (backdrop) backdrop.addEventListener('click', closeSearch);
+
+      document.addEventListener('keydown', function (e) {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+          e.preventDefault();
+          if (modal && modal.hidden) { openSearch(); } else { closeSearch(); }
+        }
+        if (e.key === 'Escape' && modal && !modal.hidden) {
+          closeSearch();
+        }
+      });
+    })();
+  </script>
+
+  {% if hasToc %}
+  <script src="/assets/toc.js"></script>
+  {% endif %}
+
+</body>
+</html>

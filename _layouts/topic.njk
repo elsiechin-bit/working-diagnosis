@@ -18,4 +18,32 @@ hasToc: true
     {% if changes %}
     <div class="changes-block">
       <p class="changes-label">What changed{% if changes_date %} - {{ changes_date }}{% endif %}</p>
-      <ul 
+      <ul class="changes-list">
+        {% for change in changes %}<li>{{ change | safe }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <h1>{{ title }}</h1>
+    {% if dek %}<p class="topic-dek">{{ dek }}</p>{% endif %}
+
+    <div class="topic-meta">
+      {% if date %}<time datetime="{{ date | dateISO }}">{{ date | dateDisplay }}</time>{% endif %}
+      <span class="reading-time">{{ content | readingTime }}</span>
+    </div>
+
+  </header>
+
+  <div class="topic-body">
+    {{ content | safe }}
+  </div>
+
+  {% if sources %}
+  <section class="topic-sources" data-pagefind-ignore>
+    <h2>Sources</h2>
+    <ol class="sources-list">
+      {% for s in sources %}<li>{{ s | safe }}</li>{% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+</article>
