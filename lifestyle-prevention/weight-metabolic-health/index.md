@@ -54,7 +54,7 @@ pillar: Lifestyle
     Structured dietary change and physical activity remain the foundation of management. Mediterranean-pattern and low-carbohydrate diets both have evidence for metabolic benefit. The combination of dietary change and exercise consistently outperforms either alone. In practice, the most sustainable approach is the one the patient is willing to maintain - a modest improvement that continues is more useful than an intensive programme that is abandoned after three months.
   </p>
   <p>
-    Physical activity: 150 minutes of moderate-intensity aerobic activity per week as a minimum, with resistance training for metabolic benefit. See the <a href="/lifestyle/physical-activity/">physical activity page</a> for detail. Sleep and alcohol also both affect weight and metabolic health substantially - include them in the lifestyle assessment.
+    Physical activity: 150 minutes of moderate-intensity aerobic activity per week as a minimum, with resistance training for metabolic benefit. See the <a href="/lifestyle-prevention/physical-activity/">physical activity page</a> for detail. Sleep and alcohol also both affect weight and metabolic health substantially - include them in the lifestyle assessment.
   </p>
 </div>
 

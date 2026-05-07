@@ -19,7 +19,7 @@ permalink: /travel/travellers-diarrhoea/
   </ul>
 </div>
 
-<p>Traveller's diarrhoea (TD) is the most common travel-related illness, affecting 20-60% of travellers to high-risk regions within the first two weeks of travel.<sup>1</sup> The <a href="/travel/">Travel overview</a> covers food and water precautions, standby antibiotic selection by region, and the use of loperamide. This page goes deeper on the organisms responsible (which shapes what to test for on return), a severity-based management framework for counselling patients before they leave, and the approach to paediatric travellers.</p>
+<p>Traveller's diarrhoea (TD) is the most common travel-related illness, affecting 20-60% of travellers to high-risk regions within the first two weeks of travel.<sup>1</sup> The <a href="/infectious-disease/">Travel overview</a> covers food and water precautions, standby antibiotic selection by region, and the use of loperamide. This page goes deeper on the organisms responsible (which shapes what to test for on return), a severity-based management framework for counselling patients before they leave, and the approach to paediatric travellers.</p>
 
 <div class="tier-2">
   <p class="tier-label">❍ Causative organisms by region</p>
@@ -94,7 +94,7 @@ permalink: /travel/travellers-diarrhoea/
       <tr style="border-bottom: 1px solid var(--rule);">
         <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Moderate</td>
         <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Functionally disruptive. Interferes significantly with travel activities or requires staying near a toilet. Watery, no blood, low-grade fever.</td>
-        <td style="padding: 10px 0; color: var(--ink-soft);">ORS plus <strong>standby antibiotic</strong> (azithromycin or ciprofloxacin per region - see <a href="/travel/">Travel overview</a>). Loperamide may be combined with antibiotic in adults for faster symptomatic control. Reassess in 24-48 hours.</td>
+        <td style="padding: 10px 0; color: var(--ink-soft);">ORS plus <strong>standby antibiotic</strong> (azithromycin or ciprofloxacin per region - see <a href="/infectious-disease/">Travel overview</a>). Loperamide may be combined with antibiotic in adults for faster symptomatic control. Reassess in 24-48 hours.</td>
       </tr>
       <tr>
         <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Severe</td>

@@ -82,7 +82,7 @@ permalink: /travel/pre-travel-consult/
   </ul>
   <p class="aside-title" style="margin-top:1.25rem;">Patient handout</p>
   <ul class="aside-links">
-    <li><a href="/travel/pre-travel-consult/patient-handout.html">Travel health - patient handout</a></li>
+    <li><a href="/infectious-disease/pre-travel-consult/patient-handout/">Travel health - patient handout</a></li>
   </ul>
 </aside>
 </div>

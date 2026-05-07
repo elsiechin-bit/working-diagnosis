@@ -501,10 +501,10 @@
         <span>Working <em>Diagnosis</em>.</span>
       </a>
       <nav class="primary-nav" aria-label="Primary">
-        <a href="/lifestyle/">Lifestyle</a>
+        <a href="/lifestyle-prevention/">Lifestyle</a>
         <a href="/msk/">MSK</a>
-        <a href="/travel/">Travel</a>
-        <a href="/mental-health/">Mental Health</a>
+        <a href="/infectious-disease/">Travel</a>
+        <a href="/neurology-mental-health/">Mental Health</a>
         <a href="/workshop/">Workshop</a>
       </nav>
     </div>

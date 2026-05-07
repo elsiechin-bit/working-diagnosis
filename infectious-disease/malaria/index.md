@@ -20,7 +20,7 @@ permalink: /travel/malaria/
 </div>
 
 <p>
-  The <a href="/travel/">Travel overview</a> covers the four main prophylactic agents and their key contraindications. This page covers regional risk stratification, paediatric dosing, clinically significant drug interactions, and the two scenarios that require extra thought: the remote traveller who needs standby emergency treatment, and the returned traveller with <em>Plasmodium vivax</em> or <em>P. ovale</em> who needs radical cure.
+  The <a href="/infectious-disease/">Travel overview</a> covers the four main prophylactic agents and their key contraindications. This page covers regional risk stratification, paediatric dosing, clinically significant drug interactions, and the two scenarios that require extra thought: the remote traveller who needs standby emergency treatment, and the returned traveller with <em>Plasmodium vivax</em> or <em>P. ovale</em> who needs radical cure.
 </p>
 
 <div class="tier-2">
@@ -193,4 +193,3 @@ permalink: /travel/malaria/
 5. Centers for Disease Control and Prevention. *CDC Yellow Book: Health Information for International Travel.* Atlanta: CDC; 2024.
 
 </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

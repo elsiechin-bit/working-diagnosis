@@ -407,6 +407,29 @@ a:hover { color: var(--green); }
   color: var(--mute);
 }
 .footer-links a:hover { color: var(--green); }
+
+.tool-list li.planned { opacity: 0.6; }
+.tool-list li.planned .tool-row {
+  display: block;
+  padding: 9px 0 8px;
+  color: var(--ink);
+  cursor: default;
+}
+.tool-tag-planned {
+  display: inline-block;
+  font-family: var(--font-m);
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ochre);
+  background: rgba(184, 113, 79, 0.10);
+  border: 1px solid rgba(184, 113, 79, 0.35);
+  border-radius: 2px;
+  padding: 1px 5px 0;
+  margin-left: 7px;
+  vertical-align: 1px;
+}
 </style>
 </head>
 <body>
@@ -416,15 +439,15 @@ a:hover { color: var(--green); }
   <div class="masthead-row">
     <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
     <nav class="primary-nav" aria-label="Site navigation">
-      <a href="/lifestyle/">Lifestyle</a>
-      <a href="/musculoskeletal/">MSK</a>
+      <a href="/lifestyle-prevention/">Lifestyle</a>
+      <a href="/msk/">MSK</a>
       <a href="/paediatrics/">Paeds</a>
       <a href="/geriatrics/">Geriatrics</a>
       <a href="/gynaecology/">Gynae</a>
       <a href="/dermatology/">Derm</a>
-      <a href="/mental-health/">Mental Health</a>
-      <a href="/vaccines/">Vaccines</a>
-      <a href="/travel/">Travel</a>
+      <a href="/neurology-mental-health/">Mental Health</a>
+      <a href="/infectious-disease/">Vaccines</a>
+      <a href="/infectious-disease/">Travel</a>
       <a href="/workshop/" class="is-current">Workbench</a>
     </nav>
   </div>
@@ -456,7 +479,7 @@ a:hover { color: var(--green); }
   <div class="pillar-grid">
 
     <div class="pillar-card">
-      <a href="/lifestyle/">
+      <a href="/lifestyle-prevention/">
         <p class="pillar-tag">Lifestyle</p>
         <p class="pillar-name">Lifestyle Medicine</p>
         <p class="pillar-blurb">Sleep, movement, alcohol, stress, and the everyday levers that quietly run public health.</p>
@@ -464,7 +487,7 @@ a:hover { color: var(--green); }
     </div>
 
     <div class="pillar-card">
-      <a href="/musculoskeletal/">
+      <a href="/msk/">
         <p class="pillar-tag">MSK</p>
         <p class="pillar-name">Musculoskeletal Health</p>
         <p class="pillar-blurb">Joint pain, soft-tissue injuries, and musculoskeletal conditions across the lifespan.</p>
@@ -504,7 +527,7 @@ a:hover { color: var(--green); }
     </div>
 
     <div class="pillar-card">
-      <a href="/mental-health/">
+      <a href="/neurology-mental-health/">
         <p class="pillar-tag">Mental Health</p>
         <p class="pillar-name">Mental Health</p>
         <p class="pillar-blurb">Mood, anxiety, substance use, and psychotropic medicines in primary care.</p>
@@ -512,7 +535,7 @@ a:hover { color: var(--green); }
     </div>
 
     <div class="pillar-card">
-      <a href="/vaccines/">
+      <a href="/infectious-disease/">
         <p class="pillar-tag">Vaccines</p>
         <p class="pillar-name">Immunisation</p>
         <p class="pillar-blurb">The NZ immunisation schedule, travel vaccines, and catch-up guidance.</p>
@@ -520,7 +543,7 @@ a:hover { color: var(--green); }
     </div>
 
     <div class="pillar-card">
-      <a href="/travel/">
+      <a href="/infectious-disease/">
         <p class="pillar-tag">Travel Medicine</p>
         <p class="pillar-name">Travel Health</p>
         <p class="pillar-blurb">Pre-travel consults, prophylaxis, and returning traveller assessment.</p>
@@ -595,8 +618,8 @@ a:hover { color: var(--green); }
         <li><a href="/workshop/tools/cv-risk/"><span class="tool-name">Cardiovascular Risk</span><span class="tool-blurb">PREDICT-CVD 5-year risk for NZ patients. Framingham, QRISK3, SCORE2, and ACC/AHA for comparison.</span></a></li>
         <li><a href="/workshop/tools/cha2ds2-vasc/"><span class="tool-name">CHA₂DS₂-VASc</span><span class="tool-blurb">Stroke risk in atrial fibrillation and anticoagulation decisions.</span></a></li>
         <li><a href="/workshop/tools/af-risk/"><span class="tool-name">HAS-BLED</span><span class="tool-blurb">Bleeding risk for patients on anticoagulation for AF. Combined with CHA&#x2082;DS&#x2082;-VASc in the AF Risk tool.</span></a></li>
-        <li><a href="/workshop/tools/wells-criteria/"><span class="tool-name">Wells Criteria (DVT &amp; PE)</span><span class="tool-blurb">DVT and PE risk stratification with D-dimer guidance.</span></a></li>
-        <li><a href="/workshop/tools/6mwd/"><span class="tool-name">6 Minute Walk Distance</span><span class="tool-blurb">Predicted distance by age and sex; prognostic interpretation.</span></a></li>
+        <li class="planned"><span class="tool-row"><span class="tool-name">Wells Criteria (DVT &amp; PE) <span class="tool-tag-planned">planned</span></span><span class="tool-blurb">DVT and PE risk stratification with D-dimer guidance.</span></span></li>
+        <li class="planned"><span class="tool-row"><span class="tool-name">6 Minute Walk Distance <span class="tool-tag-planned">planned</span></span><span class="tool-blurb">Predicted distance by age and sex; prognostic interpretation.</span></span></li>
       </ul>
     </div>
 
@@ -608,7 +631,7 @@ a:hover { color: var(--green); }
         <li><a href="/workshop/tools/antidepressant-weaning/"><span class="tool-name">Antidepressant Weaning</span><span class="tool-blurb">Tapering schedules and cross-tapering transitions. Covers SSRIs, SNRIs, TCAs, and mirtazapine.</span></a></li>
         <li><a href="/workshop/tools/psychotropic-selector/"><span class="tool-name">Psychotropic Selector</span><span class="tool-blurb">Filterable reference for 22 agents: NZ dosing, side effects, CYP450, cost, and pregnancy safety.</span></a></li>
         <li><a href="/workshop/tools/benzo-conversion/"><span class="tool-name">Benzodiazepine Conversion</span><span class="tool-blurb">Diazepam-equivalent conversion for 11 agents including Z-drugs. Switching protocols and dependence management.</span></a></li>
-        <li><a href="/workshop/tools/comm/"><span class="tool-name">COMM</span><span class="tool-blurb">Current Opioid Misuse Measure for ongoing risk assessment.</span></a></li>
+        <li class="planned"><span class="tool-row"><span class="tool-name">COMM <span class="tool-tag-planned">planned</span></span><span class="tool-blurb">Current Opioid Misuse Measure for ongoing risk assessment.</span></span></li>
       </ul>
     </div>
 
@@ -616,9 +639,9 @@ a:hover { color: var(--green); }
     <div>
       <p class="tool-category-name">Geriatrics</p>
       <ul class="tool-list">
-        <li><a href="/workshop/tools/cognitive-scores/"><span class="tool-name">Cognitive Scores</span><span class="tool-blurb">Mini-ACE, MMSE, education-adjusted and non-English variants.</span></a></li>
-        <li><a href="/workshop/tools/cirs-g/"><span class="tool-name">CIRS-G</span><span class="tool-blurb">Comorbidity burden and risk stratification in older adults.</span></a></li>
-        <li><a href="/workshop/tools/dasi/"><span class="tool-name">DASI</span><span class="tool-blurb">Functional capacity and perioperative risk estimation.</span></a></li>
+        <li class="planned"><span class="tool-row"><span class="tool-name">Cognitive Scores <span class="tool-tag-planned">planned</span></span><span class="tool-blurb">Mini-ACE, MMSE, education-adjusted and non-English variants.</span></span></li>
+        <li class="planned"><span class="tool-row"><span class="tool-name">CIRS-G <span class="tool-tag-planned">planned</span></span><span class="tool-blurb">Comorbidity burden and risk stratification in older adults.</span></span></li>
+        <li class="planned"><span class="tool-row"><span class="tool-name">DASI <span class="tool-tag-planned">planned</span></span><span class="tool-blurb">Functional capacity and perioperative risk estimation.</span></span></li>
         <li><a href="/workshop/tools/geriatric-assessment/"><span class="tool-name">Geriatric Assessment Toolkit</span><span class="tool-blurb">FRAIL, Katz ADL, Lawton IADL, and Rockwood CFS.</span></a></li>
       </ul>
     </div>
@@ -628,8 +651,8 @@ a:hover { color: var(--green); }
       <p class="tool-category-name">Paediatrics</p>
       <ul class="tool-list">
         <li><a href="/workshop/tools/paediatric-doses/"><span class="tool-name">Paediatric Dosage Calculator</span><span class="tool-blurb">Weight- and age-based dosing aligned to NZFc and Starship guidelines.</span></a></li>
-        <li><a href="/workshop/tools/growth-charts/"><span class="tool-name">Paediatric Growth Charts</span><span class="tool-blurb">Plot weight, length, head circumference, BMI.</span></a></li>
-        <li><a href="/workshop/tools/milestones/"><span class="tool-name">Developmental Milestones</span><span class="tool-blurb">Quick-reference age-banded developmental checks.</span></a></li>
+        <li class="planned"><span class="tool-row"><span class="tool-name">Paediatric Growth Charts <span class="tool-tag-planned">planned</span></span><span class="tool-blurb">Plot weight, length, head circumference, BMI.</span></span></li>
+        <li class="planned"><span class="tool-row"><span class="tool-name">Developmental Milestones <span class="tool-tag-planned">planned</span></span><span class="tool-blurb">Quick-reference age-banded developmental checks.</span></span></li>
       </ul>
     </div>
 

@@ -9,13 +9,13 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 
 <nav aria-label="Jump to section">
   <ul class="handouts-jump">
-    <li><a href="/lifestyle/">Lifestyle</a></li>
+    <li><a href="/lifestyle-prevention/">Lifestyle</a></li>
     <li><a href="#respiratory">Respiratory</a></li>
     <li><a href="#cardiovascular">Cardiovascular</a></li>
     <li><a href="#diabetes-endocrine">Diabetes &amp; Endocrine</a></li>
     <li><a href="#gastro">Gastroenterology</a></li>
-    <li><a href="/musculoskeletal/">MSK</a></li>
-    <li><a href="/mental-health/">Mental Health</a></li>
+    <li><a href="/msk/">MSK</a></li>
+    <li><a href="/neurology-mental-health/">Mental Health</a></li>
     <li><a href="/dermatology/">Dermatology</a></li>
     <li><a href="/gynaecology/">Gynae</a></li>
     <li><a href="#mens-health">Men's Health</a></li>
@@ -25,8 +25,8 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="#eyes">Eyes</a></li>
     <li><a href="#neurology">Neurology</a></li>
     <li><a href="#infections">Infections</a></li>
-    <li><a href="/vaccines/">Vaccines</a></li>
-    <li><a href="/travel/">Travel</a></li>
+    <li><a href="/infectious-disease/">Vaccines</a></li>
+    <li><a href="/infectious-disease/">Travel</a></li>
     <li><a href="#nutrition">Nutrition</a></li>
     <li><a href="#general">General Practice</a></li>
   </ul>
