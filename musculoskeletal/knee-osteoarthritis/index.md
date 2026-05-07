@@ -55,6 +55,4 @@ permalink: /msk/knee-osteoarthritis/
 1. Fransen M, McConnell S, Harmer AR, et al. Exercise for osteoarthritis of the knee: a Cochrane systematic review. *Br J Sports Med.* 2015;49(24):1554-1557.
 2. Hochberg MC, Altman RD, April KT, et al. American College of Rheumatology 2012 recommendations for the use of nonpharmacologic and pharmacologic therapies in osteoarthritis of the hand, hip, and knee. *Arthritis Care Res (Hoboken).* 2012;64(4):465-474.
 3. Moseley JB, O'Malley K, Petersen NJ, et al. A controlled trial of arthroscopic surgery for osteoarthritis of the knee. *N Engl J Med.* 2002;347(2):81-88.
-4. Culliford D, Maskell J, Kiran A, et al. The lifetime risk of total hip and knee arthroplasty: results from the UK general practice research database. *Osteoarthritis Cartilage.* 2012;20(6):519-524.
-
-</div>
+4. Culliford D, Maskell J, Kiran A, et al. The lifetime risk of total hip and knee arthroplasty: results from the UK general practice research database.

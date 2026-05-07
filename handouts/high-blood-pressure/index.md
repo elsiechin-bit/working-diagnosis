@@ -1,6 +1,7 @@
 ---
 title: High blood pressure (hypertension) - what the numbers mean
 layout: topic.njk
+pageType: handout
 description: What blood pressure readings mean, why it matters, and how lifestyle and medicines help keep it under control.
 ---
 
@@ -70,6 +71,4 @@ description: What blood pressure readings mean, why it matters, and how lifestyl
 
 - [Heart Foundation NZ](https://www.heartfoundation.org.nz) - information on heart health and blood pressure
 - [Health Navigator - High blood pressure](https://www.healthnavigator.org.nz/health-a-z/h/high-blood-pressure/)
-- [Quitline NZ](https://www.quit.org.nz) - 0800 778 778, free smoking cessation support
-
-</div>
+- [Quitline NZ](https://www.quit.org.nz) - 0800 778 778, free smoking cessatio

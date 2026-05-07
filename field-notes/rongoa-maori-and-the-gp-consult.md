@@ -108,7 +108,7 @@ Local engagement matters more than any reading list. The hauora Māori provider 
 
 What this post cannot do, and what no amount of reading can do, is give a non-Māori clinician the standing to speak about mātauranga Māori as if it is theirs. It is not, and it will not be. The honest position for a non-Māori clinician is to engage seriously, to defer appropriately, to keep learning, and to spend the relational time that the actual work requires.
 
-That, I think, is the honest place to land. The cultural competence framework's failure has been to imply that there is a finished version of this engagement that can be reached and ticked off. There isn't. The work is permanent — and that permanence is precisely the point.
+That, I think, is the honest place to land. The cultural competence framework's failure has been to imply that there is a finished version of this engagement that can be reached and ticked off. There isn't. The work is permanent - and that permanence is precisely the point.
 
 ---
 
@@ -117,15 +117,15 @@ That, I think, is the honest place to land. The cultural competence framework's 
 1. Durie M. Whaiora: Māori Health Development. 2nd ed. Auckland: Oxford University Press; 1998.
 2. Te Ara  -  The Encyclopedia of New Zealand. Rongoā  -  medicinal use of plants [Internet]. Wellington: Manatū Taonga Ministry for Culture and Heritage [cited 2026 May 2]. Available from: https://teara.govt.nz/en/rongoa-medicinal-use-of-plants
 3. Pool I. Te Iwi Maori: a New Zealand Population, Past, Present and Projected. Auckland: Auckland University Press; 1991.
-4. Voyce M. Maori healers in New Zealand: the Tohunga Suppression Act 1907. Oceania. 1989;60(2):99–123. doi:10.1002/j.1834-4461.1989.tb02347.x
+4. Voyce M. Maori healers in New Zealand: the Tohunga Suppression Act 1907. Oceania. 1989;60(2):99-123. doi:10.1002/j.1834-4461.1989.tb02347.x
 5. Te Ara  -  The Encyclopedia of New Zealand. Tohunga Suppression Act [Internet]. Wellington: Manatū Taonga Ministry for Culture and Heritage [cited 2026 May 2]. Available from: https://teara.govt.nz/en/document/28223/tohunga-suppression-act
 6. Orange C. The Treaty of Waitangi. 2nd ed. Wellington: Bridget Williams Books; 2011.
 7. Waitangi Tribunal. Health Services and Outcomes Kaupapa Inquiry (Wai 2575) [Internet]. Wellington: Waitangi Tribunal [cited 2026 May 2]. Available from: https://www.waitangitribunal.govt.nz/en/inquiries/kaupapa-inquiries/health-services-and-outcomes
 8. Waitangi Tribunal. Hauora: Report on Stage One of the Health Services and Outcomes Kaupapa Inquiry. Wellington: Waitangi Tribunal; 2019. Available from: https://forms.justice.govt.nz/search/Documents/WT/wt_DOC_195476216/Hauora%202023%20W.pdf
-9. Durie M. A Māori perspective of health. Soc Sci Med. 1985;20(5):483–6. doi:10.1016/0277-9536(85)90363-6
+9. Durie M. A Māori perspective of health. Soc Sci Med. 1985;20(5):483-6. doi:10.1016/0277-9536(85)90363-6
 10. Pere RR. Te Wheke: A Celebration of Infinite Wisdom. Gisborne: Ako Ako Global Learning; 1991.
-11. Durie M. Te Pae Māhutonga: a model for Māori health promotion. Health Promot Forum N Z Newsl. 1999;49:2–5.
+11. Durie M. Te Pae Māhutonga: a model for Māori health promotion. Health Promot Forum N Z Newsl. 1999;49:2-5.
 12. Accident Compensation Corporation. Our Rongoā Māori Service [Internet]. Wellington: ACC [cited 2026 May 2]. Available from: https://www.acc.co.nz/about-us/rongoa-maori-services
 13. Accident Compensation Corporation. Rongoā Māori a traditional healing choice for all [Internet]. Wellington: ACC; 2024 [cited 2026 May 2]. Available from: https://www.acc.co.nz/newsroom/stories/rongoa-maori-a-traditional-healing-choice-for-all
-14. Came H, McCreanor T, O'Sullivan D, Kidd J. The Waitangi Tribunal's WAI 2575 Report: implications for decolonizing health systems. Health Hum Rights. 2020;22(1):209–20. Available from: https://pmc.ncbi.nlm.nih.gov/articles/PMC7348423/
+14. Came H, McCreanor T, O'Sullivan D, Kidd J. The Waitangi Tribunal's WAI 2575 Report: implications for decolonizing health systems. Health Hum Rights. 2020;22(1):209-20. Available from: https://pmc.ncbi.nlm.nih.gov/articles/PMC7348423/
 15. Accident Compensation Corporation. Accessing ACC's Rongoā Māori Service [Internet]. Wellington: ACC [cited 2026 May 2]. Available from: https://www.acc.co.nz/im-injured/what-we-cover/using-rongoaa-maaori-services

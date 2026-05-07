@@ -1,6 +1,7 @@
 ---
 title: Patient Handouts
 layout: topic.njk
+pageType: handout
 description: A growing library of patient-facing handouts for NZ patients  -  free to print or email. Organised by clinical area.
 ---
 
@@ -280,5 +281,4 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li>Driving and older age  -  when to have the conversation <span class="hl-soon">coming soon</span></li>
     <li>Urinary incontinence in older adults  -  it is common and treatable <span class="hl-soon">coming soon</span></li>
   </ul>
-  <p class="handout-ext">NZ resources: <a href="https://www.ageconcern.org.nz">Age Concern NZ</a> · <a href="https://www.alzheimers.org.nz">Alzheimer's NZ</a> · <a href="https://www.carersnz.org.nz">Carers NZ</a> · <a href="https://www.grey.org.nz">Grey Power NZ</a></p>
-</div>
+  <p class="handout-ext">NZ resources: <a href="https://www.ageconcern.org.nz">Age Concern NZ</a> · <a href="https://www.alzheimers.org.nz">Alzheimer's NZ</a> · <a href="https://www.carersnz.org.nz">Carers NZ</a> · <a href="https://www.grey.org.nz">Grey Power 

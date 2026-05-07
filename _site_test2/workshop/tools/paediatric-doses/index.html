@@ -1398,14 +1398,14 @@ const D=[
 ]},
 {id:'rifampicin',name:'Rifampicin',cat:'Antibacterials',ind:['Meningococcal prophylaxis','Hib prophylaxis'],minAm:0,c:1,regs:[
   {lbl:'Meningococcal prophylaxis',route:'Oral',type:'ab',
-   bands:[{mnM:0,mxM:1,d:5,u:'mg/kg/dose',lbl:'< 1 month: 5 mg/kg BD × 2 days',freq:'Twice daily for 2 days'},
-          {mnM:1,mxM:144,d:10,u:'mg/kg/dose',lbl:'1 month–12 yrs: 10 mg/kg BD × 2 days (max 600 mg)',freq:'Twice daily for 2 days'},
-          {mnM:144,mxM:99999,d:600,u:'mg (fixed)',lbl:'> 12 yrs: 600 mg BD × 2 days',freq:'Twice daily for 2 days'}],
+   bands:[{mnM:0,mxM:1,d:5,u:'mg/kg/dose',lbl:'< 1 month: 5 mg/kg BD �- 2 days',freq:'Twice daily for 2 days'},
+          {mnM:1,mxM:144,d:10,u:'mg/kg/dose',lbl:'1 month–12 yrs: 10 mg/kg BD �- 2 days (max 600 mg)',freq:'Twice daily for 2 days'},
+          {mnM:144,mxM:99999,d:600,u:'mg (fixed)',lbl:'> 12 yrs: 600 mg BD �- 2 days',freq:'Twice daily for 2 days'}],
    freq:'Twice daily for 2 days',
    notes:'Turns urine/sweat/tears orange, stains contact lenses permanently. Empty stomach. Potent CYP inducer. Consult public health unit for close contact definition.',
    preps:[{lbl:'Rifampicin 100 mg/5 mL',mpm:20}]},
   {lbl:'Hib prophylaxis',route:'Oral',type:'wt',mpk:20,freq:'Once daily for 4 days',mxD:600,
-   notes:'20 mg/kg/day × 4 days (max 600 mg/day). For unimmunised household contacts where child < 4 years present.',
+   notes:'20 mg/kg/day �- 4 days (max 600 mg/day). For unimmunised household contacts where child < 4 years present.',
    preps:[{lbl:'Rifampicin 100 mg/5 mL',mpm:20}]}
 ]},
 {id:'benzpen',name:'Benzathine Penicillin G (Bicillin)',ax:'bl',cat:'Antibacterials',ind:['Rheumatic fever prophylaxis (IM, preferred)'],minAm:0,regs:[{
@@ -1461,11 +1461,11 @@ const D=[
 ]},
 {id:'beclometasone',name:'Beclometasone / QVAR (ICS)',cat:'Respiratory',ind:['Asthma maintenance, alternative ICS'],minAm:60,regs:[{
   lbl:'Asthma maintenance',route:'Inhaled MDI + spacer',type:'fx',fxD:'50–200 mcg',freq:'Twice daily (BD)',
-  notes:'CFC-free QVAR ~2× potent as older CFC preparations, do not interchange doses. Low: 50–100 mcg BD (5–11 yrs), 100–200 mcg BD (≥ 12 yrs). Rinse mouth.',preps:[]
+  notes:'CFC-free QVAR ~2�- potent as older CFC preparations, do not interchange doses. Low: 50–100 mcg BD (5–11 yrs), 100–200 mcg BD (≥ 12 yrs). Rinse mouth.',preps:[]
 }]},
 {id:'budesonide-neb',name:'Budesonide Nebulised (Pulmicort)',cat:'Respiratory',ind:['Croup, where oral route refused'],minAm:6,regs:[{
   lbl:'Moderate croup',route:'Nebulised',type:'fx',fxD:'2 mg (single nebulisation)',freq:'Single dose; may repeat at 12 h',
-  notes:'2 × Pulmicort Respules 1 mg/2 mL. Alternative to oral dexamethasone where oral route impractical. Oral dexamethasone preferred in primary care.',preps:[]
+  notes:'2 �- Pulmicort Respules 1 mg/2 mL. Alternative to oral dexamethasone where oral route impractical. Oral dexamethasone preferred in primary care.',preps:[]
 }]},
 {id:'fluticasone-nasal',name:'Fluticasone Nasal Spray (Flixonase)',cat:'Respiratory',ind:['Allergic rhinitis, seasonal and perennial','Nasal polyps'],minAm:48,c:1,regs:[{
   lbl:'Allergic rhinitis',route:'Intranasal',type:'ab',
@@ -1496,7 +1496,7 @@ const D=[
    notes:'Dissolve Movicol Paediatric Plain sachet in 62.5 mL water. Onset 2–4 days. Maintenance often months. Combine with fibre, fluid, toilet routine. PHARMAC-subsidised. First-line NZ guidelines.',preps:[]},
   {lbl:'Faecal disimpaction',route:'Oral',type:'ab',
    bands:[{mnM:24,mxM:144,d:4,u:'sachets/day (escalate)',lbl:'2–< 12 yrs: 4/day → increase by 2/day to max 8',freq:'Divided doses across day'},
-          {mnM:144,mxM:99999,d:8,u:'adult sachets/day',lbl:'≥ 12 yrs: 8 adult Movicol sachets/day × 3 days',freq:'Divided doses across day'}],
+          {mnM:144,mxM:99999,d:8,u:'adult sachets/day',lbl:'≥ 12 yrs: 8 adult Movicol sachets/day �- 3 days',freq:'Divided doses across day'}],
    freq:'Divided doses across the day for up to 3 days, then switch to maintenance',
    notes:'Escalation: Day 1=4, Day 2=6, Day 3=8 sachets/day (max 8). Liquid stools expected, ensure toilet access. Specialist review if no response after 3 days at max dose.',preps:[]}
 ]},
@@ -1700,7 +1700,7 @@ const D=[
   notes:'Adolescents only (≥ 12 yrs). Apply pea-sized amount to whole face (not just spots). Initial irritation common, reduce frequency or rotate with non-application days. Sun-protective measures essential. May take 8–12 weeks for visible improvement.',preps:[]
 }]},
 {id:'tacrolimus-topical',name:'Tacrolimus 0.03% / 0.1% (Protopic)',f:'R',cat:'Dermatology',ind:['Moderate–severe eczema, face / flexures (steroid-sparing)'],minAm:24,regs:[{
-  lbl:'Eczema, sensitive sites',route:'Topical',type:'fx',fxD:'Apply thinly twice daily until clear, then taper',freq:'Twice daily, then 2–3× weekly maintenance',
+  lbl:'Eczema, sensitive sites',route:'Topical',type:'fx',fxD:'Apply thinly twice daily until clear, then taper',freq:'Twice daily, then 2–3�- weekly maintenance',
   notes:'PHARMAC Special Authority. ≥ 2 yrs: 0.03% strength only. ≥ 16 yrs: 0.03% or 0.1%. Burning sensation common in first days, usually resolves. Use sunscreen, avoid UV exposure. Steroid-sparing for facial/flexural eczema.',preps:[]
 }]},
 {id:'chloramphenicol-eye',name:'Chloramphenicol Eye Drops / Ointment',f:'F',cat:'Ophthalmic & Otic',ind:['Bacterial conjunctivitis'],minAm:1,c:1,regs:[{
@@ -1729,7 +1729,7 @@ const D=[
 }]},
 {id:'ivermectin',name:'Ivermectin (oral, scabies)',cat:'Antiparasitics',ind:['Resistant or crusted scabies (specialist)','Onchocerciasis'],minAm:0,minKg:15,regs:[{
   lbl:'Scabies, resistant or crusted',route:'Oral',type:'wt',mpk:0.2,freq:'Single dose, repeat after 7–14 days',mxD:18,
-  notes:'For ≥ 15 kg only. Take with food (×2 absorption fed vs fasted). Specialist initiation usually. Standard scabies = topical permethrin first-line.',preps:[]
+  notes:'For ≥ 15 kg only. Take with food (�-2 absorption fed vs fasted). Specialist initiation usually. Standard scabies = topical permethrin first-line.',preps:[]
 }]},
 {id:'mebendazole',name:'Mebendazole (Vermox, Combantrin-1)',f:'F',cat:'Antiparasitics',ind:['Threadworm (Enterobius)','Roundworm','Hookworm'],minAm:12,c:1,regs:[{
   lbl:'Threadworm',route:'Oral',type:'fx',fxD:'100 mg',freq:'Single dose, repeat after 2 weeks',
@@ -1777,7 +1777,7 @@ const D=[
 }]},
 {id:'hydroxocobalamin',name:'Hydroxocobalamin (B12)',cat:'Nutritional & Haematological',ind:['B12 deficiency','Pernicious anaemia'],minAm:0,regs:[{
   lbl:'B12 deficiency, IM',route:'IM injection',type:'fx',fxD:'1 mg IM',freq:'Three injections per week for 2 weeks, then 3-monthly maintenance',
-  notes:'Loading: 1 mg IM 3× weekly for 2 weeks (or until no further improvement in neurological symptoms). Maintenance: 1 mg IM every 3 months. Some specialists use oral high-dose 1–2 mg daily as alternative for adolescents. Check intrinsic factor antibodies if pernicious anaemia suspected.',preps:[]
+  notes:'Loading: 1 mg IM 3�- weekly for 2 weeks (or until no further improvement in neurological symptoms). Maintenance: 1 mg IM every 3 months. Some specialists use oral high-dose 1–2 mg daily as alternative for adolescents. Check intrinsic factor antibodies if pernicious anaemia suspected.',preps:[]
 }]},
 {id:'calcium-carbonate',name:'Calcium Carbonate',cat:'Nutritional & Haematological',ind:['Calcium supplementation (rickets adjunct)','Hypocalcaemia'],minAm:0,regs:[{
   lbl:'Calcium supplementation',route:'Oral',type:'ab',
@@ -1815,12 +1815,12 @@ const D=[
 // ── Clinical presentations (entry points to drug list) ────────────
 const PRESENTATIONS={
   'aom':{label:'Acute otitis media',drugs:[
-    {id:'amoxicillin',regimen:1,note:'First-line: 40 mg/kg/dose BD × 5–7 days'},
+    {id:'amoxicillin',regimen:1,note:'First-line: 40 mg/kg/dose BD �- 5–7 days'},
     {id:'coamoxiclav',regimen:0,note:'Second-line if treatment failure or recent amoxicillin'},
     {id:'paracetamol',regimen:0,note:'Pain relief'}
   ]},
   'tonsillitis':{label:'Streptococcal tonsillitis',drugs:[
-    {id:'penV',regimen:0,note:'First-line for confirmed Group A Strep × 10 days'},
+    {id:'penV',regimen:0,note:'First-line for confirmed Group A Strep �- 10 days'},
     {id:'amoxicillin',regimen:0,note:'Alternative, BD dosing improves adherence'},
     {id:'cefalexin',regimen:0,note:'Penicillin allergy (non-severe)'}
   ]},
@@ -1916,7 +1916,7 @@ function renderTrendList(){
     const parts=[];
     if(p.wt)parts.push(p.wt+' kg');
     if(p.ht)parts.push(p.ht+' cm');
-    return`<span class="trend-pill">${ageStr} · ${parts.join(' · ')}<button onclick="removeTrendPoint(${i})" title="Remove">×</button></span>`;
+    return`<span class="trend-pill">${ageStr} · ${parts.join(' · ')}<button onclick="removeTrendPoint(${i})" title="Remove">�-</button></span>`;
   }).join('');
   el.innerHTML=`<div class="trend-list-inner">${pills}</div>`;
 }
@@ -2284,7 +2284,7 @@ function renderCard(d,q,presKey,presNote){
     }
     html+=`</div>`;
     if(calc.bandLbl)html+=`<div class="math-line">${e(calc.bandLbl)}</div>`;
-    else if(calc.dose&&!calc.fxD&&reg.mpk&&wt){html+=`<div class="math-line">${wt} kg × ${reg.mpk} mg/kg = ${(wt*reg.mpk).toFixed(1)} mg</div>`}
+    else if(calc.dose&&!calc.fxD&&reg.mpk&&wt){html+=`<div class="math-line">${wt} kg �- ${reg.mpk} mg/kg = ${(wt*reg.mpk).toFixed(1)} mg</div>`}
     if(calc.flags&&calc.flags.length){html+=`<div class="flag-row">${calc.flags.map(f=>`<span class="flag flag-${f.type==='warn'?'warn':'info'}">${e(f.text)}</span>`).join('')}</div>`}
     if(reg.preps&&reg.preps.length&&calc.dose){
       const opts=reg.preps.map((p,pi)=>{
@@ -2294,7 +2294,7 @@ function renderCard(d,q,presKey,presNote){
       html+=`<div class="vol-row"><span class="vol-lbl">Volume:</span><select class="prep-sel" onchange="updVol(this,${calc.dose})">${opts}</select><span class="vol-val">${e(reg.preps[0]?.mpm?calcVol(calc.dose,reg.preps[0].mpm)+' mL':'—')}</span></div>`;
     }
     if(reg.notes)html+=`<div class="notes">${e(reg.notes)}</div>`;
-    if(!calc.ph){html+=`<div class="card-actions"><button class="card-action" onclick="copyParentInstructions(this)">📋 Copy parent text</button><button class="card-action" onclick="printCard(this)">🖨 Print parent sheet</button></div>`}
+    if(!calc.ph){html+=`<div class="card-actions"><button class="card-action" onclick="copyParentInstructions(this)">📋 Copy parent text</button><button class="card-action" onclick="printCard(this)">�-� Print parent sheet</button></div>`}
     html+=`</div>`;
   });
   html+=`</div>`;
@@ -2316,7 +2316,7 @@ function renderFeverCombo(q){
 <div class="combo-title">Pain & Fever — combination</div>
 <div class="combo-sub">Alternate every 3 hours for ongoing fever or pain</div>
 <div class="combo-grid">
-<div class="combo-drug"><div class="combo-drug-name">Paracetamol</div><div class="combo-drug-dose">${paraDose} mg</div><div class="combo-drug-freq">Every 4–6 h, max 4×/day</div></div>
+<div class="combo-drug"><div class="combo-drug-name">Paracetamol</div><div class="combo-drug-dose">${paraDose} mg</div><div class="combo-drug-freq">Every 4–6 h, max 4�-/day</div></div>
 <div class="combo-drug"><div class="combo-drug-name">Ibuprofen</div><div class="combo-drug-dose">${ibuDose} mg</div><div class="combo-drug-freq">Every 6–8 h with food</div></div>
 </div>
 <div class="combo-schedule"><strong>Suggested rotation:</strong> Paracetamol at 0 / 6 / 12 / 18 h, Ibuprofen at 3 / 9 / 15 / 21 h. Keep a written log of times and doses given.</div>

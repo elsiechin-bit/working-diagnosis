@@ -31,16 +31,4 @@ pillar: Geriatrics
 
 <div class="tier-3">
   <p class="tier-label">❍ Elder abuse and documentation</p>
-  <p>Elder abuse is estimated to affect 2-10% of older adults and is significantly underidentified in primary care.<sup>2</sup> Unlike child abuse, GPs in New Zealand have no mandatory reporting obligation for elder abuse, but do have professional obligations under the Health Practitioners Competence Assurance Act 2003 to act in the patient's best interests. In practice, this means: naming the concern to the patient, safety planning, and referral to Age Concern's Elder Abuse Response Service (EARS) or - in urgent situations - police. See the <a href="/geriatrics/elder-abuse/">elder abuse page</a> for further detail.</p>
-  <p>The consistent thread across all of these domains is documentation. A medicolegal situation that is clearly documented - the conversation, the clinical findings, the reasoning, and the outcome - is defensible even when the clinical decision was difficult. An undocumented one is not. This applies to capacity assessments, driving notifications, elder abuse referrals, ACP conversations, and EOLCA interactions equally. If it was clinically significant, it warrants a note.</p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. New Zealand Parliament. *Protection of Personal and Property Rights Act 1988*. Wellington: New Zealand Government; 1988. Available at: legislation.govt.nz
-2. Lachs MS, Pillemer KA. Elder abuse. *N Engl J Med.* 2015;373(20):1947-1956.
-3. Health Practitioners Competence Assurance Act 2003. Section 34: Practitioner must report certain matters. Wellington: New Zealand Government; 2003.
-
-</div>
+  <p>Elder abuse is estimated to affect 2-10% of older adults and is significantly underidentified in primary care.<sup>2</sup> Unlike child abuse, GPs in New Zealand have no mandatory reporting obligation for elder abuse, but do have professional obligations under the Health Practitioners Competence Assurance Act 2003 to act in the patient's best interests. In practice, this means: naming the concern to the patient, safety plan

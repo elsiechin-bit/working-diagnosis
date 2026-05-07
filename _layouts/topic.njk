@@ -6,6 +6,7 @@ hasToc: true
 <article class="topic">
   <header class="topic-header">
 
+    {% if pageType %}<span class="page-type-badge page-type-{{ pageType | slugify }}">{{ pageType }}</span>{% endif %}
     {% if pillar %}<p class="pillar-label">{{ pillar }}</p>{% endif %}
 
     {% if ctags %}
@@ -16,30 +17,5 @@ hasToc: true
 
     {% if changes %}
     <div class="changes-block">
-      <p class="changes-label">What changed{% if changes_date %} — {{ changes_date }}{% endif %}</p>
-      <ul class="changes-list">
-        {% for item in changes %}<li>{{ item }}</li>{% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-
-    <h1>{{ title }}</h1>
-    {% if description %}<p class="topic-dek">{{ description }}</p>{% endif %}
-
-    <div class="topic-meta">
-      {% if pillar or audience %}<span class="audience-tag">{{ audience if audience else "For clinicians" }}</span>{% endif %}
-      <span class="reading-time">{{ readtime if readtime else content | readingTime }}</span>
-    </div>
-
-  </header>
-
-  <div class="topic-body">
-    {{ content | safe }}
-  </div>
-
-  {% if pillar %}
-  <aside class="topic-handouts">
-    <p><a href="/handouts/#{{ pillar | slugify }}">Patient handouts for {{ pillar }} →</a></p>
-  </aside>
-  {% endif %}
-</article>
+      <p class="changes-label">What changed{% if changes_date %} - {{ changes_date }}{% endif %}</p>
+      <ul 

@@ -1,6 +1,7 @@
 ---
 title: Depression - what it is and what actually helps
 layout: topic.njk
+pageType: handout
 description: Understanding depression, the treatments that work, and how to access support in New Zealand.
 ---
 
@@ -69,6 +70,4 @@ description: Understanding depression, the treatments that work, and how to acce
 - [depression.org.nz](https://www.depression.org.nz) - information, self-tests, and links to help
 - [1737.org.nz](https://1737.org.nz) - free call or text any time
 - [Mental Health Foundation NZ](https://www.mentalhealth.org.nz)
-- [Lifeline NZ](https://www.lifeline.org.nz) - 0800 543 354
-
-</div>
+- [Lifeline NZ](https://www.lifeline.org.nz) - 080

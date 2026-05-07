@@ -85,7 +85,7 @@ Approximately one in three to one in four people with an eating disorder is male
 
 Men with eating disorders are less likely to be identified by clinicians, less likely to be referred to specialist services, and less likely to seek help themselves. They are also more likely to have their disordered behaviours framed as positive: a young man who is highly controlled about his food intake and exercises intensively may receive admiration rather than concern. Muscle dysmorphia in particular sits in a cultural space where extreme physique modification is normalised, celebrated in gyms and on social media, and commercially profitable.
 
-When men do present, they are likely to have been unwell for longer, and they may present to GPs with concerns about their training, their supplements, or related physical issues — the eating disorder presenting through a side door. Asking about dietary intake, restriction, and food-related anxiety in male patients presenting with body composition concerns, overtraining symptoms, or fatigue is not overreach. It is appropriate screening.
+When men do present, they are likely to have been unwell for longer, and they may present to GPs with concerns about their training, their supplements, or related physical issues - the eating disorder presenting through a side door. Asking about dietary intake, restriction, and food-related anxiety in male patients presenting with body composition concerns, overtraining symptoms, or fatigue is not overreach. It is appropriate screening.
 
 ## Part VIII - LGBTQ+ populations
 
@@ -115,7 +115,7 @@ A handful of things would meaningfully improve eating disorder outcomes in New Z
 
 **Honest conversations about the wellness industry.** The normalisation of dietary restriction as virtue is a health literacy problem that GPs are well-placed to name. Patients with food anxiety do not need to hear that their restriction is admirable. They need someone to ask what eating is like for them, and to take the answer seriously.
 
-**Resources matched to the burden of disease.** This is a system problem — and primary care advocacy matters precisely because of that. Eating disorders have the mortality profile of a serious physical illness. The resourcing should reflect that.
+**Resources matched to the burden of disease.** This is a system problem - and primary care advocacy matters precisely because of that. Eating disorders have the mortality profile of a serious physical illness. The resourcing should reflect that.
 
 There is a version of a New Zealand GP who sees a Maori woman in her thirties, at a normal body weight, who mentions in passing that she tends to eat and eat when she is stressed and then hates herself for it - and who hears that as a lifestyle note rather than a screening cue for binge eating disorder. That GP is not negligent. They have been trained in an image, and the image is incomplete.
 
@@ -130,16 +130,16 @@ The image is worth examining.
 **References**
 
 1. Deloitte Access Economics. The social and economic cost of eating disorders in the United States of America: a report for the Strategic Training Initiative for the Prevention of Eating Disorders and the Academy for Eating Disorders. Melbourne: Deloitte Access Economics; 2020.
-2. Arcelus J, Mitchell AJ, Wales J, Nielsen S. Mortality rates in patients with anorexia nervosa and other eating disorders: a meta-analysis of 36 studies. Arch Gen Psychiatry. 2011;68(7):724-31. doi:10.1001/archgenpsychiatry.2011.74
+2. [Mortality rates in patients with anorexia nervosa and other eating disorders: a meta-analysis of 36 studies](https://doi.org/10.1001/archgenpsychiatry.2011.74). Arcelus J, Mitchell AJ, Wales J, Nielsen S. Arch Gen Psychiatry. 2011;68(7):724-31.
 3. American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed. Arlington: APA; 2013.
-4. Becker AE, Franko DL, Speck A, Herzog DB. Ethnicity and differential access to care for eating disorder symptoms. Int J Eat Disord. 2003;33(2):205-12. doi:10.1002/eat.10129
-5. Marques L, Alegria M, Becker AE, Chen CN, Fang A, Chosak A, et al. Comparative prevalence, correlates of impairment, and service utilization for eating disorders across US ethnic groups. Int J Eat Disord. 2011;44(5):412-20. doi:10.1002/eat.20787
+4. [Ethnicity and differential access to care for eating disorder symptoms](https://doi.org/10.1002/eat.10129). Becker AE, Franko DL, Speck A, Herzog DB. Int J Eat Disord. 2003;33(2):205-12.
+5. [Comparative prevalence, correlates of impairment, and service utilization for eating disorders across US ethnic groups](https://doi.org/10.1002/eat.20787). Marques L, Alegria M, Becker AE, Chen CN, Fang A, Chosak A, et al. Int J Eat Disord. 2011;44(5):412-20.
 6. Borchard T, Borchard MK. Eating disorders in Maori and Pacific peoples. N Z Med J. 2008;121(1284):1-4.
 7. Horwitz J, Hagey K. Facebook knows Instagram is toxic for teen girls, company documents show. Wall Street Journal. 2021 Sep 14.
-8. Linardon J, Messer M, Fuller-Tyszkiewicz M. A systematic review and meta-analysis of the effects of social media use on disordered eating and body image outcomes. Clin Psychol Rev. 2023;101:102259. doi:10.1016/j.cpr.2023.102259
-9. Dunn TM, Bratman S. On orthorexia nervosa: a review of the literature and proposed diagnostic criteria. Eat Behav. 2016;21:11-17. doi:10.1016/j.eatbeh.2015.12.006
-10. Murray SB, Nagata JM, Griffiths S, Calzo JP, Brown TA, Mitchison D, et al. The enigma of male eating disorders: a critical review and synthesis. Clin Psychol Rev. 2017;57:1-11. doi:10.1016/j.cpr.2017.08.001
-11. Calzo JP, Blashill AJ, Brown TA, Argenal RL. Eating disorders and disordered weight and shape control behaviors in sexual minority populations. Curr Psychiatry Rep. 2017;19(8):49. doi:10.1007/s11920-017-0801-y
+8. [A systematic review and meta-analysis of the effects of social media use on disordered eating and body image outcomes](https://doi.org/10.1016/j.cpr.2023.102259). Linardon J, Messer M, Fuller-Tyszkiewicz M. Clin Psychol Rev. 2023;101:102259.
+9. [On orthorexia nervosa: a review of the literature and proposed diagnostic criteria](https://doi.org/10.1016/j.eatbeh.2015.12.006). Dunn TM, Bratman S. Eat Behav. 2016;21:11-17.
+10. [The enigma of male eating disorders: a critical review and synthesis](https://doi.org/10.1016/j.cpr.2017.08.001). Murray SB, Nagata JM, Griffiths S, Calzo JP, Brown TA, Mitchison D, et al. Clin Psychol Rev. 2017;57:1-11.
+11. [Eating disorders and disordered weight and shape control behaviors in sexual minority populations](https://doi.org/10.1007/s11920-017-0801-y). Calzo JP, Blashill AJ, Brown TA, Argenal RL. Curr Psychiatry Rep. 2017;19(8):49.
 12. Mental Health Foundation of New Zealand. Eating disorders. Auckland: MHFNZ; 2022. Available from: https://www.mentalhealth.org.nz/conditions/eating-disorders
 13. Royal College of Psychiatrists. MARSIPAN: management of really sick patients with anorexia nervosa. 2nd ed. London: RCPsych; 2014. College Report CR189.
-14. Morgan JF, Reid F, Lacey JH. The SCOFF questionnaire: assessment of a new screening tool for eating disorders. BMJ. 1999;319(7223):1467-8. doi:10.1136/bmj.319.7223.1467
+14. [The SCOFF questionnaire: assessment of a new screening tool for

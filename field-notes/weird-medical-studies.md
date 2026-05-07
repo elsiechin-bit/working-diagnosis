@@ -53,7 +53,7 @@ The clinical context matters: Glanzmann thrombasthenia is a rare platelet disord
 
 ## Studies that changed nothing but definitely happened
 
-**The penguin defecation pressures.** Meyer-Rochow and Gal published in *Polar Biology* in 2003 their calculations of the pressures produced by Adélie and emperor penguins during defecation [7]. The biological purpose of the study was to understand how penguins avoid soiling their plumage (and those of their neighbours) while incubating eggs and unable to stand. Using models of the penguin's anatomy and the observed range of defecation distances, the authors calculated that penguins generate rectal pressures of approximately 10–60 kilopascals  -  four times the human equivalent. The paper includes physics equations, cloaca anatomy, and the sentence "we deduced that the resultant projectile will travel a distance of approximately 40 cm." The authors won the Ig Nobel Prize in Fluid Dynamics in 2005, and accepted.
+**The penguin defecation pressures.** Meyer-Rochow and Gal published in *Polar Biology* in 2003 their calculations of the pressures produced by Adélie and emperor penguins during defecation [7]. The biological purpose of the study was to understand how penguins avoid soiling their plumage (and those of their neighbours) while incubating eggs and unable to stand. Using models of the penguin's anatomy and the observed range of defecation distances, the authors calculated that penguins generate rectal pressures of approximately 10-60 kilopascals  -  four times the human equivalent. The paper includes physics equations, cloaca anatomy, and the sentence "we deduced that the resultant projectile will travel a distance of approximately 40 cm." The authors won the Ig Nobel Prize in Fluid Dynamics in 2005, and accepted.
 
 **Country music and suicide.** Stack and Gundlach published a study in the sociology journal *Social Forces* in 1992 examining the relationship between country music airplay in US metropolitan areas and suicide rates [8]. The hypothesis was that country music themes  -  romantic failure, economic hardship, alcohol, trucks  -  might reinforce suicidal ideation in vulnerable listeners. Controlling for other factors, they found a significant positive association. The study generated a minor literature, including at least one challenge study that failed to replicate, and one letter arguing that the whole thing was confounded by regional cultural factors. It occupies an enviable position in the canon of findings that are methodologically interesting and substantively unfalsifiable.
 
@@ -83,13 +83,13 @@ Also, if you have a patient with a small lower ureteric calculus and they happen
 
 ### References
 
-1. Smith GCS, Pell JP. Parachute use to prevent death and major trauma related to gravitational challenge: systematic review of randomised controlled trials. BMJ. 2003;327:1459–61. doi:10.1136/bmj.327.7429.1459
-2. Witcombe B, Meyer D. Sword swallowing and its side effects. BMJ. 2006;333:1285–7. doi:10.1136/bmj.39027.676690.55
-3. Leibovici L. Effects of remote, retroactive intercessory prayer on outcomes in patients with bloodstream infection: randomised controlled trial. BMJ. 2001;323:1450–1. doi:10.1136/bmj.323.7327.1450
-4. Wartinger DD, Mitchell MA. Validation of a functional pyelocalyceal renal model for the evaluation of renal calculi passage while riding a roller coaster. J Am Osteopath Assoc. 2016;116(10):647–52. doi:10.7556/jaoa.2016.128
-5. Pringle MK, Bhatnagar V, Harrison MS. Nasal packing with strips of cured pork as treatment for uncontrollable epistaxis in a patient with Glanzmann thrombasthenia. Ann Otol Rhinol Laryngol. 2012;121(3):163–6. doi:10.1177/000348941212100303
-6. Focht DR, Spicer C, Fairchok MP. The efficacy of duct tape vs cryotherapy in the treatment of verruca vulgaris (the common wart). Arch Pediatr Adolesc Med. 2002;156(10):971–4. doi:10.1001/archpedi.156.10.971
-7. Meyer-Rochow VB, Gal J. Pressures produced when penguins pooh  -  calculations on avian defecation. Polar Biol. 2003;27(1):56–8. doi:10.1007/s00300-003-0563-3
-8. Stack S, Gundlach J. The effect of country music on suicide. Soc Forces. 1992;71(1):211–18. doi:10.2307/2579985
-9. Siminoski K, Bain J. The relationships among height, penile length, and foot size. Ann Sex Res. 1993;6(3):231–5. doi:10.1007/BF00849563
+1. Smith GCS, Pell JP. Parachute use to prevent death and major trauma related to gravitational challenge: systematic review of randomised controlled trials. BMJ. 2003;327:1459-61. doi:10.1136/bmj.327.7429.1459
+2. Witcombe B, Meyer D. Sword swallowing and its side effects. BMJ. 2006;333:1285-7. doi:10.1136/bmj.39027.676690.55
+3. Leibovici L. Effects of remote, retroactive intercessory prayer on outcomes in patients with bloodstream infection: randomised controlled trial. BMJ. 2001;323:1450-1. doi:10.1136/bmj.323.7327.1450
+4. Wartinger DD, Mitchell MA. Validation of a functional pyelocalyceal renal model for the evaluation of renal calculi passage while riding a roller coaster. J Am Osteopath Assoc. 2016;116(10):647-52. doi:10.7556/jaoa.2016.128
+5. Pringle MK, Bhatnagar V, Harrison MS. Nasal packing with strips of cured pork as treatment for uncontrollable epistaxis in a patient with Glanzmann thrombasthenia. Ann Otol Rhinol Laryngol. 2012;121(3):163-6. doi:10.1177/000348941212100303
+6. Focht DR, Spicer C, Fairchok MP. The efficacy of duct tape vs cryotherapy in the treatment of verruca vulgaris (the common wart). Arch Pediatr Adolesc Med. 2002;156(10):971-4. doi:10.1001/archpedi.156.10.971
+7. Meyer-Rochow VB, Gal J. Pressures produced when penguins pooh  -  calculations on avian defecation. Polar Biol. 2003;27(1):56-8. doi:10.1007/s00300-003-0563-3
+8. Stack S, Gundlach J. The effect of country music on suicide. Soc Forces. 1992;71(1):211-18. doi:10.2307/2579985
+9. Siminoski K, Bain J. The relationships among height, penile length, and foot size. Ann Sex Res. 1993;6(3):231-5. doi:10.1007/BF00849563
 10. Fisher L. Physics takes the biscuit. Nature. 1999;397:469. doi:10.1038/17203

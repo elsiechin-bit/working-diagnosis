@@ -39,17 +39,4 @@ permalink: /msk/meniscal-injury/
   <p class="aside-title">NZ resources</p>
   <ul class="aside-links">
     <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC NZ</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways Canterbury</a></li>
-    <li><a href="https://www.acc.co.nz" target="_blank" rel="noopener">ACC - acute sports injury</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Niu NN, Tibesku CO. The diagnostic accuracy of clinical examination tests for knee meniscal lesions cannot be properly established. *J Orthop Surg Res.* 2014;9:98.
-2. Barber-Westin SD, Noyes FR. Long-term durability, function, and quality of life of repaired second- and third-decade isolated meniscal tears. *Am J Sports Med.* 2017;45(14):3308-3316.
-
-</div>
+    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopen

@@ -82,46 +82,4 @@ permalink: /paediatrics/otitis-media/
     CSOM is persistent discharge through a perforated tympanic membrane. For Maori and Pacific children, the prevalence is approximately 4%, reflecting a combination of socioeconomic factors, household crowding, and possibly genetic predisposition to Eustachian tube dysfunction. Early recognition and appropriate management of AOM is part of preventing CSOM, but the referral threshold should be low in high-risk groups.
   </p>
   <p>
-    CSOM management in primary care: topical ciprofloxacin ear drops are first-line. Aminoglycosides (gentamicin, neomycin) are ototoxic when the eardrum is perforated and should not be used. Keep the ear dry - cotton ball plug when bathing, no swimming while discharging. ENT referral for all persistent CSOM.
-  </p>
-  <p>
-    Routine ENT referral for: recurrent AOM (3 or more episodes in 6 months, or 4 or more in 12 months); persistent AOM not responding to antibiotics; all persistent CSOM; any child with AOM and significant associated hearing loss or developmental concern.
-  </p>
-  <p>
-    Same-day urgent referral for: mastoiditis (post-auricular swelling, erythema, tenderness, protruding ear); facial nerve palsy; suspected intracranial complication (meningism, severe headache, altered consciousness); severe systemic illness.
-  </p>
-</div>
-
-<div class="tier-3">
-  <p class="tier-label">❍ Hearing, language, and grommets</p>
-  <p>
-    Otitis media with effusion (OME, "glue ear") is the most common cause of conductive hearing loss in children. It frequently follows AOM and often resolves spontaneously over weeks to months. Persistent OME with bilateral hearing loss and developmental impact is the primary indication for grommet insertion. The evidence for grommets in uncomplicated OME is modest - short-term hearing improvement is demonstrated, but long-term language and developmental benefit is less clear.<sup>4</sup> The decision should be guided by the degree of hearing loss, duration, and developmental context.
-  </p>
-  <p>
-    For Maori and Pacific children, hearing loss from ear disease has downstream consequences for literacy and educational achievement that extend well beyond childhood. The equity dimension should inform the referral threshold: earlier ENT assessment is appropriate where hearing loss or developmental concerns are present, and where the family faces barriers to follow-up.
-  </p>
-</div>
-
-</div>
-<aside class="topic-aside">
-  <p class="aside-kicker">Clinician links</p>
-  <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://bpac.org.nz/" target="_blank" rel="noopener">BPAC NZ: Otitis media in children</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Acute otitis media</a></li>
-    <li><a href="https://www.starship.org.nz/guidelines/" target="_blank" rel="noopener">Starship: Ear guidelines</a></li>
-    <li><a href="https://www.health.govt.nz/your-health/conditions-and-treatments/diseases-and-illnesses/otitis-media" target="_blank" rel="noopener">Ministry of Health: Otitis media</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Ministry of Health NZ. *Otitis media guidance for primary care*. Wellington: Ministry of Health; 2020.
-2. Lieberthal AS, Carroll AE, Chonmaitree T, et al. The diagnosis and management of acute otitis media. *Pediatrics.* 2013;131(3):e964-e999.
-3. BPAC NZ. Otitis media in children - when to treat. *Best Practice Journal.* 2022. Available from: bpac.org.nz.
-4. Rovers MM, Black N, Browning GG, et al. Grommets in otitis media with effusion: an individual patient data meta-analysis. *Arch Dis Child.* 2005;90(5):480-485.
-
-</div>
+    CSOM management in primary care: topical ciprofloxacin ear drops are first-line. Aminoglycosides (gentamicin, neomycin) are ototoxic when the eardrum is perforated and should not be used. Keep the ear dry - cotton ball plug when bathing, no swimming while discharging. ENT referral for all persistent CSOM

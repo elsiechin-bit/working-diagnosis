@@ -1,6 +1,7 @@
 ---
 title: Upper respiratory infection (common cold) - self-care at home
 layout: topic.njk
+pageType: handout
 description: Why antibiotics do not help a cold, and what you can do to feel better and recover faster.
 ---
 
@@ -66,6 +67,4 @@ description: Why antibiotics do not help a cold, and what you can do to feel bet
 **Useful NZ resources**
 
 - [Health Navigator - Common cold](https://www.healthnavigator.org.nz/health-a-z/c/cold-common/)
-- [HealthInfo Canterbury - Colds and flu](https://www.healthinfo.org.nz)
-
-</div>
+- [HealthInfo Canterbury - Colds and flu](https://www.healthinf

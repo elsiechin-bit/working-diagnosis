@@ -21,17 +21,17 @@ Here is how I tend to think through these consultations  -  and what I wish ever
 
 The growth chart is a population distribution, not a clinical threshold. By statistical definition, 5% of healthy children will fall below the 5th centile for height, and 5% below the 5th centile for weight.<sup>1</sup> They are not sick  -  they are at the short or light end of a normal human range.
 
-The two most common explanations for a school-age child who sits low on the chart are *constitutional growth delay* (CGD) and *familial short stature* (FSS).<sup>2</sup> Together, these account for the overwhelming majority of children referred to paediatric endocrinology for short stature  -  often cited as 60–80% of referrals.<sup>3</sup>
+The two most common explanations for a school-age child who sits low on the chart are *constitutional growth delay* (CGD) and *familial short stature* (FSS).<sup>2</sup> Together, these account for the overwhelming majority of children referred to paediatric endocrinology for short stature  -  often cited as 60-80% of referrals.<sup>3</sup>
 
 Constitutional growth delay is the classic "late bloomer." These children grow slowly through primary school, enter puberty later than peers, and then catch up. They nearly always reach a normal adult height for their family. The most useful question in the history is not a blood test  -  it is: *how old were you when you hit puberty?* If Mum was 15 before her periods started, or Dad was 17 before he needed to shave daily, the picture usually falls into place.
 
-Familial short stature is simpler: the child is short because the parents are short. The mid-parental height (MPH) calculation is the single most useful piece of arithmetic in a growth clinic. For boys: [(father's height cm + mother's height cm + 13) ÷ 2]; for girls: [(father's height cm + mother's height cm − 13) ÷ 2]. A child tracking within 8–10 cm of their MPH centile is almost certainly well.<sup>4</sup>
+Familial short stature is simpler: the child is short because the parents are short. The mid-parental height (MPH) calculation is the single most useful piece of arithmetic in a growth clinic. For boys: [(father's height cm + mother's height cm + 13) ÷ 2]; for girls: [(father's height cm + mother's height cm − 13) ÷ 2]. A child tracking within 8-10 cm of their MPH centile is almost certainly well.<sup>4</sup>
 
 ## What the chart is actually telling you
 
 A single low measurement is far less meaningful than *how the child is growing over time*. A child who has always been on the 3rd centile and is tracking steadily along it is behaving normally. A child who was on the 50th centile at age four and is now on the 10th at age eight has crossed two major centile lines downward  -  that is a different, and more serious, conversation.<sup>5</sup>
 
-This is why growth velocity matters more than absolute position. In practical terms, school-age children (roughly ages 4–10) should be growing approximately 5–6 cm per year.<sup>6</sup> Below 4–4.5 cm per year in this age group warrants further assessment regardless of where the child sits on the chart.
+This is why growth velocity matters more than absolute position. In practical terms, school-age children (roughly ages 4-10) should be growing approximately 5-6 cm per year.<sup>6</sup> Below 4-4.5 cm per year in this age group warrants further assessment regardless of where the child sits on the chart.
 
 For weight, the same principle applies. A child who has always been light but is eating, developing, and energetic is different from one who has dropped centiles, lost muscle mass, or is noticeably fatigued.
 
@@ -41,13 +41,13 @@ When the history or growth trajectory raises a flag, the differential is not lon
 
 **Undernutrition.** The most common pathological cause of poor growth worldwide, and not as rare in NZ as we might assume. It doesn't always look like poverty  -  it can look like restricted eating, high-activity sport combined with inadequate caloric intake, or a family diet that is calorically thin without anyone realising. A detailed diet history is worth more than most blood panels.
 
-**Coeliac disease.** Underdiagnosed, and frequently presents in the first decade of life with non-specific symptoms: poor growth, intermittent abdominal pain, loose stools, fatigue, iron deficiency anaemia.<sup>7</sup> Serology (anti-tissue transglutaminase IgA with total IgA) is the right first step. Prevalence in NZ children is approximately 1 in 100–150.<sup>8</sup>
+**Coeliac disease.** Underdiagnosed, and frequently presents in the first decade of life with non-specific symptoms: poor growth, intermittent abdominal pain, loose stools, fatigue, iron deficiency anaemia.<sup>7</sup> Serology (anti-tissue transglutaminase IgA with total IgA) is the right first step. Prevalence in NZ children is approximately 1 in 100-150.<sup>8</sup>
 
 **Inflammatory bowel disease.** Growth failure can precede gut symptoms in Crohn's disease by months to years.<sup>9</sup> Worth keeping in mind if there is any story of abdominal pain, perianal disease, or unexplained anaemia.
 
 **Hypothyroidism.** Acquired autoimmune hypothyroidism (Hashimoto's thyroiditis) peaks in early adolescence but can present in younger school-age children.<sup>10</sup> TSH is a cheap and high-yield screen.
 
-**Growth hormone deficiency (GHD).** Rarer than parents fear. True GHD affects approximately 1 in 4,000–10,000 children.<sup>11</sup> It should be on the list when height velocity is clearly reduced, bone age is delayed, and simpler explanations have been excluded  -  not as the first thing a worried parent reads about at midnight.
+**Growth hormone deficiency (GHD).** Rarer than parents fear. True GHD affects approximately 1 in 4,000-10,000 children.<sup>11</sup> It should be on the list when height velocity is clearly reduced, bone age is delayed, and simpler explanations have been excluded  -  not as the first thing a worried parent reads about at midnight.
 
 **Chronic illness.** Asthma, coeliac, renal disease, cardiac conditions, and recurrent infections can all quietly blunt growth. The history usually points toward these.
 
@@ -57,7 +57,7 @@ When the history or growth trajectory raises a flag, the differential is not lon
 
 The assessment is mostly clinical. I want to know:
 
-- Growth trajectory  -  ideally at least two height measurements 6–12 months apart, plotted accurately
+- Growth trajectory  -  ideally at least two height measurements 6-12 months apart, plotted accurately
 - Mid-parental height and family growth pattern (particularly pubertal timing in parents)
 - Diet in some detail  -  a genuine picture of a typical day's eating, without moralising
 - Energy, mood, school performance, sport participation
@@ -78,15 +78,15 @@ That takes about fifteen minutes. It is some of the most useful fifteen minutes 
 
 ### References
 
-1. Cole TJ. The evidential value of growth charts. *Arch Dis Child.* 2020;105(12):1120–1126.
-2. Rogol AD, Clark PA, Roemmich JN. Growth and pubertal development in children and adolescents: effects of diet and physical activity. *Am J Clin Nutr.* 2000;72(2 Suppl):521S–528S.
-3. Grimberg A, DiVall SA, Polychronakos C, et al. Guidelines for growth hormone and insulin-like growth factor-I treatment in children and adolescents. *Horm Res Paediatr.* 2016;86(6):361–397.
-4. Tanner JM, Goldstein H, Whitehouse RH. Standards for children's heights at ages 2–9 years allowing for height of parents. *Arch Dis Child.* 1970;45(244):755–762.
-5. Hall DMB, Cole TJ. What use is the BMI? *Arch Dis Child.* 2006;91(4):283–286.
-6. Karlberg J. On the construction of the infancy-childhood-puberty growth standard. *Acta Paediatr Scand Suppl.* 1989;356:26–37.
-7. Husby S, Koletzko S, Korponay-Szabó I, et al. European Society for Paediatric Gastroenterology, Hepatology, and Nutrition guidelines for the diagnosis of coeliac disease. *J Pediatr Gastroenterol Nutr.* 2012;54(1):136–160.
-8. Guildford WH, Brougham MFH, Day AS. Coeliac disease in New Zealand children: a decade of change. *J Paediatr Child Health.* 2019;55(5):581–586.
-9. Sawczenko A, Sandhu BK. Presenting features of inflammatory bowel disease in Great Britain and Ireland. *Arch Dis Child.* 2003;88(11):995–1000.
-10. De Vito R, Marzuillo P, Tipo V, et al. Thyroid disorders in children and adolescents. *Pediatr Rep.* 2022;14(2):169–185.
-11. Murray PG, Clayton PE. Endocrine control of growth. *Am J Med Genet C Semin Med Genet.* 2013;163C(2):76–85.
-12. Skuse D, Albanese A, Stanhope R, Gilmour J, Voss L. A new stress-related syndrome of growth failure and hyperphagia in children, associated with reversibility of growth-hormone insufficiency. *Lancet.* 1996;348(9024):353–358.
+1. Cole TJ. The evidential value of growth charts. *Arch Dis Child.* 2020;105(12):1120-1126.
+2. Rogol AD, Clark PA, Roemmich JN. Growth and pubertal development in children and adolescents: effects of diet and physical activity. *Am J Clin Nutr.* 2000;72(2 Suppl):521S-528S.
+3. Grimberg A, DiVall SA, Polychronakos C, et al. Guidelines for growth hormone and insulin-like growth factor-I treatment in children and adolescents. *Horm Res Paediatr.* 2016;86(6):361-397.
+4. Tanner JM, Goldstein H, Whitehouse RH. Standards for children's heights at ages 2-9 years allowing for height of parents. *Arch Dis Child.* 1970;45(244):755-762.
+5. Hall DMB, Cole TJ. What use is the BMI? *Arch Dis Child.* 2006;91(4):283-286.
+6. Karlberg J. On the construction of the infancy-childhood-puberty growth standard. *Acta Paediatr Scand Suppl.* 1989;356:26-37.
+7. Husby S, Koletzko S, Korponay-Szabó I, et al. European Society for Paediatric Gastroenterology, Hepatology, and Nutrition guidelines for the diagnosis of coeliac disease. *J Pediatr Gastroenterol Nutr.* 2012;54(1):136-160.
+8. Guildford WH, Brougham MFH, Day AS. Coeliac disease in New Zealand children: a decade of change. *J Paediatr Child Health.* 2019;55(5):581-586.
+9. Sawczenko A, Sandhu BK. Presenting features of inflammatory bowel disease in Great Britain and Ireland. *Arch Dis Child.* 2003;88(11):995-1000.
+10. De Vito R, Marzuillo P, Tipo V, et al. Thyroid disorders in children and adolescents. *Pediatr Rep.* 2022;14(2):169-185.
+11. Murray PG, Clayton PE. Endocrine control of growth. *Am J Med Genet C Semin Med Genet.* 2013;163C(2):76-85.
+12. Skuse D, Albanese A, Stanhope R, Gilmour J, Voss L. A new stress-related syndrome of growth failure and hyperphagia in children, associated with reversibility of growth-hormone insufficiency. *Lancet.* 1996;348(9024):353-358.

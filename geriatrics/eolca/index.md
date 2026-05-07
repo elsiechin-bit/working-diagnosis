@@ -31,15 +31,4 @@ pillar: Geriatrics
 <div class="tier-3">
   <p class="tier-label">❍ Documentation, safeguards, and practical encounters</p>
   <p>The Act imposes specific documentation requirements at each stage: the initial request, the two independent assessments, the 48-hour reflection period, and the administration of medication. All forms are prescribed by regulation. The Ministry of Health provides the statutory forms and a support line for health practitioners navigating the process. The Act also requires the Registrar to be notified at multiple points, and the information is used for national monitoring and reporting.</p>
-  <p>In practice, most GP encounters with the EOLCA will not involve formal participation in the assisted dying process. They will involve: patients asking general questions about their options; families raising concerns about eligibility; and - rarely - patients making a formal request. In all cases, being clear about your own position, knowing the referral pathway, and documenting the conversation are the key professional obligations. The RNZCGP has published guidance for GPs, and the Ministry of Health website maintains up-to-date information on the process and form requirements.</p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. New Zealand Parliament. *End of Life Choice Act 2019*. Wellington: New Zealand Government; 2019. Available at: legislation.govt.nz
-2. Royal New Zealand College of General Practitioners. *RNZCGP guidance on the End of Life Choice Act*. Wellington: RNZCGP; 2021.
-3. Ministry of Health. *End of life choice: information for health professionals*. Wellington: Ministry of Health; 2021. Available at: health.govt.nz
-
-</div>
+  <p>In practice, m

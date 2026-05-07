@@ -29,7 +29,7 @@ The short answer is: cost and queue.
 
 New Zealand's public system is the envy of many countries in principle; in practice, the elective surgery backlog has become chronic. As of January 2025, over 37,000 patients were waiting more than four months for surgery, including more than 8,600 in orthopaedics alone. Over 77,000 were waiting more than four months just for a first specialist assessment.<sup>1</sup> A University of Otago study found that rejected specialist referrals rose from roughly 63,000 to 85,000 per year between 2018 and 2022.<sup>1</sup>
 
-For patients who can't access public funding and can't afford domestic private rates, the arithmetic of medical tourism can look compelling. A hip replacement that costs $22,000–$40,000 privately in New Zealand<sup>2</sup> can be done in India for around NZD $12,000–$17,000,<sup>3</sup> or in Thailand for $13,000–$18,000  -  and that includes the hotel, the concierge service, and the flights.<sup>4</sup> On paper, the patient saves money *and* skips the queue.
+For patients who can't access public funding and can't afford domestic private rates, the arithmetic of medical tourism can look compelling. A hip replacement that costs $22,000-$40,000 privately in New Zealand<sup>2</sup> can be done in India for around NZD $12,000-$17,000,<sup>3</sup> or in Thailand for $13,000-$18,000  -  and that includes the hotel, the concierge service, and the flights.<sup>4</sup> On paper, the patient saves money *and* skips the queue.
 
 The procedures most commonly sought overseas align with our longest waiting lists: joint replacements, bariatric surgery, cosmetic procedures, dental work, and IVF.<sup>5</sup>
 
@@ -41,16 +41,16 @@ The figures below are NZD estimates based on New Zealand private insurer data an
 
 | Procedure | NZ Private (NZD) | Thailand (NZD) | India (NZD) | Turkey (NZD) |
 |---|---|---|---|---|
-| Total hip replacement | $22,000–$40,000 | $13,000–$18,000 | $12,000–$17,000 | $10,000–$15,000 |
-| Total knee replacement | $25,000–$33,000 | $11,000–$16,000 | $12,000–$17,000 | $9,000–$14,000 |
-| Bariatric surgery (sleeve/bypass) | $19,000–$35,000 | $10,000–$14,000 | $8,000–$12,000 | $7,000–$11,000 |
-| Breast augmentation | $19,000–$22,000 | $5,000–$8,000 | $4,000–$7,000 | $3,500–$6,000 |
-| Facelift | $25,000–$40,000 | $10,000–$20,000 | $10,000–$16,000 | $8,000–$14,000 |
-| Dental implant (per tooth) | $4,000–$6,500 | $2,500–$4,000 | $2,000–$3,500 | $1,500–$3,000 |
-| IVF cycle | $10,000–$15,000 | $5,000–$8,000 | $4,000–$6,000 | $4,000–$6,000 |
-| Coronary artery bypass | $50,000–$75,000 | $18,000–$28,000 | $12,000–$18,000 | $14,000–$20,000 |
+| Total hip replacement | $22,000-$40,000 | $13,000-$18,000 | $12,000-$17,000 | $10,000-$15,000 |
+| Total knee replacement | $25,000-$33,000 | $11,000-$16,000 | $12,000-$17,000 | $9,000-$14,000 |
+| Bariatric surgery (sleeve/bypass) | $19,000-$35,000 | $10,000-$14,000 | $8,000-$12,000 | $7,000-$11,000 |
+| Breast augmentation | $19,000-$22,000 | $5,000-$8,000 | $4,000-$7,000 | $3,500-$6,000 |
+| Facelift | $25,000-$40,000 | $10,000-$20,000 | $10,000-$16,000 | $8,000-$14,000 |
+| Dental implant (per tooth) | $4,000-$6,500 | $2,500-$4,000 | $2,000-$3,500 | $1,500-$3,000 |
+| IVF cycle | $10,000-$15,000 | $5,000-$8,000 | $4,000-$6,000 | $4,000-$6,000 |
+| Coronary artery bypass | $50,000-$75,000 | $18,000-$28,000 | $12,000-$18,000 | $14,000-$20,000 |
 
-*Sources: NZ figures from AIA/nib/Southern Cross insurer data 2023–24.<sup>2</sup> Overseas figures converted from USD estimates at current rates  -  treat as indicative ranges, not fixed prices.<sup>4,6,7</sup> Costs exclude travel, accommodation, and post-operative physiotherapy.*
+*Sources: NZ figures from AIA/nib/Southern Cross insurer data 2023-24.<sup>2</sup> Overseas figures converted from USD estimates at current rates  -  treat as indicative ranges, not fixed prices.<sup>4,6,7</sup> Costs exclude travel, accommodation, and post-operative physiotherapy.*
 
 The headline savings are real. But the table above doesn't include what can go wrong.
 
@@ -66,7 +66,7 @@ Deep vein thrombosis risk is compounded by surgery *and* immobility in flight  -
 
 ### Infection and AMR
 
-One analysis of international ICU data found a threefold greater postoperative infection rate in centres outside Europe and the US.<sup>5</sup> More concerning for us as GPs: the antimicrobial resistance profile of organisms acquired overseas differs substantially from what we see here. A wound infection with NDM-1–producing *Klebsiella* or carbapenem-resistant *Acinetobacter* presenting to our clinic is a different beast from a garden-variety *Staph aureus* SSI.<sup>10</sup> The CDC has documented outbreaks of highly drug-resistant bacteria among medical tourists returning to multiple countries.<sup>10</sup>
+One analysis of international ICU data found a threefold greater postoperative infection rate in centres outside Europe and the US.<sup>5</sup> More concerning for us as GPs: the antimicrobial resistance profile of organisms acquired overseas differs substantially from what we see here. A wound infection with NDM-1-producing *Klebsiella* or carbapenem-resistant *Acinetobacter* presenting to our clinic is a different beast from a garden-variety *Staph aureus* SSI.<sup>10</sup> The CDC has documented outbreaks of highly drug-resistant bacteria among medical tourists returning to multiple countries.<sup>10</sup>
 
 ### Continuity of care
 
@@ -120,7 +120,7 @@ The RACS position is worth reading: it explicitly calls on governments to reduce
 
 ## Bottom line
 
-Medical tourism is a rational response to a system under pressure. The savings are real. The risks are also real, and they are unevenly distributed  -  falling hardest on patients who can least afford complications. As GPs we are the best-placed clinicians to reduce harm on both sides of the trip — our role is to engage, not to gatekeep or to abstain.
+Medical tourism is a rational response to a system under pressure. The savings are real. The risks are also real, and they are unevenly distributed  -  falling hardest on patients who can least afford complications. As GPs we are the best-placed clinicians to reduce harm on both sides of the trip - our role is to engage, not to gatekeep or to abstain.
 
 When Mrs T came back  -  knee replaced, walking well, no complications  -  she was grateful for the preparation. She'd taken her operative notes. She'd waited eight days before flying. She'd come in for a two-week review. The DVT prophylaxis conversation had made her nervous enough to be careful.
 
@@ -131,10 +131,10 @@ Not every patient is that lucky. But preparation helps.
 **References**
 
 1. Policywise. *Cost of private surgery in New Zealand.* Auckland: Policywise; 2025 [cited 2026 May 4]. Available from: https://www.policywise.co.nz/resources/cost-private-surgery
-2. AIA Health, nib, Southern Cross Health Society. *NZ private surgery cost data 2023–2024.* [Industry insurer claims data, cited via Policywise 2025.]
+2. AIA Health, nib, Southern Cross Health Society. *NZ private surgery cost data 2023-2024.* [Industry insurer claims data, cited via Policywise 2025.]
 3. Radio New Zealand. *What is medical tourism, and what are the risks of having surgery overseas?* Wellington: RNZ; 2026 [cited 2026 May 4]. Available from: https://www.rnz.co.nz/life/lifestyle/what-is-medical-tourism-and-what-are-the-risks-of-having-surgery-overseas
 4. Best Clinic Abroad. *Medical tourism costs in 2025: top destinations compared.* [cited 2026 May 4]. Available from: https://bestclinicabroad.com/en/blogs/medical-tourism-costs-in-2025
-5. Forgione A, Smoker I, Rao SR. *Medical tourism: the role of the primary care provider.* Can Fam Physician. 2018;64(9):660–663. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6169951/
+5. Forgione A, Smoker I, Rao SR. *Medical tourism: the role of the primary care provider.* Can Fam Physician. 2018;64(9):660-663. Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6169951/
 6. Global Citizen Solutions. *Medical tourism: top destinations, costs and risks in 2026.* [cited 2026 May 4]. Available from: https://www.globalcitizensolutions.com/medical-tourism/
 7. ClinicCompare NZ. *Dental implants cost NZ 2025.* [cited 2026 May 4]. Available from: https://cliniccompare.co.nz/dental-implants/cost/
 8. NZ Association of Plastic Surgeons, as cited in RNZ, 2026 (ref 3).

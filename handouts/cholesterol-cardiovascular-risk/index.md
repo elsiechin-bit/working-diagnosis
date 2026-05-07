@@ -1,6 +1,7 @@
 ---
 title: Understanding cholesterol and cardiovascular risk
 layout: topic.njk
+pageType: handout
 description: What cholesterol results mean, how cardiovascular risk is calculated in NZ, and what lifestyle and medicines can do to reduce your risk.
 ---
 
@@ -70,6 +71,4 @@ description: What cholesterol results mean, how cardiovascular risk is calculate
 
 - [Heart Foundation NZ](https://www.heartfoundation.org.nz) - heart health information
 - [Health Navigator - Cholesterol](https://www.healthnavigator.org.nz/health-a-z/c/cholesterol/)
-- [Quitline NZ](https://www.quit.org.nz) - 0800 778 778
-
-</div>
+- [Quitline NZ](https://www.quit.org.nz) - 080

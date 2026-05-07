@@ -1,6 +1,7 @@
 ---
 title: Constipation in adults - causes, diet, and laxatives
 layout: topic.njk
+pageType: handout
 description: What constipation is, why it happens, and a practical guide to the dietary changes and medicines that help most.
 ---
 
@@ -71,6 +72,4 @@ description: What constipation is, why it happens, and a practical guide to the 
 **Useful NZ resources**
 
 - [Health Navigator - Constipation](https://www.healthnavigator.org.nz/health-a-z/c/constipation/)
-- [Health Navigator - Bowel screening NZ](https://www.healthnavigator.org.nz/health-a-z/b/bowel-cancer-screening/)
-
-</div>
+- [Health Navigator - Bowel screening NZ](https://www.healthnavigator.org.nz/health-a-z/b/bowel-cancer-sc

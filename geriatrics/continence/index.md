@@ -27,21 +27,4 @@ pillar: Geriatrics
 <div class="tier-2">
   <p class="tier-label">❍ Conservative management and pharmacotherapy</p>
   <p>Pelvic floor physiotherapy is significantly underutilised and underreferred in older adults. It is effective for both stress and urgency incontinence, can be delivered via community physiotherapy referral, and has no adverse effects.<sup>2</sup> Bladder training - timed voiding with gradual extension of voiding intervals - is the behavioural treatment of choice for urgency incontinence. These should be tried before pharmacotherapy in most patients.</p>
-  <p>If pharmacotherapy is needed for urgency incontinence, the beta-3 agonist mirabegron is preferred over anticholinergics (oxybutynin, solifenacin, tolterodine) in older adults because it does not carry anticholinergic cognitive burden. Mirabegron is subsidised in New Zealand under Special Authority for overactive bladder refractory to conservative management. Note the contraindication in severe uncontrolled hypertension.</p>
-</div>
-
-<div class="tier-3">
-  <p class="tier-label">❍ Referral and faecal incontinence</p>
-  <p>Referral to urology or urogynaecology is appropriate when: the diagnosis is uncertain, there is haematuria, PVR is elevated, conservative management has failed, or surgical options are being considered (particularly for stress incontinence - mid-urethral sling procedures have good evidence). Urodynamic studies may be indicated before surgical intervention. Post-void residual can be measured with a portable bladder scanner in practices that have one, or arranged in secondary care.<sup>3</sup></p>
-  <p>Faecal incontinence is addressed separately - see the <a href="/geriatrics/faecal-incontinence/">faecal incontinence page</a>.</p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Milsom I, Altman D, Cartwright R, et al. Epidemiology of urinary incontinence and other lower urinary tract symptoms. In: Abrams P, et al., eds. *Incontinence: 5th International Consultation on Incontinence*. Paris: ICUD-EAU; 2013.
-2. Dumoulin C, Cacciari LP, Hay-Smith EJC. Pelvic floor muscle training versus no treatment, or inactive control treatments, for urinary incontinence in women. *Cochrane Database Syst Rev.* 2018;10:CD005654.
-3. Wagg A, Gibson W, Ostaszkiewicz J, et al. Urinary incontinence in frail elderly persons: report from the 5th International Consultation on Incontinence. *Neurourol Urodyn.* 2015;34(5):398-406.
-
-</div>
+  <p>If pharmacotherapy is needed for urgency incontinence, the beta-3 agonist mirabegron is preferred over anticholinergics (oxybutynin, solifenacin, tolterodine) in older adults because it does not carry anticholinergic cognitive burden. Mirabegron is subsidised in New Zealand under Special Authority for overactive blad

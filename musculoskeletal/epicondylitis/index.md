@@ -49,9 +49,4 @@ permalink: /msk/epicondylitis/
 
 **References**
 
-1. Smidt N, van der Windt DA, Assendelft WJ, et al. Corticosteroid injections, physiotherapy, or a wait-and-see policy for lateral epicondylitis: a randomised controlled trial. *Lancet.* 2002;359(9307):657-662.
-2. Coombes BK, Bisset L, Vincenzino B. Efficacy and safety of corticosteroid injection and other interventions for management of tendinopathy: a systematic review of randomised controlled trials. *Lancet.* 2010;376(9754):1751-1767.
-3. Bisset L, Paatelma M, Stockfotfe-Jorgensen B, et al. Diagnostic accuracy of clinical tests for lateral epicondyleal tendinopathy: a systematic review. *Br J Sports Med.* 2015;49(5):328-336.
-4. Raman J, MacDermid JC, Grewal R. Effectiveness of different methods of resistance exercises in lateral epicondylitis - a systematic review. *J Hand Ther.* 2012;25(1):5-26.
-
-</div>
+1. Smidt N, van der Wi

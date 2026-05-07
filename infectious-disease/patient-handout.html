@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Childhood Immunisation | Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+    .hero{max-width:680px;margin:0 auto;padding:2.5rem 2rem 1.75rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+    .print-bar{max-width:680px;margin:0 auto;padding:.75rem 2rem;display:flex;justify-content:flex-end}
+    .print-btn{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--rule);color:var(--ink-mute);padding:.45rem 1rem;border-radius:50px;cursor:pointer;transition:all .15s}
+    .print-btn:hover{color:var(--green);border-color:var(--green)}
+    .glance{background:var(--warm);border-radius:14px;padding:1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
+    .glance-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
+    .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+    .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
+    .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
+    .acc-item.open .chevron{transform:rotate(90deg)}
+    .acc-body{display:none;padding:1.25rem 1.4rem 1.5rem;background:var(--paper);border-top:1px solid var(--rule);font-size:.95rem;color:var(--ink-soft);line-height:1.72}
+    .acc-item.open .acc-body{display:block}
+    .acc-body p+p{margin-top:.75rem}
+    .acc-body ul,.acc-body ol{padding-left:1.25rem;margin:.5rem 0}
+    .acc-body li{margin-bottom:.3rem}
+    .data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.9rem}
+    .data-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.7rem 1rem;background:var(--deep);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+    .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:nth-child(even) td{background:var(--warm)}
+    .alert-box{background:#FDF6EE;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
+    .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
+    .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
+    .alert-box ul{padding-left:1.25rem}
+    .alert-box ul li{margin-bottom:.4rem}
+    .resources{background:var(--warm);border-radius:12px;padding:1.5rem;margin-top:2rem}
+    .resources-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+    .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
+    .resources a:hover{text-decoration:underline}
+    .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
+    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
+    .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
+    .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1.5rem 2rem 2rem}
+    .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
+    .refs-toggle:hover{color:var(--green)}
+    .refs-list{display:none;margin-top:1rem}
+    .refs-list.on{display:block}
+    .refs-list ol{padding-left:1.4rem}
+    .refs-list li{font-size:.8rem;color:var(--ink-mute);line-height:1.6;margin-bottom:.45rem}
+    .page-footer{text-align:center;font-size:.8rem;color:var(--ink-mute);padding:1.25rem 2rem 2rem;border-top:1px solid var(--rule);max-width:680px;margin:0 auto}
+    @media print{
+      .masthead-crumb,.print-bar,.refs-section,.page-footer{display:none}
+      .acc-body{display:block!important;padding:.4rem 0}
+      .acc-head{background:none!important;font-size:1rem;padding:.5rem 0;border-bottom:1px solid #ccc;border-radius:0}
+      .acc-item{border:none;margin-bottom:.5rem;border-radius:0}
+      body{font-size:.85rem}
+      .alert-box,.data-table{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/vaccines/" class="masthead-crumb">Vaccines</a>
+</header>
+
+<div class="hero">
+  <div class="kicker">❍ Vaccines</div>
+  <h1>Childhood <em>Immunisation</em></h1>
+  <p class="hero-lead">Vaccination trains your child's immune system to recognise dangerous diseases before exposure. The New Zealand National Immunisation Schedule is free, safe, and one of the most effective public health tools we have.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+
+  <div class="glance">
+    <div>
+      <div class="glance-label">Protection</div>
+      <div class="glance-value">95%+</div>
+      <div class="glance-desc">Vaccine coverage needed for herd immunity</div>
+    </div>
+    <div>
+      <div class="glance-label">Schedule</div>
+      <div class="glance-value">Free</div>
+      <div class="glance-desc">All NZ childhood vaccines included</div>
+    </div>
+    <div>
+      <div class="glance-label">Safety</div>
+      <div class="glance-value">Monitored</div>
+      <div class="glance-desc">CARM reviews all adverse reports</div>
+    </div>
+    <div>
+      <div class="glance-label">Preventable</div>
+      <div class="glance-value">Measles</div>
+      <div class="glance-desc">One dose prevents 93%, two prevent 97%</div>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-head">
+      How vaccines work
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Vaccines work by training your child's immune system to recognise and fight specific diseases without actually causing the disease itself. When a vaccine is given, it introduces an antigen, a protein or other molecule from the pathogen (the disease-causing organism). This antigen might come from a weakened version of the pathogen, an inactivated version, or just a fragment of the pathogen's protein coat. The immune system sees this antigen and mounts a response: it creates antibodies and primes special immune cells to remember this invader.</p>
+      <p>This immunological memory is the whole point of vaccination. When your child is later exposed to the real, virulent pathogen, the immune system recognises it instantly and responds with extraordinary speed and force. Often the virus or bacterium is defeated before it can cause disease at all. Sometimes a mild infection occurs, but it is far less severe than the natural disease would be. This protection can last for decades, even a lifetime depending on the vaccine.</p>
+      <p>Different vaccines use different technologies because different pathogens require different approaches. Live attenuated vaccines (such as MMR and varicella) contain weakened virus that replicates slowly in the body without causing disease. Inactivated vaccines (such as polio vaccine) contain virus that has been killed and cannot replicate at all. Subunit vaccines (such as the pertussis component in Infanrix) contain only specific proteins from the pathogen. Conjugate vaccines (such as those against Haemophilus influenzae type b) link a bacterial sugar coat to a protein to boost the immune response. Each type has different handling and storage requirements and different schedules for booster doses. The choice of vaccine type is informed by decades of research into what works best for each disease.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Herd immunity and why it matters
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Herd immunity is a powerful concept that explains why vaccinating your child protects not just your child, but people around them, including those who cannot be vaccinated. When a sufficiently high proportion of a population is immune to a disease, the pathogen runs out of susceptible people to infect and cannot spread easily through the community. The threshold varies depending on how infectious the disease is. Measles, for example, is extraordinarily infectious and requires approximately 95% of the population to be immune to prevent outbreaks. Other diseases require lower thresholds. The key point is that vaccination is not just an individual act, it is a collective protection.</p>
+      <p>This matters because some people cannot be vaccinated. Newborns are too young to receive most vaccines. Some individuals have genuine medical contraindications, such as allergies to vaccine components or certain types of immunosuppression. Pregnant women cannot receive live vaccines. These vulnerable people depend on herd immunity for protection. When vaccination rates fall below the critical threshold, herd immunity collapses and outbreaks occur. New Zealand has experienced measles outbreaks in recent years linked to declining vaccination rates. During an outbreak, measles spreads rapidly through clusters of unvaccinated people and can reach newborns and immunocompromised individuals who have no direct protection.</p>
+      <p>When you vaccinate your child, you are making a choice that protects your own child and simultaneously contributes to community protection. This is why public health authorities encourage high vaccination coverage. It is also why they carefully track vaccination rates in schools and communities and respond quickly to outbreaks by offering catch-up vaccination programmes.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      The NZ immunisation schedule
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>New Zealand's National Immunisation Schedule is carefully designed and free to all children. Vaccinations begin at 6 weeks of age and continue through childhood, with additional boosters in adulthood and older age. The schedule is based on decades of research into when children are most vulnerable to each disease and when their immune systems are most able to mount a protective response.</p>
+      <p>In infancy, the schedule is intensive because this is when children are most vulnerable. At 6, 3, and 5 months, children receive Infanrix-hexa (which protects against diphtheria, tetanus, pertussis, hepatitis B, polio, and Haemophilus influenzae type b), along with rotavirus and pneumococcal conjugate vaccines. The timing reflects the natural waning of maternal antibodies, which provide temporary passive protection from birth but decline over the first few months of life. At 12 months and 15 months, children receive MMR (measles, mumps, rubella), meningococcal B, and a second pneumococcal dose. By 4 years of age, booster doses reinforce immunity. At Year 8 (age 11-12), the HPV vaccine (Gardasil 9) protects against cancers caused by human papillomavirus, and a Tdap booster protects against pertussis. Adolescents and adults receive periodic booster doses of tetanus and diphtheria. Older adults receive shingles and pneumococcal vaccines.</p>
+      <p>Each vaccine on the schedule was placed there because the disease it prevents is either common enough to pose significant risk, or serious enough that prevention is vital. The schedule has been continuously refined over many years and is now one of the most successful public health achievements in New Zealand's history.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Common concerns, addressed
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p><strong>Do vaccines cause autism?</strong> No. This concern originated from a fraudulent 1998 paper by Andrew Wakefield claiming a link between the MMR vaccine and autism. The paper has been completely retracted and Wakefield was struck off the medical register. Since then, multiple large epidemiological studies involving millions of children in different countries have found no link whatsoever between any vaccine and autism. The scientific consensus is overwhelming and unambiguous. The original study was not only wrong but dishonest, and it has caused immeasurable harm by frightening parents away from vaccines and allowing preventable diseases to return.</p>
+      <p><strong>Are too many vaccines given at once?</strong> Giving multiple vaccines at a single visit is safe and actually better than spacing them out. Children's immune systems encounter thousands of foreign antigens every single day from the environment, from food, and from normal bacteria living on their skin. Multiple vaccines administered together represent a tiny fraction of the immune challenge that a child faces naturally. The combination also makes practical sense: it reduces the number of clinic visits and, crucially, protects your child during the most vulnerable window. Spacing out vaccines means leaving gaps when your child is unprotected against diseases that pose real risk.</p>
+      <p><strong>Is natural immunity better?</strong> Infection does sometimes produce more durable antibody responses than vaccination, and some people claim natural immunity is superior. This is partly true but it misses the point: natural immunity comes at the cost of having the disease. For measles, the natural infection carries a significant risk of serious complications including encephalitis and death. Vaccination produces robust immunity without this risk. For tetanus, natural infection rarely produces lasting immunity at all. For many vaccine-preventable diseases, the complications of the disease far outweigh any theoretical advantage of natural immunity.</p>
+      <p><strong>My child is healthy, do they really need vaccines?</strong> Yes. Some parents reason that because their child is healthy and has strong nutrition and a good living situation, they are less likely to catch serious diseases and therefore less likely to suffer complications. This reasoning fails because some of the most severe complications of vaccine-preventable diseases occur in previously healthy children. A healthy 2-year-old can develop measles encephalitis and brain damage. A healthy teenager can develop meningococcal disease and sepsis. Vaccines do not prevent infection in all cases, but they profoundly reduce the risk of severe disease if infection does occur. Healthy children need vaccines precisely because we cannot predict which child will be the one to have complications.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      After vaccination: what to expect
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Most children experience mild side effects after vaccination, and these are normal signs that the immune system is responding. Common local reactions include redness, swelling, or soreness at the injection site, which typically resolve within a few days. Some children develop a low-grade fever in the hours after vaccination, particularly after live vaccines such as MMR. Many become irritable or unusually sleepy. A mild rash may appear after MMR vaccination, usually 7-10 days later. These are all expected and benign reactions. Paracetamol can help with fever or discomfort if needed.</p>
+      <p>Serious adverse reactions are extraordinarily rare. Anaphylaxis (a severe allergic reaction) occurs in approximately 1-2 cases per million doses. This is why you are asked to remain in the clinic for 15-20 minutes after vaccination, so that if this rare reaction occurs it can be immediately treated with adrenaline. No vaccine is perfectly safe in the sense that no medical intervention has zero risk, but the risks from vaccination are vastly smaller than the risks from the diseases they prevent.</p>
+      <p>If your child has a severe reaction after vaccination, this should be reported to your GP immediately. Reactions are also reported to CARM (Centre for Adverse Reactions Monitoring), which is part of Medsafe and continuously monitors vaccine safety across New Zealand. This system has detected and responded to rare safety signals in the past. The system works because of transparent reporting and rigorous analysis.</p>
+    </div>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Age</th>
+        <th>Vaccines given</th>
+        <th>Diseases protected against</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>6 weeks</td>
+        <td>Infanrix-hexa, Rotarix, Synflorix</td>
+        <td>Diphtheria, tetanus, pertussis, hepatitis B, Hib, polio; rotavirus; pneumococcal</td>
+      </tr>
+      <tr>
+        <td>3 months</td>
+        <td>Infanrix-hexa, Rotarix, Synflorix</td>
+        <td>Diphtheria, tetanus, pertussis, hepatitis B, Hib, polio; rotavirus; pneumococcal (2nd dose)</td>
+      </tr>
+      <tr>
+        <td>5 months</td>
+        <td>Infanrix-hexa, Synflorix</td>
+        <td>Diphtheria, tetanus, pertussis, hepatitis B, Hib, polio; pneumococcal (3rd dose)</td>
+      </tr>
+      <tr>
+        <td>12 months</td>
+        <td>MMR-II, Synflorix, MenB</td>
+        <td>Measles, mumps, rubella; pneumococcal (booster); meningococcal B</td>
+      </tr>
+      <tr>
+        <td>15 months</td>
+        <td>MMRV, Hib-MenC</td>
+        <td>Measles, mumps, rubella, varicella; Hib, meningococcal C</td>
+      </tr>
+      <tr>
+        <td>4 years</td>
+        <td>Infanrix-IPV, MMR-II</td>
+        <td>Diphtheria, tetanus, pertussis, polio; measles, mumps, rubella (booster)</td>
+      </tr>
+      <tr>
+        <td>Year 8 (11-12 yrs)</td>
+        <td>Gardasil 9, Tdap</td>
+        <td>HPV (9 strains); tetanus, diphtheria, pertussis booster</td>
+      </tr>
+      <tr>
+        <td>45 years</td>
+        <td>Tdap</td>
+        <td>Tetanus, diphtheria, pertussis booster</td>
+      </tr>
+      <tr>
+        <td>65 years</td>
+        <td>Zostavax, influenza, pneumococcal</td>
+        <td>Shingles, influenza, pneumococcal disease</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <div class="alert-head">When to seek medical advice</div>
+    <p>Contact your nurse or GP promptly if your child has any of the following after vaccination:</p>
+    <ul>
+      <li>A fever above 40 degrees Celsius</li>
+      <li>Inconsolable crying lasting more than 3 hours</li>
+      <li>Limpness, unusual sleepiness, or pallor</li>
+      <li>Any signs of allergic reaction: swelling of the face, lips, or tongue, difficulty breathing, or widespread hives</li>
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="resources-head">NZ Resources</div>
+    <a href="https://www.health.govt.nz/immunisation">Immunise.health.nz (NZ Ministry of Health)</a>
+    <a href="https://medsafe.govt.nz/profs/adverse/CARM.htm">CARM: Centre for Adverse Reactions Monitoring</a>
+    <a href="https://healthify.nz">Healthify NZ - Immunisation</a>
+    <p>For questions, call your GP or practice nurse, or contact Healthline on 0800 611 116.</p>
+  </div>
+
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">Show references</button>
+  <div id="refs" class="refs-list">
+    <ol>
+      <li>Ministry of Health NZ. Immunisation Handbook 2020. 3rd ed. Wellington: Ministry of Health; 2020.</li>
+      <li>Taylor LE, Swerdfeger AL, Eslick GD. Vaccines are not associated with autism: an evidence-based meta-analysis of case-control and cohort studies. Vaccine. 2014;32(29):3623-9.</li>
+      <li>Fine P, Eames K, Heymann DL. "Herd immunity": a rough guide. Clin Infect Dis. 2011;52(7):911-6.</li>
+      <li>Maglione MA, Das L, Raaen L, et al. Safety of vaccines used for routine immunization of US children: a systematic review. Pediatrics. 2014;134(2):325-37.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <p>This handout is for information only and does not replace advice from your doctor or nurse. Always discuss your child's vaccination with your healthcare provider.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+
+</body>
+</html>

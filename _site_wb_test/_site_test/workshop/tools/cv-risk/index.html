@@ -1055,7 +1055,7 @@ a:hover { color: var(--green); }
 
     <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
       Why does PREDICT use 5 years instead of 10?
-      <span class="chevron">‚ñº</span>
+      <span class="chevron">‚-º</span>
     </button>
     <div class="expander-body">
       <p>PREDICT was derived from NZ primary care records with a median follow-up of around 4‚Äì5 years. A 10-year endpoint would have required extrapolation beyond the observed data, which introduces uncertainty. The 5-year horizon also fits more naturally into GP review cycles and makes the benefit of treatment more tangible to patients ‚Äî "reducing your risk over the next 5 years from 18% to 10%" is easier to grasp than "over 10 years."</p>
@@ -1064,7 +1064,7 @@ a:hover { color: var(--green); }
 
     <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
       How does PREDICT handle MƒÅori and Pacific risk?
-      <span class="chevron">‚ñº</span>
+      <span class="chevron">‚-º</span>
     </button>
     <div class="expander-body">
       <p>PREDICT was explicitly derived and validated in MƒÅori, Pacific, Indian, and NZ European cohorts separately. The ethnicity terms in the equation reflect residual risk that isn't explained by the shared risk factors ‚Äî meaning that at identical age, BP, cholesterol, and smoking status, MƒÅori patients have meaningfully higher observed CVD event rates.</p>
@@ -1074,7 +1074,7 @@ a:hover { color: var(--green); }
 
     <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
       What does deprivation add that clinical variables don't capture?
-      <span class="chevron">‚ñº</span>
+      <span class="chevron">‚-º</span>
     </button>
     <div class="expander-body">
       <p>Socioeconomic deprivation predicts CVD events independently of the standard clinical risk factors ‚Äî probably through mechanisms including chronic stress, reduced health-seeking, poorer medication adherence, higher dietary sodium and ultra-processed food intake, and environmental exposures. The NZ Deprivation Index (NZDep) is a census-derived area-based measure scored 1‚Äì10 by meshblock.</p>
@@ -1084,7 +1084,7 @@ a:hover { color: var(--green); }
 
     <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
       When shouldn't I use PREDICT?
-      <span class="chevron">‚ñº</span>
+      <span class="chevron">‚-º</span>
     </button>
     <div class="expander-body">
       <p>PREDICT is a <strong>primary prevention</strong> tool. Do not use it when:</p>
@@ -1100,7 +1100,7 @@ a:hover { color: var(--green); }
 
     <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
       QRISK3 includes more variables than PREDICT ‚Äî is it better?
-      <span class="chevron">‚ñº</span>
+      <span class="chevron">‚-º</span>
     </button>
     <div class="expander-body">
       <p>QRISK3 is more complex, incorporating 20+ variables including SLE, RA, severe mental illness, erectile dysfunction, migraine, and corticosteroid use. Its C-statistic (discriminatory ability) is marginally better than QRISK2 in UK populations. But "more variables" doesn't automatically mean "better for your patient."</p>
@@ -1206,7 +1206,7 @@ function predictNZ(age, tc, hdl, sbp, bpTreated, smokingStatus, diabetesType,
 
   // --- T1 diabetes: Framingham uses yes/no diabetes; T1 carries higher risk ---
   if (diabetesType === 't1') {
-    // T1 HR ~2√ó vs T2 (PREDICT 2018); apply additional multiplier
+    // T1 HR ~2√- vs T2 (PREDICT 2018); apply additional multiplier
     const baseDiabAddend = framingham10yr(age, tc, hdl, sbp, bpTreated, smoker, 1, sex)
                          - framingham10yr(age, tc, hdl, sbp, bpTreated, smoker, 0, sex);
     risk10 = Math.min(risk10 + 0.8 * baseDiabAddend, 0.999);

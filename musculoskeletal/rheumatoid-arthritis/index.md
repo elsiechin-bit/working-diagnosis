@@ -62,45 +62,4 @@ permalink: /msk/rheumatoid-arthritis/
     NSAIDs provide symptomatic relief while awaiting rheumatology assessment. Use with standard caution regarding renal function, cardiovascular risk, and GI protection. Low-dose prednisolone is sometimes used as a bridging measure before DMARD initiation, but this should be at rheumatology's direction.
   </p>
   <p>
-    Urgent referral target is assessment within 2-4 weeks. If local wait times are longer, contact the rheumatology team directly - many will advise on investigation and interim management by phone or through an urgent advice pathway.
-  </p>
-</div>
-
-<div class="tier-3">
-  <p class="tier-label">❍ DMARDs and biologics: the landscape</p>
-  <p>
-    Disease-modifying antirheumatic drugs (DMARDs) are the cornerstone of RA management. Methotrexate is the first-line agent in New Zealand and is PHARMAC-funded. The standard approach is weekly oral methotrexate with folic acid supplementation, with dose titration according to response and tolerability. Hydroxychloroquine, sulfasalazine, and leflunomide are alternatives, used alone or in combination with methotrexate.
-  </p>
-  <p>
-    The treat-to-target principle - achieving remission or low disease activity, as measured by composite scores such as DAS28 - guides dose adjustments and escalation decisions. Patients who fail to achieve adequate disease control on conventional DMARDs are candidates for biological therapy.<sup>2</sup>
-  </p>
-  <p>
-    Biological therapies are PHARMAC-funded under Special Authority criteria for patients with established RA who have failed adequate trials of conventional DMARDs. TNF inhibitors (etanercept, adalimumab, certolizumab) are most commonly used. JAK inhibitors (baricitinib, tofacitinib) are an alternative class with oral administration. Long-term monitoring requirements - including infection screening and cardiovascular risk assessment - are managed by rheumatology.
-  </p>
-  <p>
-    A meta-analysis of early RA cohorts showed that each month of delay before DMARD initiation is associated with measurable worsening of long-term radiographic outcomes.<sup>4</sup> This is the clinical basis for urgent referral: the treatment window is not indefinite.
-  </p>
-</div>
-
-</div>
-<aside class="topic-aside">
-  <p class="aside-kicker">Clinician links</p>
-  <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.arthritis.org.nz" target="_blank" rel="noopener">Arthritis New Zealand: RA information and support</a></li>
-    <li><a href="https://www.pharmac.govt.nz" target="_blank" rel="noopener">PHARMAC: DMARD and biologic funding criteria</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Rheumatoid arthritis pathway</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Aletaha D, Neogi T, Silman AJ, et al. 2010 Rheumatoid arthritis classification criteria: an American College of Rheumatology/European League Against Rheumatism collaborative initiative. *Arthritis Rheum.* 2010;62(9):2569-2581.
-2. Smolen JS, Landewe R, Breedveld FC, et al. EULAR recommendations for the management of rheumatoid arthritis with synthetic and biological disease-modifying antirheumatic drugs: 2019 update. *Ann Rheum Dis.* 2020;79(6):685-699.
-3. McInnes IB, O'Dell JR. State-of-the-art: rheumatoid arthritis. *Ann Rheum Dis.* 2010;69(11):1898-1906.
-4. Finckh A, Liang MH, van Herckenrode CM, de Pablo P. Long-term impact of early treatment on radiographic progression in rheumatoid arthritis: a meta-analysis. *Arthritis Rheum.* 2006;55(6):864-872.
-
-</div>
+    Urgent referral target is assessment within 2-4 weeks. If local wait times are longer, contact 

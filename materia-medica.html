@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>本草 — Interactive Compendium of Chinese Medicines</title>
+<title>本草 - Interactive Compendium of Chinese Medicines</title>
 <style>
   :root {
     --bg: #14100e;
@@ -707,9 +707,9 @@
   <p class="subtitle">An interactive compendium of Chinese herbal medicines, classical formulas, and patent preparations</p>
   <p class="tag">Pinyin · Chinese characters · pharmaceutical Latin · TCM categories and properties · active constituents · modern evidence base · safety, toxicity and drug interactions.</p>
   <div class="disclaimer">
-    <strong>Educational reference only — not medical advice.</strong> Chinese herbal medicine carries specific safety considerations not always present with Western herbs:
+    <strong>Educational reference only - not medical advice.</strong> Chinese herbal medicine carries specific safety considerations not always present with Western herbs:
     <ul>
-      <li><strong>Quality &amp; adulteration:</strong> patent products imported from outside regulated supply chains have been found to contain undeclared pharmaceuticals (corticosteroids, NSAIDs, sildenafil, sibutramine, warfarin), heavy metals (lead, mercury, arsenic — especially "mineral" preparations), and pesticides.</li>
+      <li><strong>Quality &amp; adulteration:</strong> patent products imported from outside regulated supply chains have been found to contain undeclared pharmaceuticals (corticosteroids, NSAIDs, sildenafil, sibutramine, warfarin), heavy metals (lead, mercury, arsenic - especially "mineral" preparations), and pesticides.</li>
       <li><strong>Substitution &amp; misidentification:</strong> historical contamination of <em>Stephania tetrandra</em> (Han Fang Ji) with <em>Aristolochia fangchi</em> caused an epidemic of nephropathy and urothelial cancer in the 1990s. <em>Aristolochia</em> spp. are now banned in most jurisdictions.</li>
       <li><strong>Toxic herbs in routine use:</strong> Aconite (Fu Zi), Ephedra (Ma Huang), and Polygonum multiflorum (He Shou Wu) are commonly used in classical formulas but require correct processing (paozhi) and carry serious risk if misused.</li>
       <li><strong>Drug interactions:</strong> well documented with warfarin, immunosuppressants, antiretrovirals, and chemotherapy. Always disclose herbal use to clinicians.</li>
@@ -718,7 +718,7 @@
   <div class="banned-banner">
     <h3>⚠ Banned / Restricted: Aristolochic-acid containing herbs</h3>
     <p>
-      <strong>Avoid completely:</strong> Guan Mu Tong (<em>Aristolochia manshuriensis</em>), Guang Fang Ji (<em>A. fangchi</em>), Ma Dou Ling (<em>A. debilis</em>), Tian Xian Teng, Qing Mu Xiang, Xun Gu Feng. Aristolochic acid is nephrotoxic and a Group 1 IARC carcinogen — causes "Chinese herb nephropathy" / Balkan endemic nephropathy and urothelial carcinoma. Banned by FDA, EMA, MHRA, TGA, Health Canada, Medsafe NZ.
+      <strong>Avoid completely:</strong> Guan Mu Tong (<em>Aristolochia manshuriensis</em>), Guang Fang Ji (<em>A. fangchi</em>), Ma Dou Ling (<em>A. debilis</em>), Tian Xian Teng, Qing Mu Xiang, Xun Gu Feng. Aristolochic acid is nephrotoxic and a Group 1 IARC carcinogen - causes "Chinese herb nephropathy" / Balkan endemic nephropathy and urothelial carcinoma. Banned by FDA, EMA, MHRA, TGA, Health Canada, Medsafe NZ.
     </p>
   </div>
   <div class="legend">
@@ -735,13 +735,13 @@
   <div class="controls-inner">
     <div class="search-wrap">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="search" id="search" placeholder="Search Pinyin, 中文, English, compound, or condition (e.g. 'berberine', 'angina', '黄连')…">
+      <input type="search" id="search" placeholder="Search Pinyin, 中�-�, English, compound, or condition (e.g. 'berberine', 'angina', '黄连')…">
     </div>
     <div class="filter-group">
       <span class="filter-label">Type:</span>
       <button class="chip type-chip active" data-type="all">All</button>
       <button class="chip type-chip" data-type="herb">Single Herb 单味</button>
-      <button class="chip type-chip" data-type="formula">Formula 方剂</button>
+      <button class="chip type-chip" data-type="formula">Formula �-�剂</button>
       <button class="chip type-chip" data-type="patent">Patent 中成药</button>
     </div>
     <div class="filter-group">
@@ -760,10 +760,10 @@
       <button class="chip cat-chip" data-cat="stop-bleeding">Stop Bleeding 止血</button>
       <button class="chip cat-chip" data-cat="extinguish-wind">Extinguish Wind 熄风</button>
       <button class="chip cat-chip" data-cat="astringe">Astringe 收涩</button>
-      <button class="chip cat-chip" data-cat="resolve-phlegm">Resolve Phlegm 化痰</button>
+      <button class="chip cat-chip" data-cat="resolve-phlegm">Resolve Phlegm �-�-�</button>
       <button class="chip cat-chip" data-cat="regulate-qi">Regulate Qi 理气</button>
     </div>
-    <span class="count" id="count">— entries</span>
+    <span class="count" id="count">- entries</span>
   </div>
 </div>
 <main>
@@ -798,7 +798,7 @@ const CAT_LABELS = {
   'stop-bleeding': { en: 'Stop Bleeding', zh: '止血' },
   'extinguish-wind': { en: 'Extinguish Wind', zh: '熄风' },
   'astringe': { en: 'Astringe', zh: '收涩' },
-  'resolve-phlegm': { en: 'Resolve Phlegm', zh: '化痰' },
+  'resolve-phlegm': { en: 'Resolve Phlegm', zh: '�-�-�' },
   'regulate-qi': { en: 'Regulate Qi', zh: '理气' }
 };
 // =============== DATA ===============
@@ -824,13 +824,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Insomnia, headache, palpitations', 'GI upset'],
-      caution: ['Hot/yang-excess pattern (red face, hypertension, agitation) — TCM contraindicates', 'Pregnancy (rodent teratogenicity)', 'Hormone-sensitive cancers (in vitro oestrogenic effects)', 'Avoid concurrent strong tea or radish (traditional incompatibility — also reduced bioavailability)'],
-      interactions: ['Warfarin — case reports of decreased INR with P. ginseng', 'MAOIs — mania, headache reported', 'Antidiabetics — additive hypoglycaemia', 'Imatinib, immunosuppressants — theoretical CYP3A4 interaction']
+      caution: ['Hot/yang-excess pattern (red face, hypertension, agitation) - TCM contraindicates', 'Pregnancy (rodent teratogenicity)', 'Hormone-sensitive cancers (in vitro oestrogenic effects)', 'Avoid concurrent strong tea or radish (traditional incompatibility - also reduced bioavailability)'],
+      interactions: ['Warfarin - case reports of decreased INR with P. ginseng', 'MAOIs - mania, headache reported', 'Antidiabetics - additive hypoglycaemia', 'Imatinib, immunosuppressants - theoretical CYP3A4 interaction']
     },
-    dose: 'Decoction 3–9 g; in collapse 15–30 g. Standardised extracts 200–400 mg/day.',
+    dose: 'Decoction 3-9 g; in collapse 15-30 g. Standardised extracts 200-400 mg/day.',
     refs: [
-      'Barton DL et al. JNCI. 2013 — Ginseng for cancer-related fatigue.',
-      'Jang DJ et al. Br J Clin Pharmacol. 2008 — Red ginseng for ED.',
+      'Barton DL et al. JNCI. 2013 - Ginseng for cancer-related fatigue.',
+      'Jang DJ et al. Br J Clin Pharmacol. 2008 - Red ginseng for ED.',
       'Chinese Pharmacopoeia 2020, Vol I.'
     ]
   },
@@ -840,10 +840,10 @@ const ENTRIES = [
     pharm: 'Astragalus membranaceus (radix)',
     properties: { taste: 'Sweet 甘', temp: 'Slightly warm 微温', channels: 'Lung, Spleen 肺脾' },
     primary: 'Tonifies spleen/lung qi, raises yang, stabilizes exterior',
-    traditional: 'Workhorse qi tonic, gentler and more economical than ginseng. Used for fatigue, spontaneous sweating, frequent colds (with Bai Zhu and Fang Feng in Yu Ping Feng San — "Jade Windscreen Powder"), prolapse and sagging (Bu Zhong Yi Qi Tang), and chronic ulcers (with Dang Gui in Dang Gui Bu Xue Tang). Modern Chinese medicine uses it widely as an oncologic adjuvant.',
+    traditional: 'Workhorse qi tonic, gentler and more economical than ginseng. Used for fatigue, spontaneous sweating, frequent colds (with Bai Zhu and Fang Feng in Yu Ping Feng San - "Jade Windscreen Powder"), prolapse and sagging (Bu Zhong Yi Qi Tang), and chronic ulcers (with Dang Gui in Dang Gui Bu Xue Tang). Modern Chinese medicine uses it widely as an oncologic adjuvant.',
     compounds: [
-      { name: 'Astragalosides I–IV', class: 'Cycloartane saponin', action: 'Immunomodulatory; cardioprotective; astragaloside IV is the marker compound (Chinese Pharmacopoeia ≥0.04%).' },
-      { name: 'Astragalus polysaccharides (APS)', class: 'Polysaccharide', action: 'Major immunomodulatory fraction — TLR4 activation; restores T-cell function.' },
+      { name: 'Astragalosides I-IV', class: 'Cycloartane saponin', action: 'Immunomodulatory; cardioprotective; astragaloside IV is the marker compound (Chinese Pharmacopoeia ≥0.04%).' },
+      { name: 'Astragalus polysaccharides (APS)', class: 'Polysaccharide', action: 'Major immunomodulatory fraction - TLR4 activation; restores T-cell function.' },
       { name: 'Formononetin, calycosin', class: 'Isoflavone', action: 'Mild oestrogenic; antioxidant; vasodilator.' }
     ],
     uses: [
@@ -854,13 +854,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Generally very well tolerated', 'Bloating, loose stools at high doses'],
-      caution: ['Acute infection with high fever (TCM: avoid in exterior excess)', 'Autoimmune disease — theoretical immunostimulation', 'Pregnancy: limited data'],
-      interactions: ['Cyclophosphamide — may enhance immune recovery (intended in oncology context)', 'Immunosuppressants (ciclosporin, tacrolimus) — theoretical antagonism', 'Anticoagulants — minimal evidence of interaction']
+      caution: ['Acute infection with high fever (TCM: avoid in exterior excess)', 'Autoimmune disease - theoretical immunostimulation', 'Pregnancy: limited data'],
+      interactions: ['Cyclophosphamide - may enhance immune recovery (intended in oncology context)', 'Immunosuppressants (ciclosporin, tacrolimus) - theoretical antagonism', 'Anticoagulants - minimal evidence of interaction']
     },
-    dose: 'Decoction 9–30 g; in qi collapse / HF up to 60 g. Astragalus injection in China is regulated separately.',
+    dose: 'Decoction 9-30 g; in qi collapse / HF up to 60 g. Astragalus injection in China is regulated separately.',
     refs: [
-      'McCulloch M et al. JCO. 2006 — Astragalus + platinum in NSCLC meta-analysis.',
-      'Fu J et al. PLoS One. 2014 — Astragaloside in HF systematic review.',
+      'McCulloch M et al. JCO. 2006 - Astragalus + platinum in NSCLC meta-analysis.',
+      'Fu J et al. PLoS One. 2014 - Astragaloside in HF systematic review.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -869,7 +869,7 @@ const ENTRIES = [
     pinyin: 'Dǎng Shēn', han: '党参', en: 'Codonopsis',
     pharm: 'Codonopsis pilosula (radix)',
     properties: { taste: 'Sweet 甘', temp: 'Neutral 平', channels: 'Lung, Spleen 肺脾' },
-    primary: 'Mild qi tonic — "poor man\'s ginseng"',
+    primary: 'Mild qi tonic - "poor man\'s ginseng"',
     traditional: 'Substituted for ginseng in many modern formulas where the cost or warming intensity of Ren Shen is undesired. Tonifies middle-jiao qi, generates fluids, used for fatigue, poor appetite, chronic cough.',
     compounds: [
       { name: 'Codonopsis polysaccharides', class: 'Polysaccharide', action: 'Immunomodulatory; gastric mucosal protection.' },
@@ -885,9 +885,9 @@ const ENTRIES = [
       caution: ['Excess heat patterns'],
       interactions: ['Few documented; theoretical caution with anticoagulants based on platelet effects in vitro']
     },
-    dose: 'Decoction 9–30 g. Often substitutes Ren Shen 1:3 (i.e. 30 g Dang Shen ≈ 10 g Ren Shen).',
+    dose: 'Decoction 9-30 g. Often substitutes Ren Shen 1:3 (i.e. 30 g Dang Shen ≈ 10 g Ren Shen).',
     refs: [
-      'He JY et al. Chin Med. 2015 — Codonopsis pharmacology review.',
+      'He JY et al. Chin Med. 2015 - Codonopsis pharmacology review.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -895,11 +895,11 @@ const ENTRIES = [
     id: 'gan-cao', type: 'herb', cat: 'tonify-qi',
     pinyin: 'Gān Cǎo', han: '甘草', en: 'Licorice root',
     pharm: 'Glycyrrhiza uralensis (radix et rhizoma)',
-    properties: { taste: 'Sweet 甘', temp: 'Neutral 平 (raw) / Warm (honey-fried)', channels: 'All 12 channels — universal harmonizer' },
+    properties: { taste: 'Sweet 甘', temp: 'Neutral 平 (raw) / Warm (honey-fried)', channels: 'All 12 channels - universal harmonizer' },
     primary: 'Harmonizes all herbs; tonifies qi; clears heat-toxin; stops cough',
-    traditional: 'The most-used herb in classical Chinese medicine — present in roughly half of all formulas. Honey-fried (Zhi Gan Cao) tonifies; raw (Sheng Gan Cao) clears heat and detoxifies. Famously moderates harshness of other herbs. Forms eponymous formula Zhi Gan Cao Tang for arrhythmia.',
+    traditional: 'The most-used herb in classical Chinese medicine - present in roughly half of all formulas. Honey-fried (Zhi Gan Cao) tonifies; raw (Sheng Gan Cao) clears heat and detoxifies. Famously moderates harshness of other herbs. Forms eponymous formula Zhi Gan Cao Tang for arrhythmia.',
     compounds: [
-      { name: 'Glycyrrhizin (glycyrrhizic acid)', class: 'Triterpene saponin', action: 'Sweet taste (~50× sucrose); inhibits 11β-HSD2 → cortisol-like mineralocorticoid effect; hepatoprotective; antiviral (HBV, HCV).' },
+      { name: 'Glycyrrhizin (glycyrrhizic acid)', class: 'Triterpene saponin', action: 'Sweet taste (~50�- sucrose); inhibits 11β-HSD2 → cortisol-like mineralocorticoid effect; hepatoprotective; antiviral (HBV, HCV).' },
       { name: 'Glycyrrhetinic acid', class: 'Triterpene aglycone', action: 'Anti-inflammatory; main metabolite responsible for pseudoaldosteronism.' },
       { name: 'Liquiritin, liquiritigenin', class: 'Flavonoid', action: 'Antispasmodic; mild oestrogenic; anti-ulcer.' },
       { name: 'Isoliquiritigenin', class: 'Chalcone', action: 'Antitumor activity in preclinical models.' }
@@ -911,15 +911,15 @@ const ENTRIES = [
       { condition: 'Eczema (topical glycyrrhetinic acid)', evidence: 'limited', detail: 'Modest steroid-sparing effect.' }
     ],
     safety: {
-      common: ['Sodium and water retention, hypertension, hypokalaemia, oedema (pseudoaldosteronism) — dose-dependent, can occur at >2 g of dried root daily long-term'],
-      caution: ['Hypertension, heart failure, hypokalaemia, renal impairment — avoid', 'Pregnancy (preterm birth association in Finnish cohorts)', 'Use DGL when only mucosal effect needed'],
-      interactions: ['Diuretics — additive hypokalaemia → digoxin toxicity risk', 'Corticosteroids — potentiates effect (and adverse effects)', 'Warfarin — case reports either way', 'Antihypertensives — antagonism', 'Methotrexate — reduced clearance']
+      common: ['Sodium and water retention, hypertension, hypokalaemia, oedema (pseudoaldosteronism) - dose-dependent, can occur at >2 g of dried root daily long-term'],
+      caution: ['Hypertension, heart failure, hypokalaemia, renal impairment - avoid', 'Pregnancy (preterm birth association in Finnish cohorts)', 'Use DGL when only mucosal effect needed'],
+      interactions: ['Diuretics - additive hypokalaemia → digoxin toxicity risk', 'Corticosteroids - potentiates effect (and adverse effects)', 'Warfarin - case reports either way', 'Antihypertensives - antagonism', 'Methotrexate - reduced clearance']
     },
-    dose: 'Decoction 1.5–9 g (raw); higher in formulas with overt cardiovascular safety. DGL chewable 380–760 mg before meals.',
+    dose: 'Decoction 1.5-9 g (raw); higher in formulas with overt cardiovascular safety. DGL chewable 380-760 mg before meals.',
     refs: [
-      'Asl MN, Hosseinzadeh H. Phytother Res. 2008 — Glycyrrhiza review.',
-      'Omar HR et al. Eur J Intern Med. 2012 — Licorice toxicity review.',
-      'Manns MP et al. J Viral Hepat. 2012 — Glycyrrhizin in HCV.'
+      'Asl MN, Hosseinzadeh H. Phytother Res. 2008 - Glycyrrhiza review.',
+      'Omar HR et al. Eur J Intern Med. 2012 - Licorice toxicity review.',
+      'Manns MP et al. J Viral Hepat. 2012 - Glycyrrhizin in HCV.'
     ]
   },
   // ==================== TONIFY BLOOD ====================
@@ -929,27 +929,27 @@ const ENTRIES = [
     pharm: 'Angelica sinensis (radix)',
     properties: { taste: 'Sweet, pungent 甘辛', temp: 'Warm 温', channels: 'Liver, Heart, Spleen 肝心脾' },
     primary: 'Tonifies and moves blood; regulates menstruation',
-    traditional: 'The "female ginseng" — premier blood tonic for menstrual disorders, postpartum recovery, and blood-deficiency patterns (pallor, dizziness, palpitations). Different parts: head (Dang Gui Tou) tonifies, body (Shen) tonifies + moves, tail (Wei) breaks blood stasis. Anchor herb in Si Wu Tang and Dang Gui Bu Xue Tang.',
+    traditional: 'The "female ginseng" - premier blood tonic for menstrual disorders, postpartum recovery, and blood-deficiency patterns (pallor, dizziness, palpitations). Different parts: head (Dang Gui Tou) tonifies, body (Shen) tonifies + moves, tail (Wei) breaks blood stasis. Anchor herb in Si Wu Tang and Dang Gui Bu Xue Tang.',
     compounds: [
       { name: 'Z-Ligustilide', class: 'Phthalide (volatile oil)', action: 'Smooth muscle relaxant; antispasmodic on uterus; vasodilator; characteristic smell of the herb.' },
       { name: 'Ferulic acid', class: 'Phenolic acid', action: 'Antiplatelet, antioxidant, mild oestrogenic.' },
-      { name: 'Angelica polysaccharides', class: 'Polysaccharide', action: 'Stimulates erythropoiesis in animal models — proposed basis for blood tonifying.' }
+      { name: 'Angelica polysaccharides', class: 'Polysaccharide', action: 'Stimulates erythropoiesis in animal models - proposed basis for blood tonifying.' }
     ],
     uses: [
-      { condition: 'Menopausal vasomotor symptoms (alone)', evidence: 'negative', detail: 'Hirata 1997 RCT: 4.5 g/day for 24 weeks no different from placebo. Traditionally never used alone — combined in formulas.' },
+      { condition: 'Menopausal vasomotor symptoms (alone)', evidence: 'negative', detail: 'Hirata 1997 RCT: 4.5 g/day for 24 weeks no different from placebo. Traditionally never used alone - combined in formulas.' },
       { condition: 'Primary dysmenorrhoea (in formulas)', evidence: 'limited', detail: 'Multi-herb formulas containing Dang Gui (e.g. Si Wu Tang) show modest benefit; isolated herb data sparse.' },
       { condition: 'Iron-deficiency anaemia (Dang Gui Bu Xue Tang)', evidence: 'limited', detail: 'Small Chinese trials suggest improvement in chemotherapy-induced anaemia.' }
     ],
     safety: {
       common: ['Photosensitivity (furanocoumarin content)', 'Loose stools'],
-      caution: ['Pregnancy — uterine activity; avoid', 'Heavy menstrual bleeding (moves blood)', 'Diarrhoea (lubricating effect)'],
-      interactions: ['Warfarin — multiple case reports of raised INR / bleeding; clinically important', 'Antiplatelets — additive', 'Photosensitisers']
+      caution: ['Pregnancy - uterine activity; avoid', 'Heavy menstrual bleeding (moves blood)', 'Diarrhoea (lubricating effect)'],
+      interactions: ['Warfarin - multiple case reports of raised INR / bleeding; clinically important', 'Antiplatelets - additive', 'Photosensitisers']
     },
-    dose: 'Decoction 6–12 g.',
+    dose: 'Decoction 6-12 g.',
     refs: [
-      'Hirata JD et al. Fertil Steril. 1997 — Dong Quai for menopause RCT.',
-      'Page RL, Lawrence JD. Pharmacotherapy. 1999 — Dang Gui–warfarin interaction.',
-      'Chen XP et al. J Ethnopharmacol. 2013 — Pharmacology review.'
+      'Hirata JD et al. Fertil Steril. 1997 - Dong Quai for menopause RCT.',
+      'Page RL, Lawrence JD. Pharmacotherapy. 1999 - Dang Gui-warfarin interaction.',
+      'Chen XP et al. J Ethnopharmacol. 2013 - Pharmacology review.'
     ]
   },
   {
@@ -969,13 +969,13 @@ const ENTRIES = [
       { condition: 'Anaemia (in formulas)', evidence: 'insufficient', detail: 'Traditional indication; modern data limited.' }
     ],
     safety: {
-      common: ['Bloating, loose stools (cloying nature — combine with Sha Ren classically)'],
-      caution: ['Spleen-deficiency damp patterns', 'Diabetes — high sugar content'],
+      common: ['Bloating, loose stools (cloying nature - combine with Sha Ren classically)'],
+      caution: ['Spleen-deficiency damp patterns', 'Diabetes - high sugar content'],
       interactions: ['Few documented']
     },
-    dose: 'Decoction 9–30 g.',
+    dose: 'Decoction 9-30 g.',
     refs: [
-      'Zhang RX et al. J Ethnopharmacol. 2008 — Rehmannia review.',
+      'Zhang RX et al. J Ethnopharmacol. 2008 - Rehmannia review.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -998,13 +998,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Generally well tolerated as food'],
-      caution: ['Documented anaphylaxis — rare'],
-      interactions: ['Warfarin — multiple case reports of raised INR with goji tea/juice; clinically important to ask about', 'Antidiabetic agents — additive']
+      caution: ['Documented anaphylaxis - rare'],
+      interactions: ['Warfarin - multiple case reports of raised INR with goji tea/juice; clinically important to ask about', 'Antidiabetic agents - additive']
     },
-    dose: 'Decoction 6–12 g; or eaten 10–30 g daily as food.',
+    dose: 'Decoction 6-12 g; or eaten 10-30 g daily as food.',
     refs: [
-      'Bucheli P et al. Optom Vis Sci. 2011 — Goji and macular pigment.',
-      'Lam AY et al. Ann Pharmacother. 2001 — Goji–warfarin case.',
+      'Bucheli P et al. Optom Vis Sci. 2011 - Goji and macular pigment.',
+      'Lam AY et al. Ann Pharmacother. 2001 - Goji-warfarin case.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1029,13 +1029,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Generally well tolerated', 'Mild GI upset, dry mouth'],
-      caution: ['Wild Tibetan product — heavy metal contamination (arsenic) reported', 'Autoimmune disease — theoretical immunostimulation'],
-      interactions: ['Anticoagulants — possible additive', 'Immunosuppressants — theoretical antagonism (used together in some Chinese transplant protocols, monitor)']
+      caution: ['Wild Tibetan product - heavy metal contamination (arsenic) reported', 'Autoimmune disease - theoretical immunostimulation'],
+      interactions: ['Anticoagulants - possible additive', 'Immunosuppressants - theoretical antagonism (used together in some Chinese transplant protocols, monitor)']
     },
-    dose: 'Wild Cordyceps 3–9 g powder; cultivated mycelium 1–3 g/day.',
+    dose: 'Wild Cordyceps 3-9 g powder; cultivated mycelium 1-3 g/day.',
     refs: [
-      'Zhang HW et al. Cochrane. 2014 — Cordyceps in CKD.',
-      'Chen S et al. J Altern Complement Med. 2010 — CS-4 in athletes.',
+      'Zhang HW et al. Cochrane. 2014 - Cordyceps in CKD.',
+      'Chen S et al. J Altern Complement Med. 2010 - CS-4 in athletes.',
       'EFSA Scientific Opinion 2020 on cordycepin.'
     ]
   },
@@ -1046,13 +1046,13 @@ const ENTRIES = [
     pharm: 'Coptis chinensis (rhizoma)',
     properties: { taste: 'Bitter 苦', temp: 'Cold 寒', channels: 'Heart, Spleen, Stomach, Liver, Gallbladder, LI 心脾胃肝胆大肠' },
     primary: 'Drains fire, clears heat, dries dampness, resolves toxin',
-    traditional: 'The bitterest commonly-used herb. Drains "stomach fire" (gastritis, mouth ulcers) and "heart fire" (insomnia, agitation). Found in Huang Lian Jie Du Tang, Sang Ju Yin, Wu Mei Wan. Berberine — its principal alkaloid — has become one of the best-studied phytochemicals in modern medicine.',
+    traditional: 'The bitterest commonly-used herb. Drains "stomach fire" (gastritis, mouth ulcers) and "heart fire" (insomnia, agitation). Found in Huang Lian Jie Du Tang, Sang Ju Yin, Wu Mei Wan. Berberine - its principal alkaloid - has become one of the best-studied phytochemicals in modern medicine.',
     compounds: [
-      { name: 'Berberine', class: 'Isoquinoline alkaloid', action: 'Activates AMPK; lowers glucose and lipids; antimicrobial; anti-inflammatory; modulates gut microbiota. Poor oral bioavailability (~1%) — paradoxically clinically effective.' },
+      { name: 'Berberine', class: 'Isoquinoline alkaloid', action: 'Activates AMPK; lowers glucose and lipids; antimicrobial; anti-inflammatory; modulates gut microbiota. Poor oral bioavailability (~1%) - paradoxically clinically effective.' },
       { name: 'Coptisine, palmatine, jatrorrhizine', class: 'Isoquinoline alkaloids', action: 'Co-active alkaloids; antimicrobial.' }
     ],
     uses: [
-      { condition: 'Type 2 diabetes (berberine)', evidence: 'strong', detail: 'Multiple meta-analyses (Lan 2015, Liang 2019): 0.5 g BID-TID berberine reduces HbA1c by ~0.7% — comparable to metformin in head-to-head trials. Synergistic with metformin.' },
+      { condition: 'Type 2 diabetes (berberine)', evidence: 'strong', detail: 'Multiple meta-analyses (Lan 2015, Liang 2019): 0.5 g BID-TID berberine reduces HbA1c by ~0.7% - comparable to metformin in head-to-head trials. Synergistic with metformin.' },
       { condition: 'Dyslipidaemia (berberine)', evidence: 'strong', detail: 'Reduces LDL ~25%, triglycerides ~35% in meta-analyses. Mechanism via LDL-receptor stabilisation, distinct from statins. Effective when statins not tolerated.' },
       { condition: 'IBS (berberine)', evidence: 'moderate', detail: 'RCTs show reduced abdominal pain, diarrhoea, urgency in IBS-D over 8 weeks.' },
       { condition: 'PCOS (insulin resistance)', evidence: 'moderate', detail: 'Comparable to metformin for menstrual restoration and metabolic markers.' },
@@ -1060,14 +1060,14 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Constipation, abdominal cramping (with berberine)', 'Yellow staining of mucous membranes'],
-      caution: ['Pregnancy — berberine displaces bilirubin from albumin; teratogenic in animals; AVOID', 'Breastfeeding — kernicterus risk in neonates', 'Spleen yang deficiency (TCM — cold pattern with diarrhoea)'],
-      interactions: ['Berberine inhibits CYP2D6, CYP3A4 — raises levels of midazolam, ciclosporin, dextromethorphan, many statins (atorvastatin, simvastatin)', 'P-gp inhibition — raises digoxin, dabigatran levels', 'Antidiabetic agents — hypoglycaemia', 'Cyclosporin — cleared 30% slower (clinically relevant in transplant)']
+      caution: ['Pregnancy - berberine displaces bilirubin from albumin; teratogenic in animals; AVOID', 'Breastfeeding - kernicterus risk in neonates', 'Spleen yang deficiency (TCM - cold pattern with diarrhoea)'],
+      interactions: ['Berberine inhibits CYP2D6, CYP3A4 - raises levels of midazolam, ciclosporin, dextromethorphan, many statins (atorvastatin, simvastatin)', 'P-gp inhibition - raises digoxin, dabigatran levels', 'Antidiabetic agents - hypoglycaemia', 'Cyclosporin - cleared 30% slower (clinically relevant in transplant)']
     },
-    dose: 'Coptis decoction 2–5 g (very bitter, low dose). Standardised berberine HCl 500 mg BID-TID with meals.',
+    dose: 'Coptis decoction 2-5 g (very bitter, low dose). Standardised berberine HCl 500 mg BID-TID with meals.',
     refs: [
-      'Lan J et al. J Ethnopharmacol. 2015 — Berberine in T2DM meta-analysis.',
-      'Yin J et al. Metabolism. 2008 — Berberine vs metformin head-to-head.',
-      'Wei W et al. J Clin Endocrinol Metab. 2012 — Berberine in PCOS.',
+      'Lan J et al. J Ethnopharmacol. 2015 - Berberine in T2DM meta-analysis.',
+      'Yin J et al. Metabolism. 2008 - Berberine vs metformin head-to-head.',
+      'Wei W et al. J Clin Endocrinol Metab. 2012 - Berberine in PCOS.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1077,7 +1077,7 @@ const ENTRIES = [
     pharm: 'Scutellaria baicalensis (radix)',
     properties: { taste: 'Bitter 苦', temp: 'Cold 寒', channels: 'Lung, Gallbladder, Stomach, LI 肺胆胃大肠' },
     primary: 'Clears heat, drains fire (especially upper jiao); calms ascending liver yang; calms fetus',
-    traditional: 'Pairs with Huang Lian and Huang Bai as the "Three Yellows" for damp-heat. Used in upper-respiratory infection, hepatitis pattern, hypertension. Component of PHY906 (Huang Qin Tang) — a 4-herb formula in modern oncology trials.',
+    traditional: 'Pairs with Huang Lian and Huang Bai as the "Three Yellows" for damp-heat. Used in upper-respiratory infection, hepatitis pattern, hypertension. Component of PHY906 (Huang Qin Tang) - a 4-herb formula in modern oncology trials.',
     compounds: [
       { name: 'Baicalin / baicalein', class: 'Flavone glucuronide / aglycone', action: 'Antioxidant, anti-inflammatory; AhR modulation; SARS-CoV-2 protease inhibition in vitro.' },
       { name: 'Wogonin / wogonoside', class: 'Flavone', action: 'Apoptosis induction in cancer cells; GABA-A modulation.' },
@@ -1090,13 +1090,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Loose stools'],
-      caution: ['Spleen-yang deficiency (TCM)', 'Hepatotoxicity — rare case reports; usually with multi-herb formulas (avoid in active liver disease)', 'Pregnancy — traditionally used to "calm fetus" but use modern caution given antiplatelet effect'],
-      interactions: ['Cyclosporin — case report of decreased levels (American skullcap product, possibly contaminated)', 'CYP1A2, CYP3A4 inhibition — clinical significance unclear', 'Anticoagulants — additive']
+      caution: ['Spleen-yang deficiency (TCM)', 'Hepatotoxicity - rare case reports; usually with multi-herb formulas (avoid in active liver disease)', 'Pregnancy - traditionally used to "calm fetus" but use modern caution given antiplatelet effect'],
+      interactions: ['Cyclosporin - case report of decreased levels (American skullcap product, possibly contaminated)', 'CYP1A2, CYP3A4 inhibition - clinical significance unclear', 'Anticoagulants - additive']
     },
-    dose: 'Decoction 3–10 g.',
+    dose: 'Decoction 3-10 g.',
     refs: [
-      'Saif MW et al. Phytomedicine. 2010 — PHY906 in colon cancer chemo.',
-      'Sheehan MP et al. Lancet. 1992 — Zemaphyte for atopic eczema.',
+      'Saif MW et al. Phytomedicine. 2010 - PHY906 in colon cancer chemo.',
+      'Sheehan MP et al. Lancet. 1992 - Zemaphyte for atopic eczema.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1112,17 +1112,17 @@ const ENTRIES = [
       { name: 'Luteolin, secoxyloganin', class: 'Flavonoid / iridoid', action: 'Anti-inflammatory.' }
     ],
     uses: [
-      { condition: 'Acute URTI / pharyngitis (Yin Qiao San)', evidence: 'limited', detail: 'Traditional first-line — mostly evidence for combined formula, not single herb.' },
+      { condition: 'Acute URTI / pharyngitis (Yin Qiao San)', evidence: 'limited', detail: 'Traditional first-line - mostly evidence for combined formula, not single herb.' },
       { condition: 'COVID-19 (in Lianhua Qingwen)', evidence: 'limited', detail: 'See Lianhua Qingwen entry.' }
     ],
     safety: {
       common: ['Generally well tolerated'],
-      caution: ['Spleen-stomach cold pattern', 'Pregnancy — limited safety data'],
+      caution: ['Spleen-stomach cold pattern', 'Pregnancy - limited safety data'],
       interactions: ['Few clinically significant']
     },
-    dose: 'Decoction 6–15 g.',
+    dose: 'Decoction 6-15 g.',
     refs: [
-      'Shang X et al. J Ethnopharmacol. 2011 — Lonicera review.',
+      'Shang X et al. J Ethnopharmacol. 2011 - Lonicera review.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1139,19 +1139,19 @@ const ENTRIES = [
     ],
     uses: [
       { condition: 'Uncomplicated upper respiratory infection', evidence: 'moderate', detail: 'Cochrane (Hu 2017) and meta-analyses: reduces cough, sore throat severity and duration vs placebo. Effect size moderate.' },
-      { condition: 'Ulcerative colitis (mild-moderate)', evidence: 'limited', detail: 'Andrographolide HRG080 — RCT showed non-inferiority to mesalamine.' },
+      { condition: 'Ulcerative colitis (mild-moderate)', evidence: 'limited', detail: 'Andrographolide HRG080 - RCT showed non-inferiority to mesalamine.' },
       { condition: 'Multiple sclerosis fatigue', evidence: 'limited', detail: 'Small RCT (Bertoglio 2016) suggested reduced fatigue.' }
     ],
     safety: {
       common: ['Bitter taste, GI upset, headache'],
-      caution: ['Anaphylaxis reported with injectable forms (used in China)', 'Pregnancy — abortifacient in animals; AVOID', 'Autoimmune disease — theoretical immunostimulation'],
-      interactions: ['Antihypertensives — additive', 'Anticoagulants — possible additive', 'Immunosuppressants — theoretical antagonism']
+      caution: ['Anaphylaxis reported with injectable forms (used in China)', 'Pregnancy - abortifacient in animals; AVOID', 'Autoimmune disease - theoretical immunostimulation'],
+      interactions: ['Antihypertensives - additive', 'Anticoagulants - possible additive', 'Immunosuppressants - theoretical antagonism']
     },
-    dose: 'Standardised extract 200 mg TID (>4% andrographolide). Decoction 6–9 g.',
+    dose: 'Standardised extract 200 mg TID (>4% andrographolide). Decoction 6-9 g.',
     refs: [
-      'Hu XY et al. PLoS One. 2017 — Andrographis for acute URTI Cochrane review.',
-      'Coon JT, Ernst E. Planta Med. 2004 — earlier review.',
-      'Sandborn WJ et al. Am J Gastroenterol. 2013 — Andrographis in UC.'
+      'Hu XY et al. PLoS One. 2017 - Andrographis for acute URTI Cochrane review.',
+      'Coon JT, Ernst E. Planta Med. 2004 - earlier review.',
+      'Sandborn WJ et al. Am J Gastroenterol. 2013 - Andrographis in UC.'
     ]
   },
   // ==================== MOVE BLOOD ====================
@@ -1161,7 +1161,7 @@ const ENTRIES = [
     pharm: 'Salvia miltiorrhiza (radix et rhizoma)',
     properties: { taste: 'Bitter 苦', temp: 'Slightly cold 微寒', channels: 'Heart, Pericardium, Liver 心心包肝' },
     primary: 'Invigorates and cools blood; eliminates blood stasis; calms spirit',
-    traditional: 'Saying: "one Dan Shen is equal to Si Wu Tang" (the four-substance blood formula). Used for chest pain, stroke, dysmenorrhoea, hepatitis. The most-studied Chinese herb for cardiovascular disease — basis of Compound Danshen Dripping Pill.',
+    traditional: 'Saying: "one Dan Shen is equal to Si Wu Tang" (the four-substance blood formula). Used for chest pain, stroke, dysmenorrhoea, hepatitis. The most-studied Chinese herb for cardiovascular disease - basis of Compound Danshen Dripping Pill.',
     compounds: [
       { name: 'Tanshinone IIA', class: 'Diterpene quinone (lipophilic)', action: 'Vasodilator, antiplatelet, antioxidant; sodium tanshinone IIA sulfonate is injected for ACS in China.' },
       { name: 'Cryptotanshinone', class: 'Diterpene quinone', action: 'STAT3 inhibitor; investigated for cancer.' },
@@ -1169,21 +1169,21 @@ const ENTRIES = [
       { name: 'Danshensu (salvianic acid A)', class: 'Phenolic acid', action: 'Cardioprotective; main metabolite contributing to Compound Danshen activity.' }
     ],
     uses: [
-      { condition: 'Stable angina (Compound Danshen Dripping Pill)', evidence: 'moderate', detail: 'Multiple RCTs and a multinational Phase III trial (T89 — Tianshili) suggest improvement in exercise tolerance and angina frequency. FDA Phase III completed.' },
+      { condition: 'Stable angina (Compound Danshen Dripping Pill)', evidence: 'moderate', detail: 'Multiple RCTs and a multinational Phase III trial (T89 - Tianshili) suggest improvement in exercise tolerance and angina frequency. FDA Phase III completed.' },
       { condition: 'Acute ischaemic stroke (adjunct)', evidence: 'limited', detail: 'Cochrane 2018: salvianolate injection commonly used; trials low quality, signal positive.' },
       { condition: 'Diabetic retinopathy', evidence: 'limited', detail: 'Adjunct trials show improvement.' },
       { condition: 'Chronic hepatitis B fibrosis', evidence: 'limited', detail: 'Adjunct salvianolic acid B reduces fibrosis markers.' }
     ],
     safety: {
       common: ['GI upset, pruritus'],
-      caution: ['Bleeding risk — antiplatelet activity', 'Pregnancy — moves blood; AVOID'],
-      interactions: ['Warfarin — multiple case reports of significantly raised INR / bleeding (some severe). Clinically important.', 'Antiplatelets — additive', 'Digoxin — Compound Danshen tablets contain borneol → falsely elevated digoxin assays (older immunoassays)']
+      caution: ['Bleeding risk - antiplatelet activity', 'Pregnancy - moves blood; AVOID'],
+      interactions: ['Warfarin - multiple case reports of significantly raised INR / bleeding (some severe). Clinically important.', 'Antiplatelets - additive', 'Digoxin - Compound Danshen tablets contain borneol → falsely elevated digoxin assays (older immunoassays)']
     },
-    dose: 'Decoction 9–15 g. Compound Danshen Dripping Pill 270 mg TID.',
+    dose: 'Decoction 9-15 g. Compound Danshen Dripping Pill 270 mg TID.',
     refs: [
-      'Jia Y et al. Eur Heart J. 2014 — Compound Danshen meta-analysis.',
-      'Wu B et al. Cochrane. 2008 — Salvia for stroke.',
-      'Tam WY et al. Br J Clin Pharmacol. 1995 — Danshen–warfarin interaction.'
+      'Jia Y et al. Eur Heart J. 2014 - Compound Danshen meta-analysis.',
+      'Wu B et al. Cochrane. 2008 - Salvia for stroke.',
+      'Tam WY et al. Br J Clin Pharmacol. 1995 - Danshen-warfarin interaction.'
     ]
   },
   {
@@ -1192,7 +1192,7 @@ const ENTRIES = [
     pharm: 'Panax notoginseng (radix)',
     properties: { taste: 'Sweet, slightly bitter 甘微苦', temp: 'Warm 温', channels: 'Liver, Stomach 肝胃' },
     primary: 'Stops bleeding without causing stasis; transforms blood stasis; reduces swelling and pain',
-    traditional: 'A unique paradox-herb: stops bleeding AND moves blood. Used for traumatic injury, haematemesis, epistaxis, post-partum stasis pain. Active ingredient of Yunnan Baiyao (云南白药) — the famous Chinese haemostatic powder/spray issued to the PLA and used widely in surgery.',
+    traditional: 'A unique paradox-herb: stops bleeding AND moves blood. Used for traumatic injury, haematemesis, epistaxis, post-partum stasis pain. Active ingredient of Yunnan Baiyao (云�-白药) - the famous Chinese haemostatic powder/spray issued to the PLA and used widely in surgery.',
     compounds: [
       { name: 'Notoginsenoside R1', class: 'Triterpene saponin', action: 'Distinguishes P. notoginseng from P. ginseng; cardioprotective.' },
       { name: 'Ginsenosides Rb1, Rg1, Rd', class: 'Triterpene saponin', action: 'Shared with Panax ginseng; cardiovascular and neuroprotective effects.' },
@@ -1205,13 +1205,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['GI upset, dry mouth, insomnia', 'Allergic reactions to injectable forms'],
-      caution: ['Pregnancy — AVOID (moves blood)', 'Pre-surgery — paradoxically can either help or hinder; surgeons usually advise stopping non-prescribed San Qi pre-op'],
-      interactions: ['Warfarin — case reports both directions (pro- and anti-coagulant effects); clinically unpredictable', 'Antiplatelets — combinations are common in Chinese practice but require monitoring']
+      caution: ['Pregnancy - AVOID (moves blood)', 'Pre-surgery - paradoxically can either help or hinder; surgeons usually advise stopping non-prescribed San Qi pre-op'],
+      interactions: ['Warfarin - case reports both directions (pro- and anti-coagulant effects); clinically unpredictable', 'Antiplatelets - combinations are common in Chinese practice but require monitoring']
     },
-    dose: 'Powder 1–3 g (per dose, ground from the raw root); decoction 3–9 g. Yunnan Baiyao per product.',
+    dose: 'Powder 1-3 g (per dose, ground from the raw root); decoction 3-9 g. Yunnan Baiyao per product.',
     refs: [
-      'Tang ZL et al. Trials. 2019 — Yunnan Baiyao haemostasis review.',
-      'Chen S et al. J Clin Pharm Ther. 2018 — PNS in CHD meta-analysis.',
+      'Tang ZL et al. Trials. 2019 - Yunnan Baiyao haemostasis review.',
+      'Chen S et al. J Clin Pharm Ther. 2018 - PNS in CHD meta-analysis.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1233,12 +1233,12 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Mild GI upset; tooth enamel erosion (sour)'],
-      caution: ['Peptic ulcer (acidic)', 'Pregnancy — moves blood; avoid medicinal doses'],
-      interactions: ['Digoxin — minor; antihypertensives — additive (Western hawthorn data)']
+      caution: ['Peptic ulcer (acidic)', 'Pregnancy - moves blood; avoid medicinal doses'],
+      interactions: ['Digoxin - minor; antihypertensives - additive (Western hawthorn data)']
     },
-    dose: 'Decoction 9–12 g; or 30 g for pronounced food stagnation.',
+    dose: 'Decoction 9-12 g; or 30 g for pronounced food stagnation.',
     refs: [
-      'Wu J et al. J Funct Foods. 2014 — Chinese hawthorn pharmacology.',
+      'Wu J et al. J Funct Foods. 2014 - Chinese hawthorn pharmacology.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1249,7 +1249,7 @@ const ENTRIES = [
     pharm: 'Bupleurum chinense / B. scorzonerifolium (radix)',
     properties: { taste: 'Bitter, pungent 苦辛', temp: 'Slightly cold 微寒', channels: 'Liver, Gallbladder, Pericardium, San Jiao 肝胆心包三焦' },
     primary: 'Resolves shaoyang disorder; spreads liver qi; raises yang',
-    traditional: 'The "messenger" herb of the shaoyang (gallbladder/liver) channel. Cornerstone of Xiao Chai Hu Tang (Minor Bupleurum Decoction) — used for alternating fever-and-chills, hypochondrial fullness, irritability. Also in Xiao Yao San for liver qi stagnation. Heavily used in Japanese kampo (Sho-saiko-to).',
+    traditional: 'The "messenger" herb of the shaoyang (gallbladder/liver) channel. Cornerstone of Xiao Chai Hu Tang (Minor Bupleurum Decoction) - used for alternating fever-and-chills, hypochondrial fullness, irritability. Also in Xiao Yao San for liver qi stagnation. Heavily used in Japanese kampo (Sho-saiko-to).',
     compounds: [
       { name: 'Saikosaponins a, c, d', class: 'Triterpene saponin', action: 'Anti-inflammatory; corticosteroid-modulating; hepatoprotective at low dose, hepatotoxic at high dose / chronic use.' },
       { name: 'Bupleurum polysaccharides', class: 'Polysaccharide', action: 'Immunomodulatory.' },
@@ -1258,17 +1258,17 @@ const ENTRIES = [
     uses: [
       { condition: 'Mild-to-moderate depression (Xiao Yao San)', evidence: 'limited', detail: 'Multiple Chinese RCTs of formula vs SSRIs suggest comparable benefit; methodological quality variable.' },
       { condition: 'Functional dyspepsia (formulas)', evidence: 'limited', detail: 'Component of Si Ni San and Chai Hu Shu Gan San.' },
-      { condition: 'Chronic hepatitis (Sho-saiko-to / Xiao Chai Hu Tang)', evidence: 'negative', detail: 'Important safety lesson: Japanese widespread use led to >100 cases of interstitial pneumonitis — esp. with concomitant interferon. Use restricted in cirrhosis.' }
+      { condition: 'Chronic hepatitis (Sho-saiko-to / Xiao Chai Hu Tang)', evidence: 'negative', detail: 'Important safety lesson: Japanese widespread use led to >100 cases of interstitial pneumonitis - esp. with concomitant interferon. Use restricted in cirrhosis.' }
     ],
     safety: {
       common: ['Mild GI upset'],
-      caution: ['HEPATOTOXICITY with prolonged use; AVOID in interferon therapy and cirrhosis (Japanese pneumonitis cases)', 'Pregnancy — limited data', 'Yin-deficiency or upward-rising liver yang patterns'],
-      interactions: ['Interferon-α — pneumonitis', 'CYP3A4 induction (mild)', 'NSAIDs — possible additive hepatotoxicity']
+      caution: ['HEPATOTOXICITY with prolonged use; AVOID in interferon therapy and cirrhosis (Japanese pneumonitis cases)', 'Pregnancy - limited data', 'Yin-deficiency or upward-rising liver yang patterns'],
+      interactions: ['Interferon-α - pneumonitis', 'CYP3A4 induction (mild)', 'NSAIDs - possible additive hepatotoxicity']
     },
-    dose: 'Decoction 3–10 g. Higher doses (15 g+) historically for malarial fevers — modern caution.',
+    dose: 'Decoction 3-10 g. Higher doses (15 g+) historically for malarial fevers - modern caution.',
     refs: [
-      'Yang F et al. J Ethnopharmacol. 2017 — Bupleurum review.',
-      'Itoh S et al. Intern Med. 1995 — Sho-saiko-to pneumonitis case series.',
+      'Yang F et al. J Ethnopharmacol. 2017 - Bupleurum review.',
+      'Itoh S et al. Intern Med. 1995 - Sho-saiko-to pneumonitis case series.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1279,9 +1279,9 @@ const ENTRIES = [
     pharm: 'Schisandra chinensis (fructus)',
     properties: { taste: 'Sour, sweet, bitter, pungent, salty 五味 (all five tastes)', temp: 'Warm 温', channels: 'Lung, Heart, Kidney 肺心肾' },
     primary: 'Astringes lung qi, generates fluids, calms spirit, contains essence',
-    traditional: 'The "five-flavour fruit" — its name reflects all five Chinese flavours. Used for chronic cough, night sweats, palpitations, spermatorrhoea, and as an "adaptogen" in Russian and modern Chinese pharmacology.',
+    traditional: 'The "five-flavour fruit" - its name reflects all five Chinese flavours. Used for chronic cough, night sweats, palpitations, spermatorrhoea, and as an "adaptogen" in Russian and modern Chinese pharmacology.',
     compounds: [
-      { name: 'Schisandrin A, B (deoxyschisandrin, γ-schisandrin)', class: 'Lignan (dibenzocyclooctadiene)', action: 'Hepatoprotective — induce CYP3A and Phase II enzymes; antioxidant; basis of bicyclol drug.' },
+      { name: 'Schisandrin A, B (deoxyschisandrin, γ-schisandrin)', class: 'Lignan (dibenzocyclooctadiene)', action: 'Hepatoprotective - induce CYP3A and Phase II enzymes; antioxidant; basis of bicyclol drug.' },
       { name: 'Schisandrol A (schisandrin)', class: 'Lignan', action: 'Hepatoprotective; CNS modulating.' },
       { name: 'Schisanhenol', class: 'Lignan', action: 'Antioxidant.' }
     ],
@@ -1292,13 +1292,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Heartburn, GI upset (sour)', 'Restlessness'],
-      caution: ['Excess heat patterns, early-stage cough', 'Pregnancy — limited safety data', 'Active peptic ulcer'],
-      interactions: ['POTENT CYP3A4 induction — significantly reduces tacrolimus, ciclosporin, midazolam, sirolimus, warfarin levels. Used intentionally in Chinese transplant protocols to reduce tacrolimus dose; in Western practice usually a problem.', 'P-gp modulation']
+      caution: ['Excess heat patterns, early-stage cough', 'Pregnancy - limited safety data', 'Active peptic ulcer'],
+      interactions: ['POTENT CYP3A4 induction - significantly reduces tacrolimus, ciclosporin, midazolam, sirolimus, warfarin levels. Used intentionally in Chinese transplant protocols to reduce tacrolimus dose; in Western practice usually a problem.', 'P-gp modulation']
     },
-    dose: 'Decoction 1.5–6 g.',
+    dose: 'Decoction 1.5-6 g.',
     refs: [
-      'Panossian A, Wikman G. J Ethnopharmacol. 2008 — Schisandra adaptogen review.',
-      'Xin HW et al. Br J Clin Pharmacol. 2007 — Schisandra–tacrolimus interaction.',
+      'Panossian A, Wikman G. J Ethnopharmacol. 2008 - Schisandra adaptogen review.',
+      'Xin HW et al. Br J Clin Pharmacol. 2007 - Schisandra-tacrolimus interaction.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1309,10 +1309,10 @@ const ENTRIES = [
     pharm: 'Ganoderma lucidum (corpus)',
     properties: { taste: 'Sweet 甘', temp: 'Neutral 平', channels: 'Heart, Liver, Lung 心肝肺' },
     primary: 'Tonifies qi and blood, calms spirit, nourishes heart',
-    traditional: '"Mushroom of immortality" — Daoist longevity symbol. Used for insomnia with palpitations, chronic cough, and as immune tonic. Modern Chinese practice widely uses it as adjunct in cancer.',
+    traditional: '"Mushroom of immortality" - Daoist longevity symbol. Used for insomnia with palpitations, chronic cough, and as immune tonic. Modern Chinese practice widely uses it as adjunct in cancer.',
     compounds: [
       { name: 'β-(1,3)/(1,6)-D-glucans', class: 'Polysaccharide', action: 'Dectin-1 / TLR2 activation; macrophage and NK-cell stimulation. Main immunomodulatory fraction.' },
-      { name: 'Ganoderic acids A–Z', class: 'Lanostane triterpene', action: 'Hepatoprotective, cytotoxic to tumour cell lines, ACE inhibition; bitter taste of reishi.' },
+      { name: 'Ganoderic acids A-Z', class: 'Lanostane triterpene', action: 'Hepatoprotective, cytotoxic to tumour cell lines, ACE inhibition; bitter taste of reishi.' },
       { name: 'Lingzhi-8 (LZ-8)', class: 'Fungal immunomodulatory protein (FIP)', action: 'Suppresses anaphylaxis; modulates Th1/Th2 balance.' }
     ],
     uses: [
@@ -1322,13 +1322,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Dry mouth, dizziness, GI upset'],
-      caution: ['Wild-harvested reishi can cause anaphylaxis', 'Bleeding disorders — antiplatelet activity'],
-      interactions: ['Anticoagulants / antiplatelets — additive bleeding (case reports)', 'Hypotensives — additive']
+      caution: ['Wild-harvested reishi can cause anaphylaxis', 'Bleeding disorders - antiplatelet activity'],
+      interactions: ['Anticoagulants / antiplatelets - additive bleeding (case reports)', 'Hypotensives - additive']
     },
-    dose: 'Decoction 6–12 g; powdered extract 1–3 g/day.',
+    dose: 'Decoction 6-12 g; powdered extract 1-3 g/day.',
     refs: [
-      'Jin X et al. Cochrane. 2016 — Ganoderma in cancer.',
-      'Klupp NL et al. Cochrane. 2015 — Ganoderma for CVD risk.',
+      'Jin X et al. Cochrane. 2016 - Ganoderma in cancer.',
+      'Klupp NL et al. Cochrane. 2015 - Ganoderma for CVD risk.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1339,7 +1339,7 @@ const ENTRIES = [
     pharm: 'Gastrodia elata (rhizoma)',
     properties: { taste: 'Sweet 甘', temp: 'Neutral 平', channels: 'Liver 肝' },
     primary: 'Extinguishes liver wind, subdues ascending yang, relieves convulsions',
-    traditional: 'Heterotrophic orchid — entirely lacking chlorophyll. Used for headache, dizziness, vertigo, childhood convulsions, and "liver wind stirring" (TIA, stroke prodromes). Anchor of Tian Ma Gou Teng Yin for hypertension with headache.',
+    traditional: 'Heterotrophic orchid - entirely lacking chlorophyll. Used for headache, dizziness, vertigo, childhood convulsions, and "liver wind stirring" (TIA, stroke prodromes). Anchor of Tian Ma Gou Teng Yin for hypertension with headache.',
     compounds: [
       { name: 'Gastrodin (4-hydroxymethylphenyl-β-D-glucopyranoside)', class: 'Phenolic glycoside', action: 'Marker compound; metabolised to p-hydroxybenzyl alcohol (active); GABAergic; anticonvulsant; cerebral vasodilator.' },
       { name: 'Vanillyl alcohol', class: 'Phenolic', action: 'Co-active aglycone.' }
@@ -1352,12 +1352,12 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Generally well tolerated', 'Rare allergic dermatitis'],
-      caution: ['Adulteration — wild Gastrodia is expensive and substituted with Cacalia (with toxic pyrrolizidine alkaloids) or other roots'],
-      interactions: ['CNS depressants — possible additive', 'Antihypertensives — additive']
+      caution: ['Adulteration - wild Gastrodia is expensive and substituted with Cacalia (with toxic pyrrolizidine alkaloids) or other roots'],
+      interactions: ['CNS depressants - possible additive', 'Antihypertensives - additive']
     },
-    dose: 'Decoction 3–10 g; powdered 1–1.5 g.',
+    dose: 'Decoction 3-10 g; powdered 1-1.5 g.',
     refs: [
-      'Liu Y et al. J Ethnopharmacol. 2018 — Gastrodia review.',
+      'Liu Y et al. J Ethnopharmacol. 2018 - Gastrodia review.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1370,24 +1370,24 @@ const ENTRIES = [
     primary: 'Releases wind-cold exterior; opens lung qi; promotes urination',
     traditional: 'Used for wind-cold pattern with chills, no sweating, headache, body aches, and wheezing. Cornerstone of Ma Huang Tang. Absolutely classical herb but its sympathomimetic alkaloids made it a serious public-health hazard when adopted into Western weight-loss supplements.',
     compounds: [
-      { name: 'L-Ephedrine', class: 'Phenethylamine alkaloid', action: 'Mixed α/β-adrenergic agonist; bronchodilator, vasoconstrictor, CNS stimulant. Indirect — releases NE.' },
+      { name: 'L-Ephedrine', class: 'Phenethylamine alkaloid', action: 'Mixed α/β-adrenergic agonist; bronchodilator, vasoconstrictor, CNS stimulant. Indirect - releases NE.' },
       { name: 'Pseudoephedrine', class: 'Phenethylamine alkaloid', action: 'Diastereomer of ephedrine; preferential α-adrenergic effect; nasal decongestant.' },
       { name: 'Methylephedrine, norephedrine', class: 'Minor alkaloids', action: 'Co-active.' }
     ],
     uses: [
       { condition: 'Acute bronchospasm / asthma (historical)', evidence: 'moderate', detail: 'Ephedrine itself is a recognised bronchodilator, supplanted by selective β2-agonists. Whole-herb preparations rarely used clinically in West.' },
       { condition: 'Wind-cold URTI (in formulas)', evidence: 'limited', detail: 'Traditional first-line for chills with absent sweat, wheeze.' },
-      { condition: 'Weight loss', evidence: 'negative', detail: 'Modest weight-loss effect but unfavourable benefit/harm — multiple deaths and cardiovascular events led to FDA ban of ephedra supplements in 2004.' }
+      { condition: 'Weight loss', evidence: 'negative', detail: 'Modest weight-loss effect but unfavourable benefit/harm - multiple deaths and cardiovascular events led to FDA ban of ephedra supplements in 2004.' }
     ],
     safety: {
       common: ['Insomnia, anxiety, palpitations, hypertension, dry mouth, urinary retention'],
-      caution: ['BANNED as supplement in US (2004), Australia, Canada, UK; restricted prescription/practitioner only in many jurisdictions', 'Coronary disease, hypertension, hyperthyroidism, glaucoma, BPH — AVOID', 'Pregnancy — AVOID', 'Diabetes, anxiety disorders'],
-      interactions: ['MAOIs — hypertensive crisis; AVOID combination', 'Stimulants, caffeine — additive', 'Cardiac glycosides — arrhythmia risk', 'Antihypertensives — antagonism', 'General anaesthesia — withhold 24 h']
+      caution: ['BANNED as supplement in US (2004), Australia, Canada, UK; restricted prescription/practitioner only in many jurisdictions', 'Coronary disease, hypertension, hyperthyroidism, glaucoma, BPH - AVOID', 'Pregnancy - AVOID', 'Diabetes, anxiety disorders'],
+      interactions: ['MAOIs - hypertensive crisis; AVOID combination', 'Stimulants, caffeine - additive', 'Cardiac glycosides - arrhythmia risk', 'Antihypertensives - antagonism', 'General anaesthesia - withhold 24 h']
     },
-    dose: 'Decoction 1.5–9 g (in formulas, supervised practitioner only). Honey-fried form (Zhi Ma Huang) is gentler.',
+    dose: 'Decoction 1.5-9 g (in formulas, supervised practitioner only). Honey-fried form (Zhi Ma Huang) is gentler.',
     refs: [
-      'Shekelle PG et al. JAMA. 2003 — Ephedra meta-analysis (basis of FDA ban).',
-      'FDA Final Rule 2004 — Banning ephedra alkaloid supplements.',
+      'Shekelle PG et al. JAMA. 2003 - Ephedra meta-analysis (basis of FDA ban).',
+      'FDA Final Rule 2004 - Banning ephedra alkaloid supplements.',
       'Chinese Pharmacopoeia 2020 (still listed for licensed practitioner use).'
     ]
   },
@@ -1397,11 +1397,11 @@ const ENTRIES = [
     pharm: 'Aconitum carmichaelii (radix lateralis preparata)',
     properties: { taste: 'Pungent, sweet 辛甘', temp: 'Very hot 大热; toxic 有毒', channels: 'Heart, Kidney, Spleen 心肾脾' },
     primary: 'Restores collapsed yang; warms fire of Mingmen; disperses cold',
-    traditional: 'The "great heater" — used in life-threatening yang collapse (cold extremities, faint pulse, profuse sweating with collapse — equivalent to cardiogenic shock). Anchor of Si Ni Tang ("Frigid Extremities Decoction"). Always used processed (Pao Fu Zi, Hei Shun Pian, Bai Fu Pian) — boiling and chemical processing hydrolyses diester aconitines to monoester then amino-alcohol forms with ~1/2000 of the toxicity.',
+    traditional: 'The "great heater" - used in life-threatening yang collapse (cold extremities, faint pulse, profuse sweating with collapse - equivalent to cardiogenic shock). Anchor of Si Ni Tang ("Frigid Extremities Decoction"). Always used processed (Pao Fu Zi, Hei Shun Pian, Bai Fu Pian) - boiling and chemical processing hydrolyses diester aconitines to monoester then amino-alcohol forms with ~1/2000 of the toxicity.',
     compounds: [
-      { name: 'Aconitine (diester)', class: 'C19-norditerpenoid alkaloid', action: 'Activates voltage-gated sodium channels (no inactivation); intensely cardiotoxic. Lethal at 1–2 mg PO.' },
+      { name: 'Aconitine (diester)', class: 'C19-norditerpenoid alkaloid', action: 'Activates voltage-gated sodium channels (no inactivation); intensely cardiotoxic. Lethal at 1-2 mg PO.' },
       { name: 'Mesaconitine, hypaconitine', class: 'Diester alkaloid', action: 'Similar toxicity to aconitine.' },
-      { name: 'Benzoylaconine, aconine', class: 'Mono-ester / amino-alcohol', action: 'Hydrolysis products of processing — anti-inflammatory, analgesic, much lower toxicity. The desired forms after correct paozhi.' },
+      { name: 'Benzoylaconine, aconine', class: 'Mono-ester / amino-alcohol', action: 'Hydrolysis products of processing - anti-inflammatory, analgesic, much lower toxicity. The desired forms after correct paozhi.' },
       { name: 'Higenamine', class: 'Tetrahydroisoquinoline', action: 'β-adrenergic agonist; positive inotrope; basis of cardiac action of properly processed Fu Zi.' }
     ],
     uses: [
@@ -1410,19 +1410,19 @@ const ENTRIES = [
     ],
     safety: {
       common: ['At toxic dose: peri-oral and limb paraesthesia, nausea, vomiting; progressing to ventricular arrhythmias (VT, VF, polymorphic VT), hypotension, death'],
-      caution: ['ABSOLUTELY: must be properly processed and dosed by qualified practitioner. Inadequately processed Fu Zi has caused multiple deaths (Hong Kong, mainland China, Australian case reports).', 'Pregnancy — AVOID', 'Hypertension, heart disease, hyperthyroidism', 'Self-prescribed unprocessed Aconitum products from herbal suppliers — multiple fatal poisonings reported'],
-      interactions: ['Antiarrhythmics, digoxin — arrhythmia risk', 'β-agonists — additive cardiac effects', 'CYP3A4 metabolised — interactions possible']
+      caution: ['ABSOLUTELY: must be properly processed and dosed by qualified practitioner. Inadequately processed Fu Zi has caused multiple deaths (Hong Kong, mainland China, Australian case reports).', 'Pregnancy - AVOID', 'Hypertension, heart disease, hyperthyroidism', 'Self-prescribed unprocessed Aconitum products from herbal suppliers - multiple fatal poisonings reported'],
+      interactions: ['Antiarrhythmics, digoxin - arrhythmia risk', 'β-agonists - additive cardiac effects', 'CYP3A4 metabolised - interactions possible']
     },
-    dose: 'Processed Fu Zi 3–15 g, decocted FIRST for 30–60 min before adding other herbs (further reduces toxicity). NEVER unprocessed.',
+    dose: 'Processed Fu Zi 3-15 g, decocted FIRST for 30-60 min before adding other herbs (further reduces toxicity). NEVER unprocessed.',
     refs: [
-      'Chan TY. Toxicon. 2009 — Aconite poisoning review.',
-      'Singhuber J et al. J Ethnopharmacol. 2009 — Aconitum safety review.',
+      'Chan TY. Toxicon. 2009 - Aconite poisoning review.',
+      'Singhuber J et al. J Ethnopharmacol. 2009 - Aconitum safety review.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
   {
     id: 'he-shou-wu', type: 'herb', cat: 'tonify-blood', toxic: true,
-    pinyin: 'Hé Shǒu Wū', han: '何首乌', en: 'Fo-ti / Fleeceflower root',
+    pinyin: 'Hé Shǒu Wū', han: '何�-乌', en: 'Fo-ti / Fleeceflower root',
     pharm: 'Polygonum multiflorum / Reynoutria multiflora (radix)',
     properties: { taste: 'Bitter, sweet, astringent 苦甘涩', temp: 'Slightly warm 微温', channels: 'Liver, Kidney 肝肾' },
     primary: 'Tonifies blood and essence; classically prevents premature greying',
@@ -1438,31 +1438,31 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Loose stools (anthraquinone effect)'],
-      caution: ['HEPATOTOXICITY — well-documented idiosyncratic drug-induced liver injury, including acute liver failure requiring transplant. Multiple regulatory warnings (UK MHRA 2006, Health Canada 2015, China 2014). Dose- and duration-related but unpredictable. Avoid in pre-existing liver disease and monitor LFTs in any prolonged use.', 'Avoid in children'],
-      interactions: ['Hepatotoxic drugs — additive', 'Few well-documented PK interactions']
+      caution: ['HEPATOTOXICITY - well-documented idiosyncratic drug-induced liver injury, including acute liver failure requiring transplant. Multiple regulatory warnings (UK MHRA 2006, Health Canada 2015, China 2014). Dose- and duration-related but unpredictable. Avoid in pre-existing liver disease and monitor LFTs in any prolonged use.', 'Avoid in children'],
+      interactions: ['Hepatotoxic drugs - additive', 'Few well-documented PK interactions']
     },
-    dose: 'Processed Zhi He Shou Wu 6–12 g if used at all; raw form used short-term as laxative.',
+    dose: 'Processed Zhi He Shou Wu 6-12 g if used at all; raw form used short-term as laxative.',
     refs: [
-      'Lin L et al. Drug Saf. 2015 — Polygonum multiflorum hepatotoxicity review.',
-      'Jung KA et al. World J Hepatol. 2011 — He Shou Wu liver failure case series.',
+      'Lin L et al. Drug Saf. 2015 - Polygonum multiflorum hepatotoxicity review.',
+      'Jung KA et al. World J Hepatol. 2011 - He Shou Wu liver failure case series.',
       'MHRA Drug Safety Update 2006.'
     ]
   },
-  // ==================== FORMULAS 方剂 ====================
+  // ==================== FORMULAS �-�剂 ====================
   {
     id: 'liu-wei', type: 'formula', cat: 'tonify-yin',
     pinyin: 'Liù Wèi Dì Huáng Wán', han: '六味地黄丸', en: 'Six-Ingredient Pill with Rehmannia',
     pharm: 'Classical formula; Song dynasty (Qian Yi, 11th c.)',
     properties: { taste: 'Sweet, slightly sour 甘微酸', temp: 'Slightly cool 微凉', channels: 'Kidney, Liver, Spleen 肾肝脾' },
     primary: 'Nourishes kidney and liver yin',
-    traditional: 'Originally a paediatric formula adapted from Jin Gui Shen Qi Wan by removing the warming Fu Zi and Gui Zhi for children whose "five delays" suggested kidney-yin (rather than yang) deficiency. The most-prescribed kidney-yin tonic in modern China — used for menopausal symptoms, tinnitus, dizziness, lower-back soreness, type 2 diabetes adjunct.',
+    traditional: 'Originally a paediatric formula adapted from Jin Gui Shen Qi Wan by removing the warming Fu Zi and Gui Zhi for children whose "five delays" suggested kidney-yin (rather than yang) deficiency. The most-prescribed kidney-yin tonic in modern China - used for menopausal symptoms, tinnitus, dizziness, lower-back soreness, type 2 diabetes adjunct.',
     ingredients: [
-      { name: 'Shu Di Huang', han: '熟地黄', role: 'Chief — tonifies kidney yin' },
-      { name: 'Shan Zhu Yu', han: '山茱萸', role: 'Deputy — astringes, tonifies liver/kidney' },
-      { name: 'Shan Yao', han: '山药', role: 'Deputy — tonifies spleen/lung/kidney' },
-      { name: 'Ze Xie', han: '泽泻', role: 'Assistant — drains kidney damp-heat' },
-      { name: 'Mu Dan Pi', han: '牡丹皮', role: 'Assistant — clears liver fire' },
-      { name: 'Fu Ling', han: '茯苓', role: 'Assistant — drains spleen damp' }
+      { name: 'Shu Di Huang', han: '熟地黄', role: 'Chief - tonifies kidney yin' },
+      { name: 'Shan Zhu Yu', han: '山茱萸', role: 'Deputy - astringes, tonifies liver/kidney' },
+      { name: 'Shan Yao', han: '山药', role: 'Deputy - tonifies spleen/lung/kidney' },
+      { name: 'Ze Xie', han: '泽泻', role: 'Assistant - drains kidney damp-heat' },
+      { name: 'Mu Dan Pi', han: '牡丹皮', role: 'Assistant - clears liver fire' },
+      { name: 'Fu Ling', han: '茯苓', role: 'Assistant - drains spleen damp' }
     ],
     uses: [
       { condition: 'Menopausal symptoms (vasomotor, sleep)', evidence: 'limited', detail: 'Multiple Chinese RCTs report reduced hot flushes; Western-quality evidence sparse.' },
@@ -1471,12 +1471,12 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Loose stools, bloating (cloying)'],
-      caution: ['Diarrhoea, spleen damp patterns', 'Diabetes — sugar coating in patent pill form'],
-      interactions: ['Cyclosporin — case report of decreased levels', 'Diabetes drugs — possible additive']
+      caution: ['Diarrhoea, spleen damp patterns', 'Diabetes - sugar coating in patent pill form'],
+      interactions: ['Cyclosporin - case report of decreased levels', 'Diabetes drugs - possible additive']
     },
     dose: 'Patent pill (concentrated 浓缩丸) 8 pills BID-TID; teapills (大蜜丸) 1 pill BID; or decoction at classical proportions.',
     refs: [
-      'Wang H et al. Diabetes Ther. 2017 — Liu Wei Di Huang Wan in T2DM.',
+      'Wang H et al. Diabetes Ther. 2017 - Liu Wei Di Huang Wan in T2DM.',
       'Chinese Pharmacopoeia 2020.'
     ]
   },
@@ -1486,16 +1486,16 @@ const ENTRIES = [
     pharm: 'Classical Song-dynasty formula (Hejiju Fang)',
     properties: { taste: 'Pungent, sweet, bitter 辛甘苦', temp: 'Slightly warm 微温', channels: 'Liver, Spleen 肝脾' },
     primary: 'Spreads liver qi, strengthens spleen, nourishes blood',
-    traditional: 'The most prescribed formula for "liver qi stagnation" — emotional stress, mood lability (especially women), PMS, irritability with fatigue. With added Mu Dan Pi and Zhi Zi becomes Jia Wei Xiao Yao San (Dan Zhi Xiao Yao San) for stagnation-with-heat.',
+    traditional: 'The most prescribed formula for "liver qi stagnation" - emotional stress, mood lability (especially women), PMS, irritability with fatigue. With added Mu Dan Pi and Zhi Zi becomes Jia Wei Xiao Yao San (Dan Zhi Xiao Yao San) for stagnation-with-heat.',
     ingredients: [
-      { name: 'Chai Hu', han: '柴胡', role: 'Chief — courses liver qi' },
-      { name: 'Dang Gui', han: '当归', role: 'Deputy — tonifies/moves blood' },
-      { name: 'Bai Shao', han: '白芍', role: 'Deputy — softens liver, nourishes blood' },
-      { name: 'Bai Zhu', han: '白术', role: 'Assistant — strengthens spleen' },
-      { name: 'Fu Ling', han: '茯苓', role: 'Assistant — drains damp' },
-      { name: 'Zhi Gan Cao', han: '炙甘草', role: 'Envoy — harmonizes' },
-      { name: 'Sheng Jiang', han: '生姜', role: 'Envoy — warms middle' },
-      { name: 'Bo He', han: '薄荷', role: 'Envoy — releases liver heat' }
+      { name: 'Chai Hu', han: '柴胡', role: 'Chief - courses liver qi' },
+      { name: 'Dang Gui', han: '当归', role: 'Deputy - tonifies/moves blood' },
+      { name: 'Bai Shao', han: '白芍', role: 'Deputy - softens liver, nourishes blood' },
+      { name: 'Bai Zhu', han: '白术', role: 'Assistant - strengthens spleen' },
+      { name: 'Fu Ling', han: '茯苓', role: 'Assistant - drains damp' },
+      { name: 'Zhi Gan Cao', han: '炙甘草', role: 'Envoy - harmonizes' },
+      { name: 'Sheng Jiang', han: '生姜', role: 'Envoy - warms middle' },
+      { name: 'Bo He', han: '�-�荷', role: 'Envoy - releases liver heat' }
     ],
     uses: [
       { condition: 'Mild-to-moderate depression', evidence: 'limited', detail: 'Chinese meta-analyses suggest non-inferior to SSRIs for mild depression; Western RCTs limited.' },
@@ -1504,13 +1504,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Generally well tolerated'],
-      caution: ['Pregnancy — Chai Hu and Dang Gui considerations'],
-      interactions: ['Antidepressants — combinations are common in Chinese practice; case-by-case']
+      caution: ['Pregnancy - Chai Hu and Dang Gui considerations'],
+      interactions: ['Antidepressants - combinations are common in Chinese practice; case-by-case']
     },
-    dose: 'Patent pill 6–9 g BID-TID; or decoction at classical proportions.',
+    dose: 'Patent pill 6-9 g BID-TID; or decoction at classical proportions.',
     refs: [
-      'Zhang Y et al. J Ethnopharmacol. 2012 — Xiao Yao San for depression meta-analysis.',
-      'Wang Y et al. Chin J Integr Med. 2017 — formulary review.'
+      'Zhang Y et al. J Ethnopharmacol. 2012 - Xiao Yao San for depression meta-analysis.',
+      'Wang Y et al. Chin J Integr Med. 2017 - formulary review.'
     ]
   },
   {
@@ -1519,31 +1519,31 @@ const ENTRIES = [
     pharm: 'Wen Bing Tiao Bian (Wu Jutong, 1798)',
     properties: { taste: 'Pungent, cool 辛凉', temp: 'Cool 凉', channels: 'Lung, Stomach 肺胃' },
     primary: 'Releases wind-heat exterior; clears heat and resolves toxin',
-    traditional: 'Premier formula for early-stage warm-disease (wen bing) — sore throat, fever > chills, mild headache. The TCM analogue of "take at the first sign of a cold." Inspired modern OTC products like Yin Chiao tablets.',
+    traditional: 'Premier formula for early-stage warm-disease (wen bing) - sore throat, fever > chills, mild headache. The TCM analogue of "take at the first sign of a cold." Inspired modern OTC products like Yin Chiao tablets.',
     ingredients: [
-      { name: 'Jin Yin Hua', han: '金银花', role: 'Chief — clears heat-toxin, releases exterior' },
-      { name: 'Lian Qiao', han: '连翘', role: 'Chief — clears heat-toxin' },
-      { name: 'Bo He', han: '薄荷', role: 'Deputy — disperses wind-heat, sore throat' },
-      { name: 'Niu Bang Zi', han: '牛蒡子', role: 'Deputy — clears throat' },
-      { name: 'Jie Geng', han: '桔梗', role: 'Assistant — opens lung qi, throat' },
-      { name: 'Dan Dou Chi', han: '淡豆豉', role: 'Assistant — releases exterior' },
-      { name: 'Jing Jie', han: '荆芥', role: 'Assistant — releases exterior' },
-      { name: 'Zhu Ye', han: '竹叶', role: 'Assistant — clears heat' },
-      { name: 'Lu Gen', han: '芦根', role: 'Envoy — generates fluids' },
-      { name: 'Gan Cao', han: '甘草', role: 'Envoy — harmonizes' }
+      { name: 'Jin Yin Hua', han: '金银花', role: 'Chief - clears heat-toxin, releases exterior' },
+      { name: 'Lian Qiao', han: '连翘', role: 'Chief - clears heat-toxin' },
+      { name: 'Bo He', han: '�-�荷', role: 'Deputy - disperses wind-heat, sore throat' },
+      { name: 'Niu Bang Zi', han: '牛蒡子', role: 'Deputy - clears throat' },
+      { name: 'Jie Geng', han: '桔�-', role: 'Assistant - opens lung qi, throat' },
+      { name: 'Dan Dou Chi', han: '淡豆豉', role: 'Assistant - releases exterior' },
+      { name: 'Jing Jie', han: '荆芥', role: 'Assistant - releases exterior' },
+      { name: 'Zhu Ye', han: '竹叶', role: 'Assistant - clears heat' },
+      { name: 'Lu Gen', han: '芦根', role: 'Envoy - generates fluids' },
+      { name: 'Gan Cao', han: '甘草', role: 'Envoy - harmonizes' }
     ],
     uses: [
-      { condition: 'Acute URTI / pharyngitis (early stage)', evidence: 'limited', detail: 'Used widely in China at first sign; small trials suggest reduced symptom duration. Western OTC variants often contain undeclared paracetamol or chlorpheniramine — read labels.' }
+      { condition: 'Acute URTI / pharyngitis (early stage)', evidence: 'limited', detail: 'Used widely in China at first sign; small trials suggest reduced symptom duration. Western OTC variants often contain undeclared paracetamol or chlorpheniramine - read labels.' }
     ],
     safety: {
       common: ['Generally well tolerated'],
-      caution: ['Spleen-stomach cold pattern', 'Late stage (Yang Ming) infection — wrong pattern'],
-      interactions: ['Adulteration risk — Yin Chiao tablets sold outside China have repeatedly tested positive for chlorpheniramine, paracetamol, diclofenac']
+      caution: ['Spleen-stomach cold pattern', 'Late stage (Yang Ming) infection - wrong pattern'],
+      interactions: ['Adulteration risk - Yin Chiao tablets sold outside China have repeatedly tested positive for chlorpheniramine, paracetamol, diclofenac']
     },
     dose: 'Powder 6 g (1 tsp) in hot water Q4H during acute illness; or tablet/decoction per product.',
     refs: [
       'Bensky D, Barolet R. Formulas & Strategies, 2nd ed. 2009.',
-      'Ko RJ et al. NEJM. 1998 — Adulterated Chinese herbals report.'
+      'Ko RJ et al. NEJM. 1998 - Adulterated Chinese herbals report.'
     ]
   },
   {
@@ -1554,14 +1554,14 @@ const ENTRIES = [
     primary: 'Tonifies middle qi, raises sunken yang',
     traditional: 'Li Dongyuan\'s landmark formula. Used for fatigue, prolapse (uterus, rectum, stomach), chronic diarrhoea, postprandial sleepiness, low-grade fever from qi deficiency, postpartum recovery.',
     ingredients: [
-      { name: 'Huang Qi', han: '黄芪', role: 'Chief — raises yang, tonifies qi' },
-      { name: 'Ren Shen (or Dang Shen)', han: '人参 / 党参', role: 'Deputy — tonifies qi' },
-      { name: 'Bai Zhu', han: '白术', role: 'Deputy — strengthens spleen' },
-      { name: 'Zhi Gan Cao', han: '炙甘草', role: 'Deputy — tonifies middle' },
-      { name: 'Dang Gui', han: '当归', role: 'Assistant — nourishes blood' },
-      { name: 'Chen Pi', han: '陈皮', role: 'Assistant — regulates qi' },
-      { name: 'Sheng Ma', han: '升麻', role: 'Envoy — raises yang' },
-      { name: 'Chai Hu', han: '柴胡', role: 'Envoy — raises yang' }
+      { name: 'Huang Qi', han: '黄芪', role: 'Chief - raises yang, tonifies qi' },
+      { name: 'Ren Shen (or Dang Shen)', han: '人参 / 党参', role: 'Deputy - tonifies qi' },
+      { name: 'Bai Zhu', han: '白术', role: 'Deputy - strengthens spleen' },
+      { name: 'Zhi Gan Cao', han: '炙甘草', role: 'Deputy - tonifies middle' },
+      { name: 'Dang Gui', han: '当归', role: 'Assistant - nourishes blood' },
+      { name: 'Chen Pi', han: '陈皮', role: 'Assistant - regulates qi' },
+      { name: 'Sheng Ma', han: '升麻', role: 'Envoy - raises yang' },
+      { name: 'Chai Hu', han: '柴胡', role: 'Envoy - raises yang' }
     ],
     uses: [
       { condition: 'Functional fatigue / chronic fatigue', evidence: 'limited', detail: 'Small Chinese trials suggest improved fatigue scores.' },
@@ -1571,26 +1571,26 @@ const ENTRIES = [
     safety: {
       common: ['Bloating'],
       caution: ['Yin deficiency with heat', 'Hypertension (Sheng Ma raises pressure occasionally)'],
-      interactions: ['Per individual herb — Huang Qi and Chai Hu considerations apply']
+      interactions: ['Per individual herb - Huang Qi and Chai Hu considerations apply']
     },
-    dose: 'Decoction at classical proportions; patent teapill 8–10 pills TID.',
+    dose: 'Decoction at classical proportions; patent teapill 8-10 pills TID.',
     refs: [
       'Bensky D, Barolet R. Formulas & Strategies. 2009.',
-      'Ushiroyama T et al. Am J Chin Med. 2003 — Hochu-ekki-to (Japanese form) trials.'
+      'Ushiroyama T et al. Am J Chin Med. 2003 - Hochu-ekki-to (Japanese form) trials.'
     ]
   },
   // ==================== PATENT MEDICINES ====================
   {
     id: 'compound-danshen', type: 'patent', cat: 'move-blood',
-    pinyin: 'Fùfāng Dānshēn Dīwán', han: '复方丹参滴丸', en: 'Compound Danshen Dripping Pill (T89)',
-    pharm: 'Modern patent (Tasly Pharmaceutical, 1990s); from formula 复方丹参方',
+    pinyin: 'Fùfāng Dānshēn Dīwán', han: '复�-�丹参滴丸', en: 'Compound Danshen Dripping Pill (T89)',
+    pharm: 'Modern patent (Tasly Pharmaceutical, 1990s); from formula 复�-�丹参�-�',
     properties: { taste: 'Bitter, slightly cool 苦微凉', temp: 'Cool 凉', channels: 'Heart 心' },
     primary: 'Activates blood, removes stasis, promotes qi flow, relieves chest pain',
     traditional: 'Reformulation of Compound Danshen Tablet as a sublingual rapid-dissolving "dripping pill". One of the most commercially successful TCM products globally; first oral TCM product to complete US FDA Phase III trial (T89, for chronic stable angina).',
     ingredients: [
-      { name: 'Dan Shen', han: '丹参', role: 'Chief — invigorates blood, removes stasis' },
-      { name: 'San Qi', han: '三七', role: 'Deputy — invigorates blood, stops bleeding' },
-      { name: 'Bing Pian', han: '冰片 (borneol)', role: 'Envoy — opens orifices, guides upward' }
+      { name: 'Dan Shen', han: '丹参', role: 'Chief - invigorates blood, removes stasis' },
+      { name: 'San Qi', han: '三七', role: 'Deputy - invigorates blood, stops bleeding' },
+      { name: 'Bing Pian', han: '冰片 (borneol)', role: 'Envoy - opens orifices, guides upward' }
     ],
     uses: [
       { condition: 'Chronic stable angina', evidence: 'moderate', detail: 'Multiple meta-analyses (Wang 2017, Jia 2014): symptom and ECG improvement comparable to ISDN with fewer adverse effects. T89 multinational Phase III trial completed.' },
@@ -1598,13 +1598,13 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Heartburn (sublingual)', 'Bitter taste'],
-      caution: ['Pregnancy — moves blood; AVOID', 'Bleeding disorders'],
-      interactions: ['Warfarin — INR may rise; monitor (per Dan Shen entry)', 'Antiplatelets — additive', 'Borneol can falsely elevate digoxin immunoassay']
+      caution: ['Pregnancy - moves blood; AVOID', 'Bleeding disorders'],
+      interactions: ['Warfarin - INR may rise; monitor (per Dan Shen entry)', 'Antiplatelets - additive', 'Borneol can falsely elevate digoxin immunoassay']
     },
     dose: '10 pills (~270 mg) TID sublingually; reduce to 5 pills TID once stable.',
     refs: [
-      'Jia Y et al. PLoS One. 2012 — Compound Danshen meta-analysis.',
-      'Tasly T89 Phase III data — ClinicalTrials.gov NCT01659580.'
+      'Jia Y et al. PLoS One. 2012 - Compound Danshen meta-analysis.',
+      'Tasly T89 Phase III data - ClinicalTrials.gov NCT01659580.'
     ]
   },
   {
@@ -1615,19 +1615,19 @@ const ENTRIES = [
     primary: 'Clears plague heat-toxin; ventilates lung; releases exterior',
     traditional: 'Developed during SARS-CoV-1 outbreak, recommended in Chinese national COVID-19 protocols 2020. Combines elements of Yin Qiao San and Ma Xing Shi Gan Tang.',
     ingredients: [
-      { name: 'Lian Qiao', han: '连翘', role: 'Forsythia — clears heat-toxin' },
-      { name: 'Jin Yin Hua', han: '金银花', role: 'Honeysuckle — clears heat-toxin' },
-      { name: 'Ma Huang', han: '炙麻黄', role: 'Honey-fried ephedra — opens lung' },
-      { name: 'Ku Xing Ren', han: '苦杏仁', role: 'Apricot kernel — descends lung qi' },
-      { name: 'Shi Gao', han: '石膏', role: 'Gypsum — clears strong heat' },
-      { name: 'Ban Lan Gen', han: '板蓝根', role: 'Isatis root — antiviral' },
-      { name: 'Mian Ma Guan Zhong', han: '绵马贯众', role: 'clears heat-toxin' },
-      { name: 'Yu Xing Cao', han: '鱼腥草', role: 'Houttuynia — clears lung heat' },
-      { name: 'Guang Huo Xiang', han: '广藿香', role: 'Patchouli — transforms damp' },
-      { name: 'Da Huang', han: '大黄', role: 'Rhubarb — drains heat downward' },
-      { name: 'Hong Jing Tian', han: '红景天', role: 'Rhodiola — tonifies qi (modern addition)' },
-      { name: 'Bo He Nao', han: '薄荷脑', role: 'Menthol' },
-      { name: 'Gan Cao', han: '甘草', role: 'Licorice — harmonizes' }
+      { name: 'Lian Qiao', han: '连翘', role: 'Forsythia - clears heat-toxin' },
+      { name: 'Jin Yin Hua', han: '金银花', role: 'Honeysuckle - clears heat-toxin' },
+      { name: 'Ma Huang', han: '炙麻黄', role: 'Honey-fried ephedra - opens lung' },
+      { name: 'Ku Xing Ren', han: '苦杏仁', role: 'Apricot kernel - descends lung qi' },
+      { name: 'Shi Gao', han: '石膏', role: 'Gypsum - clears strong heat' },
+      { name: 'Ban Lan Gen', han: '板蓝根', role: 'Isatis root - antiviral' },
+      { name: 'Mian Ma Guan Zhong', han: '绵马贯�-', role: 'clears heat-toxin' },
+      { name: 'Yu Xing Cao', han: '鱼腥草', role: 'Houttuynia - clears lung heat' },
+      { name: 'Guang Huo Xiang', han: '广�-�香', role: 'Patchouli - transforms damp' },
+      { name: 'Da Huang', han: '大黄', role: 'Rhubarb - drains heat downward' },
+      { name: 'Hong Jing Tian', han: '红景天', role: 'Rhodiola - tonifies qi (modern addition)' },
+      { name: 'Bo He Nao', han: '�-�荷脑', role: 'Menthol' },
+      { name: 'Gan Cao', han: '甘草', role: 'Licorice - harmonizes' }
     ],
     uses: [
       { condition: 'Mild COVID-19 / influenza-like illness', evidence: 'limited', detail: 'Multiple Chinese RCTs (e.g. Hu 2021) suggest reduced symptom duration; meta-analyses include high-bias trials. Independent replication outside China limited.' },
@@ -1635,26 +1635,26 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Diarrhoea (Da Huang content), nausea, abdominal discomfort'],
-      caution: ['Pregnancy — multiple contraindicated herbs (Ma Huang, Da Huang); AVOID', 'Hypertension, heart disease (Ma Huang)', 'Children — caution'],
+      caution: ['Pregnancy - multiple contraindicated herbs (Ma Huang, Da Huang); AVOID', 'Hypertension, heart disease (Ma Huang)', 'Children - caution'],
       interactions: ['MAOIs (Ma Huang component)', 'Anticoagulants', 'Cardiac glycosides']
     },
-    dose: '4 capsules (1.4 g) TID for 7–10 days during acute illness.',
+    dose: '4 capsules (1.4 g) TID for 7-10 days during acute illness.',
     refs: [
-      'Hu K et al. Phytomedicine. 2021 — Lianhua Qingwen in COVID-19.',
-      'Zhuang J et al. Phytother Res. 2021 — meta-analysis.',
-      'WHO Expert Meeting on TCM in COVID, 2022 — review report.'
+      'Hu K et al. Phytomedicine. 2021 - Lianhua Qingwen in COVID-19.',
+      'Zhuang J et al. Phytother Res. 2021 - meta-analysis.',
+      'WHO Expert Meeting on TCM in COVID, 2022 - review report.'
     ]
   },
   {
     id: 'yunnan-baiyao', type: 'patent', cat: 'stop-bleeding',
-    pinyin: 'Yúnnán Báiyào', han: '云南白药', en: 'Yunnan White Medicine',
+    pinyin: 'Yúnnán Báiyào', han: '云�-白药', en: 'Yunnan White Medicine',
     pharm: 'Modern patent (1902, formula by Qu Huanzhang); secret recipe',
     properties: { taste: 'Pungent 辛', temp: 'Warm 温', channels: 'Liver, Heart 肝心' },
     primary: 'Stops bleeding, transforms stasis, reduces swelling and pain',
-    traditional: 'China\'s most famous trauma remedy. Issued to PLA soldiers; carried by mountaineers and surgeons. Available as powder, capsule, aerosol spray, plaster, toothpaste. Composition formerly state secret — now partial disclosure: contains San Qi as principal herb.',
+    traditional: 'China\'s most famous trauma remedy. Issued to PLA soldiers; carried by mountaineers and surgeons. Available as powder, capsule, aerosol spray, plaster, toothpaste. Composition formerly state secret - now partial disclosure: contains San Qi as principal herb.',
     ingredients: [
-      { name: 'San Qi', han: '三七', role: 'Principal — stops bleeding, removes stasis' },
-      { name: 'Plus undisclosed minor ingredients', han: '其他', role: 'Composition partly trade secret; reportedly includes Cao Wu (processed Aconitum), Niu Xi, and others' }
+      { name: 'San Qi', han: '三七', role: 'Principal - stops bleeding, removes stasis' },
+      { name: 'Plus undisclosed minor ingredients', han: '其�-', role: 'Composition partly trade secret; reportedly includes Cao Wu (processed Aconitum), Niu Xi, and others' }
     ],
     uses: [
       { condition: 'Surgical / dental haemostasis (topical and oral)', evidence: 'moderate', detail: 'Reduces blood loss in tonsillectomy, dental extractions, orthopaedic surgery in multiple Chinese RCTs.' },
@@ -1663,14 +1663,14 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Allergic reaction (rare)'],
-      caution: ['Aconitine content disclosed in reformulated product after Hong Kong arsenic concerns and aconitine-related Canadian adverse-event reports — limit chronic high-dose use', 'Pregnancy — AVOID', 'Surgery — paradoxical effects; consult surgeon'],
-      interactions: ['Anticoagulants — case reports both ways', 'Ciclosporin — possible interaction']
+      caution: ['Aconitine content disclosed in reformulated product after Hong Kong arsenic concerns and aconitine-related Canadian adverse-event reports - limit chronic high-dose use', 'Pregnancy - AVOID', 'Surgery - paradoxical effects; consult surgeon'],
+      interactions: ['Anticoagulants - case reports both ways', 'Ciclosporin - possible interaction']
     },
-    dose: 'Capsule 0.25–0.5 g PO Q6H acute (max 2 g/day); avoid prolonged daily use. Topical per product. The "red emergency pill" (保险子) inside the bottle is reserved for severe acute bleeding (1 pill stat).',
+    dose: 'Capsule 0.25-0.5 g PO Q6H acute (max 2 g/day); avoid prolonged daily use. Topical per product. The "red emergency pill" (保险子) inside the bottle is reserved for severe acute bleeding (1 pill stat).',
     refs: [
-      'Tang ZL et al. Trials. 2019 — Yunnan Baiyao haemostasis review.',
-      'He J et al. Clin Toxicol. 2014 — aconitine in patent products.',
-      'Ladas EJ et al. Pediatr Blood Cancer. 2012 — paediatric oncology adjunct review.'
+      'Tang ZL et al. Trials. 2019 - Yunnan Baiyao haemostasis review.',
+      'He J et al. Clin Toxicol. 2014 - aconitine in patent products.',
+      'Ladas EJ et al. Pediatr Blood Cancer. 2012 - paediatric oncology adjunct review.'
     ]
   },
   // ==================== NEW SINGLE HERBS ====================
@@ -1696,7 +1696,7 @@ const ENTRIES = [
       caution: ['Pregnancy -- uterotonic alkaloids (AVOID in first trimester)', 'Profuse menstruation / bleeding tendency', 'Yin-deficiency fire (TCM contraindication -- acrid-warm herbs aggravate heat)'],
       interactions: ['Antiplatelet agents / anticoagulants -- additive bleeding risk', 'Antihypertensives -- additive hypotension with IV TMP', 'CYP1A2 substrates -- TMP is a mild inhibitor']
     },
-    dose: 'Decoction 3–9 g. Maximum 15 g in acute pain. Standardised TMP oral tablets 50–100 mg TID (pharmaceutical preparation).',
+    dose: 'Decoction 3-9 g. Maximum 15 g in acute pain. Standardised TMP oral tablets 50-100 mg TID (pharmaceutical preparation).',
     refs: [
       'Liu Y et al. Neural Regen Res. 2015 -- Tetramethylpyrazine in stroke review.',
       'Shang X et al. J Ethnopharmacol. 2010 -- Ligusticum chuanxiong phytochemistry.',
@@ -1726,7 +1726,7 @@ const ENTRIES = [
       caution: ['Cold-deficiency diarrhoea (TCM: cool herb contraindicated in cold-interior patterns)', 'Pregnancy: limited safety data for high doses', 'Paeoniflorin may potentiate anaesthesia -- disclose pre-surgery'],
       interactions: ['Warfarin -- paeoniflorin reported to increase INR in case reports', 'Methotrexate -- TGP may reduce MTX clearance (monitor toxicity)', 'CNS depressants -- mild potentiation']
     },
-    dose: 'Decoction 6–15 g; up to 30 g for spasm relief. TGP (Paefulin) 0.6 g TID.',
+    dose: 'Decoction 6-15 g; up to 30 g for spasm relief. TGP (Paefulin) 0.6 g TID.',
     refs: [
       'He DY, Dai SM. Front Pharmacol. 2011 -- TGP in autoimmune disease review.',
       'Liu F et al. Arthritis Res Ther. 2018 -- TGP meta-analysis in RA.',
@@ -1755,7 +1755,7 @@ const ENTRIES = [
       caution: ['PREGNANCY -- ABSOLUTELY CONTRAINDICATED. Strong oxytocic action causes uterine contraction and miscarriage.', 'Bleeding disorders -- increases haemorrhage risk', 'Yin-blood deficiency without stasis (TCM: moving herb depletes where there is insufficiency)'],
       interactions: ['Anticoagulants / antiplatelets -- additive bleeding risk', 'Uterotonic drugs (oxytocin, ergometrine) -- additive; do not combine', 'Antihypertensives -- additive hypotension']
     },
-    dose: 'Decoction 9–30 g; fresh herb up to 60 g. Patent extract: per product.',
+    dose: 'Decoction 9-30 g; fresh herb up to 60 g. Patent extract: per product.',
     refs: [
       'Shi M et al. Am J Chin Med. 2016 -- Leonurine pharmacology review.',
       'Zhao W et al. J Ethnopharmacol. 2018 -- Motherwort in dysmenorrhoea.',
@@ -1784,7 +1784,7 @@ const ENTRIES = [
       caution: ['Pregnancy -- AVOID (blood-moving action; traditional contraindication)', 'Profuse menstruation or bleeding tendency', 'Deficiency cold patterns (TCM: cool herb inappropriate)'],
       interactions: ['Anticoagulants -- additive effect via antiplatelet paeonol', 'COX inhibitors / NSAIDs -- paeonol has COX-2 activity; potential pharmacodynamic overlap']
     },
-    dose: 'Decoction 6–12 g.',
+    dose: 'Decoction 6-12 g.',
     refs: [
       'Zhang L et al. Molecules. 2013 -- Paeonol biological activities review.',
       'Zhao WL et al. J Nat Med. 2012 -- Mu Dan Pi chemical constituents.',
@@ -1813,7 +1813,7 @@ const ENTRIES = [
       caution: ['Yin deficiency with dry symptoms (TCM: drying herb worsens)', 'Heat conditions or excessive thirst', 'Allergy to Asteraceae family (rare cross-reactivity)'],
       interactions: ['Few documented interactions', 'Theoretical antiplatelet contribution from polyacetylenes -- disclose pre-surgery']
     },
-    dose: 'Decoction 6–12 g; up to 15–30 g for oedema.',
+    dose: 'Decoction 6-12 g; up to 15-30 g for oedema.',
     refs: [
       'Li CQ et al. Phytomedicine. 2012 -- Atractylenolides pharmacological review.',
       'Shan JJ et al. J Ethnopharmacol. 2014 -- Atractylodes macrocephala in GI disorders.',
@@ -1842,7 +1842,7 @@ const ENTRIES = [
       caution: ['Driving or operating machinery after use', 'Severe liver disease (limited elimination data)', 'Excess pattern insomnia (e.g. phlegm-heat pattern -- wrong category)'],
       interactions: ['CNS depressants including benzodiazepines, alcohol, opioids -- additive sedation', 'Spinosin may potentiate anaesthesia -- disclose pre-surgery', 'MAOIs -- theoretical interaction via serotonergic alkaloids']
     },
-    dose: 'Decoction 9–18 g (roasted). Extract granules per product. Take in evening.',
+    dose: 'Decoction 9-18 g (roasted). Extract granules per product. Take in evening.',
     refs: [
       'Chen J et al. J Ethnopharmacol. 2016 -- Suan Zao Ren Tang in insomnia meta-analysis.',
       'Cao JX et al. J Nat Prod. 2010 -- Jujuboside mechanisms.',
@@ -1851,7 +1851,7 @@ const ENTRIES = [
   },
   {
     id: 'yin-yang-huo', type: 'herb', cat: 'tonify-yang',
-    pinyin: 'Yín Yáng Huò', han: '淫羊藿', en: 'Epimedium / Horny Goat Weed',
+    pinyin: 'Yín Yáng Huò', han: '淫羊�-�', en: 'Epimedium / Horny Goat Weed',
     pharm: 'Epimedium grandiflorum; E. koreanum; E. brevicornu (folium)',
     properties: { taste: 'Acrid, sweet 辛甘', temp: 'Warm 温', channels: 'Liver, Kidney 肝肾' },
     primary: 'Tonifies kidney yang, strengthens sinews and bones, dispels wind-cold-damp',
@@ -1871,7 +1871,7 @@ const ENTRIES = [
       caution: ['Hormone-sensitive cancers (phytoestrogenic; avoid until further data)', 'Severe yin deficiency (TCM: warm acrid herb dries)', 'Liver disease: epimedium rare hepatotoxicity case reports'],
       interactions: ['PDE5 inhibitors (sildenafil, tadalafil) -- additive hypotension; do not combine', 'Anticoagulants -- possible antiplatelet additive effect', 'Oestrogen / HRT -- pharmacodynamic overlap']
     },
-    dose: 'Decoction 3–15 g. Extract: varies widely by icariin content; typical 500 mg/day for bone density trials.',
+    dose: 'Decoction 3-15 g. Extract: varies widely by icariin content; typical 500 mg/day for bone density trials.',
     refs: [
       'Liu J et al. J Sex Med. 2011 -- Icariin as PDE5 inhibitor review.',
       'Zhao J et al. Phytomedicine. 2012 -- Epimedium in osteoporosis.',
@@ -1887,7 +1887,7 @@ const ENTRIES = [
     traditional: 'The pre-eminent herb to restore kidney-yang fire and guide deficiency fire back to its source (引火归原). Indispensable in Jin Gui Shen Qi Wan and You Gui Wan. Unlike Gui Zhi (cinnamon twig), Rou Gui warms the interior and kidneys more deeply rather than releasing the exterior. Used at low dose to "catalyse" large tonifying formulas by warming the movement of other herbs.',
     compounds: [
       { name: 'Cinnamaldehyde', class: 'Phenylpropanoid aldehyde', action: 'Vasodilator; insulin-sensitising (improves GLUT4 translocation); anti-inflammatory; antimicrobial.' },
-      { name: 'Coumarin', class: 'Benzopyranone', action: 'Anti-oedematous; BUT hepatotoxic at high intake. EFSA maximum tolerable daily intake 0.1 mg/kg/day (C. cassia has 1–12 g coumarin/kg dry weight).' },
+      { name: 'Coumarin', class: 'Benzopyranone', action: 'Anti-oedematous; BUT hepatotoxic at high intake. EFSA maximum tolerable daily intake 0.1 mg/kg/day (C. cassia has 1-12 g coumarin/kg dry weight).' },
       { name: 'Procyanidins (type A)', class: 'Condensed tannins', action: 'Insulin-mimetic effects in vitro; contribute to glucose-lowering activity.' },
       { name: 'Eugenol', class: 'Phenylpropanoid', action: 'Analgesic; antiseptic; mild antiplatelet.' }
     ],
@@ -1901,7 +1901,7 @@ const ENTRIES = [
       caution: ['HIGH COUMARIN CONTENT in C. cassia -- EFSA warns that regular high-dose use may cause hepatotoxicity. Do not use large doses long-term, especially in liver disease or with other hepatotoxic drugs.', 'Pregnancy -- hot herb; avoid high doses', 'Yin-deficiency heat pattern (TCM contraindicated)', 'Haemorrhagic tendency -- antiplatelet activity'],
       interactions: ['Antidiabetics -- additive hypoglycaemia risk', 'Anticoagulants -- antiplatelet eugenol additive with warfarin; coumarin (DIFFERENT from warfarin/coumadin) may nonetheless compound hepatic concern', 'Hepatotoxic drugs -- avoid combination given coumarin content']
     },
-    dose: 'Decoction 1–4.5 g (added near end to preserve volatile oils). Powdered bark: 1–2 g/day maximum long-term given coumarin content.',
+    dose: 'Decoction 1-4.5 g (added near end to preserve volatile oils). Powdered bark: 1-2 g/day maximum long-term given coumarin content.',
     refs: [
       'Davis PA, Yokoyama W. J Med Food. 2011 -- Cinnamon meta-analysis for T2DM.',
       'EFSA ANS Panel. EFSA Journal. 2008 -- Coumarin safety assessment.',
@@ -1932,7 +1932,7 @@ const ENTRIES = [
       caution: ['RAW PINELLIA IS TOXIC -- causes severe oral and pharyngeal burning, mucosal oedema, and potential airway compromise. USE ONLY PROCESSED FORM.', 'Pregnancy -- CONTRAINDICATED (traditional incompatibility with Aconite; uterine stimulant at high dose)', 'Yin-deficiency dry cough (TCM: drying herb worsens)'],
       interactions: ['Traditional "18 Antagonisms" (十八反): Ban Xia is incompatible with Aconite (Wu Tou / Fu Zi) -- avoid combination', 'Antidiabetic drugs -- modest hypoglycaemic effect of constituents']
     },
-    dose: 'Decoction (processed only) 3–9 g. Never use raw herb internally.',
+    dose: 'Decoction (processed only) 3-9 g. Never use raw herb internally.',
     refs: [
       'Zheng HZ et al. J Ethnopharmacol. 2010 -- Pinellia ternata pharmacology.',
       'Zhang WJ et al. Evid Based Complement Alternat Med. 2018 -- Ban Xia Xie Xin Tang in GORD.',
@@ -1962,7 +1962,7 @@ const ENTRIES = [
       caution: ['Qi or yin deficiency (TCM: drying and moving herb depletes)', 'Allergy to Rutaceae / Citrus family'],
       interactions: ['CYP3A4 and P-gp inhibition -- furanocoumarins in peel may inhibit CYP3A4 similar to grapefruit; monitor cyclosporin, statins, tacrolimus', 'Anticoagulants -- hesperidin has mild antiplatelet activity']
     },
-    dose: 'Decoction 3–10 g.',
+    dose: 'Decoction 3-10 g.',
     refs: [
       'Li S et al. J Funct Foods. 2017 -- Nobiletin review.',
       'Tan HL et al. Food Funct. 2016 -- Polymethoxylated flavones from Citrus reticulata.',
@@ -1991,7 +1991,7 @@ const ENTRIES = [
       caution: ['Spleen-deficiency with loose stools (TCM: cold bitter herb worsens diarrhoea)', 'Pregnancy: limited data; cold herbs traditionally used cautiously'],
       interactions: ['Antidiabetics -- additive hypoglycaemia', 'Cisplatin -- sarsasapogenin may enhance cisplatin apoptosis in vitro (theoretical synergy; monitor toxicity)', 'Cold / digestive enzyme preparations -- may reduce efficacy of digestive enzymes']
     },
-    dose: 'Decoction 6–12 g. Salt-prepared (Yan Zhi Mu) for kidney channel affinity.',
+    dose: 'Decoction 6-12 g. Salt-prepared (Yan Zhi Mu) for kidney channel affinity.',
     refs: [
       'Miura T et al. Biol Pharm Bull. 2001 -- Mangiferin hypoglycaemic activity.',
       'Chu H et al. PNAS. 2020 -- Timosaponin AIII in Alzheimer models.',
@@ -2006,7 +2006,7 @@ const ENTRIES = [
     primary: 'Clears heat, drains fire, dries dampness, detoxifies, drains kidney fire',
     traditional: 'Paired with Huang Lian (Coptis) and Huang Qin (Scutellaria) as one of the "three yellows" (San Huang). While similar in action to Huang Lian, Huang Bai has particular affinity for the lower jiao (genitourinary tract, lower extremities) and is the preferred choice for lower-body damp-heat: urinary tract infections, leukorrhea, red swollen joints in the lower limb. Combination with Zhi Mu directs action to the kidney for yin-deficiency fire.',
     compounds: [
-      { name: 'Berberine', class: 'Isoquinoline alkaloid', action: 'Same as in Coptis; antimicrobial; hypoglycaemic; lipid-lowering; AMPK activation. Content lower than in Huang Lian (2–4% vs 5–8%).' },
+      { name: 'Berberine', class: 'Isoquinoline alkaloid', action: 'Same as in Coptis; antimicrobial; hypoglycaemic; lipid-lowering; AMPK activation. Content lower than in Huang Lian (2-4% vs 5-8%).' },
       { name: 'Palmatine', class: 'Isoquinoline alkaloid', action: 'Antimicrobial; analgesic; sedative; less potent than berberine but similar spectrum.' },
       { name: 'Phellodendrine', class: 'Isoquinoline alkaloid', action: 'Muscle relaxant; lowers blood pressure in animal models.' },
       { name: 'Obacunone, limonin', class: 'Limonoid triterpenes', action: 'Anti-inflammatory; anti-tumour in vitro.' }
@@ -2021,7 +2021,7 @@ const ENTRIES = [
       caution: ['Pregnancy -- AVOID. Berberine displaces bilirubin, causing neonatal jaundice risk; uterotonic at high dose.', 'Spleen-qi deficiency with loose stools (TCM: cold bitter herb worsens)', 'Prolonged high-dose use: theoretical concern over gut microbiome alteration'],
       interactions: ['See Huang Lian interactions (shared berberine content): anticoagulants, antidiabetics, CYP2D6 substrates', 'Tetracyclines -- berberine may antagonise; avoid combination in infection', 'Metformin -- additive AMPK-mediated glucose lowering; monitor']
     },
-    dose: 'Decoction 3–12 g. Salt-prepared (Yan Huang Bai) to guide to kidneys.',
+    dose: 'Decoction 3-12 g. Salt-prepared (Yan Huang Bai) to guide to kidneys.',
     refs: [
       'Bhutani MK et al. Indian J Med Res. 2009 -- Palmatine antibacterial activity.',
       'Zhang Y et al. J Clin Endocrinol Metab. 2008 -- Berberine in T2DM (original landmark RCT includes Phellodendron-source berberine).',
@@ -2103,7 +2103,7 @@ const ENTRIES = [
       { name: 'Suan Zao Ren', han: '酸枣仁', role: 'Nourishes liver blood, calms spirit, stops sweating' },
       { name: 'Mu Xiang', han: '木香', role: 'Moves qi, prevents stagnation from tonics' },
       { name: 'Dang Gui', han: '当归', role: 'Tonifies blood, harmonises liver' },
-      { name: 'Yuan Zhi', han: '远志', role: 'Calms spirit, opens heart orifices' },
+      { name: 'Yuan Zhi', han: '远�-', role: 'Calms spirit, opens heart orifices' },
       { name: 'Zhi Gan Cao', han: '炙甘草', role: 'Harmonises, tonifies qi' },
       { name: 'Sheng Jiang', han: '生姜', role: 'Harmonises stomach' },
       { name: 'Da Zao', han: '大枣', role: 'Tonifies spleen, nourishes blood' }
@@ -2199,7 +2199,7 @@ const ENTRIES = [
       caution: ['CRITICAL INTERACTION -- PNEUMONITIS WITH INTERFERON: Sho-saiko-to combined with interferon-alpha (used in hepatitis C treatment) caused fatal interstitial pneumonitis in Japanese pharmacovigilance reports in the 1990s. This combination is absolutely contraindicated. Japanese MHLW has issued formal warnings.', 'Liver disease with high transaminases (Chai Hu saponins can paradoxically raise enzymes in some cases)', 'Pregnancy: Ban Xia contraindicated; avoid'],
       interactions: ['Interferon-alpha -- ABSOLUTELY CONTRAINDICATED (see above)', 'Immunosuppressants -- saikosaponins immune-stimulating, may oppose', 'Warfarin -- Huang Qin flavones inhibit CYP2C9; monitor INR carefully']
     },
-    dose: 'Decoction: Chai Hu 12–24 g, Huang Qin 9 g, Ban Xia 9 g, Ren Shen 9 g, Zhi Gan Cao 6 g, Sheng Jiang 9 g, Da Zao 4 pieces. Sho-saiko-to granules (Japan) 7.5 g daily divided.',
+    dose: 'Decoction: Chai Hu 12-24 g, Huang Qin 9 g, Ban Xia 9 g, Ren Shen 9 g, Zhi Gan Cao 6 g, Sheng Jiang 9 g, Da Zao 4 pieces. Sho-saiko-to granules (Japan) 7.5 g daily divided.',
     refs: [
       'Hirayama C et al. Hepatology. 1989 -- Sho-saiko-to in hepatitis B RCT.',
       'Shindo M et al. J Gastroenterol Hepatol. 1997 -- Interferon-Sho-saiko-to pneumonitis cases.',
@@ -2222,7 +2222,7 @@ const ENTRIES = [
       { name: 'Chi Shao', han: '赤芍', role: 'Clears heat, cools blood, disperses stasis' },
       { name: 'Chai Hu', han: '柴胡', role: 'Spreads liver qi, raises clear yang' },
       { name: 'Gan Cao', han: '甘草', role: 'Harmonises' },
-      { name: 'Jie Geng', han: '桔梗', role: 'Directs formula upward, opens chest' },
+      { name: 'Jie Geng', han: '桔�-', role: 'Directs formula upward, opens chest' },
       { name: 'Chuan Xiong', han: '川芎', role: 'Moves qi and blood, dispels wind' },
       { name: 'Niu Xi', han: '牛膝', role: 'Leads blood downward, strengthens sinews' }
     ],
@@ -2279,10 +2279,10 @@ const ENTRIES = [
     ],
     safety: {
       common: ['Nausea, GI upset', 'Sweating (warm dispersing formula)'],
-      caution: ['ARISTOLOCHIC ACID WARNING: Xi Xin (Asarum) contains aristolochic acid. Aristolochic acid nephropathy (AAN) is a dose-dependent irreversible nephropathy causing progressive renal fibrosis and potential urothelial malignancy. Risk is LOW at traditional doses (Xi Xin 1–3 g in decoction) where extraction is incomplete, but patent pills can concentrate content. Avoid long-term continuous use. Do not use in pre-existing renal impairment. Choose products from reputable manufacturers with batch testing.', 'Pregnancy -- CONTRAINDICATED (uterotonic herbs, warm dispersing action)', 'Heat-type bi syndrome (TCM: warming formula worsens hot inflamed joints -- wrong pattern)'],
+      caution: ['ARISTOLOCHIC ACID WARNING: Xi Xin (Asarum) contains aristolochic acid. Aristolochic acid nephropathy (AAN) is a dose-dependent irreversible nephropathy causing progressive renal fibrosis and potential urothelial malignancy. Risk is LOW at traditional doses (Xi Xin 1-3 g in decoction) where extraction is incomplete, but patent pills can concentrate content. Avoid long-term continuous use. Do not use in pre-existing renal impairment. Choose products from reputable manufacturers with batch testing.', 'Pregnancy -- CONTRAINDICATED (uterotonic herbs, warm dispersing action)', 'Heat-type bi syndrome (TCM: warming formula worsens hot inflamed joints -- wrong pattern)'],
       interactions: ['NSAIDs -- additive GI effects', 'Anticoagulants -- Dang Gui, Chuan Xiong additive antiplatelet effect', 'Nephrotoxic drugs -- AVOID combination given Xi Xin aristolochic acid concern (e.g. aminoglycosides, NSAIDs, contrast media)']
     },
-    dose: 'Patent pills per manufacturer: typically 6–9 g BID. Limit course to 4–8 weeks; reassess before continuing.',
+    dose: 'Patent pills per manufacturer: typically 6-9 g BID. Limit course to 4-8 weeks; reassess before continuing.',
     refs: [
       'Cao L et al. J Tradit Chin Med. 2015 -- Du Huo Ji Sheng Wan in knee OA meta-analysis.',
       'Arlt VM et al. Lancet Oncol. 2002 -- Aristolochic acid nephropathy and urothelial cancer.',
@@ -2301,7 +2301,7 @@ function evidenceLabel(rank) {
   return Object.entries(EV_RANK).find(([k,v]) => v === rank)?.[0] ?? 'insufficient';
 }
 function typeLabel(t) {
-  return ({ herb: 'Single Herbs 单味', formula: 'Classical Formulas 方剂', patent: 'Patent Medicines 中成药' })[t] || t;
+  return ({ herb: 'Single Herbs 单味', formula: 'Classical Formulas �-�剂', patent: 'Patent Medicines 中成药' })[t] || t;
 }
 function render() {
   const container = document.getElementById('grid-container');
@@ -2380,7 +2380,7 @@ function openModal(id) {
   const cat = CAT_LABELS[e.cat] || { en: e.cat, zh: '' };
   content.innerHTML = `
     <div class="modal-head">
-      <button class="close-btn" aria-label="Close" onclick="closeModal()">×</button>
+      <button class="close-btn" aria-label="Close" onclick="closeModal()">�-</button>
       <div class="name-row">
         <h2>${e.pinyin}</h2>
         <span class="han-big">${e.han}</span>
@@ -2432,7 +2432,7 @@ function openModal(id) {
         <h3>Modern Clinical Evidence <span class="han">现代证据</span></h3>
         ${e.uses.map(u => `
           <div class="use-row">
-            <div class="use-icon">●</div>
+            <div class="use-icon">�-�</div>
             <div>
               <div class="use-condition">${u.condition}</div>
               <div class="use-detail">${u.detail}</div>

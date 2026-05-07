@@ -39,19 +39,4 @@ permalink: /msk/de-quervains/
   <p class="aside-title">NZ resources</p>
   <ul class="aside-links">
     <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Wrist pain and hand conditions</a></li>
-    <li><a href="https://www.acc.co.nz" target="_blank" rel="noopener">ACC: Musculoskeletal injury management</a></li>
-    <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC NZ: Prescribing for MSK conditions</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Ilyas AM, Ast M, Schaffer AA, Thoder JJ. De Quervain tenosynovitis of the wrist. *J Am Acad Orthop Surg.* 2007;15(1):3-11.
-2. Richie CA, Briner WW. Corticosteroid injection for treatment of de Quervain's tenosynovitis: a pooled analysis of the literature. *J Am Board Fam Pract.* 2003;16(2):102-106.
-3. Finkelstein H. Stenosing tenosynovitis at the radial styloid process. *J Bone Joint Surg.* 1930;12(3):509-540.
-4. Rettig AC. Epidemiology of musculoskeletal disorders in the athletic and general population. In: Schenck RC, ed. Athletic Training and Sports Medicine. 3rd ed. American Academy of Orthopaedic Surgeons; 1999.
-
-</div>
+    <li><a href="https://www.acc.co.nz" target="_blank" rel="noopener">ACC: Musculos

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinnitus - Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#EFF3E6;--warm:#E4EAD8;--deep:#D6E0C4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#C8D4B4;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem;font-weight:500;line-height:1.7}
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'DM Serif Display',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+    .hero{max-width:680px;margin:0 auto;padding:1.6rem 2rem 1.1rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'DM Serif Display',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 2.5rem}
+    .print-bar{max-width:680px;margin:0 auto;padding:.5rem 2rem;display:flex;justify-content:flex-end}
+    .print-btn{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--rule);color:var(--ink-mute);padding:.45rem 1rem;border-radius:50px;cursor:pointer;transition:all .15s}
+    .print-btn:hover{color:var(--green);border-color:var(--green)}
+    .glance{background:var(--warm);border-radius:14px;padding:.85rem;margin-bottom:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
+    .glance-value{font-family:'DM Serif Display',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.1rem}
+    .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+    .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:.55rem 1.2rem;cursor:pointer;background:var(--warm);font-family:'DM Serif Display',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
+    .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
+    .acc-item.open .chevron{transform:rotate(90deg)}
+    .acc-body{display:none;padding:.6rem 1.2rem .7rem;background:var(--paper);border-top:1px solid var(--rule);font-size:.95rem;font-weight:500;color:var(--ink);line-height:1.6}
+    .acc-item.open .acc-body{display:block}
+    .acc-body p+p{margin-top:.45rem}
+    .acc-body ul,.acc-body ol{padding-left:1.25rem;margin:.5rem 0}
+    .acc-body li{margin-bottom:.3rem}
+    .data-table{width:100%;border-collapse:collapse;margin:.9rem 0;font-size:.9rem}
+    .data-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.7rem 1rem;background:var(--deep);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+    .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:nth-child(even) td{background:var(--warm)}
+    .alert-box{background:#F2F7EC;border:2px solid var(--ochre);border-radius:12px;padding:.85rem;margin:1rem 0}
+    .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
+    .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
+    .alert-box ul{padding-left:1.25rem}
+    .alert-box ul li{margin-bottom:.4rem}
+    .resources{background:var(--warm);border-radius:12px;padding:.85rem;margin-top:1rem}
+    .resources-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+    .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
+    .resources a:hover{text-decoration:underline}
+    .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
+    .section-h2{font-family:'DM Serif Display',serif;font-weight:300;font-size:1.35rem;margin-bottom:.25rem;margin-top:1.4rem}
+    .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
+    .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1rem 2rem 1.5rem}
+    .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
+    .refs-toggle:hover{color:var(--green)}
+    .refs-list{display:none;margin-top:1rem}
+    .refs-list.on{display:block}
+    .refs-list ol{padding-left:1.4rem}
+    .refs-list li{font-size:.8rem;color:var(--ink-mute);line-height:1.6;margin-bottom:.45rem}
+    .page-footer{text-align:center;font-size:.8rem;color:var(--ink-mute);padding:.9rem 2rem 1.5rem;border-top:1px solid var(--rule);max-width:680px;margin:0 auto}
+    @media print{
+      .masthead-crumb,.print-bar,.refs-section,.page-footer{display:none}
+      .acc-body{display:block!important;padding:.4rem 0}
+      .acc-head{background:none!important;font-size:1rem;padding:.5rem 0;border-bottom:1px solid #ccc;border-radius:0}
+      .acc-item{border:none;margin-bottom:.5rem;border-radius:0}
+      body{font-size:.85rem}
+      .alert-box,.data-table{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/ent/" class="masthead-crumb">Ear, Nose &amp; Throat</a>
+</header>
+
+<div class="hero">
+  <p class="kicker">❍ Ear, Nose &amp; Throat</p>
+  <h1>Understanding <em>tinnitus</em></h1>
+  <p class="hero-lead">Tinnitus is sound with no external source. Common, rarely dangerous, and usually less intrusive over time with the right support.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+
+  <div class="glance">
+    <div>
+      <p class="glance-label">How common</p>
+      <p class="glance-value">1 in 7</p>
+      <p class="glance-desc">Adults experience tinnitus at some point in their lives</p>
+    </div>
+    <div>
+      <p class="glance-label">Linked to hearing</p>
+      <p class="glance-value">~90%</p>
+      <p class="glance-desc">Of cases are associated with some degree of hearing change</p>
+    </div>
+    <div>
+      <p class="glance-label">Habituate over time</p>
+      <p class="glance-value">4 in 5</p>
+      <p class="glance-desc">People find tinnitus becomes less intrusive as months pass</p>
+    </div>
+    <div>
+      <p class="glance-label">Pulsatile tinnitus</p>
+      <p class="glance-value">See GP</p>
+      <p class="glance-desc">Tinnitus that beats with your pulse always warrants assessment</p>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-head">What is <em>tinnitus?</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Tinnitus is the perception of sound - ringing, buzzing, hissing, roaring, or tonal - with no external source. It may be constant or intermittent, unilateral or bilateral, and ranges from barely noticeable to persistently intrusive.</p>
+      <p>Tinnitus is a symptom, not a disease. Transient tinnitus after loud noise is universal and harmless. Persistent tinnitus (more than a few months) affects approximately 15% of adults and is what typically prompts GP review.</p>
+      <p>Most people reach habituation - the brain reclassifies the sound as non-threatening and it recedes from conscious attention. This process underpins most effective management. Tinnitus is almost never a sign of serious disease, but pulsatile tinnitus or persistent unilateral tinnitus warrants investigation.</p>
+        </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">What <em>causes</em> tinnitus? <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>When the inner ear or auditory nerve is altered, the brain may generate compensatory signals - the most common mechanism explaining why tinnitus accompanies hearing loss. In many cases, no single identifiable cause is found.</p>
+      <p>Common associations:</p>
+      <ul>
+        <li><strong>Noise-induced hearing loss</strong> - the leading cause; damage is usually permanent but tinnitus often stabilises</li>
+        <li><strong>Age-related hearing loss (presbycusis)</strong> - tinnitus is common in people over 60</li>
+        <li><strong>Earwax occlusion</strong> - temporary, resolves with clearance</li>
+        <li><strong>Middle ear conditions</strong> - glue ear, otitis media, eustachian tube dysfunction</li>
+        <li><strong>Ototoxic medications</strong> - high-dose aspirin, NSAIDs, loop diuretics, aminoglycosides, quinine; report if tinnitus began after a new medicine</li>
+        <li><strong>Head or neck trauma</strong> - affects nerves and vessels near the ear</li>
+        <li><strong>TMJ dysfunction</strong> - jaw joint problems are a recognised cause</li>
+        <li><strong>Meniere's disease</strong> - episodic vertigo, low-pitched tinnitus, aural fullness, and fluctuating hearing loss; needs specialist review</li>
+        <li><strong>Pulsatile tinnitus</strong> - rhythmic sound matching the heartbeat suggests a vascular cause; requires investigation</li>
+      </ul>
+        </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">What does the <em>type of sound</em> suggest? <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>The character of tinnitus - its pitch, rhythm, and whether it is in one or both ears - can point towards different causes and helps your GP decide what assessment is needed. Most tinnitus is harmless, but some patterns deserve prompt investigation.</p>
+      <p><strong>High-pitched ringing or hissing in both ears</strong> is the most common pattern and almost always reflects noise-induced or age-related hearing loss. It is rarely caused by anything serious.</p>
+      <p><strong>Low-pitched roaring or rushing</strong> in one ear, particularly when it comes in episodes alongside vertigo and a feeling of fullness, raises the possibility of Meniere's disease. This warrants GP assessment and usually audiology referral.</p>
+      <p><strong>Pulsatile tinnitus</strong> (a rhythmic sound that beats with your heartbeat, like a whooshing or thumping) is different from most tinnitus and always warrants GP assessment. It can reflect high blood pressure, increased blood flow (as in anaemia or pregnancy), or - rarely - a vascular abnormality or glomus tumour near the ear.</p>
+      <p><strong>Tinnitus in one ear only</strong> (unilateral tinnitus), particularly if it has been present for some months or is associated with any hearing change, facial numbness, or balance problems, should be assessed by a GP. Acoustic neuroma (a benign tumour of the hearing nerve) is uncommon but presents this way. It is usually slow-growing and manageable if detected, but prompt assessment is sensible.</p>
+      <p><strong>Clicking tinnitus</strong> is less common and often originates from the middle ear (muscle spasms around the eustachian tube) or the temporomandibular joint. It is rarely serious but benefits from GP review if persistent.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Managing tinnitus <em>at home</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>Management focuses on facilitating habituation, not eliminating the sound.</p>
+      <p><strong>Avoid silence.</strong> Background sound (a fan, rainfall, low music) reduces the perceptual contrast with tinnitus and supports habituation. The level should be audible but not distracting.</p>
+      <p><strong>Protect residual hearing.</strong> Further noise exposure worsens hearing loss and tinnitus. Use hearing protection in noisy environments; avoid high-volume headphone use.</p>
+      <p><strong>Address sleep and stress.</strong> Tinnitus is consistently perceived as louder when fatigued or anxious. Consistent sleep routines, background sound at night, and stress management are practical and effective.</p>
+      <p><strong>Avoid monitoring the tinnitus.</strong> Repeatedly checking its volume keeps the auditory cortex focused on the signal, opposing habituation. Engagement in work, activity, and social life helps de-prioritise it.</p>
+      <p><strong>Caffeine and alcohol</strong> worsen tinnitus in some individuals. If this applies to you, reducing intake is worthwhile.</p>
+        </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">Treatments that can <em>help</em> <span class="chevron">›</span></div>
+    <div class="acc-body">
+      <p>No medication reliably eliminates tinnitus. Evidence-based approaches focus on reducing its impact.</p>
+      <p><strong>Hearing aids</strong> - the most effective intervention when hearing loss is present (the majority of cases). Amplifying ambient sound reduces tinnitus contrast and restores auditory input. GP referral to audiology for assessment and fitting.</p>
+      <p><strong>Cognitive Behavioural Therapy (CBT)</strong> - the strongest evidence base for reducing tinnitus distress. Targets unhelpful thought patterns and monitoring behaviours. Does not reduce loudness, but consistently reduces impact on daily life. Available via GP referral to a psychologist.</p>
+      <p><strong>Tinnitus Retraining Therapy (TRT)</strong> - combines structured counselling with long-term sound enrichment to accelerate habituation. Delivered by trained audiologists over 12-24 months. Evidence is positive, though less robust than CBT.</p>
+      <p><strong>Sound therapy</strong> - a wearable sound generator reduces perceptual contrast and supports habituation. Distinct from masking (drowning out tinnitus with loud sound, which produces no lasting benefit).</p>
+      <p><strong>Treat underlying causes</strong> - earwax, ear infection, ototoxic medications, or blood pressure may be reversible contributors.</p>
+        </div>
+  </div>
+
+  <h2 class="section-h2">Tinnitus types</h2>
+  <p class="section-lead">Different tinnitus patterns suggest different causes and levels of urgency.</p>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Common associations</th>
+        <th>What to do</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>High-pitched ringing, both ears</td>
+        <td>Constant or intermittent tone or hiss in both ears</td>
+        <td>Noise-induced or age-related hearing loss</td>
+        <td>GP or audiologist referral; not urgent unless sudden onset</td>
+      </tr>
+      <tr>
+        <td>Low-pitched roaring, one ear</td>
+        <td>Fullness, fluctuating hearing, and episodes of vertigo alongside tinnitus</td>
+        <td>Meniere's disease; middle ear fluid</td>
+        <td>See GP - audiology referral usually needed</td>
+      </tr>
+      <tr>
+        <td>Pulsatile (beating with pulse)</td>
+        <td>Whooshing or thumping that synchronises with heartbeat</td>
+        <td>High BP, anaemia, vascular anomaly, glomus tumour</td>
+        <td>See GP promptly - investigation needed</td>
+      </tr>
+      <tr>
+        <td>One-sided only (unilateral)</td>
+        <td>Persistent ringing or tone in one ear only</td>
+        <td>Acoustic neuroma, sudden sensorineural hearing loss, wax</td>
+        <td>See GP - rule out acoustic neuroma if prolonged</td>
+      </tr>
+      <tr>
+        <td>Clicking</td>
+        <td>Rhythmic or sporadic clicking sound</td>
+        <td>TMJ dysfunction, middle ear muscle spasm</td>
+        <td>GP review if persistent; TMJ or dental assessment</td>
+      </tr>
+      <tr>
+        <td>New tinnitus with sudden hearing loss</td>
+        <td>Hearing loss and tinnitus that began over hours to days</td>
+        <td>Sudden sensorineural hearing loss (SSNHL)</td>
+        <td>Urgent GP same day - time-sensitive treatment available</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <p class="alert-head">&#9888; See your GP promptly if you have any of the following</p>
+    <ul>
+      <li>Tinnitus that pulses or beats in time with your heartbeat</li>
+      <li>Tinnitus in one ear only, especially if it has been present for more than a few weeks</li>
+      <li>Tinnitus that began alongside a sudden drop in hearing in one or both ears - this requires urgent same-day GP assessment as steroid treatment within days may help</li>
+      <li>Tinnitus with dizziness, vertigo, or loss of balance</li>
+      <li>Tinnitus following a head or neck injury</li>
+      <li>Facial weakness, numbness, or changes in vision alongside tinnitus</li>
+      <li>Tinnitus you believe may be caused by a new medication</li>
+      <li>Significant distress, anxiety, or depression related to tinnitus - effective support is available and you do not need to manage this alone</li>
+    </ul>
+    <p style="margin-top:.75rem;font-size:.88rem;color:var(--ink-mute)">You can also call Healthline on 0800 611 116 any time (free, 24/7) to talk through whether your symptoms need assessment.</p>
+  </div>
+
+  <div class="resources">
+    <p class="resources-head">NZ Resources</p>
+    <a href="https://www.hearing.org.nz">Hearing Association New Zealand</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Information, support groups, and links to audiologists across New Zealand. Useful for both tinnitus and hearing loss.</p>
+    <a href="https://healthify.org.nz">Healthify NZ</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Trusted NZ health information on tinnitus, including self-management strategies and when to seek help.</p>
+    <a href="https://www.acc.co.nz">ACC New Zealand</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">If your tinnitus or hearing loss resulted from a work-related noise injury or accident, ACC may cover assessment and treatment costs.</p>
+    <a href="https://healthline.org.nz">Healthline: 0800 611 116</a>
+    <p style="font-size:.88rem;color:var(--ink-soft)">Free, 24/7 nurse advice line for any questions about tinnitus symptoms or whether to seek assessment.</p>
+  </div>
+
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">References &#9660;</button>
+  <div class="refs-list" id="refs">
+    <ol>
+      <li>Baguley D, McFerran D, Hall D. Tinnitus. Lancet. 2013;382(9904):1600-7.</li>
+      <li>Tunkel DE, Bauer CA, Sun GH, Rosenfeld RM, Chandrasekhar SS, Cunningham ER Jr, et al. Clinical practice guideline: tinnitus. Otolaryngol Head Neck Surg. 2014;151(2 Suppl):S1-40.</li>
+      <li>Fuller T, Cima R, Langguth B, Mazurek B, Vlaeyen JWS, Hoare DJ. Cognitive behavioural therapy for tinnitus. Cochrane Database Syst Rev. 2020;1(1):CD012614.</li>
+      <li>Bhatt JM, Lin HW, Bhattacharyya N. Prevalence, severity, exposures, and treatment patterns of tinnitus in the United States. JAMA Otolaryngol Head Neck Surg. 2016;142(10):959-65.</li>
+      <li>Cima RFF, Mazurek B, Haider H, Kikidis D, Lapira A, Norena A, et al. A multidisciplinary European guideline for tinnitus: diagnostics, assessment, and treatment. HNO. 2019;67(Suppl 1):10-42.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="page-footer">
+  Written for general information only. This page does not replace a conversation with your own GP or health professional.
+</footer>
+
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+</body>
+</html>

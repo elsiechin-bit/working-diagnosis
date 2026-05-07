@@ -1,6 +1,7 @@
 ---
 title: Lower back pain - why it gets better, and how to help
 layout: topic.njk
+pageType: handout
 description: Why most lower back pain improves with time and movement, what helps recovery, and when to seek further assessment.
 ---
 
@@ -67,6 +68,4 @@ description: Why most lower back pain improves with time and movement, what help
 
 - [ACC - Back pain](https://www.acc.co.nz/im-injured/types-of-injuries/back-pain/)
 - [Health Navigator - Lower back pain](https://www.healthnavigator.org.nz/health-a-z/b/back-pain-lower/)
-- [Arthritis NZ](https://arthritis.org.nz) - resources on joint and back health
-
-</div>
+- [Arthritis NZ](https://arthritis.org.nz) - resources on joint and ba

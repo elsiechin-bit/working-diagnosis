@@ -55,6 +55,4 @@ permalink: /paediatrics/glue-ear/
 
 1. Browning GG, Rovers MM, Williamson I, et al. Grommets (ventilation tubes) for hearing loss associated with otitis media with effusion in children. *Cochrane Database Syst Rev.* 2010;(10):CD001801.
 2. Griffin G, Flynn CA. Antihistamines and/or decongestants for otitis media with effusion (OME) in children. *Cochrane Database Syst Rev.* 2011;(9):CD003423.
-3. Williamson I, Vennik J, Harnden A, et al. Effect of nasal balloon autoinflation in children with otitis media with effusion in primary care. *CMAJ.* 2015;187(13):961-969.
-
-</div>
+3. Williamson I, Vennik J, Harnden A, et al. Effect of nasal balloon autoinfl

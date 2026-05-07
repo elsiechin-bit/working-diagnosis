@@ -10,17 +10,17 @@ MSK presentations span the lifespan. The same pain location often means somethin
 
 ---
 
-## Childhood (5–12 years)
+## Childhood (5-12 years)
 
 Growing pains dominate this age, but red flags (infection, malignancy, inflammatory arthritis) must not be missed.
 
 ### Common presentations
 
 - **Growing pains**  -  bilateral lower limb aches, worst evening/night, no swelling or limp. Growing pains are a diagnosis of exclusion; investigate if unilateral, persistent, or alarm features present.[^1]
-- **Nursemaid's elbow**  -  acute inability to pronate/supinate after a pull or tug (often not remembered by parent). Reduction by trained clinician; recurs in ~5–10% within weeks.
+- **Nursemaid's elbow**  -  acute inability to pronate/supinate after a pull or tug (often not remembered by parent). Reduction by trained clinician; recurs in ~5-10% within weeks.
 - **Transient synovitis of the hip**  -  acute-onset limp, groin/hip/thigh pain, fever-flu prodrome. Mild elevation of inflammatory markers. Often follows viral illness. Self-limited but rule out septic arthritis clinically (Kocher criteria).
 - **Ligamentous ankle sprains**  -  common in active kids; rarely syndesmotic or with fracture; growth plates spare the ligaments.
-- **Osgood-Schlatter disease**  -  painful tibial tubercle prominence in adolescent athletes (10–14 especially); traction apophysitis. Self-limiting, manages with load modification.
+- **Osgood-Schlatter disease**  -  painful tibial tubercle prominence in adolescent athletes (10-14 especially); traction apophysitis. Self-limiting, manages with load modification.
 
 ### Red flags to exclude
 
@@ -30,7 +30,7 @@ Growing pains dominate this age, but red flags (infection, malignancy, inflammat
 
 ---
 
-## Adolescence (13–18 years)
+## Adolescence (13-18 years)
 
 Growth spurt injuries, overuse, and onset of inflammatory arthritis occur here. Sports injury becomes a major theme.
 
@@ -40,7 +40,7 @@ Growth spurt injuries, overuse, and onset of inflammatory arthritis occur here. 
 - **Meniscal injury**  -  acute mechanical pain/locking/giving way after twisting. Can occur in isolation or with ACL tear. McMurray's, Lachman's, drawer tests guide imaging.
 - **Ligamentous knee injuries (ACL/MCL)**  -  sudden onset after contact or deceleration; swelling within 2 hours (ACL) or slower (MCL); laxity on Lachman's. Discuss return-to-play frames with physio early.
 - **Spondylolisthesis**  -  back pain in young athlete doing hyperextension (gymnastics, diving); may have pars defect. Imaging if progressive.
-- **Adolescent idiopathic scoliosis (AIS)**  -  screening age 10–16, female predominance. Most is non-progressive; refer to orthopaedics if Cobb angle >25° or rapid progression.
+- **Adolescent idiopathic scoliosis (AIS)**  -  screening age 10-16, female predominance. Most is non-progressive; refer to orthopaedics if Cobb angle >25° or rapid progression.
 - **Inflammatory arthritis onset**  -  JIA persisting beyond childhood or new-onset polyarticular symmetrical arthritis + morning stiffness. Early DMARD therapy changes outcomes.
 - **Overuse injuries**  -  stress fractures (femoral neck, tibia), tendinopathy (patellar, Achilles). Risk factors: rapid training increase, poor technique, biomechanical error.
 
@@ -52,7 +52,7 @@ Growth spurt injuries, overuse, and onset of inflammatory arthritis occur here. 
 
 ---
 
-## Adulthood (19–50 years)
+## Adulthood (19-50 years)
 
 Occupational strain, sports injury, and early degenerative changes emerge. Inflammatory arthritis often diagnosed here.
 
@@ -63,7 +63,7 @@ Occupational strain, sports injury, and early degenerative changes emerge. Infla
 - **Shoulder impingement syndrome**  -  anterior shoulder pain worse with overhead reach, internal rotation. Rotator cuff tendinopathy; usually responds to physio + load modification.
 - **Rotator cuff tear**  -  acute (trauma) or chronic (degeneration). Weakness on external rotation (supraspinatus) or internal rotation (subscapularis) if large tear. Age >40: high prevalence of asymptomatic tears.
 - **Tennis/golfer's elbow**  -  lateral (tennis: extensor carpi radialis) or medial (golfer's: flexor carpi radialis) epicondylitis. Usually self-limited with load reduction.
-- **Carpal tunnel syndrome**  -  progressive night pain/paraesthesia in thumb–index/middle fingers; Tinel's, Phalen's test; EMG confirms. Pregnancy, hypothyroidism, RA are risk factors.
+- **Carpal tunnel syndrome**  -  progressive night pain/paraesthesia in thumb-index/middle fingers; Tinel's, Phalen's test; EMG confirms. Pregnancy, hypothyroidism, RA are risk factors.
 - **De Quervain's tenosynovitis**  -  pain at radial wrist (first dorsal compartment); Finkelstein's test positive. Common in new mothers (repetitive gripping).
 - **Trigger finger**  -  clicking/locking of digit at MCP level; palpable nodule. Steroid injection often effective; surgery if recurrent.
 - **Osteoarthritis (early presentation)**  -  knee, hip, hand most common. Joint space narrowing on imaging; osteophytes; pain worse on activity. Distinguish from inflammatory (morning stiffness >1 hour, symmetrical, polyarticular).
@@ -92,7 +92,7 @@ Degenerative change accelerates; falls risk increases; multiple comorbidities co
 - **Cervical spondylosis**  -  neck pain, stiffness; can present with myelopathy (hand clumsiness, gait imbalance) if stenosis present. MRI shows disc bulge, osteophytes, canal narrowing.
 - **Polymyalgia rheumatica (PMR)**  -  age >50 (usually >65), sudden-onset symmetrical shoulder/hip girdle pain and stiffness, elevated ESR (often >40), normal CK. Steroid-responsive; exclude GCA.
 - **Giant cell arteritis (GCA)**  -  age >50, new-onset temporal headache, scalp tenderness, visual symptoms (amaurosis fugax, sudden vision loss). Urgent ESR/CRP, temporal artery biopsy; high-dose steroids prevent blindness.
-- **Frozen shoulder (adhesive capsulitis)**  -  progressive loss of passive ROM (especially external rotation), pain, eventual stiffness phase. Often follows minor trauma or immobility. 2–3 year history typical.
+- **Frozen shoulder (adhesive capsulitis)**  -  progressive loss of passive ROM (especially external rotation), pain, eventual stiffness phase. Often follows minor trauma or immobility. 2-3 year history typical.
 - **Rotator cuff tears (symptomatic)**  -  weakness and pain; may be painless if small. High prevalence in asymptomatic older adults; surgery guided by symptoms and function, not imaging alone.
 - **Vertebral compression fractures**  -  sudden onset midthoracic/lumbar pain after minor trauma (or no recalled trauma in osteoporotic patients). Kyphosis may develop. DEXA screening if risk factors.
 - **Lateral epicondylitis (tennis elbow)**  -  can present de novo or recur in older adults with repetitive activities.
@@ -172,4 +172,4 @@ Each condition below has its own page with deeper clinical reasoning, investigat
 
 ## Notes
 
-[^1]: Clinic et al. (2020). "Growing Pains in Childhood: A Review." *Australian Family Physician*, 49(5), 279–283. Growing pains affect 10–15% of children aged 3–12; bilateral symmetrical lower limb pain worst at night is classic. However, investigation is warranted if unilateral, monoarticular, persistent despite rest, or accompanied by swelling, rash, fever, or functional limitation.
+[^1]: Clinic et al. (2020). "Growing Pains in Childhood: A Review." *Australian Family Physician*, 49(5), 279-283. Growing pains affect 10-15% of children aged 3-12; bilateral symmetrical lower limb pain worst at night is classic. However, investigation is warranted if unilateral, monoarticular, persistent despite rest, or accompanied by swelling, rash, fever, or functional limitation.

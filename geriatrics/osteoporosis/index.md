@@ -57,40 +57,4 @@ pillar: Geriatrics
 <div class="tier-2">
   <p class="tier-label">❍ Calcium and vitamin D</p>
   <p>
-    Calcium and vitamin D supplementation in isolation has weak evidence for fracture prevention and high-dose calcium supplementation may carry cardiovascular risk.<sup>5</sup> The practical approach: ensure dietary calcium adequacy (target 1,000-1,200 mg/day from food sources), correct documented vitamin D deficiency (target ≥50 nmol/L), and use supplementation to fill dietary gaps rather than as primary treatment.
-  </p>
-  <p>
-    Sunlight exposure (10-15 minutes daily to arms and face outside peak UV hours) is the most physiological source. For patients who are housebound, have darker skin phototype, or live in southern NZ, supplemental vitamin D 1,000-2,000 IU daily is a reasonable default.
-  </p>
-</div>
-
-<div class="tier-3">
-  <p class="tier-label">❍ Treatment duration, holidays, and second-line agents</p>
-  <p>
-    After five years of oral bisphosphonate therapy, reassess fracture risk and consider a treatment holiday:
-  </p>
-  <ul>
-    <li><strong>Moderate-risk patients</strong> (no hip or vertebral fracture, T-score above -2.5 at femoral neck after 5 years): holiday of 1-3 years is appropriate. Monitor and resume if clinical fracture occurs or T-score declines significantly.</li>
-    <li><strong>High-risk patients</strong> (prior hip or vertebral fracture, or T-score below -2.5 at femoral neck after 5 years): continue bisphosphonate or switch to an alternative agent. Discuss with secondary care.</li>
-  </ul>
-  <p>
-    Second-line agents available in NZ (all require Special Authority or specialist initiation):
-  </p>
-  <ul>
-    <li><strong>Denosumab</strong> (Prolia, 60 mg SC 6-monthly): highly effective, safe in renal impairment, but rebound fracture risk on cessation requires a transition plan (do not simply stop).</li>
-    <li><strong>Teriparatide</strong> (Forteo): anabolic agent, reserved for very high-risk patients with multiple fractures, maximum 24 months of use.</li>
-    <li><strong>Raloxifene:</strong> weaker anti-fracture efficacy, mainly reduces vertebral fractures; useful for women who cannot tolerate bisphosphonates and have a uterus (no endometrial stimulation, unlike oestrogen).</li>
-  </ul>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Kanis JA, Harvey NC, Johansson H, et al. FRAX update. *J Clin Densitom.* 2017;20(3):360–367.
-2. Osteoporosis New Zealand. *Clinical guidance for the diagnosis and management of osteoporosis in New Zealand*. Wellington: ONZ; 2017.
-3. Javaid MK, Kyer C, Mitchell PJ, et al. Effective secondary fracture prevention: implementation of a global benchmarking of quality improvement measures for the Fracture Liaison Service. *Osteoporos Int.* 2015;26(11):2661–2678.
-4. New Zealand Formulary. *Zoledronic acid*. Available at: nzf.org.nz.
-5. Bolland MJ, Grey A, Reid IR. Calcium supplements and cardiovascular risk: 5 years on. *Ther Adv Drug Saf.* 2013;4(5):199–210.
-
-</div>
+    Calcium and vitamin D supplementation in isolation has weak evidence for fracture prevention and high-dose calcium supplementation may carry cardiovascular risk.<sup>5</sup> The practical approach: ensure dietary calcium adequacy (target 1,000-1,200 mg/day from food sources), correct documented vitamin D deficiency (target ≥50 nm

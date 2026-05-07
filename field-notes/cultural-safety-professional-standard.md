@@ -13,7 +13,7 @@ This is an attempt at a fair account of what the MCNZ actually requires, what th
 
 ## Part I - Where it came from: Irihapeti Ramsden and the nursing schools
 
-In the late 1980s, Irihapeti Ramsden was working as a nursing educator and activist, concerned that the New Zealand nursing curriculum was producing practitioners who were, in her framing, culturally unsafe for Maori patients - because of an unreflective Eurocentric clinical paradigm that treated its own assumptions as neutral and universal — harm that operated through professional culture rather than overt racism. [1]
+In the late 1980s, Irihapeti Ramsden was working as a nursing educator and activist, concerned that the New Zealand nursing curriculum was producing practitioners who were, in her framing, culturally unsafe for Maori patients - because of an unreflective Eurocentric clinical paradigm that treated its own assumptions as neutral and universal - harm that operated through professional culture rather than overt racism. [1]
 
 Her argument had two parts. The first was empirical: Maori health outcomes were substantially worse than Pakeha outcomes across almost every metric, and some of this divergence was attributable to the quality of the clinical encounter, independent of genetics or behaviour. Maori patients were less likely to feel heard, more likely to disengage from care, and more likely to receive care that did not account for their values, beliefs, or social context. [2]
 
@@ -31,7 +31,7 @@ The statement defines cultural safety as "the effective nursing and medical prac
 
 The MCNZ requires registered medical practitioners to: reflect on their own cultural identity and how it might influence their interactions with patients; be aware of and responsive to cultural factors that affect the patient's health and their engagement with the health system; recognise that the power imbalance in the clinical relationship can affect patient safety; and challenge practices that are culturally unsafe.
 
-Importantly, the MCNZ frames cultural safety as integral to good clinical practice — the same framework that requires informed consent, patient-centred communication, and attention to social determinants of health. It is grounded in the evidence that healthcare encounters which ignore cultural context produce worse outcomes, and sits firmly within the clinical rather than the political domain.
+Importantly, the MCNZ frames cultural safety as integral to good clinical practice - the same framework that requires informed consent, patient-centred communication, and attention to social determinants of health. It is grounded in the evidence that healthcare encounters which ignore cultural context produce worse outcomes, and sits firmly within the clinical rather than the political domain.
 
 What the MCNZ statement does not do is define a specific set of practices, attitudes, or identities as culturally safe or unsafe. It does not require practitioners to hold particular political views. It does not remove clinical judgment from the practitioner. These points matter for the regulatory controversy discussed below.
 
@@ -132,15 +132,15 @@ They probably will not settle cleanly. The discomfort is, in some sense, the poi
 3. Nursing Council of New Zealand. Guidelines for cultural safety, the Treaty of Waitangi and Maori health in nursing education and practice. Wellington: NCNZ; 2011.
 4. Medical Council of New Zealand. Statement on cultural safety. Wellington: MCNZ; 2019. Available from: https://www.mcnz.org.nz/assets/standards/Statement-on-cultural-safety.pdf
 5. Ministry of Health. Maori health snapshot 2022. Wellington: Ministry of Health; 2022. Available from: https://www.health.govt.nz/publication/maori-health-snapshot-2022
-6. Harris R, Cormack D, Tobias M, Yeh LC, Talamaivao N, Minster J, et al. The pervasive effects of racism: experiences of racial discrimination in New Zealand over the life-course. Soc Sci Med. 2012;74(3):408-15. doi:10.1016/j.socscimed.2011.11.004
+6. [The pervasive effects of racism: experiences of racial discrimination in New Zealand over the life-course](https://doi.org/10.1016/j.socscimed.2011.11.004). Harris R, Cormack D, Tobias M, Yeh LC, Talamaivao N, Minster J, et al. Soc Sci Med. 2012;74(3):408-15.
 7. Jones R. Cultural safety: research and practice. In: Wepa D, editor. Cultural safety in Aotearoa New Zealand. 2nd ed. Port Melbourne: Cambridge University Press; 2015. p. 146-56.
-8. Fitzgerald C, Hurst S. Implicit bias in healthcare professionals: a systematic review. BMC Med Ethics. 2017;18(1):19. doi:10.1186/s12910-017-0179-8
+8. [Implicit bias in healthcare professionals: a systematic review](https://doi.org/10.1186/s12910-017-0179-8). Fitzgerald C, Hurst S. BMC Med Ethics. 2017;18(1):19.
 9. Cormack D, Robson C, Purdie G, Ratima M, Brown R. Access to cancer screening in New Zealand: disparities by ethnicity. N Z Med J. 2005;118(1216):U1483.
-10. Govere L, Govere EM. How effective is cultural competence training of healthcare providers on improving patient satisfaction of minority groups? A systematic review of literature. Worldviews Evid Based Nurs. 2016;13(6):402-10. doi:10.1111/wvn.12176
+10. [How effective is cultural competence training of healthcare providers on improving patient satisfaction of minority groups? A systematic review of literature](https://doi.org/10.1111/wvn.12176). Govere L, Govere EM. Worldviews Evid Based Nurs. 2016;13(6):402-10.
 11. Radio-Canada. Joliette hospital ordered to improve care following Joyce Echaquan's death. CBC News. 2021 Oct 5. Available from: https://www.cbc.ca/news/canada/montreal/joyce-echaquan-joliette-hospital-coroner-inquest-1.6200375
 12. Truth and Reconciliation Commission of Canada. Calls to action. Winnipeg: TRC; 2015. Available from: https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/indigenous-people/aboriginal-peoples-documents/calls_to_action_english2.pdf
 13. Australian Health Practitioner Regulation Agency. Implementing the Aboriginal and Torres Strait Islander health and cultural safety strategy 2020-2025. Melbourne: AHPRA; 2020. Available from: https://www.ahpra.gov.au/About-AHPRA/Aboriginal-and-Torres-Strait-Islander-Health-Strategy.aspx
 14. Australian Institute of Health and Welfare. Cultural safety in health care for Indigenous Australians: monitoring framework. Canberra: AIHW; 2020. Cat no IHW 222.
 15. General Medical Council. Good medical practice. London: GMC; 2024. Available from: https://www.gmc-uk.org/professional-standards/professional-standards-for-doctors/good-medical-practice
 16. MBRRACE-UK. Saving lives, improving mothers' care: lessons learned to inform maternity care from the UK and Ireland confidential enquiries into maternal deaths and morbidity 2018-20. Oxford: NPEU; 2022.
-17. Tervalon M, Murray-Garcia J. Cultural humility versus cultural competence: a critical distinction in defining physician training outcomes in multicultural education. J Health Care Poor Underserved. 1998;9(2):117-25. doi:10.1353/hpu.2010.0233
+17. [Cultural humility versus cultural competence: a critical distinction in defining physician training outcomes in multicultural education](https://doi.org/10.1353/hpu.2010.0233). Tervalon M, Murray-

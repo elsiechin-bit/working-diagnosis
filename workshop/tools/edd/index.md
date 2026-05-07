@@ -128,7 +128,7 @@ description: Calculate estimated due date and view your current position on the 
     },
     {
       week: 11,
-      title: '11–13 Week Scan + Combined Screening',
+      title: '11-13 Week Scan + Combined Screening',
       shortTitle: 'NT + Screening',
       details: 'Nuchal translucency, PAPP-A, β-hCG (if opted). Confirm/revise EDD if >3 days discrepancy.',
       supps: ['Folic acid 5 mg daily'],
@@ -152,7 +152,7 @@ description: Calculate estimated due date and view your current position on the 
     },
     {
       week: 18,
-      title: '18–20 Week Anatomy Scan',
+      title: '18-20 Week Anatomy Scan',
       shortTitle: 'Anatomy Scan',
       details: 'Structural assessment, placenta location, amniotic fluid volume. Single deepest pocket >2 cm normal.',
       supps: ['Folic acid 5 mg daily', 'Iron if anaemic'],
@@ -168,7 +168,7 @@ description: Calculate estimated due date and view your current position on the 
     },
     {
       week: 24,
-      title: '24–28 Week GDM Screening + FBC',
+      title: '24-28 Week GDM Screening + FBC',
       shortTitle: 'GDM + FBC',
       details: '75 g OGTT (fasting + 2-hour); repeat FBC. Iron supplementation review.',
       supps: ['Folic acid 5 mg daily', 'Iron if Hb <110 g/L', 'Calcium 1000 mg daily'],

@@ -1,6 +1,7 @@
 ---
 title: Sleep hygiene - setting up for better sleep
 layout: topic.njk
+pageType: handout
 description: Practical steps to improve sleep quality, reduce the time it takes to fall asleep, and wake feeling more rested.
 ---
 
@@ -55,6 +56,4 @@ description: Practical steps to improve sleep quality, reduce the time it takes 
 
 - [Health Navigator - Sleep problems](https://www.healthnavigator.org.nz/health-a-z/s/sleep-problems/)
 - [Mental Health Foundation NZ - Sleep](https://www.mentalhealth.org.nz)
-- CBT-I online: *Sleepio* (evidence-based digital CBT-I programme)
-
-</div>
+- CBT-I online: *Sleepio* (evidence-based digital CBT-I p

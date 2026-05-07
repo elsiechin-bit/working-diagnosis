@@ -15,7 +15,7 @@ There is a New Zealand tradition, observed so consistently across governments of
 
 What gets lost in the reorganisation cycle is the history that produced the system in its current form. This is a brief attempt at that history  -  specifically the history of general practice in New Zealand, which turns out to be more interesting, more contested, and more politically instructive than the usual Powerpoint slide ("1938: Social Security Act; 2001: PHOs; 2022: Health NZ") suggests.
 
-## Part I  -  The colonial bag carrier (1840–1900)
+## Part I  -  The colonial bag carrier (1840-1900)
 
 General practice in colonial New Zealand began, as did most things in colonial New Zealand, in conditions that ranged from difficult to genuinely dangerous. The first formally registered medical practitioners arrived with the New Zealand Company and missionary groups in the 1840s, bringing whatever they had been trained in and a leather bag [1].
 
@@ -47,7 +47,7 @@ For those keeping score: NZ GPs practiced without a specialist college for twent
 
 The RNZCGP changed this, slowly. Fellowship (FRNZCGP) was established as a credential; eventually, in the 1990s, vocational registration as a GP required it. The GPEP training programme was established to provide a structured postgraduate training pathway. The college produced Fellowship of the Royal New Zealand College of General Practitioners as a recognisable indicator of formal training, which remains the qualification for vocational registration today [6].
 
-The college also, over time, became the institutional voice for the argument that general practice was a distinct specialty with its own intellectual tradition, its own consultation model, and its own evidence base — and should be treated as such, rather than as a residual category. This argument has been more accepted in some quarters than others.
+The college also, over time, became the institutional voice for the argument that general practice was a distinct specialty with its own intellectual tradition, its own consultation model, and its own evidence base - and should be treated as such, rather than as a residual category. This argument has been more accepted in some quarters than others.
 
 ## Part IV  -  The 1990s reform era, or: what happens when you run hospitals like Telecom
 
@@ -95,12 +95,12 @@ The history explains the combination. The political question, which successive r
 
 1. Dow DA. Safeguarding the public health: a history of the New Zealand Department of Health. Wellington: Victoria University Press; 1995.
 2. Durie M. Whaiora: Māori health development. 2nd ed. Melbourne: Oxford University Press; 1998.
-3. McClure M. A civilised community: a history of social security in New Zealand 1898–1998. Auckland: Auckland University Press; 1998.
+3. McClure M. A civilised community: a history of social security in New Zealand 1898-1998. Auckland: Auckland University Press; 1998.
 4. Gauld R. Revolving doors: New Zealand's health reforms. Wellington: Institute of Policy Studies and Health Services Research Centre; 2001.
-5. Blumenthal D, Gumas ED, Shah A, Gunja MZ, Williams RD II. Mirror, Mirror 2024: a portrait of the failing U.S. health system  -  comparing performance in 10 nations. New York: Commonwealth Fund; 2024. doi:10.26099/ta0g-zp66
+5. [Mirror, Mirror 2024: a portrait of the failing U.S. health system - comparing performance in 10 nations](https://doi.org/10.26099/ta0g-zp66). Blumenthal D, Gumas ED, Shah A, Gunja MZ, Williams RD II. New York: Commonwealth Fund; 2024.
 6. Royal New Zealand College of General Practitioners. About the College [Internet]. Wellington: RNZCGP; 2025 [cited 2026 May 3]. Available from: https://www.rnzcgp.org.nz/about-the-college/
 7. King A. The primary health care strategy. Wellington: New Zealand Ministry of Health; 2001. Available from: https://www.health.govt.nz/publication/primary-health-care-strategy
 8. Health New Zealand | Te Whatu Ora. Capitation rates [Internet]. Wellington: Health NZ; 2025 [cited 2026 May 3]. Available from: https://www.tewhatuora.govt.nz/for-health-providers/primary-care-sector/capitation-rates
 9. Pae Ora (Healthy Futures) Act 2022 [Internet]. Wellington: New Zealand Government; 2022. Available from: https://www.legislation.govt.nz/act/public/2022/0030/latest/whole.html
 10. Pae Ora (Healthy Futures) (Disestablishment of Māori Health Authority) Amendment Act 2024 [Internet]. Wellington: New Zealand Government; 2024. Available from: https://www.legislation.govt.nz/
-11. Health New Zealand | Te Whatu Ora. Commissioner appointment [Internet]. Wellington: Health NZ; 2024 [cited 2026 May 3]. Available from: https://www.tewhatuora.govt.nz
+11. Health New Zealand | Te Whatu Ora. Commissioner appointment [Internet]. Wellington: Health NZ; 2024 [cited 2026 May 3]. Available from: https://www.tewh

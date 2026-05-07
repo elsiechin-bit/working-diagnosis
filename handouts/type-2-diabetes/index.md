@@ -1,6 +1,7 @@
 ---
 title: Type 2 diabetes - understanding your diagnosis
 layout: topic.njk
+pageType: handout
 description: What type 2 diabetes is, what the key numbers mean, and what you can do to protect your health long-term.
 ---
 
@@ -63,6 +64,4 @@ description: What type 2 diabetes is, what the key numbers mean, and what you ca
 
 - [Diabetes NZ](https://www.diabetes.org.nz) - support, education, and local groups
 - [Health Navigator - Type 2 diabetes](https://www.healthnavigator.org.nz/health-a-z/d/diabetes-type-2/)
-- [Living Well with Diabetes - NZ Ministry of Health](https://www.health.govt.nz/your-health/conditions-and-treatments/diseases-and-illnesses/diabetes)
-
-</div>
+- [Living Well with Diabetes - NZ Ministry of Health](https://www.health.govt.nz/your-health/conditions-and-treatments/diseases-and-illnesses/

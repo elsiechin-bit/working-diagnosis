@@ -37,21 +37,3 @@ permalink: /msk/rotator-cuff/
 <aside class="topic-aside">
   <p class="aside-kicker">Clinician links</p>
   <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.acc.co.nz" target="_blank" rel="noopener">ACC: Shoulder injury management</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Shoulder pain</a></li>
-    <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC NZ: MSK management in primary care</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Seitz AL, McClure PW, Finucane S, et al. Mechanisms of rotator cuff tendinopathy: intrinsic, extrinsic, and personal factors. *J Shoulder Elbow Surg.* 2011;20(2):336-349.
-2. Linsell L, Dawson J, Zondervan K, et al. Prevalence and incidence of adults consulting for shoulder conditions in UK primary care; patterns of diagnosis and referral. *Rheumatology (Oxford).* 2006;45(3):335-341.
-3. Meislin RJ, Sperling JW, Stitik TP. Persistent shoulder pain: epidemiology, pathophysiology, and diagnosis. *Am J Orthop.* 2005;34(12 Suppl):5-9.
-4. Yamamoto A, Takagishi K, Osawa T, et al. Prevalence and risk factors of a rotator cuff tear in the general population. *J Shoulder Elbow Surg.* 2010;19(1):116-120.
-
-</div>

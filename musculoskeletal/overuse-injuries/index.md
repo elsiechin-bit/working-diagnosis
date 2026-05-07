@@ -50,6 +50,4 @@ permalink: /msk/overuse-injuries/
 **References**
 
 1. Arendt EA, Agel J, Healy B. Growth is a risk factor for stress fracture in female distance runners. *Clin Orthop Relat Res.* 2003;(410):186-193.
-2. Mountjoy M, Sundgot-Borgen J, Burke L, et al. International Olympic Committee (IOC) consensus statement on relative energy deficiency in sport (RED-S): 2018 update. *Br J Sports Med.* 2018;52(11):687-697.
-
-</div>
+2. Mountjoy M, Sundgot-Borgen J, B

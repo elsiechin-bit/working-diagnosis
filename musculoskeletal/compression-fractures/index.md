@@ -52,6 +52,4 @@ permalink: /msk/compression-fractures/
 1. Kallmes DF, Comstock BA, Heagerty PJ, et al. A randomized trial of vertebroplasty for osteoporotic spinal fractures. *N Engl J Med.* 2009;361(6):557-568.
 2. Buchbinder R, Osborne RH, Ebeling PR, et al. A randomized trial of vertebroplasty for painful osteoporotic vertebral fractures. *N Engl J Med.* 2009;361(6):569-579.
 3. Silverman SL. The clinical consequences of vertebral compression fracture. *Bone.* 1992;13 Suppl 2:S27-31.
-4. Melton LJ 3rd, Lane AW, Cooper C, et al. Prevalence and incidence of vertebral deformities. *Osteoporos Int.* 1993;3(2):113-119.
-
-</div>
+4. Melton LJ 3rd, Lane AW, Cooper C, et al. Prevalence and incidence of vertebral deformities. *Osteoporos Int.* 199

@@ -63,7 +63,7 @@ summary:
 
 <h3>Genetics</h3>
 
-<p>ADHD is one of the most heritable psychiatric conditions we know of, with twin studies consistently returning heritability estimates of 70–80%.<sup>12</sup> It is not a single-gene disorder; GWAS studies have implicated dozens of common variants, each with small effect sizes, in genes involved in dopamine signalling, synaptic scaffolding, and neuronal migration.<sup>13</sup> When a parent sits across from me and says "his father was just like this at school," they are usually right in a biologically meaningful sense.</p>
+<p>ADHD is one of the most heritable psychiatric conditions we know of, with twin studies consistently returning heritability estimates of 70-80%.<sup>12</sup> It is not a single-gene disorder; GWAS studies have implicated dozens of common variants, each with small effect sizes, in genes involved in dopamine signalling, synaptic scaffolding, and neuronal migration.<sup>13</sup> When a parent sits across from me and says "his father was just like this at school," they are usually right in a biologically meaningful sense.</p>
 
 <h2>The pharmacology</h2>
 
@@ -77,7 +77,7 @@ summary:
 
 <p>In NZ, methylphenidate is the funded first-line agent for children with ADHD, initiated by a paediatrician or psychiatrist (GPs cannot initiate, but can prescribe under a shared care arrangement).<sup>15</sup> It requires a Class B controlled drug prescription. Short-acting forms (Ritalin, Rubifen) give three to five hours of effect; long-acting forms (Concerta OROS, Rubifen LA) give eight to twelve hours, covering the school day without a lunchtime dose.</p>
 
-<p>Common side effects  -  reduced appetite, delayed sleep onset, mild growth attenuation with long-term use  -  are real and require monitoring. The growth effect is modest (roughly 1–2 cm over two to three years in some studies) and appears to attenuate with time; drug holidays over summer are sometimes used, though evidence for their superiority over continuous treatment on growth outcomes is mixed.<sup>16</sup></p>
+<p>Common side effects  -  reduced appetite, delayed sleep onset, mild growth attenuation with long-term use  -  are real and require monitoring. The growth effect is modest (roughly 1-2 cm over two to three years in some studies) and appears to attenuate with time; drug holidays over summer are sometimes used, though evidence for their superiority over continuous treatment on growth outcomes is mixed.<sup>16</sup></p>
 
 <p><strong>Dexamfetamine</strong> (dexamphetamine) works differently. It is a substrate for DAT and NET  -  it enters the presynaptic terminal and causes active reverse transport of dopamine and norepinephrine into the synapse, independent of vesicular release.<sup>14</sup> It also inhibits monoamine oxidase. The net effect is a larger and more sustained increase in synaptic monoamines than methylphenidate produces. It is more potent mg for mg, has a longer half-life, and the effect feels qualitatively different to many patients  -  smoother onset, longer tail.</p>
 
@@ -105,21 +105,17 @@ summary:
 
 <ol>
   <li>American Psychiatric Association. Diagnostic and Statistical Manual of Mental Disorders, 5th ed. (DSM-5). Washington DC: APA; 2013.</li>
-  <li>Wolraich ML, Hagan JF, Allan C, et al. Clinical practice guideline for the diagnosis, evaluation, and treatment of attention-deficit/hyperactivity disorder in children and adolescents. Pediatrics. 2019;144(4):e20192528.</li>
+  <li><a href="https://doi.org/10.1542/peds.2019-3997">Wolraich ML, Hagan JF, Allan C, et al. Clinical practice guideline for the diagnosis, evaluation, and treatment of attention-deficit/hyperactivity disorder in children and adolescents.</a> Pediatrics. 2019;144(4):e20192528.</li>
   <li>Paediatrics &amp; Child Health Division, Royal Australasian College of Physicians. Draft Australian guidelines on attention deficit hyperactivity disorder (ADHD). Sydney: RACP; 2023.</li>
-  <li>Hoogman M, Bralten J, Hibar DP, et al. Subcortical brain volume differences in participants with attention deficit hyperactivity disorder in children and adults: a cross-sectional mega-analysis. Lancet Psychiatry. 2017;4(4):310–319.</li>
-  <li>Shaw P, Eckstrand K, Sharp W, et al. Attention-deficit/hyperactivity disorder is characterised by a delay in cortical maturation. Proc Natl Acad Sci USA. 2007;104(49):19649–19654.</li>
-  <li>Cortese S. Neuroscience and genetics of attention-deficit/hyperactivity disorder: implications for treatment. Lancet Psychiatry. 2023;10(7):543–556.</li>
-  <li>Sonuga-Barke EJS, Castellanos FX. Spontaneous attentional fluctuations in impaired states and pathological conditions: a neurobiological hypothesis. Neurosci Biobehav Rev. 2007;31(7):977–986.</li>
-  <li>Arnsten AFT. Catecholamine influences on dorsolateral prefrontal cortical networks. Biol Psychiatry. 2011;69(12):e89–e99.</li>
-  <li>Tripp G, Wickens JR. Dopamine transfer deficit: a neurobiological theory of altered reinforcement mechanisms in ADHD. J Child Psychol Psychiatry. 2008;49(7):691–704.</li>
-  <li>Sonuga-Barke EJS. The dual pathway model of AD/HD: an elaboration of neuro-developmental characteristics. Neurosci Biobehav Rev. 2003;27(7):593–604.</li>
-  <li>Bymaster FP, Katner JS, Nelson DL, et al. Atomoxetine increases extracellular levels of norepinephrine and dopamine in prefrontal cortex of rat. Neuropsychopharmacology. 2002;27(5):699–711.</li>
-  <li>Faraone SV, Larsson H. Genetics of attention deficit hyperactivity disorder. Mol Psychiatry. 2019;24(4):562–575.</li>
-  <li>Demontis D, Walters RK, Martin J, et al. Discovery of the first genome-wide significant risk loci for attention deficit/hyperactivity disorder. Nat Genet. 2019;51(1):63–75.</li>
+  <li><a href="https://doi.org/10.1016/S2215-0366(17)30200-6">Hoogman M, Bralten J, Hibar DP, et al. Subcortical brain volume differences in participants with attention deficit hyperactivity disorder in children and adults: a cross-sectional mega-analysis.</a> Lancet Psychiatry. 2017;4(4):310-319.</li>
+  <li><a href="https://doi.org/10.1073/pnas.0707741104">Shaw P, Eckstrand K, Sharp W, et al. Attention-deficit/hyperactivity disorder is characterised by a delay in cortical maturation.</a> Proc Natl Acad Sci USA. 2007;104(49):19649-19654.</li>
+  <li>Cortese S. Neuroscience and genetics of attention-deficit/hyperactivity disorder: implications for treatment. Lancet Psychiatry. 2023;10(7):543-556.</li>
+  <li><a href="https://doi.org/10.1016/j.neubiorev.2007.02.005">Sonuga-Barke EJS, Castellanos FX. Spontaneous attentional fluctuations in impaired states and pathological conditions: a neurobiological hypothesis.</a> Neurosci Biobehav Rev. 2007;31(7):977-986.</li>
+  <li><a href="https://doi.org/10.1016/j.biopsych.2011.01.027">Arnsten AFT. Catecholamine influences on dorsolateral prefrontal cortical networks.</a> Biol Psychiatry. 2011;69(12):e89-e99.</li>
+  <li><a href="https://doi.org/10.1111/j.1469-7610.2007.01851.x">Tripp G, Wickens JR. Dopamine transfer deficit: a neurobiological theory of altered reinforcement mechanisms in ADHD.</a> J Child Psychol Psychiatry. 2008;49(7):691-704.</li>
+  <li><a href="https://doi.org/10.1016/j.neubiorev.2003.08.005">Sonuga-Barke EJS. The dual pathway model of AD/HD: an elaboration of neuro-developmental characteristics.</a> Neurosci Biobehav Rev. 2003;27(7):593-604.</li>
+  <li><a href="https://doi.org/10.1016/S0893-133X(02)00346-9">Bymaster FP, Katner JS, Nelson DL, et al. Atomoxetine increases extracellular levels of norepinephrine and dopamine in prefrontal cortex of rat.</a> Neuropsychopharmacology. 2002;27(5):699-711.</li>
+  <li><a href="https://doi.org/10.1038/s41380-018-0070-0">Faraone SV, Larsson H. Genetics of attention deficit hyperactivity disorder.</a> Mol Psychiatry. 2019;24(4):562-575.</li>
+  <li><a href="https://doi.org/10.1038/s41588-018-0269-7">Demontis D, Walters RK, Martin J, et al. Discovery of the first genome-wide significant risk loci for attention deficit/hyperactivity disorder.</a> Nat Genet. 2019;51(1):63-75.</li>
   <li>Stahl SM. Stahl's Essential Psychopharmacology, 5th ed. Cambridge: Cambridge University Press; 2021. Chapter 12.</li>
-  <li>Pharmac. Pharmaceutical Schedule: methylphenidate. Wellington: Pharmac; 2024. Available from: https://www.pharmac.govt.nz</li>
-  <li>Swanson JM, Elliott GR, Greenhill LL, et al. Effects of stimulant medication on growth rates across 3 years in the MTA follow-up. J Am Acad Child Adolesc Psychiatry. 2007;46(8):1015–1027.</li>
-  <li>Medsafe. Strattera (atomoxetine) data sheet. Wellington: Medsafe; 2023. Available from: https://www.medsafe.govt.nz</li>
-  <li>Childress AC, Sallee FR. Attention-deficit/hyperactivity disorder with inadequate response to stimulants: approaches to management. CNS Drugs. 2014;28(2):121–129.</li>
-</ol>
+  <li>Pharmac. Pharmaceutical Schedule: methylphenidate.

@@ -1,6 +1,7 @@
 ---
 title: Medications for weight management
 layout: topic.njk
+pageType: handout
 description: What weight loss medications are available in New Zealand, what the evidence shows, and what to realistically expect.
 ---
 
@@ -122,4 +123,4 @@ description: What weight loss medications are available in New Zealand, what the
 1. Pi-Sunyer X et al. N Engl J Med. 2015;373:11&#8211;22.<br>
 2. Wilding JPH et al. N Engl J Med. 2021;384:989&#8211;1002.<br>
 3. Haddock CK et al. Int J Obes. 2002;26:262&#8211;73.<br>
-4. Wilding JPH et al. Diabetes Obes Metab. 2022;24:1553&#8211;64.</p>
+4. Wilding JPH et al. Diabetes Obes Metab. 2022;24:1

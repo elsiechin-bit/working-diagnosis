@@ -51,9 +51,4 @@ permalink: /msk/frozen-shoulder/
 
 **References**
 
-1. Murnaghan SD, Squirrell KS, Brownson P. Idiopathic adhesive capsulitis of the shoulder. *J Bone Joint Surg Br.* 1995;77(1):93-96.
-2. Tveita EK, Tariq R, Sessler DI. Epidemiology of shoulder stiffness. *Semin Arthritis Rheum.* 2014;44(2):185-192.
-3. Kelley MJ, Shaffer MA, Kuhn JE, et al. Shoulder pain and mobility deficits: adhesive capsulitis. *J Orthop Sports Phys Ther.* 2013;43(5):A1-A31.
-4. Rompe JD, Burger R, Kulessa B, et al. Shoulder function after extracorporeal shock wave therapy. *J Shoulder Elbow Surg.* 2007;16(5):573-580.
-
-</div>
+1. Murnaghan SD, Squirrell KS, Brownson P. Idiopathic adhesive capsulitis of the shoulder. *J Bone Joint Surg B

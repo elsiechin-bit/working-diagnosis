@@ -1,6 +1,7 @@
 ---
 title: Anxiety - understanding it and managing it
 layout: topic.njk
+pageType: handout
 description: What anxiety is, how it shows up in the body and mind, and the approaches that help most people manage it well.
 ---
 
@@ -65,6 +66,4 @@ description: What anxiety is, how it shows up in the body and mind, and the appr
 - [anxiety.org.nz](https://www.anxiety.org.nz) - information and self-help tools
 - [1737.org.nz](https://1737.org.nz) - free call or text, any time
 - [Mental Health Foundation NZ](https://www.mentalhealth.org.nz)
-- [depression.org.nz](https://www.depression.org.nz) - covers anxiety as well as depression
-
-</div>
+- [depression.org.nz](https://www.depression.org.nz) - covers anxiety as well as d

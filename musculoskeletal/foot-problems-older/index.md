@@ -50,9 +50,4 @@ permalink: /msk/foot-problems-older/
 
 **References**
 
-1. Donley BG, Moore T, Sferra J, et al. The efficacy of oral nonsteroidal anti-inflammatory medication (indomethacin) and custom orthotics in the treatment of plantar fasciitis. *J Bone Joint Surg Am.* 2007;89(9):1921-1928.
-2. Mann RA, Coughlin MJ. Surgery of the Foot and Ankle. 6th ed. Mosby; 1993.
-3. Menz HB, Lord SR. The contribution of foot problems to mobility impairment and falls in community-dwelling older people. *J Am Geriatr Soc.* 2001;49(12):1651-1656.
-4. Schmitigal M, Evers SJ, Wieland HP, et al. Validity of the diagnosis 'Morton's interdigital neuroma' based on clinical examination. *Br J Gen Pract.* 2005;55(519):919-923.
-
-</div>
+1. Donley BG, Moore T, Sferra J, et al. The efficacy of oral nonsteroidal anti-inflammatory medicati

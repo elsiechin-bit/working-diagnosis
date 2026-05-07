@@ -200,7 +200,7 @@ None of this changes the clinical standard. It does change the conversation.
 3. Land Transport (Driver Licensing) Rule 1999 [Internet]. Wellington: New Zealand Government. Available from: https://www.legislation.govt.nz/regulation/public/1999/0100/latest/DLM280144.html
 4. Medical Council of New Zealand. Good medical practice. Wellington: MCNZ; 2016. Available from: https://www.mcnz.org.nz/assets/standards/good-medical-practice.pdf
 5. Privacy Act 2020, s 22(1)(d) [Internet]. Wellington: New Zealand Government. Available from: https://www.legislation.govt.nz/act/public/2020/0031/latest/LMS23223.html
-6. Tregear S, Reston J, Schoelles K, Phillips B. Obstructive sleep apnea and risk of motor vehicle crash: systematic review and meta-analysis. J Clin Sleep Med. 2009;5(6):573–81. doi:10.5664/jcsm.27662
-7. Carr DB, Ott BR. The older adult driver with cognitive impairment: "it's a very frustrating life." JAMA. 2010;303(16):1632–41. doi:10.1001/jama.2010.481
-8. Iverson DJ, Gronseth GS, Reger MA, Classen S, Dubinsky RM, Rizzo M; Quality Standards Subcommittee of the American Academy of Neurology. Practice parameter update: evaluation and management of driving risk in dementia. Neurology. 2010;74(16):1316–24. doi:10.1212/WNL.0b013e3181da3b0f
-9. Inkster ME, Frier BM. Diabetes and driving. Diabetes Obes Metab. 2005;7(3):235–47. doi:10.1111/j.1463-1326.2004.00432.x
+6. Tregear S, Reston J, Schoelles K, Phillips B. Obstructive sleep apnea and risk of motor vehicle crash: systematic review and meta-analysis. J Clin Sleep Med. 2009;5(6):573-81. doi:10.5664/jcsm.27662
+7. Carr DB, Ott BR. The older adult driver with cognitive impairment: "it's a very frustrating life." JAMA. 2010;303(16):1632-41. doi:10.1001/jama.2010.481
+8. Iverson DJ, Gronseth GS, Reger MA, Classen S, Dubinsky RM, Rizzo M; Quality Standards Subcommittee of the American Academy of Neurology. Practice parameter update: evaluation and management of driving risk in dementia. Neurology. 2010;74(16):1316-24. doi:10.1212/WNL.0b013e3181da3b0f
+9. Inkster ME, Frier BM. Diabetes and driving. Diabetes Obes Metab. 2005;7(3):235-47. doi:10.1111/j.1463-1326.2004.00432.x

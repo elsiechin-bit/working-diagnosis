@@ -26,7 +26,7 @@ The clinical evidence on social isolation is strong enough to qualify as a publi
 
 Specific risks are large. The Amsterdam Study of the Elderly (AMSTEL) found that feelings of loneliness  -  independent of objective social isolation  -  predicted incident dementia in older adults [4]. Cardiovascular morbidity, depression, and suicide risk all show similar patterns [3].
 
-In NZ, around 10% of those aged 65–74 and 13% of those aged 75 and over report feeling lonely most or all of the time [5]. The LiLACS NZ cohort study of those in advanced age (80+) found loneliness predicting reduced health-related quality of life over five years for both Māori and non-Māori participants [6]. Even in retirement villages  -  where residents have ostensibly chosen to live alongside others  -  around 26% met the interRAI loneliness criterion, and 37% reported feeling lonely sometimes, often, or always [7]. Loneliness is not a marginal condition for older New Zealanders living alone. It is closer to the modal experience.
+In NZ, around 10% of those aged 65-74 and 13% of those aged 75 and over report feeling lonely most or all of the time [5]. The LiLACS NZ cohort study of those in advanced age (80+) found loneliness predicting reduced health-related quality of life over five years for both Māori and non-Māori participants [6]. Even in retirement villages  -  where residents have ostensibly chosen to live alongside others  -  around 26% met the interRAI loneliness criterion, and 37% reported feeling lonely sometimes, often, or always [7]. Loneliness is not a marginal condition for older New Zealanders living alone. It is closer to the modal experience.
 
 ## A philosophical preface
 
@@ -72,7 +72,7 @@ Working GPs are not equipped to fix social isolation. We do not have the time, t
 
 **Have the EPOA conversation early.** A 70-year-old with intact capacity, no family nearby, and no EPOA in place is a future PPPR application waiting to happen. The proactive route is faster, cheaper, more aligned with the patient's actual wishes, and far less traumatic for everyone involved [10,11]. The conversation belongs in routine general practice, not at the point of crisis.
 
-**Do not medicalise solitude.** A 78-year-old who lives alone, does her own shopping, reads a lot, sees her grandchildren on Sundays, and is content requires no clinical response. The question to ask is whether someone's connection meets their need — aloneness and loneliness are different things. The DSM is not a place for solitude.
+**Do not medicalise solitude.** A 78-year-old who lives alone, does her own shopping, reads a lot, sees her grandchildren on Sundays, and is content requires no clinical response. The question to ask is whether someone's connection meets their need - aloneness and loneliness are different things. The DSM is not a place for solitude.
 
 **Do not abandon people in the name of autonomy.** Continuing to offer a service that has been declined ten times is not paternalism. It is presence. The eleventh time may be the time the offer is accepted, and even if it never is, being asked is part of being seen.
 
@@ -89,11 +89,11 @@ That is not nothing. It is, in fact, most of what general practice has always qu
 ### References
 
 1. Holt-Lunstad J, Smith TB, Layton JB. Social relationships and mortality risk: a meta-analytic review. PLoS Med. 2010;7(7):e1000316. doi:10.1371/journal.pmed.1000316
-2. Holt-Lunstad J, Smith TB, Baker M, Harris T, Stephenson D. Loneliness and social isolation as risk factors for mortality: a meta-analytic review. Perspect Psychol Sci. 2015;10(2):227–37. doi:10.1177/1745691614568352
-3. Cacioppo JT, Hawkley LC, Norman GJ, Berntson GG. Social isolation. Ann N Y Acad Sci. 2011;1231(1):17–22. doi:10.1111/j.1749-6632.2011.06028.x
-4. Holwerda TJ, Deeg DJH, Beekman ATF, et al. Feelings of loneliness, but not social isolation, predict dementia onset: results from the Amsterdam Study of the Elderly (AMSTEL). J Neurol Neurosurg Psychiatry. 2014;85(2):135–42. doi:10.1136/jnnp-2012-302755
+2. Holt-Lunstad J, Smith TB, Baker M, Harris T, Stephenson D. Loneliness and social isolation as risk factors for mortality: a meta-analytic review. Perspect Psychol Sci. 2015;10(2):227-37. doi:10.1177/1745691614568352
+3. Cacioppo JT, Hawkley LC, Norman GJ, Berntson GG. Social isolation. Ann N Y Acad Sci. 2011;1231(1):17-22. doi:10.1111/j.1749-6632.2011.06028.x
+4. Holwerda TJ, Deeg DJH, Beekman ATF, et al. Feelings of loneliness, but not social isolation, predict dementia onset: results from the Amsterdam Study of the Elderly (AMSTEL). J Neurol Neurosurg Psychiatry. 2014;85(2):135-42. doi:10.1136/jnnp-2012-302755
 5. Age Concern New Zealand. Loneliness and social isolation research [Internet]. Auckland: Age Concern NZ [cited 2026 May 2]. Available from: https://www.ageconcern.org.nz/Public/Public/Info/Research/Loneliness_and_Social_Isolation_Research.aspx
-6. Prevalence of loneliness and its association with general and health-related measures of subjective well-being in a longitudinal bicultural cohort of older adults in advanced age living in New Zealand: LiLACS NZ. J Gerontol B Psychol Sci Soc Sci. 2022;77(10):1904–13. Available from: https://academic.oup.com/psychsocgerontology/article/77/10/1904/6620864
+6. Prevalence of loneliness and its association with general and health-related measures of subjective well-being in a longitudinal bicultural cohort of older adults in advanced age living in New Zealand: LiLACS NZ. J Gerontol B Psychol Sci Soc Sci. 2022;77(10):1904-13. Available from: https://academic.oup.com/psychsocgerontology/article/77/10/1904/6620864
 7. Lonely in a crowd: loneliness in New Zealand retirement village residents. Int Psychogeriatr [Internet]. 2021 [cited 2026 May 2]. Available from: https://pubmed.ncbi.nlm.nih.gov/32290882/
 8. Arendt H. The origins of totalitarianism. New York: Harcourt Brace Jovanovich; 1973. p.476.
 9. Cacioppo JT, Patrick W. Loneliness: human nature and the need for social connection. New York: W.W. Norton; 2008.

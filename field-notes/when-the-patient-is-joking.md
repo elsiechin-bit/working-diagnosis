@@ -104,10 +104,10 @@ And underneath all of it: register that humour is one of the main ways patients 
 
 ### References
 
-1. Phillips KA, Singh Ospina N, Rodriguez-Gutierrez R, et al. Humor during clinical practice: analysis of recorded clinical encounters. J Am Board Fam Med. 2018;31(2):270–8. doi:10.3122/jabfm.2018.02.170313
-2. Schöpf AC, Martin GS, Keating MA. Humor as a communication strategy in provider-patient communication in a chronic care setting. Qual Health Res. 2017;27(3):374–90. doi:10.1177/1049732315620773
-3. Smith-Oka V. You're joking: exploring humour and humiliation as forms of shame and obstetric violence within medical encounters. J Eval Clin Pract. 2022;28(5):917–23. doi:10.1111/jep.13741
-4. Werner A, Malterud K. It is hard work behaving as a credible patient: encounters between women with chronic pain and their doctors. Soc Sci Med. 2003;57(8):1409–19. doi:10.1016/S0277-9536(02)00520-8
-5. Clark CN, Nicholas JM, Henley SMD, et al. Altered sense of humor in dementia. J Alzheimers Dis. 2016;49(1):111–9. doi:10.3233/JAD-150413
-6. Clark CN, Nicholas JM, Gordon E, et al. Altered emotional reactivity to humour processing in frontotemporal dementia. Neuropsychologia. 2015;78:44–58. doi:10.1016/j.neuropsychologia.2015.10.001
-7. Mendez MF, Nakawatase TV, Brown CV. Involuntary laughter and inappropriate hilarity. J Neuropsychiatry Clin Neurosci. 1999;11(2):253–8. doi:10.1176/jnp.11.2.253
+1. Phillips KA, Singh Ospina N, Rodriguez-Gutierrez R, et al. Humor during clinical practice: analysis of recorded clinical encounters. J Am Board Fam Med. 2018;31(2):270-8. doi:10.3122/jabfm.2018.02.170313
+2. Schöpf AC, Martin GS, Keating MA. Humor as a communication strategy in provider-patient communication in a chronic care setting. Qual Health Res. 2017;27(3):374-90. doi:10.1177/1049732315620773
+3. Smith-Oka V. You're joking: exploring humour and humiliation as forms of shame and obstetric violence within medical encounters. J Eval Clin Pract. 2022;28(5):917-23. doi:10.1111/jep.13741
+4. Werner A, Malterud K. It is hard work behaving as a credible patient: encounters between women with chronic pain and their doctors. Soc Sci Med. 2003;57(8):1409-19. doi:10.1016/S0277-9536(02)00520-8
+5. Clark CN, Nicholas JM, Henley SMD, et al. Altered sense of humor in dementia. J Alzheimers Dis. 2016;49(1):111-9. doi:10.3233/JAD-150413
+6. Clark CN, Nicholas JM, Gordon E, et al. Altered emotional reactivity to humour processing in frontotemporal dementia. Neuropsychologia. 2015;78:44-58. doi:10.1016/j.neuropsychologia.2015.10.001
+7. Mendez MF, Nakawatase TV, Brown CV. Involuntary laughter and inappropriate hilarity. J Neuropsychiatry Clin Neurosci. 1999;11(2):253-8. doi:10.1176/jnp.11.2.253

@@ -26,20 +26,4 @@ pillar: Geriatrics
 <div class="tier-2">
   <p class="tier-label">❍ GP obligations and referral pathway</p>
   <p>New Zealand GPs have no mandatory reporting obligation for elder abuse, unlike the situation with child abuse. However, GPs have professional obligations under the Health Practitioners Competence Assurance Act 2003 to act in the patient's best interest - and a duty of care that encompasses their safety. The primary referral pathway is Age Concern's Elder Abuse Response Service (EARS), which provides free specialist assessment and advocacy nationally (0800 65 2105). In situations of immediate physical danger, police referral is appropriate.</p>
-  <p>Capacity is a central consideration. If the patient has capacity and declines intervention, the GP must ultimately respect that decision - even if it means the person remains in a harmful situation. This is clinically and ethically difficult, and it is worth acknowledging that directly with the patient: "I'm worried about you, and I want you to know this door is always open." Document the conversation, the patient's stated position, and your assessment of their capacity. If capacity is in doubt, or if the person is not safe in the immediate term, more assertive intervention (including referral to a social worker or the Needs Assessment and Service Coordination service) may be warranted.</p>
-</div>
-
-<div class="tier-3">
-  <p class="tier-label">❍ Financial abuse and legal mechanisms</p>
-  <p>Financial abuse - the misuse of an older person's money, property, or legal rights, often by a family member with power of attorney or informal financial access - often presents subtly: a patient who cannot explain recent financial decisions, who has changed their will unexpectedly, or who cannot access their own funds. GPs are not financial investigators, but flagging concerns to EARS and encouraging the patient to speak with a lawyer or Citizens Advice Bureau is appropriate. Where the abuse involves misuse of an EPA, the PPPR Act provides mechanisms for review by the Family Court.<sup>2</sup></p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Lachs MS, Pillemer KA. Elder abuse. *N Engl J Med.* 2015;373(20):1947-1956.
-2. World Health Organization. *Elder abuse*. Geneva: WHO; 2022. Available at: who.int
-3. Age Concern New Zealand. *Elder Abuse Response Service (EARS)*. Available at: ageconcern.org.nz
-
-</div>
+  <p>Capacity is a central consideration. If the patient has capacity and declines intervention, the GP must ultimately respect that decision - even if it means the person remains in a harmful situation. This is clinically and ethically difficult, and it is worth acknowledging that directly with the patient: "I'm worried about you, and I want you to know this door is always open." Document the conversation,

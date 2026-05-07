@@ -36,20 +36,4 @@ permalink: /msk/scoliosis/
 </div>
 <aside class="topic-aside">
   <p class="aside-kicker">Clinician links</p>
-  <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC NZ</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways Canterbury</a></li>
-    <li><a href="https://www.acc.co.nz" target="_blank" rel="noopener">ACC - investigation and bracing</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Kinel S, Misterska E. Does clinical examination support MRI imaging findings in adolescent idiopathic scoliosis? *Spine (Phila Pa 1976).* 2017;42(6):403-410.
-2. Weinstein SL, Dolan LA, Spratt KF, Peterson KK, Spoonamore MJ, Ponseti IV. Health and function of patients with untreated idiopathic scoliosis: a 50-year natural history study. *JAMA.* 2003;289(2):194-200.
-
-</div>
+  <p class="as

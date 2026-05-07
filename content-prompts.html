@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Working Diagnosis — Content Prompts</title>
+<title>Working Diagnosis - Content Prompts</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -65,17 +65,17 @@
 
 AUDIENCE: NZ general practitioners and registrars. Reading on a phone, mid-consultation, under time pressure. They are highly trained but stressed and time-poor.
 
-VOICE: A thoughtful, senior NZ GP writing for colleagues. Direct. Precise. No hedging, no waffle, no AI-assistant filler phrases. Slightly Tim Urban in register (curious without being unserious) — but never flippant when the topic is serious. No em dashes. No bullet-point walls. No "It is important to note that."
+VOICE: A thoughtful, senior NZ GP writing for colleagues. Direct. Precise. No hedging, no waffle, no AI-assistant filler phrases. Slightly Tim Urban in register (curious without being unserious) - but never flippant when the topic is serious. No em dashes. No bullet-point walls. No "It is important to note that."
 
-CONTENT STRUCTURE — three tiers, always in this order:
-  Level 1 — Skim layer (target: 90 seconds)
-    Red flags, key threshold changes, diagnostic traps, one-line treatment updates, what changed since last year. No prose paragraphs — only signal. A GP on-call should be able to stop here.
-  Level 2 — Practical layer (target: 5–10 minutes)
+CONTENT STRUCTURE - three tiers, always in this order:
+  Level 1 - Skim layer (target: 90 seconds)
+    Red flags, key threshold changes, diagnostic traps, one-line treatment updates, what changed since last year. No prose paragraphs - only signal. A GP on-call should be able to stop here.
+  Level 2 - Practical layer (target: 5-10 minutes)
     Dosing tables, decision flowcharts, specialist referral thresholds, patient communication scripts, common clinical pitfalls. The consultation-room toolkit.
-  Level 3 — Deep dive (target: as long as needed)
+  Level 3 - Deep dive (target: as long as needed)
     Evidence summaries, guideline citations, the reasoning behind recommendations, controversies, open questions. For the clinician with time and curiosity.
 
-CONTENT TYPE TAGS — use these HTML spans in the text body:
+CONTENT TYPE TAGS - use these HTML spans in the text body:
   <span class="content-tag tag-redflags">Red flags</span>
   <span class="content-tag tag-guidelines">Guidelines</span>
   <span class="content-tag tag-hacks">Practical hacks</span>
@@ -88,19 +88,19 @@ NZ CLINICAL STANDARDS:
   - Secondary: Cochrane, NEJM, BMJ, Lancet, Australian sources where NZ-specific data is absent
   - Use NZ drug names and PHARMAC funding context (note if a drug is fully funded, restricted, or unfunded)
   - Use NZ population data where available (Maori and Pacific health equity lens where relevant)
-  - Never fabricate references, statistics, or study details — flag uncertainty explicitly
+  - Never fabricate references, statistics, or study details - flag uncertainty explicitly
   - Conservative clinical stance: when evidence is weak or conflicting, say so
 
-OUTPUT FORMAT — Eleventy/Nunjucks Markdown with front matter:
+OUTPUT FORMAT - Eleventy/Nunjucks Markdown with front matter:
 ---
 title: [Page title]
-description: [One-sentence dek for the topic, 15–25 words]
+description: [One-sentence dek for the topic, 15-25 words]
 layout: topic.njk
 pillar: [Pillar name]
-ctags: [array — use keys: redflags, guidelines, hacks, controversy, medicolegal, patient]
+ctags: [array - use keys: redflags, guidelines, hacks, controversy, medicolegal, patient]
 changes:
   - [What changed, written as a one-line statement]
-changes_date: [Month YYYY — only if there is a genuine update to note]
+changes_date: [Month YYYY - only if there is a genuine update to note]
 ---</div>
   </div>
 
@@ -110,21 +110,21 @@ changes_date: [Month YYYY — only if there is a genuine update to note]
   <div class="prompt-block" id="p2" style="padding-top:40px">
     <div class="prompt-header">
       <span class="prompt-num">02</span>
-      <span class="prompt-title">New topic page — full three-tier structure</span>
+      <span class="prompt-title">New topic page - full three-tier structure</span>
     </div>
     <p class="prompt-desc">Generates a complete topic page. Use after Prompt 1. Fill in the [TOPIC] and [PILLAR] placeholders.</p>
     <div class="prompt-body" id="body2"><button class="copy-btn" onclick="copy('body2', this)">Copy</button>Write a full topic page for Working Diagnosis on the subject of [TOPIC], under the [PILLAR] pillar.
 
 Structure:
 1. Front matter block (title, description, layout: topic.njk, pillar, ctags, changes if applicable)
-2. Level 1 — Skim layer
-   Open with a 1–2 sentence clinical framing (no fluff). Then a tight list: red flags (if any), key thresholds, one-sentence treatment update, what changed since last year. Use content-tag spans where relevant. Maximum 200 words.
-3. Level 2 — Practical layer
+2. Level 1 - Skim layer
+   Open with a 1-2 sentence clinical framing (no fluff). Then a tight list: red flags (if any), key thresholds, one-sentence treatment update, what changed since last year. Use content-tag spans where relevant. Maximum 200 words.
+3. Level 2 - Practical layer
    Dosing or threshold tables in HTML. A decision flowchart described in prose or as a simple HTML list. Specialist referral triggers. At least one patient communication script (framed as "how I explain this to patients" not a formal script). Common pitfalls. Use content-tag spans.
-4. Level 3 — Deep dive
+4. Level 3 - Deep dive
    Evidence summary with real citations in Vancouver format as a numbered footnote list. NZ guideline context (BPAC, HealthPathways, MoH). Any genuine controversy or open question. Links to full guidelines where they exist.
 
-NZ context is mandatory throughout — if you are unsure of NZ-specific guidance, note this explicitly rather than substituting overseas guidance without flagging it.
+NZ context is mandatory throughout - if you are unsure of NZ-specific guidance, note this explicitly rather than substituting overseas guidance without flagging it.
 
 Do not write a conclusion or summary section. End at the references.</div>
   </div>
@@ -142,9 +142,9 @@ Do not write a conclusion or summary section. End at the references.</div>
 
 The skim layer must:
 - Be readable in under 90 seconds by a GP returning from a consultation
-- Contain only signal — no background, no context-setting
+- Contain only signal - no background, no context-setting
 - Cover: any red flags, key threshold changes, diagnostic traps, treatment updates, and (if applicable) what has changed since the previous version
-- Use bullet points or very short sentences — no paragraphs
+- Use bullet points or very short sentences - no paragraphs
 - Include appropriate content-tag spans (tag-redflags, tag-guidelines, tag-hacks, etc.)
 - Be no longer than 180 words
 
@@ -166,18 +166,18 @@ Here is the existing page content:
     <p class="prompt-desc">For updating existing pages when guidelines have changed. Generates the front matter changes array and a short summary.</p>
     <div class="prompt-body" id="body4"><button class="copy-btn" onclick="copy('body4', this)">Copy</button>A guideline or piece of evidence has changed and I need to update a Working Diagnosis page.
 
-I'll describe what changed: [DESCRIBE THE UPDATE — e.g. "BPAC updated the hypertension target from 140/90 to 130/80 for under-65s with CVD risk above 10%, published February 2026"]
+I'll describe what changed: [DESCRIBE THE UPDATE - e.g. "BPAC updated the hypertension target from 140/90 to 130/80 for under-65s with CVD risk above 10%, published February 2026"]
 
 From this, write:
 
-1. A `changes` array for the page front matter — 2 to 4 bullet points, each a single sentence stating the change in plain clinical language. No hedging. No "it is now recommended that." Just: what changed, in active voice. Example format:
+1. A `changes` array for the page front matter - 2 to 4 bullet points, each a single sentence stating the change in plain clinical language. No hedging. No "it is now recommended that." Just: what changed, in active voice. Example format:
    changes:
      - Lower BP treatment threshold: now 130/80 mmHg for under-65s with CVD risk above 10%
      - Ambulatory monitoring now preferred over clinic readings for diagnosis
 
 2. A `changes_date` value in format "Month YYYY"
 
-3. A 1–2 sentence plain-language summary of why this matters for a GP in primary care — for use as a note to myself, not for the page itself.
+3. A 1-2 sentence plain-language summary of why this matters for a GP in primary care - for use as a note to myself, not for the page itself.
 
 The changes should reflect genuinely new information only. Do not flag stable recommendations as "changed."</div>
   </div>
@@ -206,7 +206,7 @@ It IS:
 
 Tone: friendly but not condescending. Like a letter from a GP, not a pamphlet. No bullet-point walls. Short paragraphs. Reading level: approximately Year 10.
 
-Output format: HTML suitable for the page at /[pillar]/[topic]/patient-handout.html — standalone, no Eleventy layout, but using the site's CSS variables (--paper, --green, --ochre, --ink, etc.) and JetBrains Mono for labels.
+Output format: HTML suitable for the page at /[pillar]/[topic]/patient-handout.html - standalone, no Eleventy layout, but using the site's CSS variables (--paper, --green, --ochre, --ink, etc.) and JetBrains Mono for labels.
 
 Clinical content to convert:
 [PASTE CLINICAL CONTENT HERE]</div>
@@ -223,7 +223,7 @@ Clinical content to convert:
     <p class="prompt-desc">For the Myths pillar. Follows the fixed five-section debunk format.</p>
     <div class="prompt-body" id="body6"><button class="copy-btn" onclick="copy('body6', this)">Copy</button>Write a debunk card for Working Diagnosis on the following myth:
 
-MYTH: [STATE THE CLAIM — e.g. "You need to wait 3 months after a cold before getting a vaccine"]
+MYTH: [STATE THE CLAIM - e.g. "You need to wait 3 months after a cold before getting a vaccine"]
 
 Use the fixed five-section format below. Each section should be short and punchy.
 
@@ -231,19 +231,19 @@ CLAIM
   Restate the myth as a patient might actually say it. One sentence.
 
 SOURCE
-  Where does this belief come from? Be specific and non-dismissive — most medical myths have a grain of plausibility or a historical origin. One to two sentences.
+  Where does this belief come from? Be specific and non-dismissive - most medical myths have a grain of plausibility or a historical origin. One to two sentences.
 
 GRAIN OF TRUTH
-  What is the kernel of truth here, if any? This is important — never write a debunk that dismisses the underlying concern entirely. Two to three sentences.
+  What is the kernel of truth here, if any? This is important - never write a debunk that dismisses the underlying concern entirely. Two to three sentences.
 
 EVIDENCE
-  What does the evidence actually say? Be specific — cite a real study, systematic review, or guideline. Vancouver format footnote. Two to four sentences.
+  What does the evidence actually say? Be specific - cite a real study, systematic review, or guideline. Vancouver format footnote. Two to four sentences.
 
 BOTTOM LINE
   The one-sentence clinical verdict. Actionable. No hedging.
 
 SOURCES
-  Numbered reference list in Vancouver format. Real references only — if you are not certain of a study's details, say so and note I should verify before publishing.
+  Numbered reference list in Vancouver format. Real references only - if you are not certain of a study's details, say so and note I should verify before publishing.
 
 ctags to include in front matter: [suggest appropriate tags from: redflags, guidelines, hacks, controversy, medicolegal, patient]</div>
   </div>
@@ -257,18 +257,18 @@ ctags to include in front matter: [suggest appropriate tags from: redflags, guid
       <span class="prompt-title">NZ clinical review</span>
     </div>
     <p class="prompt-desc">Use when you've drafted content and want a second pass for NZ relevance, accuracy flags, and missing PHARMAC/ACC context before publishing.</p>
-    <div class="prompt-body" id="body7"><button class="copy-btn" onclick="copy('body7', this)">Copy</button>Review the following Working Diagnosis page draft for NZ clinical accuracy and relevance. This site is published under the name of a registered NZ GP — the bar is high.
+    <div class="prompt-body" id="body7"><button class="copy-btn" onclick="copy('body7', this)">Copy</button>Review the following Working Diagnosis page draft for NZ clinical accuracy and relevance. This site is published under the name of a registered NZ GP - the bar is high.
 
 Check for and flag:
 1. Any clinical claims that conflict with current NZ guidance (BPAC, HealthPathways Canterbury, NZ MoH)
 2. Drug doses or thresholds that differ from NZ standard practice or PHARMAC schedule
-3. Statistics, prevalence figures, or study results cited without a real traceable source — flag these as "UNVERIFIED — check before publishing"
+3. Statistics, prevalence figures, or study results cited without a real traceable source - flag these as "UNVERIFIED - check before publishing"
 4. ACC-relevant situations where a claim has been made about funding or entitlement that may not be current
 5. Any place where the NZ Maori or Pacific health context is relevant and absent
-6. Gaps in the Level 1 skim layer — is there anything a panicking GP on-call would need that isn't in the top section?
+6. Gaps in the Level 1 skim layer - is there anything a panicking GP on-call would need that isn't in the top section?
 7. Anything that reads like AI-generated filler or hedging language
 
-Do not rewrite the page — flag issues only, with a brief note on what to verify or fix. Number each flag.
+Do not rewrite the page - flag issues only, with a brief note on what to verify or fix. Number each flag.
 
 Page to review:
 [PASTE DRAFT CONTENT HERE]</div>

@@ -4,19 +4,16 @@
   "author": "Working Diagnosis",
   "url": "https://workingdiagnosis.nz",
   "nav": [
-    { "label": "Lifestyle", "url": "/lifestyle/" },
-    { "label": "MSK", "url": "/musculoskeletal/" },
-    { "label": "Paeds", "url": "/paediatrics/" },
-    { "label": "Geriatrics", "url": "/geriatrics/" },
-    { "label": "Gynae", "url": "/gynaecology/" },
-    { "label": "Dermatology", "url": "/dermatology/" },
-    { "label": "Mental Health", "url": "/mental-health/" },
-    { "label": "Vaccines", "url": "/vaccines/" },
-    { "label": "Travel", "url": "/travel/" },
-    { "divider": true },
-    { "label": "Field Notes", "url": "/field-notes/" },
-    { "label": "Handouts", "url": "/handouts/" },
-    { "label": "Resources", "url": "/resources/" },
-    { "label": "About", "url": "/about/" }
+    { "label": "Cardiovascular", "url": "/cardiovascular/", "row": 1 },
+    { "label": "Respiratory", "url": "/respiratory/", "row": 1 },
+    { "label": "Endocrinology", "url": "/endocrinology/", "row": 1 },
+    { "label": "Neurology & Mental Health", "url": "/neurology-mental-health/", "row": 2 },
+    { "label": "Gastroenterology", "url": "/gastroenterology/", "row": 2 },
+    { "label": "Renal & Urology", "url": "/renal-urology/", "row": 2 },
+    { "label": "Sexual & Reproductive Health", "url": "/sexual-reproductive-health/", "row": 3 },
+    { "label": "Musculoskeletal", "url": "/musculoskeletal/", "row": 3 },
+    { "label": "Dermatology", "url": "/dermatology/", "row": 3 },
+    { "label": "Paediatrics", "url": "/paediatrics/", "row": 4 },
+    { "label": "Geriatrics", "url": "/geriatrics/", "row": 4 }
   ]
 }

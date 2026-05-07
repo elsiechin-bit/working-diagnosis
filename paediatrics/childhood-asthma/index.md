@@ -96,36 +96,4 @@ permalink: /paediatrics/childhood-asthma/
 <div class="tier-3">
   <p class="tier-label">❍ Triggers, referral, and equity</p>
   <p>
-    Common triggers include viral respiratory infections (the most common exacerbation trigger in children), exercise, allergen exposure (house dust mite, pet dander, moulds), cold air, cigarette smoke, and strong odours. Identifying and reducing modifiable triggers is part of long-term management. Passive smoke exposure is a modifiable risk factor that worsens asthma severity significantly - address it directly.
-  </p>
-  <p>
-    Refer to paediatrics for: diagnosis uncertain after assessment and trial of therapy; inadequate control despite Step 2 treatment; Step 3 treatment required in under-5s; frequent or severe exacerbations requiring hospital admission; suspected alternative diagnosis; significant parental anxiety about the diagnosis or management plan.
-  </p>
-  <p>
-    Maori and Pacific children have higher rates of asthma hospitalisation and mortality than NZ European children, reflecting housing quality (cold, damp housing worsens asthma), household crowding, access barriers, and potentially higher rates of severe disease. Consider these factors when reviewing a Maori or Pacific child with poorly controlled asthma - housing, smoking, and access to medication are often more relevant than changing the pharmacological step.
-  </p>
-</div>
-
-</div>
-<aside class="topic-aside">
-  <p class="aside-kicker">Clinician links</p>
-  <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.asthmafoundation.org.nz/" target="_blank" rel="noopener">Asthma + Respiratory Foundation NZ</a></li>
-    <li><a href="https://bpac.org.nz/" target="_blank" rel="noopener">BPAC NZ: Asthma in children</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Childhood asthma</a></li>
-    <li><a href="https://nzf.org.nz/" target="_blank" rel="noopener">NZF: Respiratory prescribing</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Asthma and Respiratory Foundation NZ. *The Burden of Asthma in New Zealand*. Wellington: ARFNZ; 2020.
-2. Global Initiative for Asthma (GINA). *Global strategy for asthma management and prevention*. Fontana, WI: GINA; 2023. Available from: ginasthma.org.
-3. New Zealand Formulary for Children (NZFc). *Respiratory prescribing in children*. Auckland: New Zealand Formulary; 2024. Available from: nzfchildren.org.nz.
-4. Gibson PG, Powell H, Coughlan J, et al. Self-management education and regular practitioner review for adults with asthma. *Cochrane Database Syst Rev.* 2003;(1):CD001117.
-
-</div>
+    Common triggers include viral respiratory infections (the most common exacerbation trigger in children), exercise, allerg

@@ -178,6 +178,4 @@ Suicidality assessment is not a box-ticking exercise and it is not a liability m
 14. Stanley B, Chaudhury SR, Chesin M, Pontoski K, Bush AM, Knox KL, et al. [An emergency department intervention and follow-up to reduce suicide risk in the VA: acceptability and effectiveness](https://doi.org/10.1176/appi.ps.201500082) Psychiatr Serv. 2016;67(6):680-3.
 15. Rudd MD, Mandrusiak M, Joiner TE. [The case against no-suicide contracts: the commitment to treatment statement as a practice alternative](https://doi.org/10.1002/jclp.20227) J Clin Psychol. 2006;62(2):243-51.
 16. Husum TL, Bjorngaard JH, Finset A, Ruud T. A cross-sectional prospective study of seclusion, restraint and involuntary medication in acute psychiatric units: patient, staff and ward factors. Int J Nurs Stud. 2010;47(11):1379-88.
-17. Paris J. Half in love with death: managing the chronically suicidal patient. Mahwah: Lawrence Erlbaum Associates; 2006.
-18. Motto JA, Bostrom AG. [A randomized controlled trial of postcrisis suicide prevention](https://doi.org/10.1176/appi.ps.52.6.828) Psychiatr Serv. 2001;52(6):828-33.
-19. Health and Disability Commissioner (Code of Health and Disability Services Consumers' Rights) Regulations 1996 (NZ).
+17. Paris J. Half in love with death: managing the chronically suicidal patient. Mahwah: Lawrence Erlbaum 

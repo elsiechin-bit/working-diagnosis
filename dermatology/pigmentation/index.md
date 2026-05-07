@@ -44,19 +44,4 @@ description: Pigmentation disorders in general practice - melasma, post-inflamma
   <p class="aside-kicker">Clinician links</p>
   <p class="aside-title">NZ resources</p>
   <ul class="aside-links">
-    <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC - Skin pigmentation</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways - Vitiligo</a></li>
-    <li><a href="https://www.nzf.org.nz" target="_blank" rel="noopener">NZF - Azelaic acid</a></li>
-    <li><a href="https://www.dermnet.com" target="_blank" rel="noopener">DermNet NZ - Pigmentation</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Eleftheriadou V, Thomas K, Whitton M, et al. Which outcomes are important to people with vitiligo? An international survey. *Br J Dermatol.* 2012;167(4):771-781.
-2. Woolery-Lloyd H, Viera MH, Valins W. Laser therapy in skin of color. *Semin Cutan Med Surg.* 2011;30(3):130-138.
-
-</div>
+    <li><a href="https://www.bpac.org.nz" target

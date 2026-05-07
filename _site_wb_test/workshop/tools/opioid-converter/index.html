@@ -548,7 +548,7 @@
       <div class="form-group">
         <label for="input-frequency">Frequency (daily opioid use)</label>
         <select id="input-frequency">
-          <option value="regular">Regular (e.g., 4× daily IR, or daily MR)</option>
+          <option value="regular">Regular (e.g., 4�- daily IR, or daily MR)</option>
           <option value="occasional">Occasional/PRN only</option>
         </select>
       </div>
@@ -672,7 +672,7 @@
     <div class="section">
       <div class="kicker">❍ Reference</div>
       <h2>Equianalgesic Dosing Table</h2>
-      <p style="margin-bottom: 1.5rem; color: var(--soft); font-style: italic;">Doses that produce equivalent analgesia to 10 mg morphine IV/SC (parenteral reference). Oral doses are ~2–3× higher due to first-pass metabolism.</p>
+      <p style="margin-bottom: 1.5rem; color: var(--soft); font-style: italic;">Doses that produce equivalent analgesia to 10 mg morphine IV/SC (parenteral reference). Oral doses are ~2–3�- higher due to first-pass metabolism.</p>
       
       <div class="table-wrapper">
         <table>
@@ -698,13 +698,13 @@
             <td><strong>Oxycodone</strong></td>
             <td>Oral (IR)</td>
             <td>20 mg</td>
-            <td>~1.5× more potent than morphine orally</td>
+            <td>~1.5�- more potent than morphine orally</td>
           </tr>
           <tr>
             <td><strong>Hydromorphone</strong></td>
             <td>Oral</td>
             <td>7.5 mg</td>
-            <td>4× more potent; shorter duration</td>
+            <td>4�- more potent; shorter duration</td>
           </tr>
           <tr>
             <td><strong>Fentanyl</strong></td>
@@ -780,10 +780,10 @@
     const opioidData = {
       morphine: { mmeRatio: 1, route: 'oral IR', strength: 'strong', comment: 'Reference opioid' },
       'morphine-sr': { mmeRatio: 1, route: 'oral MR', strength: 'strong', comment: 'Bioavailability same as IR' },
-      'morphine-iv': { mmeRatio: 3, route: 'IV/SC', strength: 'strong', comment: 'Parenteral; 3× more potent' },
-      oxycodone: { mmeRatio: 1.5, route: 'oral IR', strength: 'strong', comment: '~1.5× morphine orally' },
+      'morphine-iv': { mmeRatio: 3, route: 'IV/SC', strength: 'strong', comment: 'Parenteral; 3�- more potent' },
+      oxycodone: { mmeRatio: 1.5, route: 'oral IR', strength: 'strong', comment: '~1.5�- morphine orally' },
       'oxycodone-sr': { mmeRatio: 1.5, route: 'oral MR', strength: 'strong', comment: 'Bioavailability same as IR' },
-      hydromorphone: { mmeRatio: 4, route: 'oral', strength: 'strong', comment: '4× morphine; shorter duration' },
+      hydromorphone: { mmeRatio: 4, route: 'oral', strength: 'strong', comment: '4�- morphine; shorter duration' },
       'fentanyl-patch': { mmeRatio: 0.000417, route: 'transdermal mcg/h', strength: 'strong', comment: '1 mcg/h ≈ 2.4 mg morphine/day' },
       'fentanyl-sublingual': { mmeRatio: 40, route: 'sublingual mcg', strength: 'strong', comment: 'For breakthrough pain (opioid-tolerant only)' },
       methadone: { mmeRatio: 0.1, route: 'oral', strength: 'strong', comment: 'Highly variable; specialist dosing' },
@@ -908,14 +908,14 @@
           strength: 'STRONG',
           onset: 'Oral: 15–60 min',
           duration: '3–6 hours (IR); 8–12 h (MR)',
-          summary: '~1.5× more potent than morphine orally. Popular in acute and chronic pain.',
+          summary: '~1.5�- more potent than morphine orally. Popular in acute and chronic pain.',
           profile: 'Similar side-effect profile to morphine. Some patients report less nausea.'
         },
         hydromorphone: {
           strength: 'STRONG',
           onset: 'Oral: 15–30 min',
           duration: '2–4 hours',
-          summary: '4× more potent; shorter duration. Useful when high-potency, short-acting PRN needed.',
+          summary: '4�- more potent; shorter duration. Useful when high-potency, short-acting PRN needed.',
           profile: 'More potent but shorter action; requires frequent dosing (QID-QID).'
         },
         fentanyl: {

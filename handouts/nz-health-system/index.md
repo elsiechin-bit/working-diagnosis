@@ -1,6 +1,7 @@
 ---
 title: The New Zealand health system - a guide for patients
 layout: topic.njk
+pageType: handout
 description: How the NZ public health system works, what it covers, what things cost, and how to navigate from your GP to specialist care.
 ---
 
@@ -131,6 +132,4 @@ description: How the NZ public health system works, what it covers, what things 
 - [Work and Income - Community Services Card](https://www.workandincome.govt.nz/products/a-z-benefits/community-services-card.html)
 - [Pharmac - funded medicines list](https://pharmac.govt.nz/medicine-funding-and-supply/the-schedule/)
 - [ACC - what we cover](https://www.acc.co.nz/im-injured/)
-- [Healthline](https://www.health.govt.nz/your-health/services-and-support/health-care-services/healthline) - 0800 611 116, 24/7 free nurse advice
-
-</div>
+- [Healthline](https://www.health.govt.nz/your-health/services-and-support/health-care-services/healthline) - 0800 611 116, 24/7 free nur

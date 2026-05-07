@@ -1,6 +1,7 @@
 ---
 title: Eczema (atopic dermatitis) - skin care and flare management
 layout: topic.njk
+pageType: handout
 description: How to manage eczema day-to-day, use emollients correctly, and use topical steroid creams safely and effectively.
 ---
 
@@ -84,6 +85,4 @@ description: How to manage eczema day-to-day, use emollients correctly, and use 
 
 - [DermNet NZ - Eczema](https://dermnetnz.org/topics/atopic-dermatitis/) - comprehensive and NZ-based
 - [Health Navigator - Eczema](https://www.healthnavigator.org.nz/health-a-z/e/eczema-atopic-dermatitis/)
-- [Eczema Association of New Zealand](https://www.eczema.org.nz)
-
-</div>
+- [Eczema Association of New Zealand](https://www.eczem

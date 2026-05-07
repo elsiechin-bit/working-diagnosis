@@ -50,8 +50,4 @@ permalink: /msk/giant-cell-arteritis/
 **References**
 
 1. Weyand CM, Goronzy JJ. Giant-cell arteritis and polymyalgia rheumatica. *N Engl J Med.* 2014;371(5):428-436.
-2. Proven A, Gabriel SE, Orban T, et al. Polymyalgia rheumatica and temporal arteritis. *BMJ.* 2006;333(7577):1064-1067.
-3. Hunder GG, Bloch DA, Michel BA, et al. The American College of Rheumatology 1990 criteria for the classification of giant cell arteritis. *Arthritis Rheum.* 1990;33(8):1122-1128.
-4. Salvarani C, Canini S, Hunder GG. Polymyalgia rheumatica and giant-cell arteritis. *Lancet.* 2008;372(9634):234-245.
-
-</div>
+2. Proven

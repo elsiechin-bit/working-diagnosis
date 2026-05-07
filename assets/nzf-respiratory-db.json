@@ -7,7 +7,7 @@
   "categories": {
     "LAMA": {
       "name": "Long-acting muscarinic antagonist (anticholinergic)",
-      "description": "Once- or twice-daily maintenance, slower onset (2–4 hours), sustained bronchodilation.",
+      "description": "Once- or twice-daily maintenance, slower onset (2-4 hours), sustained bronchodilation.",
       "medicines": [
         {
           "id": "tio-18",
@@ -19,7 +19,7 @@
           "subsidised": true,
           "subsidyNote": "Fully funded",
           "nzfRef": "COPD maintenance",
-          "notes": "Long-acting, 24-hour coverage. Gold standard LAMA in NZ. Takes 2–4 weeks to reach steady state."
+          "notes": "Long-acting, 24-hour coverage. Gold standard LAMA in NZ. Takes 2-4 weeks to reach steady state."
         },
         {
           "id": "gly-50",
@@ -229,7 +229,7 @@
     },
     "SABA": {
       "name": "Short-acting β₂-agonist (rescue/reliever)",
-      "description": "Rapid-onset (5–15 min) PRN for breakthrough symptoms. Not for regular maintenance.",
+      "description": "Rapid-onset (5-15 min) PRN for breakthrough symptoms. Not for regular maintenance.",
       "medicines": [
         {
           "id": "salb-100",
@@ -259,7 +259,7 @@
     },
     "SAMA": {
       "name": "Short-acting muscarinic antagonist (anticholinergic)",
-      "description": "Slower onset (30–45 min) than SABA but may be useful adjunct. Can combine with SABA for synergistic effect.",
+      "description": "Slower onset (30-45 min) than SABA but may be useful adjunct. Can combine with SABA for synergistic effect.",
       "medicines": [
         {
           "id": "ipra-20",
@@ -348,9 +348,9 @@
     "smoking_cessation": {
       "note": "Smoking cessation is the single most effective intervention. Refer to cessation service.",
       "pharmacotherapy": [
-        "Varenicline (Champix) – partial nicotinic agonist",
-        "Bupropion (Zyban) – antidepressant",
-        "Nicotine replacement therapy (patches, lozenges, gum) – available OTC or subsidised"
+        "Varenicline (Champix) - partial nicotinic agonist",
+        "Bupropion (Zyban) - antidepressant",
+        "Nicotine replacement therapy (patches, lozenges, gum) - available OTC or subsidised"
       ]
     }
   },

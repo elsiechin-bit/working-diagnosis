@@ -34,29 +34,4 @@ description: Diagnosing and treating tinea and other superficial fungal infectio
 <div class="tier-2">
   <p class="tier-label">❍ Diagnosis and when to use oral therapy</p>
   <p>Most tinea is diagnosed clinically. Where the presentation is atypical or treatment has failed, skin scrapings, nail clippings, or hair samples sent for microscopy and culture are invaluable. Scrapings from the active scaling edge (not the central clearing) give the best yield. Note: topical steroids applied to an undiagnosed tinea will temporarily suppress the appearance but allow the fungus to continue spreading - the pattern that results ("tinea incognito") is often bizarre and easily missed.</p>
-  <p>Oral antifungals are indicated for: tinea capitis (always), onychomycosis (usually), extensive or recalcitrant tinea corporis/cruris/pedis, and pityriasis versicolor that has failed topical treatment. Terbinafine is the drug of choice for dermatophyte infections. Itraconazole is preferred for yeast infections and pityriasis versicolor. Fluconazole is an alternative for candidal infections. Check for drug interactions - itraconazole in particular has a significant interaction profile.</p>
-
-  <div class="topic-handouts">
-    <p>📋 <a href="#">Patient handout - Fungal skin infections (coming soon)</a></p>
-  </div>
-</div>
-
-</div>
-<aside class="derm-aside">
-  <p class="aside-kicker">Clinician links</p>
-  <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC - Fungal skin infections</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways - Tinea</a></li>
-    <li><a href="https://www.nzf.org.nz" target="_blank" rel="noopener">NZF - Antifungals</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Gupta AK, Drummond-Main C. Meta-analysis of randomized, controlled trials comparing particular doses of griseofulvin and terbinafine for the treatment of tinea capitis. *Pediatr Dermatol.* 2013;30(1):1-6.
-
-</div>
+  <p>Oral antifungals are indicated for: tinea capitis (always), onychomycosis (usually), extensive or recalcitrant tinea corporis/cruris/pedis, and pityriasis versicolor that has failed topical treatment. Terbinafine is the drug of choice for dermatophyte infections. Itraconazole is preferred for yea

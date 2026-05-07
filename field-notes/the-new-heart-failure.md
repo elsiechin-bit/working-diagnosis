@@ -117,20 +117,20 @@ The old paradigm was reasonable when it was current. It isn't current. The new a
 
 ### References
 
-1. McMurray JJV, Packer M, Desai AS, et al. Angiotensin-neprilysin inhibition versus enalapril in heart failure. N Engl J Med. 2014;371(11):993–1004. doi:10.1056/NEJMoa1409077
-2. Lund M, Devlin G, Gabriel R, et al. 2023 position statement on improving management for patients with heart failure in Aotearoa New Zealand. N Z Med J. 2024;137(1590):82–92. Available from: https://nzmj.org.nz/journal/vol-137-no-1590/2023-position-statement-on-improving-management-for-patients-with-heart-failure-in-aotearoa-new-zealand
-3. CIBIS-II Investigators. The Cardiac Insufficiency Bisoprolol Study II (CIBIS-II): a randomised trial. Lancet. 1999;353(9146):9–13. doi:10.1016/S0140-6736(98)11181-9
-4. Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure. N Engl J Med. 1999;341(10):709–17. doi:10.1056/NEJM199909023411001
-5. Zannad F, McMurray JJV, Krum H, et al. Eplerenone in patients with systolic heart failure and mild symptoms. N Engl J Med. 2011;364(1):11–21. doi:10.1056/NEJMoa1009492
-6. McMurray JJV, Solomon SD, Inzucchi SE, et al. Dapagliflozin in patients with heart failure and reduced ejection fraction. N Engl J Med. 2019;381(21):1995–2008. doi:10.1056/NEJMoa1911303
-7. Packer M, Anker SD, Butler J, et al. Cardiovascular and renal outcomes with empagliflozin in heart failure. N Engl J Med. 2020;383(15):1413–24. doi:10.1056/NEJMoa2022190
-8. McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599–726. doi:10.1093/eurheartj/ehab368
-9. Vaduganathan M, Claggett BL, Jhund PS, et al. Estimating lifetime benefits of comprehensive disease-modifying pharmacological therapies in patients with heart failure with reduced ejection fraction: a comparative analysis of three randomised controlled trials. Lancet. 2020;396(10244):121–8. doi:10.1016/S0140-6736(20)30748-0
-10. Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised, trial. Lancet. 2022;400(10367):1938–52. doi:10.1016/S0140-6736(22)02076-1
-11. Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. J Am Coll Cardiol. 2022;79(17):e263–421. doi:10.1016/j.jacc.2021.12.012
-12. Anker SD, Butler J, Filippatos G, et al. Empagliflozin in heart failure with a preserved ejection fraction. N Engl J Med. 2021;385(16):1451–61. doi:10.1056/NEJMoa2107038
-13. Solomon SD, McMurray JJV, Claggett B, et al. Dapagliflozin in heart failure with mildly reduced or preserved ejection fraction. N Engl J Med. 2022;387(12):1089–98. doi:10.1056/NEJMoa2206286
-14. McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627–39. doi:10.1093/eurheartj/ehad195
+1. McMurray JJV, Packer M, Desai AS, et al. Angiotensin-neprilysin inhibition versus enalapril in heart failure. N Engl J Med. 2014;371(11):993-1004. doi:10.1056/NEJMoa1409077
+2. Lund M, Devlin G, Gabriel R, et al. 2023 position statement on improving management for patients with heart failure in Aotearoa New Zealand. N Z Med J. 2024;137(1590):82-92. Available from: https://nzmj.org.nz/journal/vol-137-no-1590/2023-position-statement-on-improving-management-for-patients-with-heart-failure-in-aotearoa-new-zealand
+3. CIBIS-II Investigators. The Cardiac Insufficiency Bisoprolol Study II (CIBIS-II): a randomised trial. Lancet. 1999;353(9146):9-13. doi:10.1016/S0140-6736(98)11181-9
+4. Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure. N Engl J Med. 1999;341(10):709-17. doi:10.1056/NEJM199909023411001
+5. Zannad F, McMurray JJV, Krum H, et al. Eplerenone in patients with systolic heart failure and mild symptoms. N Engl J Med. 2011;364(1):11-21. doi:10.1056/NEJMoa1009492
+6. McMurray JJV, Solomon SD, Inzucchi SE, et al. Dapagliflozin in patients with heart failure and reduced ejection fraction. N Engl J Med. 2019;381(21):1995-2008. doi:10.1056/NEJMoa1911303
+7. Packer M, Anker SD, Butler J, et al. Cardiovascular and renal outcomes with empagliflozin in heart failure. N Engl J Med. 2020;383(15):1413-24. doi:10.1056/NEJMoa2022190
+8. McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-726. doi:10.1093/eurheartj/ehab368
+9. Vaduganathan M, Claggett BL, Jhund PS, et al. Estimating lifetime benefits of comprehensive disease-modifying pharmacological therapies in patients with heart failure with reduced ejection fraction: a comparative analysis of three randomised controlled trials. Lancet. 2020;396(10244):121-8. doi:10.1016/S0140-6736(20)30748-0
+10. Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised, trial. Lancet. 2022;400(10367):1938-52. doi:10.1016/S0140-6736(22)02076-1
+11. Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. J Am Coll Cardiol. 2022;79(17):e263-421. doi:10.1016/j.jacc.2021.12.012
+12. Anker SD, Butler J, Filippatos G, et al. Empagliflozin in heart failure with a preserved ejection fraction. N Engl J Med. 2021;385(16):1451-61. doi:10.1056/NEJMoa2107038
+13. Solomon SD, McMurray JJV, Claggett B, et al. Dapagliflozin in heart failure with mildly reduced or preserved ejection fraction. N Engl J Med. 2022;387(12):1089-98. doi:10.1056/NEJMoa2206286
+14. McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-39. doi:10.1093/eurheartj/ehad195
 15. Pharmac. New heart medicine for 18,000 New Zealanders [Internet]. Wellington: Pharmac; 2024 [cited 2026 May 2]. Available from: https://www.pharmac.govt.nz/news-and-resources/news/new-heart-medicine-for-18000-new-zealanders
 16. Heart Foundation NZ. Heart Foundation welcomes news of funded treatment for heart failure patients [Internet]. Auckland: Heart Foundation; 2024 [cited 2026 May 2]. Available from: https://www.heartfoundation.org.nz/about-us/news/media-releases/heart-foundation-welcomes-news-of-funded-treatment-for-heart-failure-patients
 17. Boyle AJ, Lund M, et al. Nurse-led, remote optimisation of guideline-directed medical therapy in patients with heart failure and reduced ejection fraction across Australia. J Clin Med. 2025;14(15):5371. doi:10.3390/jcm14155371

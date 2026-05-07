@@ -52,41 +52,4 @@ pillar: Geriatrics
     <li><strong>Pain:</strong> undertreated pain drives inactivity, poor sleep, and depression - all of which worsen frailty. Review analgesia.</li>
     <li><strong>Depression:</strong> PHQ-9 at frailty diagnosis. Depression and frailty are bidirectionally related and both are treatable.</li>
     <li><strong>Polypharmacy:</strong> STOPP/START review at CFS ≥5. Medications causing sedation, orthostatic hypotension, or reduced appetite are priority targets.</li>
-    <li><strong>Sensory impairment:</strong> uncorrected vision and hearing impairment both contribute to functional decline and social isolation. Check and refer.</li>
-  </ul>
-</div>
-
-<div class="tier-2">
-  <p class="tier-label">❍ Exercise and nutrition</p>
-  <p>
-    Resistance exercise is the most evidence-based intervention for frailty reversal. Muscle mass and strength improve meaningfully with progressive resistance training even in the very old.<sup>4</sup> Refer to physiotherapy for a supervised programme, or to an ACC-funded community exercise class where available. The Otago Programme (see the falls page) is appropriate for frail older adults with concurrent falls risk.
-  </p>
-  <p>
-    Protein intake is frequently inadequate in frail older adults due to reduced appetite, cost, and cooking capacity. The evidence-supported target is 1.2-1.5 g/kg/day, substantially above the standard RDI. Practical advice: protein at every meal, emphasis on eggs, legumes, dairy, and meat; protein supplements (e.g. Ensure, Sustagen) as adjuncts where intake remains low. A dietitian referral is appropriate for patients with multiple barriers.
-  </p>
-</div>
-
-<div class="tier-3">
-  <p class="tier-label">❍ Frailty models: background and measurement</p>
-  <p>
-    Two models dominate the frailty literature. The Fried phenotype defines frailty as the presence of three or more of five criteria: unintentional weight loss (&gt;4.5 kg in the past year), self-reported exhaustion, grip strength below age- and sex-specific thresholds, gait speed below threshold, and low physical activity.<sup>1</sup> The Rockwood Cumulative Deficit Model operationalises frailty as the ratio of accumulated health deficits across multiple domains; operationalised as the Frailty Index.<sup>2</sup>
-  </p>
-  <p>
-    Neither model is used in its pure form in primary care. The CFS is the practical synthesis - it captures the clinical meaning of both models through a structured conversation and produces a score that is actionable and comparable across settings. For research purposes or complex geriatric assessment, the full models are more precise.
-  </p>
-  <p>
-    A note on language: many patients find the word "frailty" confronting or stigmatising. Introducing it as "your body's resilience" or "how well your body bounces back from illness or stress" captures the clinical meaning without the social weight the word sometimes carries.
-  </p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Fried LP, Tangen CM, Walston J, et al. Frailty in older adults: evidence for a phenotype. *J Gerontol A Biol Sci Med Sci.* 2001;56(3):M146–M156.
-2. Rockwood K, Song X, MacKnight C, et al. A global clinical measure of fitness and frailty in elderly people. *CMAJ.* 2005;173(5):489–495.
-3. Dent E, Martin FC, Bergman H, et al. Management of frailty: opportunities, challenges, and future directions. *Lancet.* 2019;394(10206):1376–1386.
-4. Courel-Ibáñez J, Vetrovsky T, Dadova K, et al. Health benefits of multicomponent training in older adults: a systematic review and meta-analysis. *Sports Med.* 2022;52(5):1013–1029.
-5. Bauer J, Biolo G, Cederholm T, et al. Evidence-based recommendations for optimal dietary protein intake in older people. *J Am Med Dir Assoc.* 2013;14(8):542–559.
-
-</div>
+    <li><strong>Sensory impairment:</strong> uncorrected vis

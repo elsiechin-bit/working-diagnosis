@@ -54,7 +54,7 @@ The right response to these tests is not to dismiss them  -  the patient has pai
 
 Three categories worth being explicit about.
 
-**Herb–drug interactions.** The most clinically significant interaction in routine practice is St John's Wort, which induces CYP3A4 and reduces serum concentrations of many drugs including the combined oral contraceptive pill, warfarin, digoxin, certain anticonvulsants, and some antiretrovirals; combining it with an SSRI raises the risk of serotonin syndrome [12]. Other interactions worth keeping an eye on include garlic and ginkgo with anticoagulants and antiplatelets (potential bleeding), high-dose vitamin K with warfarin, and the routinely-forgotten one  -  grapefruit juice and CYP3A4 substrates [12]. The practical step is simple: ask, on every medication review, what supplements and herbal products the patient takes, and run them through an interaction checker if there's any doubt.
+**Herb-drug interactions.** The most clinically significant interaction in routine practice is St John's Wort, which induces CYP3A4 and reduces serum concentrations of many drugs including the combined oral contraceptive pill, warfarin, digoxin, certain anticonvulsants, and some antiretrovirals; combining it with an SSRI raises the risk of serotonin syndrome [12]. Other interactions worth keeping an eye on include garlic and ginkgo with anticoagulants and antiplatelets (potential bleeding), high-dose vitamin K with warfarin, and the routinely-forgotten one  -  grapefruit juice and CYP3A4 substrates [12]. The practical step is simple: ask, on every medication review, what supplements and herbal products the patient takes, and run them through an interaction checker if there's any doubt.
 
 **Treatment delay or cessation in serious illness.** The most concerning scenario is a patient with cancer or another serious condition who substitutes naturopathic treatment for, or in addition to, conventional care. Cohort studies of patients who decline conventional cancer treatment in favour of alternative approaches show consistently and substantially worse outcomes, including a roughly two-fold increase in five-year mortality risk after adjustment for stage and other variables in one widely-cited analysis [13]. The right approach is rarely an ultimatum (which usually loses the patient entirely). It is to maintain the relationship, document the conversation clearly, and keep the door open.
 
@@ -80,7 +80,7 @@ A few practical postures.
 
 **Address the underlying symptoms.** If the patient has brain fog and fatigue, consider B12, ferritin, TSH, HbA1c, sleep, mood, alcohol, screen exposure. Make a plan that's about their symptoms, not about the naturopath's tests.
 
-**Document the conversation.** Especially if you are concerned about herb–drug interactions or treatment delay. Note what you advised, what they decided, and the rationale.
+**Document the conversation.** Especially if you are concerned about herb-drug interactions or treatment delay. Note what you advised, what they decided, and the rationale.
 
 **Be willing to hold a position you can defend.** If the patient is taking St John's Wort and an SSRI, you say so plainly. If they are using a "detox" in place of chemotherapy, you say so plainly. The relationship is not served by silence on these.
 
@@ -90,7 +90,7 @@ A few practical postures.
 
 There is a temptation, in writing about this topic, to land in one of two unhelpful places. The first is the easy contempt that imagines all naturopathic practice as a confidence trick on credulous patients. The second is the polite fiction that all healthcare modalities have something to offer if we just listen. Neither is true. Naturopathy in NZ is a heterogeneous set of practitioners offering a heterogeneous set of services, some of which are useful, some of which are harmless, some of which are not, and a small but real subset of which are dangerous. The clinical task is to tell the difference, in front of the patient, with the patient, in time you don't have.
 
-Most of the time, with care, you can. The alternative  -  losing the patient to a system that won't notice the SSRI–St John's Wort interaction or the cancer that's progressing under the elderberry syrup  -  is worse than the discomfort of the conversation.
+Most of the time, with care, you can. The alternative  -  losing the patient to a system that won't notice the SSRI-St John's Wort interaction or the cancer that's progressing under the elderberry syrup  -  is worse than the discomfort of the conversation.
 
 ---
 
@@ -101,12 +101,12 @@ Most of the time, with care, you can. The alternative  -  losing the patient to 
 3. Naturopaths and Medical Herbalists of New Zealand. Scope of practice [Internet]. Auckland: NMHNZ; 2018 [cited 2026 May 2]. Available from: https://naturopath.org.nz/scope-of-practice/
 4. Health and Disability Commissioner. Code of Health and Disability Services Consumers' Rights [Internet]. Wellington: HDC [cited 2026 May 2]. Available from: https://www.hdc.org.nz/your-rights/the-code-and-your-rights/
 5. World Gastroenterology Organisation. Probiotics and prebiotics: WGO global guidelines [Internet]. Milwaukee (WI): WGO; 2023 [cited 2026 May 2]. Available from: https://www.worldgastroenterology.org/guidelines/probiotics-and-prebiotics
-6. Skulas-Ray AC, Wilson PWF, Harris WS, et al. Omega-3 fatty acids for the management of hypertriglyceridemia: a science advisory from the American Heart Association. Circulation. 2019;140(12):e673–91. doi:10.1161/CIR.0000000000000709
+6. Skulas-Ray AC, Wilson PWF, Harris WS, et al. Omega-3 fatty acids for the management of hypertriglyceridemia: a science advisory from the American Heart Association. Circulation. 2019;140(12):e673-91. doi:10.1161/CIR.0000000000000709
 7. Australasian Society of Clinical Immunology and Allergy. Position paper: evidence-based versus non evidence-based allergy tests and treatments [Internet]. ASCIA [cited 2026 May 2]. Available from: https://www.allergy.org.au/hp/papers/position-paper-evidence-based-versus-non-evidence-based-allergy-tests-and-treatments
 8. Carr S, Chan E, Lavine E, Moote W. CSACI position statement on the testing of food-specific IgG. Allergy Asthma Clin Immunol. 2012;8(1):12. doi:10.1186/1710-1492-8-12
-9. Stapel SO, Asero R, Ballmer-Weber BK, et al. Testing for IgG4 against foods is not recommended as a diagnostic tool: EAACI Task Force Report. Allergy. 2008;63(7):793–96. doi:10.1111/j.1398-9995.2008.01705.x
-10. Seidel S, Kreutzer R, Smith D, McNeel S, Gilliss D. Assessment of commercial laboratories performing hair mineral analysis. JAMA. 2001;285(1):67–72. doi:10.1001/jama.285.1.67
+9. Stapel SO, Asero R, Ballmer-Weber BK, et al. Testing for IgG4 against foods is not recommended as a diagnostic tool: EAACI Task Force Report. Allergy. 2008;63(7):793-96. doi:10.1111/j.1398-9995.2008.01705.x
+10. Seidel S, Kreutzer R, Smith D, McNeel S, Gilliss D. Assessment of commercial laboratories performing hair mineral analysis. JAMA. 2001;285(1):67-72. doi:10.1001/jama.285.1.67
 11. Cadegiani FA, Kater CE. Adrenal fatigue does not exist: a systematic review. BMC Endocr Disord. 2016;16(1):48. doi:10.1186/s12902-016-0128-4
-12. Izzo AA, Ernst E. Interactions between herbal medicines and prescribed drugs: an updated systematic review. Drugs. 2009;69(13):1777–98. doi:10.2165/11317010-000000000-00000
-13. Johnson SB, Park HS, Gross CP, Yu JB. Use of alternative medicine for cancer and its impact on survival. J Natl Cancer Inst. 2018;110(1):121–4. doi:10.1093/jnci/djx145
-14. Brown MJ, Willis T, Omalu B, Leiker R. Deaths resulting from hypocalcemia after administration of edetate disodium: 2003–2005. Pediatrics. 2006;118(2):e534–6. doi:10.1542/peds.2006-0858
+12. Izzo AA, Ernst E. Interactions between herbal medicines and prescribed drugs: an updated systematic review. Drugs. 2009;69(13):1777-98. doi:10.2165/11317010-000000000-00000
+13. Johnson SB, Park HS, Gross CP, Yu JB. Use of alternative medicine for cancer and its impact on survival. J Natl Cancer Inst. 2018;110(1):121-4. doi:10.1093/jnci/djx145
+14. Brown MJ, Willis T, Omalu B, Leiker R. Deaths resulting from hypocalcemia after administration of edetate disodium: 2003-2005. Pediatrics. 2006;118(2):e534-6. doi:10.1542/peds.2006-0858

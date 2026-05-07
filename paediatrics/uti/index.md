@@ -60,7 +60,4 @@ permalink: /paediatrics/uti/
 
 **References**
 
-1. National Institute for Health and Care Excellence (NICE). Urinary tract infection in under 16s: diagnosis and management. NICE guideline CG54. London: NICE; updated 2022.
-2. New Zealand Formulary for Children (NZFc). Antibiotic choices for urinary tract infection. Auckland: New Zealand Formulary; 2024. Available from: nzfchildren.org.nz
-
-</div>
+1. National Institute for Healt

@@ -240,7 +240,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
   }
 
   .collapsible-toggle::after {
-    content: "▶";
+    content: "�-�";
     display: inline-block;
     font-size: 12px;
     transition: transform 200ms ease;
@@ -376,7 +376,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
       <label>
         <input type="checkbox" id="age65to74" name="age65to74" value="1">
         <div class="form-label-text">
-          <strong>Age 65–74 years</strong>
+          <strong>Age 65-74 years</strong>
           <small>1 point</small>
         </div>
       </label>
@@ -419,7 +419,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
     </div>
   </div>
 
-  <!-- VA: Vascular disease & Age (65–74) -->
+  <!-- VA: Vascular disease & Age (65-74) -->
   <div class="form-section">
     <div class="form-section-title">VA  -  Vascular & Age</div>
     <div class="form-group">
@@ -435,7 +435,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
       <label>
         <input type="checkbox" id="age65" name="age65" value="1">
         <div class="form-label-text">
-          <strong>Age 65–74 years</strong>
+          <strong>Age 65-74 years</strong>
           <small>Alternative to age category above</small>
         </div>
       </label>
@@ -497,43 +497,43 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
     <div class="evidence-item">
       <h4>Score validation and prognostic accuracy</h4>
       <p>The CHA₂DS₂-VASc score was derived from large European cohorts (16,622 patients with AF across 29 studies) and validates the original CHA₂DS₂ scheme by stratifying intermediate-risk patients. It discriminates stroke risk across all age groups and has superior performance in younger patients (age <65) where it identifies truly low-risk individuals (annual stroke risk <1% without anticoagulation).</p>
-      <div class="evidence-citation">Lip GYH, et al. Chest. 2010;137(2):263–272.</div>
+      <div class="evidence-citation">Lip GYH, et al. Chest. 2010;137(2):263-272.</div>
     </div>
 
     <div class="evidence-item">
       <h4>ARISTOTLE (apixaban in AF)</h4>
       <p>Landmark trial (18,201 patients) showing apixaban superior to warfarin for stroke prevention in AF, with lower major bleeding and all-cause mortality. Baseline median CHA₂DS₂-VASc was 3.5; anticoagulation reduced stroke by 21% relative risk.</p>
-      <div class="evidence-citation">Granger CB, et al. N Engl J Med. 2011;365(11):981–992.</div>
+      <div class="evidence-citation">Granger CB, et al. N Engl J Med. 2011;365(11):981-992.</div>
     </div>
 
     <div class="evidence-item">
       <h4>ROCKET-AF (rivaroxaban in AF)</h4>
       <p>Large trial (14,264 patients, median CHA₂DS₂-VASc 3.48) demonstrating rivaroxaban non-inferiority to warfarin for stroke/thromboembolism. In subgroup analysis, absolute stroke risk reduction was greater in higher-risk patients (CHA₂DS₂-VASc ≥4).</p>
-      <div class="evidence-citation">Patel MR, et al. N Engl J Med. 2011;365(10):883–891.</div>
+      <div class="evidence-citation">Patel MR, et al. N Engl J Med. 2011;365(10):883-891.</div>
     </div>
 
     <div class="evidence-item">
       <h4>RE-LY (dabigatran in AF)</h4>
       <p>Trial of 18,113 patients showing dabigatran 110 mg BID superior to warfarin for major bleeding, and 150 mg BID non-inferior for stroke prevention. Demonstrates that DOAC efficacy is consistent across CHA₂DS₂-VASc risk strata.</p>
-      <div class="evidence-citation">Connolly SJ, et al. N Engl J Med. 2009;361(12):1139–1151.</div>
+      <div class="evidence-citation">Connolly SJ, et al. N Engl J Med. 2009;361(12):1139-1151.</div>
     </div>
 
     <div class="evidence-item">
       <h4>ENGAGE AF-TIMI 48 (edoxaban in AF)</h4>
       <p>Trial of 21,105 patients with AF. Edoxaban 60 mg OD was non-inferior to warfarin for stroke/systemic embolism and superior for major bleeding. Showed consistent benefit across CHA₂DS₂-VASc risk strata in the 30-day DAPT window.</p>
-      <div class="evidence-citation">Giugliano RP, et al. N Engl J Med. 2013;369(22):2093–2104.</div>
+      <div class="evidence-citation">Giugliano RP, et al. N Engl J Med. 2013;369(22):2093-2104.</div>
     </div>
 
     <div class="evidence-item">
       <h4>Sex as a biological risk factor in AF</h4>
       <p>Female sex independently increases stroke risk in AF beyond traditional factors, partly due to higher inflammatory markers and prothrombotic tendencies. The CHA₂DS₂-VASc includes female sex to better identify intermediate-risk women who would otherwise be classified as "low-risk" on CHA₂DS₂ alone.</p>
-      <div class="evidence-citation">Andersson T, et al. Lancet. 2013;381(9879):1668–1676.</div>
+      <div class="evidence-citation">Andersson T, et al. Lancet. 2013;381(9879):1668-1676.</div>
     </div>
 
     <div class="evidence-item">
       <h4>Very low-risk AF and anticoagulation</h4>
       <p>In patients with CHA₂DS₂-VASc 0 or 1, absolute stroke risk is <1% per year without anticoagulation. Current international guidelines do not recommend routine anticoagulation in these patients, though individual factors (type of AF, reversibility of risk factors) may change practice.</p>
-      <div class="evidence-citation">Kirchhof P, et al. Eur Heart J. 2019;40(32):2680–2769.</div>
+      <div class="evidence-citation">Kirchhof P, et al. Eur Heart J. 2019;40(32):2680-2769.</div>
     </div>
 
   </div>
@@ -545,7 +545,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
     <div class="pearl">
       <strong>NZ-specific context: HealthPathways & Cardiac Society guidance</strong>
-      <p>HealthPathways Canterbury recommends anticoagulation for CHA₂DS₂-VASc ≥2 in men and ≥3 in women, aligning with ESC 2019 guidance. The NZ Cardiac Society position supports this for paroxysmal, persistent, and permanent AF. Consider shared decision-making for borderline risk (score 1–2).</p>
+      <p>HealthPathways Canterbury recommends anticoagulation for CHA₂DS₂-VASc ≥2 in men and ≥3 in women, aligning with ESC 2019 guidance. The NZ Cardiac Society position supports this for paroxysmal, persistent, and permanent AF. Consider shared decision-making for borderline risk (score 1-2).</p>
     </div>
 
     <div class="pearl">
@@ -555,17 +555,17 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
     <div class="pearl">
       <strong>When CHA₂DS₂-VASc = 1: be thoughtful</strong>
-      <p>A score of 1 is the "grey zone." Most guidelines suggest anticoagulation for ≥2, but a single point (e.g., age 65–74 alone, or female sex alone) may not warrant it. Document your reasoning and consider whether that single factor is truly active (e.g., recent hypertension diagnosis vs. well-controlled).</p>
+      <p>A score of 1 is the "grey zone." Most guidelines suggest anticoagulation for ≥2, but a single point (e.g., age 65-74 alone, or female sex alone) may not warrant it. Document your reasoning and consider whether that single factor is truly active (e.g., recent hypertension diagnosis vs. well-controlled).</p>
     </div>
 
     <div class="pearl">
       <strong>Reversible risk factors matter</strong>
-      <p>If the only reason for a CHA₂DS₂-VASc ≥2 is hypertension that was just diagnosed and is being aggressively treated, consider delaying anticoagulation for 3–6 months while optimising BP, then recalculate. Similarly, if someone has AF triggered by acute coronary syndrome, reassess once acute phase is over.</p>
+      <p>If the only reason for a CHA₂DS₂-VASc ≥2 is hypertension that was just diagnosed and is being aggressively treated, consider delaying anticoagulation for 3-6 months while optimising BP, then recalculate. Similarly, if someone has AF triggered by acute coronary syndrome, reassess once acute phase is over.</p>
     </div>
 
     <div class="pearl">
       <strong>CKD modifies DOAC choice</strong>
-      <p>In moderate–severe CKD (eGFR 15–60), all DOACs are usable but require dose adjustment. Dabigatran is contraindicated in eGFR <30. If eGFR <15, consider warfarin or specialist review. Always check current renal function before prescribing and annually thereafter.</p>
+      <p>In moderate-severe CKD (eGFR 15-60), all DOACs are usable but require dose adjustment. Dabigatran is contraindicated in eGFR <30. If eGFR <15, consider warfarin or specialist review. Always check current renal function before prescribing and annually thereafter.</p>
     </div>
 
     <div class="pearl">
@@ -580,7 +580,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
 
     <div class="pearl">
       <strong>Aspirin is no longer first-line in AF</strong>
-      <p>Aspirin is inferior to anticoagulation for stroke prevention in AF and is no longer recommended as monotherapy in moderate–high-risk patients. It may still be used for secondary prevention if anticoagulation is truly contraindicated, but this is rare with modern DOACs.</p>
+      <p>Aspirin is inferior to anticoagulation for stroke prevention in AF and is no longer recommended as monotherapy in moderate-high-risk patients. It may still be used for secondary prevention if anticoagulation is truly contraindicated, but this is rare with modern DOACs.</p>
     </div>
 
   </div>
@@ -596,15 +596,15 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
   // Risk stratification data
   const riskData = {
     0: { annualRisk: '<1%', category: 'Very low', color: 'low' },
-    1: { annualRisk: '0.5–1%', category: 'Low to moderate', color: 'low' },
-    2: { annualRisk: '1–1.5%', category: 'Low to moderate', color: 'moderate' },
-    3: { annualRisk: '1.5–2%', category: 'Moderate', color: 'moderate' },
-    4: { annualRisk: '2–2.5%', category: 'Moderate to high', color: 'moderate' },
-    5: { annualRisk: '2.5–3.5%', category: 'Moderate to high', color: 'moderate' },
-    6: { annualRisk: '3.5–4.5%', category: 'High', color: 'high' },
-    7: { annualRisk: '4–6%', category: 'High', color: 'high' },
-    8: { annualRisk: '6–7%', category: 'Very high', color: 'high' },
-    9: { annualRisk: '7–9%', category: 'Very high', color: 'high' }
+    1: { annualRisk: '0.5-1%', category: 'Low to moderate', color: 'low' },
+    2: { annualRisk: '1-1.5%', category: 'Low to moderate', color: 'moderate' },
+    3: { annualRisk: '1.5-2%', category: 'Moderate', color: 'moderate' },
+    4: { annualRisk: '2-2.5%', category: 'Moderate to high', color: 'moderate' },
+    5: { annualRisk: '2.5-3.5%', category: 'Moderate to high', color: 'moderate' },
+    6: { annualRisk: '3.5-4.5%', category: 'High', color: 'high' },
+    7: { annualRisk: '4-6%', category: 'High', color: 'high' },
+    8: { annualRisk: '6-7%', category: 'Very high', color: 'high' },
+    9: { annualRisk: '7-9%', category: 'Very high', color: 'high' }
   };
 
   function calculateScore(event) {
@@ -617,7 +617,7 @@ description: Stroke risk stratification in AF with NZ-specific anticoagulation s
     const age65to74 = document.getElementById('age65to74').checked ? 1 : 0;
 
     if (age75 && age65to74) {
-      alert('Select only one age category (≥75 or 65–74), not both.');
+      alert('Select only one age category (≥75 or 65-74), not both.');
       return;
     }
 

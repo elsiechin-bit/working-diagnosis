@@ -33,17 +33,4 @@ pillar: Geriatrics
 
 <div class="tier-3">
   <p class="tier-label">❍ EPA, the PPPR Act, and the End of Life Choice Act</p>
-  <p>The EPA for personal care and welfare is distinct from the EPA for property. It only activates when the person lacks capacity to make a particular decision - the attorney cannot override a capable person's choices. GPs are often asked to certify capacity in the context of EPA documentation - see the <a href="/geriatrics/medicolegal/">medicolegal page</a> for detail on the Protection of Personal and Property Rights (PPPR) Act standard. The critical practical point: EPA must be established while the person has capacity. This means raising it early, and explicitly, before the question of capacity becomes live.</p>
-  <p>The End of Life Choice Act 2019 (in force from November 2021) creates specific obligations for NZ GPs that are distinct from the broader ACP conversation - see the <a href="/geriatrics/eolca/">EOLCA page</a>. It is worth knowing your own position on conscientious objection before the question arises in a consultation, rather than discovering it mid-appointment. Conscientious objection is permissible under the Act but carries specific obligations around referral and documentation.<sup>2</sup></p>
-  <p>The interaction between ACP and the EOLCA is worth being clear about with patients: an ACP document does not constitute an application under the EOLCA, and the EOLCA has its own eligibility and assessment pathway. These are related but distinct processes, and conflating them in the consultation can create confusion.</p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Brinkman-Stoppelenburg A, Rietjens JA, van der Heide A. The effects of advance care planning on end-of-life care: a systematic review. *Palliat Med.* 2014;28(8):1000-1025.
-2. Ministry of Health. *Advance care planning: a guide for the New Zealand health care workforce*. Wellington: Ministry of Health; 2011.
-3. Detering KM, Hancock AD, Reade MC, et al. The impact of advance care planning on end of life care in elderly patients: randomised controlled trial. *BMJ.* 2010;340:c1345.
-
-</div>
+  <p>The EPA for personal care and welfare is distinct from the EPA for property. It only activates when the person lacks capacity to make a particular decision - the attorney cannot override a capable person's choices. GPs are often asked to certify capacity i

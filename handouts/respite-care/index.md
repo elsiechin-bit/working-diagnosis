@@ -1,6 +1,7 @@
 ---
 title: Respite care in New Zealand - funding, options, and how to access it
 layout: topic.njk
+pageType: handout
 description: What respite care is, how it is funded in NZ, the types of care available, and how families navigate the NASC process to access support.
 ---
 
@@ -130,6 +131,4 @@ description: What respite care is, how it is funded in NZ, the types of care ava
 - [Alzheimer's NZ](https://www.alzheimers.org.nz) - dementia-specific respite support and day programmes
 - [Whaikaha - Ministry of Disabled People](https://www.whaikaha.govt.nz) - disability funding information
 - [Health New Zealand - Aged Care](https://www.tewhatuora.govt.nz/health-services-and-programmes/disability-and-long-term-conditions/ageing/) - system overview
-- [HealthCERT](https://www.tewhatuora.govt.nz/our-health-system/certification-and-regulation/healthcert/) - facility audit reports
-
-</div>
+- [HealthCERT](https://www.tewhatuora.govt.nz/our-health-system/certification-and-regulation/healthcert/) - facility audi

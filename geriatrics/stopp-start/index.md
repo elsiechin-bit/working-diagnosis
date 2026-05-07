@@ -45,15 +45,4 @@ pillar: Geriatrics
 
 <div class="tier-3">
   <p class="tier-label">❍ Resources and NZ context</p>
-  <p>The full STOPP/START v3 criteria are published open access in the <em>European Geriatric Medicine</em> journal (O'Mahony et al., 2023) and a freely available PDF can be found via the British Geriatrics Society. The NZF flags a number of STOPP items directly in drug monographs. For practical deprescribing support and patient-facing resources, prescribe.org.nz and deprescribing.org are worth bookmarking.<sup>2</sup></p>
-  <p>In practice, the most impactful single intervention is the medication review triggered by a high CIRS-G score or CFS 4-5. A patient with eight or more regular medications warrants systematic STOPP/START screening at least annually. The two most commonly missed items in NZ general practice are bisphosphonate omission after fragility fracture and continued PPI without documented indication - both are quick wins in a deprescribing review.</p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. O'Mahony D, Cherubini A, Guiteras AR, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 3. *Eur Geriatr Med.* 2023;14(4):625-632.
-2. Hill-Taylor B, Sketris I, Hayden J, et al. Application of the STOPP/START criteria: a systematic review of the prevalence of potentially inappropriate prescribing in older adults, and evidence of clinical, humanistic and economic impact. *J Clin Pharm Ther.* 2013;38(5):360-372.
-
-</div>
+  <p>The full STOPP/START v3 

@@ -100,23 +100,4 @@ permalink: /paediatrics/fever/
   <p class="aside-title">NZ resources</p>
   <ul class="aside-links">
     <li><a href="https://bpac.org.nz/" target="_blank" rel="noopener">BPAC NZ: Fever in children</a></li>
-    <li><a href="https://www.nice.org.uk/guidance/ng143" target="_blank" rel="noopener">NICE NG143: Fever in under 5s</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Feverish child</a></li>
-    <li><a href="https://www.healthline.govt.nz" target="_blank" rel="noopener">Healthline: 0800 611 116</a></li>
-  </ul>
-  <p class="aside-title" style="margin-top:1.25rem;">Patient handout</p>
-  <ul class="aside-links">
-    <li><a href="/paediatrics/fever/patient-handout.html">Fever in children - patient handout</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. National Institute for Health and Care Excellence. *Fever in under 5s: assessment and initial management.* NICE guideline NG143. London: NICE; 2021.
-2. National Institute for Health and Care Excellence. *Urinary tract infection in under 16s: diagnosis and management.* NICE guideline CG54. London: NICE; updated 2022.
-3. Purssell E. Treating fever in children: paracetamol or ibuprofen? *Br J Community Nurs.* 2002;7(6):316–320.
-
-</div>
+    <li><a href="https://www.nice.org.uk/guidance/ng143" target="_blank" rel=

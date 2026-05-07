@@ -50,9 +50,4 @@ permalink: /msk/osteoporosis/
 
 **References**
 
-1. Kanis JA, Johnell O, Oden A, et al. FRAX and the assessment of fracture probability in men and women from the UK. *Osteoporos Int.* 2008;19(4):385-397.
-2. Eisman JA, Bogoch ER, Dell R, et al. Making the first fracture the last fracture: ASBMR task force report on secondary fracture prevention. *J Bone Miner Res.* 2012;27(10):2039-2046.
-3. Compston J, Cooper A, Cooper C, et al. UK clinical guideline for the prevention and treatment of osteoporosis in postmenopausal women and older men. *Nat Rev Endocrinol.* 2017;13(6):394-395.
-4. Black DM, Rosen CJ. Clinical practice. Postmenopausal osteoporosis. *N Engl J Med.* 2016;374(3):254-262.
-
-</div>
+1. Kanis JA, Johnell O, Oden A, et al. FRAX and the assessment of fracture probability in men and women from the UK. *Osteoporos Int.* 2008;19(4):385-

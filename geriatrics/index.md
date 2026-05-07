@@ -37,7 +37,7 @@ pillar: Geriatrics
         <span class="pnum">02</span>
         <h3>Falls &amp; fracture<br><em>prevention</em></h3>
         <p>
-          Falls are the leading cause of injury hospitalisation in New Zealand adults over 65, and the direct costs to the health system exceed $500 million annually.<sup>6</sup> Hip fracture carries a one-year mortality of roughly 20–30% in older adults  -  comparable to many cancers  -  yet it rarely prompts the same urgency in primary care.<sup>7</sup>
+          Falls are the leading cause of injury hospitalisation in New Zealand adults over 65, and the direct costs to the health system exceed $500 million annually.<sup>6</sup> Hip fracture carries a one-year mortality of roughly 20-30% in older adults  -  comparable to many cancers  -  yet it rarely prompts the same urgency in primary care.<sup>7</sup>
         </p>
         <p>
           Multifactorial falls risk assessment and intervention remain the best-evidenced approach: medication review (particularly sedatives, antihypertensives, and anticholinergics), strength and balance exercise programmes (Otago or similar), home hazard assessment, and vision correction.<sup>8</sup> The ACC-funded Otago Exercise Programme is available nationally and is a direct referral.
@@ -67,7 +67,7 @@ pillar: Geriatrics
         <span class="pnum">04</span>
         <h3>Polypharmacy &amp;<br><em>deprescribing</em></h3>
         <p>
-          Polypharmacy  -  conventionally defined as five or more regular medications  -  affects the majority of community-dwelling New Zealanders over 75.<sup>13</sup> The harms are cumulative and often insidious: falls, delirium, cognitive blunting, constipation, urinary retention, and drug–drug interactions that no individual prescriber intended when they added their contribution to the list.
+          Polypharmacy  -  conventionally defined as five or more regular medications  -  affects the majority of community-dwelling New Zealanders over 75.<sup>13</sup> The harms are cumulative and often insidious: falls, delirium, cognitive blunting, constipation, urinary retention, and drug-drug interactions that no individual prescriber intended when they added their contribution to the list.
         </p>
         <p>
           The Beers Criteria and STOPP/START tool both provide structured frameworks for identifying potentially inappropriate medications in older adults.<sup>14,15</sup> STOPP/START has stronger evidence for reducing adverse drug events and is more applicable to New Zealand practice. The NZF explicitly flags a number of STOPP medications.
@@ -124,7 +124,7 @@ pillar: Geriatrics
           <strong>Driving.</strong> GPs have both an ethical and a legal obligation to advise patients who are medically unfit to drive, and to notify the NZ Transport Agency if the patient does not comply and poses a serious risk to road safety. The NZTA Medical Aspects of Fitness to Drive guide sets out condition-specific standards. Dementia, poorly controlled epilepsy, significant visual field loss, and certain cardiac conditions trigger mandatory assessment. Document all conversations.
         </p>
         <p>
-          <strong>Elder abuse.</strong> Estimated to affect 2–10% of older adults, elder abuse is underidentified in primary care.<sup>20</sup> It encompasses physical, psychological, financial, and sexual abuse, as well as neglect  -  often by a family member or carer. GPs have no mandatory reporting obligation in NZ (unlike child abuse), but do have professional obligations under the Health Practitioners Competence Assurance Act to act in the patient's best interest, which may include referral to Age Concern's Elder Abuse Response Service or, in urgent situations, police.
+          <strong>Elder abuse.</strong> Estimated to affect 2-10% of older adults, elder abuse is underidentified in primary care.<sup>20</sup> It encompasses physical, psychological, financial, and sexual abuse, as well as neglect  -  often by a family member or carer. GPs have no mandatory reporting obligation in NZ (unlike child abuse), but do have professional obligations under the Health Practitioners Competence Assurance Act to act in the patient's best interest, which may include referral to Age Concern's Elder Abuse Response Service or, in urgent situations, police.
         </p>
         <p>
           <strong>Firearms.</strong> GPs are not required to actively screen for firearm ownership, but have an obligation to notify the Police Arms Officer if they believe a patient poses a risk to themselves or others and holds or has access to firearms. Dementia and significant depression are the most common triggers in geriatric practice.
@@ -165,23 +165,23 @@ pillar: Geriatrics
 
 **References**
 
-1. Stats NZ. *New Zealand's population projections: 2020(base)–2073*. Wellington: Statistics New Zealand; 2021.
-2. Fried LP, Tangen CM, Walston J, et al. Frailty in older adults: evidence for a phenotype. *J Gerontol A Biol Sci Med Sci.* 2001;56(3):M146–M156.
-3. Rockwood K, Song X, MacKnight C, et al. A global clinical measure of fitness and frailty in elderly people. *CMAJ.* 2005;173(5):489–495.
-4. Dent E, Martin FC, Bergman H, et al. Management of frailty: opportunities, challenges, and future directions. *Lancet.* 2019;394(10206):1376–1386.
-5. Aguirre LE, Villareal DT. Physical exercise as therapy for frailty. *Nestle Nutr Inst Workshop Ser.* 2015;83:83–92.
+1. Stats NZ. *New Zealand's population projections: 2020(base)-2073*. Wellington: Statistics New Zealand; 2021.
+2. Fried LP, Tangen CM, Walston J, et al. Frailty in older adults: evidence for a phenotype. *J Gerontol A Biol Sci Med Sci.* 2001;56(3):M146-M156.
+3. Rockwood K, Song X, MacKnight C, et al. A global clinical measure of fitness and frailty in elderly people. *CMAJ.* 2005;173(5):489-495.
+4. Dent E, Martin FC, Bergman H, et al. Management of frailty: opportunities, challenges, and future directions. *Lancet.* 2019;394(10206):1376-1386.
+5. Aguirre LE, Villareal DT. Physical exercise as therapy for frailty. *Nestle Nutr Inst Workshop Ser.* 2015;83:83-92.
 6. ACC. *Falls injury data: older adults*. Wellington: Accident Compensation Corporation; 2023.
 7. Mariconda M, Galasso O, Costa GG, et al. Quality of life and functionality after femoral neck fractures: a long-term follow-up study. *BMC Musculoskelet Disord.* 2011;12:144.
 8. Sherrington C, Fairhall NJ, Wallbank GK, et al. Exercise for preventing falls in older people living in the community. *Cochrane Database Syst Rev.* 2019;1:CD012424.
-9. Bolland MJ, Grey A, Reid IR. Should we prescribe calcium or vitamin D supplements to treat or prevent osteoporosis? *Climacteric.* 2015;18(Suppl 2):22–31.
+9. Bolland MJ, Grey A, Reid IR. Should we prescribe calcium or vitamin D supplements to treat or prevent osteoporosis? *Climacteric.* 2015;18(Suppl 2):22-31.
 10. Alzheimers New Zealand. *Dementia in New Zealand: prevalence and projections*. Wellington: Alzheimers NZ; 2020.
-11. Hikaka J, Jones R, Hughes C, et al. "The right thing to do": health professional perspectives on advance care planning with Māori. *Palliat Med.* 2019;33(7):802–810.
-12. Nasreddine ZS, Phillips NA, Bédirian V, et al. The Montreal Cognitive Assessment, MoCA: a brief screening tool for mild cognitive impairment. *J Am Geriatr Soc.* 2005;53(4):695–699.
-13. Nishtala PS, Salahudeen MS. Temporal trends in polypharmacy and hyperpolypharmacy in older New Zealanders over a 9-year period: 2005–2013. *Gerontology.* 2015;61(3):195–202.
-14. American Geriatrics Society 2023 updated AGS Beers Criteria for potentially inappropriate medication use in older adults. *J Am Geriatr Soc.* 2023;71(7):2052–2081.
-15. O'Mahony D, Cherubini A, Guiteras AR, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 3. *Eur Geriatr Med.* 2023;14(4):625–632.
+11. Hikaka J, Jones R, Hughes C, et al. "The right thing to do": health professional perspectives on advance care planning with Māori. *Palliat Med.* 2019;33(7):802-810.
+12. Nasreddine ZS, Phillips NA, Bédirian V, et al. The Montreal Cognitive Assessment, MoCA: a brief screening tool for mild cognitive impairment. *J Am Geriatr Soc.* 2005;53(4):695-699.
+13. Nishtala PS, Salahudeen MS. Temporal trends in polypharmacy and hyperpolypharmacy in older New Zealanders over a 9-year period: 2005-2013. *Gerontology.* 2015;61(3):195-202.
+14. American Geriatrics Society 2023 updated AGS Beers Criteria for potentially inappropriate medication use in older adults. *J Am Geriatr Soc.* 2023;71(7):2052-2081.
+15. O'Mahony D, Cherubini A, Guiteras AR, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 3. *Eur Geriatr Med.* 2023;14(4):625-632.
 16. Milsom I, Altman D, Cartwright R, et al. Epidemiology of urinary incontinence (UI) and other lower urinary tract symptoms (LUTS), pelvic organ prolapse (POP) and anal (AI) incontinence. In: Abrams P, et al., eds. *Incontinence: 5th International Consultation on Incontinence.* Paris: ICUD-EAU; 2013.
-17. Brinkman-Stoppelenburg A, Rietjens JA, van der Heide A. The effects of advance care planning on end-of-life care: a systematic review. *Palliat Med.* 2014;28(8):1000–1025.
+17. Brinkman-Stoppelenburg A, Rietjens JA, van der Heide A. The effects of advance care planning on end-of-life care: a systematic review. *Palliat Med.* 2014;28(8):1000-1025.
 18. New Zealand Parliament. *End of Life Choice Act 2019*. Wellington: New Zealand Government; 2019.
 19. New Zealand Parliament. *Protection of Personal and Property Rights Act 1988*. Wellington: New Zealand Government; 1988.
-20. Lachs MS, Pillemer KA. Elder abuse. *N Engl J Med.* 2015;373(20):1947–1956.
+20. Lachs MS, Pillemer KA. Elder abuse. *N Engl J Med.* 2015;373(20):1947-1956.

@@ -44,22 +44,4 @@ description: Common paediatric rashes in general practice - viral exanthems, imp
 
 </div>
 <aside class="derm-aside">
-  <p class="aside-kicker">Clinician links</p>
-  <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC - Skin infections in children</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways - Impetigo</a></li>
-    <li><a href="https://www.rhdnz.org.nz" target="_blank" rel="noopener">RHD NZ - Rheumatic fever prevention</a></li>
-    <li><a href="https://www.dermnet.com" target="_blank" rel="noopener">DermNet NZ - Paediatric dermatology</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Lennon D, Stewart J, Farrell E, et al. School-based prevention of acute rheumatic fever: a group randomized trial in New Zealand. *Pediatr Infect Dis J.* 2009;28(9):787-794.
-2. McCrindle BW, Rowley AH, Newburger JW, et al. Diagnosis, treatment, and long-term management of Kawasaki disease: a scientific statement for health professionals from the American Heart Association. *Circulation.* 2017;135(17):e927-e999.
-
-</div>
+  <p class="aside-kicker">Clinician link

@@ -131,6 +131,6 @@ Until then: help, be reasonable, document, and know your indemnity policy.
 7. Social Action, Responsibility and Heroism Act 2015 (UK).
 8. General Medical Council. Good Medical Practice. London: GMC; 2024. Para 26. Available from: https://www.gmc-uk.org/professional-standards/professional-standards-for-doctors/good-medical-practice
 9. Aviation Medical Assistance Act 1998, Pub L No 105-170, 112 Stat 47 (USA).
-10. Rees DI, Sabia JJ, Argys LM, Latshaw J, Dave D. With a little help from my friends: the effects of naloxone access and Good Samaritan laws on opioid-related deaths. J Law Econ. 2019;62(1):1-27. doi:10.1086/700703
+10. [With a little help from my friends: the effects of naloxone access and Good Samaritan laws on opioid-related deaths](https://doi.org/10.1086/700703). Rees DI, Sabia JJ, Argys LM, Latshaw J, Dave D. J Law Econ. 2019;62(1):1-27.
 11. Code Penal (France), art 223-6.
-12. Strafgesetzbuch (Germany), §323c.
+12. Strafgesetzbuch (Ger

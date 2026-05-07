@@ -427,9 +427,9 @@ eleventyExcludeFromCollections: true
         <div class="form-group">
           <label for="wean-speed">Taper speed</label>
           <select id="wean-speed">
-            <option value="slow">Slow (8–12 weeks)</option>
-            <option value="moderate">Moderate (4–6 weeks)</option>
-            <option value="rapid">Rapid (1–2 weeks)</option>
+            <option value="slow">Slow (8-12 weeks)</option>
+            <option value="moderate">Moderate (4-6 weeks)</option>
+            <option value="rapid">Rapid (1-2 weeks)</option>
           </select>
         </div>
       </div>
@@ -540,14 +540,14 @@ eleventyExcludeFromCollections: true
               <div class="moa-title">Mechanism</div>
               <p>Blocks serotonin reuptake in the presynaptic neuron, increasing synaptic serotonin availability. First-line agents for most depression and anxiety.</p>
               <p><strong>Examples:</strong> Sertraline, Paroxetine, Fluoxetine, Citalopram, Escitalopram.</p>
-              <p><strong>Withdrawal risk:</strong> Moderate (paroxetine higher). Can cause discontinuation syndrome within 1–7 days if stopped abruptly.</p>
-              <p><strong>Notes:</strong> Generally well-tolerated. Half-lives vary (fluoxetine ~48 h; others ~20–30 h).</p>
+              <p><strong>Withdrawal risk:</strong> Moderate (paroxetine higher). Can cause discontinuation syndrome within 1-7 days if stopped abruptly.</p>
+              <p><strong>Notes:</strong> Generally well-tolerated. Half-lives vary (fluoxetine ~48 h; others ~20-30 h).</p>
             </div>
           </div>
         </div>
 
         <div>
-          <button class="toggle-moa" onclick="toggleMOA(this)">SNRI (Serotonin–Noradrenaline Reuptake Inhibitor)</button>
+          <button class="toggle-moa" onclick="toggleMOA(this)">SNRI (Serotonin-Noradrenaline Reuptake Inhibitor)</button>
           <div class="moa-content">
             <div class="moa">
               <div class="moa-title">Mechanism</div>
@@ -592,9 +592,9 @@ eleventyExcludeFromCollections: true
       <div class="kicker">❍ References & Guidance</div>
       <div class="ref-list">
         <ol>
-          <li>Fava GA, Gatti A, Belaise C, Guidi J, Offidani E. Withdrawal symptoms after serotonin-noradrenaline reuptake inhibitor discontinuation: systematic review. <em>Psychother Psychosom.</em> 2015;84(2):72–81.</li>
-          <li>Zajecka JM. Strategies for antidepressant switching. <em>J Clin Psychiatry.</em> 2006;67 Suppl 4:15–20.</li>
-          <li>Lejoyeux M, Adès J. Antidepressant discontinuation: a review of the literature. <em>J Clin Psychiatry.</em> 1997;58 Suppl 7:11–5.</li>
+          <li>Fava GA, Gatti A, Belaise C, Guidi J, Offidani E. Withdrawal symptoms after serotonin-noradrenaline reuptake inhibitor discontinuation: systematic review. <em>Psychother Psychosom.</em> 2015;84(2):72-81.</li>
+          <li>Zajecka JM. Strategies for antidepressant switching. <em>J Clin Psychiatry.</em> 2006;67 Suppl 4:15-20.</li>
+          <li>Lejoyeux M, Adès J. Antidepressant discontinuation: a review of the literature. <em>J Clin Psychiatry.</em> 1997;58 Suppl 7:11-5.</li>
           <li>New Zealand Medicines and Medical Devices Safety Authority (Medsafe). Antidepressants: safety update. 2018.</li>
           <li>BPAC (Best Practice Advocacy Centre, NZ). Managing depression: A practical guide. <em>bpac.org.nz</em> [cited 2024].</li>
         </ol>
@@ -748,11 +748,11 @@ eleventyExcludeFromCollections: true
       // Washout note
       let washoutHtml = '';
       if (fromDrug === 'fluoxetine' && (toDrug === 'venlafaxine' || toDrug === 'duloxetine' || toDrug === 'paroxetine')) {
-        washoutHtml = `<div class="washout-note"><strong>Fluoxetine washout:</strong> Long half-life (48h). Wait 2–5 days after stopping before starting SNRI or Paroxetine to reduce serotonin syndrome risk.</div>`;
+        washoutHtml = `<div class="washout-note"><strong>Fluoxetine washout:</strong> Long half-life (48h). Wait 2-5 days after stopping before starting SNRI or Paroxetine to reduce serotonin syndrome risk.</div>`;
       } else if ((fromDrug === 'venlafaxine' || fromDrug === 'duloxetine') && toDrug === 'paroxetine') {
         washoutHtml = `<div class="washout-note"><strong>SNRI→Paroxetine:</strong> Higher withdrawal risk with SNRIs. Ensure overlap of at least 2 weeks before stopping old agent.</div>`;
       } else if (fromDrug === 'paroxetine' && (toDrug === 'venlafaxine' || toDrug === 'duloxetine')) {
-        washoutHtml = `<div class="washout-note"><strong>Paroxetine→SNRI:</strong> Paroxetine has high discontinuation syndrome risk. Use extended overlap (3–4 weeks) and slow taper.</div>`;
+        washoutHtml = `<div class="washout-note"><strong>Paroxetine→SNRI:</strong> Paroxetine has high discontinuation syndrome risk. Use extended overlap (3-4 weeks) and slow taper.</div>`;
       }
 
       const infoHtml = `

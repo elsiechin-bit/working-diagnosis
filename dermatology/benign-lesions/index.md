@@ -46,20 +46,4 @@ description: Identifying and managing benign skin lesions in general practice - 
 </div>
 <aside class="derm-aside">
   <p class="aside-kicker">Clinician links</p>
-  <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC - Skin lesions</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways - Skin lesion referral</a></li>
-    <li><a href="https://www.dermnet.com" target="_blank" rel="noopener">DermNet NZ - Benign lesions</a></li>
-    <li><a href="https://www.melanoma.org.nz" target="_blank" rel="noopener">Melanoma NZ</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Vestergaard ME, Macaskill P, Holt PE, et al. Dermoscopy compared with naked eye examination for the diagnosis of primary melanoma: a meta-analysis of studies performed in a clinical setting. *Br J Dermatol.* 2008;159(3):669-676.
-
-</div>
+  <p class="aside-title

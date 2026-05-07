@@ -128,10 +128,4 @@
     "strip-bom-string": "^1.0.0",
     "tinyglobby": "^0.2.16",
     "to-regex-range": "^5.0.1",
-    "toidentifier": "^1.0.1",
-    "uc.micro": "^2.1.0",
-    "unpipe": "^1.0.0",
-    "urlpattern-polyfill": "^10.1.0",
-    "ws": "^8.20.0"
-  }
-}
+    "toiden

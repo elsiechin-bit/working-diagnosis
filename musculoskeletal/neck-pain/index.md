@@ -49,9 +49,4 @@ permalink: /msk/neck-pain/
 
 **References**
 
-1. Hogg-Johnson S, van der Velde G, Carroll LJ, et al. The burden and determinants of neck pain in the general population: results of the Bone and Joint Decade 2000-2010 Task Force on Neck Pain and Its Associated Disorders. *J Manipulative Physiol Ther.* 2009;32(2):S46-60.
-2. Cleland JA, Childs JD, Fritz JM, et al. Development of a clinical prediction rule for guiding treatment of a subgroup of patients with neck pain: use of thoracic spine manipulation, exercise, and patient education. *Phys Ther.* 2007;87(1):9-23.
-3. Fehlings MG, Tetreault LA, Riew KD, et al. A clinical practice guideline for the management of degenerative cervical myelopathy: recommendations for patients with mild, moderate, and severe myelopathy. *Global Spine J.* 2017;7(3S):70S-83S.
-4. Kuijper B, Tans JT, Beelen A, et al. Root compression by herniated discs or spondylotic changes: outcome of non-operative treatment in patients with cervical radiculopathy. *Spine.* 2007;32(17):1833-1839.
-
-</div>
+1. Hogg-Johnson S, van der Velde G, Carroll LJ, et 

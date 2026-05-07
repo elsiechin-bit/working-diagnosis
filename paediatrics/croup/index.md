@@ -60,6 +60,4 @@ permalink: /paediatrics/croup/
 
 1. Russell KF, Liang Y, O'Gorman K, et al. Glucocorticoids for croup. *Cochrane Database Syst Rev.* 2011;(1):CD001955.
 2. Bjornson CL, Klassen TP, Williamson J, et al. A randomized trial of a single dose of oral dexamethasone for mild croup. *N Engl J Med.* 2004;351(13):1306-1313.
-3. Moore M, Little P. Humidified air inhalation for treating croup: a systematic review and meta-analysis. *Fam Pract.* 2007;24(4):295-301.
-
-</div>
+3. Moore M, Littl

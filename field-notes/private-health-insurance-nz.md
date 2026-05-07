@@ -117,7 +117,7 @@ None of this is a reason to approach privately insured patients differently in t
 
 ### References
 
-1. Gauld R. The New Zealand health care system. In: International Profiles of Health Care Systems. Commonwealth Fund; 2020. p. 131–9.
+1. Gauld R. The New Zealand health care system. In: International Profiles of Health Care Systems. Commonwealth Fund; 2020. p. 131-9.
 2. Health Funds Association of New Zealand. Industry statistics. HFANZ; 2023. Available from: https://www.hfanz.org.nz
 3. OECD. Health at a Glance 2023: OECD Indicators. Paris: OECD Publishing; 2023. doi:10.1787/7a7afb35-en
 4. Southern Cross Health Society. Annual Report 2023. Auckland: Southern Cross; 2023. Available from: https://www.southerncross.co.nz
@@ -125,4 +125,4 @@ None of this is a reason to approach privately insured patients differently in t
 6. Kerridge I, Lowe M, Stewart C. Ethics and Law for the Health Professions. 4th ed. Sydney: Federation Press; 2013.
 7. New Zealand Medical Association. NZMA fee schedule guidance. Wellington: NZMA; 2023.
 8. Health Funds Association of New Zealand. Submission to the Health Select Committee: private health insurance sustainability. Wellington: HFANZ; 2022.
-9. Ministry of Health. Ola Manuia: Pacific Health and Wellbeing Action Plan 2020–2025. Wellington: MoH; 2020. Available from: https://www.health.govt.nz
+9. Ministry of Health. Ola Manuia: Pacific Health and Wellbeing Action Plan 2020-2025. Wellington: MoH; 2020. Available from: https://www.health.govt.nz

@@ -21,17 +21,17 @@ This note covers staging and risk stratification, the evidence for current nephr
 
 The KDIGO classification system, now universally used, defines CKD as abnormalities of kidney structure or function present for more than three months, with implications for health [2]. It classifies patients on two axes.
 
-**GFR categories (G1–G5):**
+**GFR categories (G1-G5):**
 - G1: ≥90 mL/min/1.73m² (normal or high, with kidney damage markers)
-- G2: 60–89 (mildly decreased)
-- G3a: 45–59 (mildly to moderately decreased)
-- G3b: 30–44 (moderately to severely decreased)
-- G4: 15–29 (severely decreased)
+- G2: 60-89 (mildly decreased)
+- G3a: 45-59 (mildly to moderately decreased)
+- G3b: 30-44 (moderately to severely decreased)
+- G4: 15-29 (severely decreased)
 - G5: <15 (kidney failure)
 
-**Albuminuria categories (A1–A3):**
+**Albuminuria categories (A1-A3):**
 - A1: <3 mg/mmol ACR (normal to mildly increased)
-- A2: 3–30 mg/mmol (moderately increased; previously termed microalbuminuria)
+- A2: 3-30 mg/mmol (moderately increased; previously termed microalbuminuria)
 - A3: >30 mg/mmol (severely increased; previously macroalbuminuria)
 
 The KDIGO heat map combines these axes into a four-colour risk stratification (low, moderately increased, high, very high) that determines both the urgency of treatment and the frequency of monitoring. A patient with G3aA2 is at moderately increased risk; G3bA3 is very high risk regardless of underlying cause. This matrix is the most useful single framework for clinical decision-making in CKD and should be the organising structure for managing any patient with impaired renal function.
@@ -39,10 +39,10 @@ The KDIGO heat map combines these axes into a four-colour risk stratification (l
 **Diagnosing CKD in practice:** requires at least two eGFR measurements more than 90 days apart (to exclude AKI), and documentation of whether albuminuria is present. An isolated low eGFR without albuminuria and without structural kidney disease is not CKD until confirmed on repeat; an elevated ACR in a patient with normal eGFR is CKD and carries its own risk. Both measurements matter. Relying only on eGFR and not checking urine ACR is the most common gap in CKD monitoring in primary care.
 
 **Monitoring frequency** is determined by risk category [2]:
-- Low risk (G1–2, A1): annual monitoring if CKD is confirmed; some guidelines suggest this group may not need monitoring if no structural disease
-- Moderately increased risk (G1–2 A2, G3a A1): once yearly
-- High risk (G3a–3b A2, G4 A1): 2–3 times yearly
-- Very high risk (G4–5, any A3): 3–4 times yearly; most should be under shared care with nephrology
+- Low risk (G1-2, A1): annual monitoring if CKD is confirmed; some guidelines suggest this group may not need monitoring if no structural disease
+- Moderately increased risk (G1-2 A2, G3a A1): once yearly
+- High risk (G3a-3b A2, G4 A1): 2-3 times yearly
+- Very high risk (G4-5, any A3): 3-4 times yearly; most should be under shared care with nephrology
 
 The standard monitoring panel at each review: eGFR, urine ACR, blood pressure, electrolytes (including potassium and bicarbonate), haemoglobin. From G3b: phosphate, calcium, PTH, 25-OH vitamin D, iron studies.
 
@@ -53,7 +53,7 @@ The standard monitoring panel at each review: eGFR, urine ACR, blood pressure, e
 ACE inhibitors and angiotensin receptor blockers remain the foundation of CKD treatment in patients with proteinuria. The evidence for nephroprotection  -  reduction in progression to dialysis and slowing of eGFR decline  -  is strongest in diabetic kidney disease with proteinuria (A2 and A3) and in non-diabetic proteinuric CKD [2]. Use in CKD without proteinuria (A1) is primarily for blood pressure management rather than specific nephroprotection.
 
 Practical points:
-- An eGFR drop of up to 30% within 2–4 weeks of starting or increasing an ACEi/ARB is acceptable and does not indicate harm; it reflects the haemodynamic effect of reducing glomerular hypertension and is associated with better long-term outcomes. Only stop if the decline exceeds this threshold, is accompanied by hyperkalaemia (K+ >5.5–6.0 mmol/L), or occurs in the context of AKI.
+- An eGFR drop of up to 30% within 2-4 weeks of starting or increasing an ACEi/ARB is acceptable and does not indicate harm; it reflects the haemodynamic effect of reducing glomerular hypertension and is associated with better long-term outcomes. Only stop if the decline exceeds this threshold, is accompanied by hyperkalaemia (K+ >5.5-6.0 mmol/L), or occurs in the context of AKI.
 - ACEi and ARBs should not be combined. The ONTARGET trial demonstrated no additional benefit and significantly increased harm from dual RAS blockade [3].
 - RAS blockade should be held during intercurrent illness with dehydration risk ("sick day" management, covered in Part VI).
 
@@ -67,13 +67,13 @@ In clinical reality, achieving <120 mmHg systolic in CKD patients  -  who are of
 
 This is the most important update in CKD management in a generation, and the one most likely to represent a gap in current practice.
 
-The CREDENCE trial (2019) established that canagliflozin significantly reduced the composite of dialysis, kidney transplant, doubling of serum creatinine, and death from renal or cardiovascular causes in T2DM patients with CKD and proteinuria (ACR ≥30 mg/mmol, eGFR 30–90) [6]. The trial was stopped early due to overwhelming efficacy.
+The CREDENCE trial (2019) established that canagliflozin significantly reduced the composite of dialysis, kidney transplant, doubling of serum creatinine, and death from renal or cardiovascular causes in T2DM patients with CKD and proteinuria (ACR ≥30 mg/mmol, eGFR 30-90) [6]. The trial was stopped early due to overwhelming efficacy.
 
 The DAPA-CKD trial (2020) extended the evidence substantially. Dapagliflozin reduced kidney failure, sustained ≥50% eGFR decline, and death from kidney or cardiovascular causes compared to placebo  -  and crucially, this benefit was present in patients without diabetes (approximately one-third of the trial population) [7]. This was the first major trial to demonstrate nephroprotective benefit of an SGLT2 inhibitor in non-diabetic CKD.
 
-The EMPA-KIDNEY trial (2022–2023) confirmed these findings with empagliflozin across a broad CKD population including patients with eGFR as low as 20 mL/min/1.73m² and very low levels of proteinuria, further extending the indication [8].
+The EMPA-KIDNEY trial (2022-2023) confirmed these findings with empagliflozin across a broad CKD population including patients with eGFR as low as 20 mL/min/1.73m² and very low levels of proteinuria, further extending the indication [8].
 
-**The KDIGO 2024 position:** SGLT2 inhibitors (specifically dapagliflozin or empagliflozin) are now recommended for all patients with CKD and eGFR ≥20 mL/min/1.73m², regardless of diabetes status, provided albuminuria is present (ACR ≥ approximately 2–3 mg/mmol), or if T2DM is present [2]. The nephroprotective effect appears to be at least partially independent of glycaemic effects, mediated through reduction in glomerular hypertension via tubuloglomerular feedback.
+**The KDIGO 2024 position:** SGLT2 inhibitors (specifically dapagliflozin or empagliflozin) are now recommended for all patients with CKD and eGFR ≥20 mL/min/1.73m², regardless of diabetes status, provided albuminuria is present (ACR ≥ approximately 2-3 mg/mmol), or if T2DM is present [2]. The nephroprotective effect appears to be at least partially independent of glycaemic effects, mediated through reduction in glomerular hypertension via tubuloglomerular feedback.
 
 Key prescribing points for SGLT2i in CKD:
 - Do not initiate if eGFR <20 (insufficient filtration for the drug to act; risk of DKA in stressed state outweighs benefit)
@@ -93,7 +93,7 @@ Finerenone (Kerendia) has received regulatory approval in multiple jurisdictions
 
 ## Part III  -  GLP-1 receptor agonists in diabetic kidney disease
 
-The FLOW trial (2024) examined semaglutide in patients with T2DM and CKD (eGFR 50–75 with ACR ≥300 mg/g, or eGFR 25–50 with ACR ≥100 mg/g). Semaglutide significantly reduced the composite kidney endpoint, with a relative risk reduction of approximately 24% for the primary kidney outcome [11]. The trial was also stopped early for efficacy.
+The FLOW trial (2024) examined semaglutide in patients with T2DM and CKD (eGFR 50-75 with ACR ≥300 mg/g, or eGFR 25-50 with ACR ≥100 mg/g). Semaglutide significantly reduced the composite kidney endpoint, with a relative risk reduction of approximately 24% for the primary kidney outcome [11]. The trial was also stopped early for efficacy.
 
 This establishes semaglutide  -  and potentially the GLP-1 class  -  as having nephroprotective effects beyond glycaemic control, though the mechanism is less well-characterised than for SGLT2 inhibitors and may include reduction in body weight, blood pressure, and inflammation. GLP-1 receptor agonists are now considered part of the management algorithm for high-risk diabetic CKD patients, used alongside SGLT2 inhibitors rather than instead of them.
 
@@ -103,15 +103,15 @@ GLP-1 receptor agonists do not require dose reduction in CKD and are generally s
 
 **Cardiovascular disease.** CKD is an independent and powerful cardiovascular risk factor. From G3 onwards, patients should be considered at high to very high cardiovascular risk regardless of their traditional Framingham-based risk score; many calculators underestimate CV risk in CKD. Statin therapy is recommended for most CKD patients not on dialysis [2]. Aspirin for primary prevention follows the same evolving guidelines as the general population; for secondary prevention, CKD does not alter the indication. SGLT2 inhibitors and GLP-1 agonists provide additional cardiovascular risk reduction in diabetic CKD beyond their nephroprotective effects.
 
-**Anaemia.** CKD anaemia results from reduced erythropoietin production (from G3b), iron deficiency (from blood loss, reduced absorption, and functional iron deficiency from inflammation), and shortened red cell survival. Diagnosis requires excluding other causes. Target Hb in CKD anaemia is typically 100–120 g/L. Management:
+**Anaemia.** CKD anaemia results from reduced erythropoietin production (from G3b), iron deficiency (from blood loss, reduced absorption, and functional iron deficiency from inflammation), and shortened red cell survival. Diagnosis requires excluding other causes. Target Hb in CKD anaemia is typically 100-120 g/L. Management:
 
 - Correct iron deficiency first (iron studies including ferritin and transferrin saturation). IV iron is often required in CKD as oral iron is poorly absorbed, particularly in the context of inflammation. Target ferritin >200 µg/L and transferrin saturation >20% before initiating erythropoiesis-stimulating agents (ESAs).
-- ESAs (erythropoietin alfa, darbepoetin) are used for Hb <100 g/L persistent despite iron repletion, primarily in G4–5 patients and those on dialysis; for G3–4 patients, the decision should involve nephrology.
+- ESAs (erythropoietin alfa, darbepoetin) are used for Hb <100 g/L persistent despite iron repletion, primarily in G4-5 patients and those on dialysis; for G3-4 patients, the decision should involve nephrology.
 - Hypoxia-inducible factor prolyl hydroxylase inhibitors (HIF-PHIs), including roxadustat, represent a newer oral option for CKD anaemia, approved in some jurisdictions; their use should follow local regulatory approval and specialist guidance.
 
-**Metabolic acidosis.** Reduced acid excretion leads to metabolic acidosis in advanced CKD (typically from G4). Target bicarbonate of ≥22 mmol/L; sodium bicarbonate supplementation is beneficial both for symptomatic relief and for potentially slowing CKD progression [2]. Dose is 500 mg–1 g three times daily, titrated to bicarbonate level. This is an underused intervention.
+**Metabolic acidosis.** Reduced acid excretion leads to metabolic acidosis in advanced CKD (typically from G4). Target bicarbonate of ≥22 mmol/L; sodium bicarbonate supplementation is beneficial both for symptomatic relief and for potentially slowing CKD progression [2]. Dose is 500 mg-1 g three times daily, titrated to bicarbonate level. This is an underused intervention.
 
-**CKD-mineral bone disease (CKD-MBD).** Reduced active vitamin D, phosphate retention, secondary hyperparathyroidism, and disordered bone metabolism begin from G3b. Assessment: phosphate, calcium, PTH, 25-OH vitamin D from G3b annually (more frequently in G4–5). Management:
+**CKD-mineral bone disease (CKD-MBD).** Reduced active vitamin D, phosphate retention, secondary hyperparathyroidism, and disordered bone metabolism begin from G3b. Assessment: phosphate, calcium, PTH, 25-OH vitamin D from G3b annually (more frequently in G4-5). Management:
 - Correct 25-OH vitamin D deficiency (colecalciferol supplementation)
 - Dietary phosphate restriction and phosphate binders from G4 (calcium carbonate is commonly used but calcium load matters if calcification is a concern; non-calcium binders such as sevelamer may be preferred in some patients  -  nephrology input appropriate from G4)
 - Active vitamin D analogues (calcitriol, alfacalcidol) for secondary hyperparathyroidism: specialist decision
@@ -126,10 +126,10 @@ Patiromer (Veltassa) and sodium zirconium cyclosilicate (Lokelma, ZS-9) are newe
 CKD changes the pharmacokinetics of a large number of drugs. The key principle is that reduced GFR reduces renal clearance of drugs and their metabolites, increasing the risk of accumulation and toxicity. The following are the most clinically important adjustments in general practice:
 
 **Drugs to stop or avoid:**
-- *NSAIDs*: vasoconstrictive effect on renal afferent arterioles; risk of AKI, hypertension, and fluid retention. Avoid in G3b and above; use with caution and brief courses only in G3a. Absolutely contraindicated in G4–5.
+- *NSAIDs*: vasoconstrictive effect on renal afferent arterioles; risk of AKI, hypertension, and fluid retention. Avoid in G3b and above; use with caution and brief courses only in G3a. Absolutely contraindicated in G4-5.
 - *Nitrofurantoin*: contraindicated at eGFR <45 mL/min. At reduced eGFR, it neither achieves therapeutic urinary concentrations (so is ineffective) nor is adequately cleared (so is toxic). Using nitrofurantoin for UTI in a patient with G3b CKD is a common prescribing error.
-- *Metformin*: risk of lactic acidosis in acute illness or contrast exposure at reduced eGFR. Current guidance: continue at eGFR 30–45 with care, halve dose consideration; stop at eGFR <30; hold before iodinated contrast and restart 48 hours after if eGFR is stable.
-- *Colchicine*: accumulates in renal failure; reduce dose significantly in G3–4; avoid in G5.
+- *Metformin*: risk of lactic acidosis in acute illness or contrast exposure at reduced eGFR. Current guidance: continue at eGFR 30-45 with care, halve dose consideration; stop at eGFR <30; hold before iodinated contrast and restart 48 hours after if eGFR is stable.
+- *Colchicine*: accumulates in renal failure; reduce dose significantly in G3-4; avoid in G5.
 - *Some anticoagulants*: dabigatran is 80% renally cleared and is contraindicated at eGFR <30; rivaroxaban, apixaban, and edoxaban all require dose adjustment  -  apixaban is generally the preferred DOAC in CKD. Warfarin does not require dose reduction for renal function per se but CKD increases bleeding risk.
 
 **Drugs requiring dose reduction:**
@@ -139,13 +139,13 @@ CKD changes the pharmacokinetics of a large number of drugs. The key principle i
 - *Digoxin*: renally cleared; reduced dose required; monitor levels.
 - *Trimethoprim/co-trimoxazole*: trimethoprim blocks tubular creatinine secretion, raising serum creatinine without affecting true GFR  -  this effect is often mistaken for worsening CKD. More importantly, trimethoprim also blocks potassium excretion and can cause clinically significant hyperkalaemia in CKD, particularly in patients on RAS blockers. Use with caution from G3b; consider alternatives.
 
-**Iodinated contrast and CKD:** The risk of contrast-induced nephropathy (CIN) with modern low- and iso-osmolality agents is lower than historical estimates, but remains relevant in patients with eGFR <45 and particularly <30 [12]. Precautions: ensure adequate hydration before and after, hold NSAIDs and metformin, use the lowest necessary contrast volume, and check eGFR 48–72 hours after.
+**Iodinated contrast and CKD:** The risk of contrast-induced nephropathy (CIN) with modern low- and iso-osmolality agents is lower than historical estimates, but remains relevant in patients with eGFR <45 and particularly <30 [12]. Precautions: ensure adequate hydration before and after, hold NSAIDs and metformin, use the lowest necessary contrast volume, and check eGFR 48-72 hours after.
 
-**Gadolinium contrast in MRI:** nephrogenic systemic fibrosis (NSF) is a risk with older group 1 gadolinium agents in advanced CKD (eGFR <30). Modern macrocyclic agents (gadobutrol, gadoterate, gadoteridol) have a substantially safer profile. Standard linear gadolinium agents should be avoided in G4–5 CKD; macrocyclic agents may be used with caution. Radiology departments should be applying appropriate protocols, but awareness of the patient's CKD stage before ordering contrast-enhanced MRI is appropriate.
+**Gadolinium contrast in MRI:** nephrogenic systemic fibrosis (NSF) is a risk with older group 1 gadolinium agents in advanced CKD (eGFR <30). Modern macrocyclic agents (gadobutrol, gadoterate, gadoteridol) have a substantially safer profile. Standard linear gadolinium agents should be avoided in G4-5 CKD; macrocyclic agents may be used with caution. Radiology departments should be applying appropriate protocols, but awareness of the patient's CKD stage before ordering contrast-enhanced MRI is appropriate.
 
 ## Part VI  -  Acute kidney injury in the community
 
-Acute kidney injury (AKI) is defined as a rise in creatinine of ≥26.5 µmol/L within 48 hours, a rise to ≥1.5× the known or estimated baseline within 7 days, or urine output <0.5 mL/kg/hr for ≥6 hours [13]. Community-presenting AKI is commonly pre-renal (volume depletion, reduced cardiac output, NSAID use) or intrinsic (drug-induced, infection-related) and is managed by addressing the precipitant.
+Acute kidney injury (AKI) is defined as a rise in creatinine of ≥26.5 µmol/L within 48 hours, a rise to ≥1.5�- the known or estimated baseline within 7 days, or urine output <0.5 mL/kg/hr for ≥6 hours [13]. Community-presenting AKI is commonly pre-renal (volume depletion, reduced cardiac output, NSAID use) or intrinsic (drug-induced, infection-related) and is managed by addressing the precipitant.
 
 **The sick day rule  -  the "SADMAN" approach.** Patients with CKD (and their family members/caregivers) benefit from a pre-emptive plan for intercurrent illness. The pneumonic SADMAN lists the drugs to hold during episodes of significant vomiting, diarrhoea, fever, or reduced oral intake:
 
@@ -213,16 +213,16 @@ Any eGFR <30 should have a nephrology referral in train.
 ### References
 
 1. Kidney Health New Zealand. Chronic kidney disease in New Zealand. Wellington: Kidney Health NZ; 2022. Available from: https://www.kidneys.co.nz
-2. KDIGO CKD Work Group. KDIGO 2024 clinical practice guideline for the evaluation and management of chronic kidney disease. Kidney Int. 2024;105(4S):S117–314. doi:10.1016/j.kint.2023.10.018
-3. Mann JF, Schmieder RE, McQueen M, et al. Renal outcomes with telmisartan, ramipril, or both, in people at high vascular risk (the ONTARGET study). Lancet. 2008;372(9638):547–53. doi:10.1016/S0140-6736(08)61236-2
-4. SPRINT Research Group. A randomized trial of intensive versus standard blood-pressure control. N Engl J Med. 2015;373(22):2103–16. doi:10.1056/NEJMoa1511939
-5. Cheung AK, Chang TI, Cushman WC, et al. KDIGO 2021 clinical practice guideline for the management of blood pressure in chronic kidney disease. Kidney Int. 2021;99(3S):S1–87. doi:10.1016/j.kint.2020.11.003
-6. Perkovic V, Jardine MJ, Neal B, et al. Canagliflozin and renal outcomes in type 2 diabetes and nephropathy. N Engl J Med. 2019;380(24):2295–306. doi:10.1056/NEJMoa1811744
-7. Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al. Dapagliflozin in patients with chronic kidney disease. N Engl J Med. 2020;383(15):1436–46. doi:10.1056/NEJMoa2024816
-8. Herrington WG, Staplin N, Wanner C, et al. Empagliflozin in patients with chronic kidney disease. N Engl J Med. 2023;388(2):117–27. doi:10.1056/NEJMoa2204233
-9. Bakris GL, Agarwal R, Anker SD, et al. Effect of finerenone on chronic kidney disease outcomes in type 2 diabetes. N Engl J Med. 2020;383(23):2219–29. doi:10.1056/NEJMoa2025845
-10. Pitt B, Filippatos G, Agarwal R, et al. Cardiovascular events with finerenone in kidney disease and type 2 diabetes. N Engl J Med. 2021;385(24):2252–63. doi:10.1056/NEJMoa2110956
-11. Perkovic V, Tuttle KR, Rossing P, et al. Effects of semaglutide on chronic kidney disease in patients with type 2 diabetes. N Engl J Med. 2024;391(2):109–21. doi:10.1056/NEJMoa2403347
-12. McDonald JS, McDonald RJ, Comin J, et al. Frequency of acute kidney injury following intravenous contrast medium administration: a systematic review and meta-analysis. Radiology. 2013;267(1):119–28. doi:10.1148/radiol.12121460
-13. KDIGO AKI Work Group. KDIGO clinical practice guideline for acute kidney injury. Kidney Int Suppl. 2012;2(1):1–138. doi:10.1038/kisup.2012.1
+2. KDIGO CKD Work Group. KDIGO 2024 clinical practice guideline for the evaluation and management of chronic kidney disease. Kidney Int. 2024;105(4S):S117-314. doi:10.1016/j.kint.2023.10.018
+3. Mann JF, Schmieder RE, McQueen M, et al. Renal outcomes with telmisartan, ramipril, or both, in people at high vascular risk (the ONTARGET study). Lancet. 2008;372(9638):547-53. doi:10.1016/S0140-6736(08)61236-2
+4. SPRINT Research Group. A randomized trial of intensive versus standard blood-pressure control. N Engl J Med. 2015;373(22):2103-16. doi:10.1056/NEJMoa1511939
+5. Cheung AK, Chang TI, Cushman WC, et al. KDIGO 2021 clinical practice guideline for the management of blood pressure in chronic kidney disease. Kidney Int. 2021;99(3S):S1-87. doi:10.1016/j.kint.2020.11.003
+6. Perkovic V, Jardine MJ, Neal B, et al. Canagliflozin and renal outcomes in type 2 diabetes and nephropathy. N Engl J Med. 2019;380(24):2295-306. doi:10.1056/NEJMoa1811744
+7. Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al. Dapagliflozin in patients with chronic kidney disease. N Engl J Med. 2020;383(15):1436-46. doi:10.1056/NEJMoa2024816
+8. Herrington WG, Staplin N, Wanner C, et al. Empagliflozin in patients with chronic kidney disease. N Engl J Med. 2023;388(2):117-27. doi:10.1056/NEJMoa2204233
+9. Bakris GL, Agarwal R, Anker SD, et al. Effect of finerenone on chronic kidney disease outcomes in type 2 diabetes. N Engl J Med. 2020;383(23):2219-29. doi:10.1056/NEJMoa2025845
+10. Pitt B, Filippatos G, Agarwal R, et al. Cardiovascular events with finerenone in kidney disease and type 2 diabetes. N Engl J Med. 2021;385(24):2252-63. doi:10.1056/NEJMoa2110956
+11. Perkovic V, Tuttle KR, Rossing P, et al. Effects of semaglutide on chronic kidney disease in patients with type 2 diabetes. N Engl J Med. 2024;391(2):109-21. doi:10.1056/NEJMoa2403347
+12. McDonald JS, McDonald RJ, Comin J, et al. Frequency of acute kidney injury following intravenous contrast medium administration: a systematic review and meta-analysis. Radiology. 2013;267(1):119-28. doi:10.1148/radiol.12121460
+13. KDIGO AKI Work Group. KDIGO clinical practice guideline for acute kidney injury. Kidney Int Suppl. 2012;2(1):1-138. doi:10.1038/kisup.2012.1
 14. Ministry of Health. Health and Independence Report. Wellington: MoH; 2023. Available from: https://www.health.govt.nz

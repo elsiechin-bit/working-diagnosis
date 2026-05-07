@@ -1,6 +1,7 @@
 ---
 title: Gout - managing an acute attack
 layout: topic.njk
+pageType: handout
 description: What to do during a gout flare, which medicines help, and how to recover as quickly as possible.
 ---
 
@@ -65,6 +66,4 @@ description: What to do during a gout flare, which medicines help, and how to re
 
 - [Arthritis NZ - Gout](https://arthritis.org.nz/gout/)
 - [Health Navigator - Gout](https://www.healthnavigator.org.nz/health-a-z/g/gout/)
-- [BPAC NZ - Gout management](https://bpac.org.nz)
-
-</div>
+- [BPAC NZ - Gout management](https://bpa

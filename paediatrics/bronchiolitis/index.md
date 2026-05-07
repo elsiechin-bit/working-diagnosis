@@ -50,27 +50,4 @@ permalink: /paediatrics/bronchiolitis/
   <p class="tier-label">❍ Nirsevimab and RSV prevention</p>
   <p>Nirsevimab (Beyfortus) is a long-acting monoclonal antibody providing passive immunity against RSV. It was introduced to the NZ funded immunisation schedule in 2024 for eligible infants entering their first RSV season. Unlike the previous agent palivizumab - which required monthly injections and was restricted to high-risk infants - nirsevimab is a single dose providing protection across a full RSV season.</p>
   <p>Eligibility and dose information is maintained by IMAC and the NZF; check current criteria at the start of each RSV season as policy continues to evolve.<sup>2</sup> The introduction of nirsevimab represents a significant change in RSV prevention strategy - palivizumab, previously used only in high-risk infants, has been superseded by a product with broader eligibility and simpler administration.</p>
-  <p>For families of infants at high risk (premature birth, congenital heart disease, chronic lung disease), active counselling at the start of the RSV season about nirsevimab eligibility and the signs of bronchiolitis requiring emergency presentation is appropriate preventive care.</p>
-</div>
-
-</div>
-<aside class="topic-aside">
-  <p class="aside-kicker">Clinician links</p>
-  <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.starship.org.nz/guidelines/" target="_blank" rel="noopener">Starship: Bronchiolitis guideline</a></li>
-    <li><a href="https://www.immune.org.nz/" target="_blank" rel="noopener">IMAC: Nirsevimab/RSV prophylaxis</a></li>
-    <li><a href="https://bpac.org.nz/" target="_blank" rel="noopener">BPAC NZ: Bronchiolitis in infants</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Bronchiolitis</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Ralston SL, Lieberthal AS, Meissner HC, et al. Clinical practice guideline: the diagnosis, management, and prevention of bronchiolitis. *Pediatrics.* 2014;134(5):e1474-e1502.
-2. Immunisation Advisory Centre (IMAC). Nirsevimab (Beyfortus) for RSV prevention. Auckland: University of Auckland; 2024. Available from: https://www.immune.org.nz/
-
-</div>
+  <p>For families of infants at high risk (premature birth, congenital heart disease, chronic lung disease), active counselling at the start of th

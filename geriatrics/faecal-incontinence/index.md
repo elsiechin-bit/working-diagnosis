@@ -31,15 +31,4 @@ pillar: Geriatrics
 
 <div class="tier-3">
   <p class="tier-label">❍ Referral and specialist management</p>
-  <p>Referral to colorectal surgery or a continence service is appropriate when conservative management fails over six to eight weeks. Endoscopy, anorectal manometry, and pelvic floor imaging are investigations for secondary care when the cause is unclear or conservative management has failed. Sacral nerve stimulation has good evidence for sphincter weakness unresponsive to conservative treatment.<sup>3</sup> The practical point is that many older patients manage faecal incontinence with containment products alone - pads, pull-up pants - and have never been offered active management. Asking the question opens a conversation that most of them have been hoping someone would start.</p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Whitehead WE, Borrud L, Goode PS, et al. Fecal incontinence in US adults: epidemiology and risk factors. *Gastroenterology.* 2009;137(2):512-517.
-2. Norton C, Cody JD. Biofeedback and/or sphincter exercises for the treatment of faecal incontinence in adults. *Cochrane Database Syst Rev.* 2012;7:CD002111.
-3. Wald A. Clinical practice: fecal incontinence in adults. *N Engl J Med.* 2007;356(16):1648-1655.
-
-</div>
+  <p>

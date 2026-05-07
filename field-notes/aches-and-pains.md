@@ -21,7 +21,7 @@ Understanding how that patient got there, and what to do differently at an earli
 
 The first task with any "aches and pains" presentation is to categorise it correctly, because the management differs fundamentally depending on the category. There are three broad frameworks:
 
-**Inflammatory.** Pain that is worse with rest and improves with movement. Morning stiffness lasting more than 45–60 minutes. Objective synovitis  -  joint swelling, warmth, loss of range of movement. Elevated CRP or ESR. Systemic features: fatigue, weight loss, fever. If this is the picture, the differential includes rheumatoid arthritis, psoriatic arthritis, axial spondyloarthropathy, polymyalgia rheumatica, crystal arthropathy (acute gout/pseudogout rather than widespread pain), systemic lupus, and infection. This group needs investigation and often rheumatology input.
+**Inflammatory.** Pain that is worse with rest and improves with movement. Morning stiffness lasting more than 45-60 minutes. Objective synovitis  -  joint swelling, warmth, loss of range of movement. Elevated CRP or ESR. Systemic features: fatigue, weight loss, fever. If this is the picture, the differential includes rheumatoid arthritis, psoriatic arthritis, axial spondyloarthropathy, polymyalgia rheumatica, crystal arthropathy (acute gout/pseudogout rather than widespread pain), systemic lupus, and infection. This group needs investigation and often rheumatology input.
 
 **Mechanical/structural.** Pain that is worse with activity and improves with rest. Localised to specific joints or regions. Associated with physical use patterns  -  occupation, sport, body weight. Normal inflammatory markers. This is the most common category of musculoskeletal presentation in primary care and is managed with appropriate load management, physiotherapy, and analgesia.
 
@@ -42,9 +42,9 @@ The 2012 EULAR/ACR classification criteria provide a useful clinical framework [
 - Absence of RF and anti-CCP
 - Absence of other joint involvement
 
-The response to prednisolone is near-diagnostic: PMR typically produces dramatic improvement within 24–72 hours of starting prednisolone 15 mg daily. If there is no substantial improvement within two weeks, the diagnosis should be revisited. Failure to respond is a red flag for an alternative diagnosis  -  including malignancy, which can mimic PMR closely.
+The response to prednisolone is near-diagnostic: PMR typically produces dramatic improvement within 24-72 hours of starting prednisolone 15 mg daily. If there is no substantial improvement within two weeks, the diagnosis should be revisited. Failure to respond is a red flag for an alternative diagnosis  -  including malignancy, which can mimic PMR closely.
 
-Always ask about giant cell arteritis (GCA) in patients with PMR. Approximately 15–20% of PMR patients have co-existing GCA; new-onset headache, scalp tenderness, jaw claudication, or any visual symptoms in a patient with PMR is a clinical emergency requiring immediate high-dose steroids (prednisolone 40–60 mg, or IV methylprednisolone if visual symptoms are present) and urgent ophthalmology/rheumatology review [#ref-3].
+Always ask about giant cell arteritis (GCA) in patients with PMR. Approximately 15-20% of PMR patients have co-existing GCA; new-onset headache, scalp tenderness, jaw claudication, or any visual symptoms in a patient with PMR is a clinical emergency requiring immediate high-dose steroids (prednisolone 40-60 mg, or IV methylprednisolone if visual symptoms are present) and urgent ophthalmology/rheumatology review [#ref-3].
 
 **Hypothyroidism** causes proximal myopathy, diffuse musculoskeletal aching, fatigue, and cognitive slowing  -  a clinical picture that overlaps substantially with fibromyalgia. TSH is cheap and definitive. It should be ordered in virtually every undifferentiated widespread pain presentation. Hypothyroidism is common, undertreated thyroid disease causes significant symptom burden, and treatment is simple. The missed hypothyroid patient who has been labelled fibromyalgia and started on pregabalin is a preventable outcome.
 
@@ -60,13 +60,13 @@ Always ask about giant cell arteritis (GCA) in patients with PMR. Approximately 
 
 Medication-induced myalgia is underdiagnosed because it requires the clinician to actively think of it and because the patient does not connect the medication to the symptom.
 
-**Statins** are the most important cause in primary care [#ref-5]. Statin-associated muscle symptoms (SAMS) affect approximately 5–10% of statin users and range from mild myalgia (pain without CK elevation) through myositis (pain with CK elevation) to rhabdomyolysis (severe CK elevation with myoglobinuria and potential AKI  -  rare but serious). The majority of statin muscle symptoms are myalgia without significant CK elevation.
+**Statins** are the most important cause in primary care [#ref-5]. Statin-associated muscle symptoms (SAMS) affect approximately 5-10% of statin users and range from mild myalgia (pain without CK elevation) through myositis (pain with CK elevation) to rhabdomyolysis (severe CK elevation with myoglobinuria and potential AKI  -  rare but serious). The majority of statin muscle symptoms are myalgia without significant CK elevation.
 
 Clinical approach to suspected statin myalgia:
 - Check CK. A normal CK in a symptomatic patient does not exclude statin myalgia; it does exclude significant muscle injury.
 - Check TSH and vitamin D  -  both worsen statin-associated muscle symptoms.
 - Check for relevant drug interactions: macrolide antibiotics (particularly clarithromycin), amiodarone, some calcium channel blockers, and antifungals inhibit CYP3A4 and raise statin plasma levels, increasing myopathy risk.
-- Trial off the statin for 4–6 weeks. Myalgia that resolves or substantially improves off the statin and returns on rechallenge confirms the diagnosis.
+- Trial off the statin for 4-6 weeks. Myalgia that resolves or substantially improves off the statin and returns on rechallenge confirms the diagnosis.
 - Rechallenge with a different statin: rosuvastatin and pravastatin are more hydrophilic (less muscle penetration) and have lower rates of SAMS; alternate-day dosing is sometimes tolerated when daily dosing is not.
 - CoQ10 supplementation is widely used by patients; the clinical evidence does not support a significant benefit, but it is safe, and there is no reason to discourage it if the patient finds it helpful.
 
@@ -85,7 +85,7 @@ After the above causes have been considered and excluded or addressed, the patie
 **The underlying mechanism** is central sensitisation: an amplification of pain processing within the central nervous system, in which the gain on the pain signal is turned up, ordinary stimuli produce pain responses, and the volume of pain experience is disproportionate to any peripheral tissue damage [#ref-7]. This is not "psychosomatic" in the pejorative sense; it is a real neurobiological process with measurable correlates including altered brain connectivity patterns, reduced descending pain inhibition, and changes in neurotransmitter systems. Explaining this to patients  -  in language that validates their experience while also reframing the target of treatment  -  is one of the most useful clinical interventions available.
 
 **The 2016 ACR diagnostic criteria** [#ref-8] replace the original tender-point examination and are more practical for general practice use. Diagnosis requires:
-1. Widespread pain index (WPI) ≥7 and symptom severity score (SSS) ≥5, OR WPI 4–6 and SSS ≥9
+1. Widespread pain index (WPI) ≥7 and symptom severity score (SSS) ≥5, OR WPI 4-6 and SSS ≥9
 2. Generalised pain, defined as pain in at least 4 of 5 regions, present for at least 3 months
 3. A fibromyalgia diagnosis is valid irrespective of other diagnoses  -  fibromyalgia can be present alongside inflammatory arthritis or other conditions
 
@@ -107,7 +107,7 @@ The management evidence base is reasonably robust and the hierarchy is clear. Wh
 
 *Sleep.* Disrupted sleep amplifies pain and lowers pain thresholds; pain disrupts sleep. This bidirectional relationship creates a self-perpetuating cycle that is worth targeting explicitly. Addressing sleep  -  through sleep hygiene, treating comorbid sleep disorders (OSA, restless legs), and in some cases pharmacological sleep support  -  reduces pain independently of direct analgesic treatment.
 
-*Low-dose amitriptyline* (10–25 mg nocte) has modest evidence for improving sleep and reducing pain in fibromyalgia and is commonly used as a first-line pharmacological adjunct [#ref-12]. It is not a primary antidepressant at these doses; the mechanism is primarily sedative and analgesic (through noradrenaline reuptake inhibition and sodium channel blockade). Side effects include morning sedation, dry mouth, constipation, and (with long-term use) cardiac conduction effects at higher doses. Check ECG if increasing beyond 75 mg or in patients with cardiac history.
+*Low-dose amitriptyline* (10-25 mg nocte) has modest evidence for improving sleep and reducing pain in fibromyalgia and is commonly used as a first-line pharmacological adjunct [#ref-12]. It is not a primary antidepressant at these doses; the mechanism is primarily sedative and analgesic (through noradrenaline reuptake inhibition and sodium channel blockade). Side effects include morning sedation, dry mouth, constipation, and (with long-term use) cardiac conduction effects at higher doses. Check ECG if increasing beyond 75 mg or in patients with cardiac history.
 
 *Duloxetine* (SNRI) has evidence in fibromyalgia for pain reduction independent of its antidepressant effects [#ref-12]. Useful particularly in patients with comorbid depression or anxiety, or those who do not tolerate amitriptyline. Starting dose 30 mg daily, titrate to 60 mg.
 
@@ -125,7 +125,7 @@ This is a difficult conversation and one that requires more than a single consul
 
 Post-viral musculoskeletal pain has been recognised for decades  -  Ross River virus causes a prolonged arthralgia in New Zealand and Australia; Epstein-Barr virus post-infectious syndrome is a common cause of prolonged fatigue and pain in young adults; parvovirus B19 causes a polyarthropathy that can persist for months.
 
-Long COVID (post-COVID condition) has added a large new population of patients with post-viral musculoskeletal symptoms, fatigue, and cognitive impairment [#ref-15]. The musculoskeletal features include diffuse myalgia, joint pain, and post-exertional malsymptom exacerbation (PEM)  -  worsening of symptoms following physical or cognitive effort that can be delayed 12–24 hours. PEM is an important distinguishing feature of long COVID and ME/CFS and distinguishes these conditions from fibromyalgia in management terms: the graded exercise approach that benefits fibromyalgia can be harmful in patients with significant PEM, where activity pacing (staying within the individual's energy envelope) is the recommended approach rather than graduated increase in exercise intensity [#ref-16].
+Long COVID (post-COVID condition) has added a large new population of patients with post-viral musculoskeletal symptoms, fatigue, and cognitive impairment [#ref-15]. The musculoskeletal features include diffuse myalgia, joint pain, and post-exertional malsymptom exacerbation (PEM)  -  worsening of symptoms following physical or cognitive effort that can be delayed 12-24 hours. PEM is an important distinguishing feature of long COVID and ME/CFS and distinguishes these conditions from fibromyalgia in management terms: the graded exercise approach that benefits fibromyalgia can be harmful in patients with significant PEM, where activity pacing (staying within the individual's energy envelope) is the recommended approach rather than graduated increase in exercise intensity [#ref-16].
 
 Management of long COVID musculoskeletal symptoms: pacing, sleep support, symptom management, addressing comorbidities. Investigate for specific treatable complications (myocarditis, dysautonomia, small fibre neuropathy) if clinically indicated. NZ long COVID services have developed in the main centres; access to multidisciplinary support has been variable.
 
@@ -157,20 +157,19 @@ The conversation about central sensitisation  -  explaining the neuroscience in 
 
 ### References
 
-1. Buttgereit F, Dejaco C, Matteson EL, Dasgupta B. [Polymyalgia rheumatica and giant cell arteritis: a systematic review](https://doi.org/10.1001/jama.2016.5444). JAMA. 2016;315(22):2442–58.
-2. Dasgupta B, Cimmino MA, Kremers HM, et al. [2012 Provisional classification criteria for polymyalgia rheumatica](https://doi.org/10.1136/annrheumdis-2011-200329). Ann Rheum Dis. 2012;71(4):484–92.
-3. Dejaco C, Singh YP, Perel P, et al. [2015 recommendations for the management of polymyalgia rheumatica](https://doi.org/10.1136/annrheumdis-2015-207492). Ann Rheum Dis. 2015;74(10):1799–807.
-4. Bolland MJ, Grey AB, Ames RW, et al. [Determinants of vitamin D status in older men living in their own homes or in residential care](https://doi.org/10.1093/ajcn/84.6.1471). Am J Clin Nutr. 2006;84(6):1471–6.
-5. Stroes ES, Thompson PD, Corsini A, et al. [Statin-associated muscle symptoms: impact on statin therapy  -  European Atherosclerosis Society consensus panel statement](https://doi.org/10.1093/eurheartj/ehv043). Eur Heart J. 2015;36(17):1012–22.
-6. Henry NL, Banerjee M, Wicha M, et al. [Pilot study of duloxetine for treatment of aromatase inhibitor-associated musculoskeletal symptoms](https://doi.org/10.1634/theoncologist.2011-0169). Oncologist. 2011;16(12):1720–6.
-7. Woolf CJ. [Central sensitization: implications for the diagnosis and treatment of pain](https://doi.org/10.1016/j.pain.2010.09.030). Pain. 2011;152(3 Suppl):S2–15.
-8. Wolfe F, Clauw DJ, Fitzcharles MA, et al. [2016 revisions to the 2010/2011 fibromyalgia diagnostic criteria](https://doi.org/10.1016/j.semarthrit.2016.08.012). Semin Arthritis Rheum. 2016;46(3):319–29.
-9. Macfarlane GJ, Kronisch C, Dean LE, et al. [EULAR revised recommendations for the management of fibromyalgia](https://doi.org/10.1136/annrheumdis-2016-209724). Ann Rheum Dis. 2017;76(2):318–28.
-10. Louw A, Diener I, Butler DS, Puentedura EJ. [The effect of neuroscience education on pain, disability, anxiety, and stress in chronic musculoskeletal pain](https://doi.org/10.1016/j.apmr.2011.07.198). Arch Phys Med Rehabil. 2011;92(12):2041–56.
+1. Buttgereit F, Dejaco C, Matteson EL, Dasgupta B. [Polymyalgia rheumatica and giant cell arteritis: a systematic review](https://doi.org/10.1001/jama.2016.5444). JAMA. 2016;315(22):2442-58.
+2. Dasgupta B, Cimmino MA, Kremers HM, et al. [2012 Provisional classification criteria for polymyalgia rheumatica](https://doi.org/10.1136/annrheumdis-2011-200329). Ann Rheum Dis. 2012;71(4):484-92.
+3. Dejaco C, Singh YP, Perel P, et al. [2015 recommendations for the management of polymyalgia rheumatica](https://doi.org/10.1136/annrheumdis-2015-207492). Ann Rheum Dis. 2015;74(10):1799-807.
+4. Bolland MJ, Grey AB, Ames RW, et al. [Determinants of vitamin D status in older men living in their own homes or in residential care](https://doi.org/10.1093/ajcn/84.6.1471). Am J Clin Nutr. 2006;84(6):1471-6.
+5. Stroes ES, Thompson PD, Corsini A, et al. [Statin-associated muscle symptoms: impact on statin therapy  -  European Atherosclerosis Society consensus panel statement](https://doi.org/10.1093/eurheartj/ehv043). Eur Heart J. 2015;36(17):1012-22.
+6. Henry NL, Banerjee M, Wicha M, et al. [Pilot study of duloxetine for treatment of aromatase inhibitor-associated musculoskeletal symptoms](https://doi.org/10.1634/theoncologist.2011-0169). Oncologist. 2011;16(12):1720-6.
+7. Woolf CJ. [Central sensitization: implications for the diagnosis and treatment of pain](https://doi.org/10.1016/j.pain.2010.09.030). Pain. 2011;152(3 Suppl):S2-15.
+8. Wolfe F, Clauw DJ, Fitzcharles MA, et al. [2016 revisions to the 2010/2011 fibromyalgia diagnostic criteria](https://doi.org/10.1016/j.semarthrit.2016.08.012). Semin Arthritis Rheum. 2016;46(3):319-29.
+9. Macfarlane GJ, Kronisch C, Dean LE, et al. [EULAR revised recommendations for the management of fibromyalgia](https://doi.org/10.1136/annrheumdis-2016-209724). Ann Rheum Dis. 2017;76(2):318-28.
+10. Louw A, Diener I, Butler DS, Puentedura EJ. [The effect of neuroscience education on pain, disability, anxiety, and stress in chronic musculoskeletal pain](https://doi.org/10.1016/j.apmr.2011.07.198). Arch Phys Med Rehabil. 2011;92(12):2041-56.
 11. Williams AC, Fisher E, Hearn L, Eccleston C. [Psychological therapies for the management of chronic pain (excluding headache) in adults](https://doi.org/10.1002/14651858.CD007407.pub4). Cochrane Database Syst Rev. 2020;8:CD007407. doi:10.1002/14651858.CD007407.pub4
-12. Häuser W, Bernardy K, Uçeyler N, Sommer C. [Treatment of fibromyalgia syndrome with antidepressants: a meta-analysis](https://doi.org/10.1001/jama.2008.944). JAMA. 2009;301(2):198–209. doi:10.1001/jama.2008.944
+12. Häuser W, Bernardy K, Uçeyler N, Sommer C. [Treatment of fibromyalgia syndrome with antidepressants: a meta-analysis](https://doi.org/10.1001/jama.2008.944). JAMA. 2009;301(2):198-209. doi:10.1001/jama.2008.944
 13. Häuser W, Fitzcharles MA, Lavand'homme P, Tölle T, Wolfe F, Häuser W. [Withdrawal of long-term opioid therapy in fibromyalgia](https://doi.org/10.1002/14651858.CD011978.pub2). Cochrane Database Syst Rev. 2017;1:CD011978. doi:10.1002/14651858.CD011978.pub2
 14. New Zealand Guidelines Group. New Zealand Acute Low Back Pain Guide. Wellington: NZGG; 2004 (principles applied in chronic pain guidelines).
-15. Davis HE, McCorkell L, Vogel JM, Topol EJ. [Long COVID: major findings, mechanisms and recommendations](https://doi.org/10.1038/s41579-022-00846-2). Nat Rev Microbiol. 2023;21(3):133–46. doi:10.1038/s41579-022-00846-2
-16. Twisk FN, Maes M. A review on cognitive behavorial therapy (CBT) and graded exercise therapy (GET) in myalgic encephalomyelitis (ME)/chronic fatigue syndrome (CFS): CBT/GET is not only ineffective and not evidence-based, but also potentially harmful. Neuro Endocrinol Lett. 2009;30(3):284–99.
-17. Kendall NA, Linton SJ, Main CJ. Guide to Assessing Psychosocial Yellow Flags in Acute Low Back Pain. Wellington: Accident Rehabilitation & Compensation Insurance Corporation of New Zealand; 1997.
+15. Davis HE, McCorkell L, Vogel JM, Topol EJ. [Long COVID: major findings, mechanisms and recommendations](https://doi.org/10.1038/s41579-022-00846-2). Nat Rev Microbiol. 2023;21(3):133-46. doi:10.1038/s41579-022-00846-2
+16. Twisk FN, Maes M. A review on cognitive behavorial therapy (CBT

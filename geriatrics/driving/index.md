@@ -26,20 +26,4 @@ pillar: Geriatrics
 <div class="tier-2">
   <p class="tier-label">❍ When the patient refuses</p>
   <p>When a patient is unwilling to stop driving despite advice, the GP's options are: to seek support from family (with the patient's consent where possible), to request a formal on-road assessment (which can be framed as an objective test rather than a clinical opinion), and ultimately to notify NZTA directly if the safety risk is serious and the patient refuses to comply. This notification is a professional obligation under the Land Transport Act 1998 and overrides the usual duty of confidentiality.<sup>3</sup> Inform the patient of your intention to notify, and document the notification in the clinical record.</p>
-  <p>The conversation itself is easier when framed around safety and an objective assessment process rather than a personal judgment. "I need to refer you to NZTA for an assessment - this is something I'm required to do for anyone with your diagnosis, and it will give a clearer picture of your current driving ability" is more constructive than "I think you should stop driving." Where possible, involve family with the patient's consent - they are often waiting for someone else to raise the issue and can provide both support and collateral history.</p>
-</div>
-
-<div class="tier-3">
-  <p class="tier-label">❍ Planning for cessation</p>
-  <p>Planning for life without driving is a clinical task, not an afterthought. At the same time as raising driving fitness, explore what support structures are available: family transport, community transport services, mobility parking permits (for passengers, not drivers), and local voluntary transport schemes. The practical impact of driving cessation on independence and social participation is real - acknowledging this while addressing safety is the clinical ideal. Some patients negotiate a gradual reduction (no night driving, no motorway, local trips only) as a transitional step; this is appropriate where the safety evidence supports it, but should not be used to indefinitely defer a necessary cessation.</p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. New Zealand Transport Agency. *Medical aspects of fitness to drive: a guide for medical practitioners*. Wellington: NZTA; 2014 (updated periodically). Available at: nzta.govt.nz
-2. Austroads. *Assessing fitness to drive for commercial and private vehicle drivers: medical standards for licensing and clinical management guidelines*. Sydney: Austroads; 2022.
-3. Land Transport Act 1998. Wellington: New Zealand Government; 1998. Available at: legislation.govt.nz
-
-</div>
+  <p>The conversation itself is easier when framed around safety and an objective assessment process rather than a personal judgment. "I need to refer you to NZTA for an assessment - this is something I'm required to do for anyone with your diagnosis, and it will give a clearer picture of your current driving ability" is more constructive than "I think you should stop driving." Where possible, involve family with the pat

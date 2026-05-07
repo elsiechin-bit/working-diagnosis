@@ -41,17 +41,4 @@ permalink: /msk/inflammatory-arthritis-onset/
   <p class="aside-title">NZ resources</p>
   <ul class="aside-links">
     <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC NZ</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways Canterbury</a></li>
-    <li><a href="https://www.acc.co.nz" target="_blank" rel="noopener">ACC - physiotherapy referral</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Petty RE, Southwood TR, Manners P, et al. International League of Associations for Rheumatology classification of juvenile idiopathic arthritis: second revision, Edmonton, 2001. *J Rheumatol.* 2004;31(2):390-392.
-2. Ravelli A, Martini A. Juvenile idiopathic arthritis. *Lancet.* 2007;369(9563):767-778.
-
-</div>
+    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">Health

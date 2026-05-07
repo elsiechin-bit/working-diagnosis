@@ -70,33 +70,4 @@ permalink: /msk/low-back-pain/
     Duloxetine 60 mg daily has the best evidence base for pharmacological management of chronic non-specific low back pain and is PHARMAC-funded in NZ for this indication (as a Specialist or GP with Special Interest prescription in some DHBs; check local criteria). SNRIs address both pain and the comorbid depression and anxiety common in chronic pain presentations.
   </p>
   <p>
-    Referral: red flag features warrant urgent imaging and specialist assessment (orthopedic or spinal). Radiculopathy with objective neurological deficit beyond 6 weeks requires MRI and surgical review. Non-specific low back pain unresponsive to optimal conservative management at 12 weeks should be referred to a multidisciplinary pain management clinic where available, with a focus on function and return to activity rather than a structural or imaging-led diagnosis.<sup>3</sup>
-  </p>
-</div>
-
-</div>
-<aside class="topic-aside">
-  <p class="aside-kicker">Clinician links</p>
-  <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.bpac.org.nz/BPJ/2015/October/backpain.aspx" target="_blank" rel="noopener">BPAC NZ: Low back pain in general practice</a></li>
-    <li><a href="https://www.acc.co.nz" target="_blank" rel="noopener">ACC: Musculoskeletal injury coverage</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Back pain pathways</a></li>
-  </ul>
-  <p class="aside-title" style="margin-top:1.25rem;">Patient handout</p>
-  <ul class="aside-links">
-    <li><a href="/handouts/lower-back-pain/">Low back pain - patient handout</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Buchbinder R, van Tulder M, Oberg B, et al. Low back pain: a call for action. *Lancet.* 2018;391(10137):2384–2394.
-2. Waddell G. *The Back Pain Revolution.* 2nd ed. Churchill Livingstone; 2004.
-3. Searle A, Spink M, Ho A, Chuter V. Exercise interventions for the treatment of chronic low back pain: a systematic review and meta-analysis. *Clin Rehabil.* 2015;29(12):1155–1167.
-4. Abdel Shaheed C, Maher CG, Williams KA, et al. Efficacy, tolerability, and dose-dependency of muscle relaxants for acute low back pain: a meta-analysis. *Eur J Pain.* 2017;21(2):228–237.
-
-</div>
+    Referral: red flag features warrant urgent imaging and specialist assessment (orthopedic or spinal). Radiculopat

@@ -85,7 +85,7 @@ a:hover { color: var(--green); }
 .tools-group summary { list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 9px 0; cursor: pointer; user-select: none; }
 .tools-group summary::-webkit-details-marker { display: none; }
 .tools-group__header { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); font-weight: 400; }
-.tools-group__header::after { content: "â–¸"; font-size: 0.65em; color: var(--ink-mute); display: inline-block; transition: transform 180ms ease; margin-left: 6px; }
+.tools-group__header::after { content: "â-¸"; font-size: 0.65em; color: var(--ink-mute); display: inline-block; transition: transform 180ms ease; margin-left: 6px; }
 .tools-group[open] .tools-group__header::after { transform: rotate(90deg); }
 .tools-group summary:hover .tools-group__header { color: var(--green); }
 .tools-list { list-style: none; padding: 0; margin: 0 0 6px; }

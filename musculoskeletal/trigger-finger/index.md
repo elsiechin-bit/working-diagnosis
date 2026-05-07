@@ -38,20 +38,4 @@ permalink: /msk/trigger-finger/
   <p class="aside-kicker">Clinician links</p>
   <p class="aside-title">NZ resources</p>
   <ul class="aside-links">
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways: Hand and finger pain</a></li>
-    <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC NZ: MSK injection techniques</a></li>
-    <li><a href="https://www.acc.co.nz" target="_blank" rel="noopener">ACC: Musculoskeletal injury coverage</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Saldana MJ. Trigger digits: diagnosis and treatment. *J Am Acad Orthop Surg.* 2001;9(4):246-252.
-2. Castellanos J, Axelrod D. Trigger finger: a review. *Am Fam Physician.* 2008;77(3):373-380.
-3. Bain GI, Turnbull JR, Charles MN, et al. Percutaneous A1 pulley release: a cadaveric study. *J Hand Surg Am.* 1995;20(5):781-784.
-4. Fleisch SB, Spindler KP, Lee DH. Corticosteroid injections in the treatment of trigger finger: a level I evidence-based systematic review. *J Am Acad Orthop Surg.* 2007;15(3):166-171.
-
-</div>
+    <li><a href="https:/

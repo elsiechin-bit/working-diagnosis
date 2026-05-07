@@ -132,7 +132,7 @@ The GP who understands precisely what they are and are not required to do  -  an
 3. Medical Council of New Zealand. Good medical practice. Wellington: MCNZ; 2016. Available from: https://www.mcnz.org.nz/assets/standards/good-medical-practice.pdf
 4. Health and Disability Commissioner. Selected opinions and case notes [Internet]. Wellington: HDC [cited 2026 May 3]. Available from: https://www.hdc.org.nz/decisions/
 5. Keddell E. The child protection system and Māori: a critical analysis of the evidence. Report for the Expert Panel on Modernising Child Youth and Family. Wellington: Ministry of Social Development; 2015.
-6. Mathews B, Bromfield L, Walsh K, Vimpani G, Scott D. Issues in mandatory reporting of child sexual abuse by Australian professionals. Curr Issues Crim Justice. 2015;26(3):443–60. doi:10.1080/10345329.2015.12036039
+6. [Issues in mandatory reporting of child sexual abuse by Australian professionals](https://doi.org/10.1080/10345329.2015.12036039). Mathews B, Bromfield L, Walsh K, Vimpani G, Scott D. Curr Issues Crim Justice. 2015;26(3):443-60.
 7. Judge of the Family Court. He Pāpaka Moana: Report of the Independent Review of Oranga Tamariki. Wellington: New Zealand Government; 2021.
 8. Paediatric Society of New Zealand; New Zealand Medical Association. The GP and child protection: practice toolkit. Wellington: NZMA; 2019.
 9. Health (Notification) Regulations 2016 [Internet]. Wellington: New Zealand Government. Available from: https://www.legislation.govt.nz/regulation/public/2016/0317/latest/whole.html
@@ -142,7 +142,7 @@ The GP who understands precisely what they are and are not required to do  -  an
 13. Privacy Act 2020, s 22(1)(d) [Internet]. Wellington: New Zealand Government. Available from: https://www.legislation.govt.nz/act/public/2020/0031/latest/LMS23223.html
 14. Family Violence Act 2018 [Internet]. Wellington: New Zealand Government. Available from: https://www.legislation.govt.nz/act/public/2018/0046/latest/LMS113458.html
 15. Ministry of Health. Family violence assessment and intervention guideline: child abuse and intimate partner violence. Wellington: Ministry of Health; 2016. Available from: https://www.health.govt.nz/publication/family-violence-assessment-and-intervention-guideline
-16. Mathews B, Kenny MC. Mandatory reporting legislation in the United States, Canada and Australia: a cross-jurisdictional review of key features, differences and issues. Child Maltreat. 2008;13(1):50–63. doi:10.1177/1077559507310613
+16. [Mandatory reporting legislation in the United States, Canada and Australia: a cross-jurisdictional review of key features, differences and issues](https://doi.org/10.1177/1077559507310613). Mathews B, Kenny MC. Child Maltreat. 2008;13(1):50-63.
 17. Australian Institute of Family Studies. Mandatory reporting of child abuse and neglect [Internet]. Melbourne: AIFS; 2017 [updated 2023]. Available from: https://aifs.gov.au/resources/policy-and-practice-papers/mandatory-reporting-child-abuse-and-neglect
 18. His Majesty's Government. Working together to safeguard children 2023: a guide to multi-agency working to help, protect and promote the welfare of children. London: HMSO; 2023.
-19. Fong NS, Walsh K, Anderson K, Wang EW, Burnside LT. Effects of mandatory reporting laws on the identification and reporting of child abuse and neglect: a systematic review. Child Abuse Negl. 2020;106:104523. doi:10.1016/j.chiabu.2020.104523
+19. [Effects of mandatory reporting laws on the identification and reporting of child abuse and neglect: a systematic review](https://doi.org/10.1016/j.chiabu.2020.104523). Fong NS, Walsh K, Anderson K, Wang EW, Bur

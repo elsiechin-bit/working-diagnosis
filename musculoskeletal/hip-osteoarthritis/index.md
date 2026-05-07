@@ -40,19 +40,4 @@ permalink: /msk/hip-osteoarthritis/
   <ul class="aside-links">
     <li><a href="https://www.bpac.org.nz/osteoarthritis" target="_blank" rel="noopener">BPAC osteoarthritis management</a></li>
     <li><a href="https://www.arthritis.org.nz/about-arthritis/types/osteoarthritis/" target="_blank" rel="noopener">Arthritis NZ osteoarthritis</a></li>
-    <li><a href="https://healthpathways.org.nz/" target="_blank" rel="noopener">HealthPathways NZ referral guidance</a></li>
-    <li><a href="https://www.healthnavigator.org.nz/" target="_blank" rel="noopener">Health Navigator patient information</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Reijman M, Hazes JM, Bierma-Zeinstra SM, et al. A new perspective on osteoarthritis. *Lancet.* 2007;369(9580):1541-1545.
-2. Callaghan JJ, Rosenberg AG, Rubash HE. The Adult Hip. 2nd ed. Lippincott Williams & Wilkins; 2007.
-3. Vail TP, Mina C. Complications of total hip arthroplasty. *Curr Rev Musculoskelet Med.* 2009;2(3):142-149.
-4. Bennell KL, Slade SC, Mills K, et al. Efficacy of weight loss interventions on knee pain, function and quality of life in obese individuals with knee osteoarthritis. *Arthritis Care Res (Hoboken).* 2014;66(2):172-180.
-
-</div>
+    <li><a href="http

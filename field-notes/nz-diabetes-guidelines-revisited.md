@@ -23,7 +23,7 @@ HbA1c < 53 mmol/mol is the default for most adults with T2DM [1]. Older patients
 The framing is worth quoting:
 
 - 5% sustained body-weight loss → improvement in metabolic parameters [1]
-- 10–15% sustained body-weight loss → typically needed for remission [1]
+- 10-15% sustained body-weight loss → typically needed for remission [1]
 
 The DiRECT trial in UK primary care put real numbers behind that ceiling: at one year, 46% of participants in the structured weight-management arm were in diabetes remission, rising further with greater weight loss [3]. The lesson isn't that everyone can or should do this. It's that for the right person at the right point in their disease, this is a real option  -  and prescribing another tablet first can foreclose it.
 
@@ -73,12 +73,12 @@ The NZSSD guidance is genuinely well-built  -  short, navigable, and updated as 
 
 1. New Zealand Society for the Study of Diabetes. Type 2 diabetes management guidance [Internet]. Auckland: NZSSD; 2021 [cited 2026 May 2]. Available from: https://t2dm.nzssd.org.nz/
 2. Snell H. Updated primary care guidance on the management of type 2 diabetes brings New Zealand in line with international best practice. NZ Doctor [Internet]. 2021 Mar 31 [cited 2026 May 2]. Available from: https://www.nzdoctor.co.nz/article/undoctored/updated-primary-care-guidance-management-type-2-diabetes-brings-new-zealand-line
-3. Lean MEJ, Leslie WS, Barnes AC, et al. Primary care-led weight management for remission of type 2 diabetes (DiRECT): an open-label, cluster-randomised trial. Lancet. 2018;391(10120):541–51. doi:10.1016/S0140-6736(17)33102-1
-4. Zinman B, Wanner C, Lachin JM, et al. Empagliflozin, cardiovascular outcomes, and mortality in type 2 diabetes. N Engl J Med. 2015;373(22):2117–28. doi:10.1056/NEJMoa1504720
-5. Perkovic V, Jardine MJ, Neal B, et al. Canagliflozin and renal outcomes in type 2 diabetes and nephropathy. N Engl J Med. 2019;380(24):2295–306. doi:10.1056/NEJMoa1811744
-6. Gerstein HC, Colhoun HM, Dagenais GR, et al. Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomised placebo-controlled trial. Lancet. 2019;394(10193):121–30. doi:10.1016/S0140-6736(19)31149-3
+3. [Primary care-led weight management for remission of type 2 diabetes (DiRECT): an open-label, cluster-randomised trial](https://doi.org/10.1016/S0140-6736(17)33102-1). Lean MEJ, Leslie WS, Barnes AC, et al. Lancet. 2018;391(10120):541-51.
+4. [Empagliflozin, cardiovascular outcomes, and mortality in type 2 diabetes](https://doi.org/10.1056/NEJMoa1504720). Zinman B, Wanner C, Lachin JM, et al. N Engl J Med. 2015;373(22):2117-28.
+5. [Canagliflozin and renal outcomes in type 2 diabetes and nephropathy](https://doi.org/10.1056/NEJMoa1811744). Perkovic V, Jardine MJ, Neal B, et al. N Engl J Med. 2019;380(24):2295-306.
+6. [Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomised placebo-controlled trial](https://doi.org/10.1016/S0140-6736(19)31149-3). Gerstein HC, Colhoun HM, Dagenais GR, et al. Lancet. 2019;394(10193):121-30.
 7. Best Practice Advocacy Centre New Zealand. Type 2 diabetes management toolbox: from lifestyle to insulin [Internet]. Dunedin: BPACnz; 2021 [updated 2025 Jul; cited 2026 May 2]. Available from: https://bpac.org.nz/2021/diabetes-management.aspx
 8. Medsafe. Reminder: risk factors for ketoacidosis with SGLT-2 inhibitors. Prescriber Update [Internet]. Wellington: Medsafe; 2024 Dec [cited 2026 May 2]. Available from: https://medsafe.govt.nz/profs/PUArticles/December2024/Reminder-risk-factors-for-ketoacidosis-with-SGLT-2-inhibitors.html
 9. New Zealand Society for the Study of Diabetes. GLP-1 receptor agonist supply and special authority updates [Internet]. NZSSD; 2024 [cited 2026 May 2]. Available from: https://t2dm.nzssd.org.nz/Special-Authority.html
-10. American Diabetes Association Professional Practice Committee. 9. Pharmacologic approaches to glycemic treatment: Standards of Care in Diabetes - 2025. Diabetes Care. 2025;48(Suppl 1):S181–206. doi:10.2337/dc25-S009
-11. Frías JP, Davies MJ, Rosenstock J, et al. Tirzepatide versus semaglutide once weekly in patients with type 2 diabetes. N Engl J Med. 2021;385(6):503–15. doi:10.1056/NEJMoa2107519
+10. [Pharmacologic approaches to glycemic treatment: Standards of Care in Diabetes - 2025](https://doi.org/10.2337/dc25-S009). American Diabetes Association Professional Practice Committee. Diabetes Care. 2025;48(Suppl 1):S181-206.
+11. [Tirzepatide versus semaglutide once weekly in patients with type 2 diabetes](https://doi.org/10.1056/NEJMoa2

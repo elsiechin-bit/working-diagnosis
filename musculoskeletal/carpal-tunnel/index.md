@@ -52,5 +52,3 @@ permalink: /msk/carpal-tunnel/
 1. de Krom MC, Knipschild PG, Kester AD, et al. Risk factors for carpal tunnel syndrome. *Am J Epidemiol.* 1990;132(7):1102-1110.
 2. Kaplan SJ, Glickel SZ, Eaton RG. Predictive factors in the non-surgical treatment of carpal tunnel syndrome. *J Hand Surg Am.* 1990;15(1):106-108.
 3. Shi Q, MacDermid JC. Is surgical intervention more effective than non-surgical treatment for carpal tunnel syndrome? A systematic review. *J Hand Surg Eur Vol.* 2011;36(3):169-183.
-
-</div>

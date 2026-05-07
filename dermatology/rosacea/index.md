@@ -44,19 +44,4 @@ description: Rosacea in general practice - subtypes, trigger avoidance, topical 
 <aside class="derm-aside">
   <p class="aside-kicker">Clinician links</p>
   <p class="aside-title">NZ resources</p>
-  <ul class="aside-links">
-    <li><a href="https://www.bpac.org.nz" target="_blank" rel="noopener">BPAC - Rosacea</a></li>
-    <li><a href="https://www.healthpathways.org.nz" target="_blank" rel="noopener">HealthPathways - Rosacea</a></li>
-    <li><a href="https://www.nzf.org.nz" target="_blank" rel="noopener">NZF - Metronidazole topical</a></li>
-  </ul>
-</aside>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. van Zuuren EJ, Fedorowicz Z, Carter B, et al. Interventions for rosacea. *Cochrane Database Syst Rev.* 2015;4:CD003262.
-2. Bewley A, Fowler J, Schöfer H, et al. Erythema of rosacea impairs health-related quality of life: results of a meta-analysis. *Dermatol Ther (Heidelb).* 2016;6(2):237-247.
-
-</div>
+  <ul class="

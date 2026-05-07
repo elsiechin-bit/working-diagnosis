@@ -27,17 +27,4 @@ pillar: Geriatrics
 
 <div class="tier-3">
   <p class="tier-label">❍ Communicating the diagnosis and supporting families</p>
-  <p>Communicating an MCI diagnosis requires care. Many patients have been worrying about dementia; "mild cognitive impairment" can be heard as confirmation of their worst fears, or - at the other extreme - as dismissal. Being explicit about what it means and does not mean is more honest and more useful than either catastrophising or minimising.</p>
-  <p>A useful framing: "There are real changes on the test, but your daily life isn't significantly affected yet - and we don't know which way this will go. Some people stay at this level for years; some do progress further. What we can do now is address the things that are known to make a difference." This acknowledges the finding, conveys genuine uncertainty without catastrophising, and immediately pivots to agency.</p>
-  <p>Check in on the carer - who is often doing most of the worrying and who may need their own support. If the patient has no EPA in place, this is the time to raise it explicitly - capacity to grant EPA should be assessed while it is clearly present. A referral to the memory assessment service or geriatric medicine is appropriate when: the diagnosis is uncertain, there are atypical features (young age, rapid progression, behavioural changes predominating), neuroimaging is indicated, or the patient or family would benefit from specialist review and access to memory support services.</p>
-</div>
-
-<div class="topic-refs">
-
-**References**
-
-1. Petersen RC, Lopez O, Armstrong MJ, et al. Practice guideline update summary: mild cognitive impairment. *Neurology.* 2018;90(3):126-135.
-2. Winblad B, Palmer K, Kivipelto M, et al. Mild cognitive impairment - beyond controversies, towards a consensus: report of the International Working Group on Mild Cognitive Impairment. *J Intern Med.* 2004;256(3):240-246.
-3. Russ TC, Morling JR. Cholinesterase inhibitors for mild cognitive impairment. *Cochrane Database Syst Rev.* 2012;9:CD009132.
-
-</div>
+  <p>Communicating an MCI diagnosis requires c

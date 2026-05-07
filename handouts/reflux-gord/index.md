@@ -1,6 +1,7 @@
 ---
 title: Reflux (GORD) - symptoms, triggers, and treatment
 layout: topic.njk
+pageType: handout
 description: Understanding gastro-oesophageal reflux disease, what causes it, which lifestyle changes help, and when medicines are needed.
 ---
 
@@ -83,6 +84,4 @@ description: Understanding gastro-oesophageal reflux disease, what causes it, wh
 **Useful NZ resources**
 
 - [Health Navigator - Heartburn and reflux](https://www.healthnavigator.org.nz/health-a-z/h/heartburn-and-reflux/)
-- [BPAC NZ - Managing reflux](https://bpac.org.nz)
-
-</div>
+- [BPAC NZ - Managing reflux](https://bpa

@@ -16,7 +16,7 @@ A patient turns up for her annual review. She has had MGUS for nine years. Her c
 
 The conversation is not glamorous. It is not what most GPs imagine when they think about cancer care. But it is, increasingly, what cancer care for the most common blood malignancies actually looks like  -  long surveillance, brief treatment phases, longer surveillance again, decades of relationship with a haematology team that the patient might see every six to twelve months and a GP they see every couple of months in between.
 
-Blood malignancies have, over the last fifteen years, become long-term conditions. Most patients with chronic lymphocytic leukaemia, chronic myeloproliferative neoplasms, monoclonal gammopathies, and treated indolent lymphomas spend most of their disease course on surveillance, oral targeted therapy, or long-tail post-treatment monitoring — intensive treatment phases are a minority of the timeline. The acute leukaemias remain a different story  -  those patients live in haematology for the duration of their treatment and most of their post-transplant care. But the chronic and indolent malignancies  -  which are most blood malignancies, especially in older patients  -  have moved decisively into shared-care territory.
+Blood malignancies have, over the last fifteen years, become long-term conditions. Most patients with chronic lymphocytic leukaemia, chronic myeloproliferative neoplasms, monoclonal gammopathies, and treated indolent lymphomas spend most of their disease course on surveillance, oral targeted therapy, or long-tail post-treatment monitoring - intensive treatment phases are a minority of the timeline. The acute leukaemias remain a different story  -  those patients live in haematology for the duration of their treatment and most of their post-transplant care. But the chronic and indolent malignancies  -  which are most blood malignancies, especially in older patients  -  have moved decisively into shared-care territory.
 
 The GP role in that territory is not "diagnose and refer." It is the years of monitoring afterward, the first-contact assessment of every intercurrent symptom, the pharmacovigilance for a generation of new oral agents that GPs were not trained on, and the relationship that holds the patient through the years between haematology appointments. This piece is about what that work actually involves, condition by condition.
 
@@ -44,7 +44,7 @@ Chronic lymphocytic leukaemia is the most common adult leukaemia in Western coun
 
 The GP role in the watch-and-wait phase is significant. The haematology team typically reviews these patients every 3-12 months. Between visits, the patient lives in primary care. The clinical points worth being explicit about:
 
-- Lymphocytosis on routine FBC is the usual reason these patients are picked up. A persistent absolute lymphocyte count >5 × 10⁹/L in an older patient warrants haematology referral and flow cytometry, not annual repeat to see if it goes away.
+- Lymphocytosis on routine FBC is the usual reason these patients are picked up. A persistent absolute lymphocyte count >5 �- 10⁹/L in an older patient warrants haematology referral and flow cytometry, not annual repeat to see if it goes away.
 - Once diagnosed, GPs are often the first to spot early indications for treatment: progressive fatigue out of proportion to other causes, drenching night sweats, unintentional weight loss, increasing lymphadenopathy or splenomegaly noticed by the patient, recurrent infections, rapidly rising lymphocyte count (lymphocyte doubling time <6 months is a treatment indication), new cytopenias.
 - CLL patients have a real and durable immunodeficiency, both from the disease itself (hypogammaglobulinaemia is common) and increasingly from treatment. Vaccinate accordingly  -  annual influenza, pneumococcal (PCV13 then PPSV23 per current schedule), shingles (Shingrix is preferred over Zostavax in any immunocompromised patient and is now the only Pharmac-funded shingles vaccine for the at-risk groups), COVID-19 boosters per the immunocompromised schedule.
 - Live vaccines are contraindicated in patients on or recently off treatment. Yellow fever, MMR (live attenuated), and Zostavax (the older live shingles vaccine, no longer funded) all need haematology input.
@@ -130,14 +130,14 @@ The GP work is not the dramatic part of cancer care. It is the steady part. It i
 
 ### References
 
-1. Kyle RA, Therneau TM, Rajkumar SV, et al. Prevalence of monoclonal gammopathy of undetermined significance. N Engl J Med. 2006;354(13):1362–9. doi:10.1056/NEJMoa054494
-2. Kyle RA, Durie BGM, Rajkumar SV, et al. Monoclonal gammopathy of undetermined significance (MGUS) and smoldering (asymptomatic) multiple myeloma: IMWG consensus perspectives risk factors for progression and guidelines for monitoring and management. Leukemia. 2010;24(6):1121–7. doi:10.1038/leu.2010.60
-3. Kyle RA, Larson DR, Therneau TM, et al. Long-term follow-up of monoclonal gammopathy of undetermined significance. N Engl J Med. 2018;378(3):241–9. doi:10.1056/NEJMoa1709974
-4. Hallek M, Al-Sawaf O. Chronic lymphocytic leukemia: 2022 update on diagnostic and therapeutic procedures. Am J Hematol. 2021;96(12):1679–705. doi:10.1002/ajh.26367
-5. Eichhorst B, Robak T, Montserrat E, et al. Chronic lymphocytic leukaemia: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up. Ann Oncol. 2021;32(1):23–33. doi:10.1016/j.annonc.2020.09.019
-6. van Nimwegen FA, Schaapveld M, Janus CPM, et al. Cardiovascular disease after Hodgkin lymphoma treatment: 40-year disease risk. JAMA Intern Med. 2015;175(6):1007–17. doi:10.1001/jamainternmed.2015.1180
-7. Tefferi A, Barbui T. Polycythemia vera and essential thrombocythemia: 2021 update on diagnosis, risk-stratification and management. Am J Hematol. 2020;95(12):1599–613. doi:10.1002/ajh.26008
-8. Spivak JL. Myeloproliferative neoplasms. N Engl J Med. 2017;376(22):2168–81. doi:10.1056/NEJMra1406186
-9. Marchioli R, Finazzi G, Specchia G, et al. Cardiovascular events and intensity of treatment in polycythemia vera. N Engl J Med. 2013;368(1):22–33. doi:10.1056/NEJMoa1208500
-10. Lonial S, Jacobus S, Fonseca R, et al. Randomized trial of lenalidomide versus observation in smoldering multiple myeloma. J Clin Oncol. 2020;38(11):1126–37. doi:10.1200/JCO.19.01740
-11. Stephens DM, Byrd JC. How I manage ibrutinib intolerance and complications in patients with chronic lymphocytic leukemia. Blood. 2019;133(12):1298–307. doi:10.1182/blood-2018-11-846808
+1. [Prevalence of monoclonal gammopathy of undetermined significance](https://doi.org/10.1056/NEJMoa054494). Kyle RA, Therneau TM, Rajkumar SV, et al. N Engl J Med. 2006;354(13):1362-9.
+2. [Monoclonal gammopathy of undetermined significance (MGUS) and smoldering (asymptomatic) multiple myeloma: IMWG consensus perspectives risk factors for progression and guidelines for monitoring and management](https://doi.org/10.1038/leu.2010.60). Kyle RA, Durie BGM, Rajkumar SV, et al. Leukemia. 2010;24(6):1121-7.
+3. [Long-term follow-up of monoclonal gammopathy of undetermined significance](https://doi.org/10.1056/NEJMoa1709974). Kyle RA, Larson DR, Therneau TM, et al. N Engl J Med. 2018;378(3):241-9.
+4. [Chronic lymphocytic leukemia: 2022 update on diagnostic and therapeutic procedures](https://doi.org/10.1002/ajh.26367). Hallek M, Al-Sawaf O. Am J Hematol. 2021;96(12):1679-705.
+5. [Chronic lymphocytic leukaemia: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up](https://doi.org/10.1016/j.annonc.2020.09.019). Eichhorst B, Robak T, Montserrat E, et al. Ann Oncol. 2021;32(1):23-33.
+6. [Cardiovascular disease after Hodgkin lymphoma treatment: 40-year disease risk](https://doi.org/10.1001/jamainternmed.2015.1180). van Nimwegen FA, Schaapveld M, Janus CPM, et al. JAMA Intern Med. 2015;175(6):1007-17.
+7. [Polycythemia vera and essential thrombocythemia: 2021 update on diagnosis, risk-stratification and management](https://doi.org/10.1002/ajh.26008). Tefferi A, Barbui T. Am J Hematol. 2020;95(12):1599-613.
+8. [Myeloproliferative neoplasms](https://doi.org/10.1056/NEJMra1406186). Spivak JL. N Engl J Med. 2017;376(22):2168-81.
+9. [Cardiovascular events and intensity of treatment in polycythemia vera](https://doi.org/10.1056/NEJMoa1208500). Marchioli R, Finazzi G, Specchia G, et al. N Engl J Med. 2013;368(1):22-33.
+10. [Randomized trial of lenalidomide versus observation in smoldering multiple myeloma](https://doi.org/10.1200/JCO.19.01740). Lonial S, Jacobus S, Fonseca R, et al. J Clin Oncol. 2020;38(11):1126-37.
+11. [How I manage ibrutinib intolerance 
