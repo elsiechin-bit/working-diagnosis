@@ -36,8 +36,9 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 <div class="handout-section" id="lifestyle">
   <h2>Lifestyle</h2>
   <ul class="handout-list">
+    <li><a href="/handouts/sleep/">Sleep  -  what is normal, what is not, and what helps</a></li>
     <li><a href="/handouts/sleep-hygiene/">Sleep hygiene  -  setting up for better sleep</a></li>
-    <li>Alcohol in NZ  -  what is a standard drink? <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/alcohol/">Alcohol in NZ  -  what is a standard drink?</a></li>
     <li>Getting active  -  the NZ physical activity guidelines <span class="hl-soon">coming soon</span></li>
     <li>Stopping smoking  -  your options and what works <span class="hl-soon">coming soon</span></li>
     <li><a href="/handouts/vaping/">Vaping  -  what we know about the risks</a></li>
@@ -373,4 +374,4 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz/your-heart/healthy-eating">Heart Foundation NZ - healthy eating</a> &middot; <a href="https://nutritionfoundation.org.nz">NZ Nutrition Foundation</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - nutrition</a></p>
 </div>
-         
+                 
