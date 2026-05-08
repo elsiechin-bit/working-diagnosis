@@ -39,7 +39,7 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="/handouts/sleep/">Sleep  -  what is normal, what is not, and what helps</a></li>
     <li><a href="/handouts/sleep-hygiene/">Sleep hygiene  -  setting up for better sleep</a></li>
     <li><a href="/handouts/alcohol/">Alcohol in NZ  -  what is a standard drink?</a></li>
-    <li>Getting active  -  the NZ physical activity guidelines <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/getting-active/">Getting active  -  the NZ physical activity guidelines</a></li>
     <li>Stopping smoking  -  your options and what works <span class="hl-soon">coming soon</span></li>
     <li><a href="/handouts/vaping/">Vaping  -  what we know about the risks</a></li>
     <li>Weight and metabolic health  -  a non-diet approach <span class="hl-soon">coming soon</span></li>
