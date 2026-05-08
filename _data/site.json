@@ -7,7 +7,7 @@
     { "label": "the Library", "shortLabel": "Library", "url": "/library/", "inMasthead": true, "group": "room" },
     { "label": "the Workbench", "shortLabel": "Workbench", "url": "/consult-room/", "inMasthead": true, "group": "room" },
     { "label": "the Workshop", "shortLabel": "Workshop", "url": "/workshop/", "inMasthead": true, "group": "room" },
-    { "label": "Cardiovascular", "url": "/cardiovascular/", "row": 1, "inMasthead": true, "group": "pillar", "sep": "pipe" },
+    { "label": "Cardiovascular", "url": "/cardiovascular/", "row": 1, "inMasthead": true, "group": "pillar" },
     { "label": "Respiratory", "url": "/respiratory/", "row": 1 },
     { "label": "Endocrinology", "url": "/endocrinology/", "row": 1 },
     { "label": "Mental Health", "url": "/mental-health/", "row": 2, "inMasthead": true, "group": "pillar" },
@@ -26,8 +26,11 @@
     { "label": "Lifestyle & Prevention", "url": "/lifestyle-prevention/", "row": 5 },
     { "divider": true, "inMasthead": true },
     { "label": "Field Notes", "url": "/field-notes/", "row": 6, "inMasthead": true, "group": "utility" },
+    { "divider": true, "inMasthead": true },
     { "label": "Handouts", "url": "/handouts/", "row": 6, "inMasthead": true, "group": "utility" },
+    { "divider": true, "inMasthead": true },
     { "label": "Resources", "url": "/resources/", "row": 6, "inMasthead": true, "group": "utility" },
+    { "divider": true, "inMasthead": true },
     { "label": "About", "url": "/about/", "row": 6, "inMasthead": true, "group": "utility" }
   ]
 }

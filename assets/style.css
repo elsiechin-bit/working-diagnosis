@@ -10,6 +10,8 @@
   --ochre:      #B8714F;
   --clay:       #8B5A3C;
   --olive-light: #6F7E3F;
+  --olive-soft: #A0AD7C;
+  --green-soft: #5C9582;
   --slate:      #406A87;
   --rule:       #D9D1BD;
   --serif-display: 'Fraunces', Georgia, serif;
@@ -108,8 +110,8 @@ a:hover { color: var(--green); }
 .primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); }
 .primary-nav a:hover { color: var(--green); }
 .primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
-.primary-nav a[href="/handouts/"] { color: var(--ochre); }
-.primary-nav a[href="/handouts/"]:hover { color: var(--green); }
+.primary-nav a[href="/handouts/"] { color: var(--green-soft); }
+.primary-nav a[href="/handouts/"]:hover { color: var(--green-deep); }
 .primary-nav a[href="/about/"] { color: var(--slate); }
 .primary-nav a[href="/about/"]:hover { color: var(--green); }
 .nav-sep { display: inline-block; width: 1px; height: 0.75em; background: var(--rule); vertical-align: middle; }
@@ -117,7 +119,6 @@ a:hover { color: var(--green); }
 .nav-pipe { display: inline-block; width: 1px; height: 0.85em; background: var(--rule); vertical-align: middle; margin: 0 2px; }
 .primary-nav a.nav-room {
   color: var(--ink-soft);
-  font-weight: 700;
   background: var(--paper-warm);
   padding: 8px 14px;
   border-radius: 6px;
@@ -126,8 +127,7 @@ a:hover { color: var(--green); }
 }
 .primary-nav a.nav-room:hover {
   background: var(--paper);
-  color: var(--green-deep);
-  border-color: var(--green);
+  border-color: var(--ink-soft);
 }
 .primary-nav a.nav-room.is-current {
   background: var(--green-deep);
@@ -135,7 +135,10 @@ a:hover { color: var(--green); }
   border-color: var(--green-deep);
   padding: 8px 14px;
 }
-.primary-nav a.nav-pillar { color: var(--olive-light); }
+.primary-nav a.nav-room[href="/library/"] { color: var(--green); }
+.primary-nav a.nav-room[href="/consult-room/"] { color: var(--ochre); }
+.primary-nav a.nav-room[href="/workshop/"] { color: var(--slate); }
+.primary-nav a.nav-pillar { color: var(--olive-soft); }
 .primary-nav a.nav-pillar:hover { color: var(--green); }
 
 .hero { padding: 80px 0 56px; border-bottom: 1px solid var(--rule); }
