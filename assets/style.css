@@ -8,6 +8,7 @@
   --green:      #2F6B5C;
   --green-deep: #1F4A3F;
   --ochre:      #B8714F;
+  --clay:       #8B5A3C;
   --olive-light: #6F7E3F;
   --slate:      #406A87;
   --rule:       #D9D1BD;
@@ -111,10 +112,12 @@ a:hover { color: var(--green); }
 .primary-nav a[href="/handouts/"]:hover { color: var(--green); }
 .primary-nav a[href="/about/"] { color: var(--slate); }
 .primary-nav a[href="/about/"]:hover { color: var(--green); }
+.primary-nav a[href="/workshop/"] { color: var(--clay); }
+.primary-nav a[href="/workshop/"]:hover { color: var(--green); }
 .nav-sep { display: inline-block; width: 1px; height: 0.75em; background: var(--rule); vertical-align: middle; }
-.nav-dot { display: inline-block; color: var(--ink-mute); font-size: 3em; line-height: 0.4; padding: 0 4px; vertical-align: middle; opacity: 0.55; }
+.nav-dot { display: inline-block; color: var(--ink-mute); font-size: 1.5em; line-height: 0.5; padding: 0 3px; vertical-align: middle; opacity: 0.55; }
 .nav-pipe { display: inline-block; width: 1px; height: 0.85em; background: var(--rule); vertical-align: middle; margin: 0 2px; }
-.primary-nav a.nav-room { color: var(--ink-soft); }
+.primary-nav a.nav-room { color: var(--ink-soft); font-weight: 700; }
 .primary-nav a.nav-pillar { color: var(--olive-light); }
 .primary-nav a.nav-room:hover, .primary-nav a.nav-pillar:hover { color: var(--green); }
 
