@@ -15,19 +15,19 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="#diabetes-endocrine">Diabetes &amp; Endocrine</a></li>
     <li><a href="#gastro">Gastroenterology</a></li>
     <li><a href="/msk/">MSK</a></li>
-    <li><a href="/neurology-mental-health/">Mental Health</a></li>
+    <li><a href="/mental-health/">Mental Health</a></li>
     <li><a href="/dermatology/">Dermatology</a></li>
     <li><a href="/gynaecology/">Gynae</a></li>
-    <li>Men's Health <span class="hl-soon">coming soon</span></li>
+    <li><a href="#mens-health">Men's Health</a></li>
     <li><a href="/paediatrics/">Paeds</a></li>
     <li><a href="/geriatrics/">Geriatrics</a></li>
-    <li>ENT <span class="hl-soon">coming soon</span></li>
-    <li>Eyes <span class="hl-soon">coming soon</span></li>
-    <li>Neurology <span class="hl-soon">coming soon</span></li>
-    <li>Infections <span class="hl-soon">coming soon</span></li>
+    <li><a href="#ent">ENT</a></li>
+    <li><a href="#eyes">Eyes</a></li>
+    <li><a href="#neurology">Neurology</a></li>
+    <li><a href="#infections">Infections</a></li>
     <li><a href="/infectious-disease/">Vaccines</a></li>
     <li><a href="/infectious-disease/">Travel</a></li>
-    <li>Nutrition <span class="hl-soon">coming soon</span></li>
+    <li><a href="#nutrition">Nutrition</a></li>
     <li><a href="#general">General Practice</a></li>
   </ul>
 </nav>
@@ -40,7 +40,7 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li>Alcohol in NZ  -  what is a standard drink? <span class="hl-soon">coming soon</span></li>
     <li>Getting active  -  the NZ physical activity guidelines <span class="hl-soon">coming soon</span></li>
     <li>Stopping smoking  -  your options and what works <span class="hl-soon">coming soon</span></li>
-    <li>Vaping  -  what we know about the risks <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/vaping/">Vaping  -  what we know about the risks</a></li>
     <li>Weight and metabolic health  -  a non-diet approach <span class="hl-soon">coming soon</span></li>
     <li>Vitamin D and sunlight in NZ <span class="hl-soon">coming soon</span></li>
     <li>Managing stress  -  practical strategies <span class="hl-soon">coming soon</span></li>
@@ -250,7 +250,10 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li>Polycystic ovarian syndrome (PCOS) <span class="hl-soon">coming soon</span></li>
     <li>Painful periods (dysmenorrhoea)  -  causes and relief <span class="hl-soon">coming soon</span></li>
     <li>Heavy periods (menorrhagia)  -  causes and treatment options <span class="hl-soon">coming soon</span></li>
-    <li>Vaginal discharge  -  what is normal, what is not <span class="hl-soon">coming soon</span>
+    <li>Vaginal discharge  -  what is normal, what is not <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.healthify.nz">Healthify NZ - women's health</a> &middot; <a href="https://www.familyplanning.org.nz">Family Planning NZ</a> &middot; <a href="https://www.menopause.org.nz">Australasian Menopause Society</a></p>
+</div>
 
 <div class="handout-section" id="general">
   <p class="handout-section-label">❍ General Practice</p>
@@ -283,4 +286,91 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li>Driving and older age  -  when to have the conversation <span class="hl-soon">coming soon</span></li>
     <li>Urinary incontinence in older adults  -  it is common and treatable <span class="hl-soon">coming soon</span></li>
   </ul>
-  <p class="handout-ext">NZ resources: <a href="https://www.ageconcern.org.nz">Age Concern NZ</a> · <a href="https://www.alzheimers.org.nz">Alzheimer's NZ</a> · <a href="https://www.carersnz.org.nz">Carers NZ</a> · <a href="https://www.grey.org.nz">Grey Power 
+  <p class="handout
+  </ul>
+</div>
+
+<div class="handout-section" id="mens-health">
+  <h2>Men's Health</h2>
+  <ul class="handout-list">
+    <li>Prostate health and the PSA conversation <span class="hl-soon">coming soon</span></li>
+    <li>Erectile dysfunction  -  what is normal and what is not <span class="hl-soon">coming soon</span></li>
+    <li>Testicular self-examination  -  when and how <span class="hl-soon">coming soon</span></li>
+    <li>Hair loss in men  -  what works and what does not <span class="hl-soon">coming soon</span></li>
+    <li>Testosterone in midlife  -  what the evidence actually says <span class="hl-soon">coming soon</span></li>
+    <li>Snoring vs sleep apnoea  -  when to investigate <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://nz.movember.com">Movember NZ</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - men's health</a> &middot; <a href="https://www.prostate.org.nz">Prostate Cancer Foundation NZ</a></p>
+</div>
+
+<div class="handout-section" id="ent">
+  <h2>Ear, Nose &amp; Throat</h2>
+  <ul class="handout-list">
+    <li>Tinnitus  -  what to expect and what helps <span class="hl-soon">coming soon</span></li>
+    <li>Hearing loss in older adults  -  signs and what to do <span class="hl-soon">coming soon</span></li>
+    <li>Dizziness and BPPV  -  the Epley manoeuvre at home <span class="hl-soon">coming soon</span></li>
+    <li>Recurrent sinusitis  -  flares, washouts, and when to refer <span class="hl-soon">coming soon</span></li>
+    <li>Earwax  -  managing it safely at home <span class="hl-soon">coming soon</span></li>
+    <li>Allergic rhinitis  -  hay fever in NZ <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.audiology.org.nz">NZ Audiological Society</a> &middot; <a href="https://www.entnz.co.nz">ENT NZ</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - ear health</a></p>
+</div>
+
+<div class="handout-section" id="eyes">
+  <h2>Eyes &amp; Vision</h2>
+  <ul class="handout-list">
+    <li>Age-related macular degeneration  -  symptoms and what helps <span class="hl-soon">coming soon</span></li>
+    <li>Cataracts  -  signs, surgery, and recovery <span class="hl-soon">coming soon</span></li>
+    <li>Diabetic eye disease  -  why annual screening matters <span class="hl-soon">coming soon</span></li>
+    <li>Dry eyes  -  practical management <span class="hl-soon">coming soon</span></li>
+    <li>Glaucoma  -  the silent thief of sight <span class="hl-soon">coming soon</span></li>
+    <li>Floaters and flashes  -  when to seek care urgently <span class="hl-soon">coming soon</span></li>
+    <li>Children's vision and screen time <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.glaucoma.org.nz">Glaucoma NZ</a> &middot; <a href="https://www.mdnz.org.nz">Macular Degeneration NZ</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - eye health</a></p>
+</div>
+
+<div class="handout-section" id="neurology">
+  <h2>Neurology</h2>
+  <ul class="handout-list">
+    <li>Migraine  -  triggers, treatment, and prevention <span class="hl-soon">coming soon</span></li>
+    <li>Tension headaches  -  what helps and what to avoid <span class="hl-soon">coming soon</span></li>
+    <li>Tremor  -  benign vs serious <span class="hl-soon">coming soon</span></li>
+    <li>Carpal tunnel syndrome  -  signs and treatment options <span class="hl-soon">coming soon</span></li>
+    <li>Parkinson's  -  the first year after diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Multiple sclerosis  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
+    <li>Stroke prevention  -  what you can change <span class="hl-soon">coming soon</span></li>
+    <li>Restless legs syndrome  -  what helps <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://neurological.org.nz">Neurological Foundation NZ</a> &middot; <a href="https://www.parkinsons.org.nz">Parkinson's NZ</a> &middot; <a href="https://msnz.org.nz">MS Society of NZ</a></p>
+</div>
+
+<div class="handout-section" id="infections">
+  <h2>Infections</h2>
+  <ul class="handout-list">
+    <li>Cellulitis  -  when to seek care and what to expect <span class="hl-soon">coming soon</span></li>
+    <li>Recurrent UTIs  -  prevention and treatment <span class="hl-soon">coming soon</span></li>
+    <li>Shingles  -  prevention with the vaccine and treatment <span class="hl-soon">coming soon</span></li>
+    <li>Long COVID  -  what we know and what helps <span class="hl-soon">coming soon</span></li>
+    <li>Recurrent thrush  -  understanding triggers <span class="hl-soon">coming soon</span></li>
+    <li>Antibiotic stewardship  -  why your GP says no <span class="hl-soon">coming soon</span></li>
+    <li>Glandular fever  -  recovery and what to watch for <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.healthify.nz">Healthify NZ - infections</a> &middot; <a href="https://www.immune.org.nz">IMAC</a> &middot; <a href="https://info.health.nz/conditions-treatments/infectious-diseases">Health NZ - infectious diseases</a></p>
+</div>
+
+<div class="handout-section" id="nutrition">
+  <h2>Nutrition</h2>
+  <ul class="handout-list">
+    <li>Reading nutrition labels in NZ  -  what actually matters <span class="hl-soon">coming soon</span></li>
+    <li>Mediterranean eating in Aotearoa  -  practical and affordable <span class="hl-soon">coming soon</span></li>
+    <li>Iron  -  food sources, supplements, and when to test <span class="hl-soon">coming soon</span></li>
+    <li>Vitamin B12 and folate  -  who needs to think about them <span class="hl-soon">coming soon</span></li>
+    <li>Vitamin D in NZ  -  sunlight, supplements, and the evidence <span class="hl-soon">coming soon</span></li>
+    <li>Plant-based eating  -  getting it right nutritionally <span class="hl-soon">coming soon</span></li>
+    <li>Coeliac disease  -  diagnosis and life on a gluten-free diet <span class="hl-soon">coming soon</span></li>
+    <li>Eating around shift work  -  practical strategies <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz/your-heart/healthy-eating">Heart Foundation NZ - healthy eating</a> &middot; <a href="https://nutritionfoundation.org.nz">NZ Nutrition Foundation</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - nutrition</a></p>
+</div>
+         

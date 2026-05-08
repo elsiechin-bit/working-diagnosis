@@ -5,7 +5,9 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy && npx pagefind --site _site",
+    "build": "npx @11ty/eleventy && node scripts/build-pdfs.js && npx pagefind --site _site",
+    "build:nopdf": "npx @11ty/eleventy && npx pagefind --site _site",
+    "pdfs": "node scripts/build-pdfs.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

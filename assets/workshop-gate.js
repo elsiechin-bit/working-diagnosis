@@ -1,5 +1,9 @@
 /**
- * Workshop Gate — client-side passphrase protection for /workshop/ pages.
+ * Experiments Gate — client-side passphrase protection for /experiments/ pages.
+ *
+ * Previously gated /workshop/ — that area is now public. The same passphrase
+ * has been transferred to /experiments/. Filename retained as workshop-gate.js
+ * for git-history continuity.
  *
  * HOW TO CHANGE THE PASSPHRASE:
  *   1. Open a terminal and run:
@@ -12,11 +16,11 @@
  */
 
 (function () {
-  // Only activate on /workshop/ pages
-  if (!window.location.pathname.startsWith('/workshop/')) return;
+  // Only activate on /experiments/ pages
+  if (!window.location.pathname.startsWith('/experiments/')) return;
 
   const HASH        = 'c5ac06037da727a075d2aa011844ac0b386776b027e1fc62ae45453c4a0b483d';
-  const SESSION_KEY = 'wd_workshop_auth';
+  const SESSION_KEY = 'wd_experiments_auth';
 
   // Already authenticated this session — step aside
   if (sessionStorage.getItem(SESSION_KEY) === HASH) return;
@@ -47,12 +51,12 @@
         font-family:'Fraunces',Georgia,serif;
         font-size:1.55rem; font-weight:500; color:#1A1F1C;
         margin:0 0 10px; letter-spacing:-0.01em;
-      ">Clinician Workshop</h1>
+      ">Experiments</h1>
 
       <p style="
         font-family:'Newsreader',Georgia,serif;
         font-size:0.95rem; color:#3A4540; margin:0 0 36px; line-height:1.5;
-      ">This area is for registered clinicians only.</p>
+      ">Work in progress. Passphrase required.</p>
 
       <form id="wg-form">
         <input
@@ -79,7 +83,7 @@
           font-size:0.7rem; letter-spacing:1.5px; text-transform:uppercase;
           background:#2F6B5C; color:#F5F1E8;
           border:none; border-radius:3px; cursor:pointer;
-        ">Enter Workshop</button>
+        ">Enter</button>
       </form>
     </div>
   `;

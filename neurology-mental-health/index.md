@@ -1,7 +1,5 @@
 ---
-title: Neurology & Mental Health
-layout: topic
-description: Headache, epilepsy, stroke, depression, anxiety, and other neurological and psychiatric conditions.
+permalink: false
+eleventyExcludeFromCollections: true
 ---
-
-This pillar integrates neurology and mental health-two domains that significantly impact GP practice. It covers headache and migraine, epilepsy, stroke prevention, depression, anxiety, sleep disorders, and other conditions affecting the nervous system and mental wellbeing.
+This file is a leftover from a folder rename. It produces no output. Delete the parent folder once safe to do so.

@@ -504,7 +504,7 @@
         <a href="/lifestyle-prevention/">Lifestyle</a>
         <a href="/msk/">MSK</a>
         <a href="/infectious-disease/">Travel</a>
-        <a href="/neurology-mental-health/">Mental Health</a>
+        <a href="/mental-health/">Mental Health</a>
         <a href="/workshop/">Workshop</a>
       </nav>
     </div>
