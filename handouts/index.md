@@ -145,6 +145,7 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li>Fatty liver disease (MASLD)  -  what it means and what helps <span class="hl-soon">coming soon</span></li>
     <li>The NZ bowel screening programme  -  what to expect <span class="hl-soon">coming soon</span></li>
     <li>Nausea and vomiting  -  common causes and home care <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/gastroenteritis/">Gastroenteritis (tummy bug)  -  home care and when to seek help</a></li>
     <li>Inflammatory bowel disease  -  overview (Crohn's and colitis) <span class="hl-soon">coming soon</span></li>
     <li>Hepatitis B  -  understanding chronic infection in NZ <span class="hl-soon">coming soon</span></li>
     <li>Hepatitis C  -  treatment options available in NZ <span class="hl-soon">coming soon</span></li>
@@ -164,6 +165,7 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li>Hip osteoarthritis  -  what it is and what helps <span class="hl-soon">coming soon</span></li>
     <li>Shoulder pain  -  rotator cuff and impingement <span class="hl-soon">coming soon</span></li>
     <li>Frozen shoulder (adhesive capsulitis)  -  stages and treatment <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/steroid-joint-injection/">Steroid joint injection  -  looking after your joint afterwards</a></li>
     <li><a href="/handouts/gout-acute-attack/">Gout  -  managing an acute attack</a></li>
     <li>Gout  -  preventing future attacks (diet and allopurinol) <span class="hl-soon">coming soon</span></li>
     <li>Plantar heel pain (plantar fasciitis) <span class="hl-soon">coming soon</span></li>

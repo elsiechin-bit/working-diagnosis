@@ -4,8 +4,9 @@
   "author": "Working Diagnosis",
   "url": "https://www.workingdiagnosis.xyz",
   "nav": [
-    { "label": "the Compendium", "url": "/compendium/", "inMasthead": true },
-    { "label": "Workshop", "url": "/workshop/", "inMasthead": true },
+    { "label": "the Library", "url": "/library/", "inMasthead": true },
+    { "label": "the Consult Room", "shortLabel": "Consult Room", "url": "/consult-room/", "inMasthead": true },
+    { "label": "the Workshop", "shortLabel": "Workshop", "url": "/workshop/", "inMasthead": true },
     { "label": "Cardiovascular", "url": "/cardiovascular/", "row": 1, "inMasthead": true },
     { "label": "Respiratory", "url": "/respiratory/", "row": 1 },
     { "label": "Endocrinology", "url": "/endocrinology/", "row": 1 },

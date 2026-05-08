@@ -1,8 +1,8 @@
 ---
-title: The Compendium
+title: The Library
 layout: topic.njk
-description: A clinician's catalog of NZ general practice. Conditions by specialty, what to do with them, and what patients need to know.
-pillar: Compendium
+description: A clinician's library of NZ general practice. Conditions by specialty, with patient handouts to send home.
+pillar: Library
 ---
 
 The full catalog of clinical pillars and topics. Pick a specialty to drill in.
