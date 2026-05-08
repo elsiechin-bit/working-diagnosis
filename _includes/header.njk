@@ -4,17 +4,42 @@
       <span class="brand-name">Working <em>Diagnosis</em>.</span>
     </a>
     <nav class="primary-nav" aria-label="Primary">
-      {% for item in site.nav %}
-        {% if item.inMasthead %}
-          {% if item.sep == "dot" %}<span class="nav-dot" aria-hidden="true">&middot;</span>{% endif %}
-          {% if item.sep == "pipe" %}<span class="nav-pipe" aria-hidden="true"></span>{% endif %}
-          {% if item.divider %}
-            <span class="nav-sep" aria-hidden="true"></span>
-          {% else %}
-            <a href="{{ item.url }}"{% if item.group %} class="nav-{{ item.group }}"{% endif %}>{{ item.shortLabel or item.label }}</a>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
+
+      <details class="nav-drop nav-drop--library">
+        <summary>Library</summary>
+        <div class="nav-drop-panel">
+          <ul class="nav-drop-list">
+            {% for item in site.nav %}{% if item.row and item.row < 6 %}
+              <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+            {% endif %}{% endfor %}
+          </ul>
+        </div>
+      </details>
+
+      <details class="nav-drop nav-drop--workbench">
+        <summary>Workbench</summary>
+        <div class="nav-drop-panel nav-drop-panel--wide">
+          {% for cat in tools.categories %}
+            <div class="nav-drop-group">
+              <p class="nav-drop-group__title">{{ cat.name }}</p>
+              <ul class="nav-drop-list">
+                {% for tool in cat.items %}
+                  <li><a href="{{ tool.url }}">{{ tool.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+      </details>
+
+      <a href="/workshop/" class="nav-room-link nav-room-link--workshop">Workshop</a>
+
+      <span class="nav-utilities">
+        {% for item in site.nav %}{% if item.row == 6 %}
+          <a href="{{ item.url }}" class="nav-utility">{{ item.label }}</a>
+        {% endif %}{% endfor %}
+      </span>
+
     </nav>
     <button id="search-trigger" class="search-trigger" aria-label="Search site">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">

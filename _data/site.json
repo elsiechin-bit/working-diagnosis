@@ -24,13 +24,9 @@
     { "label": "Immunology & Allergy", "url": "/immunology-allergy/", "row": 5 },
     { "label": "Occupational Health", "url": "/occupational-health/", "row": 5 },
     { "label": "Lifestyle & Prevention", "url": "/lifestyle-prevention/", "row": 5 },
-    { "divider": true, "inMasthead": true },
-    { "label": "Field Notes", "url": "/field-notes/", "row": 6, "inMasthead": true, "group": "utility" },
-    { "divider": true, "inMasthead": true },
     { "label": "Handouts", "url": "/handouts/", "row": 6, "inMasthead": true, "group": "utility" },
-    { "divider": true, "inMasthead": true },
+    { "label": "Field Notes", "url": "/field-notes/", "row": 6, "inMasthead": true, "group": "utility" },
     { "label": "Resources", "url": "/resources/", "row": 6, "inMasthead": true, "group": "utility" },
-    { "divider": true, "inMasthead": true },
     { "label": "About", "url": "/about/", "row": 6, "inMasthead": true, "group": "utility" }
   ]
 }

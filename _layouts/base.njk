@@ -94,6 +94,27 @@
           closeSearch();
         }
       });
+
+      // Nav dropdowns: close when clicking outside, or pressing Escape
+      var navDrops = document.querySelectorAll('.nav-drop');
+      document.addEventListener('click', function (e) {
+        navDrops.forEach(function (d) {
+          if (d.open && !d.contains(e.target)) { d.open = false; }
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          navDrops.forEach(function (d) { if (d.open) d.open = false; });
+        }
+      });
+      // Open one closes the others
+      navDrops.forEach(function (d) {
+        d.addEventListener('toggle', function () {
+          if (d.open) {
+            navDrops.forEach(function (other) { if (other !== d) other.open = false; });
+          }
+        });
+      });
     })();
   </script>
 
