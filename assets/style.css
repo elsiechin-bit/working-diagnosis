@@ -512,56 +512,120 @@ button.handout-pdf-link {
   align-items: center;
   font-family: var(--mono);
   font-size: 0.6rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ochre);
-  padding: 0 16px;
-  border-right: 1px solid var(--rule);
-  white-space: nowrap;
+  lette
+/* === Home pillar card layout (icon + rule + mono CTA) === */
+
+:root {
+  --library-pastel:   #DCEFE2;
+  --workbench-pastel: #F3E1D5;
+  --workshop-pastel:  #DAE2EB;
+  --library-ink:      var(--green-deep);
+  --workbench-ink:    var(--clay);
+  --workshop-ink:     var(--slate);
 }
 
-.ticker-overflow {
-  overflow: hidden;
-  flex: 1;
+.pillars-grid { padding: 36px 0 56px; }
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media (max-width: 820px) { .pillars { grid-template-columns: 1fr; } }
+
+.pillar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-top: none;
+  padding: 56px 28px 36px;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.pillar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: currentColor;
+}
+.pillar--field-guide   { color: var(--library-ink); }
+.pillar--workbench     { color: var(--workbench-ink); }
+.pillar--thinking-room { color: var(--workshop-ink); }
+.pillar:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26, 31, 28, 0.06); }
+
+.pillar-icon {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.pillar-icon svg { width: 56px; height: 56px; color: currentColor; }
+.pillar-icon--library   { background: var(--library-pastel);   color: var(--library-ink); }
+.pillar-icon--workbench { background: var(--workbench-pastel); color: var(--workbench-ink); }
+.pillar-icon--workshop  { background: var(--workshop-pastel);  color: var(--workshop-ink); }
+
+.pillar-title {
+  font-family: var(--serif-display);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.pillar-title em { font-style: italic; color: currentColor; }
+
+.pillar-rule {
+  display: block;
+  width: 56px;
+  height: 1.5px;
+  background: currentColor;
+  margin: 0 auto 18px;
+  opacity: 0.85;
 }
 
-.ticker-track {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  animation: ticker-scroll 70s linear infinite;
+.pillar p {
+  font-family: var(--serif-body);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0 0 28px;
+  max-width: 30ch;
 }
 
-.ticker-track:hover { animation-play-state: paused; }
-
-.ticker-item {
+.pillar-cta {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 0 48px 0 20px;
-  white-space: nowrap;
-}
-
-.ticker-source {
   font-family: var(--mono);
-  font-size: 0.57rem;
-  letter-spacing: 0.1em;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ochre);
-  flex-shrink: 0;
-}
-
-.ticker-link {
-  font-family: var(--serif-body);
-  font-size: 0.8rem;
-  color: var(--ink-soft);
+  color: currentColor;
+  padding-bottom: 6px;
+  border-bottom: 1px solid currentColor;
   text-decoration: none;
+  margin-top: auto;
+  transition: gap 160ms ease, opacity 160ms ease;
+}
+.pillar-cta:hover { gap: 14px; opacity: 0.85; color: currentColor; }
+.pillar-cta-arrow {
+  display: inline-block;
+  font-family: var(--serif-display);
+  font-size: 1.05em;
+  line-height: 1;
 }
 
-.ticker-link:hover {
-  color: var(--green-deep);
-}
-
-/* ── Field Notes: note-body headings ─────────────�
+/* Hide the older inline pillar styles' h3-em accent inside this layout
+   (we now use the .pillar-title em which inherits currentColor). */
+.pillar h3.pillar-title em { color: currentColor; }
