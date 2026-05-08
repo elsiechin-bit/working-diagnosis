@@ -4,7 +4,7 @@
   "author": "Working Diagnosis",
   "url": "https://www.workingdiagnosis.xyz",
   "nav": [
-    { "label": "Field Guide", "url": "/field-guide/", "inMasthead": true },
+    { "label": "the Compendium", "url": "/compendium/", "inMasthead": true },
     { "label": "Workshop", "url": "/workshop/", "inMasthead": true },
     { "label": "Cardiovascular", "url": "/cardiovascular/", "row": 1, "inMasthead": true },
     { "label": "Respiratory", "url": "/respiratory/", "row": 1 },
