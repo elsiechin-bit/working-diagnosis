@@ -187,25 +187,25 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <ul class="handout-list">
     <li><a href="/handouts/depression/">Depression  -  what it is and what actually helps</a></li>
     <li><a href="/handouts/anxiety/">Anxiety  -  understanding it and managing it</a></li>
-    <li>Panic attacks  -  what to do in the moment <span class="hl-soon">coming soon</span></li>
-    <li>Social anxiety  -  what it is and where to get help <span class="hl-soon">coming soon</span></li>
-    <li>Grief and loss  -  what to expect <span class="hl-soon">coming soon</span></li>
-    <li>Stress and burnout  -  recognising it and recovering <span class="hl-soon">coming soon</span></li>
-    <li>Sleep and mental health <span class="hl-soon">coming soon</span></li>
-    <li>Postnatal depression and postnatal anxiety <span class="hl-soon">coming soon</span></li>
-    <li>ADHD in adults  -  getting assessed in NZ <span class="hl-soon">coming soon</span></li>
-    <li>ADHD in children  -  understanding the diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Autism spectrum  -  adults receiving a late diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Eating disorders  -  recognising them and getting help in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Bipolar disorder  -  overview for patients and families <span class="hl-soon">coming soon</span></li>
-    <li>OCD  -  what it is and effective treatments <span class="hl-soon">coming soon</span></li>
-    <li>PTSD  -  recognising symptoms and getting support <span class="hl-soon">coming soon</span></li>
-    <li>Problem gambling  -  getting help in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Alcohol and mental health <span class="hl-soon">coming soon</span></li>
-    <li>If you are struggling  -  getting help in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Supporting someone who is struggling <span class="hl-soon">coming soon</span></li>
-    <li>When a family member has a mental illness <span class="hl-soon">coming soon</span></li>
-    <li>Mindfulness  -  a brief practical introduction <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/panic-attacks/">Panic attacks  -  what to do in the moment</a></li>
+    <li><a href="/handouts/social-anxiety/">Social anxiety  -  what it is and where to get help</a></li>
+    <li><a href="/handouts/grief-loss/">Grief and loss  -  what to expect</a></li>
+    <li><a href="/handouts/stress-burnout/">Stress and burnout  -  recognising it and recovering</a></li>
+    <li><a href="/handouts/sleep-mental-health/">Sleep and mental health</a></li>
+    <li><a href="/handouts/postnatal-depression/">Postnatal depression and postnatal anxiety</a></li>
+    <li><a href="/handouts/adhd-adults/">ADHD in adults  -  getting assessed in NZ</a></li>
+    <li><a href="/handouts/adhd-children/">ADHD in children  -  understanding the diagnosis</a></li>
+    <li><a href="/handouts/autism-late-diagnosis/">Autism spectrum  -  adults receiving a late diagnosis</a></li>
+    <li><a href="/handouts/eating-disorders/">Eating disorders  -  recognising them and getting help in NZ</a></li>
+    <li><a href="/handouts/bipolar-disorder/">Bipolar disorder  -  overview for patients and families</a></li>
+    <li><a href="/handouts/ocd/">OCD  -  what it is and effective treatments</a></li>
+    <li><a href="/handouts/ptsd/">PTSD  -  recognising symptoms and getting support</a></li>
+    <li><a href="/handouts/problem-gambling/">Problem gambling  -  getting help in NZ</a></li>
+    <li><a href="/handouts/alcohol-mental-health/">Alcohol and mental health</a></li>
+    <li><a href="/handouts/getting-help-nz/">If you are struggling  -  getting help in NZ</a></li>
+    <li><a href="/handouts/supporting-someone-struggling/">Supporting someone who is struggling</a></li>
+    <li><a href="/handouts/family-mental-illness/">When a family member has a mental illness</a></li>
+    <li><a href="/handouts/mindfulness/">Mindfulness  -  a brief practical introduction</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.depression.org.nz">depression.org.nz</a> · <a href="https://www.anxiety.org.nz">anxiety.org.nz</a> · <a href="https://1737.org.nz">1737  -  free call or text, any time</a> · <a href="https://www.lifeline.org.nz">Lifeline NZ</a> · <a href="https://www.mentalhealth.org.nz">Mental Health Foundation NZ</a></p>
 </div>
