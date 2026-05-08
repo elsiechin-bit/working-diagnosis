@@ -19,7 +19,7 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="/dermatology/">Dermatology</a></li>
     <li><a href="/gynaecology/">Gynae</a></li>
     <li><a href="#mens-health">Men's Health</a></li>
-    <li><a href="/paediatrics/">Paeds</a></li>
+    <li><a href="#paeds">Paeds</a></li>
     <li><a href="/geriatrics/">Geriatrics</a></li>
     <li><a href="#ent">ENT</a></li>
     <li><a href="#eyes">Eyes</a></li>
@@ -254,6 +254,31 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="/handouts/vaginal-discharge/">Vaginal discharge  -  what is normal, what is not</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthify.nz">Healthify NZ - women's health</a> &middot; <a href="https://www.familyplanning.org.nz">Family Planning NZ</a> &middot; <a href="https://www.menopause.org.nz">Australasian Menopause Society</a></p>
+</div>
+
+
+
+<div class="handout-section" id="paeds">
+  <h2>Paediatrics</h2>
+  <ul class="handout-list">
+    <li><a href="/handouts/childhood-fever/">Fever in babies and children  -  when to worry</a></li>
+    <li><a href="/handouts/childhood-cough-cold/">Coughs and colds in children  -  what helps and what does not</a></li>
+    <li><a href="/handouts/childhood-gastro/">Vomiting and diarrhoea (gastroenteritis)</a></li>
+    <li><a href="/handouts/childhood-constipation/">Constipation in children</a></li>
+    <li><a href="/handouts/bedwetting/">Bedwetting (nocturnal enuresis)</a></li>
+    <li><a href="/handouts/infant-toddler-sleep/">Sleep in babies and toddlers</a></li>
+    <li><a href="/handouts/childhood-vaccinations/">Childhood vaccinations  -  the NZ schedule</a></li>
+    <li><a href="/handouts/paediatric-eczema/">Eczema in babies and children</a></li>
+    <li><a href="/handouts/croup/">Croup  -  the barking cough at 2am</a></li>
+    <li><a href="/handouts/bronchiolitis/">Bronchiolitis  -  the wheezy cough in babies</a></li>
+    <li>Otitis media (ear infections) <span class="hl-soon">coming soon</span></li>
+    <li>Glue ear <span class="hl-soon">coming soon</span></li>
+    <li>Toilet training <span class="hl-soon">coming soon</span></li>
+    <li>Tantrums and toddler behaviour <span class="hl-soon">coming soon</span></li>
+    <li>Head lice <span class="hl-soon">coming soon</span></li>
+    <li>Threadworms <span class="hl-soon">coming soon</span></li>
+  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.kidshealth.org.nz/">KidsHealth NZ</a> &middot; <a href="https://www.plunket.org.nz/">Plunket</a> 0800 933 922 &middot; <a href="https://www.immune.org.nz/">IMAC</a></p>
 </div>
 
 <div class="handout-section" id="general">
