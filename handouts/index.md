@@ -83,23 +83,23 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <h2>Cardiovascular</h2>
   <ul class="handout-list">
     <li><a href="/handouts/high-blood-pressure/">High blood pressure (hypertension)  -  what the numbers mean</a></li>
-    <li>Blood pressure medicines  -  what to expect <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/blood-pressure-medicines/">Blood pressure medicines  -  what to expect</a></li>
     <li><a href="/handouts/cholesterol-cardiovascular-risk/">Understanding cholesterol and cardiovascular risk</a></li>
-    <li>Statins  -  why they are prescribed and common concerns <span class="hl-soon">coming soon</span></li>
-    <li>Your cardiovascular risk score  -  what it means <span class="hl-soon">coming soon</span></li>
-    <li>Heart attack  -  warning signs and calling 111 <span class="hl-soon">coming soon</span></li>
-    <li>After a heart attack  -  recovery, medicines, and lifestyle <span class="hl-soon">coming soon</span></li>
-    <li>Angina  -  understanding and managing chest pain <span class="hl-soon">coming soon</span></li>
-    <li>Atrial fibrillation (AF)  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Blood thinners (anticoagulants)  -  warfarin and DOACs explained <span class="hl-soon">coming soon</span></li>
-    <li>Heart failure  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Heart failure  -  daily weight monitoring and fluid management <span class="hl-soon">coming soon</span></li>
-    <li>Stroke  -  FAST signs and calling 111 <span class="hl-soon">coming soon</span></li>
-    <li>TIA (transient ischaemic attack)  -  what happened and what to do next <span class="hl-soon">coming soon</span></li>
-    <li>Deep vein thrombosis (DVT)  -  recognising and preventing clots <span class="hl-soon">coming soon</span></li>
-    <li>Peripheral arterial disease (PAD)  -  foot care and risk reduction <span class="hl-soon">coming soon</span></li>
-    <li>Varicose veins  -  management and when to seek help <span class="hl-soon">coming soon</span></li>
-    <li>Cardiac rehabilitation in NZ  -  what to expect <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/statins/">Statins  -  why they are prescribed and common concerns</a></li>
+    <li><a href="/handouts/cardiovascular-risk-score/">Your cardiovascular risk score  -  what it means</a></li>
+    <li><a href="/handouts/heart-attack-warning-signs/">Heart attack  -  warning signs and calling 111</a></li>
+    <li><a href="/handouts/after-heart-attack/">After a heart attack  -  recovery, medicines, and lifestyle</a></li>
+    <li><a href="/handouts/angina/">Angina  -  understanding and managing chest pain</a></li>
+    <li><a href="/handouts/atrial-fibrillation/">Atrial fibrillation (AF)  -  understanding your diagnosis</a></li>
+    <li><a href="/handouts/anticoagulants/">Blood thinners (anticoagulants)  -  warfarin and DOACs explained</a></li>
+    <li><a href="/handouts/heart-failure-diagnosis/">Heart failure  -  understanding your diagnosis</a></li>
+    <li><a href="/handouts/heart-failure-daily-management/">Heart failure  -  daily weight monitoring and fluid management</a></li>
+    <li><a href="/handouts/stroke-fast-signs/">Stroke  -  FAST signs and calling 111</a></li>
+    <li><a href="/handouts/tia/">TIA (transient ischaemic attack)  -  what happened and what to do next</a></li>
+    <li><a href="/handouts/deep-vein-thrombosis/">Deep vein thrombosis (DVT)  -  recognising and preventing clots</a></li>
+    <li><a href="/handouts/peripheral-arterial-disease/">Peripheral arterial disease (PAD)  -  foot care and risk reduction</a></li>
+    <li><a href="/handouts/varicose-veins/">Varicose veins  -  management and when to seek help</a></li>
+    <li><a href="/handouts/cardiac-rehabilitation/">Cardiac rehabilitation in NZ  -  what to expect</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz">Heart Foundation NZ</a> · <a href="https://www.stroke.org.nz">Stroke Foundation NZ</a> · <a href="https://www.healthnavigator.org.nz/health-a-z/h/heart-disease/">Health Navigator  -  Heart Disease</a></p>
 </div>
