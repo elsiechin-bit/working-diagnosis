@@ -20,7 +20,7 @@ description: Why most tummy bugs settle on their own, how to stay hydrated at ho
 
 <h2>Why it happens</h2>
 
-<p>Most tummy bugs are caused by viruses - norovirus is the classic "winter vomiting bug", and rotavirus mainly affects infants (the rotavirus vaccine is on the NZ schedule at 6 weeks and 3 months). Bacterial causes are less common but matter here: campylobacter is NZ's most-notified foodborne illness, with rates roughly twice those of comparable countries, and the biggest single source is fresh chicken meat. Salmonella, shigella, yersinia, and certain strains of E. coli can also cause gastroenteritis. Less commonly, parasites such as giardia and cryptosporidium are picked up from untreated bore, tank, or stream water, or from contact with farm animals.</p>
+<p>Most tummy bugs are caused by viruses - norovirus is the classic "winter vomiting bug", and rotavirus mainly affects infants (the rotavirus vaccine is on the NZ schedule at 6 weeks and 3 months<sup class="fnref"><a href="#fn1">1</a></sup>). Bacterial causes are less common but matter here: campylobacter is NZ's most-notified foodborne illness, with rates roughly twice those of comparable countries<sup class="fnref"><a href="#fn2">2</a></sup>, and the biggest single source is fresh chicken meat. Salmonella, shigella, yersinia, and certain strains of E. coli can also cause gastroenteritis. Less commonly, parasites such as giardia and cryptosporidium are picked up from untreated bore, tank, or stream water, or from contact with farm animals.</p>
 
 <h2>What actually helps</h2>
 
@@ -48,7 +48,7 @@ description: Why most tummy bugs settle on their own, how to stay hydrated at ho
 <h2>Stopping the spread</h2>
 
 <ul>
-  <li><strong>Stay home from work, school, or daycare for 48 hours</strong> after the last episode of diarrhoea or vomiting</li>
+  <li><strong>Stay home from work, school, or daycare for 48 hours</strong> after the last episode of diarrhoea or vomiting<sup class="fnref"><a href="#fn3">3</a></sup></li>
   <li><strong>Wash hands with soap and water</strong> after the toilet and before food - alcohol gels do not work as well against norovirus</li>
   <li><strong>Do not prepare food for others</strong> while you are unwell, or for 48 hours afterwards</li>
   <li><strong>Clean toilets, taps, and high-touch surfaces</strong> with a bleach-based cleaner; wash soiled clothing and linen separately on a hot wash</li>
@@ -80,14 +80,33 @@ description: Why most tummy bugs settle on their own, how to stay hydrated at ho
   <li>Does this need to be reported to public health, and do my close contacts need to do anything?</li>
 </ul>
 
-<div class="topic-refs">
+<div class="topic-endmatter">
 
-**Useful NZ resources**
+<div class="endmatter-col">
 
-- [Healthify - Gastroenteritis](https://healthify.nz/health-a-z/g/gastroenteritis) - patient-friendly overview
-- [Healthify - Gastroenteritis in children](https://healthify.nz/health-a-z/g/gastroenteritis-in-children) - tailored advice for tamariki
-- [Healthify - Oral rehydration salts](https://healthify.nz/medicines-a-z/o/oral-rehydration-salts) - how to use ORS at home
-- [KidsHealth NZ - Diarrhoea and vomiting](https://www.kidshealth.org.nz/diarrhoea-and-vomiting-children) - what to watch for in children
-- [BPAC NZ - Patient information](https://bpac.org.nz/patients.aspx) - GP-curated handouts
-- Healthline - free 24/7 nurse advice on **0800 611 116**
+### Reading list
+
+<ul class="endmatter-list">
+  <li><a href="https://healthify.nz/health-a-z/g/gastroenteritis">Healthify - Gastroenteritis</a> - patient-friendly overview.</li>
+  <li><a href="https://healthify.nz/health-a-z/g/gastroenteritis-in-children">Healthify - Gastroenteritis in children</a> - tailored advice for tamariki.</li>
+  <li><a href="https://healthify.nz/medicines-a-z/o/oral-rehydration-salts">Healthify - Oral rehydration salts</a> - how to use ORS at home.</li>
+  <li><a href="https://www.kidshealth.org.nz/diarrhoea-and-vomiting-children">KidsHealth NZ - Diarrhoea and vomiting</a> - what to watch for in children.</li>
+  <li><a href="https://bpac.org.nz/patients.aspx">BPAC NZ - Patient information</a> - GP-curated handouts.</li>
+  <li>Healthline - free 24/7 nurse advice on <strong>0800 611 116</strong>.</li>
+</ul>
+
+</div>
+
+<div class="endmatter-col">
+
+### Footnotes
+
+<ol class="endmatter-refs">
+  <li id="fn1">Immunisation Advisory Centre. NZ National Immunisation Schedule: rotavirus. <a href="https://www.immune.org.nz">immune.org.nz</a></li>
+  <li id="fn2">Institute of Environmental Science and Research (ESR). Notifiable diseases in New Zealand: Annual surveillance report. Porirua: ESR. <a href="https://www.esr.cri.nz">esr.cri.nz</a></li>
+  <li id="fn3">Health New Zealand | Te Whatu Ora. Communicable Disease Control Manual: viral gastroenteritis exclusion period. <a href="https://www.tewhatuora.govt.nz">tewhatuora.govt.nz</a></li>
+</ol>
+
+</div>
+
 </div>

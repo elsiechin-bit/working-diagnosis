@@ -6,9 +6,11 @@ eleventyExcludeFromCollections: true
 # Patient handout template
 
 Reverse-engineered from anxiety, high-blood-pressure, common-cold, sleep-hygiene,
-and gout-acute-attack. Use this file as both a spec and a copy-paste skeleton when
-building a new handout. This file is excluded from the build via `permalink: false`,
-`eleventyExcludeFromCollections: true`, and an entry in `.eleventyignore`.
+gout-acute-attack, and (for the Reading list / Footnotes endmatter pattern)
+gastroenteritis and vaping. Use this file as both a spec and a copy-paste skeleton
+when building a new handout. This file is excluded from the build via
+`permalink: false`, `eleventyExcludeFromCollections: true`, and an entry in
+`.eleventyignore`.
 
 ---
 
@@ -98,18 +100,86 @@ crisis numbers below.]</p>
   <li>[Question]</li>
 </ul>
 
-<div class="topic-refs">
+<div class="topic-endmatter">
 
-**Useful NZ resources**
+<div class="endmatter-col">
 
-- [Resource name](URL) - one-line description
-- [Resource name](URL) - one-line description
+### Reading list
+
+<ul class="endmatter-list">
+  <li><a href="URL">Resource name</a> - one-line description.</li>
+  <li><a href="URL">Resource name</a> - one-line description.</li>
+</ul>
+
+</div>
+
+<div class="endmatter-col">
+
+### Footnotes
+
+<ol class="endmatter-refs">
+  <li id="fn1">Author/Org. Title. Publisher; Year. <a href="URL">domain</a></li>
+  <li id="fn2">Author/Org. Title. Publisher; Year. <a href="URL">domain</a></li>
+</ol>
+
+</div>
+
 </div>
 ```
 
 Use only the H2 sections that fit the topic. Order is approximate but generally:
 phenomenology, mechanism, self-management, medicines, monitoring, what to avoid,
-red flags, questions, references.
+red flags, questions, endmatter.
+
+---
+
+## 3a. Endmatter convention: Reading list + Footnotes
+
+The two-column endmatter at the bottom of every handout has two distinct jobs.
+Keep them apart - they serve different readers.
+
+**Reading list (left column)** is patient-facing. Curated NZ resources the reader
+can follow up with: Healthify, BPAC patient information, KidsHealth, condition-
+specific charities, helplines. Five to seven entries is the sweet spot. Each
+entry is a hyperlinked title followed by a one-line description ("what this gives
+you"). Order by usefulness, not alphabetically. Keep the 24/7 helpline as a
+non-link entry with the number bolded if there is one (Healthline 0800 611 116,
+Quitline 0800 778 778, etc.).
+
+**Footnotes (right column)** is for verification. Vancouver-style numbered entries
+keyed to in-text superscripts. The rule is tight: only footnote **numerical
+claims** in the body - statistics, prevalence figures, dose thresholds, schedule
+items, named regulatory limits. Do not footnote qualitative claims, opinions, or
+clinical practice tips - those belong to the writer's judgement and to the
+Reading list as a whole. If a handout has no footnoteable statistics, leave the
+Footnotes column out and let the Reading list span the row.
+
+**Inline superscript pattern** in the body:
+
+```html
+[claim with a number]<sup class="fnref"><a href="#fn1">1</a></sup>
+```
+
+The matching list item gets `id="fn1"`. CSS handles the `:target` highlight when
+a reader clicks the marker.
+
+**Footnote format** is light-Vancouver: `Author/Org. Title. Publisher; Year. <a
+href="URL">domain</a>`. Where you do not have a confident volume/issue/page
+number, do not invent one - the named work plus a verifiable URL is enough. Link
+to the organisation root if a deep URL is uncertain. Italicise journal names with
+`<em>`.
+
+**Confident sources, by handout type:**
+
+- Epidemiology / notifications: ESR annual report, MPI/NZ Food Safety, NZ Health
+  Survey
+- Immunisation: Immunisation Advisory Centre (IMAC), NZ Immunisation Handbook
+- Cardiovascular thresholds: Heart Foundation NZ, BPAC, NZ Primary Care Handbook
+- Medicines: NZ Formulary (NZF), Medsafe, BPAC
+- Smoking / vaping: Public Health England 2015 update, RCP 2016, Cochrane Tobacco
+  Addiction Group, Te Whatu Ora Vaping Facts, Smokefree Environments Regulations
+- Public health control / exclusion periods: Te Whatu Ora Communicable Disease
+  Control Manual
 
 ---
 
@@ -139,8 +209,12 @@ emergency department.</p>
   dashes anywhere on this site.
 - Bullets use **bold lead-in** when the item is an action, recommendation, or
   named option; plain bullets when the item is a symptom or red flag.
-- No inline `<style>` blocks. Plain HTML tags only: `<p>`, `<h2>`, `<ul>`,
-  `<li>`, `<strong>`. The site stylesheet handles everything.
+- No inline `<style>` blocks. Plain HTML tags only: `<p>`, `<h2>`, `<h3>`,
+  `<ul>`, `<ol>`, `<li>`, `<strong>`, `<em>`, `<a>`, and the endmatter wrappers
+  (`<div class="topic-endmatter">`, `<div class="endmatter-col">`,
+  `<ul class="endmatter-list">`, `<ol class="endmatter-refs">`). Superscript
+  footnote markers use `<sup class="fnref"><a href="#fnN">N</a></sup>`. The site
+  stylesheet handles everything.
 - Length: 500 to 800 words of body content. Longer only if the topic genuinely
   needs it.
 - Never invent statistics, doses, or guideline thresholds. Source from BPAC,
@@ -218,8 +292,10 @@ System / rights:
 2. Update the matching list item in `handouts/index.md` (remove the
    `coming soon` span, wrap the link text in `<a href="/handouts/[slug]/">`).
 3. Local preview: `npx @11ty/eleventy --serve` (port 8080 or 8081).
-4. Sanity-check on screen: back link works, references render, no stray
-   emdashes, no broken external links.
+4. Sanity-check on screen: back link works, both endmatter columns render
+   (Reading list left, Footnotes right at desktop width; stacked on mobile), each
+   superscript marker (`¹ ² ³`) jumps to the matching footnote with the
+   paper-warm `:target` highlight, no stray emdashes, no broken external links.
 5. Commit and push from VS Code terminal:
    - `git add .`
    - `git commit -m "Add [slug] handout"`

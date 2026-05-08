@@ -9,6 +9,7 @@
   --green-deep: #1F4A3F;
   --ochre:      #B8714F;
   --olive-light: #8B9472;
+  --slate:      #527088;
   --rule:       #D9D1BD;
   --serif-display: 'Fraunces', Georgia, serif;
   --serif-body:    'Newsreader', Georgia, serif;
@@ -108,6 +109,8 @@ a:hover { color: var(--green); }
 .primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
 .primary-nav a[href="/handouts/"] { color: var(--ochre); }
 .primary-nav a[href="/handouts/"]:hover { color: var(--green); }
+.primary-nav a[href="/about/"] { color: var(--slate); }
+.primary-nav a[href="/about/"]:hover { color: var(--green); }
 .nav-sep { display: inline-block; width: 1px; height: 0.75em; background: var(--rule); vertical-align: middle; }
 .nav-dot { display: inline-block; color: var(--ink-mute); font-size: 3em; line-height: 0.4; padding: 0 4px; vertical-align: middle; opacity: 0.55; }
 .nav-pipe { display: inline-block; width: 1px; height: 0.85em; background: var(--rule); vertical-align: middle; margin: 0 2px; }
@@ -228,12 +231,12 @@ a:hover { color: var(--green); }
 .pillar { padding: 32px 28px 36px; background: var(--paper-warm); border: 1px solid var(--rule); border-top: 3px solid var(--rule); }
 .pillar--field-guide { border-top-color: var(--green); }
 .pillar--workbench { border-top-color: var(--ochre); }
-.pillar--thinking-room { border-top-color: var(--ink-soft); }
+.pillar--thinking-room { border-top-color: var(--slate); }
 .pnum { display: block; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; color: var(--ink-mute); margin-bottom: 16px; text-transform: uppercase; }
 .pillar h3 { font-family: var(--serif-display); font-weight: 400; font-size: 26px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 14px; }
 .pillar h3 em { font-style: italic; color: var(--green); }
 .pillar--workbench h3 em { color: var(--ochre); }
-.pillar--thinking-room h3 em { color: var(--ink-soft); }
+.pillar--thinking-room h3 em { color: var(--slate); }
 .pillar p { margin: 0 0 20px; color: var(--ink-soft); font-size: 15.5px; line-height: 1.65; }
 .more { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
 .more:hover { color: var(--green-deep); border-color: var(--green-deep); }
@@ -701,3 +704,55 @@ sup a:hover { color: var(--green); }
 .footer-brand-name { font-family: var(--serif-display); font-weight: 600; font-size: 0.95rem; color: var(--ink); }
 .footer-sep { color: var(--rule); }
 .footer-tagline { font-family: var(--mono);
+}
+
+.ticker-overflow {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker-scroll 60s linear infinite;
+}
+
+.ticker-track:hover { animation-play-state: paused; }
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 24px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  border-right: 1px solid var(--rule);
+}
+
+.ticker-source {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.ticker-link {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.ticker-link:hover {
+  color: var(--green-deep);
+  text-decoration: underline;
+}
+k);
+  text-decoration: none;
+}
+
+.ticker-link:hover {
+  color: var(--green-deep);
+  text-decoration: underline;
+}
+Notes ─────────────────── */
