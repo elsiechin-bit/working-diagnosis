@@ -40,14 +40,14 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="/handouts/sleep-hygiene/">Sleep hygiene  -  setting up for better sleep</a></li>
     <li><a href="/handouts/alcohol/">Alcohol in NZ  -  what is a standard drink?</a></li>
     <li><a href="/handouts/getting-active/">Getting active  -  the NZ physical activity guidelines</a></li>
-    <li>Stopping smoking  -  your options and what works <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/stopping-smoking/">Stopping smoking  -  your options and what works</a></li>
     <li><a href="/handouts/vaping/">Vaping  -  what we know about the risks</a></li>
-    <li>Weight and metabolic health  -  a non-diet approach <span class="hl-soon">coming soon</span></li>
-    <li>Vitamin D and sunlight in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Managing stress  -  practical strategies <span class="hl-soon">coming soon</span></li>
-    <li>Social connection and loneliness  -  why it matters for health <span class="hl-soon">coming soon</span></li>
-    <li>Screen time and sleep  -  what the evidence says <span class="hl-soon">coming soon</span></li>
-    <li>Sitting less  -  the risks of sedentary behaviour <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/weight-metabolic-health/">Weight and metabolic health  -  a non-diet approach</a></li>
+    <li><a href="/handouts/vitamin-d/">Vitamin D and sunlight in NZ</a></li>
+    <li><a href="/handouts/managing-stress/">Managing stress  -  practical strategies</a></li>
+    <li><a href="/handouts/social-connection/">Social connection and loneliness  -  why it matters for health</a></li>
+    <li><a href="/handouts/screen-time-sleep/">Screen time and sleep  -  what the evidence says</a></li>
+    <li><a href="/handouts/sitting-less/">Sitting less  -  the risks of sedentary behaviour</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/healthy-living/">Health Navigator  -  Healthy Living</a> · <a href="https://www.quit.org.nz">Quit.org.nz</a> · <a href="https://www.alcohol.org.nz">Alcohol Drug Helpline</a></p>
 </div>
@@ -277,15 +277,15 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <h2>Geriatrics &amp; Older Adult Health</h2>
   <ul class="handout-list">
     <li><a href="/handouts/respite-care/">Respite care in NZ  -  funding, options, and how to access it</a></li>
-    <li>Falls prevention at home  -  practical steps that work <span class="hl-soon">coming soon</span></li>
-    <li>Dementia  -  understanding the diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Dementia  -  practical guidance for families and carers <span class="hl-soon">coming soon</span></li>
-    <li>Moving into a rest home  -  what to expect and how funding works <span class="hl-soon">coming soon</span></li>
-    <li>Advance care planning  -  making your wishes known <span class="hl-soon">coming soon</span></li>
-    <li>Polypharmacy  -  why your medicines are being reviewed <span class="hl-soon">coming soon</span></li>
-    <li>Frailty  -  what it means and what helps <span class="hl-soon">coming soon</span></li>
-    <li>Driving and older age  -  when to have the conversation <span class="hl-soon">coming soon</span></li>
-    <li>Urinary incontinence in older adults  -  it is common and treatable <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/falls-prevention/">Falls prevention at home  -  practical steps that work</a></li>
+    <li><a href="/handouts/dementia-diagnosis/">Dementia  -  understanding the diagnosis</a></li>
+    <li><a href="/handouts/dementia-carers/">Dementia  -  practical guidance for families and carers</a></li>
+    <li><a href="/handouts/rest-home/">Moving into a rest home  -  what to expect and how funding works</a></li>
+    <li><a href="/handouts/advance-care-planning/">Advance care planning  -  making your wishes known</a></li>
+    <li><a href="/handouts/polypharmacy/">Polypharmacy  -  why your medicines are being reviewed</a></li>
+    <li><a href="/handouts/frailty/">Frailty  -  what it means and what helps</a></li>
+    <li><a href="/handouts/driving-older-age/">Driving and older age  -  when to have the conversation</a></li>
+    <li><a href="/handouts/urinary-incontinence/">Urinary incontinence in older adults  -  it is common and treatable</a></li>
   </ul>
   <p class="handout
   </ul>
@@ -374,4 +374,3 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz/your-heart/healthy-eating">Heart Foundation NZ - healthy eating</a> &middot; <a href="https://nutritionfoundation.org.nz">NZ Nutrition Foundation</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - nutrition</a></p>
 </div>
-                 

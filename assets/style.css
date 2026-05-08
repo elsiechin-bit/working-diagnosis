@@ -359,9 +359,10 @@ a:hover { color: var(--green); }
 .handout-list li a { color: var(--ink); font-weight: 500; }
 .handout-list li a:hover { color: var(--green); }
 .hl-soon { font-family: var(--mono); font-size: 0.57rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); border: 1px solid var(--rule); padding: 2px 6px; border-radius: 2px; white-space: nowrap; flex-shrink: 0; }
-.handout-ext { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.3px; color: var(--ink-mute); margin: 0; }
-.handout-ext a { color: var(--green-deep); }
-.handout-ext a:hover { color: var(--green); }
+/* p.handout-ext (not .handout-ext) so specificity beats .topic-body p */
+p.handout-ext { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.02em; line-height: 1.75; color: var(--ink-mute); margin: 14px 0 0; }
+p.handout-ext a { color: var(--green-deep); }
+p.handout-ext a:hover { color: var(--green); }
 .handout-back { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 2rem; }
 .handout-back a { color: var(--ink-mute); text-decoration: none; }
 .handout-back a:hover { color: var(--green); }
@@ -386,6 +387,13 @@ a:hover { color: var(--green); }
   padding: 6px 10px 6px 9px;
   text-decoration: none;
   transition: color 120ms, border-color 120ms, background 120ms;
+}
+button.handout-pdf-link {
+  /* Reset native button defaults so it inherits the rule above cleanly */
+  margin: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 .handout-pdf-link:hover {
   color: var(--green-deep);
