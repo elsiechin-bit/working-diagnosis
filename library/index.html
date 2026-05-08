@@ -1,0 +1,449 @@
+---
+permalink: /library/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Library  -  Working Diagnosis</title>
+<meta name="description" content="The Working Diagnosis library  -  clinical topic guides organised by the common pillars of NZ general practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #F5F1E8;
+  --warm:       #EDE7D8;
+  --deep:       #E4DBC4;
+  --ink:        #1A1F1C;
+  --soft:       #3A4540;
+  --mute:       #6B7A75;
+  --rule:       #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent, transparent 2px,
+    rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px
+  );
+}
+
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+/* ── Masthead ─────────────────────────────────── */
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  padding: 20px 32px;
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.masthead-row {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.brand {
+  font-family: var(--font-d);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+}
+.primary-nav a {
+  font-family: var(--font-m);
+  font-size: 0.68rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.primary-nav a:hover { color: var(--green); }
+.primary-nav a.is-current {
+  color: var(--green-deep);
+  border-bottom: 1px solid var(--green-deep);
+  padding-bottom: 2px;
+}
+
+/* ── Page intro ────────────────────────────────── */
+.wb-intro {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px 32px 48px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.wb-intro-text {}
+.wb-kicker {
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 12px;
+}
+.wb-kicker::before { content: "❍ "; }
+.wb-title {
+  font-family: var(--font-d);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+.wb-title em { font-style: italic; color: var(--green); }
+.wb-dek {
+  font-family: var(--font-b);
+  font-size: 1.05rem;
+  color: var(--soft);
+  max-width: 480px;
+  line-height: 1.55;
+}
+.wb-zone-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  padding-bottom: 6px;
+}
+.wb-zone-pill {
+  font-family: var(--font-m);
+  font-size: 0.62rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--mute);
+  transition: border-color 120ms, color 120ms, background 120ms;
+}
+.wb-zone-pill:hover {
+  border-color: var(--green);
+  color: var(--green-deep);
+  background: var(--warm);
+}
+.wb-zone-pill--public { color: var(--soft); border-color: var(--rule); }
+.wb-zone-pill--clinician { color: var(--ochre); border-color: var(--ochre); background: rgba(184,113,79,.06); }
+
+/* ── Zone sections ─────────────────────────────── */
+.wb-zone {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 32px 52px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.zone-header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 18px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.zone-label {
+  font-family: var(--font-m);
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ochre);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.zone-label::before { content: "❍ "; }
+.zone-heading {
+  font-family: var(--font-d);
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+}
+.zone-dek {
+  font-family: var(--font-b);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--mute);
+  margin-left: auto;
+  max-width: 320px;
+  text-align: right;
+  line-height: 1.45;
+}
+
+/* ── Pillar card grid ───────────────────────────── */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+@media (max-width: 900px) { .pillar-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px)  { .pillar-grid { grid-template-columns: 1fr; } }
+
+.pillar-card {
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  transition: background 150ms;
+}
+.pillar-card:hover { background: var(--warm); }
+.pillar-card a {
+  display: block;
+  padding: 22px 24px 24px;
+  height: 100%;
+  color: inherit;
+}
+.pillar-card a:hover { color: inherit; }
+
+.pillar-tag {
+  font-family: var(--font-m);
+  font-size: 0.58rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 6px;
+}
+.pillar-name {
+  font-family: var(--font-d);
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 8px;
+  transition: color 150ms;
+}
+.pillar-card:hover .pillar-name { color: var(--green-deep); }
+.pillar-blurb {
+  font-family: var(--font-b);
+  font-size: 0.88rem;
+  color: var(--mute);
+  line-height: 1.5;
+}
+
+/* ── Footer ─────────────────────────────────────── */
+.site-footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-brand {
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+  color: var(--mute);
+}
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+.footer-links a {
+  font-family: var(--font-m);
+  font-size: 0.62rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.footer-links a:hover { color: var(--green); }
+</style>
+</head>
+<body>
+
+<!-- ── Masthead ───────────────────────────────────── -->
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Site navigation">
+      <a href="/lifestyle-prevention/">Lifestyle</a>
+      <a href="/msk/">MSK</a>
+      <a href="/paediatrics/">Paeds</a>
+      <a href="/geriatrics/">Geriatrics</a>
+      <a href="/gynaecology/">Gynae</a>
+      <a href="/dermatology/">Derm</a>
+      <a href="/mental-health/">Mental Health</a>
+      <a href="/infectious-disease/">Vaccines</a>
+      <a href="/infectious-disease/">Travel</a>
+      <a href="/library/" class="is-current">Library</a>
+      <a href="/consult-room/">Workbench</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Page intro ─────────────────────────────────── -->
+<div class="wb-intro">
+  <div class="wb-intro-text">
+    <p class="wb-kicker">the clinician's library</p>
+    <h1 class="wb-title"><em>library</em>.</h1>
+    <p class="wb-dek">Clinical topic guides organised by the common pillars of general practice in Aotearoa.</p>
+  </div>
+  <div class="wb-zone-nav">
+    <a href="/consult-room/" class="wb-zone-pill wb-zone-pill--clinician">→ Workbench</a>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- TOPICS                                           -->
+<!-- ════════════════════════════════════════════════ -->
+<section class="wb-zone" id="public">
+  <div class="zone-header">
+    <h2 class="zone-heading">Topics</h2>
+    <p class="zone-dek">Clinical topic guides across the common pillars of general practice.</p>
+  </div>
+
+  <!-- Clinical pillars ──────────────────────────── -->
+  <div class="pillar-grid">
+
+    <div class="pillar-card">
+      <a href="/lifestyle-prevention/">
+        <p class="pillar-tag">Lifestyle</p>
+        <p class="pillar-name">Lifestyle Medicine</p>
+        <p class="pillar-blurb">Sleep, movement, alcohol, stress, and the everyday levers that quietly run public health.</p>
+      </a>
+    </div>
+
+    <div class="pillar-card">
+      <a href="/msk/">
+        <p class="pillar-tag">MSK</p>
+        <p class="pillar-name">Musculoskeletal Health</p>
+        <p class="pillar-blurb">Joint pain, soft-tissue injuries, and musculoskeletal conditions across the lifespan.</p>
+      </a>
+    </div>
+
+    <div class="pillar-card">
+      <a href="/paediatrics/">
+        <p class="pillar-tag">Paediatrics</p>
+        <p class="pillar-name">Child Health</p>
+        <p class="pillar-blurb">Developmental surveillance, common illness, immunisation, and when to refer.</p>
+      </a>
+    </div>
+
+    <div class="pillar-card">
+      <a href="/geriatrics/">
+        <p class="pillar-tag">Geriatrics</p>
+        <p class="pillar-name">Older Adult Health</p>
+        <p class="pillar-blurb">Frailty, falls, cognition, polypharmacy, and end-of-life planning.</p>
+      </a>
+    </div>
+
+    <div class="pillar-card">
+      <a href="/gynaecology/">
+        <p class="pillar-tag">Gynaecology</p>
+        <p class="pillar-name">Women's Health</p>
+        <p class="pillar-blurb">Contraception, menstrual health, and reproductive wellbeing in Aotearoa.</p>
+      </a>
+    </div>
+
+    <div class="pillar-card">
+      <a href="/dermatology/">
+        <p class="pillar-tag">Dermatology</p>
+        <p class="pillar-name">Skin Conditions</p>
+        <p class="pillar-blurb">Rashes, skin cancer, and dermatological management in general practice.</p>
+      </a>
+    </div>
+
+    <div class="pillar-card">
+      <a href="/mental-health/">
+        <p class="pillar-tag">Mental Health</p>
+        <p class="pillar-name">Mental Health</p>
+        <p class="pillar-blurb">Mood, anxiety, substance use, and psychotropic medicines in primary care.</p>
+      </a>
+    </div>
+
+    <div class="pillar-card">
+      <a href="/infectious-disease/">
+        <p class="pillar-tag">Vaccines</p>
+        <p class="pillar-name">Immunisation</p>
+        <p class="pillar-blurb">The NZ immunisation schedule, travel vaccines, and catch-up guidance.</p>
+      </a>
+    </div>
+
+    <div class="pillar-card">
+      <a href="/infectious-disease/">
+        <p class="pillar-tag">Travel Medicine</p>
+        <p class="pillar-name">Travel Health</p>
+        <p class="pillar-blurb">Pre-travel consults, prophylaxis, and returning traveller assessment.</p>
+      </a>
+    </div>
+
+  </div><!-- /pillar-grid -->
+
+  <!-- Practice materials ──────────────────────── -->
+  <div style="margin-top:32px; border-top:1px solid var(--rule); padding-top:24px; display:grid; grid-template-columns:repeat(3,1fr); border-left:1px solid var(--rule);">
+
+    <div class="pillar-card" style="border-top:none;">
+      <a href="/field-notes/">
+        <p class="pillar-tag">Field Notes</p>
+        <p class="pillar-name">Field Notes</p>
+        <p class="pillar-blurb">Short essays, clinical reflections, and notes from a working GP.</p>
+      </a>
+    </div>
+
+    <div class="pillar-card" style="border-top:none;">
+      <a href="/handouts/">
+        <p class="pillar-tag">Handouts</p>
+        <p class="pillar-name">Patient Handouts</p>
+        <p class="pillar-blurb">Printable patient education and shared decision-making sheets  -  free to print or email.</p>
+      </a>
+    </div>
+
+    <!-- empty cell to fill the third column -->
+    <div class="pillar-card" style="border-top:none; background:transparent; pointer-events:none; opacity:0;"></div>
+
+  </div>
+
+</section><!-- /TOPICS -->
+
+
+<!-- ── Footer ─────────────────────────────────────── -->
+<footer class="site-footer">
+  <span class="footer-brand">Working Diagnosis · workingdiagnosis.nz</span>
+  <nav class="footer-links" aria-label="Footer">
+    <a href="/">Home</a>
+    <a href="/field-notes/">Field Notes</a>
+    <a href="/handouts/">Handouts</a>
+    <a href="/resources/">Resources</a>
+    <a href="/consult-room/">Workbench</a>
+  </nav>
+</footer>
+
+</body>
+</html>

@@ -239,19 +239,19 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 <div class="handout-section" id="gynae">
   <h2>Gynaecology &amp; Women's Health</h2>
   <ul class="handout-list">
-    <li>Cervical screening  -  the NZ HPV test explained <span class="hl-soon">coming soon</span></li>
-    <li>Contraception  -  your options at a glance <span class="hl-soon">coming soon</span></li>
-    <li>Emergency contraception  -  the morning-after pill and IUD <span class="hl-soon">coming soon</span></li>
-    <li>The combined oral contraceptive pill  -  starting and side effects <span class="hl-soon">coming soon</span></li>
-    <li>The IUD (intrauterine device)  -  copper and hormonal options <span class="hl-soon">coming soon</span></li>
-    <li>Perimenopause  -  what is happening and what helps <span class="hl-soon">coming soon</span></li>
-    <li>Menopause  -  symptoms, HRT, and non-hormonal options <span class="hl-soon">coming soon</span></li>
-    <li>Pelvic floor exercises  -  a practical guide <span class="hl-soon">coming soon</span></li>
-    <li>Endometriosis  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Polycystic ovarian syndrome (PCOS) <span class="hl-soon">coming soon</span></li>
-    <li>Painful periods (dysmenorrhoea)  -  causes and relief <span class="hl-soon">coming soon</span></li>
-    <li>Heavy periods (menorrhagia)  -  causes and treatment options <span class="hl-soon">coming soon</span></li>
-    <li>Vaginal discharge  -  what is normal, what is not <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/cervical-screening/">Cervical screening  -  the NZ HPV test explained</a></li>
+    <li><a href="/handouts/contraception/">Contraception  -  your options at a glance</a></li>
+    <li><a href="/handouts/emergency-contraception/">Emergency contraception  -  the morning-after pill and IUD</a></li>
+    <li><a href="/handouts/combined-pill/">The combined oral contraceptive pill  -  starting and side effects</a></li>
+    <li><a href="/handouts/iud/">The IUD (intrauterine device)  -  copper and hormonal options</a></li>
+    <li><a href="/handouts/perimenopause/">Perimenopause  -  what is happening and what helps</a></li>
+    <li><a href="/handouts/menopause/">Menopause  -  symptoms, HRT, and non-hormonal options</a></li>
+    <li><a href="/handouts/pelvic-floor/">Pelvic floor exercises  -  a practical guide</a></li>
+    <li><a href="/handouts/endometriosis/">Endometriosis  -  understanding your diagnosis</a></li>
+    <li><a href="/handouts/pcos/">Polycystic ovarian syndrome (PCOS)</a></li>
+    <li><a href="/handouts/dysmenorrhoea/">Painful periods (dysmenorrhoea)  -  causes and relief</a></li>
+    <li><a href="/handouts/menorrhagia/">Heavy periods (menorrhagia)  -  causes and treatment options</a></li>
+    <li><a href="/handouts/vaginal-discharge/">Vaginal discharge  -  what is normal, what is not</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthify.nz">Healthify NZ - women's health</a> &middot; <a href="https://www.familyplanning.org.nz">Family Planning NZ</a> &middot; <a href="https://www.menopause.org.nz">Australasian Menopause Society</a></p>
 </div>

@@ -104,7 +104,7 @@ a:hover { color: var(--green); }
 .masthead-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; max-width: 1060px; margin: 0 auto; padding: 0 24px; }
 .brand { font-family: var(--serif-display); font-weight: 700; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.02em; }
 .brand em { font-style: italic; color: var(--green); }
-.primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.primary-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); }
 .primary-nav a:hover { color: var(--green); }
 .primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
@@ -112,14 +112,31 @@ a:hover { color: var(--green); }
 .primary-nav a[href="/handouts/"]:hover { color: var(--green); }
 .primary-nav a[href="/about/"] { color: var(--slate); }
 .primary-nav a[href="/about/"]:hover { color: var(--green); }
-.primary-nav a[href="/workshop/"] { color: var(--clay); }
-.primary-nav a[href="/workshop/"]:hover { color: var(--green); }
 .nav-sep { display: inline-block; width: 1px; height: 0.75em; background: var(--rule); vertical-align: middle; }
 .nav-dot { display: inline-block; color: var(--ink-mute); font-size: 1.5em; line-height: 0.5; padding: 0 3px; vertical-align: middle; opacity: 0.55; }
 .nav-pipe { display: inline-block; width: 1px; height: 0.85em; background: var(--rule); vertical-align: middle; margin: 0 2px; }
-.primary-nav a.nav-room { color: var(--ink-soft); font-weight: 700; }
+.primary-nav a.nav-room {
+  color: var(--ink-soft);
+  font-weight: 700;
+  background: var(--paper-warm);
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+.primary-nav a.nav-room:hover {
+  background: var(--paper);
+  color: var(--green-deep);
+  border-color: var(--green);
+}
+.primary-nav a.nav-room.is-current {
+  background: var(--green-deep);
+  color: var(--paper);
+  border-color: var(--green-deep);
+  padding: 8px 14px;
+}
 .primary-nav a.nav-pillar { color: var(--olive-light); }
-.primary-nav a.nav-room:hover, .primary-nav a.nav-pillar:hover { color: var(--green); }
+.primary-nav a.nav-pillar:hover { color: var(--green); }
 
 .hero { padding: 80px 0 56px; border-bottom: 1px solid var(--rule); }
 .home-hero { padding: 2.5rem 1rem 1.5rem; text-align: center; }

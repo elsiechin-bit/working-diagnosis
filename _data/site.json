@@ -5,8 +5,8 @@
   "url": "https://www.workingdiagnosis.xyz",
   "nav": [
     { "label": "the Library", "shortLabel": "Library", "url": "/library/", "inMasthead": true, "group": "room" },
-    { "label": "the Workbench", "shortLabel": "Workbench", "url": "/consult-room/", "inMasthead": true, "group": "room", "sep": "dot" },
-    { "label": "the Workshop", "shortLabel": "Workshop", "url": "/workshop/", "inMasthead": true, "group": "room", "sep": "dot" },
+    { "label": "the Workbench", "shortLabel": "Workbench", "url": "/consult-room/", "inMasthead": true, "group": "room" },
+    { "label": "the Workshop", "shortLabel": "Workshop", "url": "/workshop/", "inMasthead": true, "group": "room" },
     { "label": "Cardiovascular", "url": "/cardiovascular/", "row": 1, "inMasthead": true, "group": "pillar", "sep": "pipe" },
     { "label": "Respiratory", "url": "/respiratory/", "row": 1 },
     { "label": "Endocrinology", "url": "/endocrinology/", "row": 1 },
