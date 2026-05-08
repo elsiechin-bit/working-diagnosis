@@ -8,6 +8,7 @@
   --green:      #2F6B5C;
   --green-deep: #1F4A3F;
   --ochre:      #B8714F;
+  --olive-light: #8B9472;
   --rule:       #D9D1BD;
   --serif-display: 'Fraunces', Georgia, serif;
   --serif-body:    'Newsreader', Georgia, serif;
@@ -108,6 +109,11 @@ a:hover { color: var(--green); }
 .primary-nav a[href="/handouts/"] { color: var(--ochre); }
 .primary-nav a[href="/handouts/"]:hover { color: var(--green); }
 .nav-sep { display: inline-block; width: 1px; height: 0.75em; background: var(--rule); vertical-align: middle; }
+.nav-dot { display: inline-block; color: var(--ink-mute); font-size: 1em; line-height: 1; padding: 0 1px; vertical-align: middle; opacity: 0.55; }
+.nav-pipe { display: inline-block; width: 1px; height: 0.85em; background: var(--rule); vertical-align: middle; margin: 0 2px; }
+.primary-nav a.nav-room { color: var(--ink); }
+.primary-nav a.nav-pillar { color: var(--olive-light); }
+.primary-nav a.nav-room:hover, .primary-nav a.nav-pillar:hover { color: var(--green); }
 
 .hero { padding: 80px 0 56px; border-bottom: 1px solid var(--rule); }
 .home-hero { padding: 2.5rem 1rem 1.5rem; text-align: center; }
@@ -281,6 +287,52 @@ a:hover { color: var(--green); }
 .handout-back { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 2rem; }
 .handout-back a { color: var(--ink-mute); text-decoration: none; }
 .handout-back a:hover { color: var(--green); }
+
+/* PDF version link, top-right of any handout article */
+.topic-header { position: relative; }
+.handout-pdf-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 6px 10px 6px 9px;
+  text-decoration: none;
+  transition: color 120ms, border-color 120ms, background 120ms;
+}
+.handout-pdf-link:hover {
+  color: var(--green-deep);
+  border-color: var(--green);
+  background: var(--paper);
+}
+.handout-pdf-link-icon {
+  font-family: var(--sans-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1;
+  color: var(--ochre);
+}
+.handout-pdf-link:hover .handout-pdf-link-icon { color: var(--green); }
+
+@media (max-width: 720px) {
+  .handout-pdf-link {
+    position: static;
+    margin: 0 0 1.25rem;
+  }
+}
+
+@media print {
+  .handout-pdf-link { display: none; }
+}
 
 /* --- Updates ticker ----------------------------- */
 @keyframes ticker-scroll {

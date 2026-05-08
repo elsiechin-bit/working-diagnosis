@@ -6,10 +6,12 @@
     <nav class="primary-nav" aria-label="Primary">
       {% for item in site.nav %}
         {% if item.inMasthead %}
+          {% if item.sep == "dot" %}<span class="nav-dot" aria-hidden="true">&middot;</span>{% endif %}
+          {% if item.sep == "pipe" %}<span class="nav-pipe" aria-hidden="true"></span>{% endif %}
           {% if item.divider %}
             <span class="nav-sep" aria-hidden="true"></span>
           {% else %}
-            <a href="{{ item.url }}">{{ item.shortLabel or item.label }}</a>
+            <a href="{{ item.url }}"{% if item.group %} class="nav-{{ item.group }}"{% endif %}>{{ item.shortLabel or item.label }}</a>
           {% endif %}
         {% endif %}
       {% endfor %}

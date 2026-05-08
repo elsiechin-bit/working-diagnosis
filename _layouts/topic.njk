@@ -6,6 +6,13 @@ hasToc: true
 <article class="topic">
   <header class="topic-header">
 
+    {% if pageType == "handout" and page.fileSlug != "handouts" %}
+    <a class="handout-pdf-link" href="/handouts/{{ page.fileSlug }}/{{ page.fileSlug }}.pdf" download>
+      <span class="handout-pdf-link-icon" aria-hidden="true">↓</span>
+      <span class="handout-pdf-link-label">PDF version</span>
+    </a>
+    {% endif %}
+
     {% if pageType %}<span class="page-type-badge page-type-{{ pageType | slugify }}">{{ pageType }}</span>{% endif %}
     {% if pillar %}<p class="pillar-label">{{ pillar }}</p>{% endif %}
 
