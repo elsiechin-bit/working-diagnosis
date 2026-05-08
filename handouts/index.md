@@ -224,7 +224,7 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li>Acne  -  what works and what does not <span class="hl-soon">coming soon</span></li>
     <li>Rosacea  -  triggers and treatment <span class="hl-soon">coming soon</span></li>
     <li>Tinea  -  ringworm, athlete's foot, and jock itch <span class="hl-soon">coming soon</span></li>
-    <li>Impetigo (school sores)  -  treatment and return to school <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/school-sores/">Impetigo (school sores)  -  treatment and return to school</a></li>
     <li>Warts and verrucae  -  treatment options <span class="hl-soon">coming soon</span></li>
     <li>Molluscum contagiosum  -  what to expect <span class="hl-soon">coming soon</span></li>
     <li>Wound care at home  -  cleaning, dressing, signs of infection <span class="hl-soon">coming soon</span></li>
