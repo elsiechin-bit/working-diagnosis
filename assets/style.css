@@ -70,7 +70,7 @@ a:hover { color: var(--green); }
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
-  font-family: var(--mono);
+  font-family: var(--serif-body);
   font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
