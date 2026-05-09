@@ -147,7 +147,7 @@ a:hover { color: var(--green); }
   font-family: var(--mono);
   font-size: 0.72rem;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-transform: none;
   cursor: pointer;
   list-style: none;
   display: inline-flex;
@@ -206,12 +206,12 @@ a:hover { color: var(--green); }
 .nav-drop-list a:hover { color: var(--green-deep); }
 .nav-drop-group__title {
   font-family: var(--mono);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0.18em;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--ochre);
   margin: 0 0 8px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* --- Workbench: expandable category toggles --- */
