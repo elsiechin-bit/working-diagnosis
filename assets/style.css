@@ -58,7 +58,7 @@ a:hover { color: var(--green); }
 .tools-aside {
   position: sticky;
   top: 88px;
-  background: #E5EAEE;
+  background: var(--paper-warm);
   border: 1px solid var(--rule);
   border-radius: 14px;
   overflow: hidden;
