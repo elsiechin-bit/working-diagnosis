@@ -964,18 +964,9 @@ button.handout-pdf-link {
 
 /* === GP Tools sidebar: hover-to-reveal tab === */
 
-/* Detach sidebar from flex flow so main content reclaims the width.
-   Pin to the right edge as a slim tab that expands on hover/focus. */
+/* Hide the tools sidebar on all pages */
 .sidebar-tools {
-  position: fixed;
-  right: 0;
-  top: 100px;
-  width: 44px;
-  max-height: calc(100vh - 120px);
-  z-index: 40;
-  overflow: visible;
-  transition: width 240ms ease;
-  flex: none;
+  display: none;
 }
 .sidebar-tools:hover,
 .sidebar-tools:focus-within {
@@ -1048,28 +1039,6 @@ button.handout-pdf-link {
 .sidebar-tools:hover::after,
 .sidebar-tools:focus-within::after {
   opacity: 0;
-}
-
-/* On handouts pages: disable fixed sidebar and let it stack normally */
-body.page-handouts .sidebar-tools {
-  position: static;
-  width: 100%;
-  max-height: none;
-  z-index: auto;
-  margin-top: 48px;
-}
-body.page-handouts .sidebar-tools::before,
-body.page-handouts .sidebar-tools::after { display: none; }
-body.page-handouts .sidebar-tools .tools-aside {
-  position: static;
-  top: auto;
-  padding: 24px 22px;
-  height: auto;
-  max-height: none;
-}
-body.page-handouts .sidebar-tools .tools-aside > * {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* Mobile: drop the hover-tab pattern and let the sidebar return to its
