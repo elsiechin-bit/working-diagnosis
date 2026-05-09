@@ -9,15 +9,49 @@ permalink: /paediatrics/otitis-media/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Diagnosis requires three elements: rapid onset of symptoms, evidence of middle ear effusion on otoscopy, and signs of middle ear inflammation. A red TM alone is not sufficient - it may simply reflect a crying child.</li>
-    <li>80% of uncomplicated AOM in children over 2 resolves without antibiotics within 72 hours. Watchful waiting with adequate analgesia is appropriate first-line management for mild-to-moderate cases in this age group.</li>
-    <li>Antibiotics are indicated for: under 2 years, bilateral AOM, perforation with discharge, severe symptoms, significant comorbidities, or failure to improve after 48-72 hours. First choice: amoxicillin 40 mg/kg/day in 3 divided doses for 5 days.</li>
-    <li>CSOM (persistent discharge through perforated eardrum) affects around 4% of Maori and Pacific children versus under 1% of NZ European children. All persistent CSOM warrants ENT referral. Topical ciprofloxacin, not aminoglycosides, in a perforated ear.</li>
-    <li>Mastoiditis is the key urgent complication to recognise: post-auricular swelling, erythema, tenderness, and a protruding ear. Same-day referral.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/paediatrics/">Paediatrics</a><span class="topic-trail-sep">·</span><span class="here">Acute otitis media</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Mastoiditis</strong> - post-auricular swelling, erythema, tenderness, protruding ear - same-day</li>
+      <li>Facial palsy in AOM - urgent ENT</li>
+      <li>Persistent CSOM in tamariki Maori or Pacific - high baseline rate, ENT referral, language delay risk</li>
+      <li>Recurrent AOM disrupting language and learning - audiology + ENT pathway</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Diagnosis</dt>
+      <dd>Rapid onset + middle ear effusion + middle ear inflammation. Red TM alone is not enough</dd>
+      <dt>Watchful waiting</dt>
+      <dd>Mild-moderate AOM in &gt;2-year-old - 80% resolve in 72 hours. Adequate analgesia</dd>
+      <dt>Antibiotics if</dt>
+      <dd>Under 2, bilateral, perforation/discharge, severe, comorbidity, or failure at 48-72 hours</dd>
+      <dt>First choice</dt>
+      <dd>Amoxicillin 40 mg/kg/day TDS × 5 days. Topical ciprofloxacin (NOT aminoglycoside) if perforated</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Mastoiditis or facial nerve palsy - same-day</li>
+      <li>CSOM (persistent discharge through perforation) - ENT</li>
+      <li>Recurrent AOM (≥3 in 6 months or ≥4 in a year)</li>
+      <li>Persistent hearing concerns or speech delay</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li>Most ear infections clear up on their own with paracetamol and time</li>
+      <li>Antibiotics often are not needed - we will say if they are</li>
+      <li>Come back if pain &gt;3 days, fever returns, swelling behind the ear, or your tamaiti is unwell</li>
+      <li>Hearing checks matter - tell us if you notice changes</li>
+    </ul>
+  </div>
 </div>
 
 <p>

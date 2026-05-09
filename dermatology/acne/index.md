@@ -8,15 +8,49 @@ description: Managing acne in general practice - grading, topical and oral thera
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Mild acne: topical adapalene (OTC in NZ) plus benzoyl peroxide. Apply separately - BP in the morning, adapalene at night. Start every second day to minimise irritation. Minimum 8-12 weeks before judging response.</li>
-    <li>Moderate acne: add topical clindamycin 1%, always with benzoyl peroxide (never clindamycin monotherapy - resistance). If insufficient after 2-3 months, oral doxycycline 50-100 mg daily for up to 3-6 months.</li>
-    <li>Severe or scarring (nodulocystic, significant scarring, treatment failure): refer for isotretinoin assessment. Dermatologist initiation required in NZ (PHARMAC Special Authority).</li>
-    <li>Post-inflammatory hyperpigmentation (PIH) can be the primary complaint, especially in Maori, Pacific, and Asian patients with Fitzpatrick types IV-VI. Treat active acne aggressively to prevent new marks; add azelaic acid and sun protection for existing PIH.</li>
-    <li>Treatment failure is usually adherence failure. The three most common reasons: stopping too early, irritation that could be managed by adjusting frequency, and not maintaining treatment long-term.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/dermatology/">Dermatology</a><span class="topic-trail-sep">·</span><span class="here">Acne</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Acne fulminans - sudden severe nodulocystic with systemic upset</li>
+      <li>Hirsutism + irregular periods + acne - PCOS workup</li>
+      <li>Scarring acne - refer earlier than later, scarring is preventable not treatable</li>
+      <li>Mental-health impact disproportionate to severity - treat aggressively</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Mild</dt>
+      <dd>Topical adapalene (OTC in NZ) + benzoyl peroxide. Separate AM/PM, every 2nd night to start, judge at 8-12 weeks</dd>
+      <dt>Moderate</dt>
+      <dd>Add topical clindamycin 1% (always with BPO, never alone) ± oral doxycycline 50-100 mg/day for 3 months max</dd>
+      <dt>Pigmentation</dt>
+      <dd>PIH common in Fitzpatrick IV-VI - treat active acne hard, add azelaic acid + sun protection</dd>
+      <dt>Avoid</dt>
+      <dd>Topical fusidic acid (resistance), clindamycin monotherapy, antibiotics &gt;3 months</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Severe / nodulocystic / scarring - isotretinoin (Special Authority, dermatologist initiation)</li>
+      <li>Failure on optimised topical + 3 months oral antibiotic</li>
+      <li>Significant scarring already present</li>
+      <li>Acne fulminans or DRESS-like reaction</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Topicals take 8-12 weeks - judging at 4 weeks is too early</li>
+      <li>Treatment continues even when clear - it prevents the next wave</li>
+      <li>Picking turns spots into scars</li>
+      <li>Diet evidence is mixed; high-glycaemic diets may worsen, dairy is plausible but not proven</li>
+    </ul>
+  </div>
 </div>
 
 <p>

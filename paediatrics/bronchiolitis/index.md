@@ -9,14 +9,49 @@ permalink: /paediatrics/bronchiolitis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Bronchiolitis is a clinical diagnosis. Do not routinely use salbutamol, corticosteroids, antibiotics, or hypertonic saline - none have evidence of benefit and several cause harm. Management is supportive: hydration and oxygenation.</li>
-    <li>The under-6-month group is at highest risk of severe disease, apnoea, and respiratory failure. Premature infants (under 35 weeks), those with congenital heart disease, chronic lung disease, or immunodeficiency require lower admission thresholds.</li>
-    <li>Admission criteria: SpO2 below 92% in air; RR above 70; significant recession or head bobbing; apnoea; feeding below 50% of usual volume over 24 hours; age under 6 weeks; significant comorbidity.</li>
-    <li>Nirsevimab (Beyfortus) was added to the NZ funded immunisation schedule in 2024 - a single-dose monoclonal antibody providing passive RSV protection across an RSV season for eligible infants.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/paediatrics/">Paediatrics</a><span class="topic-trail-sep">·</span><span class="here">Bronchiolitis</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Apnoea in &lt;6 month old - admit even if well between episodes</li>
+      <li>Severe recession, head bobbing, exhaustion - imminent respiratory failure</li>
+      <li>Underlying premature, CHD, CLD, immunodeficiency - lower threshold for admission</li>
+      <li>Pneumonia overlap - focal crackles, persisting fever, deteriorating</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Diagnosis</dt>
+      <dd>Clinical - viral prodrome → tachypnoea, recession, wheeze, age usually &lt;2</dd>
+      <dt>Treatment</dt>
+      <dd>Supportive only - hydration, oxygenation, minimal handling</dd>
+      <dt>What does NOT help</dt>
+      <dd>Salbutamol, corticosteroids, antibiotics, hypertonic saline - no benefit, sometimes harm</dd>
+      <dt>Prevention</dt>
+      <dd>Nirsevimab (Beyfortus) on NZ funded schedule from 2024 for eligible infants</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>SpO2 &lt;92% in air, RR &gt;70, significant recession, head bobbing, apnoea</li>
+      <li>Feeding &lt;50% usual over 24 hours</li>
+      <li>Age &lt;6 weeks with any concerning features</li>
+      <li>Significant comorbidity (premature, CHD, CLD)</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li>Bronchiolitis lasts 7-10 days; cough can linger 2-3 weeks</li>
+      <li>Worst day is often day 3-5 of illness</li>
+      <li>Watch for: feeding less than half usual, fast or laboured breathing, blue lips, going floppy</li>
+      <li>Smaller more frequent feeds; come back any time you are worried</li>
+    </ul>
+  </div>
 </div>
 
 <p>Bronchiolitis is the most common serious respiratory illness of infancy and the leading cause of infant hospitalisation in New Zealand. It is caused predominantly by respiratory syncytial virus (RSV), with NZ peak incidence in the winter months (June to August). Most cases resolve with supportive care; the challenge is recognising the minority who deteriorate and need hospital-level management.</p>

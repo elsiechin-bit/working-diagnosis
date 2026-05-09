@@ -9,14 +9,49 @@ permalink: /paediatrics/gastroenteritis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>The clinical task is accurate dehydration assessment - it is dehydration, not the gastrointestinal symptoms themselves, that determines whether a child can be safely managed at home or needs hospital care.</li>
-    <li>ORS is the cornerstone of management. Plain water should not be used as the sole rehydration fluid (causes hyponatraemia). Sports drinks and fruit juice are too concentrated in sugar and too low in sodium. Commercial ORS (Gastrolyte, Pedialyte) or sachets are the right choice.</li>
-    <li>Loperamide should not be used in children under 12 years and is contraindicated under 2 years. The BRAT diet has no evidence base and is unnecessarily restrictive - resume normal feeding as soon as tolerated.</li>
-    <li>Ondansetron reduces vomiting frequency and hospitalisation rate in moderate gastroenteritis. Note: not funded for outpatient use in NZ as of 2024 - families may need to purchase at cost.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/paediatrics/">Paediatrics</a><span class="topic-trail-sep">·</span><span class="here">Gastroenteritis</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Severe dehydration - lethargic, sunken eyes, capillary refill &gt;3s, weak pulse - urgent IV</li>
+      <li>Surgical abdomen masquerading as gastro - bilious vomit, persistent localised pain, abdominal distension</li>
+      <li>UTI or sepsis as the cause of vomiting in young infants</li>
+      <li>HUS - bloody diarrhoea, pallor, oliguria - urgent</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Assessment</dt>
+      <dd>Dehydration severity - none / clinical (3-8%) / severe (≥8%)</dd>
+      <dt>ORS</dt>
+      <dd>Gastrolyte / Pedialyte. NOT plain water alone (hyponatraemia), NOT sports drinks or juice</dd>
+      <dt>Ondansetron</dt>
+      <dd>Reduces vomiting and admission - not funded for outpatient use, families pay</dd>
+      <dt>Diet</dt>
+      <dd>Resume normal feeding as soon as tolerated. BRAT diet has no evidence base</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Clinical dehydration unable to tolerate ORS in clinic</li>
+      <li>Severe dehydration - urgent IV access</li>
+      <li>Bloody diarrhoea, persistent fever, or systemic features</li>
+      <li>Bilious vomiting, suspected surgical abdomen</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li>Small sips of ORS often work better than big drinks - 5 mL every few minutes</li>
+      <li>Loperamide is NOT for tamariki - especially under 12</li>
+      <li>Watch for: no wet nappy in 6+ hours, lethargic, very sunken eyes, blood in stool</li>
+      <li>Most cases settle in 5-7 days; loose stool may linger longer</li>
+    </ul>
+  </div>
 </div>
 
 <p>Acute gastroenteritis is one of the most common paediatric presentations in NZ general practice and emergency departments. The majority of cases are viral (rotavirus, norovirus, adenovirus) and self-limiting. The clinical task is accurate assessment of dehydration severity, because it is dehydration - not the gastrointestinal symptoms themselves - that determines whether a child can be managed safely at home or needs hospital care.</p>

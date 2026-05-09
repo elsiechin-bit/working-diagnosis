@@ -8,14 +8,49 @@ description: Rosacea in general practice - subtypes, trigger avoidance, topical 
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Rosacea is a relapsing-remitting condition with no cure. The goal is control, not resolution. Clearly explaining this natural history improves adherence and reduces frustration - flares will occur; consistent topical use is the best prevention.</li>
-    <li>The absence of comedones is one of the most useful clinical features distinguishing rosacea from acne vulgaris. In darker skin types (Fitzpatrick IV-VI), the erythematous component may be less obvious and papulopustular disease can be misattributed.</li>
-    <li>For papulopustular rosacea: topical metronidazole 0.75-1% is first-line. For moderate-to-severe disease, oral doxycycline 40 mg modified-release (anti-inflammatory dose) is the most evidence-based oral option.<sup>1</sup></li>
-    <li>Ocular rosacea (blepharitis, foreign body sensation): may occur without facial involvement. Oral doxycycline for moderate-severe cases. Refer to ophthalmology if corneal involvement is suspected.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/dermatology/">Dermatology</a><span class="topic-trail-sep">·</span><span class="here">Rosacea</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Ocular rosacea with corneal involvement - urgent ophthalmology</li>
+      <li>Lupus, dermatomyositis, or carcinoid masquerading as rosacea</li>
+      <li>SLE rash - butterfly distribution, photosensitive, sparing nasolabial folds</li>
+      <li>Steroid-induced rosacea after long topical steroid use</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Diagnosis</dt>
+      <dd>Centrofacial erythema, papules/pustules WITHOUT comedones</dd>
+      <dt>Erythema</dt>
+      <dd>Trigger avoidance (heat, alcohol, sun, spicy food, hot drinks); brimonidine 0.33% gel for short-term redness</dd>
+      <dt>Papulopustular</dt>
+      <dd>Topical metronidazole 0.75-1% first-line; or azelaic acid 15%; oral doxycycline 40 mg MR for moderate-severe</dd>
+      <dt>Phymatous</dt>
+      <dd>Established rhinophyma needs surgical or laser debulking; isotretinoin (Special Authority) for early</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Refractory disease despite optimised therapy</li>
+      <li>Phymatous changes for surgical/laser referral</li>
+      <li>Ocular rosacea with corneal involvement</li>
+      <li>Diagnostic uncertainty (lupus, dermatomyositis)</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Rosacea is relapsing-remitting - the goal is control, not cure</li>
+      <li>Identify your triggers: spicy food, hot drinks, alcohol, heat, sun, stress</li>
+      <li>Use gentle skin care; avoid astringents and strong cleansers</li>
+      <li>Daily SPF is part of treatment</li>
+    </ul>
+  </div>
 </div>
 
 <p>Rosacea is a chronic inflammatory condition affecting the central face, characterised by episodes of flushing, persistent erythema, telangiectasia, and in papulopustular subtypes, acneiform lesions without comedones. It predominantly affects fair-skinned individuals of northern European ancestry aged 30-60, though it can occur across Fitzpatrick skin types. The aetiology involves neurovascular dysregulation, innate immune activation, and the commensal mite <em>Demodex folliculorum</em> (found in elevated densities on rosacea-affected skin).</p>

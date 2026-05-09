@@ -9,14 +9,49 @@ permalink: /paediatrics/febrile-convulsion/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Febrile convulsions affect 2-5% of children aged 6 months to 5 years. The majority are simple - brief, generalised, single episode, full recovery within an hour - and carry an excellent prognosis. Simple febrile convulsions do not cause brain damage or epilepsy.</li>
-    <li>Complex febrile convulsion: focal features, duration 15+ minutes, more than one episode in 24 hours, or incomplete recovery within an hour. Complex features require investigation to exclude meningitis, encephalitis, or structural pathology.</li>
-    <li>Antipyretics do not prevent febrile convulsions and should not be used for this purpose. They improve comfort in a feverish child but do not alter seizure risk.</li>
-    <li>The post-ictal period is normal and expected. A child who is drowsy but rousable and gradually returning to baseline after a generalised seizure does not need emergency investigation - this is physiology, not pathology.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/paediatrics/">Paediatrics</a><span class="topic-trail-sep">·</span><span class="here">Febrile convulsion</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Meningitis / encephalitis</strong> - LP if &lt;12 months, complex features, or incomplete recovery</li>
+      <li>Complex features: focal, &gt;15 min, &gt;1 in 24 hours, incomplete recovery within an hour</li>
+      <li>Status epilepticus - active seizure &gt;5 min - buccal/intranasal midazolam, ambulance</li>
+      <li>First afebrile seizure (not febrile) - different workup</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Simple FC</dt>
+      <dd>Generalised, &lt;15 min, single in 24 h, full recovery &lt;1 h - no investigation if clear fever source</dd>
+      <dt>Acute</dt>
+      <dd>Position on side, time the seizure; buccal/IN midazolam 0.3-0.5 mg/kg if &gt;5 min</dd>
+      <dt>Antipyretics</dt>
+      <dd>For comfort only - do NOT prevent recurrence</dd>
+      <dt>Post-ictal</dt>
+      <dd>Drowsy but rousable, gradual recovery is normal</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Any complex feature</li>
+      <li>Age &lt;12 months with febrile seizure</li>
+      <li>Recurrent febrile seizures or family history of epilepsy</li>
+      <li>Seizure &gt;5 minutes despite first dose midazolam - 111</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li>Simple febrile seizures do NOT cause brain damage or epilepsy</li>
+      <li>Around 1 in 3 affected tamariki have another febrile seizure - usually with a different illness</li>
+      <li>Most outgrow it by 5-6 years old</li>
+      <li>Lay on the side, time it, do not put anything in the mouth; ring 111 if &gt;5 minutes</li>
+    </ul>
+  </div>
 </div>
 
 <p>Febrile convulsions are the most common seizure disorder of childhood, affecting approximately 2-5% of children aged 6 months to 5 years.<sup>1</sup> The vast majority are simple febrile convulsions - brief, generalised, and without sequelae. Parental anxiety is considerable; calm, evidence-based reassurance is a core part of the consultation.</p>

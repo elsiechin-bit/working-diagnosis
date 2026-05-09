@@ -455,13 +455,24 @@ a:hover { color: var(--green); }
 .specialty-card.is-soon::after { content: "coming soon"; display: inline-block; margin-top: 4px; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
 @media (max-width: 720px) { .specialty-grid { grid-template-columns: 1fr; } }
 
-/* --- Condition page: panic strip (4 tiles for panic-scan use) --- */
-.panic-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 0 0 32px; }
+/* --- Condition page: panic strip (2x2 for panic-scan use) ---
+   Visual order regardless of HTML source order:
+     [ First-line   ][ Tell the patient ]
+     [ Don't miss   ][ Refer when       ]                                  */
+.panic-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "first-line tell"
+    "dont-miss  refer";
+  gap: 10px;
+  margin: 0 0 32px;
+}
 .panic-tile { padding: 14px 16px; background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 4px; }
-.panic-tile.dont-miss { border-left: 4px solid var(--ochre); }
-.panic-tile.first-line { border-left: 4px solid var(--green); }
-.panic-tile.refer { border-left: 4px solid var(--slate); }
-.panic-tile.tell { border-left: 4px solid var(--olive-light); }
+.panic-tile.first-line { grid-area: first-line; border-left: 4px solid var(--green); }
+.panic-tile.tell       { grid-area: tell;       border-left: 4px solid var(--olive-light); }
+.panic-tile.dont-miss  { grid-area: dont-miss;  border-left: 4px solid var(--ochre); }
+.panic-tile.refer      { grid-area: refer;      border-left: 4px solid var(--slate); }
 .panic-tile__label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 8px; font-weight: 500; }
 .panic-tile.dont-miss .panic-tile__label { color: var(--ochre); }
 .panic-tile.first-line .panic-tile__label { color: var(--green-deep); }
@@ -475,9 +486,21 @@ a:hover { color: var(--green); }
 .panic-tile dt { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-mute); margin: 6px 0 1px; }
 .panic-tile dt:first-child { margin-top: 0; }
 .panic-tile dd { margin: 0; font-family: var(--serif-body); font-size: 13.5px; line-height: 1.4; color: var(--ink); }
-@media (max-width: 960px) { .panic-strip { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 540px) { .panic-strip { grid-template-columns: 1fr; } }
-@media print { .panic-strip { grid-template-columns: 1fr 1fr; gap: 6pt; margin-bottom: 12pt; } .panic-tile { break-inside: avoid; padding: 8pt; } .panic-tile li { font-size: 9.5pt; } }
+@media (max-width: 540px) {
+  .panic-strip {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "first-line"
+      "tell"
+      "dont-miss"
+      "refer";
+  }
+}
+@media print {
+  .panic-strip { gap: 6pt; margin-bottom: 12pt; }
+  .panic-tile { break-inside: avoid; padding: 8pt; }
+  .panic-tile li { font-size: 9.5pt; }
+}
 
 .wordmark { font-family: var(--serif-display); font-weight: 800; font-size: clamp(60px, 10vw, 132px); line-height: 0.92; letter-spacing: -0.04em; margin: 0; }
 .wordmark .second { display: block; font-style: italic; color: var(--green); }

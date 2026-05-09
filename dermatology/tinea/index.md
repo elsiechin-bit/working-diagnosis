@@ -8,14 +8,49 @@ description: Diagnosing and treating tinea and other superficial fungal infectio
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Distinguishing tinea from candida from pityriasis versicolor matters because treatment differs. Tinea: scaling, usually annular, advancing edge. Candidal intertrigo: beefy-red with satellite pustules in moist folds. Pityriasis versicolor: hypo- or hyperpigmented, finely scaling macules on the trunk that fail to tan.</li>
-    <li>Topical steroids applied to an undiagnosed tinea will temporarily suppress the appearance but allow the fungus to spread - the pattern that results ("tinea incognito") is often bizarre and easily missed. Confirm the diagnosis before treating.</li>
-    <li>Onychomycosis: confirm with mycology before treating - nail dystrophy has many non-fungal causes and oral antifungal therapy is prolonged. Oral terbinafine 250 mg daily for 6 weeks (fingernails) or 12 weeks (toenails) is the most effective regimen.<sup>1</sup></li>
-    <li>Tinea capitis always requires oral therapy. Griseofulvin is first-line where available; terbinafine is an alternative. School exclusion is not required.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/dermatology/">Dermatology</a><span class="topic-trail-sep">·</span><span class="here">Tinea &amp; fungal</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Tinea incognito</strong> - bizarre pattern after topical steroid; confirm before treating</li>
+      <li>Tinea capitis with kerion - boggy inflammatory mass, oral therapy</li>
+      <li>Cellulitis on top of tinea pedis - common entry point</li>
+      <li>Eczema or psoriasis misdiagnosed as tinea (no advancing edge, no central clearing)</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Pedis / corporis / cruris</dt>
+      <dd>Topical terbinafine or azole (clotrimazole) for 2-4 weeks</dd>
+      <dt>Capitis</dt>
+      <dd>Always oral - griseofulvin first-line, terbinafine alternative. No school exclusion</dd>
+      <dt>Onychomycosis</dt>
+      <dd>Confirm with mycology first. Oral terbinafine 250 mg/day - 6 weeks (fingernails) or 12 weeks (toenails)</dd>
+      <dt>Pityriasis versicolor</dt>
+      <dd>Selenium sulfide or ketoconazole shampoo applied to skin × 10 min, rinse</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Recalcitrant tinea unresponsive to optimised therapy</li>
+      <li>Tinea capitis with kerion or extensive disease</li>
+      <li>Recurrent onychomycosis</li>
+      <li>Diagnostic uncertainty after KOH/culture</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Treatment takes weeks - keep going past when it looks gone</li>
+      <li>Don't share towels, shoes, or hats; treat household contacts if scalp involvement</li>
+      <li>Nail treatment is months - LFT before terbinafine if you have liver issues</li>
+      <li>Pigment changes after pityriasis versicolor take months to fade - that is normal</li>
+    </ul>
+  </div>
 </div>
 
 <p>Superficial fungal infections are caused predominantly by dermatophytes (tinea) or yeasts (<em>Candida</em>, <em>Malassezia</em>). Distinguishing them clinically matters because the treatment differs. Tinea presents with a scaling, usually annular, advancing edge; candidal intertrigo is beefy-red with satellite pustules in moist folds; pityriasis versicolor (<em>Malassezia</em>) causes hypo- or hyperpigmented, finely scaling macules on the trunk - often noticed as patches that fail to tan.</p>

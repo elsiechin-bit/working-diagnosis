@@ -8,14 +8,49 @@ description: Managing psoriasis in general practice, including comorbidities and
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Psoriasis affects approximately 2-3% of the NZ population and is lifelong. It is more than a skin condition: screen for psoriatic arthritis at every visit (affects up to 30% of patients), and monitor cardiovascular and metabolic risk.</li>
-    <li>Mild disease (under 3% BSA, DLQI ≤10): topical corticosteroids plus calcipotriol. Daivobet (calcipotriol/betamethasone dipropionate combination) is PHARMAC-funded and highly effective for body and scalp plaques.</li>
-    <li>Moderate-to-severe (BSA ≥10% or DLQI >10, or difficult sites): refer for phototherapy or biologics. Several IL-17, IL-23, and TNF inhibitors are PHARMAC-funded with criteria.</li>
-    <li>Quality-of-life impact matters as much as body surface area. A small plaque on the hands, face, or genitalia may warrant referral even if the BSA is technically "mild".</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/dermatology/">Dermatology</a><span class="topic-trail-sep">·</span><span class="here">Psoriasis</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Psoriatic arthritis</strong> - affects up to 30%; screen at every visit (joint pain, dactylitis, nail pitting)</li>
+      <li>Erythrodermic or pustular psoriasis with systemic features - admission</li>
+      <li>Cardiovascular and metabolic comorbidity - psoriasis is independent CV risk</li>
+      <li>IBD and depression - both raised in psoriasis</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Severity</dt>
+      <dd>BSA + DLQI; small but high-impact site (face, palms, genitals) is "moderate"</dd>
+      <dt>Mild</dt>
+      <dd>Daivobet (calcipotriol + betamethasone) - PHARMAC-funded, highly effective for body and scalp</dd>
+      <dt>Scalp</dt>
+      <dd>Daivobet gel or coal tar shampoo + potent steroid lotion</dd>
+      <dt>Moderate-severe</dt>
+      <dd>Refer for phototherapy or biologic (IL-17, IL-23, TNF inhibitors funded with criteria)</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>BSA ≥10% or DLQI &gt;10 despite optimised topicals</li>
+      <li>Difficult sites significantly impacting life</li>
+      <li>Suspected psoriatic arthritis - rheumatology</li>
+      <li>Pregnancy planning on systemic therapy</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Psoriasis is lifelong but very treatable - the goal is control, not cure</li>
+      <li>Triggers: stress, infection, alcohol, smoking, beta-blockers, lithium</li>
+      <li>Treat associated CV risk and mood as part of the condition</li>
+      <li>Joint pain or stiffness lasting &gt;30 minutes in the morning is worth telling us about</li>
+    </ul>
+  </div>
 </div>
 
 <p>

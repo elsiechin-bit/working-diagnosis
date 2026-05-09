@@ -161,21 +161,21 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <h2>Musculoskeletal</h2>
   <ul class="handout-list">
     <li><a href="/handouts/lower-back-pain/">Lower back pain  -  why it gets better, and how to help</a></li>
-    <li>Acute neck pain  -  self-care at home <span class="hl-soon">coming soon</span></li>
-    <li>Knee osteoarthritis  -  what it is and what helps <span class="hl-soon">coming soon</span></li>
-    <li>Hip osteoarthritis  -  what it is and what helps <span class="hl-soon">coming soon</span></li>
-    <li>Shoulder pain  -  rotator cuff and impingement <span class="hl-soon">coming soon</span></li>
-    <li>Frozen shoulder (adhesive capsulitis)  -  stages and treatment <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/acute-neck-pain/">Acute neck pain  -  self-care at home</a></li>
+    <li><a href="/handouts/knee-osteoarthritis/">Knee osteoarthritis  -  what it is and what helps</a></li>
+    <li><a href="/handouts/hip-osteoarthritis/">Hip osteoarthritis  -  what it is and what helps</a></li>
+    <li><a href="/handouts/shoulder-pain/">Shoulder pain  -  rotator cuff and impingement</a></li>
+    <li><a href="/handouts/frozen-shoulder/">Frozen shoulder (adhesive capsulitis)  -  stages and treatment</a></li>
     <li><a href="/handouts/steroid-joint-injection/">Steroid joint injection  -  looking after your joint afterwards</a></li>
     <li><a href="/handouts/gout-acute-attack/">Gout  -  managing an acute attack</a></li>
-    <li>Gout  -  preventing future attacks (diet and allopurinol) <span class="hl-soon">coming soon</span></li>
-    <li>Plantar heel pain (plantar fasciitis) <span class="hl-soon">coming soon</span></li>
-    <li>Tennis elbow and golfer's elbow  -  lateral and medial epicondylalgia <span class="hl-soon">coming soon</span></li>
-    <li>Osteoporosis  -  understanding your bone density result <span class="hl-soon">coming soon</span></li>
-    <li>Rheumatoid arthritis  -  overview and management in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Fibromyalgia  -  understanding widespread pain <span class="hl-soon">coming soon</span></li>
-    <li>Exercise and chronic pain  -  why keeping moving matters <span class="hl-soon">coming soon</span></li>
-    <li>Ankle sprain  -  RICE, return to activity, and when to x-ray <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/gout-prevention/">Gout  -  preventing future attacks (diet and allopurinol)</a></li>
+    <li><a href="/handouts/plantar-heel-pain/">Plantar heel pain (plantar fasciitis)</a></li>
+    <li><a href="/handouts/tennis-elbow/">Tennis elbow and golfer's elbow  -  lateral and medial epicondylalgia</a></li>
+    <li><a href="/handouts/osteoporosis/">Osteoporosis  -  understanding your bone density result</a></li>
+    <li><a href="/handouts/rheumatoid-arthritis/">Rheumatoid arthritis  -  overview and management in NZ</a></li>
+    <li><a href="/handouts/fibromyalgia/">Fibromyalgia  -  understanding widespread pain</a></li>
+    <li><a href="/handouts/chronic-pain-exercise/">Exercise and chronic pain  -  why keeping moving matters</a></li>
+    <li><a href="/handouts/ankle-sprain/">Ankle sprain  -  RICE, return to activity, and when to x-ray</a></li>
     <li><a href="/handouts/acc/">ACC  -  understanding your cover in NZ</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/m/musculoskeletal/">Health Navigator  -  Musculoskeletal</a> · <a href="https://www.acc.co.nz/im-injured/">ACC  -  I'm Injured</a> · <a href="https://arthritis.org.nz">Arthritis NZ</a></p>
@@ -271,12 +271,12 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="/handouts/paediatric-eczema/">Eczema in babies and children</a></li>
     <li><a href="/handouts/croup/">Croup  -  the barking cough at 2am</a></li>
     <li><a href="/handouts/bronchiolitis/">Bronchiolitis  -  the wheezy cough in babies</a></li>
-    <li>Otitis media (ear infections) <span class="hl-soon">coming soon</span></li>
-    <li>Glue ear <span class="hl-soon">coming soon</span></li>
-    <li>Toilet training <span class="hl-soon">coming soon</span></li>
-    <li>Tantrums and toddler behaviour <span class="hl-soon">coming soon</span></li>
-    <li>Head lice <span class="hl-soon">coming soon</span></li>
-    <li>Threadworms <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/otitis-media/">Otitis media (ear infections)</a></li>
+    <li><a href="/handouts/glue-ear/">Glue ear</a></li>
+    <li><a href="/handouts/toilet-training/">Toilet training</a></li>
+    <li><a href="/handouts/toddler-tantrums/">Tantrums and toddler behaviour</a></li>
+    <li><a href="/handouts/head-lice/">Head lice</a></li>
+    <li><a href="/handouts/threadworms/">Threadworms</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.kidshealth.org.nz/">KidsHealth NZ</a> &middot; <a href="https://www.plunket.org.nz/">Plunket</a> 0800 933 922 &middot; <a href="https://www.immune.org.nz/">IMAC</a></p>
 </div>
@@ -286,13 +286,13 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <h2>General Practice &amp; the NZ Health System</h2>
   <ul class="handout-list">
     <li><a href="/handouts/nz-health-system/">The New Zealand health system  -  a guide for patients</a></li>
-    <li>ACC  -  understanding your cover in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Your rights as a patient in NZ  -  the Code of Rights explained <span class="hl-soon">coming soon</span></li>
-    <li>Making a complaint about health care in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Preparing for a GP appointment  -  making the most of 15 minutes <span class="hl-soon">coming soon</span></li>
-    <li>Shared decision-making  -  questions to ask before agreeing to treatment <span class="hl-soon">coming soon</span></li>
-    <li>Understanding your blood test results <span class="hl-soon">coming soon</span></li>
-    <li>Screening in NZ  -  what tests are recommended and when <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/acc/">ACC  -  understanding your cover in NZ</a></li>
+    <li><a href="/handouts/patient-rights/">Your rights as a patient in NZ  -  the Code of Rights explained</a></li>
+    <li><a href="/handouts/complaints-nz/">Making a complaint about health care in NZ</a></li>
+    <li><a href="/handouts/gp-appointment-prep/">Preparing for a GP appointment  -  making the most of 15 minutes</a></li>
+    <li><a href="/handouts/shared-decision-making/">Shared decision-making  -  questions to ask before agreeing to treatment</a></li>
+    <li><a href="/handouts/blood-test-results/">Understanding your blood test results</a></li>
+    <li><a href="/handouts/screening-nz/">Screening in NZ  -  what tests are recommended and when</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.tewhatuora.govt.nz">Health New Zealand  -  Te Whatu Ora</a> · <a href="https://healthify.nz/">Healthify NZ</a> · <a href="https://www.hdc.org.nz">Health and Disability Commissioner</a></p>
 </div>
@@ -332,12 +332,11 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 <div class="handout-section" id="ent">
   <h2>Ear, Nose &amp; Throat</h2>
   <ul class="handout-list">
-    <li>Tinnitus  -  what to expect and what helps <span class="hl-soon">coming soon</span></li>
-    <li>Hearing loss in older adults  -  signs and what to do <span class="hl-soon">coming soon</span></li>
-    <li>Dizziness and BPPV  -  the Epley manoeuvre at home <span class="hl-soon">coming soon</span></li>
-    <li>Recurrent sinusitis  -  flares, washouts, and when to refer <span class="hl-soon">coming soon</span></li>
-    <li>Earwax  -  managing it safely at home <span class="hl-soon">coming soon</span></li>
-    <li>Allergic rhinitis  -  hay fever in NZ <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/tinnitus/">Tinnitus  -  what to expect and what helps</a></li>
+    <li><a href="/handouts/hearing-loss/">Hearing loss in older adults  -  signs and what to do</a></li>
+    <li><a href="/handouts/bppv/">Dizziness and BPPV  -  the Epley manoeuvre at home</a></li>
+    <li><a href="/handouts/recurrent-sinusitis/">Recurrent sinusitis  -  flares, washouts, and when to refer</a></li>
+    <li><a href="/handouts/earwax/">Earwax  -  managing it safely at home</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.audiology.org.nz">NZ Audiological Society</a> &middot; <a href="https://www.entnz.co.nz">ENT NZ</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - ear health</a></p>
 </div>
@@ -359,14 +358,14 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 <div class="handout-section" id="neurology">
   <h2>Neurology</h2>
   <ul class="handout-list">
-    <li>Migraine  -  triggers, treatment, and prevention <span class="hl-soon">coming soon</span></li>
-    <li>Tension headaches  -  what helps and what to avoid <span class="hl-soon">coming soon</span></li>
-    <li>Tremor  -  benign vs serious <span class="hl-soon">coming soon</span></li>
-    <li>Carpal tunnel syndrome  -  signs and treatment options <span class="hl-soon">coming soon</span></li>
-    <li>Parkinson's  -  the first year after diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Multiple sclerosis  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Stroke prevention  -  what you can change <span class="hl-soon">coming soon</span></li>
-    <li>Restless legs syndrome  -  what helps <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/migraine/">Migraine  -  triggers, treatment, and prevention</a></li>
+    <li><a href="/handouts/tension-headache/">Tension headaches  -  what helps and what to avoid</a></li>
+    <li><a href="/handouts/tremor/">Tremor  -  benign vs serious</a></li>
+    <li><a href="/handouts/carpal-tunnel/">Carpal tunnel syndrome  -  signs and treatment options</a></li>
+    <li><a href="/handouts/parkinsons-first-year/">Parkinson's  -  the first year after diagnosis</a></li>
+    <li><a href="/handouts/multiple-sclerosis/">Multiple sclerosis  -  understanding your diagnosis</a></li>
+    <li><a href="/handouts/stroke-prevention/">Stroke prevention  -  what you can change</a></li>
+    <li><a href="/handouts/restless-legs/">Restless legs syndrome  -  what helps</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://neurological.org.nz">Neurological Foundation NZ</a> &middot; <a href="https://www.parkinsons.org.nz">Parkinson's NZ</a> &middot; <a href="https://msnz.org.nz">MS Society of NZ</a></p>
 </div>
@@ -388,14 +387,14 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 <div class="handout-section" id="nutrition">
   <h2>Nutrition</h2>
   <ul class="handout-list">
-    <li>Reading nutrition labels in NZ  -  what actually matters <span class="hl-soon">coming soon</span></li>
-    <li>Mediterranean eating in Aotearoa  -  practical and affordable <span class="hl-soon">coming soon</span></li>
-    <li>Iron  -  food sources, supplements, and when to test <span class="hl-soon">coming soon</span></li>
-    <li>Vitamin B12 and folate  -  who needs to think about them <span class="hl-soon">coming soon</span></li>
-    <li>Vitamin D in NZ  -  sunlight, supplements, and the evidence <span class="hl-soon">coming soon</span></li>
-    <li>Plant-based eating  -  getting it right nutritionally <span class="hl-soon">coming soon</span></li>
-    <li>Coeliac disease  -  diagnosis and life on a gluten-free diet <span class="hl-soon">coming soon</span></li>
-    <li>Eating around shift work  -  practical strategies <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/nutrition-labels-nz/">Reading nutrition labels in NZ  -  what actually matters</a></li>
+    <li><a href="/handouts/mediterranean-eating/">Mediterranean eating in Aotearoa  -  practical and affordable</a></li>
+    <li><a href="/handouts/iron/">Iron  -  food sources, supplements, and when to test</a></li>
+    <li><a href="/handouts/b12-folate/">Vitamin B12 and folate  -  who needs to think about them</a></li>
+    <li><a href="/handouts/vitamin-d/">Vitamin D in NZ  -  sunlight, supplements, and the evidence</a></li>
+    <li><a href="/handouts/plant-based-eating/">Plant-based eating  -  getting it right nutritionally</a></li>
+    <li><a href="/handouts/coeliac-disease/">Coeliac disease  -  diagnosis and life on a gluten-free diet</a></li>
+    <li><a href="/handouts/eating-shift-work/">Eating around shift work  -  practical strategies</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz/your-heart/healthy-eating">Heart Foundation NZ - healthy eating</a> &middot; <a href="https://nutritionfoundation.org.nz">NZ Nutrition Foundation</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - nutrition</a></p>
 </div>

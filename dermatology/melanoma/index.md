@@ -8,15 +8,49 @@ description: Recognising and managing melanoma and non-melanoma skin cancer in N
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>New Zealand has one of the highest melanoma rates in the world. Around 4,000 new cases are diagnosed annually; incidence is highest in fair-skinned New Zealanders of European descent over 50, but acral lentiginous melanoma (palms, soles, subungual) is disproportionately represented in Māori and Pacific peoples and is not UV-related.<sup>1</sup></li>
-    <li><strong>If you cannot confidently exclude melanoma: excise it.</strong> Take a 2 mm margin for diagnostic excision and send for histology. Do not watch and wait.</li>
-    <li>Urgent referral (within 2 weeks) to dermatology or plastic surgery for any lesion suspicious for melanoma that you are not excising yourself, any confirmed melanoma requiring wide local excision planning, or any lesion you are not confident to manage in primary care.</li>
-    <li>ABCDE plus the ugly duckling sign are useful screens, but neither replaces dermoscopy or clinical gestalt in high-risk patients.</li>
-    <li>Annual full-skin checks for patients with a personal or first-degree family history of melanoma, multiple atypical naevi, or significant cumulative UV exposure history.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/dermatology/">Dermatology</a><span class="topic-trail-sep">·</span><span class="here">Melanoma &amp; skin cancer</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Acral lentiginous melanoma</strong> - palms, soles, subungual - disproportionate in Maori and Pacific, not UV-related</li>
+      <li>Nodular melanoma - lacks ABCDE features; use EFG (Elevated, Firm, Growing)</li>
+      <li>Amelanotic melanoma - rapidly growing pink/red nodule</li>
+      <li>Non-healing ulcer or "spot that bleeds" on sun-exposed skin (SCC)</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Screen</dt>
+      <dd>ABCDE + ugly duckling. Add EFG for nodular</dd>
+      <dt>If uncertain</dt>
+      <dd><strong>Excise</strong> with 2 mm margin for diagnostic histology - do NOT watch and wait</dd>
+      <dt>High-risk surveillance</dt>
+      <dd>Annual full-skin check: prior melanoma, FDR family history, multiple atypical naevi, heavy UV history</dd>
+      <dt>Sun protection</dt>
+      <dd>SunSmart - shade, clothing, hat, SPF 30+ broad-spectrum, sunglasses</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Suspicious lesion you are not excising yourself - urgent (2-week) dermatology / plastics</li>
+      <li>Confirmed melanoma - wide local excision planning</li>
+      <li>Lesions in difficult sites (face, ear, hands, genitals)</li>
+      <li>Multiple atypical naevi or strong family history - dermatology surveillance</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>NZ has among the highest melanoma rates in the world - early detection saves lives</li>
+      <li>Take photos of moles you are watching - small changes are easy to miss</li>
+      <li>Sun protection still matters every day from September to April</li>
+      <li>Skin cancer is treatable when caught early - come back rather than wait</li>
+    </ul>
+  </div>
 </div>
 
 <p>

@@ -8,14 +8,49 @@ description: Diagnosis and stepwise management of eczema in adults and children 
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Stepwise management: emollients always (Step 1), mild TCS for flares (Step 2), moderate/potent TCS short courses (Step 3), topical calcineurin inhibitors for face and flexures (Step 4), dupilumab referral for uncontrolled moderate-to-severe disease (Step 5).</li>
-    <li>Emollient quantities matter. A child with moderate eczema needs around 250 g per week. Under-prescribing emollients is the most common reason treatment fails at Step 1.</li>
-    <li>Steroid phobia is a real barrier. Patients frequently under-use topical corticosteroids from fear of skin thinning. Address it directly and early - the risks of under-treated eczema (infection, sleeplessness, school/work impact) outweigh the risks of appropriate TCS use.</li>
-    <li>Dupilumab is PHARMAC-funded in NZ for moderate-to-severe atopic dermatitis with inadequate response to optimised topical therapy. Know the criteria before referring.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/dermatology/">Dermatology</a><span class="topic-trail-sep">·</span><span class="here">Eczema</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Eczema herpeticum</strong> - monomorphic vesicles or punched-out erosions, unwell child - aciclovir, dermatology</li>
+      <li>Bacterial superinfection - weeping, golden crust, cellulitis</li>
+      <li>Failure to thrive with eczema - immunodeficiency syndrome (rare but consider)</li>
+      <li>Erythroderma (&gt;90% BSA) - admission for fluid, temperature</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Step 1</dt>
+      <dd>Emollients always - moderate eczema in a child needs ~250 g/week</dd>
+      <dt>Step 2-3</dt>
+      <dd>TCS by site potency: mild face/groin, moderate body, potent palms/soles short course</dd>
+      <dt>Step 4</dt>
+      <dd>Topical calcineurin inhibitors for face and flexures</dd>
+      <dt>Step 5</dt>
+      <dd>Dupilumab referral - PHARMAC-funded for moderate-severe with inadequate topical response</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Moderate-severe disease failing optimised topical therapy</li>
+      <li>Eczema herpeticum or recurrent serious infection</li>
+      <li>Diagnostic uncertainty - patch testing for contact</li>
+      <li>Significant impact on growth, sleep, school, or mental health</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li>Steroid phobia is common - the under-treatment risks are bigger than thinning</li>
+      <li>Use enough emollient that the skin feels greasy 30 minutes later</li>
+      <li>Treat to clear, then maintain twice-weekly to prevent flares</li>
+      <li>Triggers vary - common ones are heat, soap, stress, infection</li>
+    </ul>
+  </div>
 </div>
 
 <p>
