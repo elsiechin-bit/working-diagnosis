@@ -625,10 +625,10 @@ a:hover { color: var(--green); }
 .tips-back a:hover { color: var(--green); }
 
 /* --- Patient Handouts page ----------------------- */
-.handouts-jump { list-style: none; padding: 0 0 24px; margin: 0 0 40px; display: flex; flex-wrap: wrap; gap: 8px 20px; border-bottom: 1px solid var(--rule); }
+.handouts-jump { list-style: none; padding: 0 0 24px; margin: 0 0 20px; display: flex; flex-wrap: wrap; gap: 8px 20px; border-bottom: 1px solid var(--rule); }
 .handouts-jump a { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); }
 .handouts-jump a:hover { color: var(--green); }
-.handout-section { margin: 0 0 52px 0; margin-left: auto; max-width: 65%; }
+.handout-section { margin: 0 0 52px 0; float: right; max-width: 65%; }
 .handout-section-label { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 2px; text-transform: uppercase; color: var(--ochre); margin: 0 0 6px; }
 .handout-section-label a { color: inherit; }
 .handout-section-label a:hover { color: var(--green); }
@@ -1010,6 +1010,8 @@ button.handout-pdf-link {
   flex-direction: column;
   gap: 12px;
   transition: border-color 120ms, box-shadow 120ms;
+  text-decoration: none;
+  color: inherit;
 }
 
 .workshop-card:hover {
