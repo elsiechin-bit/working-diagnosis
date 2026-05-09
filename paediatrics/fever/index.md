@@ -9,15 +9,49 @@ permalink: /paediatrics/fever/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li><strong>Under 3 months with fever ≥38°C: same-day secondary care, no exceptions.</strong> SBI can present with no localising signs at this age and clinical appearance is unreliable.</li>
-    <li><strong>Non-blanching rash with fever: call 111.</strong> This is meningococcal disease until proven otherwise.</li>
-    <li>Use the NICE Traffic Light system: any RED feature requires same-day secondary care; any AMBER feature requires same-day GP or urgent care review; GREEN in all domains supports conservative management with safety-netting.</li>
-    <li>Antibiotics are not indicated for fever without a confirmed bacterial source. Do not prescribe empirically for viral URTI.</li>
-    <li><strong>Safety-netting triggers to give every family:</strong> rash that does not fade with pressure; unusually floppy or difficult to rouse; stiff neck or light sensitivity; seizure; very fast or laboured breathing; fever persisting beyond 5 days.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/paediatrics/">Paediatrics</a><span class="topic-trail-sep">·</span><span class="here">Fever</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Under 3 months with fever ≥38°C - same-day secondary care, no exceptions</strong></li>
+      <li><strong>Non-blanching rash with fever - call 111</strong> (meningococcal until proven otherwise)</li>
+      <li>UTI - underdiagnosed; clean-catch urine in any child &lt;3 with unexplained fever &gt;48 hours</li>
+      <li>Kawasaki disease - fever &gt;5 days plus 4 of 5 features</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Tool</dt>
+      <dd>NICE Traffic Light system - any RED = same-day secondary; AMBER = same-day GP/UC; GREEN = home with safety-net</dd>
+      <dt>Antibiotics</dt>
+      <dd>Not indicated for fever without bacterial source; do NOT prescribe empirically for viral URTI</dd>
+      <dt>Antipyretics</dt>
+      <dd>For comfort, not to "treat" the fever - paracetamol or ibuprofen, not both routinely</dd>
+      <dt>Hydration</dt>
+      <dd>Frequent small drinks; ORS if vomiting or diarrhoea</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Any RED feature on Traffic Light</li>
+      <li>Age under 3 months with any fever</li>
+      <li>Fever &gt;5 days without source - think Kawasaki, deep infection, malignancy</li>
+      <li>Looks toxic, dehydrated, or parental gut concern</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li><strong>Safety-net triggers:</strong> non-blanching rash, floppy/hard to rouse, stiff neck or photophobia, seizure, fast/laboured breathing, fever &gt;5 days</li>
+      <li>Trust your gut - if your tamaiti is not themselves, ring back</li>
+      <li>Healthline 0800 611 116 free 24/7</li>
+      <li>Antibiotics will not help a virus; we are not withholding</li>
+    </ul>
+  </div>
 </div>
 
 <p>

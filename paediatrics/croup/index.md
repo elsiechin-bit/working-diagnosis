@@ -9,14 +9,49 @@ permalink: /paediatrics/croup/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Barking cough + inspiratory stridor in a child aged 6 months to 5 years is croup until proven otherwise. Dexamethasone is indicated at all severities - a single oral dose reduces illness duration, symptom severity, and hospitalisation rate.</li>
-    <li>Do not examine the throat of a child with suspected severe croup or epiglottitis. Distressing the child can precipitate complete airway obstruction. Keep the child calm and with their parent throughout the assessment.</li>
-    <li>Dexamethasone dose: 0.15-0.6 mg/kg orally (max 10 mg). Higher end (0.6 mg/kg) for moderate-severe croup; 0.15-0.3 mg/kg for mild. The 4 mg/mL injectable solution given orally works well despite poor palatability.</li>
-    <li>Key differentials not to miss: epiglottitis (toxic, drooling, muffled voice, no cough), bacterial tracheitis (high fever, stridor not responding to adrenaline), foreign body inhalation (sudden onset without prodrome, choking episode).</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/paediatrics/">Paediatrics</a><span class="topic-trail-sep">·</span><span class="here">Croup</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Epiglottitis</strong> - toxic, drooling, muffled voice, no cough. Do NOT examine throat. Call 111</li>
+      <li>Bacterial tracheitis - high fever, stridor not responding to adrenaline</li>
+      <li>Foreign body - sudden onset without prodrome, choking episode</li>
+      <li>Stridor at rest = at least moderate; do not send home without observation</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Diagnosis</dt>
+      <dd>Barking cough + inspiratory stridor, age 6 months to 5 years</dd>
+      <dt>Dexamethasone (every severity)</dt>
+      <dd>0.15-0.3 mg/kg PO mild; 0.6 mg/kg PO moderate-severe (max 10 mg). Injectable solution given orally works</dd>
+      <dt>Severe croup</dt>
+      <dd>Nebulised adrenaline 5 mg + observe for rebound; ambulance to hospital</dd>
+      <dt>Examine</dt>
+      <dd>Keep child on parent's lap, calm; do not distress</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Stridor at rest persisting after dexamethasone</li>
+      <li>Significant recession, hypoxia, or exhaustion</li>
+      <li>Suspected epiglottitis or bacterial tracheitis - call 111</li>
+      <li>Recurrent croup &gt;3 episodes - consider laryngomalacia or subglottic stenosis</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li>Croup is worse at night - sit your tamaiti up; cool air helps</li>
+      <li>The dexamethasone keeps working for 2-3 days</li>
+      <li>Return if stridor at rest, blue around the lips, working hard to breathe, drooling, or unable to speak</li>
+      <li>Healthline 0800 611 116 if you are not sure</li>
+    </ul>
+  </div>
 </div>
 
 <p>Croup (laryngotracheobronchitis) is the most common cause of acute upper airway obstruction in children aged 6 months to 5 years, with a peak incidence at age 1-2. It is predominantly caused by parainfluenza virus (types 1 and 3) and typically presents with the characteristic barking cough and inspiratory stridor, often beginning at night. The illness is usually mild and self-limiting, but a small proportion of children develop significant airway compromise requiring hospital management.</p>

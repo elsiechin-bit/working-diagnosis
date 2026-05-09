@@ -2,7 +2,7 @@
 title: Acute bronchitis - why antibiotics usually do not help
 layout: topic.njk
 pageType: handout
-description: A cough that lasts 2-3 weeks after a cold is usually acute bronchitis. The evidence is clear: antibiotics rarely help. Here is what does.
+description: "A cough that lasts 2-3 weeks after a cold is usually acute bronchitis. The evidence is clear - antibiotics rarely help. Here is what does."
 ---
 
 <p class="handout-back"><a href="/handouts/">&larr; All handouts</a></p>
