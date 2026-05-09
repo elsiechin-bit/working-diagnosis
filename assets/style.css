@@ -58,7 +58,7 @@ a:hover { color: var(--green); }
 .tools-aside {
   position: sticky;
   top: 88px;
-  background: #EEF4FA;
+  background: #E5EAEE;
   border: 1px solid var(--rule);
   border-radius: 14px;
   padding: 24px 22px;
@@ -296,7 +296,7 @@ a:hover { color: var(--green); }
 .kicker { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 0 0 32px; }
 .kicker::before { content: "? "; color: var(--green); letter-spacing: 0; }
 .section-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 0 0 32px; font-weight: 400; }
-.pillar-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 0 0 14px; }
+.specialty-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 0 0 14px; }
 
 .wordmark { font-family: var(--serif-display); font-weight: 800; font-size: clamp(60px, 10vw, 132px); line-height: 0.92; letter-spacing: -0.04em; margin: 0; }
 .wordmark .second { display: block; font-style: italic; color: var(--green); }
@@ -713,7 +713,7 @@ button.handout-pdf-link {
   width: 100%;
   height: 100%;
   max-height: calc(100vh - 120px);
-  background: #EEF4FA;
+  background: #E5EAEE;
   border: 1px solid var(--rule);
   border-right: none;
   border-radius: 14px 0 0 14px;

@@ -5,7 +5,7 @@ description: A clinician's library of NZ general practice. Conditions by special
 specialty: Library
 ---
 
-The full catalog of clinical pillars and topics. Pick a specialty to drill in.
+The full catalog of clinical specialties. Pick one to drill in.
 
 <ul class="topic-list">
   {% for item in site.nav %}

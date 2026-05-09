@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Library  -  Working Diagnosis</title>
-<meta name="description" content="The Working Diagnosis library  -  clinical topic guides organised by the common pillars of NZ general practice.">
+<meta name="description" content="The Working Diagnosis library  -  clinical specialty guides for NZ general practice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -205,31 +205,31 @@ a:hover { color: var(--green); }
   line-height: 1.45;
 }
 
-/* ── Pillar card grid ───────────────────────────── */
-.pillar-grid {
+/* ── Specialty card grid ────────────────────────── */
+.specialty-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--rule);
   border-left: 1px solid var(--rule);
 }
-@media (max-width: 900px) { .pillar-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 540px)  { .pillar-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .specialty-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px)  { .specialty-grid { grid-template-columns: 1fr; } }
 
-.pillar-card {
+.specialty-card {
   border-right: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
   transition: background 150ms;
 }
-.pillar-card:hover { background: var(--warm); }
-.pillar-card a {
+.specialty-card:hover { background: var(--warm); }
+.specialty-card a {
   display: block;
   padding: 22px 24px 24px;
   height: 100%;
   color: inherit;
 }
-.pillar-card a:hover { color: inherit; }
+.specialty-card a:hover { color: inherit; }
 
-.pillar-tag {
+.specialty-tag {
   font-family: var(--font-m);
   font-size: 0.58rem;
   letter-spacing: 2px;
@@ -237,7 +237,7 @@ a:hover { color: var(--green); }
   color: var(--ochre);
   margin-bottom: 6px;
 }
-.pillar-name {
+.specialty-name {
   font-family: var(--font-d);
   font-weight: 500;
   font-size: 1.2rem;
@@ -247,8 +247,8 @@ a:hover { color: var(--green); }
   margin-bottom: 8px;
   transition: color 150ms;
 }
-.pillar-card:hover .pillar-name { color: var(--green-deep); }
-.pillar-blurb {
+.specialty-card:hover .specialty-name { color: var(--green-deep); }
+.specialty-blurb {
   font-family: var(--font-b);
   font-size: 0.88rem;
   color: var(--mute);
@@ -313,7 +313,7 @@ a:hover { color: var(--green); }
   <div class="wb-intro-text">
     <p class="wb-kicker">the clinician's library</p>
     <h1 class="wb-title"><em>library</em>.</h1>
-    <p class="wb-dek">Clinical topic guides organised by the common pillars of general practice in Aotearoa.</p>
+    <p class="wb-dek">Clinical specialty guides for general practice in Aotearoa.</p>
   </div>
   <div class="wb-zone-nav">
     <a href="/consult-room/" class="wb-zone-pill wb-zone-pill--clinician">→ Workbench</a>
@@ -321,116 +321,116 @@ a:hover { color: var(--green); }
 </div>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- TOPICS                                           -->
+<!-- SPECIALTIES                                      -->
 <!-- ════════════════════════════════════════════════ -->
 <section class="wb-zone" id="public">
   <div class="zone-header">
-    <h2 class="zone-heading">Topics</h2>
-    <p class="zone-dek">Clinical topic guides across the common pillars of general practice.</p>
+    <h2 class="zone-heading">Specialties</h2>
+    <p class="zone-dek">Clinical specialty guides across general practice.</p>
   </div>
 
-  <!-- Clinical pillars ──────────────────────────── -->
-  <div class="pillar-grid">
+  <!-- Clinical specialties ──────────────────────── -->
+  <div class="specialty-grid">
 
-    <div class="pillar-card">
+    <div class="specialty-card">
       <a href="/lifestyle-prevention/">
-        <p class="pillar-tag">Lifestyle</p>
-        <p class="pillar-name">Lifestyle Medicine</p>
-        <p class="pillar-blurb">Sleep, movement, alcohol, stress, and the everyday levers that quietly run public health.</p>
+        <p class="specialty-tag">Lifestyle</p>
+        <p class="specialty-name">Lifestyle Medicine</p>
+        <p class="specialty-blurb">Sleep, movement, alcohol, stress, and the everyday levers that quietly run public health.</p>
       </a>
     </div>
 
-    <div class="pillar-card">
+    <div class="specialty-card">
       <a href="/msk/">
-        <p class="pillar-tag">MSK</p>
-        <p class="pillar-name">Musculoskeletal Health</p>
-        <p class="pillar-blurb">Joint pain, soft-tissue injuries, and musculoskeletal conditions across the lifespan.</p>
+        <p class="specialty-tag">MSK</p>
+        <p class="specialty-name">Musculoskeletal Health</p>
+        <p class="specialty-blurb">Joint pain, soft-tissue injuries, and musculoskeletal conditions across the lifespan.</p>
       </a>
     </div>
 
-    <div class="pillar-card">
+    <div class="specialty-card">
       <a href="/paediatrics/">
-        <p class="pillar-tag">Paediatrics</p>
-        <p class="pillar-name">Child Health</p>
-        <p class="pillar-blurb">Developmental surveillance, common illness, immunisation, and when to refer.</p>
+        <p class="specialty-tag">Paediatrics</p>
+        <p class="specialty-name">Child Health</p>
+        <p class="specialty-blurb">Developmental surveillance, common illness, immunisation, and when to refer.</p>
       </a>
     </div>
 
-    <div class="pillar-card">
+    <div class="specialty-card">
       <a href="/geriatrics/">
-        <p class="pillar-tag">Geriatrics</p>
-        <p class="pillar-name">Older Adult Health</p>
-        <p class="pillar-blurb">Frailty, falls, cognition, polypharmacy, and end-of-life planning.</p>
+        <p class="specialty-tag">Geriatrics</p>
+        <p class="specialty-name">Older Adult Health</p>
+        <p class="specialty-blurb">Frailty, falls, cognition, polypharmacy, and end-of-life planning.</p>
       </a>
     </div>
 
-    <div class="pillar-card">
+    <div class="specialty-card">
       <a href="/gynaecology/">
-        <p class="pillar-tag">Gynaecology</p>
-        <p class="pillar-name">Women's Health</p>
-        <p class="pillar-blurb">Contraception, menstrual health, and reproductive wellbeing in Aotearoa.</p>
+        <p class="specialty-tag">Gynaecology</p>
+        <p class="specialty-name">Women's Health</p>
+        <p class="specialty-blurb">Contraception, menstrual health, and reproductive wellbeing in Aotearoa.</p>
       </a>
     </div>
 
-    <div class="pillar-card">
+    <div class="specialty-card">
       <a href="/dermatology/">
-        <p class="pillar-tag">Dermatology</p>
-        <p class="pillar-name">Skin Conditions</p>
-        <p class="pillar-blurb">Rashes, skin cancer, and dermatological management in general practice.</p>
+        <p class="specialty-tag">Dermatology</p>
+        <p class="specialty-name">Skin Conditions</p>
+        <p class="specialty-blurb">Rashes, skin cancer, and dermatological management in general practice.</p>
       </a>
     </div>
 
-    <div class="pillar-card">
+    <div class="specialty-card">
       <a href="/mental-health/">
-        <p class="pillar-tag">Mental Health</p>
-        <p class="pillar-name">Mental Health</p>
-        <p class="pillar-blurb">Mood, anxiety, substance use, and psychotropic medicines in primary care.</p>
+        <p class="specialty-tag">Mental Health</p>
+        <p class="specialty-name">Mental Health</p>
+        <p class="specialty-blurb">Mood, anxiety, substance use, and psychotropic medicines in primary care.</p>
       </a>
     </div>
 
-    <div class="pillar-card">
+    <div class="specialty-card">
       <a href="/infectious-disease/">
-        <p class="pillar-tag">Vaccines</p>
-        <p class="pillar-name">Immunisation</p>
-        <p class="pillar-blurb">The NZ immunisation schedule, travel vaccines, and catch-up guidance.</p>
+        <p class="specialty-tag">Vaccines</p>
+        <p class="specialty-name">Immunisation</p>
+        <p class="specialty-blurb">The NZ immunisation schedule, travel vaccines, and catch-up guidance.</p>
       </a>
     </div>
 
-    <div class="pillar-card">
+    <div class="specialty-card">
       <a href="/infectious-disease/">
-        <p class="pillar-tag">Travel Medicine</p>
-        <p class="pillar-name">Travel Health</p>
-        <p class="pillar-blurb">Pre-travel consults, prophylaxis, and returning traveller assessment.</p>
+        <p class="specialty-tag">Travel Medicine</p>
+        <p class="specialty-name">Travel Health</p>
+        <p class="specialty-blurb">Pre-travel consults, prophylaxis, and returning traveller assessment.</p>
       </a>
     </div>
 
-  </div><!-- /pillar-grid -->
+  </div><!-- /specialty-grid -->
 
   <!-- Practice materials ──────────────────────── -->
   <div style="margin-top:32px; border-top:1px solid var(--rule); padding-top:24px; display:grid; grid-template-columns:repeat(3,1fr); border-left:1px solid var(--rule);">
 
-    <div class="pillar-card" style="border-top:none;">
+    <div class="specialty-card" style="border-top:none;">
       <a href="/field-notes/">
-        <p class="pillar-tag">Field Notes</p>
-        <p class="pillar-name">Field Notes</p>
-        <p class="pillar-blurb">Short essays, clinical reflections, and notes from a working GP.</p>
+        <p class="specialty-tag">Field Notes</p>
+        <p class="specialty-name">Field Notes</p>
+        <p class="specialty-blurb">Short essays, clinical reflections, and notes from a working GP.</p>
       </a>
     </div>
 
-    <div class="pillar-card" style="border-top:none;">
+    <div class="specialty-card" style="border-top:none;">
       <a href="/handouts/">
-        <p class="pillar-tag">Handouts</p>
-        <p class="pillar-name">Patient Handouts</p>
-        <p class="pillar-blurb">Printable patient education and shared decision-making sheets  -  free to print or email.</p>
+        <p class="specialty-tag">Handouts</p>
+        <p class="specialty-name">Patient Handouts</p>
+        <p class="specialty-blurb">Printable patient education and shared decision-making sheets  -  free to print or email.</p>
       </a>
     </div>
 
     <!-- empty cell to fill the third column -->
-    <div class="pillar-card" style="border-top:none; background:transparent; pointer-events:none; opacity:0;"></div>
+    <div class="specialty-card" style="border-top:none; background:transparent; pointer-events:none; opacity:0;"></div>
 
   </div>
 
-</section><!-- /TOPICS -->
+</section><!-- /SPECIALTIES -->
 
 
 <!-- ── Footer ─────────────────────────────────────── -->
@@ -447,3 +447,4 @@ a:hover { color: var(--green); }
 
 </body>
 </html>
+                           
