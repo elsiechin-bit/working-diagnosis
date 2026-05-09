@@ -9,15 +9,49 @@ permalink: /msk/low-back-pain/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li><strong>Cauda equina is an emergency:</strong> bilateral leg pain/weakness, saddle anaesthesia, urinary retention, or faecal incontinence requires same-day referral without waiting for imaging.</li>
-    <li>No imaging for uncomplicated low back pain under 6 weeks. MRI findings in asymptomatic adults are ubiquitous and do not guide management; they increase anxiety and downstream treatment.</li>
-    <li>Reassurance and staying active are the most important interventions. Bed rest is harmful and should be explicitly discouraged.</li>
-    <li>ACC funds physiotherapy for acute musculoskeletal injury. Refer early rather than waiting for the patient to plateau.</li>
-    <li>Identify yellow flags at first presentation. Catastrophising, fear-avoidance beliefs, and work dissatisfaction predict chronicity; early psychological support changes trajectory.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Low back pain</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Cauda equina:</strong> bilateral leg pain/weakness, saddle anaesthesia, retention, faecal incontinence - same-day, no imaging delay</li>
+      <li>Malignancy: age &gt;50, weight loss, prior cancer, unremitting night pain</li>
+      <li>Infection: fever, focal tenderness, IV drug use, immunosuppression</li>
+      <li>Fracture: significant trauma, osteoporosis, long-term steroids, age &gt;70</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Imaging</dt>
+      <dd>None &lt;6 weeks if no red flags - MRI findings in asymptomatic adults are ubiquitous</dd>
+      <dt>Activity</dt>
+      <dd>Stay active. Bed rest is harmful</dd>
+      <dt>Pharmacological</dt>
+      <dd>Short course NSAID 5-7 days; topical for older patients with renal/GI risk</dd>
+      <dt>NZ pathway</dt>
+      <dd>ACC funds physio for injury - refer early, do not wait for plateau</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Red flags - urgent imaging and specialist</li>
+      <li>Pain &gt;12 weeks not responding to optimised conservative care</li>
+      <li>Progressive neurology</li>
+      <li>Yellow flags persisting - psychologically-informed pain service</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>~90% resolve within 6 weeks</li>
+      <li>Hurt does not equal harm - movement helps</li>
+      <li>A normal scan does not mean your pain is not real</li>
+      <li>Imaging rarely changes treatment in uncomplicated cases</li>
+    </ul>
+  </div>
 </div>
 
 <p>

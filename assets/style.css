@@ -214,6 +214,107 @@ a:hover { color: var(--green); }
   font-weight: 500;
 }
 
+/* --- Workbench: expandable category toggles --- */
+.nav-drop-panel--wide .nav-drop-feature {
+  grid-column: 1 / -1;
+  display: block;
+  padding: 12px 14px;
+  margin-bottom: 6px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--paper-warm, #EDE7D8);
+  transition: border-color 140ms, background 140ms;
+}
+.nav-drop-panel--wide .nav-drop-feature:hover {
+  border-color: var(--green);
+  background: var(--paper);
+}
+.nav-drop-feature__label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 2px;
+}
+.nav-drop-feature__title {
+  display: block;
+  font-family: var(--serif-display, var(--serif-body));
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+}
+.nav-drop-feature__blurb {
+  display: block;
+  font-family: var(--serif-body);
+  font-size: 0.78rem;
+  color: var(--ink-mute);
+  line-height: 1.4;
+}
+
+.nav-drop-cat { border-bottom: 1px solid var(--rule); }
+.nav-drop-cat:last-of-type { border-bottom: none; }
+.nav-drop-cat > summary {
+  list-style: none;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  font-weight: 500;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  user-select: none;
+  transition: color 120ms;
+}
+.nav-drop-cat > summary::-webkit-details-marker { display: none; }
+.nav-drop-cat > summary::after {
+  content: "\25BE";
+  font-size: 0.85em;
+  opacity: 0.55;
+  transition: transform 140ms;
+}
+.nav-drop-cat[open] > summary::after { transform: rotate(180deg); opacity: 1; }
+.nav-drop-cat > summary:hover { color: var(--green-deep); }
+
+.nav-drop-cat__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 8px;
+}
+.nav-drop-cat__list li + li { margin-top: 6px; }
+.nav-drop-tool {
+  display: block;
+  padding: 4px 0;
+  color: var(--ink-soft);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.nav-drop-tool:hover { color: var(--green-deep); }
+.nav-drop-tool__name {
+  display: block;
+  font-family: var(--serif-display, var(--serif-body));
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+}
+.nav-drop-tool__blurb {
+  display: block;
+  font-family: var(--serif-body);
+  font-size: 0.74rem;
+  color: var(--ink-mute);
+  line-height: 1.4;
+  margin-top: 1px;
+}
+
 /* --- Utilities cluster (Handouts | Field Notes | Resources | About) --- */
 .nav-utilities { display: inline-flex; align-items: center; gap: 14px; margin-left: 6px; }
 .nav-utility { color: var(--ink-mute); }

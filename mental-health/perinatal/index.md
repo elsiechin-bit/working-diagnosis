@@ -5,14 +5,49 @@ layout: topic.njk
 specialty: Mental Health
 ---
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Perinatal mental health problems affect up to 20% of women and around 10% of partners across pregnancy and the first postnatal year.<sup>1</sup> They are the leading cause of maternal mortality in high-income countries when indirect causes are included.<sup>2</sup> They are also the most commonly missed.</li>
-    <li>EPDS score at least 13 warrants clinical assessment. Score 10-12 warrants a follow-up conversation even without meeting threshold - this is often where significant distress is being hidden. Screen at the booking visit and 6-week postnatal check.</li>
-    <li>Postpartum psychosis is a psychiatric emergency: rapid onset within days of delivery, confusion, emotional lability, perceptual disturbance, and out-of-character behaviour. Same-day secondary care referral without exception.</li>
-    <li>Untreated severe depression in pregnancy carries its own fetal and maternal risks. The benefit-risk calculation for antidepressants in perinatal illness is frequently misframed. Sertraline has the most safety data in this context.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/mental-health/">Mental Health</a><span class="topic-trail-sep">·</span><span class="here">Perinatal</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Postpartum psychosis</strong> - days after delivery, confusion, mood lability, perceptual change. Same-day, every time</li>
+      <li>Maternal suicidality - leading cause of maternal mortality when indirect deaths are included</li>
+      <li>Acute mania in pregnancy - urgent specialist input</li>
+      <li>EPDS 10-12 with concern - significant distress is often hidden here</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Screen</dt>
+      <dd>EPDS at booking and 6-week postnatal check; offer at every contact, not only scheduled</dd>
+      <dt>Mild-moderate</dt>
+      <dd>CBT or IPT first-line; perinatal-aware therapist where possible</dd>
+      <dt>Moderate-severe / pre-existing illness</dt>
+      <dd>Sertraline has the most safety data; treat the illness</dd>
+      <dt>Partner</dt>
+      <dd>Screen too - paternal perinatal depression is real</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Postpartum psychosis - same-day, every time</li>
+      <li>EPDS ≥13 with significant impairment or risk</li>
+      <li>Bipolar history pre-pregnancy or in this pregnancy</li>
+      <li>Treatment-resistant illness or breastfeeding-medication uncertainty</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Untreated illness has its own risks for you and the pēpi</li>
+      <li>Treatment is safer than people are often told - including breastfeeding</li>
+      <li>This is illness, not failing as a parent</li>
+      <li>Crisis: 1737, Lifeline 0800 543 354, or maternal mental-health team</li>
+    </ul>
+  </div>
 </div>
 
 <p>Perinatal mental health problems - spanning pregnancy through the first postnatal year - affect up to 20% of women and around 10% of partners.<sup>1</sup> They are the leading cause of maternal mortality in high-income countries when indirect causes are included.<sup>2</sup> They are also the most commonly missed.</p>

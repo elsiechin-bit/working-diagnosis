@@ -9,14 +9,49 @@ permalink: /msk/frozen-shoulder/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Three phases over 2-3 years: freezing (months 0-9, pain dominates), frozen (months 9-15, stiffness without much pain), thawing (months 15-24+, gradual spontaneous recovery). Most recover; patient understanding of the timeline is the most useful thing to convey.</li>
-    <li>Diabetes is the strongest risk factor (10-20% of diabetics develop frozen shoulder). Ask about thyroid disease, Dupuytren's, and recent immobility. Bilateral disease is more common in diabetics.</li>
-    <li>Loss of passive range of motion distinguishes frozen shoulder from rotator cuff pathology - in rotator cuff disease, passive ROM is initially preserved. External rotation is lost first.</li>
-    <li>Intra-articular corticosteroid injection is most beneficial in the painful freezing phase. Hydrodilatation (image-guided distension arthrography) provides modest benefit in refractory cases and is available at NZ radiology centres.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Frozen shoulder</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Rotator cuff pathology - in cuff disease, passive ROM is initially preserved</li>
+      <li>Underlying diabetes (10-20% of diabetics develop frozen shoulder; bilateral common)</li>
+      <li>Hypothyroidism, Dupuytren's, recent immobility - all risk factors</li>
+      <li>Avoid aggressive mobilisation in painful phase - worsens inflammation</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Three phases</dt>
+      <dd>Freezing (0-9 mo, pain) → Frozen (9-15 mo, stiff) → Thawing (15-24+ mo, recovery)</dd>
+      <dt>Freezing phase</dt>
+      <dd>Intra-articular corticosteroid into glenohumeral joint - most beneficial here</dd>
+      <dt>Frozen phase</dt>
+      <dd>Progressive stretching, gentle physio</dd>
+      <dt>Imaging</dt>
+      <dd>Plain X-ray to exclude other causes; MRI not routine</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Refractory after 6-12 months conservative care</li>
+      <li>Hydrodilatation (image-guided distension) at NZ radiology - modest benefit</li>
+      <li>MUA or arthroscopic capsular release - last-line surgical options</li>
+      <li>Diagnostic uncertainty - rheumatology if mixed picture</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Most recover spontaneously within 2-3 years</li>
+      <li>Knowing the timeline is the most useful thing - the painful phase will pass</li>
+      <li>The injection helps pain in phase 1, not the speed of recovery</li>
+      <li>Sleep on the unaffected side; gentle pendulum exercises help</li>
+    </ul>
+  </div>
 </div>
 
 <div class="tier-2">

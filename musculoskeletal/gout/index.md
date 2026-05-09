@@ -9,15 +9,49 @@ permalink: /msk/gout/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li><strong>Do not start or stop ULT during an acute attack.</strong> Wait 2-4 weeks after full resolution; starting allopurinol during a flare can prolong or trigger a new one.</li>
-    <li>Acute attack: NSAIDs first line (naproxen 500 mg BD or diclofenac 50 mg TDS) if no contraindications. Colchicine 500 mcg BD is the alternative. Prednisolone 20-30 mg/day if both contraindicated.</li>
-    <li>Serum urate is often normal or low during an acute attack. A normal result does not exclude gout; check fasting urate 2-4 weeks after the attack resolves.</li>
-    <li>Indications for urate-lowering therapy: two or more attacks per year, any tophi, renal calculi, or uric acid nephropathy. Target serum urate &lt;0.36 mmol/L (&lt;0.30 for tophaceous gout).</li>
-    <li>Gout is significantly more prevalent in Māori and Pacific peoples. Treat early and aggressively. Avoid stigmatising framing - this is a metabolic disease with strong genetic drivers, not a lifestyle choice.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Gout</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Septic arthritis - fever, atypical site, immunosuppression - aspirate first</li>
+      <li><strong>Do not start or stop ULT during an acute attack</strong> - prolongs or triggers flare</li>
+      <li>Normal serum urate during an attack does not exclude gout - recheck 2-4 weeks later</li>
+      <li>Recurrent attacks plus renal impairment - dose-adjust allopurinol carefully</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Acute attack</dt>
+      <dd>NSAID (naproxen 500 mg BD) - or colchicine 500 mcg BD - or prednisolone 20-30 mg/day if both contraindicated</dd>
+      <dt>ULT indications</dt>
+      <dd>≥2 attacks/year, any tophi, renal calculi, urate nephropathy</dd>
+      <dt>ULT target</dt>
+      <dd>Serum urate &lt;0.36 mmol/L (&lt;0.30 if tophaceous)</dd>
+      <dt>Start allopurinol</dt>
+      <dd>2-4 weeks after attack settles, with NSAID or colchicine cover for 3-6 months</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Tophaceous or polyarticular disease</li>
+      <li>Refractory despite optimised allopurinol (consider febuxostat)</li>
+      <li>Renal calculi or urate nephropathy</li>
+      <li>Diagnostic uncertainty - aspiration not feasible in primary care</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>This is a metabolic disease with strong genetic drivers, not your fault</li>
+      <li>Allopurinol is for life once started - stopping causes the disease back</li>
+      <li>Diet alone rarely controls it - medication does the heavy lifting</li>
+      <li>NZ has free Hauora-led gout services - ask us</li>
+    </ul>
+  </div>
 </div>
 
 <p>

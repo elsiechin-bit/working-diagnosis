@@ -110,22 +110,22 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <h2>Diabetes &amp; Endocrine</h2>
   <ul class="handout-list">
     <li><a href="/handouts/type-2-diabetes/">Type 2 diabetes  -  understanding your diagnosis</a></li>
-    <li>Prediabetes  -  what it means and how to act now <span class="hl-soon">coming soon</span></li>
-    <li>Blood glucose monitoring  -  how and when to check <span class="hl-soon">coming soon</span></li>
-    <li>HbA1c  -  what the result means <span class="hl-soon">coming soon</span></li>
-    <li>Metformin  -  how it works and common side effects <span class="hl-soon">coming soon</span></li>
-    <li>Hypoglycaemia (low blood sugar)  -  recognising and treating <span class="hl-soon">coming soon</span></li>
-    <li>Diabetic foot care  -  daily checks and preventing complications <span class="hl-soon">coming soon</span></li>
-    <li>Diabetes and kidney health  -  protecting your kidneys <span class="hl-soon">coming soon</span></li>
-    <li>Diabetes and eye health  -  why annual checks matter <span class="hl-soon">coming soon</span></li>
-    <li>Type 1 diabetes  -  overview for patients in primary care <span class="hl-soon">coming soon</span></li>
-    <li>Hypothyroidism (underactive thyroid)  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Levothyroxine  -  taking your thyroid medicine correctly <span class="hl-soon">coming soon</span></li>
-    <li>Hyperthyroidism (overactive thyroid)  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Thyroid nodules and goitre  -  what to expect <span class="hl-soon">coming soon</span></li>
-    <li>Vitamin D deficiency  -  symptoms, testing, and treatment in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Metabolic syndrome  -  what it is and what changes help <span class="hl-soon">coming soon</span></li>
-    <li>Adrenal insufficiency  -  sick day rules and steroid cover <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/prediabetes/">Prediabetes  -  what it means and how to act now</a></li>
+    <li><a href="/handouts/blood-glucose-monitoring/">Blood glucose monitoring  -  how and when to check</a></li>
+    <li><a href="/handouts/hba1c/">HbA1c  -  what the result means</a></li>
+    <li><a href="/handouts/metformin/">Metformin  -  how it works and common side effects</a></li>
+    <li><a href="/handouts/hypoglycaemia/">Hypoglycaemia (low blood sugar)  -  recognising and treating</a></li>
+    <li><a href="/handouts/diabetic-foot-care/">Diabetic foot care  -  daily checks and preventing complications</a></li>
+    <li><a href="/handouts/diabetes-kidney-health/">Diabetes and kidney health  -  protecting your kidneys</a></li>
+    <li><a href="/handouts/diabetes-eye-health/">Diabetes and eye health  -  why annual checks matter</a></li>
+    <li><a href="/handouts/type-1-diabetes/">Type 1 diabetes  -  overview for patients in primary care</a></li>
+    <li><a href="/handouts/hypothyroidism/">Hypothyroidism (underactive thyroid)  -  understanding your diagnosis</a></li>
+    <li><a href="/handouts/levothyroxine/">Levothyroxine  -  taking your thyroid medicine correctly</a></li>
+    <li><a href="/handouts/hyperthyroidism/">Hyperthyroidism (overactive thyroid)  -  understanding your diagnosis</a></li>
+    <li><a href="/handouts/thyroid-nodules-goitre/">Thyroid nodules and goitre  -  what to expect</a></li>
+    <li><a href="/handouts/vitamin-d-deficiency/">Vitamin D deficiency  -  symptoms, testing, and treatment in NZ</a></li>
+    <li><a href="/handouts/metabolic-syndrome/">Metabolic syndrome  -  what it is and what changes help</a></li>
+    <li><a href="/handouts/adrenal-insufficiency/">Adrenal insufficiency  -  sick day rules and steroid cover</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.diabetes.org.nz">Diabetes NZ</a> · <a href="https://www.healthnavigator.org.nz/health-a-z/d/diabetes-type-2/">Health Navigator  -  Type 2 Diabetes</a> · <a href="https://www.thyroid.org.nz">Thyroid NZ</a></p>
 </div>
@@ -136,22 +136,22 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <h2>Gastroenterology</h2>
   <ul class="handout-list">
     <li><a href="/handouts/reflux-gord/">Reflux (GORD)  -  symptoms, triggers, and treatment</a></li>
-    <li>Peptic ulcer disease and Helicobacter pylori <span class="hl-soon">coming soon</span></li>
-    <li>Coeliac disease  -  understanding the gluten-free diet <span class="hl-soon">coming soon</span></li>
-    <li>Irritable bowel syndrome (IBS)  -  self-management strategies <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/peptic-ulcer-helicobacter/">Peptic ulcer disease and Helicobacter pylori</a></li>
+    <li><a href="/handouts/coeliac-disease/">Coeliac disease  -  understanding the gluten-free diet</a></li>
+    <li><a href="/handouts/ibs/">Irritable bowel syndrome (IBS)  -  self-management strategies</a></li>
     <li><a href="/handouts/constipation/">Constipation in adults  -  causes, diet, and laxatives</a></li>
-    <li>Haemorrhoids (piles)  -  treatment and prevention <span class="hl-soon">coming soon</span></li>
-    <li>Rectal bleeding  -  when to seek help <span class="hl-soon">coming soon</span></li>
-    <li>Diverticular disease  -  diet and managing flares <span class="hl-soon">coming soon</span></li>
-    <li>Fatty liver disease (MASLD)  -  what it means and what helps <span class="hl-soon">coming soon</span></li>
-    <li>The NZ bowel screening programme  -  what to expect <span class="hl-soon">coming soon</span></li>
-    <li>Nausea and vomiting  -  common causes and home care <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/haemorrhoids/">Haemorrhoids (piles)  -  treatment and prevention</a></li>
+    <li><a href="/handouts/rectal-bleeding/">Rectal bleeding  -  when to seek help</a></li>
+    <li><a href="/handouts/diverticular-disease/">Diverticular disease  -  diet and managing flares</a></li>
+    <li><a href="/handouts/fatty-liver-masld/">Fatty liver disease (MASLD)  -  what it means and what helps</a></li>
+    <li><a href="/handouts/nz-bowel-screening/">The NZ bowel screening programme  -  what to expect</a></li>
+    <li><a href="/handouts/nausea-vomiting/">Nausea and vomiting  -  common causes and home care</a></li>
     <li><a href="/handouts/gastroenteritis/">Gastroenteritis (tummy bug)  -  home care and when to seek help</a></li>
-    <li>Inflammatory bowel disease  -  overview (Crohn's and colitis) <span class="hl-soon">coming soon</span></li>
-    <li>Hepatitis B  -  understanding chronic infection in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Hepatitis C  -  treatment options available in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Gallstones  -  symptoms and when surgery is needed <span class="hl-soon">coming soon</span></li>
-    <li>Pancreatitis  -  what to expect and recovery <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/ibd/">Inflammatory bowel disease  -  overview (Crohn's and colitis)</a></li>
+    <li><a href="/handouts/hepatitis-b/">Hepatitis B  -  understanding chronic infection in NZ</a></li>
+    <li><a href="/handouts/hepatitis-c/">Hepatitis C  -  treatment options available in NZ</a></li>
+    <li><a href="/handouts/gallstones/">Gallstones  -  symptoms and when surgery is needed</a></li>
+    <li><a href="/handouts/pancreatitis/">Pancreatitis  -  what to expect and recovery</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/d/digestive-health/">Health Navigator  -  Digestive Health</a> · <a href="https://www.crohnsandcolitis.org.nz">Crohn's &amp; Colitis NZ</a> · <a href="https://www.nsu.govt.nz/bowel-screening">NZ Bowel Screening Programme</a></p>
 </div>

@@ -5,15 +5,49 @@ layout: topic.njk
 specialty: Mental Health
 ---
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>GAD-7 ≥10 is the threshold for probable generalised anxiety disorder. Use it as a baseline and monitoring tool, not a diagnosis in isolation.</li>
-    <li>CBT has the strongest evidence base across all anxiety disorders and effects that outlast pharmacotherapy at follow-up. Access and Choice (PMHA) funding has expanded funded access substantially - check local criteria before defaulting to prescribing.<sup>3</sup></li>
-    <li>SSRIs and SNRIs are effective adjuncts or alternatives where therapy is unavailable or declined. Start low, titrate slowly - anxiety disorders are more sensitive to initial activating side effects than depression.</li>
-    <li><strong>Do not prescribe benzodiazepines as first-line treatment.</strong> Short-term relief, worse long-term outcomes, significant dependence risk, and particular harm in older adults and those with concurrent substance use.<sup>4</sup></li>
-    <li>Panic disorder: explaining the panic cycle (hyperventilation → hypocapnia → paraesthesia → more fear) takes ten minutes and is often all that mild cases need. This is underused.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/mental-health/">Mental Health</a><span class="topic-trail-sep">·</span><span class="here">Anxiety</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Medical mimics: hyperthyroidism, arrhythmia, stimulant or caffeine excess, drug withdrawal, phaeo</li>
+      <li>Comorbid depression with active suicidality</li>
+      <li>Severe avoidance preventing work, school, or self-care</li>
+      <li>Acute panic with chest pain in someone with CV risk - rule out ACS first</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Tool</dt>
+      <dd>GAD-7 (≥10 probable); pair with PHQ-9</dd>
+      <dt>First-line</dt>
+      <dd>CBT - strongest evidence, effects outlast pharmacotherapy. Access &amp; Choice / PMHA</dd>
+      <dt>Medication</dt>
+      <dd>SSRI or SNRI - start low, titrate slowly (anxiety more activation-sensitive than depression)</dd>
+      <dt>Panic specifically</dt>
+      <dd>10 min explaining the panic cycle settles many mild cases</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Treatment failure on adequate SSRI/SNRI trial plus therapy</li>
+      <li>OCD or PTSD - specialist therapy improves outcomes</li>
+      <li>Severe agoraphobia or housebound</li>
+      <li>Suspected comorbid bipolar or psychosis</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li><strong>Avoid benzodiazepines as first-line</strong> - dependence and worse long-term outcomes</li>
+      <li>Anxiety meds take 4-6 weeks; expect a brief activation phase</li>
+      <li>Do not stop suddenly - taper applies</li>
+      <li>Free CBT online: Just A Thought NZ; crisis 1737</li>
+    </ul>
+  </div>
 </div>
 
 <p>

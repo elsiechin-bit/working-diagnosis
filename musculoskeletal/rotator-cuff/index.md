@@ -9,14 +9,49 @@ permalink: /msk/rotator-cuff/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Subacromial impingement: pain on overhead activities and a painful arc between 60 and 120 degrees of abduction. Neer sign (passive forward flexion) and Hawkins-Kennedy test (internal rotation with forward flexion) are the key provocation tests. Assess each rotator cuff muscle individually: supraspinatus (empty can), infraspinatus (external rotation), subscapularis (belly press or Gerber lift-off), and biceps (Speed's test).</li>
-    <li>Ultrasound is widely available in NZ and accurate for partial and full-thickness tears; useful for identifying calcific deposits suitable for needling. MRI provides superior detail for surgical planning. Plain X-rays identify calcific tendinopathy, acromial morphology, and superior humeral migration (suggestive of large rotator cuff tear).<sup>4</sup></li>
-    <li>Physiotherapy (rotator cuff strengthening and scapular stabilisation) is the cornerstone of management. Subacromial corticosteroid injection provides short-term relief and facilitates physiotherapy engagement - but repeated injections weaken tendon and should be avoided. NSAIDs for short-term analgesia. ACC funds acute musculoskeletal injury management.</li>
-    <li>Refer full-thickness tears with functional impairment in active patients for orthopaedic assessment. Calcific tendinopathy unresponsive to conservative management may benefit from radiology-guided needling and barbotage. Progressive neurological deficit or suprascapular nerve entrapment requires urgent assessment.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Rotator cuff &amp; impingement</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Acute traumatic full-thickness tear in an active patient - urgent orthopaedic referral</li>
+      <li>Frozen shoulder (passive ROM lost) - different management</li>
+      <li>Cervical radiculopathy referring to shoulder - check neck</li>
+      <li>Suprascapular nerve entrapment - progressive weakness without pain</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Tests</dt>
+      <dd>Painful arc 60-120°; Neer, Hawkins-Kennedy; empty can (supraspinatus); ER (infraspinatus); belly press (subscapularis)</dd>
+      <dt>Imaging</dt>
+      <dd>Ultrasound widely available in NZ - accurate for tears. X-ray for calcific tendinopathy</dd>
+      <dt>Treatment</dt>
+      <dd>Physiotherapy - cuff strengthening + scapular stabilisation</dd>
+      <dt>Injection</dt>
+      <dd>Subacromial steroid - short-term relief; do not repeat often (tendon weakening)</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Acute full-thickness tear in an active patient (ACC if injury-related)</li>
+      <li>Failed 3-6 months optimised physio</li>
+      <li>Calcific tendinopathy - radiology-guided needling/barbotage</li>
+      <li>Progressive neurological deficit</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Most rotator cuff problems improve with physio over weeks to months</li>
+      <li>Asymptomatic tears are common in older shoulders - imaging findings are not always the cause</li>
+      <li>Lifting overhead is OK if it does not flare pain - avoidance prolongs the problem</li>
+      <li>ACC covers physio for injury-related cases</li>
+    </ul>
+  </div>
 </div>
 
 <div class="tier-2">

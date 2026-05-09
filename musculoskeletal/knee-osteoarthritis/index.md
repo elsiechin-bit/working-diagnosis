@@ -9,14 +9,49 @@ permalink: /msk/knee-osteoarthritis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Weight loss is the highest-yield intervention - even 5-10% body weight reduction decreases pain and improves function.<sup>1</sup> Physiotherapy with sustained exercise (land-based or aquatic) and quadriceps strengthening is first-line treatment.</li>
-    <li>Standing weight-bearing X-rays are essential: non-weight-bearing views significantly underestimate joint space loss. Obtain bilateral views and skyline views if patellofemoral involvement is suspected.</li>
-    <li>Pain severity does not correlate with radiographic severity - many patients with severe imaging changes are minimally symptomatic. Treat the patient, not the X-ray.</li>
-    <li>Arthroscopic washout or meniscectomy for OA alone has no benefit over sham procedures and is not recommended.<sup>3</sup> Intra-articular corticosteroid injection (triamcinolone 40 mg) provides 2-4 weeks of relief and can be repeated seasonally.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Knee osteoarthritis</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Inflammatory arthritis (warm, polyarticular, morning stiffness) - not OA</li>
+      <li>Septic arthritis (acute hot effusion, fever) - aspirate before steroid</li>
+      <li>Avascular necrosis (steroid use, alcohol, sickle cell) - MRI</li>
+      <li>Spontaneous osteonecrosis of the knee in older women - acute medial pain</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Highest yield</dt>
+      <dd>5-10% weight reduction reduces pain and improves function</dd>
+      <dt>Movement</dt>
+      <dd>Physio + sustained quadriceps strengthening (land or aquatic)</dd>
+      <dt>Imaging</dt>
+      <dd>Standing weight-bearing X-rays bilateral; add skyline if patellofemoral suspected</dd>
+      <dt>Pharmacological</dt>
+      <dd>Topical NSAID limited; oral NSAID with PPI cover; intra-articular triamcinolone 40 mg gives 2-4 weeks relief</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Functional limitation impacting quality of life despite 3-6 months conservative care</li>
+      <li>Patient understands natural history and is willing to consider surgery</li>
+      <li>Diagnostic uncertainty - rheumatology if inflammatory features</li>
+      <li>Refractory pain on optimised therapy</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Pain severity does not match X-ray severity - we treat you, not the picture</li>
+      <li>Arthroscopic washout or meniscectomy do not help OA - do not pay for them privately</li>
+      <li>Strong quads change pain more than any tablet</li>
+      <li>Joint replacement works very well when the time is right</li>
+    </ul>
+  </div>
 </div>
 
 <div class="tier-2">

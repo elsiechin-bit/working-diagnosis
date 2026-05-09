@@ -9,14 +9,49 @@ permalink: /msk/polymyalgia-rheumatica/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>PMR is bilateral shoulder and hip girdle stiffness and pain in patients over 60, with morning stiffness lasting more than 45 minutes and markedly elevated inflammatory markers. The response to low-dose prednisolone within 72 hours is virtually diagnostic.</li>
-    <li>Always screen for giant cell arteritis (GCA) before starting steroids - present in 15-20% of PMR patients. Ask specifically about headache, jaw claudication, scalp tenderness, and visual symptoms. GCA requires higher steroid doses; missed GCA causes permanent vision loss.</li>
-    <li>Starting dose: prednisolone 15-20 mg/day. Taper slowly over 18-24 months. Relapse is common (50%) - increase dose and slow the taper. Monitor CRP/ESR monthly.</li>
-    <li>Bone protection is mandatory with prolonged steroid therapy: calcium, vitamin D, and alendronate (PHARMAC-funded) if osteoporosis risk factors are present.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Polymyalgia rheumatica</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>GCA overlap (15-20%)</strong> - screen for headache, jaw claudication, scalp tenderness, vision symptoms before starting steroids</li>
+      <li>Lack of response to 15-20 mg pred within 72 hours - reconsider diagnosis (RA, malignancy, infection)</li>
+      <li>Inflammatory rheumatologic mimics: late-onset RA, statin myopathy</li>
+      <li>Steroid-induced complications: glucose, BP, bone, infection risk</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Pattern</dt>
+      <dd>Bilateral shoulder + hip girdle stiffness, age &gt;60, morning stiffness &gt;45 min, ESR/CRP markedly elevated</dd>
+      <dt>Starting dose</dt>
+      <dd>Prednisolone 15-20 mg/day - response within 72 hours is virtually diagnostic</dd>
+      <dt>Taper</dt>
+      <dd>Slowly over 18-24 months; ESR/CRP monthly</dd>
+      <dt>Bone protection</dt>
+      <dd>Calcium, vitamin D, alendronate (funded) if risk factors</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Any GCA features - urgent rheumatology, ophthalmology if vision symptoms</li>
+      <li>Atypical features or poor response to steroids</li>
+      <li>Frequent relapses requiring high steroid burden</li>
+      <li>Tocilizumab consideration in refractory disease</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>This is treatable - most feel transformed within 72 hours of starting steroids</li>
+      <li>Treatment lasts 18-24 months on average; tapering too fast is the most common reason for relapse</li>
+      <li>Tell us immediately about any new headache or vision change</li>
+      <li>Bone protection is part of treatment, not optional</li>
+    </ul>
+  </div>
 </div>
 
 <p>

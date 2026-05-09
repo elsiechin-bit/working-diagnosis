@@ -9,14 +9,47 @@ permalink: /msk/rheumatoid-arthritis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Symmetrical MCP/PIP synovitis with morning stiffness lasting over 1 hour is RA until proven otherwise. DIP involvement is NOT typical - if DIP joints predominate, think osteoarthritis or psoriatic arthritis.</li>
-    <li>Refer urgently to rheumatology before you have all results back. The window for preventing permanent joint damage is narrow - outcomes worsen significantly if DMARDs are started more than 3 months after symptom onset.</li>
-    <li>Investigate in parallel with referral: FBC, ESR, CRP, rheumatoid factor, anti-CCP antibodies, and hand/foot X-rays. Anti-CCP is the more specific test (95% specificity) and predicts erosive disease.</li>
-    <li>NSAIDs for symptom relief while waiting. Do not start DMARDs in primary care - initiation requires rheumatology.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Rheumatoid arthritis</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Symmetrical MCP/PIP synovitis + morning stiffness &gt;1 hour - RA until proven otherwise</li>
+      <li>The 3-month window - DMARDs after that point save fewer joints</li>
+      <li>DIP-predominant - this is OA or psoriatic, not RA</li>
+      <li>Atlanto-axial subluxation in established RA before any neck manipulation or intubation</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Refer</dt>
+      <dd>Urgent rheumatology before all results back</dd>
+      <dt>Workup in parallel</dt>
+      <dd>FBC, ESR, CRP, RF, anti-CCP (95% specific), hand/foot X-rays</dd>
+      <dt>Holding measure</dt>
+      <dd>NSAID for symptom relief - do not start DMARDs in primary care</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Always - RA needs rheumatology for DMARD initiation</li>
+      <li>Suspected even before bloods return - urgency is the point</li>
+      <li>Established RA with new flare or biologic discussion</li>
+      <li>Pre-conception planning on methotrexate</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Treatment has changed dramatically - early DMARDs prevent the joint damage older relatives may have had</li>
+      <li>Methotrexate is funded and well-tolerated by most</li>
+      <li>This is a chronic illness but not a deteriorating one with treatment</li>
+      <li>Live vaccines are off-limits on most DMARDs - check with us before any travel jab</li>
+    </ul>
+  </div>
 </div>
 
 <p>

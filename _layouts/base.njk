@@ -27,18 +27,14 @@
       {{ content | safe }}
     </main>
 
-    {% if pageType != "handout" %}
+    {% if pageType != "handout" and summary %}
     <aside class="sidebar-tools" data-pagefind-ignore>
-      {% if summary %}
       <div class="note-summary-aside">
         <p class="aside-kicker">&#10063; At a glance</p>
         <div class="note-summary-aside__body">
           {{ summary | safe }}
         </div>
       </div>
-      {% endif %}
-
-      {% include "tools-aside.njk" %}
     </aside>
     {% endif %}
 

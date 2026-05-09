@@ -9,14 +9,49 @@ permalink: /msk/carpal-tunnel/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Night-time pain and paraesthesia in the thumb, index, and middle fingers (± ring finger), relieved by shaking or dangling the hand, is the classic presentation. Symptoms are worse with repetitive wrist flexion - typing, gripping, driving.</li>
-    <li>Thenar wasting means advanced, long-standing compression with risk of permanent denervation - this warrants urgent surgical referral. Do not wait for nerve conduction studies if wasting is visible.</li>
-    <li>Nerve conduction studies are the gold standard and are typically required before elective surgical referral. Screen for underlying causes: TSH, HbA1c or fasting glucose, FBC.</li>
-    <li>Conservative first-line: wrist splints at night (neutral position) plus corticosteroid injection into the carpal tunnel. PHARMAC funds methylprednisolone for injection. Surgical carpal tunnel release is definitive for constant symptoms or failed conservative management.<sup>3</sup></li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Carpal tunnel</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Thenar wasting</strong> - advanced compression, urgent surgical referral, do not wait for NCS</li>
+      <li>Cervical radiculopathy (C6/C7) mimicking median distribution</li>
+      <li>Underlying drivers: hypothyroidism, diabetes, RA, pregnancy</li>
+      <li>Bilateral severe CTS - consider amyloidosis or systemic cause</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Pattern</dt>
+      <dd>Nocturnal paraesthesia, thumb-index-middle, relieved by shaking</dd>
+      <dt>Workup</dt>
+      <dd>NCS before elective surgery; TSH, HbA1c/fasting glucose, FBC</dd>
+      <dt>Conservative</dt>
+      <dd>Night wrist splint (neutral) + corticosteroid injection (methylprednisolone funded)</dd>
+      <dt>Definitive</dt>
+      <dd>Carpal tunnel release - effective and durable</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Thenar wasting, severe sensory loss, motor weakness - urgent</li>
+      <li>Constant (not just nocturnal) symptoms</li>
+      <li>Failed conservative measures over 3-6 months</li>
+      <li>NCS-confirmed moderate-severe CTS</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Pregnancy-related CTS often resolves postpartum</li>
+      <li>Splints are more effective if worn every night for 4-6 weeks</li>
+      <li>Surgery is highly effective and recovery is quicker than people expect</li>
+      <li>Stop typing / gripping is rarely the answer - splint and treat instead</li>
+    </ul>
+  </div>
 </div>
 
 <div class="tier-2">

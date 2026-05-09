@@ -5,13 +5,47 @@ layout: topic.njk
 specialty: Mental Health
 ---
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Duration of untreated psychosis (DUP) predicts long-term functional outcome. DUP under 3 months is associated with significantly better recovery.<sup>1</sup> Red flags in general practice: social withdrawal, perplexity, odd reasoning, declining function in work or study, sleep reversal. These warrant urgent referral, not watchful waiting.</li>
-    <li>Bipolar disorder is frequently misdiagnosed as unipolar depression. Always screen for past hypomanic or manic periods before starting an antidepressant in a patient with recurrent depression. Antidepressant monotherapy in unrecognised bipolar disorder can precipitate mixed states or rapid cycling.<sup>2</sup></li>
-    <li>The GP's ongoing role in bipolar and psychosis is predominantly metabolic monitoring (weight, glucose, lipids) and physical health - a genuinely important function that secondary services frequently under-resource.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/mental-health/">Mental Health</a><span class="topic-trail-sep">·</span><span class="here">Psychosis &amp; bipolar</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>First-episode psychosis - urgent EIP referral, not watchful waiting (DUP under 3 months changes long-term outcome)</li>
+      <li>Bipolar disguised as recurrent depression - screen for past hypomania before any antidepressant</li>
+      <li>Acute mania - urgent secondary referral; do not start lithium without specialist</li>
+      <li>Postpartum psychosis - same-day; psychiatric emergency</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Suspected first-episode psychosis</dt>
+      <dd>Urgent EIP referral - document "suspected first-episode psychosis"</dd>
+      <dt>Bipolar screen</dt>
+      <dd>MDQ or HCL-32 in any recurrent depression before SSRI</dd>
+      <dt>GP role in stable disease</dt>
+      <dd>Metabolic monitoring (weight, BP, glucose, lipids), prolactin if indicated; clozapine registry if applicable</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Every suspected first-episode psychosis</li>
+      <li>Every confirmed manic or mixed episode</li>
+      <li>Clozapine concerns (neutropenia, missed monitoring)</li>
+      <li>Significant relapse in established disease</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li>Treatment works - early help changes the long-term picture</li>
+      <li>What you are seeing is illness, not them being themselves</li>
+      <li>Family involvement transforms outcome - encourage it</li>
+      <li>Crisis line: 1737 or local mental-health emergency team</li>
+    </ul>
+  </div>
 </div>
 
 <p>Psychosis and bipolar spectrum disorders are less common but carry disproportionate morbidity. Early psychosis - the period surrounding a first episode - is a critical window: duration of untreated psychosis predicts long-term outcome, and DUP under 3 months is associated with significantly better functional recovery.<sup>1</sup></p>

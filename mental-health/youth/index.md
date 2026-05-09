@@ -5,14 +5,49 @@ layout: topic.njk
 specialty: Mental Health
 ---
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Adolescent presentations are often indirect: school refusal, somatic complaints (headaches, abdominal pain), irritability rather than low mood, or a caregiver presenting on behalf of a young person who hasn't consented to be there. Seeing the young person alone - briefly, with confidentiality limits explained - is best practice.</li>
-    <li>Ask about self-harm directly. The evidence is clear that asking does not increase risk and often provides relief.<sup>2</sup> Frame it matter-of-factly: "Some young people who feel this way hurt themselves - has that happened for you?"</li>
-    <li>Fluoxetine is the only SSRI with robust RCT evidence in adolescent depression. The FDA black-box warning reflects increased suicidal ideation (not completed suicide) in short-term trials - do not let it discourage appropriate prescribing in severe illness, but monitor closely in the first 4 weeks.</li>
-    <li>Eating disorder: early referral is time-critical. Anorexia nervosa has the highest mortality of any psychiatric condition.<sup>4</sup> Do not wait for the patient to be "sick enough."</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/mental-health/">Mental Health</a><span class="topic-trail-sep">·</span><span class="here">Youth</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Self-harm or suicidality - ask directly, asking does not increase risk</li>
+      <li>Eating disorder with medical instability - bradycardia, electrolytes, severe underweight</li>
+      <li>First-episode psychosis - urgent EIP referral</li>
+      <li>Indirect presentations: school refusal, somatic complaints, irritability not low mood</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Consultation</dt>
+      <dd>See the young person alone briefly; explain confidentiality limits at the start</dd>
+      <dt>Tools (12+)</dt>
+      <dd>PHQ-A and GAD-7</dd>
+      <dt>If SSRI needed</dt>
+      <dd>Fluoxetine - the only SSRI with robust RCT evidence in adolescents. Monitor closely first 4 weeks</dd>
+      <dt>Engagement</dt>
+      <dd>HEEADSSS, family involvement where safe, school as ally</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Any suspected eating disorder - do not wait for "sick enough"</li>
+      <li>Severe self-harm or suicidality</li>
+      <li>First-episode psychosis</li>
+      <li>Treatment-resistant or moderate-severe presentation</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li>Asking about self-harm matters and does not create risk</li>
+      <li>Confidentiality has clear limits - clinician will tell you about safety</li>
+      <li>Treatment works; waiting is the worst option</li>
+      <li><strong>Youthline 0800 376 633</strong>; <strong>1737</strong> - free text or call</li>
+    </ul>
+  </div>
 </div>
 
 <p>Youth mental health is a genuine crisis in NZ by any measure. Rates of anxiety, depression, self-harm, and eating disorders among young people have risen markedly over the past decade.<sup>1</sup> Waitlists for secondary CAMHS are long. General practice is, by default, a frontline service.</p>

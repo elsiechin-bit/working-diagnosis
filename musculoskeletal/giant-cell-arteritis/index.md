@@ -9,14 +9,49 @@ permalink: /msk/giant-cell-arteritis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>GCA with vision symptoms is a same-day emergency - vision loss from arteritic anterior ischaemic optic neuropathy (AAION) can be sudden, permanent, and bilateral. Do not wait for biopsy results before starting steroids; histological changes persist for 2-4 weeks after steroids are started.<sup>1</sup></li>
-    <li>GCA without visual symptoms: prednisolone 40-60 mg/day immediately. GCA with visual symptoms or rapid progression: prednisolone 1 mg/kg/day or IV methylprednisolone 500-1000 mg/day for 3 days, plus same-day ophthalmology consultation.</li>
-    <li>Jaw claudication (pain with chewing) is highly specific for GCA. ESR is usually above 50, often above 100; CRP is also very high. Normal or mildly elevated ESR does not exclude GCA in a symptomatic patient.</li>
-    <li>Tocilizumab (IL-6 inhibitor) is PHARMAC-funded via Special Authority as a steroid-sparing agent. Refer to rheumatology for initiation. Bone protection (calcium, vitamin D, bisphosphonate) is mandatory given prolonged steroid exposure.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Giant cell arteritis</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li><strong>Any vision symptom (transient included) - same-day ophthalmology emergency</strong></li>
+      <li>Jaw claudication - highly specific for GCA</li>
+      <li>Normal or mildly elevated ESR does NOT exclude GCA in a symptomatic patient</li>
+      <li>15-20% overlap with PMR - new headache in known PMR is GCA until proven otherwise</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>No visual symptoms</dt>
+      <dd>Prednisolone 40-60 mg/day immediately</dd>
+      <dt>Visual symptoms or rapid progression</dt>
+      <dd>Pred 1 mg/kg/day or IV methylpred 500-1000 mg × 3 days; same-day ophthalmology</dd>
+      <dt>Workup</dt>
+      <dd>ESR + CRP (usually very high), FBC; do NOT delay steroids for biopsy</dd>
+      <dt>Bone protection</dt>
+      <dd>Calcium, vitamin D, bisphosphonate - mandatory given long steroid course</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Every suspected case - urgent rheumatology and biopsy (within 2-4 weeks of starting steroids)</li>
+      <li>Any vision symptom - same-day ophthalmology</li>
+      <li>For tocilizumab consideration (PHARMAC-funded via Special Authority)</li>
+      <li>Vascular complication (stroke, MI, large-vessel disease)</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Once vision is lost from GCA, it rarely recovers - prevention is the point</li>
+      <li>Steroid course will be long (months to a year-plus) - bone protection is part of treatment</li>
+      <li>Tell us immediately about any new visual change</li>
+      <li>Steroids cause weight gain, BP, and glucose change - we will monitor</li>
+    </ul>
+  </div>
 </div>
 
 <div class="tier-2">

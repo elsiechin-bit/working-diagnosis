@@ -19,16 +19,29 @@
       <details class="nav-drop nav-drop--workbench">
         <summary>Workbench</summary>
         <div class="nav-drop-panel nav-drop-panel--wide">
+
+          <a href="/workshop/guidelines/" class="nav-drop-feature">
+            <span class="nav-drop-feature__label">Reference</span>
+            <span class="nav-drop-feature__title">Guideline Comparisons</span>
+            <span class="nav-drop-feature__blurb">NZ vs AU vs international across 12 primary care topics.</span>
+          </a>
+
           {% for cat in tools.categories %}
-            <div class="nav-drop-group">
-              <p class="nav-drop-group__title">{{ cat.name }}</p>
-              <ul class="nav-drop-list">
+            <details class="nav-drop-cat">
+              <summary class="nav-drop-cat__header">{{ cat.name }}</summary>
+              <ul class="nav-drop-cat__list">
                 {% for tool in cat.items %}
-                  <li><a href="{{ tool.url }}">{{ tool.name }}</a></li>
+                  <li>
+                    <a href="{{ tool.url }}" class="nav-drop-tool">
+                      <span class="nav-drop-tool__name">{{ tool.name }}</span>
+                      {% if tool.blurb %}<span class="nav-drop-tool__blurb">{{ tool.blurb }}</span>{% endif %}
+                    </a>
+                  </li>
                 {% endfor %}
               </ul>
-            </div>
+            </details>
           {% endfor %}
+
         </div>
       </details>
 

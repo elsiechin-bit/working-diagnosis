@@ -9,14 +9,49 @@ permalink: /msk/osteoporosis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Osteoporosis is defined by a DEXA T-score of -2.5 or below, but any low-trauma fracture is a clinical diagnosis of osteoporosis regardless of BMD. Screen women aged 65+, men aged 70+, anyone with a low-trauma fracture, patients on prolonged systemic corticosteroids (>3 months), and those with rheumatoid arthritis or chronic conditions associated with bone loss.</li>
-    <li>Use the GARVAN Fracture Risk Calculator (validated in NZ populations) rather than FRAX when falls history is a significant factor - GARVAN incorporates falls, FRAX does not.<sup>1</sup> High fracture risk on GARVAN/FRAX justifies treatment even if the DEXA T-score is only mildly abnormal.</li>
-    <li>First-line pharmacotherapy: alendronate 70 mg weekly (PHARMAC-funded with Special Authority; requires DEXA T-score of -2.5 or below, or prior low-trauma fracture). Zoledronic acid IV annually for oral intolerance; denosumab for severe osteoporosis; teriparatide or romosozumab for very high-risk (specialist-initiated).</li>
-    <li>All patients with a low-trauma fracture should be referred to Fracture Liaison Services if available. Bone protection is mandatory with prolonged corticosteroid therapy: calcium, vitamin D, and alendronate (indicated for prednisolone equivalent 7.5 mg/day or more for 3 months or longer).</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Osteoporosis</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Any low-trauma fracture = clinical osteoporosis regardless of DEXA</li>
+      <li>Vertebral compression fracture in older adult with new mid-thoracic/lumbar pain - X-ray, do not dismiss</li>
+      <li>Steroid-induced osteoporosis at pred ≥7.5 mg/day for ≥3 months - protect bones from day one</li>
+      <li>Stopping denosumab without bisphosphonate cover - rebound fractures</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Screen</dt>
+      <dd>Women ≥65, men ≥70, prior low-trauma fracture, prolonged steroids, RA, chronic conditions</dd>
+      <dt>Risk tool</dt>
+      <dd>GARVAN (validated NZ, includes falls); FRAX an alternative</dd>
+      <dt>Funded NZ</dt>
+      <dd>Alendronate 70 mg weekly (Special Authority: T ≤ -2.5 or prior fracture). Zoledronic acid IV yearly if oral intolerant</dd>
+      <dt>All patients</dt>
+      <dd>Calcium, vitamin D, falls prevention, weight-bearing exercise</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Severe osteoporosis or recurrent fractures - specialist for denosumab, teriparatide, or romosozumab</li>
+      <li>Atypical fracture (subtrochanteric, atypical femur)</li>
+      <li>Long-term denosumab review - never stop without bisphosphonate cover</li>
+      <li>Fracture Liaison Service after any low-trauma fracture</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Osteoporosis is silent until a fracture - treatment matters before that point</li>
+      <li>Bisphosphonates are taken for years, not forever - we review after 5</li>
+      <li>Falls prevention (Steady As You Go, Otago) prevents as many fractures as the tablets</li>
+      <li>Calcium-rich food + sunlight cover most needs - supplements only if dietary intake is low</li>
+    </ul>
+  </div>
 </div>
 
 <div class="tier-2">

@@ -9,14 +9,49 @@ permalink: /msk/hip-osteoarthritis/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Hip OA presents with groin or anterior thigh pain, often referred to the medial knee - a pattern that can mislead. Loss of internal rotation is the earliest and most sensitive examination finding. The FADIR test (flexion-adduction-internal rotation) indicates intra-articular pathology. Differentiate from trochanteric pain syndrome (lateral hip, point tenderness over greater trochanter) and referred lumbar pain (radicular pattern).</li>
-    <li>Standing weight-bearing X-ray (AP pelvis plus lateral hip) is the initial imaging modality. Joint space narrowing, osteophytes, and subarticular sclerosis are the classic changes. Radiographic severity does not correlate with symptom severity; manage the patient, not the scan.</li>
-    <li>Weight loss and physiotherapy (hip abductor strengthening, water-based exercise) are the highest-yield interventions. Intra-articular triamcinolone 20-40 mg under ultrasound guidance provides short-term relief and can be repeated 3-4 times yearly.</li>
-    <li>Total hip arthroplasty is highly effective with 15-year survivorship exceeding 90%.<sup>3</sup> Refer after optimised conservative management (3-6 months) when there is significant functional limitation and the patient is willing to consider surgery. Age alone is not a contraindication.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Hip osteoarthritis</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Avascular necrosis (steroid use, alcohol, sickle cell, post-fracture) - MRI</li>
+      <li>Trochanteric pain syndrome (lateral hip, point tender over GT) - different management</li>
+      <li>Referred lumbar pain (radicular pattern, neurological signs)</li>
+      <li>Insufficiency fracture in osteoporotic older patient</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Pattern</dt>
+      <dd>Groin/anterior thigh pain referred to medial knee; loss of internal rotation earliest sign</dd>
+      <dt>Test</dt>
+      <dd>FADIR (flexion-adduction-internal rotation) for intra-articular pathology</dd>
+      <dt>Imaging</dt>
+      <dd>Standing weight-bearing AP pelvis + lateral hip</dd>
+      <dt>Treatment</dt>
+      <dd>Weight loss + hip abductor strengthening + aquatic exercise; US-guided triamcinolone 20-40 mg if needed</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Significant functional limitation despite 3-6 months optimised conservative care</li>
+      <li>Patient willing to consider surgery</li>
+      <li>Younger patient with early OA - consider arthroscopy or osteotomy specialist opinion</li>
+      <li>Suspected AVN or insufficiency fracture - urgent imaging and ortho</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Hip pain is often felt in the groin or knee - that is normal</li>
+      <li>Strong glutes change pain more than any tablet</li>
+      <li>Total hip replacement works very well - 90%+ still good at 15 years</li>
+      <li>Age alone is not a barrier to surgery</li>
+    </ul>
+  </div>
 </div>
 
 <div class="tier-2">

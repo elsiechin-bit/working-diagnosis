@@ -5,15 +5,49 @@ layout: topic.njk
 specialty: Mental Health
 ---
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>PHQ-9 ≥10 has sensitivity 88%, specificity 85% for major depression, but the score is a prompt not a diagnosis. Always ask about duration, functional impact, and suicidality directly.<sup>2</sup></li>
-    <li>Mild-to-moderate depression: structured exercise, behavioural activation, and brief CBT have effect sizes comparable to antidepressants with fewer adverse effects.<sup>3</sup></li>
-    <li>Moderate-to-severe depression: SSRIs first line. Sertraline has the best evidence for combined efficacy and tolerability across meta-analyses.<sup>4</sup></li>
-    <li>Access and Choice funding (PMHA services) has expanded funded brief-therapy access substantially. Check your local PMHA service for current referral criteria before prescribing by default.</li>
-    <li>Two or more episodes warrants at least 2 years of maintenance treatment after remission to reduce relapse risk.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/mental-health/">Mental Health</a><span class="topic-trail-sep">·</span><span class="here">Depression</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Active suicidality with intent or plan - same-day mental-health crisis pathway</li>
+      <li>Psychotic features - urgent secondary referral, not SSRI alone</li>
+      <li>Past hypomania or mania - this is bipolar, screen with MDQ before any antidepressant</li>
+      <li>Postpartum onset within 4 weeks - perinatal-specific pathway</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Tool</dt>
+      <dd>PHQ-9 (≥10 probable, ≥15 moderate-severe)</dd>
+      <dt>Mild-moderate (10-14)</dt>
+      <dd>Exercise, behavioural activation, brief CBT via PMHA / Access &amp; Choice</dd>
+      <dt>Moderate-severe (≥15)</dt>
+      <dd>Sertraline first-line; titrate to therapeutic dose</dd>
+      <dt>Maintenance</dt>
+      <dd>≥2 years after a second episode</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Active suicidality, psychotic depression, suspected bipolar</li>
+      <li>No response after 2 adequate medication trials</li>
+      <li>Severe functional impairment</li>
+      <li>Comorbid eating disorder, severe substance use, or personality disorder needing specialist input</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>SSRIs take 4-6 weeks; side effects often settle within 2</li>
+      <li>Do not stop suddenly - any SSRI needs a taper</li>
+      <li>Exercise and therapy are not "lesser" - the evidence is strong</li>
+      <li>Crisis: <strong>1737</strong> (free text or call), <strong>Lifeline 0800 543 354</strong></li>
+    </ul>
+  </div>
 </div>
 
 <p>

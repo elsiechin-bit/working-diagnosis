@@ -9,14 +9,49 @@ permalink: /msk/ankle-sprain/
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<div class="tier-1">
-  <p class="tier-label">❍ At a glance</p>
-  <ul>
-    <li>Ottawa Ankle Rules: X-ray is indicated if there is bone tenderness at the posterior 6 cm of the fibula, tip of lateral malleolus, posterior 6 cm of tibia, or tip of medial malleolus - OR inability to weight-bear immediately after injury and in the clinic.<sup>1</sup> Most sprains do not meet criteria.</li>
-    <li>Early protected weight-bearing is superior to immobilisation or rest. The PEACE and LOVE protocol replaces RICE - prioritise protection, early active exercise, compression, and elevation acutely, then loading and vascularisation.</li>
-    <li>Chronic instability develops in 20-40% after initial sprains. Proprioceptive training (balance board, single-leg stance) and peroneal strengthening are the key preventive interventions.<sup>4</sup></li>
-    <li>Syndesmotic (high ankle) sprains follow external rotation injury, heal more slowly, and may require orthopaedic assessment. Brostrom-Gould procedure is reserved for chronic instability failing 3 months of optimised physiotherapy.</li>
-  </ul>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/msk/">MSK</a><span class="topic-trail-sep">·</span><span class="here">Ankle sprain</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Fracture - apply Ottawa rules at every visit</li>
+      <li>Syndesmotic (high ankle) sprain - external rotation injury, slower recovery, orthopaedic assessment</li>
+      <li>Achilles tendon rupture (Thompson test) in older adults presenting as "ankle injury"</li>
+      <li>Lateral process talus fracture in snowboarders / inversion injury</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Imaging</dt>
+      <dd>Ottawa rules: malleolar tenderness or unable to weight-bear at scene and clinic</dd>
+      <dt>Acute care</dt>
+      <dd>PEACE then LOVE - protection, early active exercise, compression, elevation; then loading and vascularisation</dd>
+      <dt>NZ pathway</dt>
+      <dd>ACC for injury - early physio referral</dd>
+      <dt>Recovery</dt>
+      <dd>Proprioceptive training (balance board, single-leg stance), peroneal strengthening</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>Suspected syndesmotic sprain or fracture</li>
+      <li>Chronic instability (20-40% incidence) failing 3 months optimised physio - consider Brostrom-Gould</li>
+      <li>Recurrent sprains despite rehab</li>
+      <li>Persistent pain &gt;6 weeks - rule out occult injury</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell the patient</p>
+    <ul>
+      <li>Walk on it as soon as you can - rest delays recovery</li>
+      <li>RICE has been retired for chronic immobility - PEACE and LOVE is the new framework</li>
+      <li>Proprioceptive training prevents the next sprain - it is the most-skipped step</li>
+      <li>Most sprains heal in 4-8 weeks; chronic instability is preventable</li>
+    </ul>
+  </div>
 </div>
 
 <div class="tier-2">
