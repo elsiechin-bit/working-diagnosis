@@ -48,8 +48,8 @@
       <a href="/workshop/" class="nav-room-link nav-room-link--workshop">Workshop</a>
 
       <span class="nav-utilities">
-        {% for item in site.nav %}{% if item.row == 6 %}
-          <a href="{{ item.url }}" class="nav-utility">{{ item.label }}</a>
+        {% for item in site.nav %}{% if item.row == 6 and item.inMasthead and not item.divider %}
+          <a href="{{ item.url }}"{% if item.group %} class="nav-{{ item.group }}"{% endif %}>{{ item.shortLabel or item.label }}</a>
         {% endif %}{% endfor %}
       </span>
 
