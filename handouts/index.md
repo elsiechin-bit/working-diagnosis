@@ -58,21 +58,21 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <h2>Respiratory</h2>
   <ul class="handout-list">
     <li><a href="/handouts/common-cold/">Upper respiratory infection (common cold)  -  self-care at home</a></li>
-    <li>Sore throat and tonsillitis  -  when antibiotics are needed <span class="hl-soon">coming soon</span></li>
-    <li>Sinusitis  -  self-care and when to seek help <span class="hl-soon">coming soon</span></li>
-    <li>Allergic rhinitis (hayfever)  -  managing symptoms year-round <span class="hl-soon">coming soon</span></li>
-    <li>Acute bronchitis  -  why antibiotics usually do not help <span class="hl-soon">coming soon</span></li>
-    <li>Asthma in adults  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>Asthma  -  using your inhaler and spacer correctly <span class="hl-soon">coming soon</span></li>
-    <li>Asthma action plan  -  what to do when symptoms worsen <span class="hl-soon">coming soon</span></li>
-    <li>COPD  -  understanding your diagnosis <span class="hl-soon">coming soon</span></li>
-    <li>COPD  -  managing breathlessness and preventing exacerbations <span class="hl-soon">coming soon</span></li>
-    <li>Pneumonia  -  recovery at home and what to watch for <span class="hl-soon">coming soon</span></li>
-    <li>COVID-19  -  isolation and home care in NZ <span class="hl-soon">coming soon</span></li>
-    <li>Long COVID  -  symptoms and what helps <span class="hl-soon">coming soon</span></li>
-    <li>Obstructive sleep apnoea  -  getting assessed and treated <span class="hl-soon">coming soon</span></li>
-    <li>Chronic cough  -  common causes and what to expect <span class="hl-soon">coming soon</span></li>
-    <li>Pulmonary embolism  -  warning signs and what to do <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/sore-throat-tonsillitis/">Sore throat and tonsillitis  -  when antibiotics are needed</a></li>
+    <li><a href="/handouts/sinusitis/">Sinusitis  -  self-care and when to seek help</a></li>
+    <li><a href="/handouts/allergic-rhinitis/">Allergic rhinitis (hayfever)  -  managing symptoms year-round</a></li>
+    <li><a href="/handouts/acute-bronchitis/">Acute bronchitis  -  why antibiotics usually do not help</a></li>
+    <li><a href="/handouts/asthma-adults/">Asthma in adults  -  understanding your diagnosis</a></li>
+    <li><a href="/handouts/asthma-inhaler-spacer/">Asthma  -  using your inhaler and spacer correctly</a></li>
+    <li><a href="/handouts/asthma-action-plan/">Asthma action plan  -  what to do when symptoms worsen</a></li>
+    <li><a href="/handouts/copd-diagnosis/">COPD  -  understanding your diagnosis</a></li>
+    <li><a href="/handouts/copd-management/">COPD  -  managing breathlessness and preventing exacerbations</a></li>
+    <li><a href="/handouts/pneumonia/">Pneumonia  -  recovery at home and what to watch for</a></li>
+    <li><a href="/handouts/covid-19-home-care/">COVID-19  -  isolation and home care in NZ</a></li>
+    <li><a href="/handouts/long-covid/">Long COVID  -  symptoms and what helps</a></li>
+    <li><a href="/handouts/obstructive-sleep-apnoea/">Obstructive sleep apnoea  -  getting assessed and treated</a></li>
+    <li><a href="/handouts/chronic-cough/">Chronic cough  -  common causes and what to expect</a></li>
+    <li><a href="/handouts/pulmonary-embolism/">Pulmonary embolism  -  warning signs and what to do</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/r/respiratory/">Health Navigator  -  Respiratory</a> · <a href="https://www.asthma.org.nz">Asthma and Respiratory Foundation NZ</a> · <a href="https://www.lung.org.nz">Lung Foundation NZ</a></p>
 </div>
@@ -319,12 +319,12 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 <div class="handout-section" id="mens-health">
   <h2>Men's Health</h2>
   <ul class="handout-list">
-    <li>Prostate health and the PSA conversation <span class="hl-soon">coming soon</span></li>
-    <li>Erectile dysfunction  -  what is normal and what is not <span class="hl-soon">coming soon</span></li>
-    <li>Testicular self-examination  -  when and how <span class="hl-soon">coming soon</span></li>
-    <li>Hair loss in men  -  what works and what does not <span class="hl-soon">coming soon</span></li>
-    <li>Testosterone in midlife  -  what the evidence actually says <span class="hl-soon">coming soon</span></li>
-    <li>Snoring vs sleep apnoea  -  when to investigate <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/prostate-psa/">Prostate health and the PSA conversation</a></li>
+    <li><a href="/handouts/erectile-dysfunction/">Erectile dysfunction  -  what is normal and what is not</a></li>
+    <li><a href="/handouts/testicular-self-exam/">Testicular self-examination  -  when and how</a></li>
+    <li><a href="/handouts/hair-loss-men/">Hair loss in men  -  what works and what does not</a></li>
+    <li><a href="/handouts/testosterone-midlife/">Testosterone in midlife  -  what the evidence actually says</a></li>
+    <li><a href="/handouts/snoring-sleep-apnoea/">Snoring vs sleep apnoea  -  when to investigate</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://nz.movember.com">Movember NZ</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - men's health</a> &middot; <a href="https://www.prostate.org.nz">Prostate Cancer Foundation NZ</a></p>
 </div>
