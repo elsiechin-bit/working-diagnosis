@@ -61,8 +61,38 @@ a:hover { color: var(--green); }
   background: #E5EAEE;
   border: 1px solid var(--rule);
   border-radius: 14px;
-  padding: 24px 22px;
+  overflow: hidden;
 }
+.tools-aside__trigger {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+  user-select: none;
+}
+.tools-aside__trigger::-webkit-details-marker { display: none; }
+.tools-aside__trigger:hover { color: var(--green-deep); }
+.tools-aside__chevron {
+  transition: transform 180ms ease;
+  font-size: 0.95em;
+  opacity: 0.7;
+}
+.tools-aside[open] .tools-aside__chevron { transform: rotate(180deg); opacity: 1; }
+.tools-aside[open] .tools-aside__trigger {
+  border-bottom: 1px solid var(--rule);
+}
+.tools-aside__body {
+  padding: 18px 22px 24px;
+}
+.tools-aside__body .aside-kicker { margin-top: 0; }
 
 /* Page TOC (left column on topic pages) */
 .page-toc {
@@ -297,6 +327,56 @@ a:hover { color: var(--green); }
 .kicker::before { content: "? "; color: var(--green); letter-spacing: 0; }
 .section-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 0 0 32px; font-weight: 400; }
 .specialty-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 0 0 14px; }
+
+/* --- Library breadcrumb / trail --- */
+.topic-trail { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 14px; }
+.topic-trail a { color: var(--ink-mute); }
+.topic-trail a:hover { color: var(--green); }
+.topic-trail .here { color: var(--ink); }
+.topic-trail-sep { margin: 0 6px; color: var(--rule); }
+
+/* --- Specialty index: search row + card grid grouped by sub-domain --- */
+.specialty-search-row { display: flex; gap: 12px; margin: 0 0 28px; align-items: stretch; }
+.specialty-search { flex: 1; padding: 10px 14px; background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 4px; font-family: var(--sans-body); font-size: 14px; color: var(--ink-mute); cursor: text; }
+.specialty-search:focus, .specialty-search:hover { border-color: var(--green); color: var(--ink); outline: none; }
+.specialty-newish { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 14px; background: var(--green-deep); color: var(--paper); border-radius: 4px; align-self: stretch; display: inline-flex; align-items: center; }
+.specialty-newish a { color: inherit; }
+
+.specialty-group { margin: 0 0 24px; }
+.specialty-group__title { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ochre); margin: 0 0 10px; font-weight: 500; }
+.specialty-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.specialty-card { background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 4px; padding: 14px 16px; transition: border-color 140ms, transform 140ms; display: block; color: inherit; }
+.specialty-card:hover { border-color: var(--green); transform: translateY(-1px); }
+.specialty-card__name { font-family: var(--serif-display); font-weight: 700; font-size: 16px; color: var(--green-deep); margin: 0 0 3px; letter-spacing: -0.01em; }
+.specialty-card:hover .specialty-card__name { color: var(--green); }
+.specialty-card__line { font-family: var(--serif-body); font-size: 14px; line-height: 1.4; color: var(--ink-soft); margin: 0; }
+.specialty-card.is-soon { opacity: 0.55; pointer-events: none; }
+.specialty-card.is-soon::after { content: "coming soon"; display: inline-block; margin-top: 4px; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
+@media (max-width: 720px) { .specialty-grid { grid-template-columns: 1fr; } }
+
+/* --- Condition page: panic strip (4 tiles for panic-scan use) --- */
+.panic-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 0 0 32px; }
+.panic-tile { padding: 14px 16px; background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 4px; }
+.panic-tile.dont-miss { border-left: 4px solid var(--ochre); }
+.panic-tile.first-line { border-left: 4px solid var(--green); }
+.panic-tile.refer { border-left: 4px solid var(--slate); }
+.panic-tile.tell { border-left: 4px solid var(--olive-light); }
+.panic-tile__label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 8px; font-weight: 500; }
+.panic-tile.dont-miss .panic-tile__label { color: var(--ochre); }
+.panic-tile.first-line .panic-tile__label { color: var(--green-deep); }
+.panic-tile.refer .panic-tile__label { color: var(--slate); }
+.panic-tile.tell .panic-tile__label { color: var(--olive-light); }
+.panic-tile ul { list-style: none; padding: 0; margin: 0; }
+.panic-tile li { font-family: var(--serif-body); font-size: 13.5px; line-height: 1.45; color: var(--ink); padding: 3px 0; border-bottom: 1px dotted var(--rule); }
+.panic-tile li:last-child { border-bottom: none; }
+.panic-tile li strong { font-weight: 500; color: var(--ink); }
+.panic-tile dl { margin: 0; }
+.panic-tile dt { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-mute); margin: 6px 0 1px; }
+.panic-tile dt:first-child { margin-top: 0; }
+.panic-tile dd { margin: 0; font-family: var(--serif-body); font-size: 13.5px; line-height: 1.4; color: var(--ink); }
+@media (max-width: 960px) { .panic-strip { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .panic-strip { grid-template-columns: 1fr; } }
+@media print { .panic-strip { grid-template-columns: 1fr 1fr; gap: 6pt; margin-bottom: 12pt; } .panic-tile { break-inside: avoid; padding: 8pt; } .panic-tile li { font-size: 9.5pt; } }
 
 .wordmark { font-family: var(--serif-display); font-weight: 800; font-size: clamp(60px, 10vw, 132px); line-height: 0.92; letter-spacing: -0.04em; margin: 0; }
 .wordmark .second { display: block; font-style: italic; color: var(--green); }

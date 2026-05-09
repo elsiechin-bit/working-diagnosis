@@ -1,27 +1,33 @@
-<div class="tools-aside" aria-label="GP Tools">
-  <p class="aside-kicker">{{ tools.kicker }}</p>
-  <h2 class="aside-title">{{ tools.label }}</h2>
+<details class="tools-aside" aria-label="GP Tools">
+  <summary class="tools-aside__trigger">
+    <span class="tools-aside__label">{{ tools.label }}</span>
+    <span class="tools-aside__chevron" aria-hidden="true">&#x25BE;</span>
+  </summary>
 
-  {% for group in tools.categories %}
-    <details class="tools-group">
-      <summary class="tools-group__header">{{ group.name }}</summary>
-      <ul class="tools-list">
-        {% for tool in group.items %}
-          <li>
-            <a href="{{ tool.url }}" class="tool-link">
-              <span class="tool-name">{{ tool.name }}</span>
-              {% if tool.blurb %}<span class="tool-blurb">{{ tool.blurb }}</span>{% endif %}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </details>
-  {% endfor %}
+  <div class="tools-aside__body">
+    <p class="aside-kicker">{{ tools.kicker }}</p>
 
-  <p class="tools-experiments">
-    <a href="/experiments/" class="tools-experiments__link" rel="nofollow">
-      <span class="tools-experiments__lock" aria-hidden="true">&#x1F512;</span>
-      <span class="tools-experiments__label">Experiments</span>
-    </a>
-  </p>
-</div>
+    {% for group in tools.categories %}
+      <details class="tools-group">
+        <summary class="tools-group__header">{{ group.name }}</summary>
+        <ul class="tools-list">
+          {% for tool in group.items %}
+            <li>
+              <a href="{{ tool.url }}" class="tool-link">
+                <span class="tool-name">{{ tool.name }}</span>
+                {% if tool.blurb %}<span class="tool-blurb">{{ tool.blurb }}</span>{% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </details>
+    {% endfor %}
+
+    <p class="tools-experiments">
+      <a href="/experiments/" class="tools-experiments__link" rel="nofollow">
+        <span class="tools-experiments__lock" aria-hidden="true">&#x1F512;</span>
+        <span class="tools-experiments__label">Experiments</span>
+      </a>
+    </p>
+  </div>
+</details>
