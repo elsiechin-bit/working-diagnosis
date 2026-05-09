@@ -406,7 +406,7 @@ a:hover { color: var(--green); }
 .tools-list { list-style: none; padding: 0; margin: 0 0 6px; }
 .tools-list li { border-top: 1px solid var(--rule); }
 .tools-list li:first-child { border-top: none; }
-.tool-link { display: block; padding: 10px 0; color: var(--ink); transition: color 120ms ease; }
+.tool-link { display: block; padding: 10px 0; color: var(--ink); transition: color 120ms ease; font-family: var(--serif-body); font-size: 0.95rem; }
 .tool-link:hover { color: var(--green-deep); }
 .tool-link:hover .tool-name { color: var(--green-deep); }
 .tool-name { display: block; font-family: var(--serif-display); font-weight: 600; font-size: 14px; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 2px; }
