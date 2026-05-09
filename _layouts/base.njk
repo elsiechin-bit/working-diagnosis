@@ -42,16 +42,12 @@
 
   </div>
 
-  {% include "footer.njk" %}
-
-  <!-- Search modal -->
-  <div id="search-modal" class="search-modal" role="dialog" aria-modal="true" aria-label="Search" hidden>
-    <div class="search-modal-backdrop" id="search-backdrop"></div>
-    <div class="search-modal-body">
-      <button class="search-modal-close" id="search-close" aria-label="Close search">&#x2715;</button>
-      <div id="search"></div>
-    </div>
+  <!-- Search dropdown -->
+  <div id="search-dropdown" class="search-dropdown" hidden>
+    <div id="search"></div>
   </div>
+
+  {% include "footer.njk" %}
 
   <script src="/pagefind/pagefind-ui.js"></script>
   <script>
@@ -60,35 +56,45 @@
         new PagefindUI({ element: '#search', showSubResults: true });
       }
 
-      var trigger  = document.getElementById('search-trigger');
-      var modal    = document.getElementById('search-modal');
-      var closeBtn = document.getElementById('search-close');
-      var backdrop = document.getElementById('search-backdrop');
+      var trigger    = document.getElementById('search-trigger');
+      var dropdown   = document.getElementById('search-dropdown');
 
       function openSearch() {
-        if (!modal) return;
-        modal.hidden = false;
-        document.body.classList.add('search-open');
-        var input = modal.querySelector('input[type="text"], input:not([type])');
-        if (input) setTimeout(function () { input.focus(); }, 60);
+        if (!dropdown) return;
+        dropdown.hidden = false;
+
+        function focusInput() {
+          var input = dropdown.querySelector('input[type="text"], input:not([type])');
+          if (input) {
+            input.focus();
+          } else {
+            setTimeout(focusInput, 50);
+          }
+        }
+
+        focusInput();
       }
 
       function closeSearch() {
-        if (!modal) return;
-        modal.hidden = true;
-        document.body.classList.remove('search-open');
+        if (!dropdown) return;
+        dropdown.hidden = true;
       }
 
-      if (trigger)  trigger.addEventListener('click', openSearch);
-      if (closeBtn) closeBtn.addEventListener('click', closeSearch);
-      if (backdrop) backdrop.addEventListener('click', closeSearch);
+      if (trigger) trigger.addEventListener('click', openSearch);
 
       document.addEventListener('keydown', function (e) {
         if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
           e.preventDefault();
-          if (modal && modal.hidden) { openSearch(); } else { closeSearch(); }
+          if (dropdown && dropdown.hidden) { openSearch(); } else { closeSearch(); }
         }
-        if (e.key === 'Escape' && modal && !modal.hidden) {
+        if (e.key === 'Escape' && !dropdown.hidden) {
+          closeSearch();
+        }
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function (e) {
+        if (dropdown && !dropdown.hidden && !dropdown.contains(e.target) && !trigger.contains(e.target)) {
           closeSearch();
         }
       });
