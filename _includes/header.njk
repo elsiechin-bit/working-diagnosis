@@ -47,6 +47,11 @@
 
       <a href="/workshop/" class="nav-room-link nav-room-link--workshop">Workshop</a>
 
+      <a href="/handouts/" class="primary-nav-link">Handouts</a>
+      <a href="/field-notes/" class="primary-nav-link">Field Notes</a>
+      <a href="/reading-list/" class="primary-nav-link">Reading List</a>
+      <a href="/about/" class="primary-nav-link">About</a>
+
       <span class="nav-utilities">
         {% for item in site.nav %}{% if item.row == 6 and item.inMasthead and not item.divider %}
           <a href="{{ item.url }}"{% if item.group %} class="nav-{{ item.group }}"{% endif %}>{{ item.shortLabel or item.label }}</a>
