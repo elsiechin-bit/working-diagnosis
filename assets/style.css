@@ -142,6 +142,69 @@ a:hover { color: var(--green); }
 .primary-nav a.is-current { color: var(--green-deep); }
 .nav-sep { display: inline-block; width: 1px; height: 0.75em; background: var(--rule); vertical-align: middle; }
 
+/* --- Search button --- */
+.search-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.search-trigger:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.search-trigger svg {
+  width: 14px;
+  height: 14px;
+}
+
+.search-trigger kbd {
+  display: none;
+  font-size: 0.65rem;
+  color: var(--ink-mute);
+}
+
+/* --- Search dropdown (inline, near header) --- */
+.search-dropdown {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  padding: 20px 24px;
+  z-index: 99;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.search-dropdown #search {
+  max-width: 100%;
+}
+
+/* Pagefind UI customization for dropdown */
+.search-dropdown .pf-searchbox {
+  margin-bottom: 16px;
+}
+
+.search-dropdown .pf-results {
+  display: grid;
+  gap: 12px;
+}
+
 /* --- Top-level room links --- */
 .nav-room-link, .nav-drop > summary {
   font-family: var(--mono);
@@ -800,23 +863,26 @@ button.handout-pdf-link {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: var(--paper);
+  background: #FDFCFB;
   border: 1px solid var(--rule);
-  border-top: none;
-  padding: 56px 28px 36px;
+  border-radius: 8px;
+  border-top: 4px solid;
+  padding: 48px 28px 36px;
+  box-shadow: 0 2px 6px rgba(26, 31, 28, 0.05);
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
 .pillar::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 2px;
+  height: 4px;
   background: currentColor;
+  border-radius: 8px 8px 0 0;
 }
-.pillar--field-guide   { color: var(--library-ink); }
-.pillar--workbench     { color: var(--workbench-ink); }
-.pillar--thinking-room { color: var(--workshop-ink); }
-.pillar:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26, 31, 28, 0.06); }
+.pillar--field-guide   { color: var(--library-ink); border-top-color: var(--library-ink); }
+.pillar--workbench     { color: var(--workbench-ink); border-top-color: var(--workbench-ink); }
+.pillar--thinking-room { color: var(--workshop-ink); border-top-color: var(--workshop-ink); }
+.pillar:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26, 31, 28, 0.1); }
 
 .pillar-icon {
   width: 116px;
@@ -826,11 +892,14 @@ button.handout-pdf-link {
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
 }
 .pillar-icon svg { width: 56px; height: 56px; color: currentColor; }
 .pillar-icon--library   { background: transparent; color: var(--library-ink); }
 .pillar-icon--workbench { background: transparent; color: var(--workbench-ink); }
 .pillar-icon--workshop  { background: transparent; color: var(--workshop-ink); }
+.pillar-icon:hover { transform: scale(1.08); }
 
 .pillar-title {
   font-family: var(--serif-display);
