@@ -633,7 +633,7 @@ a:hover { color: var(--green); }
 .handout-section-label a { color: inherit; }
 .handout-section-label a:hover { color: var(--green); }
 .handout-section h2 { font-family: var(--serif-display); font-weight: 500; font-size: 1.4rem; letter-spacing: -0.015em; color: var(--ink); margin: 0 0 14px; }
-.handout-list { list-style: none; padding: 0; margin: 0 0 10px; border-top: 1px solid var(--rule); }
+.handout-list { list-style: none; padding: 0; margin: 0 0 10px; }
 .handout-list li { padding: 9px 0; border-bottom: 1px solid var(--rule); display: flex; align-items: baseline; justify-content: space-between; gap: 12px; font-family: var(--serif-body); font-size: 0.95rem; color: var(--ink-soft); }
 .handout-list li a { color: var(--ink); font-weight: 500; }
 .handout-list li a:hover { color: var(--green); }
@@ -991,4 +991,78 @@ button.handout-pdf-link {
   .sidebar-tools::after { display: none; }
   .sidebar-tools .tools-aside { padding: 24px 22px; height: auto; }
   .sidebar-tools .tools-aside > * { opacity: 1; visibility: visible; }
+}
+
+/* Workshop cards grid */
+.workshop-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 48px 0;
+}
+
+.workshop-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 120ms, box-shadow 120ms;
+}
+
+.workshop-card:hover {
+  border-color: var(--clay);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.workshop-card__title {
+  font-family: var(--serif-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.workshop-card__title em {
+  font-style: italic;
+  color: var(--green);
+}
+
+.workshop-card__desc {
+  font-family: var(--serif-body);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin: 0;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.workshop-card__link {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--green);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 120ms;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.workshop-card__link:hover {
+  color: var(--green-deep);
+}
+
+.workshop-card--experimental {
+  border-color: var(--rule);
+  background: linear-gradient(135deg, var(--paper-warm) 0%, rgba(191, 107, 79, 0.04) 100%);
+}
+
+.workshop-card--experimental:hover {
+  border-color: var(--clay);
 }
