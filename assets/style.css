@@ -625,9 +625,9 @@ button.handout-pdf-link {
   margin-bottom: 24px;
 }
 .pillar-icon svg { width: 56px; height: 56px; color: currentColor; }
-.pillar-icon--library   { background: var(--library-pastel);   color: var(--library-ink); }
-.pillar-icon--workbench { background: var(--workbench-pastel); color: var(--workbench-ink); }
-.pillar-icon--workshop  { background: var(--workshop-pastel);  color: var(--workshop-ink); }
+.pillar-icon--library   { background: transparent; color: var(--library-ink); }
+.pillar-icon--workbench { background: transparent; color: var(--workbench-ink); }
+.pillar-icon--workshop  { background: transparent; color: var(--workshop-ink); }
 
 .pillar-title {
   font-family: var(--serif-display);
