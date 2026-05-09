@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
 </head>
-<body>
+<body{% if pageType == "handout" %} class="page-handouts"{% endif %}>
 
   {% include "header.njk" %}
 

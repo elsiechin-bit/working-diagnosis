@@ -1050,6 +1050,28 @@ button.handout-pdf-link {
   opacity: 0;
 }
 
+/* On handouts pages: disable fixed sidebar and let it stack normally */
+body.page-handouts .sidebar-tools {
+  position: static;
+  width: 100%;
+  max-height: none;
+  z-index: auto;
+  margin-top: 48px;
+}
+body.page-handouts .sidebar-tools::before,
+body.page-handouts .sidebar-tools::after { display: none; }
+body.page-handouts .sidebar-tools .tools-aside {
+  position: static;
+  top: auto;
+  padding: 24px 22px;
+  height: auto;
+  max-height: none;
+}
+body.page-handouts .sidebar-tools .tools-aside > * {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Mobile: drop the hover-tab pattern and let the sidebar return to its
    stacked position below main content (no fixed positioning). */
 @media (max-width: 960px) {
