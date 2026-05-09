@@ -2,7 +2,7 @@
 title: Rheumatoid Arthritis
 description: Early recognition and urgent specialist referral for rheumatoid arthritis in primary care.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/rheumatoid-arthritis/
 ---
 

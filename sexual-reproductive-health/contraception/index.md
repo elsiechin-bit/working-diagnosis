@@ -2,7 +2,7 @@
 title: Contraception
 description: Contraception counselling for NZ primary care - LARC, COCP, progestogen-only methods, and emergency contraception, with funded options and WHO eligibility criteria.
 layout: topic.njk
-pillar: Gynaecology
+specialty: Gynaecology
 permalink: /gynaecology/contraception/
 ---
 

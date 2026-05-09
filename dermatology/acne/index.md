@@ -1,7 +1,7 @@
 ---
 title: Acne Vulgaris
 layout: topic.njk
-pillar: Dermatology
+specialty: Dermatology
 description: Managing acne in general practice - grading, topical and oral therapy, isotretinoin access in NZ, and post-inflammatory hyperpigmentation in skin of colour.
 ---
 

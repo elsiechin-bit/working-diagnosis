@@ -2,7 +2,7 @@
 title: Growing Pains
 description: Benign nocturnal lower limb pain in children aged 3-12; diagnosis of exclusion requiring normal examination and bilateral symptoms.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/growing-pains/
 ---
 

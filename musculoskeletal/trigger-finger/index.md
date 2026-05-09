@@ -2,7 +2,7 @@
 title: Trigger Finger
 description: Diagnosis and management of stenosing tenosynovitis affecting finger flexors.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/trigger-finger/
 ---
 

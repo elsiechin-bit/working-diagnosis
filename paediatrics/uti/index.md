@@ -2,7 +2,7 @@
 title: Urinary Tract Infections in Children
 description: Diagnosis, treatment, and investigation of UTI in children in NZ general practice - sampling technique, imaging decisions, and follow-up.
 layout: topic.njk
-pillar: Paeds
+specialty: Paeds
 permalink: /paediatrics/uti/
 ---
 

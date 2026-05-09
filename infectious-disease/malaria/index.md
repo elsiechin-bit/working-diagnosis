@@ -2,7 +2,7 @@
 title: Malaria Prophylaxis
 description: Regional malaria risk, drug selection, paediatric dosing, drug interactions, radical cure for vivax, and standby emergency treatment for remote travellers.
 layout: topic.njk
-pillar: Travel
+specialty: Travel
 permalink: /travel/malaria/
 ---
 

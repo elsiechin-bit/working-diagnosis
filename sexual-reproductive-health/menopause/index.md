@@ -2,7 +2,7 @@
 title: Perimenopause & Menopause
 description: Managing the menopause transition in primary care - diagnosis, menopausal hormone therapy (MHT), genitourinary syndrome, premature ovarian insufficiency, and non-hormonal options.
 layout: topic.njk
-pillar: Gynaecology
+specialty: Gynaecology
 permalink: /gynaecology/menopause/
 ---
 

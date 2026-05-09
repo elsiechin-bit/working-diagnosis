@@ -2,7 +2,7 @@
 title: Cervical Spondylosis & Myelopathy
 description: Recognition and management of cervical spondylosis, cervical radiculopathy, and myelopathy with emphasis on surgical urgency for progressive myelopathy.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/cervical-spondylosis/
 ---
 

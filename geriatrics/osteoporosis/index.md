@@ -2,7 +2,7 @@
 title: Osteoporosis & Fracture Prevention
 description: Identifying and treating osteoporosis in general practice - fracture risk assessment, treatment thresholds, and the NZ context for post-fracture care.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

@@ -2,7 +2,7 @@
 title: Polypharmacy & Deprescribing
 description: Identifying and reducing harmful polypharmacy in older adults - structured medication review, the deprescribing conversation, and high-risk medicines to prioritise.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

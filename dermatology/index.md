@@ -1,7 +1,7 @@
 ---
 title: Dermatology
 layout: topic
-pillar: Dermatology
+specialty: Dermatology
 description: Skin conditions in general practice across the lifespan - the inflammatory, the infectious, the pigmented, and the cancers we cannot afford to miss. NZ-relevant guidelines and PHARMAC funding throughout.
 ---
 

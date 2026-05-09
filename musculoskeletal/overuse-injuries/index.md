@@ -2,7 +2,7 @@
 title: Stress Fractures & Overuse Injuries
 description: Recognition and management of stress fractures and overuse injuries in adolescent athletes - RED-S screening and return-to-sport guidance.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/overuse-injuries/
 ---
 

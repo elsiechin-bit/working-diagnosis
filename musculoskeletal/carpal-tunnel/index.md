@@ -2,7 +2,7 @@
 title: Carpal Tunnel Syndrome
 description: Diagnosis and management of carpal tunnel syndrome, the most common peripheral nerve entrapment.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/carpal-tunnel/
 ---
 

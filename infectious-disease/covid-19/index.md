@@ -1,7 +1,7 @@
 ---
 title: COVID-19 Vaccination in New Zealand
 layout: topic.njk
-pillar: Vaccines
+specialty: Vaccines
 description: Current COVID-19 vaccine recommendations for New Zealanders - who needs it, how often, and what to expect.
 ---
 

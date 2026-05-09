@@ -2,7 +2,7 @@
 title: Youth & Adolescent Mental Health
 description: Anxiety, depression, self-harm, and eating disorders in young people - consultation approach, screening tools, and NZ prescribing context.
 layout: topic.njk
-pillar: Mental Health
+specialty: Mental Health
 ---
 
 <div class="tier-1">

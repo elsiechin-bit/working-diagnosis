@@ -2,7 +2,7 @@
 title: Giant Cell Arteritis
 description: Recognition and urgent management of giant cell arteritis to prevent vision loss and other vascular complications in older adults.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/giant-cell-arteritis/
 ---
 

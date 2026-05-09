@@ -2,7 +2,7 @@
 title: Fitness to Drive
 description: Medical fitness to drive assessment in general practice - NZTA standards, condition-specific obligations, the notification process, and managing the difficult conversation.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

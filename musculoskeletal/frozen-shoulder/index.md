@@ -2,7 +2,7 @@
 title: Frozen Shoulder
 description: Management of adhesive capsulitis in older adults including phases, conservative care, and procedural options for refractory cases.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/frozen-shoulder/
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Pigmentation Disorders
 layout: topic.njk
-pillar: Dermatology
+specialty: Dermatology
 description: Pigmentation disorders in general practice - melasma, post-inflammatory hyperpigmentation, solar lentigines, and vitiligo, with attention to presentation in skin of colour.
 ---
 

@@ -2,7 +2,7 @@
 title: Psychosis & Bipolar Disorder
 description: Early psychosis recognition, bipolar screening in recurrent depression, and the GP's role in ongoing monitoring.
 layout: topic.njk
-pillar: Mental Health
+specialty: Mental Health
 ---
 
 <div class="tier-1">

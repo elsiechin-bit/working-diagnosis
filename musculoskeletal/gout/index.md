@@ -2,7 +2,7 @@
 title: Gout
 description: Diagnosis and management of acute gout and chronic urate-lowering therapy in primary care, with equity considerations for Māori and Pacific peoples.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/gout/
 ---
 

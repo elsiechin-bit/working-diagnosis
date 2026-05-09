@@ -2,7 +2,7 @@
 title: Addiction & Substance Use
 description: Alcohol and drug use disorders in NZ general practice - brief intervention, opioid agonist therapy, and alcohol withdrawal management.
 layout: topic.njk
-pillar: Mental Health
+specialty: Mental Health
 ---
 
 <div class="tier-1">

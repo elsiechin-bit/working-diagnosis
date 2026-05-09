@@ -2,7 +2,7 @@
 title: Pre-travel Consultation
 description: A structured approach to the pre-travel consultation in general practice, covering timing, risk triage, vaccines, documentation, and when to refer.
 layout: topic.njk
-pillar: Travel
+specialty: Travel
 permalink: /travel/pre-travel-consult/
 ---
 

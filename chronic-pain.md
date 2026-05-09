@@ -1,7 +1,7 @@
 ---
 title: Living with Chronic Pain
 layout: topic
-pillar: Lifestyle
+specialty: Lifestyle
 description: A patient guide to understanding chronic pain, self-management strategies, and when to seek help
 ---
 

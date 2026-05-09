@@ -2,7 +2,7 @@
 title: De Quervain's Tenosynovitis
 description: Recognition and management of De Quervain's tenosynovitis of the first dorsal compartment.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/de-quervains/
 ---
 

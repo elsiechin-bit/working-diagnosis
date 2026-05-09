@@ -2,7 +2,7 @@
 title: Social Connection
 description: Social isolation and loneliness in general practice  -  the health effects, who is at risk in New Zealand, and practical approaches to social prescribing.
 layout: topic.njk
-pillar: Lifestyle
+specialty: Lifestyle
 ---
 
 <div class="topic-with-aside">

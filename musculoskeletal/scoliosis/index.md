@@ -2,7 +2,7 @@
 title: Adolescent Idiopathic Scoliosis
 description: Screening, referral, and management of idiopathic scoliosis in adolescents - when bracing and surgery are indicated.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/scoliosis/
 ---
 

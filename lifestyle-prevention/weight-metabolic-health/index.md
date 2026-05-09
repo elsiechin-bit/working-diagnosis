@@ -2,7 +2,7 @@
 title: Weight & Metabolic Health
 description: Weight management and metabolic health in general practice - beyond BMI, the metabolic syndrome, treatment approaches, and the NZ equity context.
 layout: topic.njk
-pillar: Lifestyle
+specialty: Lifestyle
 ---
 
 <div class="tier-1">

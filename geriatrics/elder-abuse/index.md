@@ -2,7 +2,7 @@
 title: Elder Abuse & Neglect
 description: Identifying and responding to elder abuse in general practice - types, risk factors, the GP's obligations under NZ law, and the Age Concern EARS referral pathway.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

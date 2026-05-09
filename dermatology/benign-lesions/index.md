@@ -1,7 +1,7 @@
 ---
 title: Benign Skin Lesions
 layout: topic.njk
-pillar: Dermatology
+specialty: Dermatology
 description: Identifying and managing benign skin lesions in general practice - seborrhoeic keratoses, dermatofibromas, cysts, lipomas, and distinguishing them from malignancy.
 ---
 

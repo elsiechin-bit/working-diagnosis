@@ -2,7 +2,7 @@
 title: "Gout: the disease we keep undertreating"
 description: "A working GP's notes on getting gout management right  -  from the acute flare to long-term urate lowering."
 layout: note.njk
-pillar: Field Notes
+specialty: Field Notes
 category: Clinical Conditions
 dek: "It is one of the most painful, best-understood, and most undertreated conditions in general practice. We can cure it. We often don't."
 date: 2026-05-04

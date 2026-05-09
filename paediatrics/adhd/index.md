@@ -2,7 +2,7 @@
 title: ADHD in Children
 description: Diagnosis and management of ADHD in NZ general practice - assessment, pharmacotherapy, and the GP's role in long-term care.
 layout: topic.njk
-pillar: Paeds
+specialty: Paeds
 permalink: /paediatrics/adhd/
 ---
 

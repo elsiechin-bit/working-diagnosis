@@ -2,7 +2,7 @@
 title: Falls & Fracture Prevention
 description: Falls risk assessment and prevention in older adults - the Otago Programme, multifactorial intervention, and fracture risk quantification in NZ general practice.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

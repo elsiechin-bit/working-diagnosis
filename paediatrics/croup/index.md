@@ -2,7 +2,7 @@
 title: Croup
 description: Diagnosis and management of croup (laryngotracheobronchitis) in NZ general practice - dexamethasone dosing, severity assessment, and safe discharge.
 layout: topic.njk
-pillar: Paeds
+specialty: Paeds
 permalink: /paediatrics/croup/
 ---
 

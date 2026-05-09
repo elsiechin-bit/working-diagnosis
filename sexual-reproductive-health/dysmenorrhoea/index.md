@@ -2,7 +2,7 @@
 title: Dysmenorrhoea
 description: Primary and secondary dysmenorrhoea in primary care - distinguishing features, investigation, and management including when to suspect endometriosis.
 layout: topic.njk
-pillar: Gynaecology
+specialty: Gynaecology
 permalink: /gynaecology/dysmenorrhoea/
 ---
 

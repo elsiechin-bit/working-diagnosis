@@ -2,7 +2,7 @@
 title: Ankle Sprain & Chronic Instability
 description: Assessment and management of acute ankle sprain with emphasis on early mobilisation, proprioceptive training, and prevention of chronic instability.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/ankle-sprain/
 ---
 

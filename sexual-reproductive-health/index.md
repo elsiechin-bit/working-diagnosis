@@ -2,7 +2,7 @@
 title: Gynaecology
 description: Common gynaecological conditions in NZ primary care - menstrual health, contraception, cervical screening, pelvic conditions, menopause, and vulval and vaginal disorders.
 layout: topic.njk
-pillar: Gynaecology
+specialty: Gynaecology
 permalink: /gynaecology/
 ---
 

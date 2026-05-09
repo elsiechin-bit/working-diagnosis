@@ -2,7 +2,7 @@
 title: Fit to Fly
 description: Hypoxia inhalation test, MEDIF forms, in-flight oxygen arrangements, specific condition guidance, DVT risk stratification, and the cast-bivalving rule.
 layout: topic.njk
-pillar: Travel
+specialty: Travel
 permalink: /travel/fit-to-fly/
 ---
 

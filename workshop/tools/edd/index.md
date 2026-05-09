@@ -3,7 +3,7 @@ title: Antenatal EDD & Screening
 layout: tool.njk
 permalink: /workshop/tools/edd/
 eleventyExcludeFromCollections: true
-pillar: Gynaecology
+specialty: Gynaecology
 description: Calculate estimated due date and view your current position on the antenatal timeline with context-aware screening and supplementation guidance.
 ---
 

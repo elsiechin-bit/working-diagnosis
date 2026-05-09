@@ -2,7 +2,7 @@
 title: Sleep
 description: Sleep assessment and management in general practice - insomnia, sleep hygiene, CBT-I, sleep apnoea, and the clinical harms of chronic sleep deprivation.
 layout: topic.njk
-pillar: Lifestyle
+specialty: Lifestyle
 ---
 
 <div class="tier-1">

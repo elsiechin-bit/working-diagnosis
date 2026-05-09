@@ -2,7 +2,7 @@
 title: Acute Otitis Media
 description: Diagnosis and management of acute otitis media (AOM) in children in NZ general practice - NZ has among the highest rates of ear disease in the developed world.
 layout: topic.njk
-pillar: Paeds
+specialty: Paeds
 permalink: /paediatrics/otitis-media/
 ---
 

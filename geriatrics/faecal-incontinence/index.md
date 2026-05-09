@@ -2,7 +2,7 @@
 title: Faecal Incontinence
 description: Assessing and managing faecal incontinence in older adults - a common, treatable, and almost never-volunteered problem in general practice.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

@@ -2,7 +2,7 @@
 title: Abnormal Uterine Bleeding
 description: Assessment and management of heavy, irregular, intermenstrual, and postcoital bleeding in primary care, using the FIGO PALM-COEIN classification.
 layout: topic.njk
-pillar: Gynaecology
+specialty: Gynaecology
 permalink: /gynaecology/abnormal-uterine-bleeding/
 ---
 

@@ -2,7 +2,7 @@
 title: Anxiety Disorders
 description: GAD, panic disorder, social anxiety, and health anxiety in general practice - screening, evidence-based treatment, and what to avoid.
 layout: topic.njk
-pillar: Mental Health
+specialty: Mental Health
 ---
 
 <div class="tier-1">

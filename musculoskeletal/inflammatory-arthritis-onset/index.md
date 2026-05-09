@@ -2,7 +2,7 @@
 title: Inflammatory Arthritis Onset
 description: Early recognition of juvenile idiopathic arthritis and other inflammatory arthropathies in adolescents - when to suspect and urgent referral pathways.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/inflammatory-arthritis-onset/
 ---
 

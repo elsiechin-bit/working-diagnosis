@@ -2,7 +2,7 @@
 title: Cervical Screening in Aotearoa
 description: NZ's HPV-based cervical screening programme from 2023 - who is eligible, the new pathway, result interpretation, colposcopy referral criteria, and self-testing.
 layout: topic.njk
-pillar: Gynaecology
+specialty: Gynaecology
 permalink: /gynaecology/cervical-screening/
 ---
 

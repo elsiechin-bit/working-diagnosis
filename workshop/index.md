@@ -2,7 +2,7 @@
 title: The Workshop
 layout: topic.njk
 description: An experimental space for patient explainers and off-centre builds.
-pillar: Workshop
+specialty: Workshop
 ---
 
 The less structured end of the building. Two threads mostly.

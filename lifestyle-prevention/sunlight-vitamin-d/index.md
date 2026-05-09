@@ -2,7 +2,7 @@
 title: Sunlight & Vitamin D
 description: Vitamin D in NZ general practice - deficiency prevalence, who to test, supplementation thresholds, and the competing risks of sun exposure at southern latitudes.
 layout: topic.njk
-pillar: Lifestyle
+specialty: Lifestyle
 ---
 
 <div class="tier-1">

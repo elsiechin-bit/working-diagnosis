@@ -2,7 +2,7 @@
 title: Osteoarthritis (Progressive)
 description: Management of osteoarthritis in older adults focusing on evidence-based conservative and pharmacological approaches with NZ-specific resources.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/osteoarthritis-older/
 ---
 

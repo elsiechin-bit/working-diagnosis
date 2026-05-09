@@ -2,7 +2,7 @@
 title: Traveller's Diarrhoea
 description: Pathogens by region, severity classification, management algorithm, paediatric approach, and post-infectious sequelae.
 layout: topic.njk
-pillar: Travel
+specialty: Travel
 permalink: /travel/travellers-diarrhoea/
 ---
 

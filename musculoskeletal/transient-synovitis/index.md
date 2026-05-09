@@ -2,7 +2,7 @@
 title: Transient Synovitis of the Hip
 description: Most common cause of acute hip pain and limp in children aged 3-10; diagnosis of exclusion from septic arthritis using Kocher criteria.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/transient-synovitis/
 ---
 

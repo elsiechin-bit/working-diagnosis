@@ -2,7 +2,7 @@
 title: Depression & Low Mood
 description: Recognising and managing depression in general practice - PHQ-9, first-line treatments, NZ prescribing context, and when to refer.
 layout: topic.njk
-pillar: Mental Health
+specialty: Mental Health
 ---
 
 <div class="tier-1">

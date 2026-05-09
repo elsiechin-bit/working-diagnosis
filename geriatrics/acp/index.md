@@ -2,7 +2,7 @@
 title: Advance Care Planning
 description: Advance care planning in general practice - when to start, what to cover, the NZ ACP framework, and the GP's role under the End of Life Choice Act.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

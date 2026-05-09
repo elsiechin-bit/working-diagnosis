@@ -2,7 +2,7 @@
 title: Alcohol
 description: Alcohol use in general practice - NZ low-risk drinking guidelines, the AUDIT-C, brief intervention, and the clinical consequences of hazardous and harmful use.
 layout: topic.njk
-pillar: Lifestyle
+specialty: Lifestyle
 ---
 
 <div class="tier-1">

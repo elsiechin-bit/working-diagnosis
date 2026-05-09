@@ -2,7 +2,7 @@
 title: Hip Osteoarthritis
 description: Clinical assessment and management of hip osteoarthritis including conservative care, pharmacotherapy, and surgical options for older adults.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/hip-osteoarthritis/
 ---
 

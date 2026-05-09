@@ -2,7 +2,7 @@
 title: Polymyalgia Rheumatica
 description: Diagnosis and management of polymyalgia rheumatica in older adults with emphasis on morning stiffness, inflammatory markers, and steroid therapy.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/polymyalgia-rheumatica/
 ---
 

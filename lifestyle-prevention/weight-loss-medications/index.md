@@ -1,7 +1,7 @@
 ---
 title: Medications for Weight Management
 layout: topic.njk
-pillar: Lifestyle
+specialty: Lifestyle
 description: Weight management medications available in New Zealand - orlistat, liraglutide, semaglutide, and phentermine - with PHARMAC funding status and prescribing considerations.
 ---
 

@@ -2,7 +2,7 @@
 title: Perinatal Mental Health
 description: Depression, anxiety, and psychosis across pregnancy and the postnatal year - EPDS screening, treatment safety, and postpartum emergencies.
 layout: topic.njk
-pillar: Mental Health
+specialty: Mental Health
 ---
 
 <div class="tier-1">

@@ -2,7 +2,7 @@
 title: Nursemaid's Elbow
 description: Radial head subluxation in young children aged 1-4; reduced clinically without X-ray after excluding fracture; high recurrence rate.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/nursemaids-elbow/
 ---
 

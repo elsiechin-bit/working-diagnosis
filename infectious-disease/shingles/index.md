@@ -1,7 +1,7 @@
 ---
 title: Shingles
 layout: topic.njk
-pillar: Vaccines
+specialty: Vaccines
 description: Recognising and treating shingles, managing post-herpetic neuralgia, and the Shingrix vaccine - funded status, efficacy, and who should receive it.
 ---
 

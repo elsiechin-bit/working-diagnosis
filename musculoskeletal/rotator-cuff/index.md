@@ -2,7 +2,7 @@
 title: Shoulder Impingement & Rotator Cuff
 description: Clinical evaluation and management of rotator cuff pathology and subacromial impingement in primary care.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/rotator-cuff/
 ---
 

@@ -2,7 +2,7 @@
 title: Vertebral Compression Fractures
 description: Recognition and management of vertebral compression fractures in osteoporosis with emphasis on investigation and osteoporosis treatment.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/compression-fractures/
 ---
 

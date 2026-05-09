@@ -2,7 +2,7 @@
 title: Meniscal Injury
 description: Recognition and management of acute and chronic meniscal tears in adolescents - when to image and when to refer.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/meniscal-injury/
 ---
 

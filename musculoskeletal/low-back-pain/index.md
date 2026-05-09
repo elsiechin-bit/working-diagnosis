@@ -2,7 +2,7 @@
 title: Non-Specific Low Back Pain
 description: Assessment and evidence-based management of low back pain in primary care, emphasising red flag screening and reassurance.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/low-back-pain/
 ---
 

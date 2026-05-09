@@ -2,7 +2,7 @@
 title: Urinary Incontinence
 description: Assessing and managing urinary incontinence in older adults in general practice - typing, conservative management, and when to refer.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

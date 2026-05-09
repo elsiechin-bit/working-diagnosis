@@ -2,7 +2,7 @@
 title: Knee Osteoarthritis
 description: Evidence-based management of knee osteoarthritis in older adults including weight loss, exercise, conservative and surgical options.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/knee-osteoarthritis/
 ---
 

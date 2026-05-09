@@ -2,7 +2,7 @@
 title: Geriatric Assessment Scales
 description: CIRS-G, FRAIL, Katz ADL, Lawton IADL, and Rockwood CFS explained with scoring, interpretation, clinical cut-offs, and NZ-relevant guidance.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

@@ -2,7 +2,7 @@
 title: STOPP/START Reference
 description: A working reference for the STOPP/START v3 criteria - identifying potentially inappropriate medications and potential prescribing omissions in older adults in NZ general practice.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

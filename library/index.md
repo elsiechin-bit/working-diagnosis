@@ -2,7 +2,7 @@
 title: The Library
 layout: topic.njk
 description: A clinician's library of NZ general practice. Conditions by specialty, with patient handouts to send home.
-pillar: Library
+specialty: Library
 ---
 
 The full catalog of clinical pillars and topics. Pick a specialty to drill in.

@@ -2,7 +2,7 @@
 title: "Field Notes: Consultation Models in General Practice"
 layout: topic.njk
 description: The evolution of GP consultation theory from Balint to shared decision-making, with cross-cultural comparisons.
-pillar: Field Notes
+specialty: Field Notes
 summary:
   - "The consultation as a clinical encounter has been formally studied since Balint's 1957 work, which argued that the doctor-patient relationship itself has therapeutic properties consistently underused in general practice."
   - "Successive frameworks -- Stott-Davis (1979), Pendleton (1984), Neighbour (1987), and Calgary-Cambridge (1996) -- each added structure; Calgary-Cambridge remains the most widely adopted in Anglophone medical education."

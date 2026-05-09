@@ -2,7 +2,7 @@
 title: Foot Problems in Older Age
 description: Management of common foot conditions in older adults including plantar fasciitis, hallux valgus, Morton's neuroma, and diabetic foot care.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/foot-problems-older/
 ---
 

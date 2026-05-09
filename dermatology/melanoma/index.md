@@ -1,7 +1,7 @@
 ---
 title: Melanoma & Skin Cancer
 layout: topic.njk
-pillar: Dermatology
+specialty: Dermatology
 description: Recognising and managing melanoma and non-melanoma skin cancer in New Zealand general practice.
 ---
 

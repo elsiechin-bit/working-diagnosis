@@ -2,7 +2,7 @@
 title: Gastroenteritis and Oral Rehydration in Children
 description: Assessment of dehydration severity and management of acute gastroenteritis in NZ general practice - ORS, ondansetron, and admission thresholds.
 layout: topic.njk
-pillar: Paeds
+specialty: Paeds
 permalink: /paediatrics/gastroenteritis/
 ---
 

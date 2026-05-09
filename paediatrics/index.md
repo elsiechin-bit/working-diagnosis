@@ -1,7 +1,7 @@
 ---
 title: Paediatrics
 layout: topic
-pillar: Paeds
+specialty: Paeds
 description: Common conditions in child health for the NZ GP consultation - fever, respiratory, development, ENT, and when to refer.
 permalink: /paediatrics/
 ---

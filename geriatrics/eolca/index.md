@@ -2,7 +2,7 @@
 title: End of Life Choice Act - GP Obligations
 description: What the End of Life Choice Act 2019 requires of New Zealand GPs - eligibility criteria, the attending and independent physician roles, conscientious objection, and documentation.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

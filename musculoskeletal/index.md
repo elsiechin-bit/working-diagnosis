@@ -1,7 +1,7 @@
 ---
 title: Musculoskeletal Health
 layout: topic
-pillar: MSK
+specialty: MSK
 description: Common musculoskeletal conditions across childhood, adolescence, adulthood, and older age - diagnosis, investigation, and management pathways.
 permalink: /msk/
 ---

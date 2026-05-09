@@ -2,7 +2,7 @@
 title: ACL & Ligamentous Knee Injuries
 description: Assessment and management of ACL, MCL, and PCL injuries in adolescent athletes - referral pathways and reconstruction timing.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/acl-injury/
 ---
 

@@ -2,7 +2,7 @@
 title: Anterior Knee Pain (Patellofemoral Pain)
 description: Assessment and management of patellofemoral pain syndrome in adolescents - the most common knee complaint in young patients.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/anterior-knee-pain/
 ---
 

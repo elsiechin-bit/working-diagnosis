@@ -2,7 +2,7 @@
 title: Medicolegal Overview
 description: The medicolegal landscape of general practice with older patients - capacity, enduring powers of attorney, elder abuse, and firearms obligations under New Zealand law.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

@@ -2,7 +2,7 @@
 title: Bronchiolitis
 description: Assessment and management of bronchiolitis in NZ general practice - RSV season, supportive care, admission thresholds, and nirsevimab.
 layout: topic.njk
-pillar: Paeds
+specialty: Paeds
 permalink: /paediatrics/bronchiolitis/
 ---
 

@@ -2,7 +2,7 @@
 title: Dementia Diagnosis & Disclosure
 description: Diagnosing and disclosing dementia in general practice - cognitive assessment tools, the post-diagnosis obligations, and equity considerations for Māori and Pacific patients.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

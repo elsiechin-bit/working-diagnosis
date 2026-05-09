@@ -1,7 +1,7 @@
 ---
 title: Paediatric Rashes
 layout: topic.njk
-pillar: Dermatology
+specialty: Dermatology
 description: Common paediatric rashes in general practice - viral exanthems, impetigo, molluscum, tinea capitis, and the red flags that warrant urgent assessment.
 ---
 

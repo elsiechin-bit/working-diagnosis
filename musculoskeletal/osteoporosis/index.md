@@ -2,7 +2,7 @@
 title: Osteoporosis & Fracture Risk
 description: Fracture risk assessment and management of osteoporosis in primary care with emphasis on DEXA, FRAX, and evidence-based pharmacotherapy.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/osteoporosis/
 ---
 

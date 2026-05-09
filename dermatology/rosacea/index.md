@@ -1,7 +1,7 @@
 ---
 title: Rosacea
 layout: topic.njk
-pillar: Dermatology
+specialty: Dermatology
 description: Rosacea in general practice - subtypes, trigger avoidance, topical and oral therapy, and managing patient expectations around a relapsing condition.
 ---
 

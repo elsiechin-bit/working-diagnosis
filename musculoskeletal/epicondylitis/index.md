@@ -2,7 +2,7 @@
 title: Tennis & Golfer's Elbow
 description: Management of lateral and medial epicondylitis (tennis and golfer's elbow) in primary care.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/epicondylitis/
 ---
 

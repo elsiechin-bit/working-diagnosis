@@ -2,7 +2,7 @@
 title: Geriatrics
 description: Caring for older people in general practice  -  frailty, falls, cognition, polypharmacy, continence, end-of-life planning, and the medicolegal terrain that runs through all of it.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <p>

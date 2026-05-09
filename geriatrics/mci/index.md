@@ -2,7 +2,7 @@
 title: Mild Cognitive Impairment
 description: Identifying and managing mild cognitive impairment in general practice - distinguishing MCI from normal ageing and early dementia, monitoring, and patient communication.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

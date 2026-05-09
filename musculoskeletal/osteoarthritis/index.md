@@ -2,7 +2,7 @@
 title: Osteoarthritis (Early to Mid)
 description: Clinical approach to osteoarthritis management with emphasis on non-pharmacological interventions and PHARMAC-funded options.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/osteoarthritis/
 ---
 

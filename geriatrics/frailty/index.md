@@ -2,7 +2,7 @@
 title: Frailty
 description: Assessing and managing frailty in older adults in general practice - the Clinical Frailty Scale, the Fried phenotype, and what to do when frailty is identified.
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 ---
 
 <div class="tier-1">

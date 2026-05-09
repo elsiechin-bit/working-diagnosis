@@ -1,7 +1,7 @@
 ---
 title: Tinea & Fungal Infections
 layout: topic.njk
-pillar: Dermatology
+specialty: Dermatology
 description: Diagnosing and treating tinea and other superficial fungal infections in general practice - the common presentations, treatment by site, and when oral therapy is warranted.
 ---
 

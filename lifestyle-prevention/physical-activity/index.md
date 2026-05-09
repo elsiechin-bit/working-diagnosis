@@ -2,7 +2,7 @@
 title: Physical Activity
 description: Evidence-based guidance on physical activity for adults in general practice.
 layout: topic.njk
-pillar: Lifestyle
+specialty: Lifestyle
 ---
 
 <div class="tier-1">

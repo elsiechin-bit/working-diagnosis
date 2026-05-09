@@ -1,7 +1,7 @@
 ---
 title: Bone Density Scans
 layout: topic.njk
-pillar: Geriatrics
+specialty: Geriatrics
 description: Understanding DEXA scans - what bone density results mean, who should be tested, fracture risk assessment with FRAX, and treatment decisions in NZ practice.
 ---
 

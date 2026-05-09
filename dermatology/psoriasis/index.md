@@ -1,7 +1,7 @@
 ---
 title: Psoriasis
 layout: topic.njk
-pillar: Dermatology
+specialty: Dermatology
 description: Managing psoriasis in general practice, including comorbidities and when to refer for systemic therapy.
 ---
 

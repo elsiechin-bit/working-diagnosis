@@ -1,7 +1,7 @@
 ---
 title: Eczema / Atopic Dermatitis
 layout: topic.njk
-pillar: Dermatology
+specialty: Dermatology
 description: Diagnosis and stepwise management of eczema in adults and children in New Zealand general practice.
 ---
 

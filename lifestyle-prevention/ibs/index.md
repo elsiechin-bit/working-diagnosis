@@ -1,7 +1,7 @@
 ---
 title: Irritable Bowel Syndrome
 layout: topic.njk
-pillar: Lifestyle
+specialty: Lifestyle
 description: A plain-language guide to IBS - what it is, why it happens, and what actually helps.
 ---
 

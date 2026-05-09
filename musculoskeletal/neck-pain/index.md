@@ -2,7 +2,7 @@
 title: Mechanical Neck Pain & Cervical Radiculopathy
 description: Clinical approach to neck pain and arm pain from cervical nerve root compression in primary care.
 layout: topic.njk
-pillar: MSK
+specialty: MSK
 permalink: /msk/neck-pain/
 ---
 
