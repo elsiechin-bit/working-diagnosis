@@ -7,10 +7,10 @@ hasToc: true
   <header class="topic-header">
 
     {% if pageType == "handout" and page.fileSlug != "handouts" %}
-    <a class="handout-pdf-link" href="/handouts/{{ page.fileSlug }}/{{ page.fileSlug }}.pdf" download>
-      <span class="handout-pdf-link-icon" aria-hidden="true">&darr;</span>
-      <span class="handout-pdf-link-label">PDF version</span>
-    </a>
+    <button class="handout-pdf-link" onclick="window.print()" aria-label="Print page">
+      <span class="handout-pdf-link-icon" aria-hidden="true">🖨</span>
+      <span class="handout-pdf-link-label">Print</span>
+    </button>
     {% endif %}
 
     {% if pageType %}<span class="page-type-badge page-type-{{ pageType | slugify }}">{{ pageType }}</span>{% endif %}

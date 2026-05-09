@@ -714,6 +714,7 @@ p.handout-ext a:hover { color: var(--green); }
 /* PDF version link, top-right of any handout article */
 .topic-header { position: relative; }
 .handout-pdf-link {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
