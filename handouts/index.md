@@ -374,13 +374,13 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 <div class="handout-section" id="infections">
   <h2>Infections</h2>
   <ul class="handout-list">
-    <li>Cellulitis  -  when to seek care and what to expect <span class="hl-soon">coming soon</span></li>
-    <li>Recurrent UTIs  -  prevention and treatment <span class="hl-soon">coming soon</span></li>
-    <li>Shingles  -  prevention with the vaccine and treatment <span class="hl-soon">coming soon</span></li>
-    <li>Long COVID  -  what we know and what helps <span class="hl-soon">coming soon</span></li>
-    <li>Recurrent thrush  -  understanding triggers <span class="hl-soon">coming soon</span></li>
-    <li>Antibiotic stewardship  -  why your GP says no <span class="hl-soon">coming soon</span></li>
-    <li>Glandular fever  -  recovery and what to watch for <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/cellulitis/">Cellulitis  -  when to seek care and what to expect</a></li>
+    <li><a href="/handouts/recurrent-utis/">Recurrent UTIs  -  prevention and treatment</a></li>
+    <li><a href="/handouts/shingles/">Shingles  -  prevention with the vaccine and treatment</a></li>
+    <li><a href="/handouts/long-covid/">Long COVID  -  what we know and what helps</a></li>
+    <li><a href="/handouts/recurrent-thrush/">Recurrent thrush  -  understanding triggers</a></li>
+    <li><a href="/handouts/antibiotic-stewardship/">Antibiotic stewardship  -  why your GP says no</a></li>
+    <li><a href="/handouts/glandular-fever/">Glandular fever  -  recovery and what to watch for</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthify.nz">Healthify NZ - infections</a> &middot; <a href="https://www.immune.org.nz">IMAC</a> &middot; <a href="https://info.health.nz/conditions-treatments/infectious-diseases">Health NZ - infectious diseases</a></p>
 </div>
