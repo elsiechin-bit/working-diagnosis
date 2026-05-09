@@ -1131,3 +1131,79 @@ button.handout-pdf-link {
 .workshop-card--experimental:hover {
   border-color: var(--clay);
 }
+
+/* Quick Access cards (homepage) */
+.quick-access {
+  padding: 56px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.quick-access-heading {
+  font-family: var(--serif-display);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 32px;
+  letter-spacing: -0.01em;
+}
+
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 960px) {
+  .quick-access-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .quick-access-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.quick-access-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 18px;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 120ms, box-shadow 120ms, transform 120ms;
+}
+
+.quick-access-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 2px 12px rgba(26, 31, 28, 0.08);
+  transform: translateY(-2px);
+}
+
+.quick-access-icon {
+  font-family: var(--serif-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+}
+
+.quick-access-title {
+  font-family: var(--serif-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+
+.quick-access-blurb {
+  font-family: var(--serif-body);
+  font-size: 12px;
+  color: var(--ink-mute);
+  margin: 0;
+  line-height: 1.4;
+}
