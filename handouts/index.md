@@ -214,23 +214,23 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 <div class="handout-section" id="dermatology">
   <h2>Dermatology</h2>
   <ul class="handout-list">
-    <li>Sun safety in NZ  -  the UV index and slip, slop, slap, wrap <span class="hl-soon">coming soon</span></li>
-    <li>Skin cancer  -  know what to look for (the ABCDE rule) <span class="hl-soon">coming soon</span></li>
-    <li>Melanoma  -  early detection and mole monitoring <span class="hl-soon">coming soon</span></li>
-    <li>When to return  -  what changes in a mole matter <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/sun-safety-nz/">Sun safety in NZ  -  the UV index and slip, slop, slap, wrap</a></li>
+    <li><a href="/handouts/skin-cancer-abcde/">Skin cancer  -  know what to look for (the ABCDE rule)</a></li>
+    <li><a href="/handouts/melanoma/">Melanoma  -  early detection and mole monitoring</a></li>
+    <li><a href="/handouts/mole-monitoring/">When to return  -  what changes in a mole matter</a></li>
     <li><a href="/handouts/eczema/">Eczema (atopic dermatitis)  -  skin care and flare management</a></li>
-    <li>Topical steroid creams  -  how to use them correctly <span class="hl-soon">coming soon</span></li>
-    <li>Psoriasis  -  understanding your condition and triggers <span class="hl-soon">coming soon</span></li>
-    <li>Acne  -  what works and what does not <span class="hl-soon">coming soon</span></li>
-    <li>Rosacea  -  triggers and treatment <span class="hl-soon">coming soon</span></li>
-    <li>Tinea  -  ringworm, athlete's foot, and jock itch <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/topical-steroid-creams/">Topical steroid creams  -  how to use them correctly</a></li>
+    <li><a href="/handouts/psoriasis/">Psoriasis  -  understanding your condition and triggers</a></li>
+    <li><a href="/handouts/acne/">Acne  -  what works and what does not</a></li>
+    <li><a href="/handouts/rosacea/">Rosacea  -  triggers and treatment</a></li>
+    <li><a href="/handouts/tinea/">Tinea  -  ringworm, athlete's foot, and jock itch</a></li>
     <li><a href="/handouts/school-sores/">Impetigo (school sores)  -  treatment and return to school</a></li>
-    <li>Warts and verrucae  -  treatment options <span class="hl-soon">coming soon</span></li>
-    <li>Molluscum contagiosum  -  what to expect <span class="hl-soon">coming soon</span></li>
-    <li>Wound care at home  -  cleaning, dressing, signs of infection <span class="hl-soon">coming soon</span></li>
-    <li>Scabies  -  treatment and contact management <span class="hl-soon">coming soon</span></li>
-    <li>Urticaria (hives)  -  causes and management <span class="hl-soon">coming soon</span></li>
-    <li>Hair loss  -  common causes and what helps <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/warts-verrucae/">Warts and verrucae  -  treatment options</a></li>
+    <li><a href="/handouts/molluscum-contagiosum/">Molluscum contagiosum  -  what to expect</a></li>
+    <li><a href="/handouts/wound-care-home/">Wound care at home  -  cleaning, dressing, signs of infection</a></li>
+    <li><a href="/handouts/scabies/">Scabies  -  treatment and contact management</a></li>
+    <li><a href="/handouts/urticaria/">Urticaria (hives)  -  causes and management</a></li>
+    <li><a href="/handouts/hair-loss/">Hair loss  -  common causes and what helps</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.skincancer.org.nz">Melanoma NZ</a> · <a href="https://www.dermnet.com">DermNet  -  patient information</a> · <a href="https://www.healthnavigator.org.nz/health-a-z/s/skin/">Health Navigator  -  Skin</a></p>
 </div>
