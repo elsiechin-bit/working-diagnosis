@@ -345,13 +345,13 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 <div class="handout-section" id="eyes">
   <h2>Eyes &amp; Vision</h2>
   <ul class="handout-list">
-    <li>Age-related macular degeneration  -  symptoms and what helps <span class="hl-soon">coming soon</span></li>
-    <li>Cataracts  -  signs, surgery, and recovery <span class="hl-soon">coming soon</span></li>
-    <li>Diabetic eye disease  -  why annual screening matters <span class="hl-soon">coming soon</span></li>
-    <li>Dry eyes  -  practical management <span class="hl-soon">coming soon</span></li>
-    <li>Glaucoma  -  the silent thief of sight <span class="hl-soon">coming soon</span></li>
-    <li>Floaters and flashes  -  when to seek care urgently <span class="hl-soon">coming soon</span></li>
-    <li>Children's vision and screen time <span class="hl-soon">coming soon</span></li>
+    <li><a href="/handouts/amd/">Age-related macular degeneration  -  symptoms and what helps</a></li>
+    <li><a href="/handouts/cataracts/">Cataracts  -  signs, surgery, and recovery</a></li>
+    <li><a href="/handouts/diabetic-eye-disease/">Diabetic eye disease  -  why annual screening matters</a></li>
+    <li><a href="/handouts/dry-eyes/">Dry eyes  -  practical management</a></li>
+    <li><a href="/handouts/glaucoma/">Glaucoma  -  the silent thief of sight</a></li>
+    <li><a href="/handouts/floaters-flashes/">Floaters and flashes  -  when to seek care urgently</a></li>
+    <li><a href="/handouts/childrens-vision/">Children's vision and screen time</a></li>
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.glaucoma.org.nz">Glaucoma NZ</a> &middot; <a href="https://www.mdnz.org.nz">Macular Degeneration NZ</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - eye health</a></p>
 </div>

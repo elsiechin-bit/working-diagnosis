@@ -1,282 +1,42 @@
 ---
 title: Infectious Diseases
-layout: topic
+layout: topic.njk
 specialty: Infectious Diseases
-description: The New Zealand immunisation schedule, travel vaccines, and consultation guidance for general practice.
+description: Vaccines, travel medicine, and specific infections in NZ primary care - organised for panic-scan use.
 ---
 
-<p>Vaccination is one of the clearest wins in medicine  -  cost-effective, safe, and backed by decades of population-level evidence. In general practice, the challenge is rarely clinical; it's logistical and conversational. Who's due? Who's missed? Who needs reassurance rather than information?</p>
+<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><span class="here">Infectious Diseases</span></p>
 
-    <p>This section covers the NZ immunisation schedule, travel vaccine planning, and practical guidance for consultation. Clinical content is referenced to Health New Zealand and BPAC. For country-specific travel risk, always check <a href="https://www.safetravel.govt.nz" target="_blank" rel="noopener">SafeTravel NZ</a> and the <a href="https://immune.org.nz" target="_blank" rel="noopener">Immunisation Advisory Centre (IMAC)</a> before each consultation.</p>
+<div class="specialty-search-row">
+  <input class="specialty-search" type="search" placeholder='Search this specialty - e.g. "MMR", "Shingrix", "malaria prophylaxis"' aria-label="Search Infectious Diseases" />
+</div>
 
-    <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
+<div class="specialty-group">
+  <p class="specialty-group__title">Travel medicine</p>
+  <div class="specialty-grid">
+    <a class="specialty-card" href="/infectious-disease/pre-travel-consult/"><span class="specialty-card__name">Pre-travel consult</span><span class="specialty-card__line">Vaccines, prophylaxis, kit, what to ask.</span></a>
+    <a class="specialty-card" href="/infectious-disease/returning-traveller/"><span class="specialty-card__name">Returning traveller</span><span class="specialty-card__line">Fever workup, when to think malaria or dengue.</span></a>
+    <a class="specialty-card" href="/infectious-disease/travellers-diarrhoea/"><span class="specialty-card__name">Travellers' diarrhoea</span><span class="specialty-card__line">Self-treatment kit, when antibiotics help, ORS.</span></a>
+    <a class="specialty-card" href="/infectious-disease/malaria/"><span class="specialty-card__name">Malaria</span><span class="specialty-card__line">Risk by region, prophylaxis options, returned-traveller fever.</span></a>
+    <a class="specialty-card" href="/infectious-disease/insect-bite-prevention/"><span class="specialty-card__name">Insect bite prevention</span><span class="specialty-card__line">DEET, picaridin, nets, dengue and chikungunya context.</span></a>
+    <a class="specialty-card" href="/infectious-disease/altitude-illness/"><span class="specialty-card__name">Altitude illness</span><span class="specialty-card__line">AMS, HACE, HAPE, prophylaxis options.</span></a>
+    <a class="specialty-card" href="/infectious-disease/fit-to-fly/"><span class="specialty-card__name">Fit to fly</span><span class="specialty-card__line">Cardiac, respiratory, recent surgery, pregnancy.</span></a>
+  </div>
+</div>
 
-    <h2 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 1.25rem;">The national immunisation schedule</h2>
+<div class="specialty-group">
+  <p class="specialty-group__title">Vaccines</p>
+  <div class="specialty-grid">
+    <a class="specialty-card is-soon"><span class="specialty-card__name">NZ immunisation schedule</span><span class="specialty-card__line">Childhood, adolescent, pregnancy, adult catch-up.</span></a>
+    <a class="specialty-card is-soon"><span class="specialty-card__name">Adult vaccines</span><span class="specialty-card__line">Influenza, COVID, shingles, pneumococcal, RSV.</span></a>
+    <a class="specialty-card is-soon"><span class="specialty-card__name">Vaccine hesitancy</span><span class="specialty-card__line">Conversation strategies that work, what to send people away with.</span></a>
+  </div>
+</div>
 
-    <p>The schedule below reflects the <strong>NZ National Immunisation Schedule, August 2025</strong> (Health NZ / HealthEd NIP8860). All vaccines on the schedule are funded for eligible children and adolescents. Some adult vaccines carry eligibility criteria  -  check current funding status before ordering.</p>
-
-    <p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre);">❍ Schedule  -  funded vaccines by age</p>
-
-    <table style="width:100%; border-collapse: collapse; font-size: 0.95rem; margin-bottom: 2rem;">
-      <thead>
-        <tr style="border-bottom: 2px solid var(--ink); text-align: left;">
-          <th style="padding: 8px 12px 8px 0; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 400;">Age / Stage</th>
-          <th style="padding: 8px 12px 8px 0; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 400;">Protects against</th>
-          <th style="padding: 8px 0 8px 0; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 400;">Vaccine</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">Pregnancy</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Tetanus, diphtheria, pertussis (whooping cough)</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Boostrix®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-mute);"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Influenza</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Brand varies</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">6 weeks</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Rotavirus <em>(1st dose  -  must be given before 15 weeks)</em></td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Rotarix® (oral)</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Diphtheria, tetanus, pertussis, polio, hepatitis B, Hib</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Infanrix® hexa</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Pneumococcal disease</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Prevenar 13®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">3 months</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Rotavirus <em>(2nd dose  -  must be given before 25 weeks)</em></td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Rotarix® (oral)</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Diphtheria, tetanus, pertussis, polio, hepatitis B, Hib</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Infanrix® hexa</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Meningococcal B <em>(can be given from 8 weeks)</em></td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Bexsero®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">5 months</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Diphtheria, tetanus, pertussis, polio, hepatitis B, Hib</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Infanrix® hexa</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Pneumococcal disease</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Prevenar 13®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Meningococcal B <em>(can be given from 4 months)</em></td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Bexsero®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">12 months</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Measles, mumps, rubella</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Priorix®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Pneumococcal disease</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Prevenar 13®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Meningococcal B</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Bexsero®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">15 months</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Measles, mumps, rubella</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Priorix®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Chickenpox (varicella)</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Varilrix®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);"><em>Haemophilus influenzae</em> type b (Hib)</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Act-HIB®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">4 years</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Diphtheria, tetanus, pertussis, polio</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Infanrix® IPV</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">11-12 years</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Human papillomavirus (HPV)  -  2 doses, 6 months apart</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Gardasil® 9</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Tetanus, diphtheria, pertussis <em>(from 11 years)</em></td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Boostrix®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">45 years</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Tetanus, diphtheria, pertussis</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Boostrix®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; font-size: 0.95rem; white-space: nowrap; color: var(--green-deep);">65 years</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Tetanus, diphtheria, pertussis</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Boostrix®</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Influenza</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Brand varies</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px 12px 10px 0;"></td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Shingles (zoster)  -  2 doses, 2-6 months apart</td>
-          <td style="padding: 10px 0; font-family: var(--mono); font-size: 0.78rem; color: var(--ink);">Shingrix®</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p style="font-size: 0.85rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em;">Source: Health NZ / HealthEd NIP8860, August 2025.¹ Schedule is subject to change  -  verify funding status via the <a href="https://www.tewhatuora.govt.nz/for-health-professionals/clinical-guidance/immunisation-handbook" target="_blank" rel="noopener" style="color: var(--ink-mute);">Immunisation Handbook 2025</a> before each consultation.</p>
-
-    <h3 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.75rem;">A few things worth knowing at a glance</h3>
-
-    <p><strong>Rotarix timing is strict.</strong> The first oral dose must be given before 15 weeks, the second before 25 weeks. Once a baby ages out, the window closes  -  this is one of the few schedule items with a hard upper limit.</p>
-
-    <p><strong>MenB is now funded for all infants ≤12 months.</strong> Bexsero® became universally funded from 1 March 2024. The funded catch-up programme for babies who missed it has since closed  -  eligibility for unfunded catch-up should be discussed individually.</p>
-
-    <p><strong>MenACWY changed product in 2024.</strong> Neisvac-C was replaced by Nimenrix (MenACWY) from 1 July 2024 as a hard changeover.² This matters for patients asking about their or their child's prior vaccination history.</p>
-
-    <p><strong>Shingrix® at 65 is two doses.</strong> The recombinant adjuvanted vaccine (RZV) is the funded option. Schedule the second dose 2-6 months after the first. Unlike the older live Zostavax, Shingrix is safe for immunocompromised patients  -  though funding criteria may differ.</p>
-
-    <p><strong>HPV at 11-12 is two doses only if started before age 15.</strong> Three doses are required if the course starts at 15 or older, or in immunocompromised individuals.³</p>
-
-    <p><strong>Additional funded vaccines exist for high-risk groups.</strong> Hepatitis A, hepatitis B, Hib, influenza, meningococcal, pneumococcal, pertussis (Tdap), tuberculosis (BCG), and varicella are funded for children and adults with specific medical conditions or risk factors. See the <a href="https://www.tewhatuora.govt.nz/for-health-professionals/clinical-guidance/immunisation-handbook" target="_blank" rel="noopener">Immunisation Handbook</a> for current eligibility criteria.</p>
-
-    <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
-
-    <h2 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 1.25rem;">Travel vaccines</h2>
-
-    <p>Travel vaccines in NZ are <strong>not subsidised</strong>  -  patients pay for vaccine and administration costs unless the vaccine is already on the funded schedule for another indication.⁴ Frame that expectation early in the consultation.</p>
-
-    <p>The goal of a travel consultation is to identify the individual's risk profile  -  destination, duration, activities, accommodation type, health status  -  and match vaccines and prophylaxis accordingly. Use the <a href="https://www.safetravel.govt.nz" target="_blank" rel="noopener">SafeTravel NZ</a> destination pages and NZF country-specific malaria prophylaxis guidance alongside IMAC resources. CDC Travelers' Health is a useful secondary reference for outbreak alerts.</p>
-
-    <p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre);">❍ Common travel vaccines  -  quick reference</p>
-
-    <table style="width:100%; border-collapse: collapse; font-size: 0.92rem; margin-bottom: 1.5rem;">
-      <thead>
-        <tr style="border-bottom: 2px solid var(--ink); text-align: left;">
-          <th style="padding: 8px 12px 8px 0; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 400;">Vaccine</th>
-          <th style="padding: 8px 12px 8px 0; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 400;">Key destinations / indications</th>
-          <th style="padding: 8px 12px 8px 0; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 400;">Timing note</th>
-          <th style="padding: 8px 0; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); font-weight: 400;">Certificate required?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Hepatitis A</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">SE Asia, South Asia, Africa, South/Central America, Pacific</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Single dose gives protection; booster at 6-12 months for lifelong immunity</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">No</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Hepatitis B</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Any destination with healthcare contact risk; moderate prevalence in many Pacific nations</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Standard 3-dose course over 6 months; accelerated schedule available</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">No</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Typhoid</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">South Asia, SE Asia, Africa; especially visiting friends/relatives</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Oral (Vivotif) 3 doses on alternate days, or IM (Typhim Vi) single dose ≥2 weeks before travel</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">No</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Yellow fever</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Sub-Saharan Africa, tropical South America</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Single dose, valid for life; must be given ≥10 days before entry to endemic areas</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">Yes  -  many countries require IHR certificate</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Japanese encephalitis</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Rural SE/South/East Asia; especially prolonged stays, outdoor activities</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">2-dose primary course (Ixiaro); allow ≥4 weeks to complete before departure</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">No</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Rabies (pre-exposure)</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">SE Asia, South Asia, Africa; trekkers, cyclists, remote travellers, those with animal contact</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">3-dose course (days 0, 7, 21/28); simplified to 2 doses if time-constrained</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">No</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Meningococcal ACWY</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Sub-Saharan Africa meningitis belt; Hajj/Umrah (certificate required); student accommodation contexts</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Single dose (Nimenrix or Menveo); allow ≥2-3 weeks before travel</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">Yes  -  Hajj/Umrah entry requirement</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--rule);">
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Cholera / traveller's diarrhoea</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Endemic regions, disaster zones; offers partial protection against ETEC</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Dukoral oral  -  2 doses 1-6 weeks apart; complete at least 1 week before travel</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">No</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px 12px 10px 0; font-family: var(--serif-display); font-weight: 500; color: var(--ink);">Influenza</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Recommended for all travellers, especially during Northern Hemisphere winter or large gatherings</td>
-          <td style="padding: 10px 12px 10px 0; color: var(--ink-soft);">Annual; funded in NZ for ≥65 years and high-risk groups</td>
-          <td style="padding: 10px 0; color: var(--ink-soft);">No</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p style="font-size: 0.85rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em;">This table is a consultation aid, not a prescribing guide. Destination-specific risk assessment is required for every patient. References: BPAC NZ travel consultation essentials;⁴ IMAC travel vaccination guidance;⁵ WHO International Travel and Health.⁶</p>
-
-    <h3 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.75rem;">Lead time matters</h3>
-
-    <p>Aim for a travel consultation at least 6-8 weeks before departure, and ideally 3 months for complex itineraries. Some vaccines require multiple doses over weeks (Japanese encephalitis, pre-exposure rabies, hepatitis B standard course). If a patient presents late, prioritise by destination risk and allow at least one dose of single-dose vaccines such as hepatitis A, even if the booster for lifelong protection comes later.</p>
-
-    <p>The travel consultation is also an opportunity to check routine vaccine status  -  particularly MMR, which remains a gap in many NZ adults born between the late 1960s and early 1990s. With measles circulating globally in 2024-25, this check is worth making explicit.⁷</p>
-
-    <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
-
-    <p style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.25rem;">❍ Patient resource</p>
-    <p><a href="/infectious-disease/patient-handout/">Patient handout: How vaccines work and the NZ immunisation schedule →</a></p>
-
-    <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
-
-    <h2 style="font-family: var(--serif-display); font-weight: 500; font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 1.25rem;">Useful resources</h2>
-
-    <ul style="padding-left: 1.25rem; color: var(--ink-soft); line-height: 2;">
-      <li><a href="https://www.tewhatuora.govt.nz/for-health-professionals/clinical-guidance/immunisation-handbook" target="_blank" rel="noopener">Immunisation Handbook 2025</a>  -  Health NZ (the authoritative clinical reference)</li>
-      <li><a href="https://immune.org.nz" target="_blank" rel="noopener">Immunisation Advisory Centre (IMAC)</a>  -  NZ-specific guidance, factsheets, clinical queries</li>
-      <li><a href="https://www.safetravel.govt.nz" target="_blank" rel="noopener">SafeTravel NZ</a>  -  MFAT travel advisories by destination</li>
-      <li><a href="https://nzf.org.nz" target="_blank" rel="noopener">New Zealand Formulary</a>  -  malaria prophylaxis by country, vaccine interactions</li>
-      <li><a href="https://bpac.org.nz" target="_blank" rel="noopener">BPAC NZ</a>  -  clinical articles on vaccination in practice</li>
-      <li><a href="https://wwwnc.cdc.gov/travel" target="_blank" rel="noopener">CDC Travelers' Health</a>  -  outbreak alerts and destination risk summaries</li>
-    </ul>
-
-    <hr style="border:none; border-top: 1px solid var(--rule); margin: 2.5rem 0;">
-
-    <p style="font-size: 0.8rem; color: var(--ink-mute); font-family: var(--mono); letter-spacing: 0.02em; line-height: 1.8;">
-      <strong>References</strong><br>
-      1. Health New Zealand / HealthEd. The National Immunisation Schedule (NIP8860). Auckland: Health NZ; August 2025. Available from: https://healthed.govt.nz/products/the-national-immunisation-schedule-nip8860<br>
-      2. Health New Zealand. Immunisation Programme updates  -  MenACWY product change July 2024. Wellington: Health NZ; 2024. Available from: https://www.tewhatuora.govt.nz/health-services-and-programmes/vaccine-information/immunisation-programme-updates<br>
-      3. Health New Zealand. Immunisation Handbook 2025. Wellington: Health NZ; 2025. Available from: https://www.tewhatuora.govt.nz/for-health-professionals/clinical-guidance/immunisation-handbook<br>
-      4. BPAC NZ. Travel consultation essentials: for departures and arrivals. Best Practice Journal. 2015;72. Available from: https://bpac.org.nz/bpj/2015/december/travel.aspx<br>
-      5. Immunisation Advisory Centre (IMAC). Travel vaccination. Auckland: University of Auckland; 2024. Available from: https://immune.org.nz/vaccines/travel-vaccination<br>
-      6. World Health Organization. International Travel and Health. Geneva: WHO; 2024. Available from: https://www.who.int/ith<br>
-      7. Centers for Disease Control and Prevention. Global Measles  -  Travel Notice. Atlanta: CDC; 28 May 2025. Available from: https://wwwnc.cdc.gov/travel
-    </p>
+<div class="specialty-group">
+  <p class="specialty-group__title">Specific infections</p>
+  <div class="specialty-grid">
+    <a class="specialty-card" href="/infectious-disease/covid-19/"><span class="specialty-card__name">COVID-19</span><span class="specialty-card__line">Acute care in NZ, antivirals, long COVID handover.</span></a>
+    <a class="specialty-card" href="/infectious-disease/shingles/"><span class="specialty-card__name">Shingles</span><span class="specialty-card__line">Antiviral window, post-herpetic neuralgia, Shingrix.</span></a>
+  </div>
+</div>
