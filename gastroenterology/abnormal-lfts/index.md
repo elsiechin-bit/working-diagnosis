@@ -9,7 +9,7 @@ description: Systematic approach to abnormal LFTs in primary care, including pat
 
 Abnormal liver function tests (LFTs) are common in primary care, with most being transient or mild. However, systematic assessment distinguishes benign from serious hepatic disease and directs appropriate referral.
 
-{% include 'panic-strip.njk', items: [
+{% set panelItems = [
   {
     title: "Don't miss",
     body: "Jaundice with elevated bilirubin and ALP (cholestasis), or markedly elevated ALT (>1000 IU/L), suggests acute hepatitis or cholangitis. Urgent ultrasound and possible ERCP/specialist referral. Signs of liver failure (encephalopathy, ascites, bleeding, altered INR) indicate cirrhosis/decompensation—admit urgently."
@@ -27,6 +27,7 @@ Abnormal liver function tests (LFTs) are common in primary care, with most being
     body: "Mildly abnormal liver blood tests are common and often resolve on their own. We'll check your tests again in a few weeks and ensure you don't have hepatitis. Reduce alcohol if relevant. We may arrange a liver ultrasound for peace of mind."
   }
 ] %}
+{% include 'panic-strip.njk' %}
 
 ## Definition and epidemiology
 
