@@ -180,15 +180,16 @@ a:hover { color: var(--green); }
 .search-dropdown {
   position: fixed;
   top: 68px;
-  left: 0;
-  right: 0;
+  right: 24px;
+  width: min(440px, calc(100vw - 48px));
   background: var(--paper);
-  border-bottom: 1px solid var(--rule);
-  padding: 20px 24px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 14px 16px;
   z-index: 99;
   max-height: 70vh;
   overflow-y: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 28px rgba(26, 31, 28, 0.08);
 }
 
 .search-dropdown #search {
@@ -197,12 +198,20 @@ a:hover { color: var(--green); }
 
 /* Pagefind UI customization for dropdown */
 .search-dropdown .pf-searchbox {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .search-dropdown .pf-results {
   display: grid;
-  gap: 12px;
+  gap: 10px;
+}
+
+@media (max-width: 540px) {
+  .search-dropdown {
+    right: 12px;
+    left: 12px;
+    width: auto;
+  }
 }
 
 /* --- Top-level room links --- */
