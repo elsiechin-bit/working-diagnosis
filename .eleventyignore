@@ -5,9 +5,9 @@ package-lock.json
 .git
 _site
 
-# Templates and reference docs (not for publication)
+# Templates, drafts, and reference docs (not for publication)
 handouts/_TEMPLATE.md
-content-prompts.html
+drafts
 
 # Collision: index.html and index.md coexist - render the .html, ignore the .md
 library/index.md
