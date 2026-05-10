@@ -1,22 +1,26 @@
+# Build artifacts and dependencies
 node_modules
-README.md
 package.json
 package-lock.json
 .git
 _site
+
+# Templates and reference docs (not for publication)
 handouts/_TEMPLATE.md
-library/index.md
-workshop/tools/cha2ds2-vasc/index.md
 content-prompts.html
 
-# Where index.md and index.html coexist, ignore the .html so the .md (with frontmatter) renders
+# Collision: index.html and index.md coexist - render the .html, ignore the .md
+library/index.md
+workshop/tools/cha2ds2-vasc/index.md
+
+# Collision: index.html and index.md coexist - render the .md, ignore the .html
 geriatrics/falls/index.html
 geriatrics/osteoporosis/index.html
 musculoskeletal/low-back-pain/index.html
 sexual-reproductive-health/cervical-screening/index.html
 sexual-reproductive-health/endometriosis/index.html
 
-# Standalone .html pages excluded from processing
+# Standalone .html pages (no .md sibling, excluded from Eleventy processing)
 myths/common-myths/index.html
 nutrition/eating-well/index.html
 sleep/osa/index.html
