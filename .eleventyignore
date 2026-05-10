@@ -4,10 +4,6 @@ package.json
 package-lock.json
 .git
 _site
-_site_test
-_site_test2
-_site_travel_test
-_site_wb_test
 handouts/_TEMPLATE.md
 library/index.md
 workshop/tools/cha2ds2-vasc/index.md
