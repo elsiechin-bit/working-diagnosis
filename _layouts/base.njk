@@ -52,77 +52,7 @@
   {% include "footer.njk" %}
 
   <script src="/pagefind/pagefind-ui.js"></script>
-  <script>
-    (function () {
-      if (typeof PagefindUI !== 'undefined') {
-        new PagefindUI({ element: '#search', showSubResults: true });
-      }
-
-      var trigger    = document.getElementById('search-trigger');
-      var dropdown   = document.getElementById('search-dropdown');
-
-      function openSearch() {
-        if (!dropdown) return;
-        dropdown.hidden = false;
-
-        function focusInput() {
-          var input = dropdown.querySelector('input[type="text"], input:not([type])');
-          if (input) {
-            input.focus();
-          } else {
-            setTimeout(focusInput, 50);
-          }
-        }
-
-        focusInput();
-      }
-
-      function closeSearch() {
-        if (!dropdown) return;
-        dropdown.hidden = true;
-      }
-
-      if (trigger) trigger.addEventListener('click', openSearch);
-
-      document.addEventListener('keydown', function (e) {
-        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-          e.preventDefault();
-          if (dropdown && dropdown.hidden) { openSearch(); } else { closeSearch(); }
-        }
-        if (e.key === 'Escape' && !dropdown.hidden) {
-          closeSearch();
-        }
-      });
-
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function (e) {
-        if (dropdown && !dropdown.hidden && !dropdown.contains(e.target) && !trigger.contains(e.target)) {
-          closeSearch();
-        }
-      });
-
-      // Nav dropdowns: close when clicking outside, or pressing Escape
-      var navDrops = document.querySelectorAll('.nav-drop');
-      document.addEventListener('click', function (e) {
-        navDrops.forEach(function (d) {
-          if (d.open && !d.contains(e.target)) { d.open = false; }
-        });
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-          navDrops.forEach(function (d) { if (d.open) d.open = false; });
-        }
-      });
-      // Open one closes the others
-      navDrops.forEach(function (d) {
-        d.addEventListener('toggle', function () {
-          if (d.open) {
-            navDrops.forEach(function (other) { if (other !== d) other.open = false; });
-          }
-        });
-      });
-    })();
-  </script>
+  <script src="/assets/site.js"></script>
 
   {% if hasToc %}
   <script src="/assets/toc.js"></script>
