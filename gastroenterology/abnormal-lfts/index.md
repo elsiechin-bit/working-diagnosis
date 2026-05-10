@@ -11,23 +11,23 @@ Abnormal liver function tests (LFTs) are common in primary care, with most being
 
 {% set panelItems = [
   {
-    title: "Don't miss",
-    body: "Jaundice with elevated bilirubin and ALP (cholestasis), or markedly elevated ALT (>1000 IU/L), suggests acute hepatitis or cholangitis. Urgent ultrasound and possible ERCP/specialist referral. Signs of liver failure (encephalopathy, ascites, bleeding, altered INR) indicate cirrhosis/decompensation—admit urgently."
+    "title": "Don't miss",
+    "body": "Jaundice with elevated bilirubin and ALP (cholestasis), or markedly elevated ALT (>1000 IU/L), suggests acute hepatitis or cholangitis. Urgent ultrasound and possible ERCP/specialist referral. Signs of liver failure (encephalopathy, ascites, bleeding, altered INR) indicate cirrhosis/decompensation—admit urgently."
   },
   {
-    title: "First-line",
-    body: "Repeat LFTs in 2-4 weeks (transient elevation is common). Assess for alcohol use (key cause). Hepatitis serology (A, B, C), autoimmune markers (ANA, anti-smooth muscle), and abdominal ultrasound characterise underlying pathology. Pattern recognition (hepatocellular vs cholestatic) guides next steps."
+    "title": "First-line",
+    "body": "Repeat LFTs in 2-4 weeks (transient elevation is common). Assess for alcohol use (key cause). Hepatitis serology (A, B, C), autoimmune markers (ANA, anti-smooth muscle), and abdominal ultrasound characterise underlying pathology. Pattern recognition (hepatocellular vs cholestatic) guides next steps."
   },
   {
-    title: "Refer when",
-    body: "Persistent abnormal LFTs after 2-4 weeks, markedly elevated enzymes (ALT >500 IU/L), jaundice, positive hepatitis serology, autoimmune markers, or ultrasound abnormalities (cirrhosis, portal hypertension, lesions). Any suspected cirrhosis warrants urgent specialist assessment."
+    "title": "Refer when",
+    "body": "Persistent abnormal LFTs after 2-4 weeks, markedly elevated enzymes (ALT >500 IU/L), jaundice, positive hepatitis serology, autoimmune markers, or ultrasound abnormalities (cirrhosis, portal hypertension, lesions). Any suspected cirrhosis warrants urgent specialist assessment."
   },
   {
-    title: "Tell the patient",
-    body: "Mildly abnormal liver blood tests are common and often resolve on their own. We'll check your tests again in a few weeks and ensure you don't have hepatitis. Reduce alcohol if relevant. We may arrange a liver ultrasound for peace of mind."
+    "title": "Tell the patient",
+    "body": "Mildly abnormal liver blood tests are common and often resolve on their own. We'll check your tests again in a few weeks and ensure you don't have hepatitis. Reduce alcohol if relevant. We may arrange a liver ultrasound for peace of mind."
   }
 ] %}
-{% include 'panic-strip.njk' %}
+{% include "panic-strip.njk" %}
 
 ## Definition and epidemiology
 
