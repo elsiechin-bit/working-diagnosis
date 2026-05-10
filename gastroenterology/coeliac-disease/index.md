@@ -139,3 +139,4 @@ Untreated coeliac disease is associated with adverse outcomes (miscarriage, feta
 ## Field notes
 
 Coeliac disease is vastly underdiagnosed; maintain high suspicion in anaemia without cause, chronic diarrhoea, or autoimmune disease. Serological testing must occur on gluten-containing diet; a negative test in a gluten-free patient is unreliable. Biopsy confirmation is essential even with positive serology—diagnose based on histology, not serology alone. Dermatitis herpetiformis is pathognomonic; all patients require intestinal assessment. Dietary adherence is challenging; strong dietitian support is crucial. Monitor bone health and nutritional status; initial supplementation is often required. Refractory coeliac disease is rare but serious; consider in patients with persistent symptoms despite apparent compliance.
+ 
