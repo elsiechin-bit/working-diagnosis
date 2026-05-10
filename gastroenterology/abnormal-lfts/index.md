@@ -27,7 +27,6 @@ Abnormal liver function tests (LFTs) are common in primary care, with most being
     "body": "Mildly abnormal liver blood tests are common and often resolve on their own. We'll check your tests again in a few weeks and ensure you don't have hepatitis. Reduce alcohol if relevant. We may arrange a liver ultrasound for peace of mind."
   }
 ] %}
-{% include "panic-strip.njk" %}
 
 ## Definition and epidemiology
 
@@ -159,4 +158,4 @@ Mild ALP elevation is normal (placental source). Acute hepatitis or jaundice in 
 
 ## Field notes
 
-Transient mild enzyme elevation is common and often resolves; repeat testing before extensive investigation. Viral hepatitis serology is crucial; don't miss hepatitis B or C, which are treatable if identified. Autoimmune hepatitis is frequently missed; maintain suspicion in elevated LFTs without obvious cause. Cirrhosis detection is critical—ensure ultrasound and synthetic function assessment in persistent abnormalities. NAFLD is increasingly common; address metabolic factors (weight, diabetes, dyslipidaemia). Alcohol is a leading cause; direct, non-judgmental questioning about consumption is essential. Marked enzyme elevation (>1000 IU/L) is acute hepatitis until proven otherwise; refer urgently.
+Transient mild enzyme elevation is common and often resolves; repeat testing before extensive investigation. Viral hepatitis serology is crucial; don't miss hepatitis B or C, which are treatable if identified. Autoimmune hepatitis is frequently missed; maintain suspicion in elevated LFTs without obvious cause. Cirrhosis detection is critical—ensure ultrasound and synthetic function assessment in persistent abnormalities. NAFLD is increasingly common; address metabolic factors (weight, diabetes, dyslipidaemia). Alcohol is a leading cause; direct, non-judgmental questioning about consumption is essential. Marked enzyme elevation (>1000 IU/L) is acute hepatitis until pro

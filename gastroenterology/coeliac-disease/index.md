@@ -9,22 +9,22 @@ description: Recognition, diagnosis, and management of coeliac disease in primar
 
 Coeliac disease is an autoimmune disorder triggered by dietary gluten in genetically susceptible individuals. Despite affecting ~1% of developed populations, most cases remain undiagnosed. Primary care plays a crucial role in early recognition and appropriate investigation.
 
-{% include 'panic-strip.njk', items: [
+{% set panelItems = [
   {
-    title: "Don't miss",
-    body: "Iron deficiency anaemia without obvious cause, chronic diarrhoea, bloating, or weight loss—screen with tTG-IgA serology. Family members of diagnosed coeliac patients have 10–15% risk; screen them routinely. Dermatitis herpetiformis (blistering rash on elbows, knees, buttocks) is pathognomonic for coeliac disease."
+    "title": "Don't miss",
+    "body": "Iron deficiency anaemia without obvious cause, chronic diarrhoea, bloating, or weight loss—screen with tTG-IgA serology. Family members of diagnosed coeliac patients have 10–15% risk; screen them routinely. Dermatitis herpetiformis (blistering rash on elbows, knees, buttocks) is pathognomonic for coeliac disease."
   },
   {
-    title: "First-line",
-    body: "Serology (tissue transglutaminase IgA—tTG-IgA) is first-line screening; must be on gluten-containing diet. If positive, refer for endoscopic biopsy to confirm. After diagnosis confirmed, strict gluten-free diet is only treatment. Nutritional supplementation (iron, B12, calcium, vitamin D) is often needed."
+    "title": "First-line",
+    "body": "Serology (tissue transglutaminase IgA—tTG-IgA) is first-line screening; must be on gluten-containing diet. If positive, refer for endoscopic biopsy to confirm. After diagnosis confirmed, strict gluten-free diet is only treatment. Nutritional supplementation (iron, B12, calcium, vitamin D) is often needed."
   },
   {
-    title: "Refer when",
-    body: "Positive serology confirmed by endoscopy. Specialist dietitian assessment aids transition to gluten-free diet and addresses nutritional deficiencies. Refractory coeliac disease, dermatitis herpetiformis with complex skin management, or suspected complications warrant specialist input."
+    "title": "Refer when",
+    "body": "Positive serology confirmed by endoscopy. Specialist dietitian assessment aids transition to gluten-free diet and addresses nutritional deficiencies. Refractory coeliac disease, dermatitis herpetiformis with complex skin management, or suspected complications warrant specialist input."
   },
   {
-    title: "Tell the patient",
-    body: "Coeliac disease is manageable through strict gluten-free diet. Initial symptoms resolve in weeks to months. Your gut will heal, but lifelong diet modification is required. We'll support nutritional recovery and monitor for complications."
+    "title": "Tell the patient",
+    "body": "Coeliac disease is manageable through strict gluten-free diet. Initial symptoms resolve in weeks to months. Your gut will heal, but lifelong diet modification is required. We'll support nutritional recovery and monitor for complications."
   }
 ] %}
 

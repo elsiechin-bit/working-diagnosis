@@ -9,25 +9,6 @@ description: Assessment and stepwise management of constipation in primary care,
 
 Constipation is one of the most common primary care complaints, affecting 10–20% of the general population. The key is identifying alarm features warranting investigation versus functional constipation responding to simple interventions.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Age >50 with new-onset constipation, weight loss, anaemia, visible or occult blood in stool, positive faecal occult blood test, or family history of colorectal cancer—refer for colonoscopy to exclude malignancy or structural disease."
-  },
-  {
-    title: "First-line",
-    body: "Increase dietary fibre (25–35 g/day) and fluid intake, encourage physical activity. Assess for medication-induced constipation (opioids, anticholinergics, iron, calcium, diuretics). Trial of osmotic laxative (polyethylene glycol, lactulose) for 2 weeks."
-  },
-  {
-    title: "Refer when",
-    body: "Alarm symptoms present, constipation unresponsive to fibre + osmotic laxative after 4 weeks, or concerning features suggest underlying disease. Faecal impaction requires manual disimpaction or enema. Pelvic floor dysfunction may benefit from pelvic floor physiotherapy."
-  },
-  {
-    title: "Tell the patient",
-    body: "Most constipation is functional and improves with fibre, fluids, and activity. Avoid excessive laxative use, which can worsen motility. Straining at stool is common; let us know if blood appears or bowel habit changes significantly."
-  }
-] %}
-
 ## Definition and epidemiology
 
 Constipation is defined as <3 bowel movements per week, or straining, hard stools, sensation of incomplete evacuation, or manual manoeuvres required for defecation, persisting for ≥3 months. Prevalence is 10–20% in developed countries, increasing with age and female sex. Most cases are functional (no structural pathology).

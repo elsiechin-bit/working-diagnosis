@@ -9,25 +9,6 @@ description: Recognition and management of asymptomatic gallstones and symptomat
 
 Gallstones affect 10–15% of the developed population, increasing with age, female sex, and obesity. Most are asymptomatic and require no intervention. Symptomatic biliary colic—acute right upper quadrant pain triggered by stone obstruction of the cystic duct—requires management. Complications (acute cholecystitis, cholangitis, pancreatitis) are relatively uncommon but serious.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Acute biliary colic with persistent fever, tachycardia, and right upper quadrant tenderness/guarding suggests acute cholecystitis—admit for IV antibiotics and imaging. Jaundice + fever + RUQ pain suggests cholangitis (bile duct obstruction)—urgent ERCP required. Severe epigastric pain radiating to back suggests pancreatitis—measure amylase, admit if high."
-  },
-  {
-    title: "First-line",
-    body: "Typical biliary colic is RUQ or epigastric pain (30 min to several hours), often nocturnal post-meal. Examination may show RUQ tenderness but no peritonism. Abdominal ultrasound confirms gallstones; checks for pericholecystic fluid/wall thickening (cholecystitis) or bile duct dilatation (obstruction). Most biliary colic is uncomplicated; supportive care and analgesia suffice."
-  },
-  {
-    title: "Refer when",
-    body: "Recurrent symptomatic biliary colic impacting quality of life—offer elective cholecystectomy. Acute cholecystitis, cholangitis, or pancreatitis—urgent hospital admission. Consider cholecystectomy in patients with gallstones and atypical symptoms if no alternative diagnosis."
-  },
-  {
-    title: "Tell the patient",
-    body: "Gallstones are very common and most cause no problems. If you develop pain, it is treatable with pain relief. Surgery to remove the gallbladder is safe and effective if pain becomes bothersome. We'll monitor you and arrange surgery if symptoms recur."
-  }
-] %}
-
 ## Definition and epidemiology
 
 Gallstones are cholesterol or pigment concretions within the gallbladder. Asymptomatic gallstones (cholelithiasis) are detected incidentally on imaging done for other reasons; prevalence is 10–15% population-wide, rising to 30% in those >70 years. Female sex, obesity, rapid weight loss, and age increase risk (risk factors remembered as "4 Fs": female, fat, forty, fertile). Symptomatic biliary colic occurs in 1–3% of those with asymptomatic gallstones annually. Complications (cholecystitis, cholangitis, pancreatitis) occur in <1% annually but are serious.

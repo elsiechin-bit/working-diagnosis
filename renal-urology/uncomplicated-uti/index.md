@@ -9,24 +9,6 @@ description: Recognition and management of uncomplicated urinary tract infection
 
 Uncomplicated urinary tract infection (UTI) is bacterial infection of the lower urinary tract in otherwise healthy, non-pregnant women without structural or functional urinary abnormality. Incidence is 5–15% annually; most are community-acquired. Diagnosis relies on clinical symptoms and urine culture or rapid diagnostic testing. First-line antibiotics are trimethoprim-sulfamethoxazole or nitrofurantoin. Early treatment prevents progression to pyelonephritis and reduces symptom duration.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Dysuria with fever, loin pain, or nausea suggests pyelonephritis—treat urgently. Urinary retention or suprapubic mass suggests obstruction or retention—imaging required. Recurrent UTI (>2 per year) warrants evaluation for anatomical abnormality or prophylaxis consideration. Diabetes or immunocompromise increases pyelonephritis risk—lower threshold for referral. Pregnant women with asymptomatic bacteriuria require treatment to prevent AKI and preterm labour."
-  },
-  {
-    title: "First-line",
-    body: "Dysuria ± urinary frequency, urgency, suprapubic discomfort in non-febrile woman without loin pain suggests uncomplicated cystitis. Midstream clean-catch urine for culture and sensitivity. Urinalysis (nitrites, leukocyte esterase) supports diagnosis; positive culture confirms. Start antibiotic empirically pending culture if symptoms typical. Trimethoprim-sulfamethoxazole DS 160/800 mg BD for 3 days or nitrofurantoin 100 mg BD for 5 days are standard. Avoid fluoroquinolones as first-line."
-  },
-  {
-    title: "Refer when",
-    body: "Pyelonephritis (fever ≥38°C, loin tenderness, nausea) requires hospital admission or close outpatient monitoring. Recurrent UTI (>3 annually in women) warrants urology assessment and consideration of prophylaxis. Failed antibiotic response after 48 hours suggests resistant organism or alternative diagnosis—switch antibiotic based on culture or imaging. Catheterized patients or structural abnormality require specialist input."
-  },
-  {
-    title: "Tell the patient",
-    body: "Urinary tract infection is very common and usually resolves quickly with antibiotics. Symptoms typically improve within 24–48 hours. Drink plenty of water and take pain relief as needed. Complete the full course of antibiotics even if you feel better. Contact us if symptoms worsen, fever develops, or pain moves to your side."
-  }
-] %}
 
 ## Definition and epidemiology
 

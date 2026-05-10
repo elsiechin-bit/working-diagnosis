@@ -9,24 +9,6 @@ description: Recognition and management of metabolic-associated fatty liver dise
 
 Metabolic-associated fatty liver disease (MASLD, formerly non-alcoholic fatty liver disease or NAFLD) is the leading cause of liver disease in developed countries. Most cases are benign, but a significant minority progress to cirrhosis or hepatocellular carcinoma. Primary care recognition and risk stratification are crucial.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Obesity, type 2 diabetes, metabolic syndrome + hepatomegaly or elevated LFTs suggests MASLD. FibroScan (transient elastography) is essential to assess fibrosis stage. Signs of cirrhosis (ascites, spider naevi, thrombocytopenia, elevated INR, hypoalbuminaemia) indicate advanced disease—urgent specialist referral."
-  },
-  {
-    title: "First-line",
-    body: "Abdominal ultrasound confirms hepatic steatosis. Assess metabolic factors: weight, BMI, diabetes control, dyslipidaemia, hypertension. FibroScan stratifies fibrosis risk. LFTs, FIB-4 index, or APRI score aid non-invasive fibrosis assessment. Weight loss ≥10% improves steatosis and inflammation."
-  },
-  {
-    title: "Refer when",
-    body: "FibroScan shows advanced fibrosis (F3-F4), or clinical/biochemical evidence of cirrhosis. FIB-4 score >2.67 (age >65) or >1.3 (age ≤65) suggests advanced fibrosis and warrants specialist assessment. Any signs of decompensation: urgent referral."
-  },
-  {
-    title: "Tell the patient",
-    body: "Many people develop fatty liver due to obesity and diabetes. The good news is most do not progress to serious liver disease. Weight loss and managing diabetes slow progression. We'll monitor your liver with ultrasound and blood tests to ensure it stays stable."
-  }
-] %}
 
 ## Definition and epidemiology
 

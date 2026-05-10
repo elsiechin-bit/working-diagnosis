@@ -9,24 +9,6 @@ description: Diagnosis and management of gastric and duodenal ulcers, including 
 
 Peptic ulcer disease (PUD) is a mucosal breach (≥5 mm) in the stomach or duodenum. While declining in developed countries, PUD remains significant in NSAID users and H. pylori-infected populations. Most cases are now preventable or easily treated with appropriate therapy.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Haematemesis or melaena (active bleeding risk), severe epigastric pain with peritoneal signs (perforation with peritonitis), or anaemia from chronic bleeding. Perforation presents as acute abdomen and requires emergency surgery."
-  },
-  {
-    title: "First-line",
-    body: "Endoscopy to diagnose and treat (for bleeding). High-dose PPI (omeprazole 40 mg BD or lansoprazole 60 mg daily). Identify and treat H. pylori, cease NSAIDs if possible. Eradication cures H. pylori ulcer."
-  },
-  {
-    title: "Refer when",
-    body: "Active bleeding at endoscopy, ulcer perforation, failed healing despite PPI after 8 weeks, recurrent ulcer despite eradication, or suspected malignancy (gastric ulcer). Endoscopy with biopsy required for all gastric ulcers to exclude cancer."
-  },
-  {
-    title: "Tell the patient",
-    body: "Most peptic ulcers heal quickly with medication. If caused by H. pylori, treatment kills the bacteria and prevents recurrence. Avoiding NSAIDs and stress management help healing."
-  }
-] %}
 
 ## Definition and epidemiology
 

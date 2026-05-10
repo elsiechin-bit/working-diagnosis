@@ -9,24 +9,6 @@ description: Management of recurrent urinary tract infection in women, including
 
 Recurrent urinary tract infection (UTI) is defined as ≥3 episodes of cystitis or ≥2 episodes of pyelonephritis in 12 months. Affects 15–25% of women with prior UTI and causes significant morbidity and healthcare burden. Most recurrent UTI in otherwise healthy women is caused by reinfection with the same or different uropathogenic bacteria; relapse (same strain) is less common. Risk stratification and targeted investigations determine whether anatomical abnormality requires exclusion or whether non-pharmacological and prophylactic strategies suffice.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Recurrent pyelonephritis (≥2 episodes annually) raises concern for anatomical abnormality (reflux, obstruction)—imaging mandatory. Young women (<50 years) with >3 UTI annually without obvious risk factors warrant renal ultrasound to exclude structural disease. Fever during recurrence suggests pyelonephritis—admit if ill. Symptoms atypical (haematuria without dysuria, suprapubic mass) suggest retention, stone, or malignancy—image before assuming UTI."
-  },
-  {
-    title: "First-line",
-    body: "Confirm recurrent UTI pattern: >3 uncomplicated cystitis episodes in 12 months in non-pregnant woman. Exclude reversible causes: incomplete emptying (urinary hesitancy, weak stream), neurogenic bladder, diabetes control, hormonal factors. Renal ultrasound to assess for hydronephrosis (obstruction) or focal lesions. If imaging normal and no obvious cause identified, offer non-pharmacological strategies first: hydration, post-coital voiding, avoidance of spermicide. If recurrence continues, prophylactic antibiotic (long-term or post-coital)."
-  },
-  {
-    title: "Refer when",
-    body: "Recurrent pyelonephritis or fever during UTI recurrence—urology assessment. Young age (<30 years) with first presentation of recurrent UTI—consider early imaging. Imaging showing hydronephrosis, stones, or structural abnormality—urology referral. Failure of prophylactic strategy despite good adherence—reassess anatomy and consider specialist input. Suspected anatomical abnormality (history of reflux, prior surgery)—early referral."
-  },
-  {
-    title: "Tell the patient",
-    body: "Recurrent urinary infections are common in some women and do not mean something is seriously wrong. We will examine you and do imaging to rule out any structural problems. Drinking plenty of water and emptying your bladder fully usually helps. If infections continue despite these steps, a low-dose antibiotic taken regularly can prevent them. You have options available, and we will find what works best for you."
-  }
-] %}
 
 ## Definition and epidemiology
 

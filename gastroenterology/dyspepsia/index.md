@@ -9,25 +9,6 @@ description: Systematic diagnosis and management of indigestion and upper abdomi
 
 Dyspepsia (indigestion) is one of the most common presentations in primary care. The key is distinguishing functional dyspepsia (no structural pathology despite investigation) from organic dyspepsia (peptic ulcer, GORD, gastric cancer) and managing appropriately based on red flag features.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Age >60, anaemia, weight loss, persistent vomiting, dysphagia, or family history of gastric cancer—refer for urgent endoscopy. Early gastric cancer often presents with mild dyspepsia alone."
-  },
-  {
-    title: "First-line",
-    body: "Lifestyle and dietary modification (smaller meals, lower fat, avoid triggers), antacids/alginates for symptom relief. Test for H. pylori if positive risk factors. PPI only if alarm features or failed initial therapy."
-  },
-  {
-    title: "Refer when",
-    body: "Alarm symptoms present, unresponsive to initial management after 4 weeks, persistent symptoms despite PPI, or suspected gastric malignancy. Consider early endoscopy in age >60 with new-onset dyspepsia."
-  },
-  {
-    title: "Tell the patient",
-    body: "Most indigestion is benign and resolves with simple measures. Small frequent meals, avoiding fatty foods, and managing stress help. We'll investigate if symptoms persist or worsen."
-  }
-] %}
-
 ## Definition and epidemiology
 
 Dyspepsia is postprandial fullness, early satiation, epigastric pain, or epigastric burning. It affects 20–40% of the adult population; most have functional dyspepsia (no organic pathology on investigation). Organic dyspepsia accounts for 10–30% and includes peptic ulcer disease, GORD, malignancy, and inflammatory conditions.

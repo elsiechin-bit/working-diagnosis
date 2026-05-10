@@ -9,25 +9,6 @@ description: Recognition, diagnosis, and management of hepatitis B in primary ca
 
 Hepatitis B is a major infectious cause of chronic liver disease worldwide, affecting 250 million people globally and 5% of the NZ population. Diagnosis requires serological testing; many cases are asymptomatic but infectious. Primary care has a crucial role in screening, vaccination, and identifying patients at risk of progression to cirrhosis.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "HBsAg-positive patients require assessment of disease activity (HBe antigen, HBV DNA level). Evidence of cirrhosis (elevated INR, low albumin, thrombocytopenia, ascites, spider naevi) mandates urgent specialist referral. Acute hepatitis B with jaundice, elevated ALT >1000 IU/L, and altered INR suggests acute liver failure—admit urgently."
-  },
-  {
-    title: "First-line",
-    body: "Screen with HBsAg (hepatitis B surface antigen) in at-risk groups: migrants from endemic regions, healthcare workers, IV drug users, sexual contacts of HBsAg+ patients, prisoners, patients with HIV/HCV. Confirm with anti-HBc (core antibody). Vaccinate non-immune individuals (anti-HBs <10 mIU/mL). All HBsAg+ require HBeAg and HBV DNA for disease staging."
-  },
-  {
-    title: "Refer when",
-    body: "HBsAg-positive patients require gastroenterology/hepatology assessment. Refer if: HBeAg+ or HBV DNA >10^5 IU/mL, ALT persistently elevated (>40 IU/L), signs of cirrhosis, or family history of hepatocellular carcinoma. FibroScan stratifies fibrosis risk. Antiviral therapy indicated if HBV DNA >10^5 IU/mL and HBeAg+, or evidence of cirrhosis."
-  },
-  {
-    title: "Tell the patient",
-    body: "Hepatitis B is treatable. Many people carry the virus without developing serious liver disease. We'll check your liver function and arrange a specialist assessment. Antiviral therapy is highly effective in preventing progression. Vaccination of close contacts is essential to prevent transmission."
-  }
-] %}
-
 ## Definition and epidemiology
 
 Hepatitis B is a DNA virus transmitted via blood, sexual contact, or vertical transmission (perinatal). HBsAg (surface antigen) indicates current infection (acute or chronic). Chronic hepatitis B is defined as HBsAg persistence >6 months. Prevalence is high in migrants from sub-Saharan Africa, Asia-Pacific, and Eastern Europe (5–15%), healthcare workers (0.5%), and IV drug users (5–10%). In NZ, Māori and Pacific Islander populations have higher seroprevalence. Transmission to non-immune individuals approaches 100% if HBeAg+ and 30% if HBeAg−.

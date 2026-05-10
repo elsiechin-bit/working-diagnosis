@@ -9,24 +9,6 @@ description: Overview of the NZ National Bowel Screening Programme including eli
 
 The National Bowel Screening Programme (NBSP) is New Zealand's population-based colorectal cancer screening initiative, offering free Faecal Immunochemical Test (FIT) to all citizens aged 50–74 years. Primary care plays a crucial role in promoting uptake, interpreting results, and ensuring timely colonoscopy referral for positive cases.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "FIT-positive result requires colonoscopy referral regardless of symptoms. Do not reassure patient or attribute to haemorrhoids without investigation. Urgent colonoscopy is indicated if FIT strongly positive (haemoglobin >25 µg/g), anaemia present, or alarm symptoms (weight loss, change in bowel habit, persistent bleeding). Screen all eligible patients; target uptake is 60%+."
-  },
-  {
-    title: "First-line",
-    body: "Encourage all eligible patients (50–74 years, no prior screening) to complete FIT kit. Distribute NBSP kits in practice, explain proper sampling technique, and emphasise importance of screening. FIT is simple, non-invasive, and performs well for advanced neoplasia (sensitivity >90% for cancer). Results available within 2 weeks."
-  },
-  {
-    title: "Refer when",
-    body: "Any FIT-positive result mandates colonoscopy referral. Refer via standard DHB endoscopy pathways; urgency depends on FIT result and presence of alarm symptoms. FIT-negative (normal) patients can resume routine screening in 2 years (rescreening interval)."
-  },
-  {
-    title: "Tell the patient",
-    body: "Bowel cancer is preventable if detected early. This simple stool test detects tiny amounts of blood in stool that you cannot see. A positive result does not mean you have cancer—many causes of bleeding exist—but it requires a camera test (colonoscopy) to investigate. If negative, you are at low risk and can be screened again in 2 years."
-  }
-] %}
 
 ## Definition and programme overview
 

@@ -9,24 +9,6 @@ description: Recognition, assessment, and staging of chronic kidney disease in p
 
 Chronic kidney disease affects 10–15% of adults and is often undiagnosed until advanced. Definition relies on reduced glomerular filtration rate (eGFR <60 mL/min/1.73m²) and/or persistent albuminuria. Most cases are mild and progress slowly; however, early detection and risk stratification enable intervention to slow progression and reduce cardiovascular complications.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "eGFR <30 mL/min/1.73m² indicates CKD stage G4 (advanced) and requires nephrology referral. Rapidly declining eGFR (drop >5 mL/min/1.73m² annually) suggests progressive disease—refer urgently. Proteinuria >3 g/day or haematuria with reduced eGFR suggests underlying glomerulonephritis—refer for imaging and possible biopsy. Serum potassium >6 mmol/L or phosphate >1.5 mmol/L with reduced eGFR indicates mineral bone disease—manage carefully."
-  },
-  {
-    title: "First-line",
-    body: "Measure serum creatinine and calculate eGFR (using KDIGO formula) in all adults, especially those with diabetes, hypertension, or CVD. Annual monitoring for CKD stage G3-G5. Urine albumin-to-creatinine ratio (UACR) assesses albuminuria; <30 mg/mmol is normal, 30–300 is microalbuminuria, >300 is macroalbuminuria. Combination of reduced eGFR and albuminuria indicates higher progression risk. Exclude reversible causes: medication-induced (NSAIDs, ACE inhibitors in certain settings), infection, obstruction."
-  },
-  {
-    title: "Refer when",
-    body: "eGFR <30 mL/min/1.73m² (stage G4-G5) requires nephrology assessment. Rapid eGFR decline (>5 mL/min/1.73m² annually) or proteinuria >3 g/day warrant urgent referral. New haematuria or proteinuria >1 g/day in non-diabetic CKD suggests primary glomerulonephritis. Suspected secondary causes (vasculitis, lupus) require specialist assessment. Referral is not urgent if stable CKD G3 without albuminuria."
-  },
-  {
-    title: "Tell the patient",
-    body: "Kidney function is measured by a blood test. Mild reduction in kidney function is common and often remains stable. We monitor you regularly with blood and urine tests. Managing blood pressure and blood sugar slows kidney disease progression. Most people with mild kidney disease do not need dialysis; treatment focuses on preventing worsening."
-  }
-] %}
 
 ## Definition and epidemiology
 

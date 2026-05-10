@@ -9,24 +9,6 @@ description: Recognition, assessment, and management of acute pancreatitis in pr
 
 Acute pancreatitis is inflammation of the pancreas triggered by gallstones, alcohol, medications, or hypertriglyceridemia. Incidence is 5–10 per 100,000 per year in developed countries. Most cases (70–80%) are mild and self-limited; 20–30% progress to severe disease with organ failure and high mortality. Early recognition and aggressive fluid resuscitation are essential.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Severe epigastric or left-sided pain radiating to back with elevated amylase/lipase indicates acute pancreatitis—admit immediately. APACHE >6 (age >55, elevated WBC >15K, elevated glucose >200, elevated LDH >1.5×ULN, low albumin <3.5) or organ failure (ARDS, acute kidney injury, shock) indicates severe disease requiring ICU. Early fluid resuscitation is critical; delayed admission increases mortality."
-  },
-  {
-    title: "First-line",
-    body: "Suspect pancreatitis if severe epigastric pain radiating to back ± nausea/vomiting. Measure amylase and/or lipase (elevated >3×ULN confirms diagnosis). Measure glucose, WBC, LDH, albumin, calcium for severity assessment. Abdominal imaging (CT) deferred until after initial resuscitation unless diagnosis unclear or complications suspected. Initial management: IV fluids (aggressive, 250–500 mL/hour), fasting, analgesia, monitoring."
-  },
-  {
-    title: "Refer when",
-    body: "All acute pancreatitis requires admission. Refer to hospital with acute medical or surgical capability. Severe pancreatitis (APACHE >6, organ failure, necrosis >30% on imaging) requires ICU admission. Persistent organ failure, infected necrosis, or uncontrolled pain may warrant ERCP (if biliary obstruction) or intervention."
-  },
-  {
-    title: "Tell the patient",
-    body: "Pancreas inflammation causes severe pain; this is treatable with fluids and pain relief. Most recover fully with rest. We will monitor for complications. Identifying the cause (gallstones, alcohol) helps prevent recurrence."
-  }
-] %}
 
 ## Definition and epidemiology
 

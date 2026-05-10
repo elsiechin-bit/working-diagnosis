@@ -9,24 +9,6 @@ description: Recognition, diagnosis, and management of hepatitis C in primary ca
 
 Hepatitis C affects 71 million people globally and 0.5–1% of developed populations. The majority are unaware of their infection. Crucially, hepatitis C is now curable with direct-acting antivirals (DAAs), achieving cure rates >95%. Primary care screening and early referral for treatment are essential.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Anti-HCV positive patients require HCV RNA testing to confirm active infection. Evidence of cirrhosis (elevated INR, low albumin, thrombocytopenia, ascites, spider naevi, FibroScan >12 kPa) mandates urgent specialist referral. Acute hepatitis C with jaundice and markedly elevated ALT (>1000 IU/L) suggests advanced disease—refer urgently."
-  },
-  {
-    title: "First-line",
-    body: "Screen with anti-HCV antibody in: IV drug users (active and former), healthcare workers with blood exposure, people with HIV, prisoners, and patients with unexplained elevated transaminases or cirrhosis. Positive anti-HCV requires HCV RNA PCR to confirm active infection. All HCV RNA+ patients are curable with direct-acting antivirals (DAAs), regardless of genotype or cirrhosis stage."
-  },
-  {
-    title: "Refer when",
-    body: "HCV RNA-positive patients require specialist assessment for DAA therapy initiation. Therapy is highly effective (>95% cure) and can be delivered in primary care or hospital. Patients with advanced fibrosis (FibroScan >12 kPa) or cirrhosis require additional surveillance for hepatocellular carcinoma."
-  },
-  {
-    title: "Tell the patient",
-    body: "Hepatitis C is now curable with a short course of oral medications. Treatment takes 8–12 weeks and works in >95% of patients. Most people have no symptoms until cirrhosis develops, so early testing and treatment prevents serious liver disease. Cure means the virus is eliminated permanently."
-  }
-] %}
 
 ## Definition and epidemiology
 

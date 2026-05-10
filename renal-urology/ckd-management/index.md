@@ -9,24 +9,6 @@ description: Medical management of chronic kidney disease in primary care, inclu
 
 Management of chronic kidney disease focuses on slowing progression and reducing cardiovascular risk through tight blood pressure control, optimal glycaemic management, and cardioprotective medications. Early intervention in CKD G3-G5 prevents or delays progression to kidney failure requiring dialysis.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Serum potassium >6 mmol/L in advanced CKD is dangerous and may cause cardiac arrhythmia—do not add ACE/ARB without addressing. Phosphate >1.5 mmol/L in CKD G4-G5 requires management to prevent vascular calcification. Haemoglobin <100 g/L with eGFR <60 warrants investigation and possible anaemia therapy. ACE/ARB contraindicated if bilateral renal artery stenosis (rare) or pregnancy. Monitor for hyperkalemia within 1 week of ACE/ARB initiation."
-  },
-  {
-    title: "First-line",
-    body: "ACE inhibitor or ARB is cornerstone: reduces proteinuria and slows progression (initial 5–10% eGFR drop is expected). Target BP <120/90 mmHg with antihypertensives. Manage hypertension with diuretic, calcium channel blocker, or beta-blocker as add-ons. Statin for all with diabetes or age >50 (CVD risk reduction). SGLT2 inhibitor (if diabetic or eGFR 45–90) slows progression independent of glucose control. Avoid NSAIDs."
-  },
-  {
-    title: "Refer when",
-    body: "eGFR declining rapidly (>5 mL/min annually): investigate for reversible causes and refer for specialist assessment. eGFR <30 (CKD G4-G5): refer to nephrology for renal replacement therapy planning. Persistent hyperkalaemia (>6 mmol/L) despite treatment: specialist input needed. CKD with uncontrolled hypertension or resistant disease: consider secondary referral."
-  },
-  {
-    title: "Tell the patient",
-    body: "Managing blood pressure and blood sugar are the most important things you can do to slow kidney disease. These medications protect your heart and kidneys. We monitor regularly to adjust doses if needed. If kidney function continues to decline, we'll plan ahead for future treatments like dialysis or transplant."
-  }
-] %}
 
 ## Blood pressure management
 

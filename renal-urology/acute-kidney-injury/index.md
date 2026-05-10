@@ -9,24 +9,6 @@ description: Recognition and management of acute kidney injury in primary care, 
 
 Acute kidney injury is rapid deterioration in renal function (increase in serum creatinine or decrease in urine output) over hours to days. Approximately 10–20% of hospitalised patients develop AKI; community-acquired AKI is less frequent but serious. Early recognition and intervention—fluid resuscitation for prerenal causes, drug cessation for medication-induced AKI, or urinary obstruction relief for postrenal AKI—can prevent progression to acute kidney failure requiring dialysis.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Serum creatinine >150 µmol/L or increase >30 µmol/L acutely suggests AKI until proven otherwise. Urine output <0.5 mL/kg/hour warrants investigation. Dangerous hyperkalaemia (>6 mmol/L with peaked T waves on ECG) is life-threatening and requires urgent treatment. Oliguria with pulmonary oedema signals AKI with fluid overload—admit for dialysis consideration. Signs of obstruction (palpable bladder, anuria) require urgent imaging and catheterisation."
-  },
-  {
-    title: "First-line",
-    body: "Establish timeline: has creatinine risen acutely (hours-days) from known baseline? Assess volume status: signs of dehydration (tachycardia, hypotension, dry mucous membranes) suggest prerenal AKI—IV fluid resuscitation indicated. Check medications: NSAIDs, ACE/ARB, aminoglycosides increase risk. Measure urine output. Urinalysis: look for blood, casts (intrinsic glomerulonephritis). Renal ultrasound to exclude obstruction."
-  },
-  {
-    title: "Refer when",
-    body: "AKI KDIGO stage 2–3 (creatinine rise >2×baseline or urine output <0.5 mL/kg/hour for 12 hours) requires hospital admission. Hyperkalaemia >6 mmol/L requires urgent admission. Fluid overload with pulmonary oedema or pulmonary arrest: admit for ICU. Suspected obstruction: urgent imaging and urology assessment. Rapidly worsening renal function despite intervention: refer for possible dialysis."
-  },
-  {
-    title: "Tell the patient",
-    body: "Your kidney function has temporarily declined, likely due to dehydration, medication, or infection. This is usually reversible if we act quickly. We will restore your fluid status and adjust medications. Most people recover kidney function fully with proper treatment. We will monitor closely and admit if needed."
-  }
-] %}
 
 ## Definition and classification
 

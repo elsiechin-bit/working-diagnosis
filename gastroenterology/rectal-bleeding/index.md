@@ -9,24 +9,6 @@ description: Systematic approach to rectal bleeding in primary care, distinguish
 
 Rectal bleeding is one of the most common presentations in primary care, with >80% of cases due to benign anorectal causes. However, systematic assessment is essential to identify the minority with colorectal malignancy or other serious pathology.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Age >50 with new-onset rectal bleeding, weight loss, anaemia, family history of colorectal cancer, change in bowel habit, or prolonged bleeding >2-4 weeks—refer urgently for colonoscopy. Do not assume haemorrhoids until colorectal cancer is excluded."
-  },
-  {
-    title: "First-line",
-    body: "Take thorough history (onset, duration, character, associated symptoms). Digital rectal examination. FBC and iron studies if prolonged bleeding or anaemia. Flexible sigmoidoscopy visualises rectum and lower colon; if normal and no alarm features, benign anorectal cause is likely."
-  },
-  {
-    title: "Refer when",
-    body: "Alarm symptoms present (age >50, weight loss, anaemia, family history, change in bowel habit, or persistent bleeding >2-4 weeks)—urgent colonoscopy. Flexible sigmoidoscopy findings suggest proximal pathology—colonoscopy required. Complicated haemorrhoids with severe anaemia warrant assessment."
-  },
-  {
-    title: "Tell the patient",
-    body: "Rectal bleeding is usually benign and from haemorrhoids or a small tear. We'll check your bottom and arrange blood tests. If your symptoms are unusual (prolonged bleeding, weight loss, change in bowel habit), we may need further investigation to rule out serious causes."
-  }
-] %}
 
 ## Definition and epidemiology
 

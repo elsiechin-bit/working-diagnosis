@@ -9,25 +9,6 @@ description: Recognition and management of diverticulosis and acute diverticulit
 
 Diverticular disease encompasses asymptomatic diverticulosis and symptomatic diverticulitis. With ageing populations, acute diverticulitis is increasingly common. Primary care must distinguish uncomplicated from complicated disease and refer appropriately.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Acute severe LLQ pain with fever, peritoneal signs, or systemic toxicity suggests acute diverticulitis with risk of perforation or sepsis. Admit for CT imaging, blood cultures, and IV antibiotics. Free perforation presents as acute abdomen and requires emergency surgery."
-  },
-  {
-    title: "First-line",
-    body: "Mild uncomplicated acute diverticulitis (fever <38°C, minimal peritonism, WCC <10K) can be managed in outpatient with liquid diet and oral antibiotics (e.g., cephalosporin + metronidazole or oral quinolone). Mild diverticulitis without fever may not require antibiotics. Mild symptoms suggest outpatient management; severe symptoms warrant admission."
-  },
-  {
-    title: "Refer when",
-    body: "Complicated diverticulitis (fever, severe pain, peritoneal signs, imaging shows abscess/perforation) requires admission and IV antibiotics. Recurrent diverticulitis after uncomplicated episode (or any episode in immunocompromised patient) may warrant elective colonic resection. Persistent LLQ pain warrants colonoscopy to exclude malignancy."
-  },
-  {
-    title: "Tell the patient",
-    body: "Diverticulosis is very common and usually asymptomatic. If inflammation occurs (diverticulitis), it is very treatable. Increasing dietary fibre and hydration reduce recurrence risk. Surgery is considered after recurrent episodes."
-  }
-] %}
-
 ## Definition and epidemiology
 
 Diverticulosis is the presence of small outpouchings (diverticula) of the colonic mucosa and submucosa through the muscular wall, occurring at points of weakness where blood vessels penetrate the wall. Diverticulitis is inflammation or infection within a diverticulum. Prevalence increases with age: 5–10% by age 40, 50% by 60, and 70% by 80 years. More common in developed Western countries.

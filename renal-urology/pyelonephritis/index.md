@@ -9,24 +9,6 @@ description: Recognition, assessment, and management of acute pyelonephritis in 
 
 Acute pyelonephritis is bacterial infection of the kidney parenchyma and collecting system, usually resulting from ascending infection via the urethra and bladder. Incidence is 15–20 per 10,000 women annually; 1–2% of men. Presentation ranges from mild febrile illness responsive to oral antibiotics in community to severe sepsis requiring ICU admission. Early recognition and appropriate antibiotic therapy prevent abscess formation, sepsis, and progression to acute kidney injury.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Fever ≥38°C with loin pain and dysuria is pyelonephritis until proven otherwise—admit if systemically unwell (hypotension, tachycardia, altered mental status). Sepsis criteria (fever + hypotension or tachycardia >100 bpm or respiratory rate >20) require urgent admission and IV antibiotics. Renal abscess risk (persistent fever despite antibiotics, imaging showing collection) requires imaging and possible drainage. Obstruction with infection (fever + absent urine output + hydronephrosis on imaging) is urological emergency—urgent decompression needed."
-  },
-  {
-    title: "First-line",
-    body: "Suspect pyelonephritis if fever ≥38°C with loin or costovertebral angle tenderness, dysuria, urinary frequency. Measure urine culture and commence empirical antibiotic. Trimethoprim-sulfamethoxazole DS 160/800 mg BD or fluoroquinolone (norfloxacin 400 mg BD or ciprofloxacin 500 mg BD) for 7–14 days. If systemically unwell or sepsis: admit for IV antibiotics (cephalosporin + gentamicin or piperacillin-tazobactam), IV hydration, and monitoring. Renal ultrasound to exclude obstruction."
-  },
-  {
-    title: "Refer when",
-    body: "Sepsis or systemic unwellness (hypotension, altered mental status, severe tachycardia): admit immediately. Fever persisting >48 hours despite antibiotics: reassess organism sensitivities, consider imaging for abscess. Imaging showing hydronephrosis or obstruction: urgent urology referral for decompression (percutaneous nephrostomy or ureteric stent). Recurrent pyelonephritis: urology assessment for structural abnormality. Pregnancy with pyelonephritis: hospital admission."
-  },
-  {
-    title: "Tell the patient",
-    body: "You have a kidney infection, which is more serious than a bladder infection but treatable with antibiotics. You need to take antibiotics for 1–2 weeks and rest. Drink plenty of water. Most people recover fully if treated promptly. Symptoms usually improve within 24–48 hours. Contact us if fever worsens, pain spreads, or you feel very unwell."
-  }
-] %}
 
 ## Definition and epidemiology
 

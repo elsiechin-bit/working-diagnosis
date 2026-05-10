@@ -9,24 +9,6 @@ description: Recognition and initial management of inflammatory bowel disease, i
 
 Inflammatory bowel disease (IBD)—comprising Crohn's disease and ulcerative colitis—is a chronic relapsing-remitting disorder characterised by immune-mediated intestinal inflammation. Primary care plays a crucial role in early recognition, initial investigation, and ongoing monitoring of these complex conditions.
 
-{% include 'panic-strip.njk', items: [
-  {
-    title: "Don't miss",
-    body: "Bloody diarrhoea with abdominal pain, fever, or systemically unwell patient may be IBD presenting or an acute flare. Severe colitis with fever, tachycardia, abdominal tenderness, and >6 stools/day suggests toxic megacolon risk—admit for IV corticosteroids and monitored care. Extraintestinal signs (arthritis, uveitis, skin lesions) are often first clue."
-  },
-  {
-    title: "First-line",
-    body: "Colonoscopy with biopsy confirms diagnosis. Assess disease severity and location. FBC, LFTs, CRP, and faecal calprotectin support diagnosis. Mild-moderate UC responds to 5-ASA; severe disease requires IV corticosteroids. Early referral to gastroenterology for biologic therapy (TNF inhibitors, vedolizumab) is now standard."
-  },
-  {
-    title: "Refer when",
-    body: "Suspected IBD (colonoscopy, histology, and specialist assessment). All newly diagnosed IBD should be referred to gastroenterology for optimisation of therapy and surveillance protocols. Acute severe flare, complications (perforation, toxic megacolon, severe bleeding), or refractory disease warrant urgent referral."
-  },
-  {
-    title: "Tell the patient",
-    body: "IBD is a chronic condition but modern therapies achieve remission in most patients. Regular monitoring, medication adherence, and lifestyle modifications are key. Screen for complications and extraintestinal manifestations."
-  }
-] %}
 
 ## Definition and epidemiology
 
