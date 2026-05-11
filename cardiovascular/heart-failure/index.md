@@ -1,7 +1,7 @@
 ---
 title: Heart Failure
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: Diagnosis of heart failure with reduced and preserved ejection fraction. ACE/ARB, beta-blockers, diuretics, and SGLT2 inhibitors. Acute decompensation and referral criteria.
 ---
 

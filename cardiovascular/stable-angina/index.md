@@ -1,7 +1,7 @@
 ---
 title: Stable Angina
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: Predictable chest pain on exertion. Diagnosis and referral. Medical management with beta-blockers and nitrates. When to investigate and revascularise.
 ---
 

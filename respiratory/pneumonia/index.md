@@ -1,7 +1,7 @@
 ---
 title: Pneumonia
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Diagnosis of community-acquired pneumonia. CURB-65 severity assessment. Antibiotic selection. When to admit and when to manage in primary care.
 ---
 

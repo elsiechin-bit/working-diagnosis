@@ -1,7 +1,7 @@
 ---
 title: Obstructive sleep apnoea
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Diagnosis and management of obstructive sleep apnoea in adults
 ---
 

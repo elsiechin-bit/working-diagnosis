@@ -1,7 +1,7 @@
 ---
 title: Lower Urinary Tract Symptoms and Benign Prostatic Hyperplasia
 layout: topic.njk
-pillar: Renal & Urology
+specialty: Renal & Urology
 description: Recognition and management of lower urinary tract symptoms and benign prostatic hyperplasia in men, including pharmacological and non-pharmacological strategies.
 ---
 

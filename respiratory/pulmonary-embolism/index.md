@@ -1,7 +1,7 @@
 ---
 title: Pulmonary Embolism
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Diagnosis of pulmonary embolism. Probability assessment (Wells score). D-dimer and CTPA criteria. When to admit and anticoagulation.
 ---
 

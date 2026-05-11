@@ -1,7 +1,7 @@
 ---
 title: Asthma in Adults
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Diagnosis and classification of asthma. Step-wise treatment approach. ICS/LABA therapy. Asthma control and action plans.
 ---
 

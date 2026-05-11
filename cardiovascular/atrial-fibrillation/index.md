@@ -1,7 +1,7 @@
 ---
 title: Atrial Fibrillation
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: Diagnosis and stroke risk assessment (CHA₂DS₂-VASc score). Anticoagulation decisions. Rate control and rhythm control. When to refer.
 ---
 

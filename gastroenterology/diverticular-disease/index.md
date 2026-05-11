@@ -1,7 +1,7 @@
 ---
 title: Diverticular Disease
 layout: topic.njk
-pillar: Gastroenterology
+specialty: Gastroenterology
 description: Recognition and management of diverticulosis and acute diverticulitis in primary care, including assessment of severity and appropriate investigation and referral.
 ---
 
@@ -124,3 +124,4 @@ HIV, on immunosuppressive therapy, or post-transplant have higher risk of compli
 ## Field notes
 
 Diverticulosis is exceedingly common and usually benign; reassure patients who are asymptomatic. Acute diverticulitis is eminently treatable; mild uncomplicated cases are often managed in outpatient with antibiotics and diet. CT imaging is gold standard; use it liberally to confirm diagnosis and assess complications. Perforated diverticulitis is an emergency—early recognition and referral save lives. Colonoscopy post-resolution is essential to exclude malignancy, especially if first episode. Recurrence rates are moderate after first uncomplicated episode; prophylactic resection is not justified. Fibre supplementation is a reasonable preventive measure with overall health benefits.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

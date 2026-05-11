@@ -1,7 +1,7 @@
 ---
 title: Resistant Hypertension
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: Blood pressure not at target on three antihypertensives. Exclude secondary causes and poor adherence. Fourth-agent options. When to refer.
 ---
 

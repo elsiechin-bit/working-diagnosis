@@ -1,7 +1,7 @@
 ---
 title: Hepatitis B
 layout: topic.njk
-pillar: Gastroenterology
+specialty: Gastroenterology
 description: Recognition, diagnosis, and management of hepatitis B in primary care, including screening, vaccination, and referral for antiviral therapy and cirrhosis assessment.
 ---
 
@@ -113,3 +113,4 @@ HBV/HIV co-infected patients require tenofovir-based antiretroviral therapy (dua
 ## Field notes
 
 Screen opportunistically for HBsAg in migrants, healthcare workers, and high-risk groups; seroprevalence is substantially higher than in NZ-born populations. Many HBsAg+ individuals are asymptomatic but infectious; mandatory contact tracing and vaccination of partners and household members is essential. HBV DNA quantification and HBeAg status determine treatment urgency; specialist assessment is standard for HBsAg+ patients. Antiviral therapy is highly effective; most patients achieve viral suppression and prevent cirrhosis progression on tenofovir or entecavir. Monitor for hepatocellular carcinoma in cirrhotic patients. Acute hepatitis B is rare in vaccinated populations; fulminant hepatitis requires immediate admission and transplant assessment.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

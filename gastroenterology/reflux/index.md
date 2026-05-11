@@ -1,7 +1,7 @@
 ---
 title: Reflux and GORD
 layout: topic.njk
-pillar: Gastroenterology
+specialty: Gastroenterology
 description: Diagnosis and management of gastro-oesophageal reflux disease
 ---
 

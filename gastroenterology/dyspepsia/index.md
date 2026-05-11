@@ -1,7 +1,7 @@
 ---
 title: Dyspepsia
 layout: topic.njk
-pillar: Gastroenterology
+specialty: Gastroenterology
 description: Systematic diagnosis and management of indigestion and upper abdominal discomfort in primary care, distinguishing functional from organic pathology.
 ---
 
@@ -100,3 +100,4 @@ For H. pylori-treated patients, confirm eradication at ≥4 weeks post-treatment
 ## Field notes
 
 Functional dyspepsia is a diagnosis of exclusion. Resist pressure to prescribe long-term PPI without documentation of benefit or alarm features. Most patients improve with lifestyle modification. H. pylori eradication in positive patients often resolves dyspepsia permanently. When in doubt about alarm features, endoscope—false reassurance delays cancer diagnosis. Psychosocial factors matter; cognitive behavioural therapy and stress management improve outcomes in refractory functional dyspepsia.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

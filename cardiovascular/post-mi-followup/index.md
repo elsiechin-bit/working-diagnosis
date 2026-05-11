@@ -1,7 +1,7 @@
 ---
 title: Post-MI Follow-up and Secondary Prevention
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: Management after acute myocardial infarction. Medication optimization. Cardiac rehabilitation. Risk stratification. When to intensify treatment.
 ---
 

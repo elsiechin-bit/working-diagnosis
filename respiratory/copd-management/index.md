@@ -1,7 +1,7 @@
 ---
 title: COPD management
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Management of chronic obstructive pulmonary disease including pharmacotherapy, exacerbations, and long-term care
 ---
 

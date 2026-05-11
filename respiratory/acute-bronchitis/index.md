@@ -1,7 +1,7 @@
 ---
 title: Acute Bronchitis
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Cough from lower airway inflammation, typically post-viral. Diagnosis is clinical. Antibiotics not beneficial for viral bronchitis. Self-limiting within 2–3 weeks.
 ---
 

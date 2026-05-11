@@ -1,7 +1,7 @@
 ---
 title: Long COVID
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Post-COVID-19 syndrome. Persistent symptoms after acute infection. Fatigue, dyspnoea, cognitive dysfunction. Rehabilitation and holistic management.
 ---
 

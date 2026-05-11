@@ -1,7 +1,7 @@
 ---
 title: Cardiovascular Risk Stratification
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: Absolute cardiovascular risk assessment in primary care. SCORE2 and NZ guidance. When to discuss risk, how to communicate, who to treat.
 ---
 

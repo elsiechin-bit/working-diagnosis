@@ -1,7 +1,7 @@
 ---
 title: Asthma in Tamariki (Children)
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Asthma diagnosis in children. Intermittent and persistent asthma management. Age-appropriate devices and education.
 ---
 

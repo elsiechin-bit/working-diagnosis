@@ -1,7 +1,7 @@
 ---
 title: Lipid Targets and Statin Intensity
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: LDL targets by risk category. Statin choice and intensity. NZ funded options. When to add ezetimibe or PCSK9. Monitoring and adherence.
 ---
 

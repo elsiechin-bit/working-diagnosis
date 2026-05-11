@@ -1,7 +1,7 @@
 ---
 title: Inflammatory Bowel Disease (Crohn's and Ulcerative Colitis)
 layout: topic.njk
-pillar: Gastroenterology
+specialty: Gastroenterology
 description: Recognition and initial management of inflammatory bowel disease, including diagnosis, severity assessment, and referral for specialist therapy.
 ---
 
@@ -128,3 +128,4 @@ IBD is increasing in older patients; diagnosis may be delayed. Manage as per you
 ## Field notes
 
 IBD is a spectrum disease; diagnosis requires histology from colonoscopy. Early recognition and referral to specialist care improves outcomes—do not delay. Biologic therapy has transformed IBD management; modern practice favours early use in moderate-severe disease. Extraintestinal manifestations often precede bowel symptoms; maintain high suspicion. Patients are at risk for depression and anxiety; screen regularly and support mental health. Smoking cessation in CD is crucial; support cessation efforts strongly.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

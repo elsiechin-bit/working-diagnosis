@@ -1,7 +1,7 @@
 ---
 title: Hypertension
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: BP target, first-line drug choice in NZ, when to refer, and the conversation that prevents the next callback.
 ---
 

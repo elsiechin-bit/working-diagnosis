@@ -1,7 +1,7 @@
 ---
 title: Abnormal Liver Function Tests
 layout: topic.njk
-pillar: Gastroenterology
+specialty: Gastroenterology
 description: Systematic approach to abnormal LFTs in primary care, including pattern recognition, initial investigation, and appropriate referral for liver disease.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Palpitations
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: Evaluation of palpitations. Benign versus dangerous rhythms. Role of ECG, Holter monitoring, and echocardiography. When to reassure and when to refer.
 ---
 

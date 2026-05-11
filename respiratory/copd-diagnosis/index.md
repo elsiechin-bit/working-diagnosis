@@ -1,7 +1,7 @@
 ---
 title: COPD diagnosis
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Diagnosis and classification of chronic obstructive pulmonary disease
 ---
 

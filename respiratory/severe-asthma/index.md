@@ -1,7 +1,7 @@
 ---
 title: Severe asthma
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Diagnosis and management of treatment-resistant and severe asthma in adults
 ---
 

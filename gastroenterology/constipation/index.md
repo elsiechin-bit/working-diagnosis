@@ -1,7 +1,7 @@
 ---
 title: Constipation
 layout: topic.njk
-pillar: Gastroenterology
+specialty: Gastroenterology
 description: Assessment and stepwise management of constipation in primary care, distinguishing functional from organic causes and avoiding unnecessary investigation.
 ---
 
@@ -110,3 +110,4 @@ Nearly universal in chronic opioid users. Prophylactic osmotic laxative (macrogo
 ## Field notes
 
 Functional constipation is a diagnosis of exclusion; ensure alarm features are absent before reassuring. Fibre supplementation alone often fails in severe constipation—osmotic laxatives are essential. Avoid long-term stimulant laxative use, which damages colonic motility; use only as adjunct to osmotic therapy. Pelvic floor dysfunction is under-recognised in young women with straining—consider physiotherapy referral early. Opioid-induced constipation is predictable; prophylaxis saves patients from impaction and hospital admission. Elderly and immobile patients are at high risk for serious complications; proactive laxative use is warranted.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

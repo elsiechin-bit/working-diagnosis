@@ -1,7 +1,7 @@
 ---
 title: Chronic cough
 layout: topic.njk
-pillar: Respiratory
+specialty: Respiratory
 description: Diagnosis and management of chronic cough lasting more than 8 weeks
 ---
 

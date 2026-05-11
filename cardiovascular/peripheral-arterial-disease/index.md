@@ -1,7 +1,7 @@
 ---
 title: Peripheral Arterial Disease
 layout: topic.njk
-pillar: Cardiovascular
+specialty: Cardiovascular
 description: Diagnosis of peripheral arterial disease. Claudication assessment. Ankle-brachial pressure index and duplex ultrasound. Medical management and revascularisation referral.
 ---
 
