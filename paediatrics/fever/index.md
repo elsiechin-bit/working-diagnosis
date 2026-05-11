@@ -3,7 +3,6 @@ title: Fever Assessment in Children
 description: A structured approach to the febrile child in NZ general practice - risk stratification, red flag identification, and safe management.
 layout: topic.njk
 specialty: Paeds
-permalink: /paediatrics/fever/
 ---
 
 <div class="topic-with-aside">

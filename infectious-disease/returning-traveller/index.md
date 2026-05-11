@@ -3,7 +3,6 @@ title: Fever in the Returned Traveller
 description: A systematic approach to the febrile returned traveller, including the tropical screen panel, malaria workup protocol, dengue algorithm, notifiable diseases, and admission criteria.
 layout: topic.njk
 specialty: Travel
-permalink: /travel/returning-traveller/
 ---
 
 <div class="topic-with-aside">

@@ -3,7 +3,6 @@ title: Pre-travel Consultation
 description: A structured approach to the pre-travel consultation in general practice, covering timing, risk triage, vaccines, documentation, and when to refer.
 layout: topic.njk
 specialty: Travel
-permalink: /travel/pre-travel-consult/
 ---
 
 <div class="topic-with-aside">
@@ -60,7 +59,7 @@ permalink: /travel/pre-travel-consult/
   </table>
 
   <p>Travel-specific vaccines (hepatitis A, hepatitis B, typhoid, yellow fever, Japanese encephalitis, rabies pre-exposure, meningococcal) are all unfunded in New Zealand. Patients pay privately for both the vaccine and administration. For itineraries where budget is a genuine constraint, prioritise vaccines with the highest risk-benefit ratio for that specific destination and travel style.</p>
-  <p><strong>Travel health kit</strong> for high-risk regions: oral rehydration sachets (Gastrolyte or equivalent) - minimum 6; standby antibiotic (azithromycin or ciprofloxacin as appropriate to region - see <a href="/travel/travellers-diarrhoea/">Traveller's diarrhoea</a>); loperamide for adults; insect repellent with DEET (30-50% for high-risk areas) or picaridin (see <a href="/travel/insect-bite-prevention/">Insect bite prevention</a>); permethrin spray for treating clothing and bed nets; broad-spectrum sunscreen; wound care basics (antiseptic, adhesive dressings, blister treatment); thermometer; sufficient supply of all regular prescription medications in original labelled containers with a GP letter; copy of vaccination certificate and key medical documents. For trekkers to altitude: acetazolamide if prescribed, and a written altitude illness action plan (see <a href="/travel/altitude-illness/">Altitude illness</a>).</p>
+  <p><strong>Travel health kit</strong> for high-risk regions: oral rehydration sachets (Gastrolyte or equivalent) - minimum 6; standby antibiotic (azithromycin or ciprofloxacin as appropriate to region - see <a href="/infectious-disease/travellers-diarrhoea/">Traveller's diarrhoea</a>); loperamide for adults; insect repellent with DEET (30-50% for high-risk areas) or picaridin (see <a href="/infectious-disease/insect-bite-prevention/">Insect bite prevention</a>); permethrin spray for treating clothing and bed nets; broad-spectrum sunscreen; wound care basics (antiseptic, adhesive dressings, blister treatment); thermometer; sufficient supply of all regular prescription medications in original labelled containers with a GP letter; copy of vaccination certificate and key medical documents. For trekkers to altitude: acetazolamide if prescribed, and a written altitude illness action plan (see <a href="/infectious-disease/altitude-illness/">Altitude illness</a>).</p>
 </div>
 
 <div class="tier-3">

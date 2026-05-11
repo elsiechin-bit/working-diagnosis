@@ -3,7 +3,6 @@ title: Traveller's Diarrhoea
 description: Pathogens by region, severity classification, management algorithm, paediatric approach, and post-infectious sequelae.
 layout: topic.njk
 specialty: Travel
-permalink: /travel/travellers-diarrhoea/
 ---
 
 <div class="topic-with-aside">
@@ -105,7 +104,7 @@ permalink: /travel/travellers-diarrhoea/
   </table>
 
   <p>Indications to seek GP review on return: ongoing diarrhoea more than 2 weeks after return (think Giardia, Cryptosporidium, <em>E. histolytica</em>); any bloody diarrhoea; fever in a returned traveller from a malaria-endemic region (exclude malaria before attributing to gastrointestinal illness); significant weight loss; or signs of dehydration.</p>
-  <p>Stool microscopy for ova and cysts (three specimens on separate days), stool culture, and Giardia antigen are the initial investigations for returned travellers with persistent diarrhoea. For febrile returned travellers, the workup is broader - see <a href="/travel/returning-traveller/">Fever in the returned traveller</a>.</p>
+  <p>Stool microscopy for ova and cysts (three specimens on separate days), stool culture, and Giardia antigen are the initial investigations for returned travellers with persistent diarrhoea. For febrile returned travellers, the workup is broader - see <a href="/infectious-disease/returning-traveller/">Fever in the returned traveller</a>.</p>
 </div>
 
 <div class="tier-3">

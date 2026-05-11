@@ -3,7 +3,6 @@ title: Febrile Convulsions
 description: Assessment and management of febrile seizures in NZ general practice - distinguishing simple from complex, and reassuring families appropriately.
 layout: topic.njk
 specialty: Paeds
-permalink: /paediatrics/febrile-convulsion/
 ---
 
 <div class="topic-with-aside">

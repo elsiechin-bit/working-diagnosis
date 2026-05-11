@@ -3,7 +3,6 @@ title: Altitude Illness
 description: Lake Louise Score, acclimatisation schedules for common treks, ibuprofen versus acetazolamide for prevention, and field management of HACE and HAPE.
 layout: topic.njk
 specialty: Travel
-permalink: /travel/altitude-illness/
 ---
 
 <div class="topic-with-aside">

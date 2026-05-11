@@ -3,7 +3,6 @@ title: Constipation in Children
 description: Assessment and management of functional constipation in NZ general practice - macrogol dosing, disimpaction, and long-term maintenance.
 layout: topic.njk
 specialty: Paeds
-permalink: /paediatrics/constipation/
 ---
 
 <div class="topic-with-aside">

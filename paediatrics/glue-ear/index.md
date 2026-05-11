@@ -3,7 +3,6 @@ title: Glue Ear (Otitis Media with Effusion)
 description: Assessment and management of otitis media with effusion (OME) in NZ general practice - hearing impact, watchful waiting, and ENT referral criteria.
 layout: topic.njk
 specialty: Paeds
-permalink: /paediatrics/glue-ear/
 ---
 
 <div class="topic-with-aside">

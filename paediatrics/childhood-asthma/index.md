@@ -3,7 +3,6 @@ title: Childhood Asthma and Recurrent Wheeze
 description: Diagnosis and management of childhood asthma and recurrent wheeze in NZ general practice - NZ has among the highest asthma rates in the world.
 layout: topic.njk
 specialty: Paeds
-permalink: /paediatrics/childhood-asthma/
 ---
 
 <div class="topic-with-aside">

@@ -3,7 +3,6 @@ title: Developmental Surveillance and Milestones
 description: The Well Child Tamariki Ora schedule, developmental red flags, and referral pathways in NZ general practice.
 layout: topic.njk
 specialty: Paeds
-permalink: /paediatrics/developmental-surveillance/
 ---
 
 <div class="topic-with-aside">

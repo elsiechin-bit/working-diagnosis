@@ -3,7 +3,6 @@ title: Insect Bite Prevention
 description: DEET, picaridin, permethrin, bed nets, biting times by vector, and the diseases they carry - a practical guide for the pre-travel consult.
 layout: topic.njk
 specialty: Travel
-permalink: /travel/insect-bite-prevention/
 ---
 
 <div class="topic-with-aside">
