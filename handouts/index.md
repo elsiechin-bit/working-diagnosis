@@ -383,4 +383,5 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="/handouts/coeliac-disease/">Coeliac disease  -  diagnosis and life on a gluten-free diet</a></li>
     <li><a href="/handouts/eating-shift-work/">Eating around shift work  -  practical strategies</a></li>
   </ul>
-  <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz/
+  <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz/your-heart/healthy-eating">Heart Foundation NZ - healthy eating</a> &middot; <a href="https://nutritionfoundation.org.nz">NZ Nutrition Foundation</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - nutrition</a></p>
+</div>
