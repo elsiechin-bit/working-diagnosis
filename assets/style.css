@@ -48,6 +48,8 @@
 
   --serif-display: 'Fraunces', Georgia, serif;
   --serif-body:    'Newsreader', Georgia, serif;
+  --serif-garamond: 'Garamond', Georgia, serif;
+  --serif-helvetica: 'Helvetica Serif', Georgia, serif;
   --sans-body:     'Inter', system-ui, -apple-system, sans-serif;
   --mono:          'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
@@ -1099,12 +1101,13 @@ body.wb-page {
 }
 .zone-label::before { content: "\2751 "; }
 .zone-heading {
-  font-family: var(--serif-display);
-  font-weight: 500;
+  font-family: var(--serif-helvetica);
+  font-weight: normal;
   font-size: 1.5rem;
   letter-spacing: -0.02em;
   color: var(--ink);
   margin: 0;
+  text-transform: capitalize;
 }
 .zone-dek {
   font-family: var(--serif-body);
@@ -1154,8 +1157,8 @@ body.wb-page {
   margin: 0 0 6px;
 }
 .wb-zone .specialty-card .specialty-name {
-  font-family: var(--serif-display);
-  font-weight: 500;
+  font-family: var(--serif-garamond);
+  font-weight: normal;
   font-size: 1.2rem;
   letter-spacing: -0.01em;
   color: var(--ink);

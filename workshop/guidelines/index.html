@@ -81,12 +81,12 @@ a:hover { color: var(--green); }
 .category-label::before { content: "❍ "; }
 
 /* Topic grid */
-.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 @media (max-width: 900px) { .topic-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 540px)  { .topic-grid { grid-template-columns: 1fr; } }
 
-.topic-card { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 20px 22px 22px; display: block; color: inherit; transition: background 150ms; }
-a.topic-card:hover { background: var(--warm); }
+.topic-card { border: 1px solid var(--rule); border-radius: 6px; padding: 24px; display: block; color: inherit; transition: all 200ms ease; background: var(--paper); }
+a.topic-card:hover { border-color: var(--green-soft); background: var(--warm); box-shadow: 0 8px 20px rgba(0,0,0,0.08); transform: translateY(-2px); }
 a.topic-card:hover .topic-name { color: var(--green-deep); }
 .topic-card.is-pending { opacity: 0.55; cursor: default; }
 
