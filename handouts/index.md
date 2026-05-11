@@ -32,7 +32,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   </ul>
 </nav>
 
-
 <div class="handout-section" id="lifestyle">
   <h2>Lifestyle</h2>
   <ul class="handout-list">
@@ -51,7 +50,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/healthy-living/">Health Navigator  -  Healthy Living</a> · <a href="https://www.quit.org.nz">Quit.org.nz</a> · <a href="https://www.alcohol.org.nz">Alcohol Drug Helpline</a></p>
 </div>
-
 
 <div class="handout-section" id="respiratory">
   <p class="handout-section-label">❍ Respiratory</p>
@@ -76,7 +74,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/r/respiratory/">Health Navigator  -  Respiratory</a> · <a href="https://www.asthma.org.nz">Asthma and Respiratory Foundation NZ</a> · <a href="https://www.lung.org.nz">Lung Foundation NZ</a></p>
 </div>
-
 
 <div class="handout-section" id="cardiovascular">
   <p class="handout-section-label">❍ Cardiovascular</p>
@@ -104,7 +101,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz">Heart Foundation NZ</a> · <a href="https://www.stroke.org.nz">Stroke Foundation NZ</a> · <a href="https://www.healthnavigator.org.nz/health-a-z/h/heart-disease/">Health Navigator  -  Heart Disease</a></p>
 </div>
 
-
 <div class="handout-section" id="diabetes-endocrine">
   <p class="handout-section-label">❍ Diabetes &amp; Endocrine</p>
   <h2>Diabetes &amp; Endocrine</h2>
@@ -129,7 +125,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.diabetes.org.nz">Diabetes NZ</a> · <a href="https://www.healthnavigator.org.nz/health-a-z/d/diabetes-type-2/">Health Navigator  -  Type 2 Diabetes</a> · <a href="https://www.thyroid.org.nz">Thyroid NZ</a></p>
 </div>
-
 
 <div class="handout-section" id="gastro">
   <p class="handout-section-label">❍ Gastroenterology</p>
@@ -156,7 +151,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/d/digestive-health/">Health Navigator  -  Digestive Health</a> · <a href="https://www.crohnsandcolitis.org.nz">Crohn's &amp; Colitis NZ</a> · <a href="https://www.nsu.govt.nz/bowel-screening">NZ Bowel Screening Programme</a></p>
 </div>
 
-
 <div class="handout-section" id="msk">
   <h2>Musculoskeletal</h2>
   <ul class="handout-list">
@@ -180,7 +174,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/m/musculoskeletal/">Health Navigator  -  Musculoskeletal</a> · <a href="https://www.acc.co.nz/im-injured/">ACC  -  I'm Injured</a> · <a href="https://arthritis.org.nz">Arthritis NZ</a></p>
 </div>
-
 
 <div class="handout-section" id="mental-health">
   <h2>Mental Health</h2>
@@ -210,7 +203,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <p class="handout-ext">NZ resources: <a href="https://www.depression.org.nz">depression.org.nz</a> · <a href="https://www.anxiety.org.nz">anxiety.org.nz</a> · <a href="https://1737.org.nz">1737  -  free call or text, any time</a> · <a href="https://www.lifeline.org.nz">Lifeline NZ</a> · <a href="https://www.mentalhealth.org.nz">Mental Health Foundation NZ</a></p>
 </div>
 
-
 <div class="handout-section" id="dermatology">
   <h2>Dermatology</h2>
   <ul class="handout-list">
@@ -235,7 +227,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <p class="handout-ext">NZ resources: <a href="https://www.skincancer.org.nz">Melanoma NZ</a> · <a href="https://www.dermnet.com">DermNet  -  patient information</a> · <a href="https://www.healthnavigator.org.nz/health-a-z/s/skin/">Health Navigator  -  Skin</a></p>
 </div>
 
-
 <div class="handout-section" id="gynae">
   <h2>Gynaecology &amp; Women's Health</h2>
   <ul class="handout-list">
@@ -255,8 +246,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   </ul>
   <p class="handout-ext">NZ resources: <a href="https://www.healthify.nz">Healthify NZ - women's health</a> &middot; <a href="https://www.familyplanning.org.nz">Family Planning NZ</a> &middot; <a href="https://www.menopause.org.nz">Australasian Menopause Society</a></p>
 </div>
-
-
 
 <div class="handout-section" id="paeds">
   <h2>Paediatrics</h2>
@@ -297,7 +286,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
   <p class="handout-ext">NZ resources: <a href="https://www.tewhatuora.govt.nz">Health New Zealand  -  Te Whatu Ora</a> · <a href="https://healthify.nz/">Healthify NZ</a> · <a href="https://www.hdc.org.nz">Health and Disability Commissioner</a></p>
 </div>
 
-
 <div class="handout-section" id="geriatrics">
   <h2>Geriatrics &amp; Older Adult Health</h2>
   <ul class="handout-list">
@@ -312,8 +300,7 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="/handouts/driving-older-age/">Driving and older age  -  when to have the conversation</a></li>
     <li><a href="/handouts/urinary-incontinence/">Urinary incontinence in older adults  -  it is common and treatable</a></li>
   </ul>
-  <p class="handout
-  </ul>
+  <p class="handout-ext">NZ resources: <a href="https://www.healthnavigator.org.nz/health-a-z/g/geriatric-medicine/">Health Navigator  -  Geriatric Medicine</a> · <a href="https://www.nzgg.org.nz">NZ Guidelines Group</a> · <a href="https://www.eldernet.org.nz">ElderNet Aotearoa</a></p>
 </div>
 
 <div class="handout-section" id="mens-health">
@@ -396,5 +383,4 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
     <li><a href="/handouts/coeliac-disease/">Coeliac disease  -  diagnosis and life on a gluten-free diet</a></li>
     <li><a href="/handouts/eating-shift-work/">Eating around shift work  -  practical strategies</a></li>
   </ul>
-  <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz/your-heart/healthy-eating">Heart Foundation NZ - healthy eating</a> &middot; <a href="https://nutritionfoundation.org.nz">NZ Nutrition Foundation</a> &middot; <a href="https://www.healthify.nz">Healthify NZ - nutrition</a></p>
-</div>
+  <p class="handout-ext">NZ resources: <a href="https://www.heartfoundation.org.nz/
