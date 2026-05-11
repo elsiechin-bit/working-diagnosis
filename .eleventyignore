@@ -20,4 +20,7 @@ musculoskeletal/low-back-pain/index.html
 sexual-reproductive-health/cervical-screening/index.html
 sexual-reproductive-health/endometriosis/index.html
 
-# Standalone .html pages (no .md sibling, excluded
+# Standalone .html pages (no .md sibling, excluded from Eleventy processing)
+myths/common-myths/index.html
+nutrition/eating-well/index.html
+sleep/osa/index.html

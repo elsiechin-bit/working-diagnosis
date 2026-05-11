@@ -3,4 +3,16 @@
   "first-line": "green",
   "dont-miss": "ochre",
   "refer": "slate",
-  "tell": "ol
+  "tell": "olive-light"
+} %}
+
+<div class="panic-strip">
+  {% for item in panelItems %}
+  {% set gridArea = gridAreas[loop.index0] %}
+  {% set labelColor = labelColors[gridArea] %}
+  <div class="panic-tile {{ gridArea }}">
+    <div class="panic-tile__label panic-tile__label--{{ labelColor }}">{{ item.title }}</div>
+    <div class="panic-tile__body">{{ item.body }}</div>
+  </div>
+  {% endfor %}
+</div>
