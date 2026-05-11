@@ -8,19 +8,3 @@ _site
 # Templates, drafts, and reference docs (not for publication)
 handouts/_TEMPLATE.md
 drafts
-
-# Collision: index.html and index.md coexist - render the .html, ignore the .md
-library/index.md
-workshop/tools/cha2ds2-vasc/index.md
-
-# Collision: index.html and index.md coexist - render the .md, ignore the .html
-geriatrics/falls/index.html
-geriatrics/osteoporosis/index.html
-musculoskeletal/low-back-pain/index.html
-sexual-reproductive-health/cervical-screening/index.html
-sexual-reproductive-health/endometriosis/index.html
-
-# Standalone .html pages (no .md sibling, excluded from Eleventy processing)
-myths/common-myths/index.html
-nutrition/eating-well/index.html
-sleep/osa/index.html
