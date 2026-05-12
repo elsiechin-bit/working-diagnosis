@@ -673,6 +673,7 @@ a:hover { color: var(--green); }
 .specialty-card__name { font-family: var(--serif-display); font-weight: 700; font-size: 16px; color: var(--green-deep); margin: 0 0 3px; letter-spacing: -0.01em; }
 .specialty-card:hover .specialty-card__name { color: var(--green); }
 .specialty-card__line { font-family: var(--serif-body); font-size: 14px; line-height: 1.4; color: var(--ink-soft); margin: 0; }
+.specialty-card__count { font-family: var(--sans-body); font-size: 13px; color: var(--ink-mute); margin: 8px 0 0; }
 .specialty-card.is-soon { opacity: 0.55; pointer-events: none; }
 .specialty-card.is-soon::after { content: "coming soon"; display: inline-block; margin-top: 4px; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
 
