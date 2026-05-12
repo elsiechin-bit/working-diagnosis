@@ -1,0 +1,339 @@
+---
+permalink: /workshop/guidelines/lipid-targets/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lipid targets and statin initiation  -  Working Diagnosis</title>
+<meta name="description" content="NZ vs AU vs ESC/EAS guideline comparison for lipid management in primary care. LDL targets, statin choice, ezetimibe and PCSK9 inhibitor access.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #F5F1E8;
+  --warm:       #EDE7D8;
+  --deep:       #E4DBC4;
+  --ink:        #1A1F1C;
+  --soft:       #3A4540;
+  --mute:       #6B7A75;
+  --rule:       #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --au-blue:    #1A5CAD;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px);
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+/* Masthead */
+.masthead { border-bottom: 1px solid var(--rule); padding: 20px 32px; background: var(--paper); position: sticky; top: 0; z-index: 50; }
+.masthead-row { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.68rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.primary-nav a:hover { color: var(--green); }
+.primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
+
+/* Layout */
+.page-wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px 80px; }
+
+/* Header */
+.page-header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.back-link { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); display: inline-block; margin-bottom: 24px; }
+.back-link:hover { color: var(--green); }
+.page-kicker { font-family: var(--font-m); font-size: 0.65rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
+.page-kicker::before { content: "❍ "; }
+.page-title { font-family: var(--font-d); font-weight: 500; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; }
+.page-title em { font-style: italic; color: var(--green); }
+.page-dek { font-family: var(--font-b); font-size: 1.05rem; color: var(--soft); max-width: 580px; line-height: 1.55; margin-bottom: 22px; }
+.page-meta { display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); }
+
+/* Agree/Diverge summary */
+.div-summary { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin: 36px 0; }
+@media (max-width: 600px) { .div-summary { grid-template-columns: 1fr; } }
+.div-col { padding: 24px 28px; }
+.div-col:first-child { border-right: 1px solid var(--rule); }
+.div-col-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 7px; }
+.div-col-label .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-agree { background: var(--green); }
+.dot-diverge { background: var(--ochre); }
+.div-list { list-style: none; padding: 0; }
+.div-list li { font-family: var(--font-b); font-size: 15px; color: var(--soft); padding: 6px 0; border-bottom: 1px solid rgba(217,209,189,.5); line-height: 1.4; }
+.div-list li:last-child { border-bottom: none; }
+
+/* Section headers */
+.section-head { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 44px 0 16px; }
+.section-head::before { content: "❍ "; }
+
+/* Comparison table */
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--rule); margin-bottom: 44px; }
+.cmp-table { width: 100%; border-collapse: collapse; min-width: 660px; }
+.cmp-table thead th {
+  padding: 13px 16px;
+  text-align: left;
+  font-family: var(--font-m);
+  font-size: 0.56rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  background: var(--warm);
+  border-bottom: 1px solid var(--rule);
+}
+.cmp-table thead .th-domain { color: var(--mute); width: 148px; }
+.cmp-table thead .th-nz    { color: var(--green-deep); border-left: 3px solid var(--green); }
+.cmp-table thead .th-au    { color: var(--au-blue);    border-left: 3px solid var(--au-blue); }
+.cmp-table thead .th-int   { color: var(--soft);       border-left: 3px solid var(--rule); }
+.cmp-table tbody tr { border-top: 1px solid var(--rule); }
+.cmp-table tbody tr:nth-child(even) { background: rgba(237,231,216,.28); }
+.cmp-table tbody td { padding: 13px 16px; vertical-align: top; font-family: var(--font-b); font-size: 15px; line-height: 1.5; }
+.cmp-table .td-domain { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); line-height: 1.55; }
+.cmp-table .td-nz  { border-left: 3px solid rgba(47,107,92,.12); }
+.cmp-table .td-au  { border-left: 3px solid rgba(26,92,173,.12); }
+.cmp-table .td-int { border-left: 3px solid var(--rule); }
+.cmp-table tr.row-hi .td-nz { border-left-color: var(--ochre); background: rgba(184,113,79,.035); }
+
+/* Chips */
+.chip { display: inline-block; font-family: var(--font-m); font-size: 0.52rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 6px; margin-left: 5px; vertical-align: middle; border-radius: 2px; }
+.chip-funded     { background: rgba(47,107,92,.1);  color: var(--green-deep); }
+.chip-restricted { background: rgba(184,113,79,.12); color: var(--ochre); }
+.chip-nil        { background: rgba(140,30,30,.1);   color: #7A1C1C; }
+
+/* NZ notes block */
+.nz-notes { background: rgba(237,231,216,.5); border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 28px 32px; margin-bottom: 32px; }
+.nz-notes-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); margin-bottom: 20px; }
+.nz-notes h3 { font-family: var(--font-d); font-weight: 500; font-size: 1rem; margin: 22px 0 8px; color: var(--ink); }
+.nz-notes h3:first-of-type { margin-top: 0; }
+.nz-notes p { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 8px; }
+.nz-notes ul { padding-left: 18px; margin-bottom: 8px; }
+.nz-notes li { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 4px; }
+
+/* Bottom line */
+.bottom-line { border: 1px solid var(--ink); border-left: 3px solid var(--ink); padding: 24px 28px; margin-bottom: 40px; }
+.bottom-line-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 16px; }
+.bottom-line ol { padding-left: 20px; }
+.bottom-line li { font-family: var(--font-b); font-size: 15.5px; color: var(--soft); line-height: 1.55; margin-bottom: 9px; }
+
+/* Sources */
+.sources { border-top: 1px solid var(--rule); padding-top: 28px; }
+.sources-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; }
+.sources ol { padding-left: 20px; }
+.sources li { font-family: var(--font-b); font-size: 13.5px; color: var(--mute); line-height: 1.6; margin-bottom: 6px; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--rule); max-width: 1080px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-family: var(--font-m); font-size: 0.62rem; color: var(--mute); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<!-- Masthead -->
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Site navigation">
+      <a href="/lifestyle-prevention/">Lifestyle</a>
+      <a href="/msk/">MSK</a>
+      <a href="/paediatrics/">Paeds</a>
+      <a href="/geriatrics/">Geriatrics</a>
+      <a href="/gynaecology/">Gynae</a>
+      <a href="/dermatology/">Derm</a>
+      <a href="/mental-health/">Mental Health</a>
+      <a href="/infectious-disease/">Vaccines</a>
+      <a href="/infectious-disease/">Travel</a>
+      <a href="/workshop/" class="is-current">Workbench</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <!-- Header -->
+  <div class="page-header">
+    <a href="/workshop/guidelines/" class="back-link">← Guideline Comparisons</a>
+    <p class="page-kicker">Cardiovascular</p>
+    <h1 class="page-title">Lipid targets and <em>statin initiation</em></h1>
+    <p class="page-dek">How NZ, Australian, and European guidelines differ on when to start treatment, what LDL-C target to set, and which medicines you can actually prescribe.</p>
+    <div class="page-meta">
+      <span>Reviewed May 2026</span>
+      <span>BPAC NZ 2021</span>
+      <span>Heart Foundation AU 2023</span>
+      <span>ESC/EAS 2019</span>
+    </div>
+  </div>
+
+  <!-- Where they agree / diverge -->
+  <div class="div-summary">
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-agree"></span>Where they agree</p>
+      <ul class="div-list">
+        <li>Statins are first-line; high-intensity preferred over moderate</li>
+        <li>Base treatment on absolute cardiovascular risk, not lipid level alone</li>
+        <li>Fasting lipid panel before and after initiating therapy</li>
+        <li>Annual monitoring once stable at target</li>
+        <li>Familial hypercholesterolaemia warrants specialist referral</li>
+      </ul>
+    </div>
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-diverge"></span>Where they diverge</p>
+      <ul class="div-list">
+        <li>LDL-C targets differ substantially between NZ and ESC for equivalent risk tier</li>
+        <li>Treatment threshold: NZ 15% is higher than AU (10-15%) or ESC equivalents</li>
+        <li>PCSK9 inhibitors: not funded (NZ) vs PBS-listed (AU) vs guideline standard (ESC)</li>
+        <li>Ezetimibe: restricted in NZ; freely available under AU and ESC frameworks</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Comparison table -->
+  <p class="section-head">Comparison</p>
+  <div class="cmp-wrap">
+    <table class="cmp-table" aria-label="Guideline comparison: lipid targets and statin initiation">
+      <thead>
+        <tr>
+          <th class="th-domain">Domain</th>
+          <th class="th-nz">NZ  -  BPAC / Heart Foundation NZ</th>
+          <th class="th-au">AU  -  Heart Foundation AU / NPS</th>
+          <th class="th-int">International  -  ESC/EAS 2019</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="row-hi">
+          <td class="td-domain">Treatment threshold<br>(primary prevention)</td>
+          <td class="td-nz">5-yr CVD risk <strong>≥15%</strong> using PREDICT-CVD. Treat regardless of calculated risk if BP ≥180/110 mmHg or total cholesterol ≥8 mmol/L.</td>
+          <td class="td-au">5-yr CVD risk <strong>≥10-15%</strong>  -  a lower threshold than NZ, partly reflecting PBS reimbursement structure.</td>
+          <td class="td-int">Based on SCORE2 risk category. Initiate for "high" risk (10-yr SCORE2 ≥5-10%) or established atherosclerotic CVD.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">LDL-C target<br>High risk / primary prevention</td>
+          <td class="td-nz"><strong>&lt;2.0 mmol/L</strong> or ≥40% reduction from untreated baseline.<span class="chip chip-restricted" title="Higher than ESC target">↑ vs ESC</span></td>
+          <td class="td-au"><strong>&lt;2.0 mmol/L</strong>; non-HDL-C &lt;2.5 mmol/L. Broadly aligned with NZ for primary prevention.</td>
+          <td class="td-int">High risk: <strong>&lt;1.8 mmol/L AND ≥50% reduction</strong> from baseline. Moderate risk: &lt;2.6 mmol/L.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">LDL-C target<br>Very high risk / secondary prevention</td>
+          <td class="td-nz"><strong>&lt;1.8 mmol/L</strong> preferred for established CVD or very high risk.</td>
+          <td class="td-au"><strong>&lt;1.4 mmol/L</strong> for post-ACS or established high-risk atherosclerotic CVD (Heart Foundation AU 2023 update).</td>
+          <td class="td-int">Very high risk: <strong>&lt;1.4 mmol/L AND ≥50% reduction</strong>. Extreme risk (recurrent events on max therapy): &lt;1.0 mmol/L.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Non-HDL-C target</td>
+          <td class="td-nz">&lt;2.5 mmol/L (high risk); &lt;2.2 mmol/L (secondary prevention). Useful when LDL is unreliable.</td>
+          <td class="td-au">&lt;2.5 mmol/L (high risk). Alternative target in hypertriglyceridaemia or when LDL-C is unreliable.</td>
+          <td class="td-int">High risk: &lt;2.2 mmol/L. Very high risk: &lt;1.7 mmol/L. Extreme risk: &lt;1.4 mmol/L.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">First-line statin</td>
+          <td class="td-nz">Atorvastatin 40mg (high-intensity, fully funded). Simvastatin 40mg as moderate-intensity alternative.<span class="chip chip-funded">Funded</span></td>
+          <td class="td-au">Atorvastatin 40-80mg or rosuvastatin 20-40mg. Both PBS-listed without restriction for eligible patients.</td>
+          <td class="td-int">High-intensity statin to maximum tolerated dose. Atorvastatin 40-80mg or rosuvastatin 20-40mg preferred.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Add-on: ezetimibe</td>
+          <td class="td-nz">Funded with restriction: confirmed familial hypercholesterolaemia, or documented intolerance to at least two statins. Not funded simply for failure to reach LDL target.<span class="chip chip-restricted">Restricted</span></td>
+          <td class="td-au">PBS-listed; add to statin when LDL-C target not met. No special access criteria required.</td>
+          <td class="td-int">Add ezetimibe if LDL target not met on maximum tolerated statin. Standard second step before considering PCSK9 inhibitors.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">PCSK9 inhibitors</td>
+          <td class="td-nz">Evolocumab and alirocumab not funded in NZ. Private cost is substantial. Specialist referral is the appropriate pathway for very high-risk patients.<span class="chip chip-nil">Not funded</span></td>
+          <td class="td-au">PBS-listed for: FH with LDL ≥5.0 mmol/L on max statin and ezetimibe; or secondary prevention with LDL ≥2.6 mmol/L on maximum tolerated therapy.</td>
+          <td class="td-int">Recommended for very high and extreme risk not at target on statin and ezetimibe. Part of standard treatment algorithm, not a last resort.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Risk calculator</td>
+          <td class="td-nz">PREDICT-CVD. NZ-specific  -  incorporates ethnicity, NZDep deprivation index, and clinical history. Not cross-comparable with other calculators.<sup>1</sup></td>
+          <td class="td-au">Australian CVD risk calculator (NVDPA framework). Separate tool; not interchangeable with PREDICT-CVD.</td>
+          <td class="td-int">SCORE2 (age 40-69 years); SCORE2-OP for age 70 or older. Not validated in NZ or Australian populations.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Monitoring</td>
+          <td class="td-nz">Fasting lipid panel 6-8 weeks after initiation or dose change. Annually once stable. Baseline LFTs only if symptomatic; CK only if myalgia.</td>
+          <td class="td-au">Fasting lipids 6-12 weeks post-initiation, then 12-monthly. CK only if myalgia symptoms present.</td>
+          <td class="td-int">8-12 weeks post-initiation or dose change, then 12-monthly once at target.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- NZ clinical context -->
+  <p class="section-head">NZ clinical context</p>
+  <div class="nz-notes">
+    <p class="nz-notes-label">PHARMAC funding and population-specific considerations</p>
+
+    <h3>PHARMAC funding status</h3>
+    <p>Verify current criteria at <a href="https://www.pharmac.govt.nz/schedule/" target="_blank" rel="noopener">pharmac.govt.nz</a> as they change. As at 2024:</p>
+    <ul>
+      <li><strong>Simvastatin</strong> (all doses): fully funded, no access restrictions.</li>
+      <li><strong>Atorvastatin</strong> (10-80mg): fully funded, no access restrictions.</li>
+      <li><strong>Rosuvastatin</strong>: funded with access criteria. Approved indications include post-ACS, familial hypercholesterolaemia, and documented intolerance to both simvastatin and atorvastatin.</li>
+      <li><strong>Ezetimibe</strong>: funded for confirmed FH (initiated by or on the advice of a specialist) or documented intolerance to at least two statins.</li>
+      <li><strong>PCSK9 inhibitors</strong> (evolocumab, alirocumab): not funded. For patients with very high residual risk not at target on maximum statin and ezetimibe, discuss private cost or refer to specialist to explore options.</li>
+    </ul>
+
+    <h3>Maori and Pacific peoples</h3>
+    <p>PREDICT-CVD includes ethnicity as an input variable and is calibrated to NZ population data  -  it is the appropriate tool for NZ practice and should be used in preference to SCORE2 or the Australian calculator. When using other calculators, the Heart Foundation NZ recommends applying ethnicity-based risk multipliers to reflect higher CVD event rates in Maori and Pacific peoples at equivalent calculated risk scores.<sup>1</sup></p>
+
+    <h3>Familial hypercholesterolaemia</h3>
+    <p>Consider FH if untreated LDL-C is ≥5.0 mmol/L, or ≥4.0 mmol/L in the presence of a family history of premature CVD or hypercholesterolaemia. Apply the Dutch Lipid Clinic Network (DLCN) criteria or Simon Broome criteria to estimate probability. Refer to a specialist for confirmation  -  this is the pathway to funded rosuvastatin and ezetimibe, and to consideration of PCSK9 inhibitors on a private or named patient basis.</p>
+  </div>
+
+  <!-- Bottom line -->
+  <p class="section-head">Bottom line for NZ practice</p>
+  <div class="bottom-line">
+    <p class="bottom-line-label">What this means in the consulting room</p>
+    <ol>
+      <li>Use <strong>PREDICT-CVD</strong> for risk calculation. It is calibrated to NZ data and incorporates ethnicity and social deprivation  -  do not substitute SCORE2 or the Australian calculator for NZ patients.</li>
+      <li>The NZ treatment threshold (5-yr risk ≥15%) is higher than equivalent AU or ESC thresholds. This is intentional and reflects PHARMAC funding structure. Do not feel compelled to match ESC targets in routine primary prevention.</li>
+      <li>Working LDL-C targets for NZ primary care: <strong>&lt;2.0 mmol/L or ≥40% reduction</strong> for high-risk primary prevention; <strong>&lt;1.8 mmol/L</strong> for secondary prevention or very high risk. Hitting 1.4 mmol/L is aspirational without funded PCSK9 inhibitor access.</li>
+      <li>If statin alone is not reaching target, check adherence and consider uptitrating to atorvastatin 80mg before adding ezetimibe. PHARMAC funding for ezetimibe requires documented statin intolerance or confirmed FH  -  failure to reach LDL target alone does not qualify.</li>
+      <li>For patients with very high residual risk (particularly post-ACS or confirmed FH not at target), refer to a specialist. This is the appropriate pathway to funded rosuvastatin, ezetimibe, and any discussion of PCSK9 inhibitor options.</li>
+    </ol>
+  </div>
+
+  <!-- Sources -->
+  <div class="sources">
+    <p class="sources-label">Sources</p>
+    <ol>
+      <li>Heart Foundation New Zealand. New Zealand primary prevention guideline for cardiovascular disease. Auckland: Heart Foundation NZ; 2018 (updated 2022). Available from: heartfoundation.org.nz</li>
+      <li>BPAC NZ. Dyslipidaemia management in primary care. 2021. Available from: bpac.org.nz</li>
+      <li>National Heart Foundation of Australia. Reducing risk in heart disease: Australian clinical guidelines for the management of lipid disorders. Sydney: Heart Foundation AU; 2023.</li>
+      <li>Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2020;41(1):111-188.</li>
+      <li>PHARMAC. New Zealand Pharmaceutical Schedule. Available from: pharmac.govt.nz [accessed 2024].</li>
+    </ol>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <span class="footer-brand">Working Diagnosis · workingdiagnosis.xyz</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+---
+permalink: /workshop/guidelines/hypothyroidism/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hypothyroidism - Working Diagnosis</title>
+<meta name="description" content="NZ vs AU vs BTA/ATA guideline comparison for hypothyroidism diagnosis and management. TSH targets, subclinical hypothyroidism, T4/T3 combination therapy, and PHARMAC levothyroxine funding.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #F5F1E8;
+  --warm:       #EDE7D8;
+  --deep:       #E4DBC4;
+  --ink:        #1A1F1C;
+  --soft:       #3A4540;
+  --mute:       #6B7A75;
+  --rule:       #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --au-blue:    #1A5CAD;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px);
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+.masthead { border-bottom: 1px solid var(--rule); padding: 20px 32px; background: var(--paper); position: sticky; top: 0; z-index: 50; }
+.masthead-row { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.68rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.primary-nav a:hover { color: var(--green); }
+.primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
+
+.page-wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px 80px; }
+
+.page-header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.back-link { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); display: inline-block; margin-bottom: 24px; }
+.back-link:hover { color: var(--green); }
+.page-kicker { font-family: var(--font-m); font-size: 0.65rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
+.page-kicker::before { content: "❍ "; }
+.page-title { font-family: var(--font-d); font-weight: 500; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; }
+.page-title em { font-style: italic; color: var(--green); }
+.page-dek { font-family: var(--font-b); font-size: 1.05rem; color: var(--soft); max-width: 580px; line-height: 1.55; margin-bottom: 22px; }
+.page-meta { display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); }
+
+.div-summary { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin: 36px 0; }
+@media (max-width: 600px) { .div-summary { grid-template-columns: 1fr; } }
+.div-col { padding: 24px 28px; }
+.div-col:first-child { border-right: 1px solid var(--rule); }
+.div-col-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 7px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-agree { background: var(--green); }
+.dot-diverge { background: var(--ochre); }
+.div-list { list-style: none; padding: 0; }
+.div-list li { font-family: var(--font-b); font-size: 15px; color: var(--soft); padding: 6px 0; border-bottom: 1px solid rgba(217,209,189,.5); line-height: 1.4; }
+.div-list li:last-child { border-bottom: none; }
+
+.section-head { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 44px 0 16px; }
+.section-head::before { content: "❍ "; }
+
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--rule); margin-bottom: 44px; }
+.cmp-table { width: 100%; border-collapse: collapse; min-width: 660px; }
+.cmp-table thead th { padding: 13px 16px; text-align: left; font-family: var(--font-m); font-size: 0.56rem; letter-spacing: 1.8px; text-transform: uppercase; background: var(--warm); border-bottom: 1px solid var(--rule); }
+.cmp-table thead .th-domain { color: var(--mute); width: 148px; }
+.cmp-table thead .th-nz    { color: var(--green-deep); border-left: 3px solid var(--green); }
+.cmp-table thead .th-au    { color: var(--au-blue);    border-left: 3px solid var(--au-blue); }
+.cmp-table thead .th-int   { color: var(--soft);       border-left: 3px solid var(--rule); }
+.cmp-table tbody tr { border-top: 1px solid var(--rule); }
+.cmp-table tbody tr:nth-child(even) { background: rgba(237,231,216,.28); }
+.cmp-table tbody td { padding: 13px 16px; vertical-align: top; font-family: var(--font-b); font-size: 15px; line-height: 1.5; }
+.cmp-table .td-domain { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); line-height: 1.55; }
+.cmp-table .td-nz  { border-left: 3px solid rgba(47,107,92,.12); }
+.cmp-table .td-au  { border-left: 3px solid rgba(26,92,173,.12); }
+.cmp-table .td-int { border-left: 3px solid var(--rule); }
+.cmp-table tr.row-hi .td-nz { border-left-color: var(--ochre); background: rgba(184,113,79,.035); }
+
+.chip { display: inline-block; font-family: var(--font-m); font-size: 0.52rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 6px; margin-left: 5px; vertical-align: middle; border-radius: 2px; }
+.chip-funded     { background: rgba(47,107,92,.1);  color: var(--green-deep); }
+.chip-restricted { background: rgba(184,113,79,.12); color: var(--ochre); }
+.chip-nil        { background: rgba(140,30,30,.1);   color: #7A1C1C; }
+.chip-au         { background: rgba(26,92,173,.1);   color: var(--au-blue); }
+
+.nz-notes { background: rgba(237,231,216,.5); border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 28px 32px; margin-bottom: 32px; }
+.nz-notes-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); margin-bottom: 20px; }
+.nz-notes h3 { font-family: var(--font-d); font-weight: 500; font-size: 1rem; margin: 22px 0 8px; color: var(--ink); }
+.nz-notes h3:first-of-type { margin-top: 0; }
+.nz-notes p { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 8px; }
+.nz-notes ul { padding-left: 18px; margin-bottom: 8px; }
+.nz-notes li { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 5px; }
+
+.bottom-line { border: 1px solid var(--ink); border-left: 3px solid var(--ink); padding: 24px 28px; margin-bottom: 40px; }
+.bottom-line-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 16px; }
+.bottom-line ol { padding-left: 20px; }
+.bottom-line li { font-family: var(--font-b); font-size: 15.5px; color: var(--soft); line-height: 1.55; margin-bottom: 9px; }
+
+.sources { border-top: 1px solid var(--rule); padding-top: 28px; }
+.sources-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; }
+.sources ol { padding-left: 20px; }
+.sources li { font-family: var(--font-b); font-size: 13.5px; color: var(--mute); line-height: 1.6; margin-bottom: 6px; }
+
+.site-footer { border-top: 1px solid var(--rule); max-width: 1080px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-family: var(--font-m); font-size: 0.62rem; color: var(--mute); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Site navigation">
+      <a href="/lifestyle-prevention/">Lifestyle</a>
+      <a href="/msk/">MSK</a>
+      <a href="/paediatrics/">Paeds</a>
+      <a href="/geriatrics/">Geriatrics</a>
+      <a href="/gynaecology/">Gynae</a>
+      <a href="/dermatology/">Derm</a>
+      <a href="/mental-health/">Mental Health</a>
+      <a href="/infectious-disease/">Vaccines</a>
+      <a href="/infectious-disease/">Travel</a>
+      <a href="/workshop/" class="is-current">Workbench</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <a href="/workshop/guidelines/" class="back-link">← Guideline Comparisons</a>
+    <p class="page-kicker">Endocrine</p>
+    <h1 class="page-title">Hypothyroidism - <em>diagnosis and management</em></h1>
+    <p class="page-dek">The treatment is settled: levothyroxine, titrated to TSH. What remains contested is the TSH target, subclinical hypothyroidism thresholds, and the T4/T3 combination question that comes up in almost every chronic hypothyroid consultation.</p>
+    <div class="page-meta">
+      <span>Reviewed May 2026</span>
+      <span>NZF / HealthPathways NZ</span>
+      <span>RACP / Endocrine Society AU</span>
+      <span>BTA 2019 / ATA 2014</span>
+    </div>
+  </div>
+
+  <!-- Scope note -->
+  <p style="font-family: var(--font-m); font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); margin: 28px 0 -8px;">Scope: Primary hypothyroidism in non-pregnant adults. Includes subclinical hypothyroidism. Excludes central hypothyroidism, hypothyroidism in pregnancy, and thyroid cancer follow-up.</p>
+
+  <!-- Agree / Diverge -->
+  <div class="div-summary">
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-agree"></span>Where they agree</p>
+      <ul class="div-list">
+        <li>Levothyroxine (T4) monotherapy is standard first-line treatment for primary hypothyroidism</li>
+        <li>TSH is the primary monitoring test; free T4 is useful when TSH is suppressed or unreliable</li>
+        <li>Starting dose in healthy adults without cardiac disease: 1.5-1.6 mcg/kg/day; start lower in elderly, those with cardiac disease, or severe hypothyroidism</li>
+        <li>Recheck TSH 6-8 weeks after each dose change; once stable, annual TSH monitoring is appropriate</li>
+        <li>Generic levothyroxine is equivalent to branded formulations when from the same manufacturer; brand switching should be avoided without rechecking TSH</li>
+        <li>Subclinical hypothyroidism with TSH >10 mIU/L: all guidelines recommend treatment</li>
+        <li>T3 (liothyronine) monotherapy is not recommended for routine hypothyroidism</li>
+      </ul>
+    </div>
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-diverge"></span>Where they diverge</p>
+      <ul class="div-list">
+        <li>TSH target range: BTA 2019 aims for lower half of normal (0.4-2.0); ATA 2014 keeps TSH within normal range (0.5-2.5); NZ HealthPathways: maintain within reference range with no NZ-specific target published</li>
+        <li>Subclinical hypothyroidism (TSH 4.5-10): genuine guideline uncertainty. BTA 2019: trial treatment if symptomatic, especially under 65. ATA 2014: reasonable to treat if symptomatic or TSH >7-10</li>
+        <li>T4/T3 combination therapy: BTA 2019 and ATA 2014 both recommend AGAINST routine use; may be considered in persistent symptoms after adequate T4 therapy</li>
+        <li>TSH target in older adults: BTA 2019 explicitly recommends accepting higher TSH (up to 5.0 mIU/L) in patients >70. ATA 2014 acknowledges different benefit-risk in elderly. NZ practice varies</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="section-head">Comparison</p>
+  <div class="cmp-wrap">
+    <table class="cmp-table" aria-label="Guideline comparison: hypothyroidism management">
+      <thead>
+        <tr>
+          <th class="th-domain">Domain</th>
+          <th class="th-nz">NZ - NZF / HealthPathways</th>
+          <th class="th-au">AU - RACP / Endocrine Society</th>
+          <th class="th-int">International - BTA 2019 / ATA 2014</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="td-domain">Diagnosis</td>
+          <td class="td-nz">
+            TSH is the primary test. If TSH is elevated, confirm with free T4. Positive TPO antibodies (anti-thyroid peroxidase) support autoimmune aetiology (Hashimoto's thyroiditis) but do not change management. TSH reference range varies by laboratory (typically 0.4-4.5 mIU/L). Overt hypothyroidism: elevated TSH + low free T4. Subclinical hypothyroidism: elevated TSH + normal free T4. Do not test free T4 in isolation as a screening test.
+          </td>
+          <td class="td-au">
+            Consistent approach. RACP recommends TSH as first-line. Thyroid antibodies (TPO) add prognostic value in subclinical hypothyroidism (higher progression risk with positive antibodies) but do not alter initial management. Same TSH thresholds as NZ.
+          </td>
+          <td class="td-int">
+            Consistent. TSH is the most sensitive indicator of thyroid status. Free T3 has no routine role in diagnosing primary hypothyroidism. BTA 2019 emphasises TSH as the gold standard; ATA 2014 similarly recommends TSH-based diagnosis.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Treatment - levothyroxine initiation</td>
+          <td class="td-nz">
+            Eltroxin (levothyroxine sodium) is the NZ brand; NZF recommends consistency of formulation when possible. Starting dose: 50-100 mcg daily in young, healthy adults; 25-50 mcg in adults >60 or with cardiac disease; 12.5-25 mcg in severe or longstanding hypothyroidism or significant cardiac history (titrate slowly over months). Take on an empty stomach, 30-60 minutes before food, consistently. Avoid co-administration with calcium, iron, PPIs (reduce absorption). PHARMAC funds levothyroxine.<span class="chip chip-funded">Funded</span>
+          </td>
+          <td class="td-au">
+            Eutroxsig is the main Australian brand. Same starting doses and titration principles as NZ. Same absorption considerations. PBS-funded.
+          </td>
+          <td class="td-int">
+            BTA 2019 / ATA 2014: 1.5-1.6 mcg/kg/day as a target dose in otherwise healthy adults. Lower in elderly. Titration principle: check TSH at 6-8 weeks, adjust by 12.5-25 mcg increments. Same absorption guidance. Consistent formulation recommended.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">TSH target - highlight row</td>
+          <td class="td-nz">
+            NZF and HealthPathways recommend titrating to keep TSH within the laboratory reference range (approximately 0.4-4.5 mIU/L). No NZ guideline specifies a tighter lower-range target. In practice, most NZ GPs aim for TSH around 1.0-2.5 mIU/L for symptomatic benefit, but this is not mandated. For elderly patients (≥70): accept TSH in the upper-normal range (2.0-4.5); do not chase a low-normal TSH in this group.
+          </td>
+          <td class="td-au">
+            RACP / Endocrine Society of Australia broadly consistent with maintaining TSH within the reference range. Some specialist guidance suggests lower half of range for symptomatic patients. For elderly: avoid aggressive TSH lowering to prevent AF and cardiac risk.
+          </td>
+          <td class="td-int">
+            BTA 2019: Target TSH in the lower half of the reference range (0.4-2.0 mIU/L) for most treated patients. For patients ≥65, particularly post-RAI or post-thyroidectomy: accept TSH 1.0-5.0 mIU/L. ATA 2014: keep TSH within the normal reference range; no specific target within range.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Subclinical hypothyroidism (TSH 4.5-10) - highlight row</td>
+          <td class="td-nz">
+            Treat if: symptomatic AND TSH persistently elevated on two measurements 3 months apart AND patient under 65. In asymptomatic patients: monitor every 6-12 months (30-50% normalise spontaneously). Do not treat asymptomatic subclinical hypothyroidism in adults ≥65 - the TRUST trial showed no benefit and potential harm. TPO antibody positivity increases progression risk (~2-4%/year); may justify closer monitoring. TSH >10 mIU/L: treat regardless of symptoms or age.
+          </td>
+          <td class="td-au">
+            Consistent with international consensus. RACP: treat TSH >10 or if symptomatic with TSH 4.5-10 in younger adults; avoid in asymptomatic elderly. Similar evidence-based caution about harm in elderly.
+          </td>
+          <td class="td-int">
+            BTA 2019 / ATA 2014: TSH >10 = treat (Class recommendation, strong). TSH 4.5-10 = individualise; trial of treatment if symptomatic; avoid in asymptomatic elderly. The 2019 BTA guidelines provide the clearest age-stratified framework.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">T4/T3 combination therapy - highlight row</td>
+          <td class="td-nz">
+            Liothyronine (T3) is funded under PHARMAC Special Authority - requires endocrinologist initiation for patients with persistent symptoms on adequate levothyroxine therapy after exclusion of other causes. NOT for routine use. A small number of patients do appear to have genuine benefit from combination therapy; if referred to endocrinology, T3 access through SA is possible. Do not initiate T3 from primary care without endocrine input.<span class="chip chip-restricted">SA - specialist only</span>
+          </td>
+          <td class="td-au">
+            T3 available but TGA-restricted; not routinely recommended. Similar to NZ - endocrinologist-initiated in selected patients only.
+          </td>
+          <td class="td-int">
+            BTA 2019: Combination T4/T3 therapy should NOT be used routinely. A trial may be considered in patients with persistent symptoms despite adequate T4 titration, after excluding depression, anaemia, B12 deficiency, coeliac disease, and adrenal insufficiency. If trialled: use sustained-release T3 if available; titrate carefully; reassess after 3 months; if no benefit, discontinue. ATA 2014: similar cautious stance - some patients may be genetic poor converters of T4 to T3 (DIO2 polymorphism). Evidence base is limited; individualised decision with specialist support.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Monitoring frequency</td>
+          <td class="td-nz">
+            Recheck TSH 6-8 weeks after each dose change. Once stable on a consistent dose, annual TSH monitoring is appropriate for most patients. More frequent monitoring may be needed in acute illness, pregnancy planning, or if symptoms change. Absorption issues (PPI use, coeliac disease) may require more frequent review.
+          </td>
+          <td class="td-au">
+            Same as NZ. RACP: 6-8 weeks after dose changes; then annual review once stable. No difference from NZ guidance.
+          </td>
+          <td class="td-int">
+            BTA 2019 / ATA 2014: Check TSH at 6-8 weeks after each dose adjustment and 6-12 months after initial therapy started. Once stable, annual TSH is standard. More frequent monitoring for symptoms, life changes, or co-medication changes.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Special situations: pregnancy and other states</td>
+          <td class="td-nz">
+            Pregnancy: refer to obstetric medicine or endocrinology; TSH targets are tighter in each trimester (first trimester TSH <2.5 mIU/L); levothyroxine dose typically increases 25-30% in first trimester. Amiodarone-induced hypothyroidism: treat with levothyroxine; continue amiodarone if cardiologically necessary. Post-thyroidectomy: endocrine or surgical follow-up; doses often higher. Adrenal insufficiency: always exclude before treating hypothyroidism in central hypothyroidism - replacing T4 without cortisol can precipitate an adrenal crisis.
+          </td>
+          <td class="td-au">
+            Consistent with NZ on pregnancy and amiodarone management. Similar referral pathways for specialist situations.
+          </td>
+          <td class="td-int">
+            BTA 2019 / ATA 2014: Consistent approach to pregnancy (tighter TSH targets, dose increase expected). Amiodarone-induced: treat with levothyroxine. Post-thyroidectomy: specialist follow-up. Adrenal assessment critical in central hypothyroidism.
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-head">NZ clinical context</p>
+  <div class="nz-notes">
+    <p class="nz-notes-label">Practical NZ prescribing, the T4/T3 question, and what to do with the symptomatic patient on optimal T4</p>
+
+    <h3>The most common clinical problem</h3>
+    <p>The most common clinical problem is the patient with TSH in the normal range who still feels unwell. This is genuinely difficult. Before attributing symptoms to thyroid disease, exclude: depression, anaemia, iron deficiency (even without anaemia), B12 deficiency, coeliac disease, sleep disorder, and perimenopause. Do not escalate levothyroxine dose to achieve a low-normal TSH in a patient who is euthyroid - this risks atrial fibrillation and bone loss.</p>
+
+    <h3>Absorption issues: the PPI problem</h3>
+    <p>Levothyroxine is poorly absorbed when taken with food, coffee, calcium supplements, iron, cholestyramine, or PPIs. A patient on long-term PPI who has rising TSH often simply needs a timing change (take T4 on an empty stomach, 1 hour before morning coffee). Document timing advice at every review. The dose may not need to increase; the absorption may just need optimising.</p>
+
+    <h3>The T3 question and genetic poor converters</h3>
+    <p>If symptoms persist after TSH is optimised and other causes excluded, the question of T3 supplementation arises. The evidence is inconsistent: some high-quality RCTs show no benefit; some show improvement in quality of life in a subgroup. Genetic testing for DIO2 polymorphisms (which affect T4-T3 conversion) is not routinely available in NZ. If T3 is being considered: refer to endocrinology. Liothyronine under Special Authority is accessible through this route. Do not initiate T3 from primary care.</p>
+
+    <h3>Dosing in older adults</h3>
+    <p>Use the lowest effective dose in patients ≥70. Iatrogenic subclinical thyrotoxicosis (suppressed TSH) in elderly patients increases atrial fibrillation risk by approximately 3-fold and increases osteoporotic fracture risk. Check TSH at least annually and reduce dose if TSH is persistently suppressed. A TSH of 2.0-4.5 mIU/L in an octogenarian is appropriate and may cause less harm than aggressive normalisation.</p>
+
+    <h3>Brand consistency and generic equivalence</h3>
+    <p>Generic levothyroxine from the same manufacturer is equivalent to branded Eltroxin, but brand switching should be avoided without rechecking TSH. If a patient's TSH becomes unstable and you suspect a formulation change, check whether the pharmacy has switched manufacturer. If yes, retest TSH 6-8 weeks after stabilisation on the new brand.</p>
+  </div>
+
+  <p class="section-head">Bottom line for NZ practice</p>
+  <div class="bottom-line">
+    <p class="bottom-line-label">What this means in the consulting room</p>
+    <ol>
+      <li>TSH is the monitoring test. Once stable, check annually. Recheck 6-8 weeks after any dose change, illness, or significant change in co-medications (especially PPIs or calcium).</li>
+      <li>Aim for TSH in the lower half of the normal range (0.4-2.0 mIU/L) for most symptomatic patients under 65. Accept a higher TSH (2.0-4.5) in patients ≥70 - a suppressed TSH in this group causes more harm than benefit.</li>
+      <li>Subclinical hypothyroidism with TSH 4.5-10: treat if symptomatic and under 65. Do not treat if asymptomatic and over 65 (TRUST trial).</li>
+      <li>For the symptomatic patient on optimal T4: exclude depression, anaemia, B12 deficiency, coeliac disease, and perimenopause before attributing symptoms to thyroid disease. If symptoms persist after thorough exclusion, refer to endocrinology for T3 discussion - do not self-escalate from primary care.</li>
+      <li>Absorption troubleshooting: levothyroxine on an empty stomach, 30-60 minutes before food. Separate from calcium, iron, and PPIs by at least 4 hours. Often the dose is fine; the absorption just needs optimising.</li>
+    </ol>
+  </div>
+
+  <div class="sources">
+    <p class="sources-label">Sources</p>
+    <ol>
+      <li>Jonklaas J, Bianco AC, Bauer AJ, et al. Guidelines for the treatment of hypothyroidism: prepared by the American Thyroid Association task force on thyroid hormone replacement. Thyroid. 2014;24(12):1670-1751.</li>
+      <li>Okosieme O, Gilbert J, Abraham P, et al. Management of primary hypothyroidism: statement by the British Thyroid Association Executive Committee. Clin Endocrinol (Oxf). 2016;84(6):799-808.</li>
+      <li>Bekkering GE, Agoritsas T, Lytvyn L, et al. Thyroid hormones treatment for subclinical hypothyroidism: a clinical practice guideline. BMJ. 2019;365:l2006.</li>
+      <li>Stott DJ, Rodondi N, Kearney PM, et al. Thyroid hormone therapy for older adults with subclinical hypothyroidism (TRUST). N Engl J Med. 2017;376(26):2534-2544.</li>
+      <li>Idrees T, Palmer S, Murad MH, Brito JP. Benefits and harms of treating mildly low thyroid function: a systematic review and meta-analysis. BMJ. 2023;381:e073506.</li>
+      <li>New Zealand Formulary. Levothyroxine sodium. nzf.org.nz. Accessed May 2026.</li>
+    </ol>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <span class="footer-brand">Working Diagnosis · workingdiagnosis.xyz</span>
+</footer>
+
+</body>
+</html>

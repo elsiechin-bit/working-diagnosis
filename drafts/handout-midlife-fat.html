@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weight Changes in Middle Age - Working Diagnosis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ── TOKENS ──────────────────────────────────────────────────────── */
+  :root {
+    --paper:   #F5F1E8;
+    --warm:    #EDE7D8;
+    --deep:    #E4DBC4;
+    --ink:     #1A1F1C;
+    --soft:    #3A4540;
+    --mute:    #6B7A75;
+    --green:   #2F6B5C;
+    --green-d: #1F4A3F;
+    --ochre:   #B8714F;
+    --rule:    #D9D1BD;
+    --ltgreen: #EEF5F3;
+  }
+
+  /* ── RESET ───────────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ── PAGE ────────────────────────────────────────────────────────── */
+  html { background: #ccc; }
+
+  body {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--paper);
+    max-width: 740px;
+    margin: 2rem auto;
+    padding: 3rem 3.5rem 3.5rem;
+    box-shadow: 0 2px 32px rgba(0,0,0,0.14);
+  }
+
+  /* ── MASTHEAD ────────────────────────────────────────────────────── */
+  .masthead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 0.75rem;
+    border-bottom: 1.5px solid var(--rule);
+    margin-bottom: 2rem;
+  }
+  .masthead-brand {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--green);
+    letter-spacing: 0.01em;
+  }
+  .masthead-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+  }
+
+  /* ── KICKER ──────────────────────────────────────────────────────── */
+  .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ochre);
+    margin-bottom: 0.5rem;
+  }
+  .kicker::before { content: "❍  "; }
+
+  /* ── TITLE ───────────────────────────────────────────────────────── */
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 0.55rem;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    font-family: 'Newsreader', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--mute);
+    margin-bottom: 1.8rem;
+  }
+  .title-rule {
+    border: none;
+    border-top: 1.5px solid var(--rule);
+    margin-bottom: 2rem;
+  }
+
+  /* ── SECTION HEADINGS ────────────────────────────────────────────── */
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--green);
+    margin-top: 2.2rem;
+    margin-bottom: 0.7rem;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-family: 'Newsreader', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-top: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  /* ── BODY TEXT ───────────────────────────────────────────────────── */
+  p {
+    margin-bottom: 0.85rem;
+    color: var(--soft);
+  }
+
+  /* accent italic in green */
+  em {
+    font-style: italic;
+    color: var(--green);
+    font-family: 'Fraunces', serif;
+  }
+
+  strong {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ── LISTS ───────────────────────────────────────────────────────── */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0 0.9rem 0;
+  }
+  ul li {
+    position: relative;
+    padding-left: 1.3rem;
+    margin-bottom: 0.4rem;
+    color: var(--soft);
+  }
+  ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0.2rem;
+    color: var(--ochre);
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  /* ── SECTION RULE ────────────────────────────────────────────────── */
+  .section-rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2rem 0 0;
+  }
+
+  /* ── CALLOUT BOX ─────────────────────────────────────────────────── */
+  .callout {
+    background: var(--ltgreen);
+    border-left: 3px solid var(--green);
+    padding: 1.1rem 1.4rem;
+    margin: 2rem 0 1rem;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--green);
+    margin-bottom: 0.65rem;
+  }
+  .callout ul li { color: var(--ink); }
+  .callout ul li::before { color: var(--green); }
+
+  /* ── WARNING / WHEN TO SEE GP BOX ───────────────────────────────── */
+  .gp-box {
+    background: var(--warm);
+    border: 1.5px solid var(--rule);
+    padding: 1.1rem 1.4rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+  }
+
+  /* ── WAIST TABLE ─────────────────────────────────────────────────── */
+  .waist-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.2rem;
+    font-size: 0.93rem;
+  }
+  .waist-table thead th {
+    background: var(--green);
+    color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 0.8rem;
+    text-align: left;
+    font-weight: 500;
+  }
+  .waist-table tbody tr:nth-child(even) { background: var(--warm); }
+  .waist-table tbody td {
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid var(--rule);
+    color: var(--soft);
+  }
+  .waist-table tbody td:first-child { font-weight: 600; color: var(--ink); }
+
+  /* ── NUMBERED STEPS (What Helps) ─────────────────────────────────── */
+  .steps { counter-reset: steps; padding: 0; list-style: none; margin: 0.6rem 0 0; }
+  .steps li {
+    counter-increment: steps;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0 0.7rem;
+    margin-bottom: 1.1rem;
+    padding-left: 0;
+    color: var(--soft);
+  }
+  .steps li::before {
+    content: counter(steps);
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1.5;
+    text-align: right;
+  }
+  .steps li .step-title {
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 0.15rem;
+    font-family: 'Newsreader', serif;
+    font-size: 1rem;
+  }
+
+  /* ── FOOTNOTES ───────────────────────────────────────────────────── */
+  sup {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--ochre);
+    vertical-align: super;
+    line-height: 0;
+  }
+  .footnotes {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+  }
+  .footnotes-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-bottom: 0.6rem;
+  }
+  .footnotes ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    margin: 0;
+  }
+  .footnotes ol li {
+    font-size: 0.8rem;
+    color: var(--mute);
+    font-family: 'Newsreader', serif;
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+  }
+
+  /* ── FOOTER ──────────────────────────────────────────────────────── */
+  .page-footer {
+    margin-top: 2.5rem;
+    padding-top: 0.75rem;
+    border-top: 1.5px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--mute);
+  }
+
+  /* ── PRINT ───────────────────────────────────────────────────────── */
+  @media print {
+    html { background: white; }
+    body {
+      margin: 0; max-width: 100%;
+      padding: 1.5cm 2cm 2cm;
+      box-shadow: none;
+      font-size: 10.5pt;
+    }
+    h1 { font-size: 22pt; }
+    h2 { font-size: 12pt; }
+    .callout, .gp-box { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <span class="masthead-brand">Working Diagnosis</span>
+  <span class="masthead-label">Patient Information Handout</span>
+</header>
+
+<!-- TITLE BLOCK -->
+<p class="kicker">Metabolic health</p>
+<h1>Weight Changes<br>in Middle Age</h1>
+<p class="subtitle">Why it happens, where it goes, and what you can actually do about it.</p>
+<hr class="title-rule">
+
+
+<!-- ── SECTION 1: WHY ──────────────────────────────────────────────── -->
+<h2>Why does fat increase in middle age?</h2>
+
+<p>Most people notice their weight creeping up from their late thirties or forties, even when their eating habits have not changed. This is not simply a matter of willpower. Several biological shifts converge during midlife.</p>
+
+<h3>Muscle loss</h3>
+<p>From around age 30, muscle mass declines at roughly 3 to 8% per decade<sup>2</sup> and the rate accelerates after 60. Because muscle burns more energy at rest than fat does, losing it slows your metabolism. The result: the same diet that maintained your weight at 30 can lead to gradual fat gain at 45.</p>
+
+<h3>Hormonal changes in women</h3>
+<p>The perimenopause and menopause (typically ages 45 to 55) bring a sharp decline in <em>oestrogen</em>. This shift redirects fat from the hips and thighs to the abdomen.<sup>3,4</sup> Visceral fat (stored around the internal organs) increases even in women whose total weight barely changes.</p>
+
+<h3>Hormonal changes in men</h3>
+<p>Testosterone declines gradually from around age 30 to 40. Lower testosterone is associated with reduced muscle mass and increased central fat deposition. This process is more gradual than female menopause, but the metabolic effect is real.</p>
+
+<h3>Lifestyle shifts</h3>
+<p>Midlife often brings less incidental physical activity, disrupted sleep, and higher sustained stress.<sup>1</sup> Each of these independently promotes fat storage, even before diet changes.</p>
+
+<hr class="section-rule">
+
+
+<!-- ── SECTION 2: WHERE ─────────────────────────────────────────────── -->
+<h2>Where does the fat go, and why does it matter?</h2>
+
+<p>Not all fat is equal. There are two main types:</p>
+
+<ul>
+  <li><strong>Subcutaneous fat</strong> sits just under the skin (around hips, thighs, upper arms). It is largely inert from a metabolic standpoint.</li>
+  <li><strong>Visceral fat</strong> wraps around the liver, pancreas, and other abdominal organs. It is metabolically active, releasing inflammatory signals and fatty acids directly into the portal circulation.<sup>5</sup></li>
+</ul>
+
+<p>Higher visceral fat is independently linked to:</p>
+<ul>
+  <li>Type 2 diabetes and insulin resistance<sup>5</sup></li>
+  <li>Cardiovascular disease - raised triglycerides, lower HDL cholesterol, raised blood pressure<sup>5</sup></li>
+  <li>Non-alcoholic fatty liver disease</li>
+  <li>Certain cancers (bowel, breast, endometrial)</li>
+</ul>
+
+<h3>Measuring your risk: waist circumference</h3>
+<p>Waist circumference is a practical proxy for visceral fat. Measure at the midpoint between your lowest rib and the top of your hip bone, after a gentle exhale. WHO thresholds<sup>6</sup> are shown below. For people of Asian, South Asian, or Polynesian descent, lower thresholds may apply - ask your GP.</p>
+
+<table class="waist-table">
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>Increased risk</th>
+      <th>High risk</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Women</td>
+      <td>&gt; 80 cm (31.5 in)</td>
+      <td>&gt; 88 cm (34.6 in)</td>
+    </tr>
+    <tr>
+      <td>Men</td>
+      <td>&gt; 94 cm (37 in)</td>
+      <td>&gt; 102 cm (40.2 in)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="section-rule">
+
+
+<!-- ── SECTION 3: WHAT HELPS ────────────────────────────────────────── -->
+<h2>What actually helps?</h2>
+
+<p>There is no single fix, but the evidence points clearly toward a set of habits that work together.</p>
+
+<ol class="steps">
+  <li>
+    <div>
+      <span class="step-title">Resistance (strength) training</span>
+      Building and preserving muscle mass is the most effective way to counteract the metabolic slowdown of ageing.<sup>7</sup> Aim for two or more sessions per week targeting all major muscle groups. You do not need a gym: bodyweight exercises (squats, lunges, push-ups, rows) work well.
+    </div>
+  </li>
+  <li>
+    <div>
+      <span class="step-title">Aerobic exercise</span>
+      Brisk walking, cycling, swimming, or dancing for 150 to 300 minutes per week at moderate intensity helps reduce visceral fat directly, independent of weight loss on the scales.
+    </div>
+  </li>
+  <li>
+    <div>
+      <span class="step-title">Adequate protein</span>
+      Higher protein intake supports muscle repair and promotes satiety. Aim for protein at every meal: eggs, legumes, fish, chicken, dairy, or tofu. Spreading intake across meals is more effective than loading it all at dinner.
+    </div>
+  </li>
+  <li>
+    <div>
+      <span class="step-title">Diet quality over calorie counting</span>
+      Reducing ultra-processed foods (biscuits, chips, fast food, sweetened drinks) has a disproportionate effect on visceral fat compared with simply cutting total calories. Prioritise vegetables, whole grains, legumes, fruit, nuts, and minimally processed proteins.
+    </div>
+  </li>
+  <li>
+    <div>
+      <span class="step-title">Sleep</span>
+      Short sleep duration raises ghrelin (hunger hormone) and lowers leptin (fullness hormone), making overeating much more likely.<sup>8</sup> Seven to nine hours per night is the target for most adults. If you sleep poorly and cannot resolve it, discuss this with your GP.
+    </div>
+  </li>
+  <li>
+    <div>
+      <span class="step-title">Stress management</span>
+      Chronic stress drives elevated cortisol, which specifically promotes abdominal fat deposition.<sup>9</sup> Regular exercise helps, as does time in nature, adequate social connection, and specific therapies for anxiety or burnout if needed.
+    </div>
+  </li>
+</ol>
+
+<hr class="section-rule">
+
+
+<!-- ── SECTION 4: WHEN TO SEE GP ───────────────────────────────────── -->
+<h2>When to talk to your GP</h2>
+
+<div class="gp-box">
+  <p style="margin-bottom:0.6rem; color:var(--soft);">Most middle-aged weight change is gradual and does not require urgent attention. Come and see us if:</p>
+  <ul>
+    <li>You have gained more than 5 kg over 6 to 12 months without a clear reason</li>
+    <li>Your waist circumference is in the high-risk zone above</li>
+    <li>You have a personal or family history of type 2 diabetes or cardiovascular disease</li>
+    <li>You notice symptoms that might suggest thyroid disease: fatigue, cold intolerance, constipation, dry skin, or hair thinning</li>
+    <li>You have tried lifestyle changes consistently for 3 to 6 months without effect</li>
+    <li>You are interested in discussing medications or structured programmes for weight management</li>
+  </ul>
+</div>
+
+
+<!-- ── CALLOUT ───────────────────────────────────────────────────────── -->
+<div class="callout">
+  <p class="callout-title">Key takeaways</p>
+  <ul>
+    <li>Middle-age fat gain is driven by biology, not just behaviour. Be kind to yourself.</li>
+    <li>Visceral (belly) fat is more harmful than fat elsewhere. Waist circumference matters more than weight alone.</li>
+    <li>Resistance training is the most underused tool for metabolic health in midlife.</li>
+    <li>Sleep, stress, protein, and diet quality all have measurable effects.</li>
+    <li>Small, consistent changes outperform short-term diets every time.</li>
+  </ul>
+</div>
+
+
+<!-- ── FOOTNOTES ─────────────────────────────────────────────────────── -->
+<div class="footnotes">
+  <p class="footnotes-title">References</p>
+  <ol>
+    <li>Guo SS, Zeller C, Chumlea WC, Siervogel RM. Aging, body composition, and lifestyle: the Fels Longitudinal Study. Am J Clin Nutr. 1999;70(3):405-11.</li>
+    <li>Janssen I, Heymsfield SB, Wang ZM, Ross R. Skeletal muscle mass and distribution in 468 men and women aged 18-88 yr. J Appl Physiol. 2000;89(1):81-8.</li>
+    <li>Sowers MR, Zheng H, Tomey K, Karvonen-Gutierrez C, Jannausch M, Li X, et al. Changes in body composition in women over six years at midlife: ovarian and chronological aging. J Clin Endocrinol Metab. 2007;92(3):895-901.</li>
+    <li>Kapoor E, Collazo-Clavell ML, Faubion SS. Weight gain in women at midlife: a concise review of the pathophysiology and strategies for management. Mayo Clin Proc. 2017;92(10):1552-8.</li>
+    <li>Tchernof A, Despres JP. Pathophysiology of human visceral obesity: an update. Physiol Rev. 2013;93(1):359-404.</li>
+    <li>World Health Organization. Waist circumference and waist-hip ratio: report of a WHO expert consultation. Geneva: WHO; 2008.</li>
+    <li>Liu CJ, Latham NK. Progressive resistance strength training for improving physical function in older adults. Cochrane Database Syst Rev. 2009;(3):CD002759.</li>
+    <li>Taheri S, Lin L, Austin D, Young T, Mignot E. Short sleep duration is associated with reduced leptin, elevated ghrelin, and increased body mass index. PLoS Med. 2004;1(3):e62.</li>
+    <li>Dallman MF. Stress-induced obesity and the emotional nervous system. Trends Endocrinol Metab. 2010;21(3):159-65.</li>
+  </ol>
+</div>
+
+
+<!-- ── PAGE FOOTER ───────────────────────────────────────────────────── -->
+<footer class="page-footer">
+  <span>workingdiagnosis.xyz</span>
+  <span>For general information only &mdash; not a substitute for medical advice</span>
+</footer>
+
+</body>
+</html>

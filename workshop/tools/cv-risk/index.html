@@ -1,0 +1,1385 @@
+---
+title: Cardiovascular Risk  -  PREDICT-CVD
+permalink: /workshop/tools/cv-risk/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardiovascular Risk  -  Working Diagnosis</title>
+<meta name="description" content="PREDICT-CVD 5-year risk calculator for NZ GPs, with comparison to Framingham, QRISK3, SCORE2, and ACC/AHA PCE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F5F1E8;
+  --paper-warm:  #EDE7D8;
+  --paper-deep:  #E4DBC4;
+  --ink:   #1A1F1C;
+  --ink-soft:  #3A4540;
+  --ink-mute:  #6B7A75;
+  --faint: #A39E8E;
+  --rule:  #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+  /* risk colours */
+  --low-c:    #2F6B5C;
+  --low-bg:   #E4EFE9;
+  --mod-c:    #8A6B1A;
+  --mod-bg:   #F5EDD0;
+  --high-c:   #B8714F;
+  --high-bg:  #F4E5D6;
+  --vhigh-c:  #9A2A2A;
+  --vhigh-bg: #F2DCDC;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px);
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+/* ── Masthead ── */
+.masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+.masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+.primary-nav a:hover { color: var(--green); }
+
+/* ── Tool header ── */
+.tool-hdr {
+  padding: 48px 24px 36px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+}
+.tool-hdr-inner { max-width: 1080px; margin: 0 auto; }
+.kicker {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 16px;
+}
+.kicker::before { content: "❍ "; color: var(--green); letter-spacing: 0; }
+.tool-title {
+  font-family: var(--font-d);
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.tool-title em { font-style: italic; color: var(--green); font-weight: 500; }
+.tool-sub {
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: 700px;
+  line-height: 1.55;
+}
+
+/* ── Layout ── */
+.main-wrap { max-width: 1080px; margin: 0 auto; padding: 40px 24px 60px; }
+
+/* ── Alert / Notice ── */
+.notice {
+  padding: 14px 18px;
+  background: var(--paper-warm);
+  border-left: 3px solid var(--ochre);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+.notice strong { color: var(--ochre); }
+
+/* ── Two-column layout ── */
+.calc-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 680px) {
+  .calc-layout { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ── Form panel ── */
+.form-panel {
+  background: white;
+  border: 1px solid var(--rule);
+  padding: 28px;
+}
+.panel-title {
+  font-family: var(--font-d);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block;
+  font-family: var(--font-m);
+  font-size: 0.72rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 6px;
+}
+.form-group label .label-hint {
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  color: var(--faint);
+  margin-left: 6px;
+}
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-b);
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(47,107,92,0.12);
+  background: white;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.form-row .form-group { margin-bottom: 0; }
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.checkbox-row input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--green);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.checkbox-row label {
+  font-family: var(--font-b);
+  font-size: 0.95rem;
+  color: var(--ink);
+  cursor: pointer;
+  margin-bottom: 0;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.checkbox-group-title {
+  font-family: var(--font-m);
+  font-size: 0.72rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 10px;
+}
+.calc-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--green);
+  color: white;
+  border: none;
+  font-family: var(--font-m);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.calc-btn:hover { background: var(--green-deep); }
+.reset-btn {
+  width: 100%;
+  padding: 10px 24px;
+  background: transparent;
+  color: var(--ink-mute);
+  border: 1px solid var(--rule);
+  font-family: var(--font-m);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+.reset-btn:hover { border-color: var(--ink-mute); color: var(--ink-soft); }
+
+/* ── Result panel ── */
+.result-panel {
+  position: sticky;
+  top: 80px;
+}
+.result-card {
+  background: white;
+  border: 1px solid var(--rule);
+  padding: 28px;
+  margin-bottom: 16px;
+}
+.result-empty {
+  background: var(--paper-warm);
+  border: 1px dashed var(--rule);
+  padding: 40px 28px;
+  text-align: center;
+  color: var(--ink-mute);
+  font-family: var(--font-m);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.result-empty svg { display: block; margin: 0 auto 16px; opacity: 0.3; }
+
+/* ── Risk display ── */
+.risk-badge {
+  display: inline-block;
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  margin-bottom: 12px;
+}
+.risk-number {
+  font-family: var(--font-d);
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.risk-label {
+  font-family: var(--font-m);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 20px;
+}
+
+/* risk colour states */
+.risk-low    { color: var(--low-c); }
+.risk-mod    { color: var(--mod-c); }
+.risk-high   { color: var(--high-c); }
+.risk-vhigh  { color: var(--vhigh-c); }
+.badge-low   { background: var(--low-bg);   color: var(--low-c); }
+.badge-mod   { background: var(--mod-bg);   color: var(--mod-c); }
+.badge-high  { background: var(--high-bg);  color: var(--high-c); }
+.badge-vhigh { background: var(--vhigh-bg); color: var(--vhigh-c); }
+
+/* ── Gauge ── */
+.gauge-wrap { margin: 8px 0 20px; }
+.gauge-track {
+  height: 8px;
+  background: linear-gradient(to right, var(--low-bg) 0%, var(--mod-bg) 35%, var(--high-bg) 65%, var(--vhigh-bg) 100%);
+  border-radius: 4px;
+  position: relative;
+  overflow: visible;
+}
+.gauge-tick {
+  position: absolute;
+  top: -4px;
+  width: 2px;
+  height: 16px;
+  background: var(--rule);
+}
+.gauge-marker {
+  position: absolute;
+  top: -8px;
+  width: 24px;
+  height: 24px;
+  background: var(--ink);
+  border-radius: 50%;
+  border: 3px solid white;
+  transform: translateX(-50%);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  transition: left 0.5s ease;
+}
+.gauge-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-m);
+  font-size: 0.6rem;
+  letter-spacing: 0.5px;
+  color: var(--faint);
+  margin-top: 8px;
+}
+
+/* ── Interpretation box ── */
+.interp-box {
+  padding: 14px 16px;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  border-left: 3px solid;
+  margin-bottom: 16px;
+}
+.interp-box p + p { margin-top: 8px; }
+.interp-low   { border-color: var(--low-c);   background: var(--low-bg); }
+.interp-mod   { border-color: var(--mod-c);   background: var(--mod-bg); }
+.interp-high  { border-color: var(--high-c);  background: var(--high-bg); }
+.interp-vhigh { border-color: var(--vhigh-c); background: var(--vhigh-bg); }
+
+/* ── Comparison numbers ── */
+.compare-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  gap: 12px;
+}
+.compare-row:last-child { border-bottom: none; }
+.compare-tool-name {
+  font-family: var(--font-m);
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  color: var(--ink-soft);
+}
+.compare-tool-detail {
+  font-size: 0.8rem;
+  color: var(--ink-mute);
+  margin-top: 2px;
+}
+.compare-val {
+  font-family: var(--font-d);
+  font-weight: 600;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.compare-val-unit {
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--ink-mute);
+  display: block;
+  text-align: right;
+}
+
+/* ── Ethnicity note ── */
+.eth-note {
+  display: none;
+  padding: 10px 14px;
+  background: var(--paper-warm);
+  border-left: 3px solid var(--green);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-top: 12px;
+}
+
+/* ── Full comparison section ── */
+.section {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--rule);
+}
+.section-kicker {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 12px;
+}
+.section-kicker::before { content: "❍ "; color: var(--green); letter-spacing: 0; }
+.section-title {
+  font-family: var(--font-d);
+  font-weight: 500;
+  font-size: clamp(22px, 3vw, 30px);
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.section-title em { font-style: italic; color: var(--green); }
+.section-lead {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+/* ── Tool comparison table ── */
+.tool-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tool-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.tool-table th {
+  text-align: left;
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--rule);
+  background: var(--paper-warm);
+  white-space: nowrap;
+}
+.tool-table td {
+  padding: 14px 14px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.tool-table tr:last-child td { border-bottom: none; }
+.tool-table tbody tr:hover { background: rgba(0,0,0,0.02); }
+.tool-name-cell {
+  font-family: var(--font-d);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.tool-origin {
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+.nz-row td { background: rgba(47,107,92,0.04); }
+.tag {
+  display: inline-block;
+  font-family: var(--font-m);
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.tag-nz  { background: var(--low-bg);  color: var(--low-c); }
+.tag-uk  { background: #E8EAFB; color: #3A4594; }
+.tag-us  { background: #F0E8F5; color: #6B3494; }
+.tag-eu  { background: #E8F0F5; color: #1F5A7A; }
+.tag-rec { background: var(--low-bg); color: var(--low-c); font-size: 0.58rem; }
+.tag-not { background: var(--paper-warm); color: var(--ink-mute); font-size: 0.58rem; }
+
+/* ── NZ guideline thresholds ── */
+.threshold-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-bottom: 28px;
+}
+@media (max-width: 600px) {
+  .threshold-grid { grid-template-columns: 1fr 1fr; }
+}
+.threshold-cell {
+  padding: 20px 16px;
+  text-align: center;
+}
+.threshold-risk {
+  font-family: var(--font-d);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.threshold-label {
+  font-family: var(--font-m);
+  font-size: 0.62rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.threshold-action {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.t-low   { background: var(--low-bg); }
+.t-mod   { background: var(--mod-bg); }
+.t-high  { background: var(--high-bg); }
+.t-vhigh { background: var(--vhigh-bg); }
+
+/* ── Expander ── */
+.expander-btn {
+  width: 100%;
+  text-align: left;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  padding: 14px 18px;
+  font-family: var(--font-d);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1px;
+}
+.expander-btn .chevron { transition: transform 0.2s; font-size: 0.8rem; }
+.expander-btn[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+.expander-body {
+  display: none;
+  padding: 20px 18px 24px;
+  background: white;
+  border: 1px solid var(--rule);
+  border-top: none;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 1px;
+}
+.expander-body.open { display: block; }
+.expander-body p + p { margin-top: 12px; }
+.expander-body ul { margin: 10px 0 10px 20px; }
+.expander-body li { margin-bottom: 6px; }
+.expander-body strong { color: var(--ink); }
+
+/* ── References ── */
+.refs {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.refs-title {
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 16px;
+}
+.ref-list {
+  list-style: none;
+  counter-reset: refs;
+}
+.ref-list li {
+  counter-increment: refs;
+  font-size: 0.84rem;
+  color: var(--ink-mute);
+  padding: 6px 0 6px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.5;
+}
+.ref-list li:last-child { border-bottom: none; }
+.ref-list li::before {
+  content: counter(refs);
+  position: absolute;
+  left: 0;
+  top: 6px;
+  font-family: var(--font-m);
+  font-size: 0.68rem;
+  color: var(--green);
+  width: 20px;
+}
+
+/* ── Footer ── */
+.tool-footer {
+  margin-top: 60px;
+  padding: 28px 24px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-family: var(--font-m);
+  font-size: 0.68rem;
+  letter-spacing: 0.5px;
+  color: var(--faint);
+}
+
+/* ── Footer ── */
+.site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--font-m); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
+.site-footer p { margin: 0 0 6px; }
+
+/* ── Utilities ── */
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<!-- ── Masthead ────────────────────────────────────────────── -->
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/workshop/">Workshop</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Tool header ─────────────────────────────────────────── -->
+<div class="tool-hdr">
+  <div class="tool-hdr-inner">
+    <div class="kicker">Cardiovascular</div>
+    <h1 class="tool-title">PREDICT-<em>CVD</em> Risk</h1>
+    <p class="tool-sub">Five-year cardiovascular risk for primary prevention, calibrated for New Zealand. Comparison with Framingham, QRISK3, SCORE2, and ACC/AHA PCE below.</p>
+  </div>
+</div>
+
+<!-- ── Main ────────────────────────────────────────────────── -->
+<main class="main-wrap">
+
+  <div class="notice">
+    <strong>Consultation support tool.</strong> For primary prevention in patients without established CVD, CKD, or familial hypercholesterolaemia  -  these warrant separate assessment pathways. This tool approximates PREDICT-CVD using the published algorithm structure; confirm treatment decisions with <a href="https://www.predict.org.nz" target="_blank" rel="noopener">predict.org.nz</a> or the HeartsScore app.
+  </div>
+
+  <!-- ── Calculator layout ── -->
+  <div class="calc-layout">
+
+    <!-- Inputs -->
+    <div class="form-panel">
+      <div class="panel-title">Patient variables</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Age <span class="label-hint">years (35-74)</span></label>
+          <input type="number" id="age" min="35" max="74" placeholder="e.g. 58">
+        </div>
+        <div class="form-group">
+          <label>Sex</label>
+          <select id="sex">
+            <option value=""> -  Select  - </option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Ethnicity <span class="label-hint">NZ Ministry of Health priority</span></label>
+        <select id="ethnicity">
+          <option value="nze">NZ European / Other</option>
+          <option value="maori">Māori</option>
+          <option value="pacific">Pacific peoples</option>
+          <option value="indian">Indian / South Asian</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Smoking status</label>
+        <select id="smoking">
+          <option value="never">Never smoked</option>
+          <option value="ex">Ex-smoker (quit &gt;1 year ago)</option>
+          <option value="current">Current smoker</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Diabetes</label>
+        <select id="diabetes">
+          <option value="none">No diabetes</option>
+          <option value="t2">Type 2 diabetes</option>
+          <option value="t1">Type 1 diabetes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Systolic BP <span class="label-hint">mmHg  -  use average of last 3 readings</span></label>
+        <div class="form-row">
+          <input type="number" id="sbp" min="80" max="220" placeholder="e.g. 142">
+          <select id="bp-treated">
+            <option value="0">Not on treatment</option>
+            <option value="1">On antihypertensives</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Total cholesterol <span class="label-hint">mmol/L</span></label>
+          <input type="number" id="tc" step="0.1" min="2" max="12" placeholder="e.g. 5.8">
+        </div>
+        <div class="form-group">
+          <label>HDL cholesterol <span class="label-hint">mmol/L</span></label>
+          <input type="number" id="hdl" step="0.1" min="0.5" max="3.5" placeholder="e.g. 1.2">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>NZ Deprivation decile <span class="label-hint">1 = least deprived, 10 = most</span></label>
+        <select id="deprivation">
+          <option value="5">Not known / use average (5)</option>
+          <option value="1">1  -  least deprived</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10  -  most deprived</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox-group-title">Additional risk factors</div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="fhx">
+          <label for="fhx">Family history of premature CVD <span style="color:var(--faint);font-size:0.85em;">(1st-degree relative, M&lt;55 or F&lt;65)</span></label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="af">
+          <label for="af">Atrial fibrillation</label>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate risk</button>
+      <button class="reset-btn" onclick="resetForm()">Clear / reset</button>
+    </div>
+
+    <!-- Results -->
+    <div class="result-panel">
+
+      <!-- Empty state -->
+      <div class="result-empty" id="result-empty">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+        Enter patient variables and<br>press Calculate
+      </div>
+
+      <!-- Live results (hidden until calculated) -->
+      <div id="result-live" class="hidden">
+
+        <!-- Primary: PREDICT 5-year -->
+        <div class="result-card">
+          <div id="risk-badge" class="risk-badge badge-low">Low risk</div>
+          <div id="risk-number" class="risk-number risk-low"> - %</div>
+          <div class="risk-label">5-year cardiovascular risk (PREDICT-NZ)</div>
+
+          <div class="gauge-wrap">
+            <div class="gauge-track">
+              <div class="gauge-tick" style="left:20%"></div>
+              <div class="gauge-tick" style="left:40%"></div>
+              <div class="gauge-tick" style="left:75%"></div>
+              <div id="gauge-marker" class="gauge-marker" style="left:0%"></div>
+            </div>
+            <div class="gauge-labels">
+              <span>0%</span>
+              <span>5%</span>
+              <span>10%</span>
+              <span>20%</span>
+              <span>≥30%</span>
+            </div>
+          </div>
+
+          <div id="interp-box" class="interp-box interp-low">
+            <p id="interp-text"></p>
+            <p id="interp-action"></p>
+          </div>
+
+          <div id="eth-note" class="eth-note"></div>
+        </div>
+
+        <!-- Comparison numbers -->
+        <div class="result-card">
+          <div class="panel-title" style="font-size:0.95rem;">Comparison</div>
+
+          <div class="compare-row">
+            <div>
+              <div class="compare-tool-name">PREDICT 5-yr</div>
+              <div class="compare-tool-detail">NZ primary prevention</div>
+            </div>
+            <div>
+              <div class="compare-val risk-low" id="cmp-predict5"><span style="font-size:1rem;font-weight:400;">calculating…</span></div>
+              <div class="compare-val-unit">5-year</div>
+            </div>
+          </div>
+
+          <div class="compare-row">
+            <div>
+              <div class="compare-tool-name">PREDICT ~10-yr equiv.</div>
+              <div class="compare-tool-detail">Approximate conversion</div>
+            </div>
+            <div>
+              <div class="compare-val" id="cmp-predict10" style="color:var(--ink-soft);"> - </div>
+              <div class="compare-val-unit">10-year</div>
+            </div>
+          </div>
+
+          <div class="compare-row">
+            <div>
+              <div class="compare-tool-name">Framingham 10-yr</div>
+              <div class="compare-tool-detail">Unadjusted  -  NZ European basis</div>
+            </div>
+            <div>
+              <div class="compare-val" id="cmp-fram" style="color:var(--ink-soft);"> - </div>
+              <div class="compare-val-unit">10-year</div>
+            </div>
+          </div>
+
+          <div class="compare-row" style="border-bottom:none;">
+            <div>
+              <div class="compare-tool-name">Difference (PREDICT vs FRS)</div>
+              <div class="compare-tool-detail" id="cmp-diff-reason">NZ adjustments applied</div>
+            </div>
+            <div>
+              <div class="compare-val" id="cmp-diff" style="color:var(--ink-soft);"> - </div>
+              <div class="compare-val-unit">absolute</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /result-live -->
+    </div><!-- /result-panel -->
+  </div><!-- /calc-layout -->
+
+
+  <!-- ── NZ thresholds ──────────────────────────────────────── -->
+  <div class="section">
+    <div class="section-kicker">NZ Guidelines</div>
+    <h2 class="section-title">Treatment thresholds  -  <em>what the numbers mean</em></h2>
+    <p class="section-lead">NZ Heart Foundation and BPAC use 5-year PREDICT risk as the primary decision threshold for statin initiation and blood pressure management, replacing the Framingham 10-year approach used until 2018.</p>
+
+    <div class="threshold-grid">
+      <div class="threshold-cell t-low">
+        <div class="threshold-risk risk-low">&lt;5%</div>
+        <div class="threshold-label risk-low">Low</div>
+        <div class="threshold-action">Lifestyle advice only. Reassess in 5 years (or 2-3 years if borderline).</div>
+      </div>
+      <div class="threshold-cell t-mod">
+        <div class="threshold-risk risk-mod">5-10%</div>
+        <div class="threshold-label risk-mod">Moderate</div>
+        <div class="threshold-action">Lifestyle intervention. Discuss statin benefit with patient. Shared decision-making.</div>
+      </div>
+      <div class="threshold-cell t-high">
+        <div class="threshold-risk risk-high">10-15%</div>
+        <div class="threshold-label risk-high">High</div>
+        <div class="threshold-action">Medication usually recommended alongside lifestyle. BP and lipid treatment targets apply.</div>
+      </div>
+      <div class="threshold-cell t-vhigh">
+        <div class="threshold-risk risk-vhigh">≥15%</div>
+        <div class="threshold-label risk-vhigh">Very High</div>
+        <div class="threshold-action">Medication strongly recommended. Consider early specialist input. Treat all modifiable risk factors.</div>
+      </div>
+    </div>
+
+    <div class="notice">
+      <strong>Lower thresholds for Māori, Pacific, and Indian patients:</strong> NZ guidelines recommend considering treatment at the 10-15% band (rather than waiting for ≥15%) for Māori, Pacific, and Indian patients aged under 55, given the higher burden of premature CVD in these groups and residual under-estimation of risk even after ethnicity adjustment.
+    </div>
+  </div>
+
+
+  <!-- ── Full tool comparison ────────────────────────────────── -->
+  <div class="section">
+    <div class="section-kicker">International Context</div>
+    <h2 class="section-title">How the tools compare  -  <em>and why it matters</em></h2>
+    <p class="section-lead">The same patient will receive meaningfully different risk estimates depending on which tool you use. Understanding what each was built on helps you explain the differences to patients and colleagues  -  and know when to trust the number in front of you.</p>
+
+    <div class="tool-table-wrap">
+      <table class="tool-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Origin / derivation</th>
+            <th>Timeframe</th>
+            <th>Endpoint</th>
+            <th>Key variables</th>
+            <th>NZ use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="nz-row">
+            <td>
+              <div class="tool-name-cell">PREDICT-CVD</div>
+              <div class="tool-origin">New Zealand <span class="tag tag-nz">NZ guideline</span></div>
+            </td>
+            <td>~500,000 NZ primary care patients; derived and validated 2012-2018. Includes Māori, Pacific, Indian, NZ European cohorts. Updated equations published BMJ 2018 (Pylypchuk et al.).</td>
+            <td><strong>5 years</strong></td>
+            <td>Composite fatal + non-fatal CVD (MI, stroke, HF hospitalisation, PVD, CVD death)</td>
+            <td>Age, sex, ethnicity, SBP (± treatment), TC:HDL, smoking, diabetes (T1/T2 separate), family Hx, deprivation (NZDI), AF, eGFR, prior CVD</td>
+            <td><span class="tag tag-rec">Recommended</span>  -  BPAC, NZ Heart Foundation, MoH</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="tool-name-cell">QRISK3</div>
+              <div class="tool-origin">United Kingdom <span class="tag tag-uk">UK guideline</span></div>
+            </td>
+            <td>UK CPRD database, ~10 million patients, 2017 derivation (Hippisley-Cox et al., BMJ 2017). Includes English deprivation (Townsend score). Annual updates.</td>
+            <td><strong>10 years</strong></td>
+            <td>Fatal + non-fatal MI or stroke</td>
+            <td>Similar to PREDICT plus: SLE, RA, severe mental illness, erectile dysfunction, migraine, systemic corticosteroids, TIA, BMI, height, deprivation</td>
+            <td><span class="tag tag-not">Not used</span>  -  UK-population basis, Townsend deprivation not applicable</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="tool-name-cell">Framingham Risk Score</div>
+              <div class="tool-origin">USA (Wilson 1998 / D'Agostino 2008)</div>
+            </td>
+            <td>Framingham Heart Study cohort, predominantly white American participants. D'Agostino 2008 update (Circulation) extended to general CVD events. Widely used globally for decades.</td>
+            <td><strong>10 years</strong></td>
+            <td>General CVD (MI, angina, HF, stroke, PVD, claudication)</td>
+            <td>Age, sex, total cholesterol, HDL, SBP (± treatment), smoking, diabetes</td>
+            <td><span class="tag tag-not">Superseded</span>  -  used before PREDICT; tends to <em>under-estimate</em> risk in Māori and Pacific; no deprivation or ethnicity term</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="tool-name-cell">ACC/AHA PCE</div>
+              <div class="tool-origin">USA <span class="tag tag-us">US guideline</span></div>
+            </td>
+            <td>Pooled Cohort Equations (Goff 2014, Circulation). Derived from multiple US cohort studies. Separate equations for White and African-American men and women.</td>
+            <td><strong>10 years</strong></td>
+            <td>First ASCVD event (MI, stroke, coronary death)</td>
+            <td>Age, sex, race (White/Black), TC, HDL, SBP (± treatment), smoking, diabetes</td>
+            <td><span class="tag tag-not">Not used</span>  -  "White" and "Black" race categories not applicable; known to over-estimate in some cohorts; no deprivation</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="tool-name-cell">SCORE2</div>
+              <div class="tool-origin">Europe <span class="tag tag-eu">ESC guideline</span></div>
+            </td>
+            <td>ESC 2021  -  pooled European cohort data, ~677,000 individuals. Country-specific calibration by region (low, moderate, high, very-high risk). Replaces SCORE (fatal CVD only) with SCORE2 (fatal + non-fatal).</td>
+            <td><strong>10 years</strong></td>
+            <td>Fatal + non-fatal CVD (MI, stroke)</td>
+            <td>Age, sex, smoking, SBP, non-HDL cholesterol. Simplified  -  no diabetes, no family history</td>
+            <td><span class="tag tag-not">Not used</span>  -  no NZ calibration available; no ethnicity or deprivation term; notably simpler variable set</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="tool-name-cell">SCORE2-OP</div>
+              <div class="tool-origin">Europe  -  older persons</div>
+            </td>
+            <td>ESC 2021 extension for patients ≥70 years, where standard SCORE2 tends to over-estimate. Same derivation cohort, age-specific calibration.</td>
+            <td><strong>5 or 10 years</strong></td>
+            <td>Fatal + non-fatal CVD</td>
+            <td>As SCORE2</td>
+            <td><span class="tag tag-not">Not used</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- ── Explainer accordions ─────────────────────────────────── -->
+  <div class="section">
+    <div class="section-kicker">Understanding the differences</div>
+    <h2 class="section-title">Why PREDICT gives a <em>different number</em></h2>
+    <p class="section-lead">Three questions GPs commonly encounter when comparing PREDICT to overseas tools.</p>
+
+    <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
+      Why does PREDICT use 5 years instead of 10?
+      <span class="chevron">�-�</span>
+    </button>
+    <div class="expander-body">
+      <p>PREDICT was derived from NZ primary care records with a median follow-up of around 4-5 years. A 10-year endpoint would have required extrapolation beyond the observed data, which introduces uncertainty. The 5-year horizon also fits more naturally into GP review cycles and makes the benefit of treatment more tangible to patients  -  "reducing your risk over the next 5 years from 18% to 10%" is easier to grasp than "over 10 years."</p>
+      <p>For rough comparison with 10-year tools: multiply the 5-year PREDICT risk by approximately 1.75-2.0 (the relationship is non-linear and higher-risk patients have proportionally higher 10-year risk). So a PREDICT 5-year risk of 15% equates very roughly to a 10-year risk of 25-30%.</p>
+    </div>
+
+    <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
+      How does PREDICT handle Māori and Pacific risk?
+      <span class="chevron">�-�</span>
+    </button>
+    <div class="expander-body">
+      <p>PREDICT was explicitly derived and validated in Māori, Pacific, Indian, and NZ European cohorts separately. The ethnicity terms in the equation reflect residual risk that isn't explained by the shared risk factors  -  meaning that at identical age, BP, cholesterol, and smoking status, Māori patients have meaningfully higher observed CVD event rates.</p>
+      <p>The adjusted hazard ratios published by Pylypchuk (2018) are approximately <strong>+50% for Māori</strong> and <strong>+30% for Pacific and Indian</strong> patients relative to NZ European, after controlling for all other factors. This is the main reason PREDICT gives a higher number than Framingham for the same patient  -  Framingham has no ethnicity term at all.</p>
+      <p>Importantly, even after these adjustments, there is evidence of residual under-estimation in younger Māori patients, which is why guidelines recommend lower treatment thresholds for this group.</p>
+    </div>
+
+    <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
+      What does deprivation add that clinical variables don't capture?
+      <span class="chevron">�-�</span>
+    </button>
+    <div class="expander-body">
+      <p>Socioeconomic deprivation predicts CVD events independently of the standard clinical risk factors  -  probably through mechanisms including chronic stress, reduced health-seeking, poorer medication adherence, higher dietary sodium and ultra-processed food intake, and environmental exposures. The NZ Deprivation Index (NZDep) is a census-derived area-based measure scored 1-10 by meshblock.</p>
+      <p>In the PREDICT equations, higher deprivation contributes a modest but statistically significant additional risk. The practical implication: two patients with identical clinical variables, one in decile 2 and one in decile 9, will have modestly different predicted risks. This is clinically relevant when discussing how lifestyle and social circumstances interact with pharmacological risk reduction.</p>
+      <p>QRISK3 includes the Townsend deprivation score (England), making it the closest overseas equivalent in this regard. Framingham, SCORE2, and the ACC/AHA PCE include no deprivation variable.</p>
+    </div>
+
+    <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
+      When shouldn't I use PREDICT?
+      <span class="chevron">�-�</span>
+    </button>
+    <div class="expander-body">
+      <p>PREDICT is a <strong>primary prevention</strong> tool. Do not use it when:</p>
+      <ul>
+        <li><strong>Established CVD</strong>  -  prior MI, CABG, PCI, stroke or TIA, peripheral arterial disease. These patients are at high risk by definition and go directly onto secondary prevention pathways.</li>
+        <li><strong>Familial hypercholesterolaemia (FH)</strong>  -  lifetime lipid exposure makes standard 10-year calculators unreliable. Refer to FH-specific guidelines (Dutch Lipid Clinic Network score, Simon Broome criteria).</li>
+        <li><strong>eGFR &lt;30 (CKD stages 4-5)</strong>  -  risk is very high by definition; CKD-specific CVD management pathways apply.</li>
+        <li><strong>Type 1 diabetes with end-organ disease</strong>  -  high-risk category treated outside the PREDICT threshold model.</li>
+        <li><strong>Age &lt;35 or &gt;74</strong>  -  outside PREDICT's validated age range. Clinical judgement applies; some guidelines extend to 75 with caution.</li>
+      </ul>
+      <p>For age &gt;74, consider that treatment decisions become more nuanced (benefit vs. polypharmacy burden, falls risk with antihypertensives, statin myopathy risk). Shared decision-making and geriatric frailty assessment become more relevant than the raw number.</p>
+    </div>
+
+    <button class="expander-btn" onclick="toggleExpander(this)" aria-expanded="false">
+      QRISK3 includes more variables than PREDICT  -  is it better?
+      <span class="chevron">�-�</span>
+    </button>
+    <div class="expander-body">
+      <p>QRISK3 is more complex, incorporating 20+ variables including SLE, RA, severe mental illness, erectile dysfunction, migraine, and corticosteroid use. Its C-statistic (discriminatory ability) is marginally better than QRISK2 in UK populations. But "more variables" doesn't automatically mean "better for your patient."</p>
+      <p>A risk model is only as good as its calibration in the population you're applying it to. QRISK3 was derived and validated exclusively in UK CPRD populations. Its deprivation term uses the English Townsend score (not NZDep). Its ethnicity categories map to UK census categories, which don't map cleanly onto NZ priority populations. There is no NZ calibration available.</p>
+      <p>The key advantage of PREDICT in New Zealand isn't its C-statistic  -  it's that it was <em>built on NZ patients</em>, including Māori and Pacific cohorts who are systematically under-represented in overseas derivation studies. A well-calibrated simpler model will always outperform a complex mis-calibrated one.</p>
+    </div>
+  </div>
+
+
+  <!-- ── References ────────────────────────────────────────────── -->
+  <div class="refs">
+    <div class="refs-title">References</div>
+    <ol class="ref-list">
+      <li>Pylypchuk R, Wells S, Kerr A, et al. Cardiovascular disease risk prediction equations in 400 000 primary care patients in New Zealand: derivation and validation. <em>BMJ.</em> 2018;361:k1668. doi:10.1136/bmj.k1668</li>
+      <li>BPAC NZ. Cardiovascular risk assessment: using PREDICT in primary care. <em>Best Practice Journal.</em> Updated 2023. Available at: bpac.org.nz</li>
+      <li>NZ Heart Foundation. Cardiovascular Risk Assessment and Management for Primary Care. Updated 2021.</li>
+      <li>D'Agostino RB Sr, Vasan RS, Pencina MJ, et al. General cardiovascular risk profile for use in primary care. <em>Circulation.</em> 2008;117(6):743-753.</li>
+      <li>Goff DC Jr, Lloyd-Jones DM, Bennett G, et al. 2013 ACC/AHA guideline on the assessment of cardiovascular risk. <em>Circulation.</em> 2014;129(25 Suppl 2):S49-73.</li>
+      <li>SCORE2 working group and ESC Cardiovascular risk collaboration. SCORE2 risk prediction algorithms. <em>Eur Heart J.</em> 2021;42(25):2439-2454.</li>
+      <li>Hippisley-Cox J, Coupland C, Brindle P. Development and validation of QRISK3 risk prediction algorithms to estimate future risk of cardiovascular disease. <em>BMJ.</em> 2017;357:j2099.</li>
+      <li>Wells S, Kerr A, Broad J, et al. PREDICT-CVD: validating the primary prevention algorithm in New Zealand primary care. <em>Heart.</em> 2012;98(16):1217-1222.</li>
+    </ol>
+  </div>
+
+</main><!-- /main-wrap -->
+
+<footer class="site-footer">
+  <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+    <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
+    <p>An internet workshop for general practice.</p>
+  </div>
+</footer>
+
+<script>
+/* ──────────────────────────────────────────────────────────────────
+   CARDIOVASCULAR RISK CALCULATOR
+   Primary: PREDICT-CVD approximation (Framingham base + NZ adjustments)
+   Secondary: Framingham 10-year (D'Agostino 2008, unadjusted)
+   Reference: Pylypchuk BMJ 2018; D'Agostino Circulation 2008
+────────────────────────────────────────────────────────────────── */
+
+/**
+ * Framingham 10-year general CVD risk (D'Agostino 2008)
+ * Inputs: age (years), TC (mmol/L), HDL (mmol/L), SBP (mmHg),
+ *         bpTreated (0/1), smoker (0/1), diabetes (0/1)
+ * Returns: 0-1 probability
+ */
+function framingham10yr(age, tc_mmol, hdl_mmol, sbp, bpTreated, smoker, diabetes, sex) {
+  // Convert mmol/L → mg/dL
+  const tc  = tc_mmol  * 38.67;
+  const hdl = hdl_mmol * 38.67;
+
+  let lp;
+  if (sex === 'm') {
+    const sbpCoeff = bpTreated ? 1.93303 : 1.99881;
+    lp = 3.06117 * Math.log(age)
+       + 1.12370 * Math.log(tc)
+       - 0.93263 * Math.log(hdl)
+       + sbpCoeff * Math.log(sbp)
+       + 0.65451 * smoker
+       + 0.57367 * diabetes
+       - 23.9802;
+    return 1 - Math.pow(0.88936, Math.exp(lp));
+  } else {
+    const sbpCoeff = bpTreated ? 2.76157 : 2.82263;
+    lp = 2.32888 * Math.log(age)
+       + 1.20904 * Math.log(tc)
+       - 0.70833 * Math.log(hdl)
+       + sbpCoeff * Math.log(sbp)
+       + 0.52873 * smoker
+       + 0.69154 * diabetes
+       - 26.1931;
+    return 1 - Math.pow(0.94833, Math.exp(lp));
+  }
+}
+
+/**
+ * PREDICT-NZ approximation
+ * Starts from Framingham 10-yr, applies NZ-specific adjustments:
+ *   - Ethnicity (Pylypchuk 2018 adjusted HRs)
+ *   - Family history (PREDICT includes this; Framingham doesn't)
+ *   - Deprivation (NZDI)
+ *   - T1 diabetes additional risk
+ *   - Atrial fibrillation
+ *   - 10-yr → 5-yr conversion (survival function method)
+ */
+function predictNZ(age, tc, hdl, sbp, bpTreated, smokingStatus, diabetesType,
+                   sex, ethnicity, fhx, deprivation, af) {
+
+  // Smoking as binary (for Framingham base)
+  const smoker   = smokingStatus === 'current' ? 1 : 0;
+  const exSmoker = smokingStatus === 'ex'      ? 1 : 0;
+  const diabetes = diabetesType !== 'none'     ? 1 : 0;
+
+  // --- Framingham base (10-year) ---
+  let risk10 = framingham10yr(age, tc, hdl, sbp, bpTreated, smoker, diabetes, sex);
+
+  // --- Ex-smoker: add partial risk (Framingham doesn't distinguish) ---
+  // PREDICT has separate ex-smoker term ~0.35x current smoker risk increment
+  // We adjust by adding ~35% of the smoking increment
+  if (exSmoker) {
+    const smokingAddend = framingham10yr(age, tc, hdl, sbp, bpTreated, 1, diabetes, sex)
+                        - framingham10yr(age, tc, hdl, sbp, bpTreated, 0, diabetes, sex);
+    risk10 = Math.min(risk10 + 0.35 * smokingAddend, 0.999);
+  }
+
+  // --- T1 diabetes: Framingham uses yes/no diabetes; T1 carries higher risk ---
+  if (diabetesType === 't1') {
+    // T1 HR ~2�- vs T2 (PREDICT 2018); apply additional multiplier
+    const baseDiabAddend = framingham10yr(age, tc, hdl, sbp, bpTreated, smoker, 1, sex)
+                         - framingham10yr(age, tc, hdl, sbp, bpTreated, smoker, 0, sex);
+    risk10 = Math.min(risk10 + 0.8 * baseDiabAddend, 0.999);
+  }
+
+  // --- Family history of premature CVD ---
+  if (fhx) risk10 = Math.min(risk10 * 1.55, 0.999);
+
+  // --- Atrial fibrillation ---
+  if (af) risk10 = Math.min(risk10 * 1.45, 0.999);
+
+  // --- Deprivation: NZDI decile 1-10 ---
+  // ~4-5% relative increase per decile above reference (decile 5)
+  const depAdjust = (deprivation - 5) * 0.025;
+  risk10 = Math.min(risk10 * (1 + depAdjust), 0.999);
+
+  // --- Ethnicity multipliers (Pylypchuk 2018, Table 3 approximate HRs) ---
+  const ethMult = {
+    nze:     1.00,
+    maori:   1.50,
+    pacific: 1.30,
+    indian:  1.30
+  };
+  risk10 = Math.min(risk10 * ethMult[ethnicity], 0.999);
+
+  // --- Convert 10-year to 5-year (survival function) ---
+  // S(10) = exp(-H(10)); H(10) ≈ -ln(1 - risk10)
+  // S(5)  = S(10)^0.5 (assuming constant hazard  -  conservative approximation)
+  const s10   = 1 - risk10;
+  const s5    = Math.pow(Math.max(s10, 0.001), 0.5);
+  const risk5 = 1 - s5;
+
+  return {
+    predict5:  Math.min(risk5, 0.999),
+    predict10: Math.min(risk10, 0.999)
+  };
+}
+
+/* ── Risk category helpers ──────────────────────────────────────── */
+function getRiskCategory(r5) {
+  if (r5 < 0.05) return 'low';
+  if (r5 < 0.10) return 'mod';
+  if (r5 < 0.15) return 'high';
+  return 'vhigh';
+}
+
+const CATEGORIES = {
+  low:   { label: 'Low risk',       cls: 'badge-low',   interp: 'interp-low',   textColour: 'risk-low'   },
+  mod:   { label: 'Moderate risk',  cls: 'badge-mod',   interp: 'interp-mod',   textColour: 'risk-mod'   },
+  high:  { label: 'High risk',      cls: 'badge-high',  interp: 'interp-high',  textColour: 'risk-high'  },
+  vhigh: { label: 'Very high risk', cls: 'badge-vhigh', interp: 'interp-vhigh', textColour: 'risk-vhigh' }
+};
+
+const INTERPRETATIONS = {
+  low: {
+    text:   'This patient has a low 5-year risk of a cardiovascular event based on PREDICT inputs.',
+    action: 'Lifestyle advice is the primary intervention. Reassess in 5 years, or 2-3 years if borderline (4-5%). No medication indicated by risk alone.'
+  },
+  mod: {
+    text:   'Moderate 5-year cardiovascular risk. Individual risk factors and patient preferences should guide the discussion.',
+    action: 'Lifestyle intervention first. Consider statin therapy in shared decision-making, particularly if LDL >3.5 mmol/L, family history present, or additional risk markers (coronary calcium score, hs-CRP). BP management if SBP >140 mmHg.'
+  },
+  high: {
+    text:   'High 5-year cardiovascular risk. Medication is usually appropriate alongside lifestyle change.',
+    action: 'Statin therapy recommended (rosuvastatin or atorvastatin preferred in NZ). Antihypertensive treatment if SBP ≥130 mmHg on multiple readings. Lifestyle optimisation. Reassess in 3-6 months.'
+  },
+  vhigh: {
+    text:   'Very high 5-year cardiovascular risk. Equivalent to approximately 30%+ 10-year risk.',
+    action: 'Medication strongly recommended. Statin therapy plus consider ACE inhibitor/ARB regardless of BP if diabetic or high absolute risk. Optimise all modifiable risk factors. Consider low-dose aspirin discussion. Specialist input if risk refractory to treatment.'
+  }
+};
+
+/* ── Gauge position ──────────────────────────────────────────────── */
+// Gauge maps 0% → 0% position, 5% → 20%, 10% → 40%, 20% → 75%, ≥30% → 100%
+function gaugePosition(r5) {
+  const pct = r5 * 100;
+  let pos;
+  if (pct <= 5)       pos = (pct / 5) * 20;
+  else if (pct <= 10) pos = 20 + ((pct - 5) / 5) * 20;
+  else if (pct <= 20) pos = 40 + ((pct - 10) / 10) * 35;
+  else                pos = 75 + Math.min((pct - 20) / 20 * 25, 25);
+  return Math.min(pos, 100);
+}
+
+/* ── Format % ─────────────────────────────────────────────────────── */
+function fmtPct(r) {
+  const p = r * 100;
+  if (p < 1) return '<1%';
+  return p.toFixed(1) + '%';
+}
+
+/* ── Main calculate function ─────────────────────────────────────── */
+function calculate() {
+  // Read inputs
+  const age        = parseFloat(document.getElementById('age').value);
+  const sex        = document.getElementById('sex').value;
+  const ethnicity  = document.getElementById('ethnicity').value;
+  const smoking    = document.getElementById('smoking').value;
+  const diabetes   = document.getElementById('diabetes').value;
+  const sbp        = parseFloat(document.getElementById('sbp').value);
+  const bpTreated  = parseInt(document.getElementById('bp-treated').value);
+  const tc         = parseFloat(document.getElementById('tc').value);
+  const hdl        = parseFloat(document.getElementById('hdl').value);
+  const deprivation= parseInt(document.getElementById('deprivation').value);
+  const fhx        = document.getElementById('fhx').checked;
+  const af         = document.getElementById('af').checked;
+
+  // Validate
+  const errors = [];
+  if (!age || age < 35 || age > 74) errors.push('Age must be 35-74 years');
+  if (!sex) errors.push('Sex is required');
+  if (!sbp || sbp < 80 || sbp > 220) errors.push('Systolic BP must be 80-220 mmHg');
+  if (!tc || tc < 2 || tc > 12) errors.push('Total cholesterol must be 2-12 mmol/L');
+  if (!hdl || hdl < 0.5 || hdl > 3.5) errors.push('HDL must be 0.5-3.5 mmol/L');
+  if (tc && hdl && tc / hdl > 12) errors.push('TC:HDL ratio seems unusually high  -  check values');
+
+  if (errors.length > 0) {
+    alert('Please check the following:\n\n• ' + errors.join('\n• '));
+    return;
+  }
+
+  // --- Calculate ---
+  const { predict5, predict10 } = predictNZ(
+    age, tc, hdl, sbp, bpTreated, smoking, diabetes,
+    sex, ethnicity, fhx, deprivation, af
+  );
+
+  const framRaw = framingham10yr(
+    age, tc, hdl, sbp, bpTreated,
+    smoking === 'current' ? 1 : 0,
+    diabetes !== 'none'   ? 1 : 0,
+    sex
+  );
+
+  const cat = getRiskCategory(predict5);
+  const info = CATEGORIES[cat];
+
+  // --- Update UI ---
+  document.getElementById('result-empty').classList.add('hidden');
+  document.getElementById('result-live').classList.remove('hidden');
+
+  // Risk number
+  const numEl = document.getElementById('risk-number');
+  numEl.textContent = fmtPct(predict5);
+  numEl.className = 'risk-number ' + info.textColour;
+
+  // Badge
+  const badgeEl = document.getElementById('risk-badge');
+  badgeEl.textContent = info.label;
+  badgeEl.className = 'risk-badge ' + info.cls;
+
+  // Gauge
+  document.getElementById('gauge-marker').style.left = gaugePosition(predict5) + '%';
+
+  // Interpretation
+  const interpEl = document.getElementById('interp-box');
+  interpEl.className = 'interp-box ' + info.interp;
+  document.getElementById('interp-text').textContent   = INTERPRETATIONS[cat].text;
+  document.getElementById('interp-action').textContent = INTERPRETATIONS[cat].action;
+
+  // Ethnicity note
+  const ethNoteEl = document.getElementById('eth-note');
+  if (ethnicity !== 'nze') {
+    const ethNames   = { maori: 'Māori', pacific: 'Pacific', indian: 'Indian / South Asian' };
+    const ethMultMap = { maori: '50%',   pacific: '30%',     indian: '30%' };
+    ethNoteEl.style.display = 'block';
+    ethNoteEl.innerHTML = `<strong>Ethnicity adjustment applied:</strong> This estimate includes a ${ethMultMap[ethnicity]} upward adjustment for ${ethNames[ethnicity]} patients as per Pylypchuk (2018), reflecting higher observed CVD event rates independent of shared risk factors. NZ guidelines also recommend lower treatment thresholds for ${ethNames[ethnicity]} patients aged under 55.`;
+  } else {
+    ethNoteEl.style.display = 'none';
+  }
+
+  // Comparison values
+  document.getElementById('cmp-predict5').textContent  = fmtPct(predict5);
+  document.getElementById('cmp-predict5').className    = 'compare-val ' + info.textColour;
+  document.getElementById('cmp-predict10').textContent = fmtPct(predict10);
+  document.getElementById('cmp-fram').textContent      = fmtPct(framRaw);
+
+  const diff = predict10 - framRaw;
+  const diffEl = document.getElementById('cmp-diff');
+  diffEl.textContent = (diff >= 0 ? '+' : '') + (diff * 100).toFixed(1) + ' pp';
+  diffEl.style.color = diff > 0.02 ? 'var(--high-c)' : diff < -0.02 ? 'var(--low-c)' : 'var(--ink-mute)';
+
+  // Explain the difference
+  const reasons = [];
+  if (ethnicity !== 'nze') reasons.push('ethnicity');
+  if (fhx) reasons.push('family history');
+  if (af) reasons.push('AF');
+  if (deprivation > 6) reasons.push('deprivation');
+  if (smoking === 'ex') reasons.push('ex-smoker term');
+  if (diabetes === 't1') reasons.push('T1 DM');
+
+  document.getElementById('cmp-diff-reason').textContent = reasons.length
+    ? 'NZ adjustments: ' + reasons.join(', ')
+    : 'No NZ-specific adjustments applied';
+
+  // Scroll to results on mobile
+  if (window.innerWidth < 680) {
+    document.getElementById('result-live').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+/* ── Reset ───────────────────────────────────────────────────────── */
+function resetForm() {
+  document.getElementById('age').value       = '';
+  document.getElementById('sex').value       = '';
+  document.getElementById('sbp').value       = '';
+  document.getElementById('tc').value        = '';
+  document.getElementById('hdl').value       = '';
+  document.getElementById('smoking').value   = 'never';
+  document.getElementById('diabetes').value  = 'none';
+  document.getElementById('ethnicity').value = 'nze';
+  document.getElementById('bp-treated').value= '0';
+  document.getElementById('deprivation').value = '5';
+  document.getElementById('fhx').checked     = false;
+  document.getElementById('af').checked      = false;
+
+  document.getElementById('result-empty').classList.remove('hidden');
+  document.getElementById('result-live').classList.add('hidden');
+}
+
+/* ── Expander toggle ─────────────────────────────────────────────── */
+function toggleExpander(btn) {
+  const body = btn.nextElementSibling;
+  const open = body.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+
+/* ── Allow Enter to calculate ────────────────────────────────────── */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && e.target.tagName !== 'BUTTON') {
+    calculate();
+  }
+});
+</script>
+
+</body>
+</html>

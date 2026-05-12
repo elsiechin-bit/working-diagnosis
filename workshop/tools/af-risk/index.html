@@ -1,0 +1,773 @@
+---
+permalink: /workshop/tools/af-risk/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AF Risk | CHA2DS2-VASc + HAS-BLED | Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Design tokens (mirror site palette) ---- */
+    :root {
+      --paper:      #F5F1E8;
+      --paper-warm: #EDE7D8;
+      --paper-deep: #E4DBC4;
+      --ink:        #1A1F1C;
+      --ink-soft:   #3A4540;
+      --ink-mute:   #6B7A75;
+      --green:      #2F6B5C;
+      --green-deep: #1F4A3F;
+      --ochre:      #B8714F;
+      --rule:       #D9D1BD;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body:    'Newsreader', Georgia, serif;
+      --font-mono:    'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    /* ---- Masthead ---- */
+    .masthead {
+      border-bottom: 1px solid var(--rule);
+      padding: 1rem 0;
+    }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .masthead-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .brand-name em {
+      font-style: italic;
+      color: var(--green);
+    }
+    .primary-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .primary-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.67rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      text-decoration: none;
+      color: var(--ink-soft);
+    }
+    .primary-nav a:hover { color: var(--green); }
+
+    /* ---- Page header ---- */
+    .page-header {
+      padding: 2.25rem 0 1.5rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 2rem;
+    }
+    .kicker {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ochre);
+      margin-bottom: 0.4rem;
+    }
+    .page-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+    .workshop-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: var(--green);
+      color: #fff;
+      padding: 0.15rem 0.45rem;
+      border-radius: 2px;
+      margin-left: 0.6rem;
+      vertical-align: middle;
+      position: relative;
+      top: -3px;
+    }
+    .page-subtitle {
+      margin-top: 0.5rem;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      max-width: 54ch;
+    }
+
+    /* ---- Calculator grid ---- */
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    @media (max-width: 680px) {
+      .calc-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---- Score card ---- */
+    .score-card {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .score-card-header {
+      padding: 0.85rem 1.2rem;
+      background: var(--paper-warm);
+      border-bottom: 1px solid var(--rule);
+    }
+    .score-card-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .score-card-meta {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--ink-mute);
+      margin-top: 0.1rem;
+    }
+
+    /* ---- Criteria ---- */
+    .criteria-list {
+      flex: 1;
+    }
+    .criterion-group-label {
+      padding: 0.3rem 1.2rem 0.2rem;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-mute);
+      background: var(--paper);
+      border-bottom: 1px solid var(--paper-deep);
+      border-top: 1px solid var(--paper-deep);
+    }
+    .criterion {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      padding: 0.5rem 1.2rem;
+      border-bottom: 1px solid var(--paper-deep);
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    .criterion:last-child { border-bottom: none; }
+    .criterion:hover { background: var(--paper); }
+    .criterion input[type="checkbox"] {
+      margin-top: 0.2rem;
+      accent-color: var(--green);
+      width: 0.95rem;
+      height: 0.95rem;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .criterion-body {
+      flex: 1;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      color: var(--ink-soft);
+      cursor: pointer;
+    }
+    .criterion-body strong {
+      display: block;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .criterion-body .note {
+      font-size: 0.77rem;
+      color: var(--ink-mute);
+      margin-top: 0.1rem;
+    }
+    .criterion-pts {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--ink-mute);
+      flex-shrink: 0;
+      padding-top: 0.15rem;
+    }
+
+    /* ---- Score display ---- */
+    .score-display {
+      padding: 0.9rem 1.2rem;
+      background: var(--paper-warm);
+      border-top: 2px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .score-number {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--green);
+      transition: color 0.2s;
+    }
+    .score-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--ink-mute);
+      margin-top: 0.2rem;
+    }
+    .score-aside {
+      text-align: right;
+      font-size: 0.8rem;
+      color: var(--ink-mute);
+      line-height: 1.4;
+    }
+
+    /* ---- Interpretation panel ---- */
+    .interp-panel {
+      margin-top: 1.25rem;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .interp-panel-header {
+      padding: 0.65rem 1.2rem;
+      background: var(--paper-warm);
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-mute);
+    }
+    .interp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    @media (max-width: 680px) {
+      .interp-grid { grid-template-columns: 1fr; }
+    }
+    .interp-block {
+      padding: 1.1rem 1.2rem;
+    }
+    .interp-block:first-child {
+      border-right: 1px solid var(--rule);
+    }
+    @media (max-width: 680px) {
+      .interp-block:first-child {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+      }
+    }
+    .interp-block-title {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-mute);
+      margin-bottom: 0.5rem;
+    }
+    .interp-verdict {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .interp-verdict.neutral  { color: var(--ink-mute); }
+    .interp-verdict.low      { color: var(--green-deep); }
+    .interp-verdict.moderate { color: #7a5200; }
+    .interp-verdict.high     { color: #7a1f00; }
+    .interp-detail {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      margin-top: 0.4rem;
+      line-height: 1.5;
+    }
+
+    /* ---- Clinical note ---- */
+    .clinical-note {
+      margin-top: 1.25rem;
+      border-left: 3px solid var(--green);
+      background: var(--paper-warm);
+      padding: 1rem 1.2rem;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+    .clinical-note .note-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--green-deep);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ---- References ---- */
+    .references {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--rule);
+      padding-bottom: 3rem;
+    }
+    .references-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--ink-mute);
+      margin-bottom: 0.7rem;
+    }
+    .references ol {
+      padding-left: 1.2rem;
+    }
+    .references li {
+      font-size: 0.8rem;
+      color: var(--ink-mute);
+      line-height: 1.55;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ---- Footer ---- */
+    .site-footer {
+      border-top: 1px solid var(--rule);
+      padding: 1.1rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--ink-mute);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap masthead-row">
+      <a href="/" class="brand">
+        <span class="brand-name">Working <em>Diagnosis</em>.</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/lifestyle-prevention/">Lifestyle</a>
+        <a href="/msk/">MSK</a>
+        <a href="/mental-health/">Mental Health</a>
+        <a href="/workshop/">Workshop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="page-header">
+        <div class="kicker">&#10061; Atrial Fibrillation</div>
+        <h1 class="page-title">
+          CHA&#x2082;DS&#x2082;-VASc + HAS-BLED
+          <span class="workshop-badge">Workshop</span>
+        </h1>
+        <p class="page-subtitle">Stroke and bleeding risk in non-valvular AF. Consultation support only -- not for patient self-assessment.</p>
+      </div>
+
+      <div class="calc-grid">
+
+        <!-- ======= CHA2DS2-VASc ======= -->
+        <div class="score-card">
+          <div class="score-card-header">
+            <div class="score-card-title">CHA&#x2082;DS&#x2082;-VASc</div>
+            <div class="score-card-meta">Stroke risk &middot; max 9 points</div>
+          </div>
+
+          <div class="criteria-list">
+
+            <label class="criterion">
+              <input type="checkbox" id="chf" onchange="calc()">
+              <span class="criterion-body">
+                <strong>C: Cardiac failure / LV dysfunction</strong>
+                <span class="note">Symptomatic heart failure, or LVEF &lt;40%</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="htn" onchange="calc()">
+              <span class="criterion-body">
+                <strong>H: Hypertension</strong>
+                <span class="note">Resting BP &gt;140/90 on 2+ occasions, or on antihypertensive treatment</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="age75" onchange="handleAge('age75')">
+              <span class="criterion-body">
+                <strong>A&#x2082;: Age &ge;75</strong>
+              </span>
+              <span class="criterion-pts">+2</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="dm" onchange="calc()">
+              <span class="criterion-body">
+                <strong>D: Diabetes mellitus</strong>
+                <span class="note">Fasting glucose &gt;7.0, HbA1c &ge;48 mmol/mol, or on hypoglycaemic treatment</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="stroke" onchange="calc()">
+              <span class="criterion-body">
+                <strong>S&#x2082;: Prior stroke / TIA / thromboembolism</strong>
+              </span>
+              <span class="criterion-pts">+2</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="vasc" onchange="calc()">
+              <span class="criterion-body">
+                <strong>V: Vascular disease</strong>
+                <span class="note">Prior MI, peripheral arterial disease, or aortic plaque</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="age6574" onchange="handleAge('age6574')">
+              <span class="criterion-body">
+                <strong>A: Age 65-74</strong>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="female" onchange="calc()">
+              <span class="criterion-body">
+                <strong>Sc: Sex category female</strong>
+                <span class="note">Risk modifier only -- see interpretation</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+          </div>
+
+          <div class="score-display">
+            <div>
+              <div class="score-number" id="chads-score">0</div>
+              <div class="score-label">CHA&#x2082;DS&#x2082;-VASc Score</div>
+            </div>
+            <div class="score-aside" id="chads-rate"></div>
+          </div>
+        </div>
+
+        <!-- ======= HAS-BLED ======= -->
+        <div class="score-card">
+          <div class="score-card-header">
+            <div class="score-card-title">HAS-BLED</div>
+            <div class="score-card-meta">Bleeding risk &middot; max 9 points</div>
+          </div>
+
+          <div class="criteria-list">
+
+            <label class="criterion">
+              <input type="checkbox" id="hb-htn" onchange="calc()">
+              <span class="criterion-body">
+                <strong>H: Uncontrolled hypertension</strong>
+                <span class="note">Systolic BP &gt;160 mmHg</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <div class="criterion-group-label">A: Abnormal organ function (1 pt each)</div>
+
+            <label class="criterion">
+              <input type="checkbox" id="renal" onchange="calc()">
+              <span class="criterion-body">
+                <strong>Abnormal renal function</strong>
+                <span class="note">Chronic dialysis, renal transplant, or creatinine &ge;200 &mu;mol/L</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="liver" onchange="calc()">
+              <span class="criterion-body">
+                <strong>Abnormal liver function</strong>
+                <span class="note">Cirrhosis, bilirubin &gt;2&times; ULN, or ALT/AST/ALP &gt;3&times; ULN</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="hb-stroke" onchange="calc()">
+              <span class="criterion-body">
+                <strong>S: Prior stroke</strong>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="bleed" onchange="calc()">
+              <span class="criterion-body">
+                <strong>B: Bleeding history or predisposition</strong>
+                <span class="note">Prior major bleed, anaemia, or bleeding diathesis</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="inr" onchange="calc()">
+              <span class="criterion-body">
+                <strong>L: Labile INR</strong>
+                <span class="note">On VKA with TTR &lt;60% -- leave unchecked for DOAC patients</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="elderly" onchange="calc()">
+              <span class="criterion-body">
+                <strong>E: Elderly</strong>
+                <span class="note">Age &ge;65</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <div class="criterion-group-label">D: Drugs / alcohol (1 pt each)</div>
+
+            <label class="criterion">
+              <input type="checkbox" id="drugs" onchange="calc()">
+              <span class="criterion-body">
+                <strong>Antiplatelet or NSAID use</strong>
+                <span class="note">Aspirin, clopidogrel, ibuprofen, diclofenac, etc.</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+            <label class="criterion">
+              <input type="checkbox" id="alcohol" onchange="calc()">
+              <span class="criterion-body">
+                <strong>Alcohol use</strong>
+                <span class="note">&ge;8 standard drinks per week</span>
+              </span>
+              <span class="criterion-pts">+1</span>
+            </label>
+
+          </div>
+
+          <div class="score-display">
+            <div>
+              <div class="score-number" id="hasbled-score">0</div>
+              <div class="score-label">HAS-BLED Score</div>
+            </div>
+            <div class="score-aside" id="hasbled-risk"></div>
+          </div>
+        </div>
+
+      </div><!-- /.calc-grid -->
+
+      <!-- Interpretation -->
+      <div class="interp-panel">
+        <div class="interp-panel-header">Clinical Interpretation</div>
+        <div class="interp-grid">
+
+          <div class="interp-block">
+            <div class="interp-block-title">CHA&#x2082;DS&#x2082;-VASc</div>
+            <div class="interp-verdict neutral" id="chads-verdict">Enter patient details above.</div>
+            <div class="interp-detail" id="chads-detail"></div>
+          </div>
+
+          <div class="interp-block">
+            <div class="interp-block-title">HAS-BLED</div>
+            <div class="interp-verdict neutral" id="hasbled-verdict">Enter patient details above.</div>
+            <div class="interp-detail" id="hasbled-detail"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Clinical note -->
+      <div class="clinical-note">
+        <span class="note-label">Clinical note</span>
+        A high HAS-BLED score (&ge;3) identifies patients who need modifiable bleeding risks addressed -- uncontrolled hypertension, labile INR, concurrent antiplatelet or NSAID use, excessive alcohol. It is not grounds to withhold anticoagulation. In most patients with non-valvular AF, the stroke risk of withholding anticoagulation substantially exceeds the bleeding risk of prescribing it.<sup>1</sup> Female sex as the sole risk factor (total score 1, no other clinical risk factors) does not independently warrant anticoagulation per ESC 2020 guidance.<sup>1</sup>
+      </div>
+
+      <!-- References -->
+      <div class="references">
+        <div class="references-label">References</div>
+        <ol>
+          <li>Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation. <em>Eur Heart J.</em> 2021;42(5):373-498.</li>
+          <li>Lip GYH, Nieuwlaat R, Pisters R, Lane DA, Crijns HJGM. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the Euro Heart Survey on Atrial Fibrillation. <em>Chest.</em> 2010;137(2):263-272.</li>
+          <li>Pisters R, Lane DA, Nieuwlaat R, de Vos CB, Crijns HJGM, Lip GYH. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation. <em>Chest.</em> 2010;138(5):1093-1100.</li>
+          <li>NZ Heart Foundation. New Zealand Primary Care Handbook: Atrial Fibrillation. Wellington: National Heart Foundation of New Zealand. (Refer to current HealthPathways Canterbury for local guidance.)</li>
+        </ol>
+      </div>
+
+    </div><!-- /.wrap -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      Working Diagnosis &middot; For clinical use only &middot; Not for patient self-assessment
+    </div>
+  </footer>
+
+  <script>
+    // Approximate annual stroke event rates by CHA2DS2-VASc score
+    // Source: ESC 2020 Guidelines, Table 6 (Friberg et al. 2012 Swedish registry data)
+    var strokeRate = ['~0%', '~1.3%', '~2.2%', '~3.2%', '~4.0%', '~6.7%', '~9.8%', '~9.6%', '~6.7%', '~15.2%'];
+
+    function handleAge(changed) {
+      // Age bands are mutually exclusive
+      if (changed === 'age75' && document.getElementById('age75').checked) {
+        document.getElementById('age6574').checked = false;
+      }
+      if (changed === 'age6574' && document.getElementById('age6574').checked) {
+        document.getElementById('age75').checked = false;
+      }
+      calc();
+    }
+
+    function calc() {
+      // --- CHA2DS2-VASc ---
+      var isFemale = document.getElementById('female').checked;
+      var clinicalScore = 0; // score without sex modifier
+      if (document.getElementById('chf').checked)    clinicalScore += 1;
+      if (document.getElementById('htn').checked)    clinicalScore += 1;
+      if (document.getElementById('age75').checked)  clinicalScore += 2;
+      if (document.getElementById('dm').checked)     clinicalScore += 1;
+      if (document.getElementById('stroke').checked) clinicalScore += 2;
+      if (document.getElementById('vasc').checked)   clinicalScore += 1;
+      if (document.getElementById('age6574').checked) clinicalScore += 1;
+      var chads = clinicalScore + (isFemale ? 1 : 0);
+
+      document.getElementById('chads-score').textContent = chads;
+
+      // Annual rate aside
+      var rateEl = document.getElementById('chads-rate');
+      if (chads >= 0 && chads < strokeRate.length) {
+        rateEl.innerHTML = 'Approx. annual stroke risk<br><strong style="font-size:1.05rem;color:var(--ink);">' + strokeRate[chads] + '</strong>';
+      } else {
+        rateEl.textContent = '';
+      }
+
+      // CHA2DS2-VASc interpretation
+      // Logic follows ESC 2020: female sex is a risk modifier, not an independent indication
+      var verdictEl  = document.getElementById('chads-verdict');
+      var detailEl   = document.getElementById('chads-detail');
+      var scoreColor = document.getElementById('chads-score');
+
+      if (clinicalScore === 0) {
+        // Male score 0, or female score 1 from sex alone
+        verdictEl.className  = 'interp-verdict low';
+        verdictEl.textContent = isFemale
+          ? 'Female sex is the only risk factor -- anticoagulation not recommended.'
+          : 'Low risk -- anticoagulation not recommended.';
+        detailEl.textContent  = 'Reassess annually or if new risk factors emerge.';
+        scoreColor.style.color = 'var(--green)';
+
+      } else if (clinicalScore === 1) {
+        // Male score 1, or female clinical score 1 (total 2 with sex)
+        verdictEl.className   = 'interp-verdict moderate';
+        verdictEl.textContent = 'Anticoagulation should be considered.';
+        detailEl.textContent  = 'Individualise based on patient preference and bleeding risk. DOAC preferred over VKA in non-valvular AF.';
+        scoreColor.style.color = '#7a5200';
+
+      } else {
+        // Male score >= 2, or female clinical score >= 2 (total >= 3)
+        verdictEl.className   = 'interp-verdict high';
+        verdictEl.textContent = 'Anticoagulation recommended.';
+        detailEl.textContent  = 'Unless contraindicated. DOAC preferred over VKA. Review HAS-BLED for modifiable bleeding risks before prescribing.';
+        scoreColor.style.color = '#7a1f00';
+      }
+
+      // --- HAS-BLED ---
+      var hasbled = 0;
+      if (document.getElementById('hb-htn').checked)    hasbled += 1;
+      if (document.getElementById('renal').checked)      hasbled += 1;
+      if (document.getElementById('liver').checked)      hasbled += 1;
+      if (document.getElementById('hb-stroke').checked)  hasbled += 1;
+      if (document.getElementById('bleed').checked)      hasbled += 1;
+      if (document.getElementById('inr').checked)        hasbled += 1;
+      if (document.getElementById('elderly').checked)    hasbled += 1;
+      if (document.getElementById('drugs').checked)      hasbled += 1;
+      if (document.getElementById('alcohol').checked)    hasbled += 1;
+
+      document.getElementById('hasbled-score').textContent = hasbled;
+
+      var hbVerdictEl = document.getElementById('hasbled-verdict');
+      var hbDetailEl  = document.getElementById('hasbled-detail');
+      var hbScore     = document.getElementById('hasbled-score');
+      var hbRisk      = document.getElementById('hasbled-risk');
+
+      if (hasbled < 3) {
+        hbScore.style.color   = 'var(--green)';
+        hbRisk.innerHTML      = '<strong style="color:var(--green-deep);">Lower bleeding risk</strong>';
+        hbVerdictEl.className = 'interp-verdict low';
+        hbVerdictEl.textContent = 'Lower bleeding risk.';
+        hbDetailEl.textContent  = hasbled === 0
+          ? ''
+          : 'Continue to reassess at each review, particularly with medication changes.';
+      } else {
+        hbScore.style.color   = '#7a1f00';
+        hbRisk.innerHTML      = '<strong style="color:#7a1f00;">High bleeding risk</strong>';
+        hbVerdictEl.className = 'interp-verdict high';
+        hbVerdictEl.textContent = 'High bleeding risk -- review modifiable factors.';
+
+        var mods = [];
+        if (document.getElementById('hb-htn').checked)  mods.push('control BP');
+        if (document.getElementById('inr').checked)     mods.push('optimise INR control or switch to DOAC');
+        if (document.getElementById('drugs').checked)   mods.push('review antiplatelet/NSAID necessity');
+        if (document.getElementById('alcohol').checked) mods.push('address alcohol use');
+
+        if (mods.length > 0) {
+          hbDetailEl.textContent = 'Modifiable factors: ' + mods.join('; ') + '. High HAS-BLED alone is not a contraindication to anticoagulation.';
+        } else {
+          hbDetailEl.textContent = 'No modifiable factors identified. Weigh individual risk and benefit -- high HAS-BLED alone is not a contraindication to anticoagulation.';
+        }
+      }
+    }
+
+    // Run once on load so scores show 0 cleanly
+    calc();
+  </script>
+
+</body>
+</html>

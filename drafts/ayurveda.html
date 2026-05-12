@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>आयुर्वेद -- Interactive Compendium of Ayurvedic Medicines</title>
+<style>
+  :root {
+    --bg: #0f0b08;
+    --bg-elev: #1a1410;
+    --bg-card: #221a13;
+    --bg-card-hover: #2d2218;
+    --border: #3a2d20;
+    --border-strong: #4d3d2b;
+    --text: #f5ece0;
+    --text-dim: #b09070;
+    --text-faint: #7a6048;
+    --saffron: #e07b39;
+    --saffron-deep: #b85e20;
+    --gold: #f0c040;
+    --gold-dim: #b08820;
+    --ashoka: #6bab8a;
+    --sky: #85aad4;
+    --lotus: #c490b8;
+    --warn: #f0c040;
+    --danger: #e05040;
+    --mono: 'JetBrains Mono','Consolas','Monaco',monospace;
+    --serif: 'Noto Serif','Georgia',serif;
+    --ev-strong: #6bab8a;
+    --ev-moderate: #f0c040;
+    --ev-limited: #e08030;
+    --ev-insufficient: #8090a0;
+    --ev-negative: #e05040;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; font-size:15px; min-height:100vh; }
+  .san { font-family:var(--serif); font-style:italic; font-weight:500; }
+  .dev { font-family:'Noto Sans Devanagari','Mangal',sans-serif; font-weight:500; }
+  header.hero {
+    background: radial-gradient(ellipse at top left,rgba(224,123,57,0.14),transparent 60%),
+      radial-gradient(ellipse at top right,rgba(240,192,64,0.10),transparent 60%),
+      linear-gradient(180deg,#0f0b08 0%,#160f08 100%);
+    padding:48px 24px 28px; border-bottom:1px solid var(--border); text-align:center; position:relative;
+  }
+  header.hero::before { content:"आ"; position:absolute; top:10px; left:24px; font-family:'Noto Sans Devanagari',sans-serif; font-size:5rem; color:rgba(224,123,57,0.07); line-height:1; pointer-events:none; }
+  header.hero::after  { content:"यु"; position:absolute; top:10px; right:24px; font-family:'Noto Sans Devanagari',sans-serif; font-size:5rem; color:rgba(240,192,64,0.07); line-height:1; pointer-events:none; }
+  header.hero .title-row { display:flex; align-items:baseline; justify-content:center; gap:14px; flex-wrap:wrap; }
+  header.hero h1 { font-size:2.3rem; margin:0; font-weight:700; letter-spacing:-0.01em; background:linear-gradient(90deg,#e07b39,#f0c040,#c490b8); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  header.hero h1 .dev { font-size:2.4rem; background:linear-gradient(90deg,#e07b39,#f0c040); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  header.hero .subtitle { color:var(--text-dim); font-size:1rem; margin:8px 0 14px; font-style:italic; }
+  header.hero p.tag { color:var(--text-dim); max-width:760px; margin:0 auto; font-size:0.92rem; }
+  .disclaimer { max-width:920px; margin:16px auto 0; padding:12px 16px; background:rgba(224,123,57,0.08); border:1px solid rgba(224,123,57,0.3); border-radius:6px; color:#f8c090; font-size:0.82rem; text-align:left; line-height:1.55; }
+  .disclaimer strong { color:#fdd8b0; }
+  .disclaimer ul { margin:6px 0 0; padding-left:22px; }
+  .disclaimer li { margin:3px 0; }
+  .controls { position:sticky; top:0; background:rgba(15,11,8,0.96); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); padding:14px 24px; z-index:50; }
+  .controls-inner { max-width:1320px; margin:0 auto; display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+  .search-wrap { flex:1; min-width:240px; position:relative; }
+  .search-wrap svg { position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--text-faint); pointer-events:none; }
+  input[type="search"] { width:100%; padding:10px 12px 10px 40px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:0.95rem; font-family:inherit; outline:none; transition:border-color 0.15s; }
+  input[type="search"]:focus { border-color:var(--saffron); background:var(--bg-elev); }
+  .filter-group { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  .filter-label { font-size:0.78rem; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.05em; margin-right:4px; }
+  .chip { padding:5px 11px; background:var(--bg-card); border:1px solid var(--border); border-radius:999px; color:var(--text-dim); font-size:0.82rem; cursor:pointer; transition:all 0.15s; white-space:nowrap; font-family:inherit; }
+  .chip:hover { border-color:var(--border-strong); color:var(--text); }
+  .chip.active { background:var(--saffron); border-color:var(--saffron); color:#fff; font-weight:600; }
+  .type-chip.active { background:var(--gold); border-color:var(--gold); color:#1a1200; }
+  .count { font-size:0.82rem; color:var(--text-faint); white-space:nowrap; margin-left:auto; }
+  .grid { max-width:1320px; margin:0 auto; padding:24px; display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
+  .card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:18px 20px; cursor:pointer; transition:all 0.18s; display:flex; flex-direction:column; gap:10px; }
+  .card:hover { border-color:var(--border-strong); background:var(--bg-card-hover); transform:translateY(-2px); box-shadow:0 4px 24px rgba(0,0,0,0.4); }
+  .card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .card-names h2 { margin:0; font-size:1.05rem; font-weight:600; color:var(--text); }
+  .card-names .san-name { font-size:0.9rem; color:var(--saffron); margin-top:2px; }
+  .card-names .en-name { font-size:0.82rem; color:var(--text-faint); }
+  .card-badges { display:flex; flex-direction:column; gap:4px; align-items:flex-end; flex-shrink:0; }
+  .badge { font-size:0.72rem; padding:3px 8px; border-radius:4px; font-weight:600; font-family:var(--mono); white-space:nowrap; }
+  .badge-herb  { background:rgba(107,171,138,0.15); color:var(--ashoka); border:1px solid rgba(107,171,138,0.3); }
+  .badge-formula { background:rgba(133,170,212,0.15); color:var(--sky); border:1px solid rgba(133,170,212,0.3); }
+  .badge-patent { background:rgba(196,144,184,0.15); color:var(--lotus); border:1px solid rgba(196,144,184,0.3); }
+  .badge-toxic  { background:rgba(224,80,64,0.15); color:#f07060; border:1px solid rgba(224,80,64,0.4); }
+  .card-pharm { font-size:0.8rem; color:var(--text-faint); font-style:italic; }
+  .card-primary { font-size:0.88rem; color:var(--text-dim); line-height:1.5; }
+  .card-uses { display:flex; flex-direction:column; gap:5px; }
+  .use-row { display:flex; align-items:flex-start; gap:8px; }
+  .use-icon { color:var(--saffron); font-size:0.75rem; margin-top:3px; flex-shrink:0; }
+  .use-condition { font-size:0.83rem; font-weight:600; color:var(--text); }
+  .use-detail { font-size:0.79rem; color:var(--text-dim); line-height:1.45; margin-top:1px; }
+  .ev-pill { font-size:0.68rem; padding:2px 7px; border-radius:3px; font-weight:700; font-family:var(--mono); flex-shrink:0; margin-top:2px; text-transform:uppercase; }
+  .ev-strong     { background:rgba(107,171,138,0.2); color:var(--ev-strong); }
+  .ev-moderate   { background:rgba(240,192,64,0.2);  color:var(--ev-moderate); }
+  .ev-limited    { background:rgba(224,128,48,0.2);  color:var(--ev-limited); }
+  .ev-insufficient { background:rgba(128,144,160,0.2); color:var(--ev-insufficient); }
+  .ev-negative   { background:rgba(224,80,64,0.2);   color:var(--ev-negative); }
+  .card-cat { display:flex; gap:6px; margin-top:auto; padding-top:8px; border-top:1px solid var(--border); }
+  .cat-tag { font-size:0.72rem; padding:2px 8px; background:rgba(224,123,57,0.1); border:1px solid rgba(224,123,57,0.25); border-radius:3px; color:var(--saffron); }
+  .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:200; overflow-y:auto; padding:40px 20px; }
+  .modal-overlay.open { display:block; }
+  .modal { max-width:780px; margin:0 auto; background:var(--bg-elev); border:1px solid var(--border-strong); border-radius:14px; overflow:hidden; }
+  .modal-header { padding:24px 28px 18px; border-bottom:1px solid var(--border); position:relative; }
+  .modal-header .kicker { font-family:var(--mono); font-size:0.72rem; color:var(--saffron); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px; display:flex; gap:10px; align-items:center; }
+  .modal-header h2 { margin:0 0 4px; font-size:1.7rem; background:linear-gradient(90deg,var(--saffron),var(--gold)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .modal-header .dev-title { font-family:'Noto Sans Devanagari',sans-serif; font-size:1.4rem; color:var(--text-dim); margin-top:2px; }
+  .modal-header .en-title { font-size:0.95rem; color:var(--text-dim); }
+  .modal-header .pharm-title { font-size:0.85rem; color:var(--text-faint); font-style:italic; margin-top:4px; }
+  .modal-close { position:absolute; top:18px; right:20px; background:none; border:1px solid var(--border); color:var(--text-dim); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; transition:all 0.15s; }
+  .modal-close:hover { border-color:var(--saffron); color:var(--saffron); }
+  .props-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:16px 28px 0; }
+  .prop-box { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:10px 14px; }
+  .prop-label { font-size:0.72rem; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.05em; font-family:var(--mono); }
+  .prop-val { font-size:0.88rem; color:var(--text); margin-top:3px; }
+  .modal-body { padding:20px 28px 28px; display:flex; flex-direction:column; gap:20px; }
+  .section h3 { font-size:0.92rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-faint); font-family:var(--mono); margin:0 0 10px; }
+  .section h3 .dev { text-transform:none; letter-spacing:0; font-size:1rem; color:var(--text-dim); }
+  .primary-text { font-size:0.95rem; color:var(--text-dim); background:rgba(224,123,57,0.06); border-left:3px solid var(--saffron); padding:10px 14px; border-radius:0 6px 6px 0; }
+  .trad-text { font-size:0.9rem; color:var(--text-dim); line-height:1.7; }
+  .ingredient-list { display:flex; flex-direction:column; gap:8px; }
+  .ingredient { display:flex; gap:12px; align-items:flex-start; background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:8px 12px; }
+  .ingredient .name { font-size:0.88rem; font-weight:600; min-width:140px; }
+  .ingredient .name .dev { font-size:0.8rem; color:var(--text-faint); display:block; }
+  .ingredient .role { font-size:0.82rem; color:var(--text-dim); }
+  .compound-list { display:flex; flex-direction:column; gap:10px; }
+  .compound { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:10px 14px; }
+  .compound-name { font-size:0.9rem; font-weight:600; color:var(--gold); }
+  .compound-class { font-size:0.78rem; color:var(--text-faint); font-family:var(--mono); margin:2px 0; }
+  .compound-action { font-size:0.84rem; color:var(--text-dim); }
+  .safety-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .safety-box { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 14px; }
+  .safety-box h4 { margin:0 0 8px; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-faint); }
+  .safety-box ul { margin:0; padding-left:16px; }
+  .safety-box li { font-size:0.84rem; color:var(--text-dim); margin:3px 0; }
+  .safety-box.warn { border-color:rgba(240,192,64,0.4); }
+  .safety-box.warn h4 { color:var(--gold); }
+  .safety-box.danger { border-color:rgba(224,80,64,0.4); }
+  .safety-box.danger h4 { color:#f07060; }
+  .dose { font-size:0.9rem; color:var(--text-dim); background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:10px 14px; }
+  .refs { display:flex; flex-direction:column; gap:4px; }
+  .refs li { font-size:0.8rem; color:var(--text-faint); font-family:var(--mono); line-height:1.5; }
+  .empty { text-align:center; padding:60px 20px; color:var(--text-faint); font-size:1rem; }
+  @media(max-width:600px) {
+    header.hero h1 { font-size:1.6rem; }
+    .grid { grid-template-columns:1fr; padding:14px; }
+    .safety-grid { grid-template-columns:1fr; }
+    .props-grid { grid-template-columns:1fr 1fr; }
+  }
+
+  /* ---- Card layout (JS-generated) ---- */
+  .card-header { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .card-title { font-size:1.05rem; font-weight:600; color:var(--text); margin:0; }
+  .card-han { font-size:1rem; color:var(--saffron); margin-top:3px; font-family:'Noto Sans Devanagari',sans-serif; }
+  .card-en { font-size:0.82rem; color:var(--text-faint); margin-top:1px; }
+  .card-meta { display:flex; flex-direction:column; gap:4px; align-items:flex-end; flex-shrink:0; }
+  .card-body { display:flex; flex-direction:column; gap:6px; }
+  .card-ev { margin-top:2px; }
+  .card-toxic { border-color:rgba(224,80,64,0.35) !important; }
+  .card-toxic:hover { border-color:rgba(224,80,64,0.6) !important; }
+  .tox-badge { font-size:0.78rem; color:#f07060; margin-left:4px; }
+  /* ---- Tags ---- */
+  .tag { font-size:0.72rem; padding:3px 8px; border-radius:4px; font-weight:600; font-family:var(--mono); white-space:nowrap; }
+  .tag-type { background:rgba(107,171,138,0.15); color:var(--ashoka); border:1px solid rgba(107,171,138,0.3); }
+  .tag-cat  { background:rgba(224,123,57,0.12); color:var(--saffron); border:1px solid rgba(224,123,57,0.3); }
+  /* ---- Evidence badge (JS uses ev-badge not ev-pill) ---- */
+  .ev-badge { font-size:0.68rem; padding:2px 7px; border-radius:3px; font-weight:700; font-family:var(--mono); text-transform:uppercase; display:inline-block; }
+  /* ---- Modal content (JS-generated) ---- */
+  .modal-body-inner { padding:24px 28px 32px; display:flex; flex-direction:column; gap:20px; }
+  .modal-title { font-size:1.7rem; font-weight:700; background:linear-gradient(90deg,var(--saffron),var(--gold)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; margin:0 40px 4px 0; }
+  .modal-sub { font-size:1rem; color:var(--text-dim); font-family:'Noto Sans Devanagari',sans-serif; padding:4px 0 2px; }
+  .modal-pharm { font-size:0.85rem; color:var(--text-faint); font-style:italic; }
+  .modal-tags { display:flex; gap:6px; flex-wrap:wrap; padding:8px 0 4px; }
+  .modal-section { display:flex; flex-direction:column; gap:8px; }
+  .modal-section-title { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--text-faint); font-family:var(--mono); padding-bottom:4px; border-bottom:1px solid var(--border); }
+  .modal-section p { margin:0; font-size:0.92rem; color:var(--text-dim); line-height:1.7; }
+  .prop-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
+  .prop-item { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:10px 14px; }
+  .prop-label { font-size:0.72rem; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.05em; font-family:var(--mono); }
+  .prop-val { font-size:0.88rem; color:var(--text); margin-top:4px; }
+  .compound-row { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:10px 14px; font-size:0.88rem; color:var(--text-dim); line-height:1.6; }
+  .compound-row strong { color:var(--gold); }
+  .compound-row em { color:var(--text-faint); font-family:var(--mono); font-size:0.8rem; margin-left:4px; }
+  .use-row { display:flex; flex-direction:column; gap:4px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:10px 14px; }
+  .use-row strong { font-size:0.92rem; color:var(--text); }
+  .safety-group { display:flex; flex-direction:column; gap:5px; }
+  .safety-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-faint); font-family:var(--mono); }
+  .safety-item { font-size:0.86rem; color:var(--text-dim); padding:6px 10px; border-radius:6px; background:var(--bg-card); border:1px solid var(--border); line-height:1.55; }
+  .safety-item.caution { border-color:rgba(240,192,64,0.4); background:rgba(240,192,64,0.05); color:var(--text); }
+  .safety-item.interaction { border-color:rgba(133,170,212,0.4); background:rgba(133,170,212,0.05); }
+  .ref-item { font-size:0.8rem; color:var(--text-faint); font-family:var(--mono); line-height:1.6; padding:3px 0; border-bottom:1px solid var(--border); }
+  .ref-item:last-child { border-bottom:none; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="title-row">
+    <h1><span class="dev">आयुर्वेद</span> &nbsp;Materia Medica</h1>
+  </div>
+  <p class="subtitle">Interactive Compendium of Ayurvedic Medicines</p>
+  <p class="tag">A clinician-facing reference integrating traditional Ayurvedic classification with modern pharmacology and clinical evidence. Evidence tiers reflect quality of human RCT data.</p>
+  <div class="disclaimer">
+    <strong>Clinical disclaimer.</strong> This tool is for practitioner reference only -- not for patient self-diagnosis or self-treatment.
+    <ul>
+      <li>Heavy metal contamination is a significant safety concern in Ayurvedic preparations. Always use products from reputable manufacturers with third-party batch testing for heavy metals.</li>
+      <li>Rasashastra preparations (metals, minerals) require specialist Ayurvedic supervision. Do not substitute with unverified products.</li>
+      <li>Many Ayurvedic herbs have clinically significant drug interactions (especially via CYP3A4/P-gp). Always take a complete herbal medicine history.</li>
+      <li>Evidence ratings reflect RCT quality for the specific preparation and dose studied -- traditional formulations may differ significantly from studied extracts.</li>
+    </ul>
+  </div>
+</header>
+<div class="controls">
+  <div class="controls-inner">
+    <div class="search-wrap">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" id="search" placeholder="Search herbs, Sanskrit names, conditions, compounds...">
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Type</span>
+      <button class="chip type-chip active" data-type="all">All</button>
+      <button class="chip type-chip" data-type="herb">Dravya</button>
+      <button class="chip type-chip" data-type="formula">Yoga</button>
+      <button class="chip type-chip" data-type="patent">Kalpana</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Action</span>
+      <button class="chip cat-chip active" data-cat="all">All</button>
+      <button class="chip cat-chip" data-cat="rasayana">Rasayana</button>
+      <button class="chip cat-chip" data-cat="medhya">Medhya</button>
+      <button class="chip cat-chip" data-cat="deepana">Deepana</button>
+      <button class="chip cat-chip" data-cat="shothahara">Shothahara</button>
+      <button class="chip cat-chip" data-cat="prameha-hara">Prameha-hara</button>
+      <button class="chip cat-chip" data-cat="jwara-hara">Jwara-hara</button>
+      <button class="chip cat-chip" data-cat="balya">Balya</button>
+      <button class="chip cat-chip" data-cat="medohara">Medohara</button>
+    </div>
+    <span class="count" id="count">-- entries</span>
+  </div>
+</div>
+<div class="grid" id="grid"></div>
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div id="modal-body" class="modal-body-inner"></div>
+  </div>
+</div>
+<script>
+const CAT_LABELS = {
+  'rasayana':     { en: 'Rasayana',     san: 'रसायन' },
+  'medhya':       { en: 'Medhya',       san: 'मेध्य' },
+  'deepana':      { en: 'Deepana',      san: 'दीपन' },
+  'shothahara':   { en: 'Shothahara',   san: 'शोथहर' },
+  'prameha-hara': { en: 'Prameha-hara', san: 'प्रमेहघ्न' },
+  'jwara-hara':   { en: 'Jwara-hara',   san: 'ज्वरघ्न' },
+  'balya':        { en: 'Balya',        san: 'बल्य' },
+  'medohara':     { en: 'Medohara',     san: 'मेदोहर' }
+};
+const TYPE_LABELS = { herb: 'Dravya', formula: 'Yoga', patent: 'Kalpana' };
+
+const ENTRIES = [
+  // ==================== RASAYANA ====================
+  {
+    id: 'ashwagandha', type: 'herb', cat: 'rasayana',
+    sanskrit: 'Ashwagandha', devanagari: 'अश्व�-ंधा', en: 'Indian Winter Cherry',
+    pharm: 'Withania somnifera (radix)',
+    properties: { rasa: 'Tikta, Kashaya (Bitter, Astringent)', virya: 'Ushna (Hot)', vipaka: 'Madhura (Sweet)', dosha: 'VK- P+ at high dose' },
+    primary: 'Adaptogen; nervine tonic; anti-stress; androgenic rasayana',
+    traditional: 'Described in Charaka Samhita and Ashtanga Hridayam as the premier Balya (strength-promoting) and Brijeeya (bulk-promoting) herb. The classical preparation is ashwagandha churna in warm milk with honey and ghee -- consumed at night. Classified under Rasayana as a herb that rejuvenates tissues (dhatus), promotes longevity, and strengthens ojas (vital essence). The Sanskrit name means "smell of horse" -- referring both to the root odour and the traditional belief that it confers the strength and stamina of a horse.',
+    compounds: [
+      { name: 'Withanolides (withanolide A, withaferin A)', class: 'Steroidal lactones', action: 'HPA axis modulation (adaptogenic); NF-kB inhibition (anti-inflammatory); withaferin A has anticancer activity in preclinical models.' },
+      { name: 'Withanosides / sitoindosides VII-X', class: 'Glycowithanolides', action: 'Anxiolytic via GABAergic modulation; promote dendritic spine growth and synaptic plasticity in hippocampus.' },
+      { name: 'Alkaloids (withanine, somniferine)', class: 'Pyrrole alkaloids', action: 'Mild sedative and spasmolytic contribution; minor fraction.' }
+    ],
+    uses: [
+      { condition: 'Stress and anxiety (perceived stress / GAD)', evidence: 'moderate', detail: 'Multiple RCTs with KSM-66 and Sensoril extracts show significant cortisol reduction and improved PSS/GAD-7 scores. Chandrasekhar 2012, Pratte 2014, and multiple follow-up trials positive.' },
+      { condition: 'Sleep quality', evidence: 'moderate', detail: 'KSM-66 RCTs (Langade 2019, 2021) show significant PSQI improvement vs placebo. Effect size clinically meaningful.' },
+      { condition: 'Athletic performance / VO2max', evidence: 'limited', detail: 'Small RCTs in athletes show modest VO2max and recovery improvement; not established for performance enhancement in elite sport.' },
+      { condition: 'Male fertility / testosterone', evidence: 'limited', detail: 'RCTs show increased testosterone (10-20%), LH, and sperm parameters in subfertile men; effect in eugonadal healthy men smaller.' },
+      { condition: 'Thyroid stimulation (subclinical hypothyroid)', evidence: 'limited', detail: 'Pilot RCT (Sharma 2018) shows TSH reduction and T3/T4 increase -- potentially beneficial in subclinical hypothyroid, but a safety concern in those with hyperthyroid or autoimmune thyroid disease.' }
+    ],
+    safety: {
+      common: ['Loose stools, GI upset (especially churna)', 'Drowsiness (take at night)', 'Rarely: nausea at high dose'],
+      caution: ['THYROID STIMULATION -- Ashwagandha increases T3 and T4. AVOID in hyperthyroidism and autoimmune thyroid disease where thyroid is already overstimulated. Monitor TSH in all thyroid patients.', 'Pregnancy -- uterotonic at high dose in animal studies; traditional texts contraindicate; AVOID', 'Case reports of hepatotoxicity (rare, 2019-2023 Indian and US reports; likely idiosyncratic) -- monitor LFTs in prolonged use', 'Autoimmune disease -- immunostimulatory; theoretical concern in SLE, RA, MS'],
+      interactions: ['Levothyroxine -- pharmacodynamic; may alter TSH; monitor every 3 months', 'CNS depressants / benzodiazepines -- additive sedation; take at night', 'Immunosuppressants (ciclosporin, tacrolimus) -- theoretical antagonism']
+    },
+    dose: 'Churna 3-6 g with warm milk at bedtime; KSM-66 extract 300-600 mg/day; Sensoril extract 125-250 mg BID; duration 8-12 weeks in trials.',
+    refs: [
+      'Chandrasekhar K et al. Indian J Psychol Med. 2012 -- KSM-66 in chronic stress RCT.',
+      'Langade D et al. Medicine. 2019 -- Ashwagandha in insomnia RCT.',
+      'Sharma AK et al. J Int Soc Sports Nutr. 2018 -- Ashwagandha thyroid effect pilot RCT.',
+      'Panda S, Kar A. J Pharm Pharmacol. 1998 -- thyroid-stimulating effect.'
+    ]
+  },
+  {
+    id: 'shatavari', type: 'herb', cat: 'rasayana',
+    sanskrit: 'Shatavari', devanagari: 'शतावरी', en: 'Wild Asparagus Root',
+    pharm: 'Asparagus racemosus (radix tuberosum)',
+    properties: { rasa: 'Madhura, Tikta (Sweet, Bitter)', virya: 'Sita (Cold)', vipaka: 'Madhura (Sweet)', dosha: 'VP- K+ (excess)' },
+    primary: 'Female tonic; galactagogue; adaptogen; gastric mucosal protectant',
+    traditional: 'The premier female rasayana in the Ayurvedic system -- described in Charaka Samhita as the herb that increases vitality and promotes fertility. Indicated for all female reproductive conditions: amenorrhoea, dysmenorrhoea, menopausal symptoms, and post-partum recovery. Also used in peptic ulcer (Pittaja grahani) and general debility (Vataj Shosha). The tuberous roots are prepared as shatavari kalpa (a sweet preparation with sugar and ghee) or as a milk decoction (Ksheerapaka).',
+    compounds: [
+      { name: 'Shatvarins I-IV (steroidal saponins)', class: 'Furostanol saponins', action: 'Phytoestrogenic activity; promote luteinizing hormone secretion; galactagogue via prolactin stimulation.' },
+      { name: 'Asparanin A, racemosol', class: 'Spirostanol saponins', action: 'Antioxidant; anti-inflammatory; anti-oestrogenic in some models -- bidirectional modulation context-dependent.' },
+      { name: 'Fructo-oligosaccharides', class: 'Prebiotic oligosaccharide', action: 'Gut motility support; microbiome promotion; synergistic with digestive herbs.' }
+    ],
+    uses: [
+      { condition: 'Galactagogue (lactation support)', evidence: 'moderate', detail: 'Systematic review and small RCTs show increased prolactin and milk volume in postpartum women. Sharma et al. Ayu 2011 positive RCT.' },
+      { condition: 'Menopausal symptoms', evidence: 'limited', detail: 'Phytoestrogenic mechanism; small Indian RCTs show hot flush and symptom reduction; data limited.' },
+      { condition: 'Peptic ulcer protection', evidence: 'limited', detail: 'Shatavari juice vs ranitidine RCT (Bhattarai 2015 Nepal) shows comparable ulcer healing; mechanism via mucosal coating and anti-secretory activity.' },
+      { condition: 'Adaptogen / immune support', evidence: 'insufficient', detail: 'Traditional rasayana classification; limited modern RCT data for standalone adaptogenic use.' }
+    ],
+    safety: {
+      common: ['GI bloating (saponin content)', 'Rarely: allergic reaction (rash, dyspnoea in Asparagus-sensitive patients)'],
+      caution: ['Hormone-sensitive cancers -- phytoestrogenic activity; AVOID in oestrogen-receptor positive breast or endometrial cancer until further safety data', 'Asparagus / Liliaceae allergy -- cross-reactivity possible', 'Kapha constitution with fluid retention -- cold heavy herb increases Kapha; may worsen oedema'],
+      interactions: ['Diuretics -- mild diuretic activity; additive effect', 'Oral contraceptives / HRT -- pharmacodynamic oestrogen overlap; monitor', 'Lithium -- theoretical diuretic-mediated lithium level increase']
+    },
+    dose: 'Churna 3-6 g with warm milk; Shatavari kalpa 1-2 tsp; liquid extract 1-2 mL TID; galactagogue: 2-3 g TID for 4-8 weeks.',
+    refs: [
+      'Bopana N, Saxena S. J Ethnopharmacol. 2007 -- Asparagus racemosus comprehensive review.',
+      'Sharma S et al. Ayu. 2011 -- Shatavari galactagogue RCT.',
+      'Bhattarai S et al. J Nepal Health Res Counc. 2015 -- peptic ulcer pilot RCT.'
+    ]
+  },
+  {
+    id: 'amalaki', type: 'herb', cat: 'rasayana',
+    sanskrit: 'Amalaki / Amla', devanagari: 'आमलकी', en: 'Indian Gooseberry',
+    pharm: 'Phyllanthus emblica / Emblica officinalis (fructus)',
+    properties: { rasa: 'Pancha rasa (five of six tastes -- lacks lavana/salt)', virya: 'Sita (Cold)', vipaka: 'Madhura (Sweet)', dosha: 'VPK- (tridosha balancing)' },
+    primary: 'Antioxidant rasayana; hepatoprotective; anti-ageing; metabolic tonic; digestive',
+    traditional: 'Considered the most important single herb in Ayurveda and the highest rasayana -- the only herb listed as Jeevaniya (life-promoting) in Charaka Samhita. The unique property of possessing five of the six tastes is theoretically associated with pacification of all three doshas. The central ingredient of both Triphala and Chyawanprash. The Ayurvedic Pharmacopoeia of India lists Amalaki in more conditions than any other single herb. Historically, kings employed Amalaki Rasayana courses for longevity.',
+    compounds: [
+      { name: 'Emblicanin A and B, puniglucanin, pedunculagin', class: 'Ellagitannins', action: 'Potent antioxidants; acid-stable (unlike ascorbic acid); resist gastric degradation; anti-glycation; the primary bioactive fraction.' },
+      { name: 'Gallic acid, chebulic acid, phyllemblic acid', class: 'Phenolic acids', action: 'Anti-inflammatory; antimicrobial; lipid-modulating; anti-atherosclerotic.' },
+      { name: 'Ascorbic acid (vitamin C)', class: 'Vitamin', action: 'High in fresh fruit (600-700 mg/100 g); heat-labile and largely lost in dried preparations -- the tannin fraction provides the pharmacological activity in processed forms.' }
+    ],
+    uses: [
+      { condition: 'Dyslipidaemia / cardiovascular risk', evidence: 'moderate', detail: 'Standardised Amla extract (Emblica) RCTs show significant reduction in total cholesterol, LDL, and oxidative stress markers. Gopa et al. Indian J Pharmacol 2012 and Upadya et al. 2019 RCTs positive.' },
+      { condition: 'Non-alcoholic fatty liver disease', evidence: 'limited', detail: 'Amla juice pilot RCTs show improved liver enzymes and hepatic steatosis grade; small samples.' },
+      { condition: 'Metabolic syndrome', evidence: 'limited', detail: 'Combined antioxidant, insulin-sensitising, and lipid effects in Indian RCT cohorts; modest but consistent direction.' },
+      { condition: 'Hepatoprotection / drug-induced liver injury', evidence: 'limited', detail: 'Preclinical and small clinical data in alcoholic and drug-induced liver disease; traditional Liver rasayana.' }
+    ],
+    safety: {
+      common: ['Mild GI upset; increased stool frequency (mildly laxative at high dose)', 'Darkening of urine (tannin metabolites -- harmless)'],
+      caution: ['Antiplatelet activity at high dose -- disclose pre-surgery', 'Iron absorption: dried Amla tannins may reduce non-haem iron absorption; take iron supplements 2-3 hours apart', 'Diuretic effect in some preparations'],
+      interactions: ['Anticoagulants (warfarin) -- antiplatelet ellagitannins; mild INR elevation; monitor', 'Antidiabetics -- mild additive hypoglycaemia', 'Iron supplements -- tannin interference; take separately']
+    },
+    dose: 'Fresh fruit 1-3 daily; dried churna 3-6 g; standardised Emblica extract 250-500 mg BID; juice 15-30 mL morning on empty stomach.',
+    refs: [
+      'Gopa B et al. Indian J Pharmacol. 2012 -- Amla in dyslipidaemia RCT.',
+      'Upadya H et al. BMC Complement Altern Med. 2019 -- Amla in metabolic syndrome RCT.',
+      'Mirunalini S, Krishnaveni M. J Basic Clin Physiol Pharmacol. 2010 -- Amla pharmacological review.'
+    ]
+  },
+  {
+    id: 'guduchi', type: 'herb', cat: 'rasayana',
+    sanskrit: 'Guduchi / Giloy', devanagari: '�-ुडूची', en: 'Heart-Leaved Moonseed',
+    pharm: 'Tinospora cordifolia (caulis)',
+    properties: { rasa: 'Tikta, Kashaya (Bitter, Astringent)', virya: 'Ushna (Hot)', vipaka: 'Madhura (Sweet)', dosha: 'VPK- (particularly PK-)' },
+    primary: 'Immunomodulator; antipyretic; anti-diabetic; anti-arthritic rasayana',
+    traditional: 'Called Amrita (nectar of immortality) because cut pieces of the stem regenerate spontaneously. Classified in Charaka Samhita as one of the premier Rasayana herbs for Vata-Pitta-Kapha balance, used in chronic fever (Sannipatajwara), diabetes (Prameha), and arthritis (Amavata). The aerial roots of Guduchi growing on Neem trees were traditionally considered most potent -- absorbing neem properties. Consumed massively in India during COVID-19 as an immune booster, which preceded a significant hepatotoxicity safety signal.',
+    compounds: [
+      { name: 'Tinosporine, magnoflorine, berberine', class: 'Alkaloids', action: 'Anti-inflammatory; antipyretic; immunostimulatory; antimicrobial. Berberine content lower than in Berberis but contributes to hypoglycaemic activity.' },
+      { name: 'Arabinogalactan polysaccharides', class: 'Polysaccharide', action: 'Macrophage and NK cell activation; immunomodulatory -- the primary immunostimulatory fraction.' },
+      { name: 'Tinosporide, cordioside (clerodane diterpenes)', class: 'Furanoid diterpenes', action: 'Anti-inflammatory; in animal models hepatoprotective, but paradoxically associated with hepatotoxicity in some human cases.' }
+    ],
+    uses: [
+      { condition: 'Type 2 diabetes glycaemic control', evidence: 'moderate', detail: 'Multiple Indian RCTs show significant HbA1c and fasting glucose reduction; systematic reviews confirm consistent direction. Grover et al. and multiple CCRAS trials positive.' },
+      { condition: 'Rheumatoid arthritis (adjunct)', evidence: 'limited', detail: 'Anti-inflammatory via TNF-alpha and IL-6 suppression; small RCTs show symptom improvement as adjunct to standard therapy.' },
+      { condition: 'Recurrent infections / immune support', evidence: 'limited', detail: 'Traditional use in Jeevanopaya (life-preserving) category; CCRAS trials in recurrent URTIs and fever show benefit.' },
+      { condition: 'Anti-malarial', evidence: 'limited', detail: 'Alkaloid activity against Plasmodium in vitro and animal models; traditional Jwara use; no large modern RCT.' }
+    ],
+    safety: {
+      common: ['Mild GI upset; constipation at high dose', 'Drowsiness in some patients'],
+      caution: ['HEPATOTOXICITY SIGNAL -- Multiple case series of acute liver injury attributed to Tinospora cordifolia following widespread COVID-19 use in India (2021). Devarbhavi et al. BMJ Case Reports 2021 documented 6 cases including 1 liver transplant. Mechanism unclear (idiosyncratic or immune-mediated). Monitor LFTs in prolonged use and in patients with pre-existing liver disease.', 'Autoimmune disease -- immunostimulatory properties may aggravate SLE, RA, MS -- use with specialist supervision', 'Pregnancy and breastfeeding: insufficient safety data -- AVOID prolonged high-dose use'],
+      interactions: ['Antidiabetics (metformin, sulphonylureas, insulin) -- additive hypoglycaemia; blood glucose monitoring essential', 'Immunosuppressants (tacrolimus, ciclosporin) -- theoretical immunostimulatory antagonism', 'Hepatotoxic drugs -- avoid combination given hepatotoxicity signal']
+    },
+    dose: 'Fresh stem juice 10-20 mL/day; churna 1-3 g; standardised extract 300-500 mg/day; limit continuous use to 3 months; monitor LFTs.',
+    refs: [
+      'Devarbhavi H et al. BMJ Case Rep. 2021 -- Guduchi-induced hepatotoxicity case series.',
+      'Grover JK et al. J Ethnopharmacol. 2002 -- Tinospora cordifolia in diabetes.',
+      'Sohgaura A, Bigoniya P. Am J Drug Discov Dev. 2015 -- Guduchi pharmacological review.'
+    ]
+  },
+  {
+    id: 'shilajit', type: 'herb', cat: 'rasayana',
+    toxic: true,
+    sanskrit: 'Shilajit', devanagari: 'शिलाजीत', en: 'Mineral Pitch / Asphaltum',
+    pharm: 'Asphaltum punjabianum (purified mineral exudate -- shodhita shilajit)',
+    properties: { rasa: 'Tikta, Kashaya, Katu', virya: 'Ushna (Hot)', vipaka: 'Katu (Pungent)', dosha: 'VK- P+ at high dose' },
+    primary: 'Adaptogen; androgenic; anti-fatigue; anti-ageing mineral rasayana',
+    traditional: 'Shilajit occupies a unique position in Ayurveda as a "mineral exudate" -- neither plant, animal, nor classical metal -- originating from Himalayan and Altai mountain rocks. Sushruta Samhita describes it as the "destroyer of weakness." Considered the greatest Anupana (vehicle) for rasayana preparations. RAW (unpurified) Shilajit is TOXIC due to heavy metals and must undergo shodhana (traditional purification) before internal use. The Ayurvedic Pharmacopoeia of India specifies heavy metal limits for purified preparations.',
+    compounds: [
+      { name: 'Fulvic acid (60-80% of purified form)', class: 'Humic substance', action: 'Primary bioactive; chelates minerals; anti-inflammatory; antioxidant; mitochondrial carrier; inhibits tau protein aggregation (Alzheimer models).' },
+      { name: 'Dibenzo-alpha-pyrones (DBPs)', class: 'Polycyclic aromatic', action: 'Mitochondrial electron transport support; ATP synthesis enhancement; anti-inflammatory.' },
+      { name: 'Heavy metals (arsenic, lead, mercury in RAW form)', class: 'TOXIC contaminants', action: 'Responsible for raw Shilajit toxicity. Purification (shodhana) reduces but does not eliminate; third-party testing essential.' }
+    ],
+    uses: [
+      { condition: 'Male reproductive health / testosterone', evidence: 'limited', detail: 'Biswas et al. Andrologia 2010 RCT in infertile men shows increased testosterone, FSH, LH, and sperm parameters; one healthy-men RCT also positive; effect size modest (15-20% testosterone increase).' },
+      { condition: 'Fatigue / chronic fatigue', evidence: 'limited', detail: 'Mitochondrial DBP mechanism plausible; small clinical trials show reduced fatigue scores; not established for CFS.' },
+      { condition: 'Cognitive function / Alzheimer prevention', evidence: 'insufficient', detail: 'Fulvic acid tau-aggregation inhibition interesting; no human clinical trial data for cognitive endpoints.' },
+      { condition: 'Athletic performance', evidence: 'insufficient', detail: 'Preclinical energy metabolism data; small human pilot only.' }
+    ],
+    safety: {
+      common: ['Mild GI upset; may worsen gout (increases uric acid in some individuals)', 'Warming sensation; increased sweating'],
+      caution: ['HEAVY METAL CONTAMINATION -- Raw and improperly processed Shilajit products contain arsenic, lead, and mercury at potentially toxic levels. Saper et al. JAMA 2004 found 20% of Ayurvedic products exceeded safe metal levels. USE ONLY clinically-tested, third-party-verified purified preparations. Request certificate of analysis.', 'Gout -- may increase uric acid; avoid in active gout', 'Haemochromatosis / iron overload -- high mineral content including iron; avoid', 'Sickle cell anaemia, thalassaemia -- iron loading concern'],
+      interactions: ['Antihypertensives -- additive hypotension reported in some users', 'Antidiabetics -- mild hypoglycaemic activity of fulvic acid; monitor glucose', 'High-dose iron supplementation -- additive iron loading']
+    },
+    dose: 'Purified Shilajit 300-500 mg/day standardised to >60% fulvic acid; must have third-party certificate of analysis for heavy metals; cycling use (8 weeks on, 4 weeks off) is traditional; never use raw/unpurified form.',
+    refs: [
+      'Biswas TK et al. Andrologia. 2010 -- Shilajit in male infertility RCT.',
+      'Saper RB et al. JAMA. 2004 -- Heavy metals in Ayurvedic preparations (landmark safety study).',
+      'Bhattacharyya S et al. J Ethnopharmacol. 2009 -- Shilajit composition and bioactivity.'
+    ]
+  },
+  // ==================== MEDHYA ====================
+  {
+    id: 'brahmi', type: 'herb', cat: 'medhya',
+    sanskrit: 'Brahmi / Bacopa', devanagari: 'ब्राह्मी', en: 'Water Hyssop',
+    pharm: 'Bacopa monnieri (herba)',
+    properties: { rasa: 'Tikta, Kashaya (Bitter, Astringent)', virya: 'Sita (Cold)', vipaka: 'Madhura (Sweet)', dosha: 'VPK- (tridosha)' },
+    primary: 'Cognitive enhancer; anxiolytic; adaptogen; anti-epileptic adjunct',
+    traditional: 'One of the most important Medhya rasayana herbs in Charaka Samhita -- prescribed for enhancement of intelligence (Medhya), memory (Smriti), and speech (Vak). Classical preparation is Brahmi ghrita (medicated ghee) for cognitive conditions. Used for children with learning difficulties and in elderly patients with age-related cognitive decline. Note: the name "Brahmi" is shared with Centella asiatica in South India, creating regional clinical confusion -- always verify the Latin binomial.',
+    compounds: [
+      { name: 'Bacosides A and B (saponins -- bacogenins A1-A4)', class: 'Dammarane saponins', action: 'Promote acetylcholine synthesis; antioxidant; enhance hippocampal dendritic branching. The marker compounds for standardisation (typically >55% bacosides).' },
+      { name: 'Bacopaside I-XII', class: 'Phenylethanoid glycosides', action: 'Anti-stress; antioxidant; additional nootropic mechanisms.' },
+      { name: 'Betulinic acid, luteolin', class: 'Terpenoid / Flavone', action: 'Anti-inflammatory; neuroprotective; potential anticancer in preclinical models.' }
+    ],
+    uses: [
+      { condition: 'Memory and cognitive performance', evidence: 'moderate', detail: 'Multiple RCTs and meta-analyses (Kongkeaw 2014) in healthy adults and older adults show significant improvement in free recall, delayed recall, and processing speed after 12 weeks. Onset is slow -- no benefit at less than 4 weeks.' },
+      { condition: 'Anxiety', evidence: 'limited', detail: 'Secondary anxiety outcomes in cognitive RCTs show significant reduction in State-Trait Anxiety Inventory scores; smaller effect than cognitive data.' },
+      { condition: 'ADHD (children)', evidence: 'limited', detail: 'Small paediatric RCTs show modest attention improvement; not established as primary ADHD treatment; useful as adjunct.' },
+      { condition: 'Alzheimer disease', evidence: 'insufficient', detail: 'Mechanistically plausible (cholinergic, antioxidant, anti-amyloid in models); no human disease-modification RCT.' }
+    ],
+    safety: {
+      common: ['NAUSEA AND GI UPSET -- the most common dose-limiting side effect; up to 30% of trial participants report GI effects; take with food', 'Fatigue; dry mouth at high dose'],
+      caution: ['Slow onset -- minimum 8-12 weeks for cognitive benefit; inform patients to avoid early discontinuation', 'Bradycardia -- mild cholinergic activity; caution in sick sinus syndrome, bradycardia, or with other rate-reducing drugs', 'Pregnancy -- insufficient safety data; generally avoided'],
+      interactions: ['Anticholinesterases (donepezil, rivastigmine) -- additive cholinergic; may increase GI side effects and bradycardia risk', 'SSRIs -- serotonergic potentiation possible; monitor', 'Antiepileptics -- Bacopa has GABAergic activity; monitor seizure threshold']
+    },
+    dose: 'Standardised extract (55% bacosides) 300-450 mg/day with food; traditional churna 3-6 g in warm milk or ghee; minimum 8-12 week trial; morning or midday dosing preferred (evening may cause drowsiness).',
+    refs: [
+      'Kongkeaw C et al. J Ethnopharmacol. 2014 -- Bacopa monnieri meta-analysis in cognition.',
+      'Russo A, Borrelli F. Phytomedicine. 2005 -- Bacopa monnieri comprehensive review.',
+      'Dave UP et al. J Tradit Complement Med. 2014 -- Bacopa in children with ADHD.'
+    ]
+  },
+  {
+    id: 'mandukaparni', type: 'herb', cat: 'medhya',
+    sanskrit: 'Mandukaparni', devanagari: 'मण्डूकपर्णी', en: 'Gotu Kola',
+    pharm: 'Centella asiatica (herba)',
+    properties: { rasa: 'Tikta, Kashaya (Bitter, Astringent)', virya: 'Sita (Cold)', vipaka: 'Madhura (Sweet)', dosha: 'VPK-' },
+    primary: 'Medhya (cognitive); wound healing; venous tonic; anti-fibrotic; anxiolytic',
+    traditional: 'Called Mandukaparni (frog-leaf) for its rounded leaves resembling a frog\'s foot. Listed in Charaka Samhita as both a Medhya herb and a Kushtha-hara (skin disease) remedy. In South Indian and Siddha medicine, it is also called Brahmi -- creating clinical confusion with Bacopa monnieri. Centella has stronger evidence for wound healing and venous insufficiency; Bacopa for cognitive enhancement. Both are Medhya but with different primary strengths. Widely used in Southeast Asia and France (as TECA extract) for chronic venous disease.',
+    compounds: [
+      { name: 'Asiaticoside, madecassoside (triterpene glycosides)', class: 'Ursane pentacyclic triterpene saponins', action: 'Stimulate collagen Type I and III synthesis; anti-fibrotic via TGF-beta inhibition; wound healing; skin regeneration.' },
+      { name: 'Asiatic acid, madecassic acid (aglycones)', class: 'Pentacyclic triterpenoids', action: 'Anti-inflammatory (MAPK/ERK signalling); antioxidant; neuroprotective; improve cerebral microcirculation.' },
+      { name: 'Brahmoside, brahminoside', class: 'Saponin glycosides', action: 'GABAergic anxiolytic activity; anti-stress.' }
+    ],
+    uses: [
+      { condition: 'Chronic venous insufficiency', evidence: 'strong', detail: 'Multiple European RCTs and meta-analyses of TECA extract (titrated Centella asiatica extract) show significant reduction of oedema, leg heaviness, and venous symptoms. Well-established therapeutic use in France and Italy.' },
+      { condition: 'Wound healing / hypertrophic scars', evidence: 'moderate', detail: 'Randomised trials of topical and oral Centella support improved scar appearance and collagen remodelling post-surgery and post-burn.' },
+      { condition: 'Cognitive function / anxiety', evidence: 'limited', detail: 'Small RCTs show modest cognitive improvement and anxiety reduction; effect smaller and less consistent than Bacopa monnieri.' },
+      { condition: 'Diabetic microangiopathy', evidence: 'limited', detail: 'Italian trials of TECA in diabetic microangiopathy show improved capillary filtration and reduced ankle oedema.' }
+    ],
+    safety: {
+      common: ['GI upset; nausea', 'Allergic contact dermatitis (topical -- test before widespread use)'],
+      caution: ['HEPATOTOXICITY -- Case reports of cholestatic acute liver injury with oral Centella preparations (Jorge and Jorge. Gastroenterol Hepatol. 2005; multiple subsequent reports). Monitor LFTs in prolonged oral use (>3 months).', 'Pregnancy -- uterotonic in traditional texts; AVOID oral use in pregnancy; topical appears safer', 'Photosensitivity (rare) with topical preparations'],
+      interactions: ['CNS depressants / sedatives -- additive CNS depression', 'Hepatotoxic drugs -- additive risk given hepatotoxicity signal', 'Anticoagulants -- mild antiplatelet activity']
+    },
+    dose: 'TECA extract 30-60 mg TID orally; whole herb powder 1-2 g TID; fresh leaf juice 10-15 mL/day; topical cream 0.1-1% asiaticoside for wounds and scars.',
+    refs: [
+      'Incandela L et al. Angiology. 2001 -- TECA in chronic venous hypertension.',
+      'Brinkhaus B et al. Phytomedicine. 2000 -- Centella asiatica systematic review.',
+      'Jorge OA, Jorge AD. Gastroenterol Hepatol. 2005 -- Centella hepatotoxicity.'
+    ]
+  },
+  // ==================== SHOTHAHARA ====================
+  {
+    id: 'haridra', type: 'herb', cat: 'shothahara',
+    sanskrit: 'Haridra / Kanchani', devanagari: 'हरिद्रा', en: 'Turmeric',
+    pharm: 'Curcuma longa (rhizoma)',
+    properties: { rasa: 'Tikta, Katu (Bitter, Pungent)', virya: 'Ushna (Hot)', vipaka: 'Katu (Pungent)', dosha: 'VK- P- (neutral/beneficial to all doshas in food)' },
+    primary: 'Anti-inflammatory; antioxidant; hepatoprotective; wound-healing; antimicrobial',
+    traditional: 'Described in Charaka Samhita, Sushruta Samhita, and Ashtanga Hridayam as Shothahara (anti-inflammatory), Varnya (skin-brightening), Krimighna (antimicrobial), and Kushtha-hara (skin disease). One of the oldest household medicines in India -- applied as a paste on wounds (Haridra Lepa), consumed in warm milk (Haldi doodh / golden milk) for respiratory illness, and used daily in cooking as a Dharana dravya (preservative and medicine). The whole rhizome contains a more complete compound profile than isolated curcumin.',
+    compounds: [
+      { name: 'Curcumin (curcuminoid 1-6% of rhizome)', class: 'Diarylheptanoid', action: 'NF-kB inhibitor; COX-1/2 inhibitor; antioxidant; anti-amyloid; poor oral bioavailability (<1% reaches systemic circulation as administered in powder) -- dramatically improved by piperine (+2000%), lipid formulations (Meriva, LongVida), or nanoparticles.' },
+      { name: 'Bisdemethoxycurcumin, demethoxycurcumin', class: 'Curcuminoids', action: 'Related curcuminoids; distinct but overlapping anti-inflammatory and antioxidant activity.' },
+      { name: 'Ar-turmerone, alpha/beta-turmerone', class: 'Volatile sesquiterpenoids', action: 'Enhance gut curcumin absorption; independently neuroprotective and anti-neuroinflammatory in rodent models. Present only in whole rhizome -- not in curcumin extracts.' }
+    ],
+    uses: [
+      { condition: 'Osteoarthritis pain and stiffness', evidence: 'moderate', detail: 'Multiple RCTs with bioavailability-enhanced curcumin (BCM-95, Meriva, Theracurmin) show significant pain and function improvement; effect size comparable to low-dose NSAIDs in mild-moderate OA. Plain curcumin powder without enhancement has minimal clinical effect.' },
+      { condition: 'Ulcerative colitis (maintenance)', evidence: 'moderate', detail: 'Hanai et al. Clin Gastroenterol Hepatol 2006 landmark RCT shows curcumin reduces relapse rate in UC maintenance; Cochrane-adjacent meta-analyses confirm.' },
+      { condition: 'Metabolic syndrome / NAFLD', evidence: 'limited', detail: 'Multiple modest improvements in lipids, glucose, CRP, and liver enzymes across heterogeneous RCT populations; consistent direction but heterogeneous preparations.' },
+      { condition: 'Alzheimer disease', evidence: 'insufficient', detail: 'Strong epidemiological and preclinical rationale; clinical RCTs have consistently failed to show cognitive benefit (Ringman et al. 2012 negative; MEND trial neutral).' }
+    ],
+    safety: {
+      common: ['GI discomfort, nausea, yellow stools (dose-dependent)', 'Diarrhoea at high dose (>2 g curcumin)'],
+      caution: ['IRON ABSORPTION -- Curcumin chelates non-haem iron; long-term high-dose supplementation may worsen iron status in pre-menopausal women, iron deficiency anaemia, or patients on borderline iron intake. Take 2-3 hours apart from iron supplements or iron-rich meals.', 'Gallstones / biliary obstruction -- turmeric stimulates bile secretion; contraindicated in biliary obstruction; use cautiously in cholelithiasis', 'Urinary oxalate stones -- turmeric increases urinary oxalate excretion; caution in calcium oxalate nephrolithiasis'],
+      interactions: ['Anticoagulants (warfarin) -- antiplatelet activity; modest INR elevation in case reports; monitor', 'Antidiabetics -- additive hypoglycaemia', 'Piperine (Bioperine / Trikatu) -- increases curcumin bioavailability by 2000% but simultaneously increases bioavailability of many co-administered drugs via CYP3A4/P-gp inhibition (see Trikatu entry)', 'Paclitaxel, vinblastine -- P-gp inhibition may increase chemotherapy exposure']
+    },
+    dose: 'Food: ad libitum. Supplemental curcumin: requires bioavailability-enhanced formulation -- Meriva 1-2 g, BCM-95 500 mg BID, Theracurmin 90-180 mg, or LongVida 400 mg. Plain curcumin powder alone at standard doses lacks meaningful systemic activity.',
+    refs: [
+      'Daily JW et al. J Med Food. 2016 -- Curcumin in osteoarthritis meta-analysis.',
+      'Hanai H et al. Clin Gastroenterol Hepatol. 2006 -- Curcumin in ulcerative colitis RCT.',
+      'Shoba G et al. Planta Med. 1998 -- Piperine enhancement of curcumin bioavailability.'
+    ]
+  },
+  {
+    id: 'shallaki', type: 'herb', cat: 'shothahara',
+    sanskrit: 'Shallaki / Sallaki', devanagari: 'शल्लकी', en: 'Indian Frankincense / Boswellia',
+    pharm: 'Boswellia serrata (gum resin)',
+    properties: { rasa: 'Tikta, Katu (Bitter, Pungent)', virya: 'Ushna (Hot)', vipaka: 'Katu (Pungent)', dosha: 'VK- P+ at high dose' },
+    primary: '5-LOX inhibitor; anti-arthritic; anti-asthmatic; anti-ulcerative colitis',
+    traditional: 'The resin (gum) of Shallaki trees is described in Sushruta Samhita under Shothahara dravyas, used for joints, intestinal inflammation, respiratory conditions, and skin disorders. The mechanistic distinction from NSAIDs is pharmacologically precise: Boswellic acids inhibit 5-lipoxygenase (reducing leukotrienes) rather than cyclooxygenase (reducing prostaglandins) -- producing anti-inflammatory effects without the GI side effects of NSAIDs. This selectivity has made it one of the most extensively researched Ayurvedic herbs in Western clinical settings.',
+    compounds: [
+      { name: 'Boswellic acids (alpha, beta, acetyl-keto -- AKBA)', class: 'Pentacyclic triterpene acids', action: '5-lipoxygenase inhibitors; AKBA (acetyl-11-keto-beta-boswellic acid) most potent; inhibit NF-kB; poorly absorbed (enhanced by lipid meals by 60-80%).' },
+      { name: 'Incensole acetate', class: 'Diterpene', action: 'Anti-inflammatory via TRPV3 channel; neuroprotective; anxiolytic.' },
+      { name: 'Tiratricol-like triterpenoids', class: 'Triterpenoid', action: 'Additional anti-inflammatory spectrum; cytotoxic to cancer cells in vitro.' }
+    ],
+    uses: [
+      { condition: 'Osteoarthritis (especially knee)', evidence: 'strong', detail: 'Multiple high-quality RCTs with Loxin (AKBA-enriched extract) and Aflapin show significant pain and function improvement. Systematic reviews and meta-analyses confirm. Sontakke et al. RCT shows Shallaki comparable to diclofenac for knee OA with superior tolerability.' },
+      { condition: 'Asthma', evidence: 'moderate', detail: 'Gupta et al. Eur J Med Res 1998 RCT shows significant reduction in asthma attacks and improved FEV1 vs placebo; follow-up trials supportive; leukotriene mechanism highly relevant.' },
+      { condition: 'Inflammatory bowel disease', evidence: 'moderate', detail: 'Multiple RCTs show Boswellia extract comparable to mesalazine in mild-moderate Crohn disease and UC. Gerhardt et al. and Gupta et al. European IBD trials positive.' },
+      { condition: 'Rheumatoid arthritis', evidence: 'limited', detail: 'Anti-inflammatory mechanism highly relevant; fewer human RCTs than for OA; small trials show modest symptom improvement.' }
+    ],
+    safety: {
+      common: ['GI upset, acid reflux at high dose', 'Skin rash (rare allergic reaction)'],
+      caution: ['Pregnancy -- insufficient safety data; generally avoided in all trimesters', 'OATP transporter substrate -- Boswellic acids are OATP1B1/1B3 substrates; theoretical interaction with statins (also substrates)'],
+      interactions: ['NSAIDs -- mechanistically complementary (different pathways); no additive GI toxicity', 'Statins (rosuvastatin, atorvastatin) -- OATP transporter competition; monitor lipids and myopathy symptoms', 'Anticoagulants -- mild antiplatelet activity; minor interaction']
+    },
+    dose: 'Standardised extract 65-85% boswellic acids: 300-400 mg TID with food; Loxin or Aflapin (enriched AKBA): 100-200 mg/day; take with a fat-containing meal to enhance AKBA absorption; onset 4-8 weeks.',
+    refs: [
+      'Sontakke S et al. Indian J Pharmacol. 2007 -- Shallaki vs diclofenac in knee OA RCT.',
+      'Gupta I et al. Eur J Med Res. 1998 -- Boswellia serrata in asthma RCT.',
+      'Holtmeier W et al. Inflamm Bowel Dis. 2011 -- Boswellia in Crohn disease.'
+    ]
+  },
+  // ==================== DEEPANA / PACHANA ====================
+  {
+    id: 'shunti', type: 'herb', cat: 'deepana',
+    sanskrit: 'Shunti / Ardraka', devanagari: 'शुण्ठी / आर्द्रक', en: 'Dry Ginger / Fresh Ginger',
+    pharm: 'Zingiber officinale (rhizoma)',
+    properties: { rasa: 'Katu (Pungent)', virya: 'Ushna/Anushna-Sheeta (Dry: Hot; Fresh: Mild)', vipaka: 'Madhura (Sweet)', dosha: 'VK- P+ (excess dosing)' },
+    primary: 'Digestive stimulant; anti-emetic; analgesic; anti-inflammatory; carminative',
+    traditional: 'Called Vishvabheshaja (universal medicine) in Ayurvedic texts -- no other single herb appears in more classical formulas. The distinction between Shunti (dry ginger) and Ardraka (fresh ginger) is treated as almost two different medicines: Shunti is more pungent, heating, and Ama-digesting; Ardraka is milder, detoxifying, and more appropriate in hot conditions. A key ingredient in Trikatu alongside Pippali and Maricha. Used for stimulating Agni (digestive fire), treating Ama (undigested metabolic waste), nausea, cough, and cold disorders.',
+    compounds: [
+      { name: '6-Gingerol (primary in fresh ginger)', class: 'Phenylpropanoid ketone', action: 'Anti-emetic; anti-inflammatory (COX-2, 5-LOX); antioxidant; converted to 6-shogaol on drying and heating.' },
+      { name: '6-Shogaol (primary in dry ginger)', class: 'Phenylpropanoid ketone', action: 'More potent anti-emetic than gingerol; formed during drying; anti-neuroinflammatory; 5-HT3 antagonism (antiemetic mechanism).' },
+      { name: 'Zingerone', class: 'Phenolic ketone', action: 'Formed by heat; milder pungency; anti-inflammatory; prebiotic for Lactobacillus.' }
+    ],
+    uses: [
+      { condition: 'Nausea and vomiting (multiple etiologies)', evidence: 'strong', detail: 'Cochrane-adjacent meta-analyses consistently positive across pregnancy nausea (Viljoen 2014), postoperative nausea, chemotherapy-induced nausea, and motion sickness. Effect size moderate; comparable to low-dose metoclopramide.' },
+      { condition: 'Osteoarthritis pain', evidence: 'moderate', detail: 'Altman and Marcussen 2001 landmark RCT positive; multiple subsequent RCTs confirm pain reduction. Effect smaller than full-dose NSAID but with superior tolerability profile.' },
+      { condition: 'Dysmenorrhoea', evidence: 'moderate', detail: 'RCTs comparing ginger vs ibuprofen for primary dysmenorrhoea (Rahnama 2012; Ozgoli 2009) show comparable pain reduction in the first 3 days of menstruation.' },
+      { condition: 'Chemotherapy-induced nausea', evidence: 'moderate', detail: 'Multiple RCTs as adjunct to ondansetron show modest additional antiemetic benefit. University of Rochester Cancer Center multi-site RCT positive.' }
+    ],
+    safety: {
+      common: ['Heartburn, GI reflux (loosens lower oesophageal sphincter)', 'Belching; warming sensation'],
+      caution: ['Pregnancy -- GENERALLY SAFE at culinary doses for pregnancy nausea (strongest evidence base); limit supplemental extract to <1 g/day in pregnancy; high doses in traditional texts were cautioned in late pregnancy', 'Gallstones -- stimulates bile secretion; use cautiously in cholelithiasis', 'Pre-surgery -- antiplatelet activity; discontinue supplements 2 weeks pre-operatively'],
+      interactions: ['Warfarin -- antiplatelet activity; case reports of INR elevation at high supplemental doses; monitor', 'Antidiabetics -- mild additive hypoglycaemia', 'Antihypertensives -- additive hypotension via vasodilation']
+    },
+    dose: 'Fresh root 1-2 g daily; Shunti churna 1-2 g; standardised extract 250 mg QID; pregnancy nausea: 250 mg QID (total 1 g/day) -- dose studied in trials.',
+    refs: [
+      'Viljoen E et al. Nutr J. 2014 -- Ginger in pregnancy nausea systematic review.',
+      'Altman RD, Marcussen KC. Arthritis Rheum. 2001 -- Ginger in knee OA RCT.',
+      'Pillai AK et al. Complement Ther Med. 2011 -- Ginger in chemotherapy-induced nausea.'
+    ]
+  },
+  {
+    id: 'pippali', type: 'herb', cat: 'deepana',
+    sanskrit: 'Pippali / Magadhi', devanagari: 'पिप्पली', en: 'Long Pepper',
+    pharm: 'Piper longum (fructus)',
+    properties: { rasa: 'Katu (Pungent)', virya: 'Anushna-Sheeta (paradoxically cooling in Vipaka)', vipaka: 'Madhura (Sweet)', dosha: 'VK- P+ at high dose' },
+    primary: 'Digestive stimulant; bioavailability enhancer; anti-asthmatic; anti-cough rasayana',
+    traditional: 'One of the most pharmacologically interesting herbs in Ayurveda due to its bioavailability-enhancing property -- used in Trikatu and countless compound formulas specifically to improve absorption of co-administered dravyas and medicines. The paradoxical cooling Vipaka despite hot Virya is a classical example of Ayurvedic pharmacology describing a herb that initially heats but ultimately nourishes. Used in Pipplyasava, Trikatu, Dashamoola, and independently for respiratory and digestive conditions. Also classified as a Rasayana when taken long-term with honey and ghee (Pippali Vardhaman Rasayana -- a graduated-dose course).',
+    compounds: [
+      { name: 'Piperine (5-9%)', class: 'Piperidine alkaloid', action: 'Potent CYP3A4 inhibitor AND P-glycoprotein inhibitor -- primary mechanism of bioavailability enhancement; bitter taste receptor agonist (digestive stimulant); anti-inflammatory via NF-kB.' },
+      { name: 'Piperlongumine', class: 'Lactam alkaloid', action: 'Anti-cancer (selective to cancer cells via ROS); anti-inflammatory; more selective than piperine.' },
+      { name: 'Pellitorine, piperanine', class: 'Amide alkaloids', action: 'Anti-larval; antifungal; antistress; local anaesthetic.' }
+    ],
+    uses: [
+      { condition: 'Bioavailability enhancement (co-administration)', evidence: 'strong', detail: 'Shoba et al. Planta Med 1998 demonstrates 2000% increase in curcumin bioavailability with 20 mg piperine. Sesamol, CoQ10, resveratrol, beta-carotene, and numerous pharmaceuticals also significantly enhanced.' },
+      { condition: 'Respiratory / anti-cough', evidence: 'limited', detail: 'Traditional Kasa (cough) and Shvasa (asthma) indication; modern clinical RCT data for Piper longum alone limited; contributes to Trikatu and Dashamoola evidence.' },
+      { condition: 'Antidiabetic', evidence: 'insufficient', detail: 'Piperine hypoglycaemic in rodent models via multiple mechanisms; no dedicated human RCT for diabetes.' }
+    ],
+    safety: {
+      common: ['GI irritation at high dose; worsens reflux and heartburn', 'Sweating'],
+      caution: ['MAJOR DRUG INTERACTIONS via CYP3A4 and P-glycoprotein inhibition -- Piperine markedly alters bioavailability of many pharmaceuticals. Clinically critical with: ciclosporin (levels can double), tacrolimus, carbamazepine, phenytoin, statins, antiretrovirals, antifungals, beta-blockers, cancer drugs. ALWAYS disclose Trikatu or piperine-containing formula use to prescribers.', 'Pitta-dominant conditions / gastritis -- hot pungent herb worsens hyperacidity', 'Pregnancy -- uterotonic at high doses; limit to culinary amounts'],
+      interactions: ['Ciclosporin, tacrolimus -- major; piperine markedly increases blood levels and toxicity risk', 'Phenytoin, carbamazepine -- increased plasma levels; seizure threshold monitoring needed', 'Chemotherapy agents -- altered pharmacokinetics; do not use without oncologist review', 'ALL CYP3A4 and P-gp substrates -- must be considered']
+    },
+    dose: 'Churna 0.5-2 g with honey; as Trikatu 1-3 g total (combined formula); Pippali Vardhaman Rasayana: graduated dose course under practitioner supervision; ALWAYS disclose to all prescribers when using any piperine-containing formula.',
+    refs: [
+      'Shoba G et al. Planta Med. 1998 -- Piperine bioavailability enhancement (landmark study).',
+      'Atal CK et al. J Ethnopharmacol. 1985 -- Piperine as drug interaction agent.',
+      'Singh J et al. Crit Rev Food Sci Nutr. 2007 -- Piper longum pharmacology review.'
+    ]
+  },
+  // ==================== PRAMEHA-HARA ====================
+  {
+    id: 'karela', type: 'herb', cat: 'prameha-hara',
+    sanskrit: 'Karavella / Karela', devanagari: 'करवेल', en: 'Bitter Melon',
+    pharm: 'Momordica charantia (fructus)',
+    properties: { rasa: 'Tikta (Bitter)', virya: 'Ushna (Hot)', vipaka: 'Katu (Pungent)', dosha: 'VPK-' },
+    primary: 'Antidiabetic; bitter digestive tonic; antiviral; hepatoprotective',
+    traditional: 'The primary Tikta (bitter) dravya for Prameha (urinary / metabolic disorders, historically mapping to diabetes mellitus) in Ashtanga Hridayam and Dravyaguna. The bitter taste is considered in Ayurvedic theory to directly counteract the "sweetness" pathology of Prameha -- an elegant if pre-modern mechanistic framework. Used as fresh juice, cooked vegetable, or dried powder. Also used in malaria, skin disease, and liver disorders. One of the most studied Ayurvedic herbs globally for type 2 diabetes due to the mechanistic plausibility of its compounds.',
+    compounds: [
+      { name: 'Charantin (steroidal glycoside mixture)', class: 'Cucurbitane-type triterpenoid', action: 'Insulin-mimetic; activates PPAR-gamma; promotes GLUT4 translocation to cell membrane; reduces hepatic gluconeogenesis.' },
+      { name: 'Polypeptide-P (plant insulin)', class: 'Peptide', action: 'Structurally analogous to bovine insulin; subcutaneous injection has insulin-like effect in animals; orally degraded -- uncertain oral bioavailability.' },
+      { name: 'Vicine', class: 'Pyrimidine nucleoside glycoside', action: 'SAFETY CONCERN -- triggers haemolytic anaemia in G6PD-deficient individuals (favism-like mechanism); found in seeds.' },
+      { name: 'Momordicin, momordicilin', class: 'Cucurbitane triterpenes', action: 'Anti-inflammatory; antiviral (anti-HIV in vitro); bitter principles.' }
+    ],
+    uses: [
+      { condition: 'Type 2 diabetes glycaemic control', evidence: 'limited', detail: 'Multiple RCTs with heterogeneous preparations show inconsistent but generally positive direction. Cochrane review (Ooi et al. 2012) found insufficient quality evidence for a firm recommendation. Updated meta-analyses more moderately positive. Preparation variation (juice vs powder vs extract) significantly affects outcomes.' },
+      { condition: 'Metabolic syndrome', evidence: 'limited', detail: 'Lipid-lowering, hepatoprotective, and antioxidant effects in small trials; not established.' },
+      { condition: 'Antiviral (HIV, dengue)', evidence: 'insufficient', detail: 'In vitro activity against HIV and dengue; no human clinical trial data.' }
+    ],
+    safety: {
+      common: ['Abdominal pain, diarrhoea (dose-limiting)', 'Hypoglycaemia in patients on antidiabetic medication'],
+      caution: ['G6PD DEFICIENCY -- Vicine in Karela seeds causes haemolytic anaemia in G6PD-deficient patients (favism-like reaction). Screen for G6PD deficiency before recommending, particularly in patients of Mediterranean, African, South Asian, or Southeast Asian descent (prevalence up to 15% in some populations). Avoid seed preparations; use fruit flesh only.', 'HYPOGLYCAEMIA risk with antidiabetic medications -- significant additive effect; monitor blood glucose and adjust medication doses proactively', 'Pregnancy -- oxytocic alkaloids; AVOID; abortifacient in animal studies'],
+      interactions: ['Antidiabetics (insulin, sulphonylureas, metformin) -- MAJOR additive hypoglycaemia; blood glucose monitoring essential; medication dose adjustment likely needed', 'Chlorpropamide -- historical case reports of severe hypoglycaemia', 'Cytarabine -- anti-cancer drug interaction in vitro (Divi et al.)']
+    },
+    dose: 'Fresh juice 50-100 mL/day on empty stomach; dried fruit powder 2-3 g TID; standardised extract 500 mg TID; monitor blood glucose weekly when initiating with antidiabetic medications.',
+    refs: [
+      'Ooi CP et al. Cochrane Database Syst Rev. 2012 -- Bitter melon for type 2 diabetes.',
+      'Leung L et al. Chin Med. 2009 -- Momordica charantia pharmacological review.',
+      'Divi RL et al. Biochim Biophys Acta. 1993 -- Vicine haemolytic mechanism.'
+    ]
+  },
+  // ==================== JWARA-HARA ====================
+  {
+    id: 'tulsi', type: 'herb', cat: 'jwara-hara',
+    sanskrit: 'Tulsi / Surasa', devanagari: 'तुलसी', en: 'Holy Basil',
+    pharm: 'Ocimum tenuiflorum / O. sanctum (folium et herba)',
+    properties: { rasa: 'Katu, Tikta (Pungent, Bitter)', virya: 'Ushna (Hot)', vipaka: 'Katu (Pungent)', dosha: 'VK- P+ (excess)' },
+    primary: 'Adaptogen; anti-stress; antimicrobial; anti-inflammatory; immunomodulatory',
+    traditional: 'The most sacred plant in Hinduism -- grown in virtually every household and temple. Daily consumption of 2-4 fresh leaves is a widespread South Asian health practice. Charaka Samhita classifies Tulsi as Jwara-hara (anti-febrile), Vishahara (anti-toxic/antimicrobial), and Kasahara (anti-cough). Two primary varieties: Rama Tulsi (green leaves; milder) and Krishna Tulsi (purple leaves; more pungent and medicinally potent). Modern adaptogens research confirms the traditional rasayana classification -- cortisol reduction and HPA axis modulation comparable to other major adaptogens.',
+    compounds: [
+      { name: 'Eugenol (70-85% of volatile oil)', class: 'Phenylpropanoid', action: 'COX-2 inhibitor (anti-inflammatory); analgesic; antimicrobial; antifungal; antiplatelet.' },
+      { name: 'Ursolic acid', class: 'Pentacyclic triterpenoid', action: 'Anti-inflammatory; anti-tumour; hepatoprotective; anti-diabetic (PPAR-gamma agonism).' },
+      { name: 'Rosmarinic acid, cirsilineol, isothymusin', class: 'Phenolic acids / Flavones', action: 'Anti-inflammatory; antioxidant; antiviral; antidepressant in rodent models.' }
+    ],
+    uses: [
+      { condition: 'Stress / anxiety (adaptogenic)', evidence: 'moderate', detail: 'Multiple Indian RCTs with standardised holy basil extract show significant cortisol reduction and improvement in cognitive function and stress measures (Bhattacharyya 2008; Saxena 2012). Effect comparable to low-dose ashwagandha.' },
+      { condition: 'Blood glucose management', evidence: 'limited', detail: 'RCTs in type 2 diabetes show modest HbA1c and fasting glucose reduction; Modak et al. Indian J Clin Biochem 2007 review positive.' },
+      { condition: 'Upper respiratory tract infection', evidence: 'limited', detail: 'Immunostimulatory and antimicrobial activity; clinical URTI RCT data limited but traditional use well-documented.' },
+      { condition: 'Anti-inflammatory conditions', evidence: 'limited', detail: 'COX-2 mechanism; clinical data limited but pharmacology well-characterised for OA and inflammatory arthritis.' }
+    ],
+    safety: {
+      common: ['GI upset (rarely)', 'Allergic reaction in Lamiaceae-sensitive individuals (rare)'],
+      caution: ['Antiplatelet activity -- Eugenol inhibits platelet aggregation; disclose pre-surgery; may enhance anticoagulant drugs', 'Male antifertility concern at high dose -- Tulsi has been shown to reduce sperm motility and count in animal studies at medicinal doses (not relevant at culinary leaf consumption); relevant if male patients consuming high-dose extracts while trying to conceive', 'Hypothyroidism -- some data suggest Tulsi reduces T4 at high doses; use cautiously in hypothyroid patients on levothyroxine'],
+      interactions: ['Anticoagulants (warfarin) -- eugenol antiplatelet; monitor INR', 'Antidiabetics -- additive hypoglycaemia', 'Levothyroxine -- possible reduction in T4; monitor TSH']
+    },
+    dose: 'Fresh leaves 2-4 daily; dried leaf churna 1-2 g; standardised extract (2% ursolic acid) 300-600 mg/day; Tulsi tea 2-3 cups daily.',
+    refs: [
+      'Bhattacharyya D et al. J Ayurveda Integr Med. 2008 -- Holy basil adaptogen RCT.',
+      'Saxena RC et al. J Ayurveda Integr Med. 2012 -- Tulsi in generalised anxiety RCT.',
+      'Modak M et al. Indian J Clin Biochem. 2007 -- Tulsi in diabetes.'
+    ]
+  },
+  {
+    id: 'nimba', type: 'herb', cat: 'jwara-hara',
+    sanskrit: 'Nimba / Arishtha', devanagari: 'निम्ब', en: 'Neem',
+    pharm: 'Azadirachta indica (folium, cortex, oleum seminis)',
+    properties: { rasa: 'Tikta, Kashaya (Bitter, Astringent)', virya: 'Sita (Cold)', vipaka: 'Katu (Pungent)', dosha: 'PK- V+ (excess)' },
+    primary: 'Antimicrobial; antifungal; antiparasitic; antipyretic; bitter digestive tonic',
+    traditional: 'Called Sarva-roga-nivarini (curer of all diseases) -- the neem tree is arguably the most versatile medicinal tree in South Asia. Sushruta Samhita uses Nimba as Varnya (skin-brightening), Kushtha-hara (anti-skin-disease), and Jwara-hara (antipyretic). Virtually no part is unused: leaves for fever and skin, bark as Danta-kashtha (tooth-cleaning twig), oil for antifungal and antiparasitic, seeds for insecticide. Daily use of a neem twig for oral hygiene is described in Charaka Samhita and has modern evidence for periodontal disease.',
+    compounds: [
+      { name: 'Azadirachtin (limonoid terpene)', class: 'Tetranortriterpenoid limonoid', action: 'Major insecticidal/antiparasitic; disrupts insect hormonal system; responsible for antifertility effects (disrupts spermatogenesis via steroidogenesis interference).' },
+      { name: 'Nimbin, nimbinin, nimbidol (limonoids)', class: 'Tetranorterpenoids', action: 'Antifungal; anti-inflammatory; antiviral; antifertility in males.' },
+      { name: 'Nimbidin', class: 'Bitter principle', action: 'Anti-inflammatory; antibacterial; antiseptic; anti-ulcer.' },
+      { name: 'Quercetin, beta-sitosterol', class: 'Flavonoid / Phytosterol', action: 'Antioxidant; anti-inflammatory; moderate antiplatelet.' }
+    ],
+    uses: [
+      { condition: 'Periodontal disease / oral health', evidence: 'moderate', detail: 'Multiple RCTs of neem mouthwash, gel, and Danta-kashtha vs chlorhexidine show comparable plaque reduction and gingival inflammation improvement (Pai et al. 2004; Singh et al. 2011).' },
+      { condition: 'Antifungal (topical)', evidence: 'moderate', detail: 'Neem oil RCTs vs clotrimazole for tinea pedis and seborrhoeic dermatitis show comparable efficacy with fewer side effects.' },
+      { condition: 'Antidiabetic (adjunct)', evidence: 'limited', detail: 'Bitter alkaloid mechanism; small Indian RCTs show modest glucose reduction; not established as monotherapy.' },
+      { condition: 'Antimalarial', evidence: 'limited', detail: 'Limonoid activity against Plasmodium falciparum in vitro; traditional Jwara use; human RCT data limited.' }
+    ],
+    safety: {
+      common: ['Bitter taste; GI upset at high internal dose', 'Allergic contact dermatitis (topical -- patch test first)'],
+      caution: ['MALE ANTIFERTILITY -- Azadirachtin and neem limonoids reduce sperm motility and count and suppress testosterone at medicinal doses. Effects are reversible on cessation. Inform male patients of reproductive age who are trying to conceive.', 'HEPATOTOXICITY at high dose -- Case series of acute hepatocellular injury with high-dose neem oil ingestion, particularly in children. DO NOT give neem oil orally to children.', 'PREGNANCY -- ABORTIFACIENT. Neem has documented uterotonic and abortifacient effects in animal and human reports. ABSOLUTELY CONTRAINDICATED in pregnancy and when trying to conceive.', 'Autoimmune disease -- immunostimulatory; theoretical worsening'],
+      interactions: ['Antidiabetics -- additive hypoglycaemia', 'Immunosuppressants -- immunostimulatory antagonism', 'Anticoagulants -- quercetin mild antiplatelet']
+    },
+    dose: 'Leaf powder 2-4 g/day (adults only); neem mouthwash 0.5% solution TID; topical neem oil 2-5% in carrier oil; NOT for internal use in children; oral adult use: short courses (<4 weeks) preferred.',
+    refs: [
+      'Pai MR et al. J Indian Soc Periodontol. 2004 -- Neem vs chlorhexidine periodontal RCT.',
+      'Islas JF et al. Molecules. 2020 -- Azadirachta indica pharmacology review.',
+      'Subapriya R, Nagini S. Curr Med Chem Anticancer Agents. 2005 -- Neem antifertility and cancer prevention.'
+    ]
+  },
+  // ==================== MEDOHARA ====================
+  {
+    id: 'guggulu', type: 'herb', cat: 'medohara',
+    sanskrit: 'Guggulu / Devadhupa', devanagari: '�-ु�-्�-ुलु', en: 'Indian Bdellium / Guggul',
+    pharm: 'Commiphora wightii / C. mukul (gum resin)',
+    properties: { rasa: 'Tikta, Katu, Kashaya', virya: 'Ushna (Hot)', vipaka: 'Katu (Pungent)', dosha: 'VK- P+ (slightly)' },
+    primary: 'Hypolipidaemic; anti-inflammatory; anti-atherogenic; medohara (anti-obesity)',
+    traditional: 'One of the most important Medohara (anti-fat/lipid) and Shothahara (anti-inflammatory) herbs in Charaka Samhita. Used for Medoroga (obesity and lipid disorders), Kushtha (skin diseases), Vatavyadhi (joint disease), and as a Yoga-vahi (carrier/anupana) that enhances the effect of co-formulated herbs. The classical formulas built around Guggulu -- Kanchanar Guggulu, Triphala Guggulu, Yogaraj Guggulu -- are widely used in modern Ayurvedic practice. Note: Commiphora wightii is critically endangered in India due to over-harvesting; sustainable sourcing is an ethical obligation.',
+    compounds: [
+      { name: 'Guggulsterones Z and E', class: 'Pregnane steroids', action: 'Upregulate LDL receptor expression; Farnesoid X receptor (FXR) antagonists; anti-inflammatory via NF-kB; THYROID STIMULATING -- upregulate thyroid peroxidase and increase T3/T4.' },
+      { name: 'Guggulipid (standardised resin fraction)', class: 'Mixed steroid/terpenoid fraction', action: 'The pharmaceutical preparation; 2.5-5% guggulsterone content; variable efficacy.' },
+      { name: 'Myrrhanol A (triterpenoid)', class: 'Oleanolic acid triterpenoid', action: 'Anti-inflammatory; distinct mechanism from guggulsterones.' }
+    ],
+    uses: [
+      { condition: 'Hyperlipidaemia', evidence: 'limited', detail: 'CONFLICTING EVIDENCE -- Indian RCTs positive for LDL reduction; but the landmark Western RCT (Szapary et al. JAMA 2003) showed NO cholesterol benefit and increased LDL in some participants. Discrepancy may reflect diet, preparation differences, or bioavailability. Currently insufficient to recommend as primary lipid-lowering therapy.' },
+      { condition: 'Osteoarthritis (as component of Guggulu formulas)', evidence: 'limited', detail: 'Yogaraj Guggulu and Sallaki-Guggulu anti-arthritic formula trials show benefit; guggulsterone contribution vs other components unclear.' },
+      { condition: 'Acne vulgaris', evidence: 'limited', detail: 'Guggulipid vs tetracycline small RCT (Thappa and Dogra 1994) showed comparable nodulocystic acne reduction.' },
+      { condition: 'Weight management', evidence: 'insufficient', detail: 'Traditional Medohara use; minimal modern RCT data; not established.' }
+    ],
+    safety: {
+      common: ['GI upset, diarrhoea; skin rashes (relatively common -- allergic)', 'Headache; nausea'],
+      caution: ['THYROID STIMULATION -- Guggulsterones upregulate thyroid peroxidase and increase T3 and T4. AVOID in hyperthyroidism. Monitor thyroid function in all patients with thyroid disease on Guggulu.', 'DRUG BIOAVAILABILITY REDUCTION -- Guggulipid significantly reduces bioavailability of propranolol and diltiazem (documented in clinical pharmacokinetic studies by Dalvi et al.); check interactions with other drugs', 'Pregnancy -- uterotonic; AVOID', 'Sustainability concern -- Commiphora wightii is critically endangered; choose products with responsible sourcing certification'],
+      interactions: ['Propranolol -- bioavailability reduced approximately 50%; may reduce antihypertensive and anti-anginal efficacy', 'Diltiazem -- bioavailability significantly reduced', 'Anticoagulants -- guggulsterone antiplatelet activity', 'Levothyroxine -- additive thyroid stimulation; monitor TSH every 6-8 weeks']
+    },
+    dose: 'Guggulipid 500 mg TID standardised to 2.5-5% guggulsterones; traditional purified resin (Shuddha Guggulu) 500 mg-2 g TID with food; minimum 3-month trial; disclose thyroid and cardiac medication status.',
+    refs: [
+      'Szapary PO et al. JAMA. 2003 -- Guggulipid in hypercholesterolaemia (landmark negative Western RCT).',
+      'Dalvi SS et al. J Assoc Physicians India. 1994 -- Guggulipid drug bioavailability interaction.',
+      'Thappa DM, Dogra J. J Dermatol. 1994 -- Guggulipid vs tetracycline in acne.'
+    ]
+  },
+  // ==================== BALYA ====================
+  {
+    id: 'gokshura', type: 'herb', cat: 'balya',
+    sanskrit: 'Gokshura / Trikantaka', devanagari: '�-ोक्षुर', en: 'Small Caltrops / Puncture Vine',
+    pharm: 'Tribulus terrestris (fructus)',
+    properties: { rasa: 'Madhura (Sweet)', virya: 'Sita (Cold)', vipaka: 'Madhura (Sweet)', dosha: 'VP-' },
+    primary: 'Urinary tonic; anti-urolithic; mild aphrodisiac; anti-hypertensive; diuretic',
+    traditional: 'Categorised as Mutravirijaniya (urinary normaliser) in Charaka Samhita -- the primary Ayurvedic herb for urinary tract conditions: dysuria, urinary calculi (Mutrashmari), urinary tract infection, and obstructive urinary symptoms. Also listed as Balya (strength-promoting) and Vajikaran (aphrodisiac). The Western sports medicine reputation for testosterone boosting significantly overstates the actual clinical evidence -- this reputation derives from marketing rather than rigorous RCT data.',
+    compounds: [
+      { name: 'Furostanol saponins (protodioscin, protogracillin)', class: 'Steroidal glycosides', action: 'Claimed to increase LH leading to testosterone elevation; evidence in human eugonadal men inconsistent; modest effect in subfertile men.' },
+      { name: 'Spirostanol saponins (tribulosin, terrestrosin)', class: 'Steroidal glycosides', action: 'Mild diuretic; smooth muscle relaxant in urinary tract; antiplatelet.' },
+      { name: 'Flavonoids (kaempferol, quercetin)', class: 'Flavonols', action: 'Antioxidant; anti-inflammatory; mild antiplatelet.' },
+      { name: 'Alkaloids (harmane, norharmane)', class: 'Beta-carboline alkaloids', action: 'MAO-A inhibitory activity -- relevant for drug interactions with SSRIs and MAOIs.' }
+    ],
+    uses: [
+      { condition: 'Urinary calculi (prevention and passage)', evidence: 'moderate', detail: 'Traditional use supported by pharmacological mechanism (reduces calcium oxalate crystal formation) and Indian RCT data. Singh et al. World J Urol 2011 positive; mechanism includes diuresis and anti-aggregation activity.' },
+      { condition: 'Urinary tract symptoms (BPH-like)', evidence: 'limited', detail: 'Smooth muscle relaxant in urinary tract; clinical RCT data limited but traditional Mutravirijaniya use strong.' },
+      { condition: 'Libido / erectile dysfunction', evidence: 'limited', detail: 'CONFLICTING -- Despite pervasive marketing claims, meta-analyses of athletic performance trials are NEGATIVE (Brown et al. Int J Sports Nutr; Antonio et al.). Studies in subfertile men show modest testosterone increase; effect in eugonadal healthy men not established.' },
+      { condition: 'Hypertension', evidence: 'limited', detail: 'Small RCTs show modest blood pressure reduction via nitric oxide pathway; not established as monotherapy.' }
+    ],
+    safety: {
+      common: ['GI upset; mild diuresis', 'Rarely: photosensitivity'],
+      caution: ['Beta-carboline alkaloid (harmane/norharmane) MAO inhibitory activity -- potential for serotonin syndrome with SSRIs, SNRIs, or MAOIs; avoid combination or use with extreme caution', 'Renal disease -- diuretic effect may precipitate electrolyte imbalance; monitor electrolytes', 'Pregnancy -- smooth muscle relaxant activity on uterus; AVOID'],
+      interactions: ['SSRIs, SNRIs, MAOIs -- harmane/norharmane alkaloids; serotonin syndrome risk', 'Antihypertensives -- additive hypotension', 'Anticoagulants -- quercetin antiplatelet; monitor', 'Antidiabetics -- mild additive hypoglycaemia']
+    },
+    dose: 'Standardised extract (40% furostanol saponins) 500-1500 mg/day in divided doses; fruit churna 3-6 g; duration 4-8 weeks for urological conditions; note: testosterone-boosting effect not established in healthy eugonadal men.',
+    refs: [
+      'Singh S et al. World J Urol. 2011 -- Tribulus in urinary calculi.',
+      'Antonio J et al. J Exerc Physiol. 2000 -- Tribulus in athletes (negative).',
+      'Qureshi A et al. Am J Med Sci. 2014 -- Tribulus terrestris systematic review.'
+    ]
+  },
+  // ==================== CLASSICAL FORMULAS ====================
+  {
+    id: 'triphala', type: 'formula', cat: 'rasayana',
+    sanskrit: 'Triphala', devanagari: 'त्रिफला', en: 'Three Fruits',
+    ingredients: [
+      { name: 'Amalaki (Phyllanthus emblica)', han: 'आमलकी', role: 'Jun: tridosha-balancing; Pitta-pacifying; primary antioxidant; the anchor of the formula' },
+      { name: 'Vibhitaki (Terminalia bellirica)', han: 'विभीतकी', role: 'Chen: Kapha-pacifying; respiratory; lipid-modulating; astringent' },
+      { name: 'Haritaki (Terminalia chebula)', han: 'हरीतकी', role: 'Chen: Vata-pacifying; laxative; digestive; considered the physician herb of the formula' }
+    ],
+    properties: { rasa: 'Pancha rasa (all five tastes collectively)', virya: 'Neutral (balanced)', vipaka: 'Madhura (Sweet)', dosha: 'VPK- (tridosha -- each fruit addresses one dosha)' },
+    primary: 'Digestive tonic; gentle laxative; antioxidant; ophthalmic; anti-inflammatory; Rasayana',
+    traditional: 'The most commonly used Ayurvedic formula in modern practice and possibly the most studied Ayurvedic preparation globally. Each of the three fruits pacifies one dosha (Amalaki-Pitta, Vibhitaki-Kapha, Haritaki-Vata), and together they balance all three -- conferring universal applicability. Described in Charaka Samhita across conditions from digestive weakness to ophthalmological disease to cancer prevention. Considered both Rasayana (rejuvenating) and Shodhana (cleansing). Long-term daily use is traditional and considered non-dependency-inducing, unlike stimulant laxatives.',
+    compounds: [
+      { name: 'Emblicanins, chebulic ellagitannins (from Amalaki)', class: 'Ellagitannins', action: 'Potent antioxidants; anti-glycation; anti-inflammatory; acid-stable; primary bioactive fraction.' },
+      { name: 'Chebulinic acid, gallotannins (from Haritaki)', class: 'Hydrolysable tannins', action: 'Antimicrobial; antifungal; GI motility regulation; gentle laxative via bowel wall stimulation.' },
+      { name: 'Ellagic acid, gallic acid, beta-sitosterol (from Vibhitaki)', class: 'Phenolic acids / Phytosterol', action: 'Hypolipidaemic; antioxidant; hepatoprotective; respiratory mucus modulation.' }
+    ],
+    uses: [
+      { condition: 'Constipation and gut motility', evidence: 'moderate', detail: 'Multiple RCTs show improved stool frequency and consistency vs placebo; Cochrane-adjacent systematic review (Peterson 2017) positive; well-tolerated gentle laxative without dependency.' },
+      { condition: 'Metabolic syndrome', evidence: 'limited', detail: 'Combined antioxidant, lipid, and glucose effects in Indian RCT cohorts; modest but consistent direction.' },
+      { condition: 'Periodontal disease', evidence: 'limited', detail: 'Triphala mouthwash vs chlorhexidine RCTs show comparable plaque and gingivitis reduction (Bajaj and Tandon 2011).' },
+      { condition: 'Antioxidant / anti-ageing', evidence: 'insufficient', detail: 'Cellular antioxidant data very strong; human longevity and anti-ageing RCT data absent.' }
+    ],
+    safety: {
+      common: ['Loose stools or diarrhoea at high dose', 'Abdominal cramping; darkening of stool (tannins -- harmless)'],
+      caution: ['Pregnancy -- Haritaki has mild oxytocic activity and is traditionally contraindicated; AVOID in pregnancy', 'Diarrhoea-prone patients -- reduce dose or use Amalaki alone', 'Iron supplement interaction -- tannins reduce non-haem iron absorption; take 2 hours apart'],
+      interactions: ['Anticoagulants -- Amalaki antiplatelet ellagitannins; minor INR effect', 'Antidiabetics -- mild additive hypoglycaemia', 'Iron supplements -- tannin interference; separate by 2 hours']
+    },
+    dose: 'Churna 3-6 g at bedtime in warm water; for Rasayana: 3 g with honey and ghee; tablets per product; dose may be titrated to stool consistency; morning empty-stomach use for antioxidant effect; bedtime for laxative effect.',
+    refs: [
+      'Peterson CT et al. J Altern Complement Med. 2017 -- Triphala systematic review.',
+      'Priya Verma S et al. Int J Ayurveda Res. 2011 -- Triphala in metabolic syndrome.',
+      'Bajaj N, Tandon S. Contemp Clin Dent. 2011 -- Triphala mouthwash RCT.'
+    ]
+  },
+  {
+    id: 'trikatu', type: 'formula', cat: 'deepana',
+    sanskrit: 'Trikatu', devanagari: 'त्रिकटु', en: 'Three Pungents',
+    ingredients: [
+      { name: 'Shunti (Zingiber officinale)', han: 'शुण्ठी', role: 'Anti-emetic; Ama-digesting; digestive stimulant; anti-inflammatory' },
+      { name: 'Maricha (Piper nigrum)', han: 'मरिच', role: 'Black pepper; piperine source; digestive; antimicrobial' },
+      { name: 'Pippali (Piper longum)', han: 'पिप्पली', role: 'Long pepper; piperine and piperlongumine source; bioavailability enhancer; respiratory' }
+    ],
+    properties: { rasa: 'Katu (Pungent)', virya: 'Ushna (Hot)', vipaka: 'Katu (Pungent)', dosha: 'VK- P++ (markedly increases Pitta)' },
+    primary: 'Deepana (Agni-stimulant); bioavailability enhancer; carminative; anti-asthmatic; thermogenic',
+    traditional: 'One of the most important small formulas in Ayurveda -- prescribed as a Deepana (digestive fire stimulant) in virtually any condition where Ama (undigested metabolic waste) is the root cause. Charaka Samhita uses Trikatu for respiratory conditions (Shvasa, Kasa), metabolic disorders, and as a component in hundreds of compound formulas. Its bioavailability-enhancing function is the classical justification for adding it to large compound formulas -- it ensures absorption of co-formulated dravyas. Classical rationale: the three pungents act synergistically on different aspects of digestive and respiratory function.',
+    compounds: [
+      { name: 'Piperine (from Maricha and Pippali)', class: 'Piperidine alkaloid', action: 'Potent CYP3A4 and P-glycoprotein inhibitor; primary bioavailability enhancer; thermogenic; anti-inflammatory; GI motility stimulant.' },
+      { name: '6-Gingerol, 6-shogaol (from Shunti)', class: 'Phenylpropanoid ketones', action: 'Anti-emetic; digestive; anti-inflammatory; serotonin 5-HT3 antagonism.' },
+      { name: 'Piperlongumine (from Pippali)', class: 'Lactam alkaloid', action: 'Anti-inflammatory; anti-cancer in preclinical; antifungal.' }
+    ],
+    uses: [
+      { condition: 'Functional dyspepsia / Ama conditions', evidence: 'moderate', detail: 'Traditional use well-supported; Trikatu-containing formulas consistently improve digestive symptoms in Indian RCTs; single-formula standalone data limited.' },
+      { condition: 'Bioavailability enhancement', evidence: 'strong', detail: 'Piperine content enhances bioavailability of curcumin by 2000%, and numerous other herbs and drugs via CYP3A4/P-gp inhibition. This is the most clinically significant pharmacological action.' },
+      { condition: 'Respiratory conditions / asthma', evidence: 'limited', detail: 'Traditional anti-Kapha use for mucus-laden respiratory conditions; limited standalone RCT data; contributes to Dashamoola and respiratory formula evidence.' },
+      { condition: 'Weight management / metabolic', evidence: 'insufficient', detail: 'Thermogenic effect of piperine and gingerols in animal models; no standalone human RCT.' }
+    ],
+    safety: {
+      common: ['GI heat, burning, and reflux', 'Heartburn (highly heating formula)', 'Sweating; facial flushing'],
+      caution: ['MAJOR DRUG INTERACTIONS -- Piperine in Trikatu markedly inhibits CYP3A4 and P-gp. Critical interactions: ciclosporin levels can increase 2-fold or more; tacrolimus, phenytoin, carbamazepine, antiretrovirals, statins, beta-blockers, antifungals, and many chemotherapy agents are affected. ALWAYS DISCLOSE Trikatu use to all prescribers.', 'Pitta-dominant conditions: CONTRAINDICATED in gastritis, GORD, hyperacidity, active peptic ulcer, hyperthyroidism -- all worsened by this markedly heating formula', 'Pregnancy: AVOID high doses; uterotonic potential'],
+      interactions: ['Ciclosporin, tacrolimus -- piperine markedly increases blood levels; toxicity risk', 'Phenytoin -- increased plasma levels; seizure threshold at risk', 'Warfarin -- multiple interaction mechanisms; monitor INR', 'ALL CYP3A4 substrates -- review entire medication list before prescribing Trikatu']
+    },
+    dose: 'Churna 1-3 g with honey or warm water before meals; ALWAYS disclose to all prescribers; reduce dose or avoid entirely in patients on drugs with narrow therapeutic indices metabolised by CYP3A4.',
+    refs: [
+      'Atal CK et al. J Ethnopharmacol. 1985 -- Trikatu / piperine bioavailability enhancement.',
+      'Johri RK et al. Indian J Physiol Pharmacol. 1992 -- Piperine CYP interaction mechanism.',
+      'CCRAS. Database on Medicinal Plants Used in Ayurveda. Ministry of AYUSH, India.'
+    ]
+  },
+  {
+    id: 'dashamoola', type: 'formula', cat: 'shothahara',
+    sanskrit: 'Dashamoola', devanagari: 'दशमूल', en: 'Ten Roots',
+    ingredients: [
+      { name: 'Bilva (Aegle marmelos)', han: 'बिल्व', role: 'Large root; anti-inflammatory; hepatoprotective; digestive' },
+      { name: 'Agnimantha (Clerodendrum phlomidis)', han: 'अ�-्निमन्थ', role: 'Large root; anti-rheumatic; digestive stimulant; anti-inflammatory' },
+      { name: 'Shyonaka (Oroxylum indicum)', han: 'श्योनाक', role: 'Large root; anti-arthritic; anti-asthmatic; flavonoid-rich' },
+      { name: 'Patala (Stereospermum suaveolens)', han: 'पाटला', role: 'Large root; anti-inflammatory; iridoid-containing' },
+      { name: 'Gambhari (Gmelina arborea)', han: '�-म्भारी', role: 'Large root; tonic; anti-inflammatory; Rasayana' },
+      { name: 'Shalaparni (Desmodium gangeticum)', han: 'शालपर्णी', role: 'Small root; Vata-pacifying; anti-inflammatory' },
+      { name: 'Prishniparni (Uraria picta)', han: 'पृश्नपर्णी', role: 'Small root; Vata-pacifying; antipyretic' },
+      { name: 'Kantakari (Solanum surattense)', han: 'कण्टकारी', role: 'Small root; anti-asthmatic; alkaloid-containing; bronchodilatory' },
+      { name: 'Brhati (Solanum indicum)', han: 'बृहती', role: 'Small root; anti-asthmatic; anti-inflammatory; solasodinoid-containing' },
+      { name: 'Gokshura (Tribulus terrestris)', han: '�-ोक्षुर', role: 'Small root; diuretic; urinary tonic; anti-inflammatory' }
+    ],
+    properties: { rasa: 'Tikta, Kashaya, Madhura', virya: 'Ushna (Hot)', vipaka: 'Madhura (Sweet)', dosha: 'VPK-' },
+    primary: 'Anti-rheumatic; analgesic; anti-inflammatory; postpartum tonic; anti-asthmatic; Vata-pacifying',
+    traditional: 'One of the oldest and most revered Ayurvedic compound formulas -- a full chapter in Charaka Samhita is devoted to it. Treats Vata disorders comprehensively: joint pain, neurological conditions, postpartum recovery (Sutika Roga), respiratory disease, and general debility. The postpartum use is particularly well-established: Dashamoola kashayam is routinely administered to women in Kerala and other South Indian Ayurvedic traditions after delivery. Also prepared as Dashamoola taila (medicated oil) for Panchakarma Abhyanga (medicated massage) in Vata disorders.',
+    compounds: [
+      { name: 'Lupeol, alpha/beta-amyrin (from Bilva, Agnimantha)', class: 'Pentacyclic triterpenoids', action: 'Anti-inflammatory; hepatoprotective; anti-arthritic.' },
+      { name: 'Iridoids (from Patala, Shyonaka -- oroxylin, baicalin)', class: 'Iridoid glycosides / Flavones', action: 'Anti-inflammatory; antispasmodic; anti-asthmatic.' },
+      { name: 'Solasodinoids (from Brhati, Kantakari)', class: 'Steroidal alkaloid glycosides', action: 'Bronchodilatory; anti-asthmatic; anti-inflammatory; antifertility concern at high dose.' }
+    ],
+    uses: [
+      { condition: 'Postpartum recovery (Sutika Roga)', evidence: 'moderate', detail: 'Traditional use deeply established in classical texts and South Indian practice; modern Indian RCTs show improved postpartum recovery, reduced Vata symptoms, and anti-inflammatory effect.' },
+      { condition: 'Rheumatoid arthritis / joint pain', evidence: 'limited', detail: 'Anti-inflammatory mechanism with multiple relevant compounds; Dashamoola-containing formula RCTs positive; single-formula RCT data limited.' },
+      { condition: 'Asthma / respiratory', evidence: 'limited', detail: 'Solasodinoid alkaloid bronchodilation; clinical RCT data limited but mechanism well-characterised.' },
+      { condition: 'General Vata debility', evidence: 'insufficient', detail: 'Traditional classification; no specific modern RCT for general tonic use.' }
+    ],
+    safety: {
+      common: ['Generally well tolerated; mild GI upset', 'Warming sensation (Ushna virya)'],
+      caution: ['Solanum species (Brhati, Kantakari) contain solasodinoids with antifertility properties at high dose -- inform patients trying to conceive; traditional use at standard doses is generally considered safe', 'Pregnancy (high dose) -- warming and potentially uterotonic; the postpartum use is well-established but high-dose use during pregnancy should be avoided', 'Bile duct obstruction -- Bilva is cholagogue; avoid in biliary obstruction'],
+      interactions: ['Antidiabetics -- combined mild hypoglycaemic herbs; monitor glucose', 'Diuretics -- Gokshura content; additive diuresis; monitor electrolytes', 'Anticoagulants -- multiple herb antiplatelet contributions']
+    },
+    dose: 'Kashayam (decoction): 15-30 mL BID-TID on empty stomach; Dashamoola churna 3-6 g; medicated oil (Dashamoola taila) for external Abhyanga per practitioner; Dashamoola Arishtam (fermented preparation) 15-25 mL BID after food.',
+    refs: [
+      'Singh RH. J Integr Med. 2014 -- Dashamoola in postpartum recovery.',
+      'Chandola HM et al. Ayu. 2011 -- Dashamoola in Vata disorders.',
+      'Ayurvedic Pharmacopoeia of India. Part I, Vol IV. Ministry of AYUSH, Government of India.'
+    ]
+  },
+  // ==================== KALPANA (PATENT PREPARATIONS) ====================
+  {
+    id: 'chyawanprash', type: 'patent', cat: 'rasayana',
+    sanskrit: 'Chyawanprash', devanagari: 'च्यवनप्राश', en: 'Herbal Jam of Sage Chyawan',
+    properties: { rasa: 'Predominantly Madhura with Kashaya', virya: 'Moderate (Anushna -- mildly warm)', vipaka: 'Madhura (Sweet)', dosha: 'VPK-' },
+    primary: 'Immune tonic; anti-ageing; respiratory tonic; general Rasayana; anti-fatigue',
+    traditional: 'One of the oldest Ayurvedic formulas -- attributed in the Charaka Samhita to the restoration of youth in the aged sage Chyawan by the twin gods Ashwini Kumar. The recipe appears in multiple classical texts with minor variations. In modern practice it is the most widely consumed Ayurvedic preparation globally -- taken by millions daily. The preparation process (Amalaki cooked with 40-50 additional herbs, then mixed with ghee, honey, sesame oil, and sugar) is standardised in the Ayurvedic Pharmacopoeia of India.',
+    ingredients: [
+      { name: 'Amalaki (primary base)', han: 'आमलकी', role: 'Primary antioxidant; the Rasayana foundation; heat-stable emblicanin fraction' },
+      { name: 'Ashwagandha', han: 'अश्व�-ंधा', role: 'Adaptogenic; stress-reducing; androgenic' },
+      { name: 'Brahmi', han: 'ब्राह्मी', role: 'Medhya; cognitive support; anti-stress' },
+      { name: 'Shatavari', han: 'शतावरी', role: 'Female tonic; immune modulating; galactagogue' },
+      { name: 'Pippali', han: 'पिप्पली', role: 'Bioavailability enhancer; respiratory; digestive' },
+      { name: 'Guduchi', han: '�-ुडूची', role: 'Immunomodulator; anti-inflammatory' },
+      { name: 'Plus 35-45 additional herbs, ghee, honey, sugar', han: '+ अन्य द्रव्य', role: 'Variable by preparation; includes Bala, Bilva, Shunti, Karkatshringi, Pushkarmool, and others' }
+    ],
+    compounds: [
+      { name: 'Emblicanins (from Amalaki base)', class: 'Ellagitannins', action: 'Primary antioxidant fraction; remarkably heat-stable unlike ascorbic acid; the most pharmacologically characterised fraction.' },
+      { name: 'Withanolides (from Ashwagandha)', class: 'Steroidal lactones', action: 'Adaptogenic; cortisol-modulating; anti-inflammatory.' },
+      { name: 'Multi-herb synergy (40+ herbs)', class: 'Multi-class', action: 'Immunomodulatory polysaccharides, flavonoids, saponins, and alkaloids from constituent herbs -- pharmacological attribution to individual components largely unclear.' }
+    ],
+    uses: [
+      { condition: 'URTI prevention and severity reduction', evidence: 'moderate', detail: 'Multiple Indian RCTs show significant reduction in URTI frequency, severity, and duration. Bhatt et al. and CCRAS trials with decent methodology confirm immune benefit.' },
+      { condition: 'Immune function markers', evidence: 'moderate', detail: 'NK cell activity, neutrophil function, and immunoglobulin levels improved in clinical trials.' },
+      { condition: 'General well-being / fatigue', evidence: 'limited', detail: 'Multiple quality-of-life and fatigue measure improvements; non-specific endpoint; consistent positive direction.' },
+      { condition: 'Anti-ageing / Rasayana', evidence: 'insufficient', detail: 'Traditional Rasayana claim; no long-term human trial on ageing-specific endpoints.' }
+    ],
+    safety: {
+      common: ['GI warming and burning sensation in Pitta-dominant individuals', 'Weight gain (calorie-dense -- 1-2 tablespoons ~100 kcal/day)', 'Elevated blood glucose from sugar content (especially in diabetics)'],
+      caution: ['HEAVY METAL CONTAMINATION -- Commercial Chyawanprash products have been found to contain lead, mercury, and arsenic above safe thresholds in batch testing. Saper et al. JAMA 2004 found elevated metals in multiple tested brands. Choose products with third-party batch testing and certificate of analysis (COA) for heavy metals.', 'Diabetes -- significant sugar content; use sugar-free formulations (widely available) or monitor blood glucose', 'Guduchi component -- hepatotoxicity signal (see Guduchi entry); in standard Chyawanprash dose this risk is low but relevant for prolonged daily use'],
+      interactions: ['Antidiabetics -- sugar content and mild hypoglycaemic herb content; monitor glucose', 'Anticoagulants -- Amalaki antiplatelet and multiple herb interactions; monitor INR']
+    },
+    dose: '1-2 teaspoons (5-10 g) daily on empty stomach or with warm milk; children half adult dose; morning administration preferred; 3-month minimum course; choose sugar-free formulation for diabetic patients.',
+    refs: [
+      'Jaiswal YS, Williams LL. J Ethnopharmacol. 2017 -- Chyawanprash comprehensive review.',
+      'Bhatt AD et al. Indian J Clin Pract. 2001 -- Chyawanprash in URTI RCT.',
+      'Saper RB et al. JAMA. 2004 -- Heavy metals in Ayurvedic preparations (landmark safety study).'
+    ]
+  }
+];
+
+// ==================== STATE ====================
+// ==================== STATE ====================
+var activeType = 'all';
+var activeCat  = 'all';
+var searchQ    = '';
+
+// ==================== HELPERS ====================
+function evBadge(ev) {
+  var cls = {strong:'ev-strong',moderate:'ev-moderate',limited:'ev-limited',insufficient:'ev-insuff',negative:'ev-neg'};
+  return '<span class="ev-badge '+(cls[ev]||'')+'">'+ev+'</span>';
+}
+
+function bestEv(entry) {
+  var rank = ['strong','moderate','limited','insufficient','negative'];
+  if (!entry.uses || !entry.uses.length) return 'insufficient';
+  return entry.uses.reduce(function(best, u) {
+    return rank.indexOf(u.evidence) < rank.indexOf(best) ? u.evidence : best;
+  }, 'negative');
+}
+
+// ==================== RENDER ====================
+function renderGrid() {
+  var grid = document.getElementById('grid');
+  var filtered = ENTRIES.filter(function(e) {
+    if (activeType !== 'all' && e.type !== activeType) return false;
+    if (activeCat  !== 'all' && e.cat  !== activeCat)  return false;
+    if (searchQ) {
+      var q = searchQ.toLowerCase();
+      var hay = [e.sanskrit, e.devanagari||'', e.en, e.pharm||'', e.primary,
+        (e.uses||[]).map(function(u){return u.condition+' '+u.detail;}).join(' ')
+      ].join(' ').toLowerCase();
+      if (hay.indexOf(q) === -1) return false;
+    }
+    return true;
+  });
+
+  document.getElementById('count').textContent = filtered.length + ' of ' + ENTRIES.length + ' entries';
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty">No matching entries</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(function(e) {
+    var tl = TYPE_LABELS[e.type] || e.type;
+    var cl = CAT_LABELS[e.cat] ? CAT_LABELS[e.cat].en : e.cat;
+    var cs = CAT_LABELS[e.cat] ? CAT_LABELS[e.cat].san : '';
+    var be = bestEv(e);
+    return '<div class="card'+(e.toxic?' card-toxic':'')+'" data-id="'+e.id+'" tabindex="0" role="button">'
+      +'<div class="card-header">'
+        +'<div class="card-names">'
+          +'<div class="card-title">'+e.sanskrit+(e.toxic?' <span class="tox-badge">&#9888;</span>':'')+'</div>'
+          +'<div class="card-han">'+( e.devanagari||'')+'</div>'
+          +'<div class="card-en">'+e.en+'</div>'
+          +(e.pharm?'<div class="card-pharm">'+e.pharm+'</div>':'')
+        +'</div>'
+        +'<div class="card-meta">'
+          +'<span class="tag tag-type">'+tl+'</span>'
+          +'<span class="tag tag-cat">'+cl+'</span>'
+        +'</div>'
+      +'</div>'
+      +'<div class="card-body">'
+        +'<div class="card-primary">'+e.primary+'</div>'
+        +evBadge(be)
+      +'</div>'
+      +'</div>';
+  }).join('');
+}
+
+// ==================== MODAL ====================
+function openModal(id) {
+  var e = null;
+  for (var i=0;i<ENTRIES.length;i++){if(ENTRIES[i].id===id){e=ENTRIES[i];break;}}
+  if (!e) return;
+
+  var tl = TYPE_LABELS[e.type] || e.type;
+  var cl = CAT_LABELS[e.cat] ? CAT_LABELS[e.cat].en : e.cat;
+  var cs = CAT_LABELS[e.cat] ? CAT_LABELS[e.cat].san : '';
+
+  var h = '<div class="modal-title">'+e.sanskrit+(e.toxic?' <span class="tox-badge">&#9888; Caution</span>':'')+'</div>'
+    +'<div class="modal-sub">'+(e.devanagari||'')+(e.en?' &middot; '+e.en:'')+'</div>'
+    +(e.pharm?'<div class="modal-pharm">'+e.pharm+'</div>':'')
+    +'<div class="modal-tags"><span class="tag tag-type">'+tl+'</span><span class="tag tag-cat">'+cl+(cs?' &middot; '+cs:'')+'</span></div>';
+
+  if (e.properties) {
+    var p = e.properties;
+    h += '<div class="modal-section"><div class="modal-section-title">Properties (Guna)</div><div class="prop-grid">'
+      +(p.rasa   ?'<div class="prop-item"><div class="prop-label">Rasa (Taste)</div><div class="prop-val">'+p.rasa+'</div></div>':'')
+      +(p.virya  ?'<div class="prop-item"><div class="prop-label">Virya (Potency)</div><div class="prop-val">'+p.virya+'</div></div>':'')
+      +(p.vipaka ?'<div class="prop-item"><div class="prop-label">Vipaka (Post-digestive)</div><div class="prop-val">'+p.vipaka+'</div></div>':'')
+      +(p.dosha  ?'<div class="prop-item"><div class="prop-label">Dosha Effect</div><div class="prop-val">'+p.dosha+'</div></div>':'')
+      +'</div></div>';
+  }
+
+  h += '<div class="modal-section"><div class="modal-section-title">Primary Actions</div><p>'+e.primary+'</p></div>';
+
+  if (e.traditional) {
+    h += '<div class="modal-section"><div class="modal-section-title">Traditional Context</div><p>'+e.traditional+'</p></div>';
+  }
+
+  if (e.compounds && e.compounds.length) {
+    h += '<div class="modal-section"><div class="modal-section-title">Key Compounds</div>';
+    for (var i=0;i<e.compounds.length;i++){
+      var c=e.compounds[i];
+      h += '<div class="compound-row"><strong>'+c.name+'</strong> <em>'+c.class+'</em><br>'+c.action+'</div>';
+    }
+    h += '</div>';
+  }
+
+  if (e.ingredients && e.ingredients.length) {
+    h += '<div class="modal-section"><div class="modal-section-title">Formula Composition</div>';
+    for (var i=0;i<e.ingredients.length;i++){
+      var ing=e.ingredients[i];
+      h += '<div class="compound-row"><strong>'+ing.name+'</strong>'+(ing.han?' <span style="opacity:0.6">('+ing.han+')</span>':'')+'<br>'+ing.role+'</div>';
+    }
+    h += '</div>';
+  }
+
+  if (e.uses && e.uses.length) {
+    h += '<div class="modal-section"><div class="modal-section-title">Clinical Evidence</div>';
+    for (var i=0;i<e.uses.length;i++){
+      var u=e.uses[i];
+      h += '<div class="use-row">'+evBadge(u.evidence)+' <strong>'+u.condition+'</strong><br><span style="color:var(--text-faint);font-size:0.85rem">'+u.detail+'</span></div>';
+    }
+    h += '</div>';
+  }
+
+  if (e.safety) {
+    var s=e.safety;
+    h += '<div class="modal-section"><div class="modal-section-title">Safety</div>';
+    if (s.common&&s.common.length){
+      h+='<div class="safety-group"><div class="safety-label">Common effects</div>';
+      for(var i=0;i<s.common.length;i++) h+='<div class="safety-item">'+s.common[i]+'</div>';
+      h+='</div>';
+    }
+    if (s.caution&&s.caution.length){
+      h+='<div class="safety-group"><div class="safety-label">Cautions</div>';
+      for(var i=0;i<s.caution.length;i++) h+='<div class="safety-item caution">'+s.caution[i]+'</div>';
+      h+='</div>';
+    }
+    if (s.interactions&&s.interactions.length){
+      h+='<div class="safety-group"><div class="safety-label">Drug interactions</div>';
+      for(var i=0;i<s.interactions.length;i++) h+='<div class="safety-item interaction">'+s.interactions[i]+'</div>';
+      h+='</div>';
+    }
+    h += '</div>';
+  }
+
+  if (e.dose) h += '<div class="modal-section"><div class="modal-section-title">Dose</div><p>'+e.dose+'</p></div>';
+
+  if (e.refs && e.refs.length) {
+    h += '<div class="modal-section"><div class="modal-section-title">References</div>';
+    for(var i=0;i<e.refs.length;i++) h+='<div class="ref-item">'+e.refs[i]+'</div>';
+    h += '</div>';
+  }
+
+  document.getElementById('modal-body').innerHTML = h;
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ==================== EVENTS (delegation) ====================
+document.getElementById('grid').addEventListener('click', function(e) {
+  var card = e.target.closest ? e.target.closest('.card') : (function(){
+    var el=e.target; while(el&&!el.classList.contains('card')) el=el.parentNode; return el;
+  })();
+  if (card && card.dataset.id) openModal(card.dataset.id);
+});
+
+document.getElementById('search').addEventListener('input', function(e) {
+  searchQ = e.target.value.trim();
+  renderGrid();
+});
+
+document.querySelectorAll('.type-chip').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.type-chip').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    activeType = btn.dataset.type;
+    renderGrid();
+  });
+});
+
+document.querySelectorAll('.cat-chip').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.cat-chip').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    activeCat = btn.dataset.cat;
+    renderGrid();
+  });
+});
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+  if (e.target.id === 'modal-overlay') closeModal();
+});
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+
+renderGrid();
+
+</script>
+</body>
+</html>

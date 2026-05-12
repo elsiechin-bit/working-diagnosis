@@ -1,0 +1,21 @@
+---
+layout: base.njk
+---
+<article class="note">
+  <header class="note__head">
+    <p class="kicker">❍ Field Note</p>
+    <h1 class="note__title">{{ title }}</h1>
+    {% if dek %}<p class="note__dek">{{ dek }}</p>{% endif %}
+    {% if date %}
+      <p class="note__meta">
+        <time datetime="{{ date | dateISO }}">{{ date | dateDisplay }}</time>
+      </p>
+    {% endif %}
+  </header>
+
+  <div class="note__body">
+    {{ content | safe }}
+  </div>
+
+  <p class="note__back"><a href="/field-notes/">← All field notes</a></p>
+</article>

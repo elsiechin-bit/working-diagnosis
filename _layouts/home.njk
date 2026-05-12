@@ -1,0 +1,74 @@
+---
+layout: base.njk
+---
+
+{#
+<section class="hero">
+  <section class="home-hero">
+    <img src="/assets/logo-hero.png"
+         alt="Working Diagnosis"
+         width="1200" height="1200"
+         class="home-hero-img">
+  </section>
+
+  {{ content | safe }}
+</section>
+#}
+
+<section class="pillars-grid">
+  <div class="pillars">
+
+    <article class="pillar pillar--field-guide">
+      <div class="pillar-icon pillar-icon--library" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 18 V52" />
+          <path d="M32 18 C24 16, 14 16, 8 18 V50 C14 48, 24 48, 32 50" />
+          <path d="M32 18 C40 16, 50 16, 56 18 V50 C50 48, 40 48, 32 50" />
+        </svg>
+      </div>
+      <h3 class="pillar-title">the <em>library</em>.</h3>
+      <span class="pillar-rule pillar-rule--library" aria-hidden="true"></span>
+      <p>Conditions organised by specialty, and the patient handouts that go with them.</p>
+      <a href="/library/" class="pillar-cta pillar-cta--library">Browse the library <span class="pillar-cta-arrow" aria-hidden="true">&rarr;</span></a>
+    </article>
+
+    <article class="pillar pillar--workbench">
+      <div class="pillar-icon pillar-icon--workbench" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Wrench: head at top-right, handle to bottom-left -->
+          <circle cx="48" cy="16" r="5" />
+          <path d="M44 20 L20 44" />
+          <path d="M16 48 L20 44" />
+          <circle cx="16" cy="48" r="2" fill="currentColor" stroke="none"/>
+          <!-- Screwdriver: handle at top-left, tip to bottom-right -->
+          <rect x="13" y="13" width="10" height="6" transform="rotate(45 18 16)" />
+          <path d="M22 22 L46 46" />
+          <path d="M46 46 L50 50" stroke-width="2.4"/>
+        </svg>
+      </div>
+      <h3 class="pillar-title">the <em>workbench</em>.</h3>
+      <span class="pillar-rule pillar-rule--workbench" aria-hidden="true"></span>
+      <p>Useful calculators, questionnaires, condensed guidelines, and a searchable pharmacopaedia.</p>
+      <a href="/consult-room/" class="pillar-cta pillar-cta--workbench">Pick up a tool <span class="pillar-cta-arrow" aria-hidden="true">&rarr;</span></a>
+    </article>
+
+    <article class="pillar pillar--thinking-room">
+      <div class="pillar-icon pillar-icon--workshop" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Erlenmeyer flask -->
+          <path d="M24 12 H40" />
+          <path d="M26 12 V26 L14 48 C13 50, 14 53, 17 53 H47 C50 53, 51 50, 50 48 L38 26 V12" />
+          <line x1="20" y1="40" x2="44" y2="40" />
+          <circle cx="26" cy="46" r="1.6" fill="currentColor" stroke="none"/>
+          <circle cx="34" cy="44" r="1.2" fill="currentColor" stroke="none"/>
+          <circle cx="38" cy="48" r="1.4" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <h3 class="pillar-title">the <em>workshop</em>.</h3>
+      <span class="pillar-rule pillar-rule--workshop" aria-hidden="true"></span>
+      <p>Patient explainers and off-centre builds. The experimental end of the building.</p>
+      <a href="/workshop/" class="pillar-cta pillar-cta--workshop">Open the workshop <span class="pillar-cta-arrow" aria-hidden="true">&rarr;</span></a>
+    </article>
+
+  </div>
+</section>

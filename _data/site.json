@@ -1,0 +1,32 @@
+{
+  "title": "Working Diagnosis",
+  "tagline": "An internet workshop for general practice",
+  "author": "Working Diagnosis",
+  "url": "https://www.workingdiagnosis.xyz",
+  "nav": [
+    { "label": "the Library", "shortLabel": "Library", "url": "/library/", "inMasthead": true, "group": "room" },
+    { "label": "the Workbench", "shortLabel": "Workbench", "url": "/consult-room/", "inMasthead": true, "group": "room" },
+    { "label": "the Workshop", "shortLabel": "Workshop", "url": "/workshop/", "inMasthead": true, "group": "room" },
+    { "label": "Lifestyle & Prevention", "url": "/lifestyle-prevention/", "row": 1, "inMasthead": true, "group": "specialty" },
+    { "label": "Cardiovascular", "url": "/cardiovascular/", "row": 2, "inMasthead": true, "group": "specialty" },
+    { "label": "Respiratory", "url": "/respiratory/", "row": 3 },
+    { "label": "Gastroenterology", "url": "/gastroenterology/", "row": 4 },
+    { "label": "Renal & Urology", "url": "/renal-urology/", "row": 5 },
+    { "label": "Endocrinology", "url": "/endocrinology/", "row": 6 },
+    { "label": "Neurology", "url": "/neurology/", "row": 7, "inMasthead": true, "group": "specialty" },
+    { "label": "Musculoskeletal", "shortLabel": "MSK", "url": "/msk/", "row": 8, "inMasthead": true, "group": "specialty" },
+    { "label": "Dermatology", "url": "/dermatology/", "row": 9, "inMasthead": true, "group": "specialty" },
+    { "label": "Immunology & Allergy", "url": "/immunology-allergy/", "row": 10 },
+    { "label": "Infectious Diseases", "url": "/infectious-disease/", "row": 11 },
+    { "label": "Occupational Health", "url": "/occupational-health/", "row": 12 },
+    { "label": "Child Health", "url": "/paediatrics/", "row": 13, "inMasthead": true, "group": "specialty" },
+    { "label": "Sexual & Reproductive Health", "url": "/gynaecology/", "row": 14 },
+    { "label": "Older Person's Health", "url": "/geriatrics/", "row": 15 },
+    { "label": "Oncology & Palliative Care", "url": "/oncology-palliative/", "row": 16 },
+    { "label": "Mental Health", "url": "/mental-health/", "row": 17, "inMasthead": true, "group": "specialty" },
+    { "label": "Handouts", "url": "/handouts/", "row": 7, "inMasthead": true, "group": "utility" },
+    { "label": "Field Notes", "url": "/field-notes/", "row": 7, "inMasthead": true, "group": "utility" },
+    { "label": "Resources", "url": "/resources/", "row": 7, "inMasthead": true, "group": "utility" },
+    { "label": "About", "url": "/about/", "row": 7, "inMasthead": true, "group": "utility" }
+  ]
+}

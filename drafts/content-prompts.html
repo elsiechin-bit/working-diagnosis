@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Working Diagnosis - Content Prompts</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EFF3E6; --warm: #E4EAD8; --ink: #1A1F1C; --ink-soft: #3A4540;
+    --ink-mute: #6B7A75; --green: #2F6B5C; --green-deep: #1F4A3F;
+    --ochre: #B8714F; --rule: #C8D4B4; --mono: 'JetBrains Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Lora', Georgia, serif; background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.7; padding-bottom: 80px; }
+  .masthead { background: var(--ink); color: #fff; padding: 28px 40px; border-bottom: 3px solid var(--green); }
+  .masthead h1 { font-family: var(--mono); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; color: var(--rule); margin-bottom: 4px; }
+  .masthead p { font-size: 13px; color: #8A9A8F; font-family: var(--mono); letter-spacing: 0.5px; }
+  .body { max-width: 820px; margin: 0 auto; padding: 0 32px; }
+  .intro { padding: 40px 0 32px; border-bottom: 1px solid var(--rule); margin-bottom: 40px; }
+  .intro p { font-size: 15px; color: var(--ink-soft); line-height: 1.7; max-width: 640px; }
+  .prompt-block { margin-bottom: 40px; }
+  .prompt-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px; }
+  .prompt-num { font-family: var(--mono); font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ochre); }
+  .prompt-title { font-size: 18px; font-weight: 700; color: var(--ink); }
+  .prompt-desc { font-size: 14px; color: var(--ink-mute); margin-bottom: 12px; font-family: var(--mono); letter-spacing: 0.3px; line-height: 1.5; }
+  .prompt-body {
+    background: var(--warm); border: 1px solid var(--rule); border-left: 3px solid var(--green);
+    border-radius: 0 4px 4px 0; padding: 20px 22px; font-family: var(--mono);
+    font-size: 12.5px; line-height: 1.75; color: var(--ink-soft); white-space: pre-wrap;
+    word-break: break-word; position: relative;
+  }
+  .copy-btn {
+    position: absolute; top: 10px; right: 12px;
+    font-family: var(--mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 3px;
+    padding: 4px 10px; cursor: pointer; color: var(--ink-mute);
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .copy-btn:hover { border-color: var(--green); color: var(--green); }
+  .copy-btn.copied { color: var(--green); border-color: var(--green); }
+  hr { border: none; border-top: 1px solid var(--rule); margin: 48px 0 0; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <h1>Working Diagnosis</h1>
+  <p>Content prompts &nbsp;·&nbsp; Paste into Claude to generate site content</p>
+</div>
+
+<div class="body">
+  <div class="intro">
+    <p>Seven prompts covering the main content tasks. Start every new Claude conversation with Prompt 1 (the master context block), then add the task-specific prompt. All output will follow the tiered structure, NZ clinical standards, and editorial voice described in the design brief.</p>
+  </div>
+
+  <!-- ===== PROMPT 1 ===== -->
+  <div class="prompt-block" id="p1">
+    <div class="prompt-header">
+      <span class="prompt-num">01</span>
+      <span class="prompt-title">Master context block</span>
+    </div>
+    <p class="prompt-desc">Paste this at the start of any new Claude conversation. Sets voice, structure, and NZ clinical standards. Use before any of the prompts below.</p>
+    <div class="prompt-body" id="body1"><button class="copy-btn" onclick="copy('body1', this)">Copy</button>You are helping me write content for Working Diagnosis (workingdiagnosis.xyz), a clinical reference site for New Zealand GPs.
+
+AUDIENCE: NZ general practitioners and registrars. Reading on a phone, mid-consultation, under time pressure. They are highly trained but stressed and time-poor.
+
+VOICE: A thoughtful, senior NZ GP writing for colleagues. Direct. Precise. No hedging, no waffle, no AI-assistant filler phrases. Slightly Tim Urban in register (curious without being unserious) - but never flippant when the topic is serious. No em dashes. No bullet-point walls. No "It is important to note that."
+
+CONTENT STRUCTURE - three tiers, always in this order:
+  Level 1 - Skim layer (target: 90 seconds)
+    Red flags, key threshold changes, diagnostic traps, one-line treatment updates, what changed since last year. No prose paragraphs - only signal. A GP on-call should be able to stop here.
+  Level 2 - Practical layer (target: 5-10 minutes)
+    Dosing tables, decision flowcharts, specialist referral thresholds, patient communication scripts, common clinical pitfalls. The consultation-room toolkit.
+  Level 3 - Deep dive (target: as long as needed)
+    Evidence summaries, guideline citations, the reasoning behind recommendations, controversies, open questions. For the clinician with time and curiosity.
+
+CONTENT TYPE TAGS - use these HTML spans in the text body:
+  <span class="content-tag tag-redflags">Red flags</span>
+  <span class="content-tag tag-guidelines">Guidelines</span>
+  <span class="content-tag tag-hacks">Practical hacks</span>
+  <span class="content-tag tag-controversy">Controversy</span>
+  <span class="content-tag tag-medicolegal">Medico-legal</span>
+  <span class="content-tag tag-patient">Patient comms</span>
+
+NZ CLINICAL STANDARDS:
+  - Primary guideline sources: BPAC NZ, HealthPathways Canterbury, NZ MoH, ACC, PHARMAC
+  - Secondary: Cochrane, NEJM, BMJ, Lancet, Australian sources where NZ-specific data is absent
+  - Use NZ drug names and PHARMAC funding context (note if a drug is fully funded, restricted, or unfunded)
+  - Use NZ population data where available (Maori and Pacific health equity lens where relevant)
+  - Never fabricate references, statistics, or study details - flag uncertainty explicitly
+  - Conservative clinical stance: when evidence is weak or conflicting, say so
+
+OUTPUT FORMAT - Eleventy/Nunjucks Markdown with front matter:
+---
+title: [Page title]
+description: [One-sentence dek for the topic, 15-25 words]
+layout: topic.njk
+pillar: [Pillar name]
+ctags: [array - use keys: redflags, guidelines, hacks, controversy, medicolegal, patient]
+changes:
+  - [What changed, written as a one-line statement]
+changes_date: [Month YYYY - only if there is a genuine update to note]
+---</div>
+  </div>
+
+  <hr>
+
+  <!-- ===== PROMPT 2 ===== -->
+  <div class="prompt-block" id="p2" style="padding-top:40px">
+    <div class="prompt-header">
+      <span class="prompt-num">02</span>
+      <span class="prompt-title">New topic page - full three-tier structure</span>
+    </div>
+    <p class="prompt-desc">Generates a complete topic page. Use after Prompt 1. Fill in the [TOPIC] and [PILLAR] placeholders.</p>
+    <div class="prompt-body" id="body2"><button class="copy-btn" onclick="copy('body2', this)">Copy</button>Write a full topic page for Working Diagnosis on the subject of [TOPIC], under the [PILLAR] pillar.
+
+Structure:
+1. Front matter block (title, description, layout: topic.njk, pillar, ctags, changes if applicable)
+2. Level 1 - Skim layer
+   Open with a 1-2 sentence clinical framing (no fluff). Then a tight list: red flags (if any), key thresholds, one-sentence treatment update, what changed since last year. Use content-tag spans where relevant. Maximum 200 words.
+3. Level 2 - Practical layer
+   Dosing or threshold tables in HTML. A decision flowchart described in prose or as a simple HTML list. Specialist referral triggers. At least one patient communication script (framed as "how I explain this to patients" not a formal script). Common pitfalls. Use content-tag spans.
+4. Level 3 - Deep dive
+   Evidence summary with real citations in Vancouver format as a numbered footnote list. NZ guideline context (BPAC, HealthPathways, MoH). Any genuine controversy or open question. Links to full guidelines where they exist.
+
+NZ context is mandatory throughout - if you are unsure of NZ-specific guidance, note this explicitly rather than substituting overseas guidance without flagging it.
+
+Do not write a conclusion or summary section. End at the references.</div>
+  </div>
+
+  <hr>
+
+  <!-- ===== PROMPT 3 ===== -->
+  <div class="prompt-block" id="p3" style="padding-top:40px">
+    <div class="prompt-header">
+      <span class="prompt-num">03</span>
+      <span class="prompt-title">Add a Level 1 skim layer to existing content</span>
+    </div>
+    <p class="prompt-desc">Use when you have solid Level 2/3 content but need a 90-second top layer. Paste in the existing page content.</p>
+    <div class="prompt-body" id="body3"><button class="copy-btn" onclick="copy('body3', this)">Copy</button>I'm going to paste in an existing topic page from Working Diagnosis. Your job is to write a Level 1 skim layer to sit at the very top of it.
+
+The skim layer must:
+- Be readable in under 90 seconds by a GP returning from a consultation
+- Contain only signal - no background, no context-setting
+- Cover: any red flags, key threshold changes, diagnostic traps, treatment updates, and (if applicable) what has changed since the previous version
+- Use bullet points or very short sentences - no paragraphs
+- Include appropriate content-tag spans (tag-redflags, tag-guidelines, tag-hacks, etc.)
+- Be no longer than 180 words
+
+Do not repeat information that belongs in Level 2 or Level 3. If the existing content has no genuine red flags, leave that section out rather than inventing mild safety points.
+
+Here is the existing page content:
+
+[PASTE PAGE CONTENT HERE]</div>
+  </div>
+
+  <hr>
+
+  <!-- ===== PROMPT 4 ===== -->
+  <div class="prompt-block" id="p4" style="padding-top:40px">
+    <div class="prompt-header">
+      <span class="prompt-num">04</span>
+      <span class="prompt-title">"What Changed?" block</span>
+    </div>
+    <p class="prompt-desc">For updating existing pages when guidelines have changed. Generates the front matter changes array and a short summary.</p>
+    <div class="prompt-body" id="body4"><button class="copy-btn" onclick="copy('body4', this)">Copy</button>A guideline or piece of evidence has changed and I need to update a Working Diagnosis page.
+
+I'll describe what changed: [DESCRIBE THE UPDATE - e.g. "BPAC updated the hypertension target from 140/90 to 130/80 for under-65s with CVD risk above 10%, published February 2026"]
+
+From this, write:
+
+1. A `changes` array for the page front matter - 2 to 4 bullet points, each a single sentence stating the change in plain clinical language. No hedging. No "it is now recommended that." Just: what changed, in active voice. Example format:
+   changes:
+     - Lower BP treatment threshold: now 130/80 mmHg for under-65s with CVD risk above 10%
+     - Ambulatory monitoring now preferred over clinic readings for diagnosis
+
+2. A `changes_date` value in format "Month YYYY"
+
+3. A 1-2 sentence plain-language summary of why this matters for a GP in primary care - for use as a note to myself, not for the page itself.
+
+The changes should reflect genuinely new information only. Do not flag stable recommendations as "changed."</div>
+  </div>
+
+  <hr>
+
+  <!-- ===== PROMPT 5 ===== -->
+  <div class="prompt-block" id="p5" style="padding-top:40px">
+    <div class="prompt-header">
+      <span class="prompt-num">05</span>
+      <span class="prompt-title">Patient handout</span>
+    </div>
+    <p class="prompt-desc">Converts a clinical topic page into a patient-facing handout. The output should be suitable for printing or emailing after a consultation.</p>
+    <div class="prompt-body" id="body5"><button class="copy-btn" onclick="copy('body5', this)">Copy</button>Using the clinical content I'll paste below, write a patient handout for Working Diagnosis.
+
+The handout is given to a patient after a GP consultation. It is NOT:
+- A diagnosis tool
+- A treatment guide (patients should follow their GP's specific advice)
+- A health literacy primer full of warnings
+
+It IS:
+- A clear, plain-language summary of the condition and what to expect
+- Practical information: when to come back, what to watch for, what they can do themselves
+- Reassuring where the evidence is reassuring; honest where it is not
+- Written for a New Zealand audience (use NZ resources, ACC references where relevant, HealthInfo NZ link format)
+
+Tone: friendly but not condescending. Like a letter from a GP, not a pamphlet. No bullet-point walls. Short paragraphs. Reading level: approximately Year 10.
+
+Output format: HTML suitable for the page at /[pillar]/[topic]/patient-handout.html - standalone, no Eleventy layout, but using the site's CSS variables (--paper, --green, --ochre, --ink, etc.) and JetBrains Mono for labels.
+
+Clinical content to convert:
+[PASTE CLINICAL CONTENT HERE]</div>
+  </div>
+
+  <hr>
+
+  <!-- ===== PROMPT 6 ===== -->
+  <div class="prompt-block" id="p6" style="padding-top:40px">
+    <div class="prompt-header">
+      <span class="prompt-num">06</span>
+      <span class="prompt-title">Myth / debunk card</span>
+    </div>
+    <p class="prompt-desc">For the Myths pillar. Follows the fixed five-section debunk format.</p>
+    <div class="prompt-body" id="body6"><button class="copy-btn" onclick="copy('body6', this)">Copy</button>Write a debunk card for Working Diagnosis on the following myth:
+
+MYTH: [STATE THE CLAIM - e.g. "You need to wait 3 months after a cold before getting a vaccine"]
+
+Use the fixed five-section format below. Each section should be short and punchy.
+
+CLAIM
+  Restate the myth as a patient might actually say it. One sentence.
+
+SOURCE
+  Where does this belief come from? Be specific and non-dismissive - most medical myths have a grain of plausibility or a historical origin. One to two sentences.
+
+GRAIN OF TRUTH
+  What is the kernel of truth here, if any? This is important - never write a debunk that dismisses the underlying concern entirely. Two to three sentences.
+
+EVIDENCE
+  What does the evidence actually say? Be specific - cite a real study, systematic review, or guideline. Vancouver format footnote. Two to four sentences.
+
+BOTTOM LINE
+  The one-sentence clinical verdict. Actionable. No hedging.
+
+SOURCES
+  Numbered reference list in Vancouver format. Real references only - if you are not certain of a study's details, say so and note I should verify before publishing.
+
+ctags to include in front matter: [suggest appropriate tags from: redflags, guidelines, hacks, controversy, medicolegal, patient]</div>
+  </div>
+
+  <hr>
+
+  <!-- ===== PROMPT 7 ===== -->
+  <div class="prompt-block" id="p7" style="padding-top:40px">
+    <div class="prompt-header">
+      <span class="prompt-num">07</span>
+      <span class="prompt-title">NZ clinical review</span>
+    </div>
+    <p class="prompt-desc">Use when you've drafted content and want a second pass for NZ relevance, accuracy flags, and missing PHARMAC/ACC context before publishing.</p>
+    <div class="prompt-body" id="body7"><button class="copy-btn" onclick="copy('body7', this)">Copy</button>Review the following Working Diagnosis page draft for NZ clinical accuracy and relevance. This site is published under the name of a registered NZ GP - the bar is high.
+
+Check for and flag:
+1. Any clinical claims that conflict with current NZ guidance (BPAC, HealthPathways Canterbury, NZ MoH)
+2. Drug doses or thresholds that differ from NZ standard practice or PHARMAC schedule
+3. Statistics, prevalence figures, or study results cited without a real traceable source - flag these as "UNVERIFIED - check before publishing"
+4. ACC-relevant situations where a claim has been made about funding or entitlement that may not be current
+5. Any place where the NZ Maori or Pacific health context is relevant and absent
+6. Gaps in the Level 1 skim layer - is there anything a panicking GP on-call would need that isn't in the top section?
+7. Anything that reads like AI-generated filler or hedging language
+
+Do not rewrite the page - flag issues only, with a brief note on what to verify or fix. Number each flag.
+
+Page to review:
+[PASTE DRAFT CONTENT HERE]</div>
+  </div>
+
+  <hr>
+
+  <div style="padding: 40px 0 0; text-align: center;">
+    <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-mute);">Working Diagnosis content prompts &nbsp;·&nbsp; Not for publication &nbsp;·&nbsp; workingdiagnosis.xyz</p>
+  </div>
+
+</div>
+
+<script>
+function copy(id, btn) {
+  var el = document.getElementById(id);
+  var btn_el = el.querySelector('.copy-btn');
+  var text = el.innerText.replace('Copy\n', '').replace('Copied\n', '').trim();
+  navigator.clipboard.writeText(text).then(function() {
+    btn.textContent = 'Copied';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
+</body>
+</html>

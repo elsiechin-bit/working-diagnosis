@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irritable Bowel Syndrome - Working Diagnosis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper:      #EFF3E6;
+  --warm:       #E4EAD8;
+  --deep:       #D6E0C4;
+  --ink:        #1A1F1C;
+  --ink-soft:   #3A4540;
+  --ink-mute:   #6B7A75;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --rule:       #D9D1BD;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ── Masthead ─────────────────────────────── */
+.masthead {
+  padding: 1.1rem 2rem;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.masthead-brand {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.masthead-crumb {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  text-decoration: none;
+}
+.masthead-crumb:hover { color: var(--green); }
+
+/* ── Hero ─────────────────────────────────── */
+.hero {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+.kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 0.9rem;
+}
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 0.9rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--green);
+}
+.hero-lead {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto 2rem;
+}
+
+/* ── Tab nav ──────────────────────────────── */
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--rule);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tab-nav::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.tab-btn:hover { color: var(--ink); }
+.tab-btn.active {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+/* ── Tab panels ───────────────────────────── */
+.tab-panel {
+  display: none;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+  animation: fadeUp 0.25s ease both;
+}
+.tab-panel.active { display: block; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-h2 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 300;
+  font-size: 1.65rem;
+  margin-bottom: 0.4rem;
+}
+.section-lead {
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+/* ── OVERVIEW: gut diagram ────────────────── */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 560px) {
+  .overview-grid { grid-template-columns: 1fr; }
+}
+
+.gut-wrap {
+  background: var(--warm);
+  border-radius: 14px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+.gut-wrap svg { max-width: 160px; width: 100%; }
+.gut-caption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-top: 0.8rem;
+  line-height: 1.5;
+}
+
+/* SVG animation */
+.draw {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: draw 1.4s ease forwards;
+}
+.draw-2 { animation-delay: 0.35s; }
+.draw-3 { animation-delay: 0.7s; }
+.draw-4 { animation-delay: 1s; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+.blink {
+  animation: blink 2.2s ease-in-out infinite;
+}
+.blink-2 { animation-delay: 0.9s; }
+@keyframes blink {
+  0%, 100% { opacity: 0.35; r: 4px; }
+  50%       { opacity: 1;    r: 6px; }
+}
+
+/* Info bullets beside diagram */
+.gut-bullets { list-style: none; }
+.gut-bullets li {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin-bottom: 1.1rem;
+}
+.gut-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+.gut-bullet-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  display: block;
+  margin-bottom: 0.1rem;
+}
+.gut-bullet-text { font-size: 0.92rem; color: var(--ink-soft); }
+
+/* Stat cards */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 420px) { .stats-row { grid-template-columns: 1fr; } }
+
+.stat-card {
+  background: var(--warm);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+}
+.stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 0.35rem;
+}
+.stat-value {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.stat-desc { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; }
+
+/* ── SUBTYPES ─────────────────────────────── */
+.subtype-btns {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+.stype-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  padding: 0.55rem 1.2rem;
+  border-radius: 50px;
+  border: 2px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.18s;
+}
+.stype-btn:hover { border-color: var(--green); color: var(--green); }
+.stype-btn[data-for="C"].on { background: var(--ochre);    border-color: var(--ochre);    color: #fff; }
+.stype-btn[data-for="D"].on { background: var(--green);    border-color: var(--green);    color: #fff; }
+.stype-btn[data-for="M"].on { background: var(--ink-soft); border-color: var(--ink-soft); color: #fff; }
+
+.stype-panel { display: none; }
+.stype-panel.on { display: block; animation: fadeUp 0.25s ease both; }
+
+.stype-card {
+  background: var(--warm);
+  border-radius: 12px;
+  padding: 1.6rem;
+  margin-bottom: 1rem;
+}
+.stype-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.stype-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+@media (max-width: 500px) { .stype-2col { grid-template-columns: 1fr; } }
+.col-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 0.4rem;
+}
+.stype-note {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.stype-note .col-label { margin-bottom: 0.4rem; }
+
+/* ── CAUSES ───────────────────────────────── */
+.cause-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 480px) { .cause-grid { grid-template-columns: 1fr; } }
+
+.cause-tile {
+  background: var(--warm);
+  border-radius: 12px;
+  padding: 1.4rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, background 0.15s;
+  user-select: none;
+}
+.cause-tile:hover  { border-color: var(--green); }
+.cause-tile.active { border-color: var(--green); background: var(--deep); }
+
+.cause-icon  { font-size: 1.6rem; margin-bottom: 0.6rem; }
+.cause-title {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+.cause-teaser { font-size: 0.88rem; color: var(--ink-mute); line-height: 1.5; }
+
+.cause-detail-zone {
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 1.6rem;
+  display: none;
+  animation: fadeUp 0.2s ease both;
+}
+.cause-detail-zone.on { display: block; }
+.cause-detail-zone h3 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+  color: var(--green);
+}
+.cause-detail-zone p { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 0.75rem; }
+.cause-detail-zone p:last-child { margin-bottom: 0; }
+.close-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.9rem;
+  padding: 0;
+}
+.close-btn:hover { color: var(--green); }
+
+/* ── MANAGEMENT ───────────────────────────── */
+.mgmt-item {
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.mgmt-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.4rem;
+  cursor: pointer;
+  background: var(--warm);
+  transition: background 0.15s;
+  user-select: none;
+}
+.mgmt-head:hover          { background: var(--deep); }
+.mgmt-item.open .mgmt-head { background: var(--deep); }
+
+.mgmt-icon { font-size: 1.35rem; flex-shrink: 0; }
+.mgmt-head-text { flex: 1; }
+.mgmt-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 0.1rem;
+}
+.mgmt-title {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+.chevron {
+  color: var(--ink-mute);
+  font-size: 1rem;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.mgmt-item.open .chevron { transform: rotate(90deg); }
+
+.mgmt-body {
+  display: none;
+  padding: 1.25rem 1.4rem 1.5rem;
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.72;
+}
+.mgmt-item.open .mgmt-body { display: block; }
+.mgmt-body p + p { margin-top: 0.75rem; }
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1rem; }
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.04em;
+  padding: 0.28rem 0.7rem;
+  border-radius: 50px;
+  background: var(--warm);
+  color: var(--green);
+  border: 1px solid var(--deep);
+}
+
+/* ── References ───────────────────────────── */
+.refs-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 2rem;
+  border-top: 1px solid var(--rule);
+}
+.refs-toggle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.refs-toggle:hover { color: var(--green); }
+.refs-list { display: none; margin-top: 1rem; }
+.refs-list.on { display: block; }
+.refs-list ol { padding-left: 1.4rem; }
+.refs-list li {
+  font-size: 0.8rem;
+  color: var(--ink-mute);
+  line-height: 1.6;
+  margin-bottom: 0.45rem;
+}
+
+/* ── Footer ───────────────────────────────── */
+.page-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ink-mute);
+  padding: 1.25rem 2rem 2rem;
+  border-top: 1px solid var(--rule);
+  max-width: 720px;
+  margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Masthead -->
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/lifestyle-prevention/" class="masthead-crumb">Lifestyle</a>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <p class="kicker">❍ Gut Health</p>
+  <h1>Irritable <em>Bowel</em><br>Syndrome</h1>
+  <p class="hero-lead">One of the most common conditions a GP sees. Not dangerous, not imaginary, and very manageable with the right approach.</p>
+</div>
+
+<!-- Tab nav -->
+<nav class="tab-nav" role="tablist" aria-label="IBS sections">
+  <button class="tab-btn active" data-tab="overview"    role="tab">Overview</button>
+  <button class="tab-btn"        data-tab="subtypes"    role="tab">Your Subtype</button>
+  <button class="tab-btn"        data-tab="causes"      role="tab">Why It Happens</button>
+  <button class="tab-btn"        data-tab="management"  role="tab">What Helps</button>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     OVERVIEW
+═══════════════════════════════════════ -->
+<section class="tab-panel active" id="tab-overview" role="tabpanel">
+
+  <h2 class="section-h2">What is IBS?</h2>
+  <p class="section-lead">A functional gut disorder: the bowel looks completely normal on any scan or scope, but does not work the way it should.</p>
+
+  <div class="overview-grid">
+
+    <!-- Gut SVG -->
+    <div class="gut-wrap">
+      <svg viewBox="0 0 160 230" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Oesophagus -->
+        <line x1="80" y1="2" x2="80" y2="26" stroke="#6B7A75" stroke-width="2.5" stroke-linecap="round" class="draw"/>
+
+        <!-- Stomach -->
+        <path d="M 58,26 Q 40,30 38,52 Q 34,78 54,90 Q 68,98 84,94 Q 104,88 110,72 Q 118,52 106,36 Q 96,24 80,26 Z"
+              stroke="#2F6B5C" stroke-width="2" fill="#EDE7D8" class="draw"/>
+        <text x="74" y="62" font-family="JetBrains Mono, monospace" font-size="6" fill="#6B7A75" text-anchor="middle">Stomach</text>
+
+        <!-- Small intestine coils -->
+        <path d="M 68,96 Q 102,92 112,106 Q 120,120 106,130 Q 88,138 60,132 Q 40,128 36,142 Q 32,156 48,165 Q 64,172 96,168 Q 116,165 122,178 Q 128,191 116,200"
+              stroke="#2F6B5C" stroke-width="2" fill="none" stroke-linecap="round" class="draw draw-2"/>
+        <text x="79" y="152" font-family="JetBrains Mono, monospace" font-size="5.5" fill="#6B7A75" text-anchor="middle">Small intestine</text>
+
+        <!-- Large intestine (ascending - right) -->
+        <path d="M 124,200 Q 136,202 136,188 L 136,102 Q 136,88 124,84"
+              stroke="#B8714F" stroke-width="2.5" fill="none" stroke-linecap="round" class="draw draw-3"/>
+
+        <!-- Transverse colon -->
+        <path d="M 124,84 Q 124,72 112,70 L 48,70 Q 36,70 36,82"
+              stroke="#B8714F" stroke-width="2.5" fill="none" stroke-linecap="round" class="draw draw-3"/>
+
+        <!-- Descending colon (left) -->
+        <path d="M 36,82 L 36,200 Q 36,212 48,214"
+              stroke="#B8714F" stroke-width="2.5" fill="none" stroke-linecap="round" class="draw draw-3"/>
+
+        <!-- Sigmoid + rectum -->
+        <path d="M 48,214 Q 64,218 80,215 Q 98,212 98,222 L 98,229"
+              stroke="#2F6B5C" stroke-width="2.5" fill="none" stroke-linecap="round" class="draw draw-4"/>
+
+        <!-- Pulsing IBS hotspots -->
+        <circle cx="106" cy="130" r="4" fill="#B8714F" class="blink"/>
+        <circle cx="48"  cy="165" r="4" fill="#B8714F" class="blink blink-2"/>
+      </svg>
+      <p class="gut-caption">Orange: large intestine<br>main site of IBS activity</p>
+    </div>
+
+    <!-- Bullets -->
+    <ul class="gut-bullets">
+      <li>
+        <span class="gut-dot" style="background:var(--ink-mute)"></span>
+        <div>
+          <span class="gut-bullet-label">Looks normal</span>
+          <span class="gut-bullet-text">Scans and scopes show nothing wrong. IBS is a problem of function, not structure.</span>
+        </div>
+      </li>
+      <li>
+        <span class="gut-dot" style="background:var(--ochre)"></span>
+        <div>
+          <span class="gut-bullet-label">Works differently</span>
+          <span class="gut-bullet-text">Muscle contractions are poorly regulated, and the gut is more sensitive to pain than normal. The orange dots on the diagram show common areas of heightened sensitivity.</span>
+        </div>
+      </li>
+      <li>
+        <span class="gut-dot" style="background:var(--green)"></span>
+        <div>
+          <span class="gut-bullet-label">Not dangerous</span>
+          <span class="gut-bullet-text">IBS does not cause bowel cancer, does not lead to inflammatory bowel disease, and does not shorten life expectancy.</span>
+        </div>
+      </li>
+      <li>
+        <span class="gut-dot" style="background:var(--rule)"></span>
+        <div>
+          <span class="gut-bullet-label">Rome IV criteria</span>
+          <span class="gut-bullet-text">Recurrent belly pain, at least one day per week, linked to a change in bowel frequency or stool form. That is what defines IBS clinically.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <p class="stat-label">How common</p>
+      <p class="stat-value">~11%</p>
+      <p class="stat-desc">of people worldwide, making IBS one of the most common conditions seen in general practice.<sup>1</sup></p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Typical onset</p>
+      <p class="stat-value">20s&ndash;40s</p>
+      <p class="stat-desc">Most people develop symptoms as younger adults, though IBS can appear at any age.</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">How it is diagnosed</p>
+      <p class="stat-value">Clinical</p>
+      <p class="stat-desc">No blood test or scope diagnoses IBS. It is made on history and examination, after ruling out other conditions.<sup>2</sup></p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Post-infectious IBS</p>
+      <p class="stat-value">~10%</p>
+      <p class="stat-desc">of people who have gastroenteritis go on to develop IBS in the months that follow.<sup>3</sup></p>
+    </div>
+  </div>
+
+  <p style="color:var(--ink-soft); font-size:0.95rem;">IBS is classified into subtypes based on your predominant bowel pattern. Knowing your subtype matters, because it shapes which treatments are most likely to help. Use the <button onclick="goTab('subtypes')" style="background:none;border:none;color:var(--green);font-family:Newsreader,serif;font-size:0.95rem;cursor:pointer;text-decoration:underline;padding:0;">Your Subtype</button> tab to explore yours.</p>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SUBTYPES
+═══════════════════════════════════════ -->
+<section class="tab-panel" id="tab-subtypes" role="tabpanel">
+
+  <h2 class="section-h2">Which type do you have?</h2>
+  <p class="section-lead">IBS is classified by your predominant bowel pattern. Most people recognise themselves in one of these, though patterns can shift over time.</p>
+
+  <div class="subtype-btns">
+    <button class="stype-btn on" data-for="C" onclick="pickSubtype('C')">IBS-C / Constipation-predominant</button>
+    <button class="stype-btn"    data-for="D" onclick="pickSubtype('D')">IBS-D / Diarrhoea-predominant</button>
+    <button class="stype-btn"    data-for="M" onclick="pickSubtype('M')">IBS-M / Mixed</button>
+  </div>
+
+  <!-- IBS-C -->
+  <div class="stype-panel on" id="stype-C">
+    <div class="stype-card">
+      <h3>IBS with constipation (IBS-C)</h3>
+      <div class="stype-2col">
+        <div>
+          <p class="col-label">What it feels like</p>
+          <p style="font-size:0.93rem;color:var(--ink-soft);">Hard or lumpy stools more than a quarter of the time. Bloating and a feeling of incomplete emptying are common. Pain tends to ease after a bowel movement. Urgency is less typical than in IBS-D.</p>
+        </div>
+        <div>
+          <p class="col-label">What tends to help most</p>
+          <p style="font-size:0.93rem;color:var(--ink-soft);">Soluble fibre (oats, linseeds, psyllium), adequate hydration, regular activity. Osmotic laxatives like macrogol can be useful. The low FODMAP diet helps identify food triggers. Linaclotide has specific evidence for IBS-C.<sup>4</sup></p>
+        </div>
+      </div>
+    </div>
+    <div class="stype-note">
+      <p class="col-label">Worth knowing</p>
+      <p>Wheat bran is commonly thought to help with constipation, but it can worsen bloating and pain in IBS. Soluble fibre is generally better tolerated. If you have tried increasing fibre and felt worse, this is likely why.</p>
+    </div>
+  </div>
+
+  <!-- IBS-D -->
+  <div class="stype-panel" id="stype-D">
+    <div class="stype-card">
+      <h3>IBS with diarrhoea (IBS-D)</h3>
+      <div class="stype-2col">
+        <div>
+          <p class="col-label">What it feels like</p>
+          <p style="font-size:0.93rem;color:var(--ink-soft);">Loose or watery stools more than a quarter of the time. Urgency is common and can be distressing. Pain often precedes a bowel movement and eases afterwards. Morning urgency after meals is a frequent pattern.</p>
+        </div>
+        <div>
+          <p class="col-label">What tends to help most</p>
+          <p style="font-size:0.93rem;color:var(--ink-soft);">The low FODMAP diet has the strongest evidence for reducing frequency. Loperamide reduces urgency. Low-dose tricyclic antidepressants (like amitriptyline) work well by slowing transit and reducing gut sensitivity, not by treating mood.<sup>5</sup></p>
+        </div>
+      </div>
+    </div>
+    <div class="stype-note">
+      <p class="col-label">Worth knowing</p>
+      <p>Post-infectious IBS (following gastroenteritis) is most commonly IBS-D. If your symptoms started after a gut infection, you are in good company. This subtype often improves more over time than others.</p>
+    </div>
+  </div>
+
+  <!-- IBS-M -->
+  <div class="stype-panel" id="stype-M">
+    <div class="stype-card">
+      <h3>IBS with mixed bowel habits (IBS-M)</h3>
+      <div class="stype-2col">
+        <div>
+          <p class="col-label">What it feels like</p>
+          <p style="font-size:0.93rem;color:var(--ink-soft);">Both hard/lumpy and loose/watery stools, each making up more than a quarter of bowel movements. The bowel cannot settle into a predictable pattern, and symptoms can swing between constipation and diarrhoea within days.</p>
+        </div>
+        <div>
+          <p class="col-label">What tends to help most</p>
+          <p style="font-size:0.93rem;color:var(--ink-soft);">The low FODMAP diet is still the best starting point. A symptom and food diary is particularly useful for identifying patterns. Psychological approaches (gut-directed hypnotherapy, CBT) work across all subtypes and suit an unpredictable pattern well.<sup>6</sup></p>
+        </div>
+      </div>
+    </div>
+    <div class="stype-note">
+      <p class="col-label">Worth knowing</p>
+      <p>IBS subtype is not fixed. Many people shift between subtypes over months or years. If your pattern changes substantially, it is worth mentioning to your GP, particularly if any new symptoms appear alongside the change.</p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CAUSES
+═══════════════════════════════════════ -->
+<section class="tab-panel" id="tab-causes" role="tabpanel">
+
+  <h2 class="section-h2">Why does IBS happen?</h2>
+  <p class="section-lead">There is no single cause. IBS is the end result of several overlapping problems. Select any tile to read more.</p>
+
+  <div class="cause-grid">
+    <div class="cause-tile" data-cause="brain" onclick="pickCause('brain', this)">
+      <div class="cause-icon">🧠</div>
+      <div class="cause-title">The Gut-Brain Axis</div>
+      <p class="cause-teaser">Your gut and brain are in constant two-way conversation. In IBS, that conversation is disrupted.</p>
+    </div>
+    <div class="cause-tile" data-cause="sensitivity" onclick="pickCause('sensitivity', this)">
+      <div class="cause-icon">📡</div>
+      <div class="cause-title">Visceral Hypersensitivity</div>
+      <p class="cause-teaser">The gut becomes more sensitive than usual, so normal sensations are felt as pain.</p>
+    </div>
+    <div class="cause-tile" data-cause="motility" onclick="pickCause('motility', this)">
+      <div class="cause-icon">🌊</div>
+      <div class="cause-title">Altered Gut Motility</div>
+      <p class="cause-teaser">The muscles that move food through the gut work too fast, too slow, or inconsistently.</p>
+    </div>
+    <div class="cause-tile" data-cause="microbiome" onclick="pickCause('microbiome', this)">
+      <div class="cause-icon">🦠</div>
+      <div class="cause-title">Microbiome and Infection</div>
+      <p class="cause-teaser">Past gut infections and changes in gut bacteria can trigger or sustain IBS.</p>
+    </div>
+  </div>
+
+  <!-- Detail zone -->
+  <div class="cause-detail-zone" id="causeDetail">
+    <h3 id="causeTitle"></h3>
+    <div id="causeBody"></div>
+    <button class="close-btn" onclick="closeCause()">Close ✕</button>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     MANAGEMENT
+═══════════════════════════════════════ -->
+<section class="tab-panel" id="tab-management" role="tabpanel">
+
+  <h2 class="section-h2">What helps?</h2>
+  <p class="section-lead">IBS is manageable for most people, but usually requires a combination of approaches. Think of these as layers, not alternatives. Select each to expand.</p>
+
+  <div>
+
+    <div class="mgmt-item open">
+      <div class="mgmt-head" onclick="toggleMgmt(this.parentElement)">
+        <span class="mgmt-icon">🥦</span>
+        <div class="mgmt-head-text">
+          <div class="mgmt-sub">Start here</div>
+          <div class="mgmt-title">Diet</div>
+        </div>
+        <span class="chevron">›</span>
+      </div>
+      <div class="mgmt-body">
+        <p>The <strong>low FODMAP diet</strong> has the strongest evidence base of any dietary intervention for IBS.<sup>7</sup> FODMAP stands for fermentable oligosaccharides, disaccharides, monosaccharides and polyols: carbohydrates that are poorly absorbed in the small bowel and fermented by bacteria in the large bowel, producing gas and drawing in water.</p>
+        <p>The diet involves a strict restriction phase (usually 4 to 6 weeks), followed by careful reintroduction to identify your personal triggers. It works best with guidance from a dietitian, as it is easy to do incorrectly and can be unnecessarily restrictive if you skip the reintroduction phase.</p>
+        <p><strong>Soluble fibre</strong> (oats, linseeds, psyllium husk) tends to help across subtypes. Wheat bran, by contrast, worsens symptoms for some people despite being commonly recommended.</p>
+        <div class="tag-row">
+          <span class="tag">Low FODMAP</span>
+          <span class="tag">Soluble fibre</span>
+          <span class="tag">Food diary</span>
+          <span class="tag">Dietitian referral</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mgmt-item">
+      <div class="mgmt-head" onclick="toggleMgmt(this.parentElement)">
+        <span class="mgmt-icon">🏃</span>
+        <div class="mgmt-head-text">
+          <div class="mgmt-sub">Often underrated</div>
+          <div class="mgmt-title">Lifestyle</div>
+        </div>
+        <span class="chevron">›</span>
+      </div>
+      <div class="mgmt-body">
+        <p>Regular <strong>physical activity</strong> has good evidence for improving IBS symptoms, via both gut motility and nervous system effects.<sup>8</sup> A brisk 30-minute walk most days is enough to make a meaningful difference. You do not need to run marathons.</p>
+        <p><strong>Sleep quality</strong> and <strong>stress management</strong> are not optional extras. They are core to managing a condition driven partly by the gut-brain axis. Poor sleep reliably worsens IBS; improving it reliably helps. This deserves more attention than it usually gets.</p>
+        <p>Meal timing also matters. Large, rich, or fatty meals trigger stronger gut contractions. Regular, moderate-sized meals tend to produce fewer symptoms than erratic eating patterns.</p>
+        <div class="tag-row">
+          <span class="tag">Regular exercise</span>
+          <span class="tag">Sleep hygiene</span>
+          <span class="tag">Stress management</span>
+          <span class="tag">Regular meal patterns</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mgmt-item">
+      <div class="mgmt-head" onclick="toggleMgmt(this.parentElement)">
+        <span class="mgmt-icon">💬</span>
+        <div class="mgmt-head-text">
+          <div class="mgmt-sub">Strong evidence, under-used</div>
+          <div class="mgmt-title">Psychological Therapies</div>
+        </div>
+        <span class="chevron">›</span>
+      </div>
+      <div class="mgmt-body">
+        <p><strong>Gut-directed hypnotherapy</strong> and <strong>cognitive behavioural therapy (CBT)</strong> have some of the strongest evidence of any IBS treatment, and are considered first-line options in NICE guidelines.<sup>6</sup> This is not about being told symptoms are imaginary.</p>
+        <p>These therapies retrain the gut-brain communication pathways driving the condition. Gut-directed hypnotherapy specifically targets gut function, not general relaxation, and the evidence for it is robust. CBT addresses thought patterns that amplify symptom perception and avoidance behaviours that reduce quality of life.</p>
+        <p>Access in New Zealand is variable. Some primary care practitioners and psychologists with a gastrointestinal interest offer these approaches. Your GP can advise on what is available locally.</p>
+        <div class="tag-row">
+          <span class="tag">Gut-directed hypnotherapy</span>
+          <span class="tag">CBT</span>
+          <span class="tag">Mindfulness-based therapy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mgmt-item">
+      <div class="mgmt-head" onclick="toggleMgmt(this.parentElement)">
+        <span class="mgmt-icon">💊</span>
+        <div class="mgmt-head-text">
+          <div class="mgmt-sub">Symptom relief</div>
+          <div class="mgmt-title">Medications</div>
+        </div>
+        <span class="chevron">›</span>
+      </div>
+      <div class="mgmt-body">
+        <p>Medications treat symptoms rather than the underlying condition, and they work best as part of a broader plan rather than as a standalone fix.</p>
+        <p><strong>Antispasmodics</strong> (mebeverine, hyoscine) reduce cramping. <strong>Loperamide</strong> reduces urgency and diarrhoea frequency in IBS-D. <strong>Osmotic laxatives</strong> (macrogol) help in IBS-C. Linaclotide has better trial evidence for IBS-C than standard laxatives.</p>
+        <p><strong>Low-dose tricyclic antidepressants</strong> (amitriptyline) are used at doses well below those needed for depression. They work in IBS by reducing visceral hypersensitivity and slowing gut transit, making them particularly useful in IBS-D. SSRIs have weaker evidence but may help where anxiety is prominent.<sup>5</sup></p>
+        <p>Your GP will tailor medications to your subtype and symptom pattern. If something has not worked after a proper trial, it is worth revisiting rather than continuing indefinitely.</p>
+        <div class="tag-row">
+          <span class="tag">Antispasmodics</span>
+          <span class="tag">Loperamide (IBS-D)</span>
+          <span class="tag">Macrogol (IBS-C)</span>
+          <span class="tag">Low-dose tricyclics</span>
+          <span class="tag">Linaclotide (IBS-C)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p style="color:var(--ink-mute);font-size:0.88rem;margin-top:1.5rem;">IBS is chronic for most people, but its course is variable. Many people have long stretches with minimal symptoms, punctuated by flares often triggered by stress, illness, or diet. It does not progress to cancer or inflammatory bowel disease.</p>
+</section>
+
+
+<!-- References -->
+<div class="refs-section">
+  <button class="refs-toggle" onclick="document.getElementById('refs').classList.toggle('on')">References �-�</button>
+  <div class="refs-list" id="refs">
+    <ol>
+      <li>Lovell RM, Ford AC. Global prevalence of and risk factors for irritable bowel syndrome: a meta-analysis. Clin Gastroenterol Hepatol. 2012;10(7):712-21.</li>
+      <li>Lacy BE, Mearin F, Chang L, Chey WD, Lembo AJ, Simren M, et al. Bowel disorders. Gastroenterology. 2016;150(6):1393-407.</li>
+      <li>Thabane M, Kottachchi DT, Marshall JK. Systematic review and meta-analysis: the incidence and prognosis of post-infectious irritable bowel syndrome. Aliment Pharmacol Ther. 2007;26(4):535-44.</li>
+      <li>Rao SSC, Quigley EMM, Shiff SJ, Lavins BJ, Kurtz CB, MacDougall JE, et al. Effect of linaclotide on severe abdominal symptoms in patients with IBS-C. Am J Gastroenterol. 2014;109(6):842-51.</li>
+      <li>Ford AC, Lacy BE, Harris LA, Quigley EMM, Moayyedi P. Effect of antidepressants and psychological therapies in irritable bowel syndrome: an updated systematic review and meta-analysis. Am J Gastroenterol. 2019;114(1):21-39.</li>
+      <li>National Institute for Health and Care Excellence. Irritable bowel syndrome in adults: diagnosis and management. NICE guideline CG61. London: NICE; 2008 (updated 2017).</li>
+      <li>Staudacher HM, Whelan K. The low FODMAP diet: recent advances in understanding its mechanisms and efficacy in IBS. Gut. 2017;66(8):1517-27.</li>
+      <li>Johannesson E, Simren M, Strid H, Bajor A, Sadik R. Physical activity improves symptoms in irritable bowel syndrome: a randomized controlled trial. Am J Gastroenterol. 2011;106(5):915-22.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="page-footer">
+  Written for general information only. This page does not replace a conversation with your own GP.
+</footer>
+
+
+<script>
+// ── Tabs ──────────────────────────────────────────────────────
+function goTab(id) {
+  document.querySelectorAll('.tab-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.tab === id));
+  document.querySelectorAll('.tab-panel').forEach(p =>
+    p.classList.toggle('active', p.id === 'tab-' + id));
+}
+document.querySelectorAll('.tab-btn').forEach(btn =>
+  btn.addEventListener('click', () => goTab(btn.dataset.tab)));
+
+
+// ── Subtypes ──────────────────────────────────────────────────
+function pickSubtype(t) {
+  document.querySelectorAll('.stype-btn').forEach(b =>
+    b.classList.toggle('on', b.dataset.for === t));
+  document.querySelectorAll('.stype-panel').forEach(p =>
+    p.classList.toggle('on', p.id === 'stype-' + t));
+}
+
+
+// ── Causes ────────────────────────────────────────────────────
+const causeData = {
+  brain: {
+    title: 'The Gut-Brain Axis',
+    body: `<p>Your gut has its own extensive nervous system, sometimes called the enteric nervous system, containing around 100 million nerve cells. It communicates constantly with your brain via the vagus nerve, and that communication runs mostly upward, from gut to brain, not the other way around.</p>
+           <p>In IBS, this signalling is disrupted. Stress, anxiety, and mood do not cause IBS the way a germ causes an infection, but they measurably influence gut motility, secretion, and pain sensitivity. This is why treating IBS as purely a bowel problem rarely works well. The gut and brain need to be addressed together.</p>
+           <p>Your gut also produces roughly 95% of the body's serotonin. Several medications used in IBS target serotonin signalling for precisely this reason.</p>`
+  },
+  sensitivity: {
+    title: 'Visceral Hypersensitivity',
+    body: `<p>Visceral hypersensitivity is a measurable, real phenomenon. Research using pressure-sensing tests has shown that people with IBS have a lower pain threshold in their gut compared with people who do not have IBS, even though the gut tissue itself is entirely healthy.<sup>9</sup></p>
+           <p>This means that sensations most people would not notice, like gas moving through the bowel or mild distension after a meal, are perceived as pain or discomfort. The problem is not that these sensations are imagined. The problem is that the pain signalling system is turned up too high.</p>
+           <p>This is why some treatments (like low-dose antidepressants) work in IBS by reducing the sensitivity of gut pain signalling, rather than by treating mood.</p>`
+  },
+  motility: {
+    title: 'Altered Gut Motility',
+    body: `<p>The digestive tract moves food along through coordinated waves of muscle contraction called peristalsis. In IBS, this coordination is off. In IBS-D, transit is faster than it should be, meaning the bowel does not have enough time to absorb water, resulting in loose stools. In IBS-C, transit is slower, leading to hard, dry stools.</p>
+           <p>These motility changes are physiological, not imagined or caused by anxiety alone. They account for the bowel habit changes that are central to the IBS diagnosis. This is also why the timing of meals, the types of food eaten, and levels of physical activity all influence symptoms in a very direct way.</p>`
+  },
+  microbiome: {
+    title: 'Microbiome and Post-Infectious IBS',
+    body: `<p>Post-infectious IBS is well recognised. Roughly 10% of people who have a bout of gastroenteritis go on to develop IBS in the months that follow.<sup>3</sup> This suggests that acute inflammation and changes to the gut's bacterial community can trigger the persistent functional changes seen in IBS.</p>
+           <p>The microbiome, the community of bacteria, fungi, and other microorganisms living in your gut, is altered in many people with IBS compared with those who do not have it. Exactly what this means causally is still being worked out. It is not yet clear whether microbiome changes cause IBS or result from it.</p>
+           <p>This is the main rationale behind probiotic use in IBS. The evidence is mixed: some specific formulations show modest benefit, but most show no meaningful improvement, and the research is complicated by the enormous variety of products available.</p>`
+  }
+};
+
+let activeCause = null;
+
+function pickCause(id, tile) {
+  if (activeCause === id) { closeCause(); return; }
+  activeCause = id;
+  document.querySelectorAll('.cause-tile').forEach(t => t.classList.remove('active'));
+  tile.classList.add('active');
+  const detail = document.getElementById('causeDetail');
+  document.getElementById('causeTitle').textContent = causeData[id].title;
+  document.getElementById('causeBody').innerHTML  = causeData[id].body;
+  detail.classList.add('on');
+  detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function closeCause() {
+  activeCause = null;
+  document.querySelectorAll('.cause-tile').forEach(t => t.classList.remove('active'));
+  document.getElementById('causeDetail').classList.remove('on');
+}
+
+
+// ── Management accordion ──────────────────────────────────────
+function toggleMgmt(item) {
+  item.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+{
+  "label": "GP Tools",
+  "kicker": "Quick access",
+  "categories": [
+    {
+      "name": "Cardiovascular",
+      "items": [
+        {
+          "name": "Cardiovascular Risk Stratification",
+          "url": "/workshop/tools/cv-risk/",
+          "blurb": "PREDICT-CVD 5-year cardiovascular risk for NZ patients, with Framingham, QRISK3, SCORE2, and ACC/AHA for comparison."
+        },
+        {
+          "name": "CHA2DS2-VASc",
+          "url": "/workshop/tools/cha2ds2-vasc/",
+          "blurb": "Stroke risk in atrial fibrillation and anticoagulation decision support."
+        }
+      ]
+    },
+    {
+      "name": "Paediatrics",
+      "items": [
+        {
+          "name": "Paediatric Dosage Calculator",
+          "url": "/workshop/tools/paediatric-doses/",
+          "blurb": "Weight- and age-based dosing aligned to NZFc and Starship guidelines."
+        }
+      ]
+    },
+    {
+      "name": "Mental Health",
+      "items": [
+        {
+          "name": "Substance Risk Calculator",
+          "url": "/workshop/tools/substance-risk/",
+          "blurb": "Alcohol (AUDIT), cannabis, and nicotine/vaping risk profiles with evidence-based harm summaries and cessation guidance."
+        },
+        {
+          "name": "Antidepressant Weaning",
+          "url": "/workshop/tools/antidepressant-weaning/",
+          "blurb": "Tapering schedules and cross-tapering transitions. Covers SSRIs, SNRIs, TCAs, and mirtazapine."
+        },
+        {
+          "name": "Psychotropic Selector",
+          "url": "/workshop/tools/psychotropic-selector/",
+          "blurb": "Filterable reference for 22 agents: NZ dosing, side effects, CYP450, cost, and pregnancy safety by indication and class."
+        },
+        {
+          "name": "Benzodiazepine Conversion",
+          "url": "/workshop/tools/benzo-conversion/",
+          "blurb": "Diazepam-equivalent conversion for 11 agents including Z-drugs. Switching protocols and dependence management."
+        }
+      ]
+    },
+    {
+      "name": "Medications",
+      "items": [
+        {
+          "name": "Adult NZF Browser",
+          "url": "/workshop/tools/adult-nzf/",
+          "blurb": "GP-relevant medicines with PHARMAC funding status, prescriber requirements, and NZ dosing. Filterable by category, funding, and prescriber type."
+        },
+        {
+          "name": "Opioid Converter",
+          "url": "/workshop/tools/opioid-converter/",
+          "blurb": "Conversion across 9 opioid agents including transdermal patches. Aligned to NZ HealthPathways guidance."
+        },
+        {
+          "name": "Steroid Equivalent Calculator",
+          "url": "/workshop/tools/steroid-equivalent/",
+          "blurb": "Glucocorticoid potency and dose comparison (prednisolone equivalent)."
+        },
+        {
+          "name": "Prescriptions Outside NZ",
+          "url": "/workshop/tools/rx-outside-nz/",
+          "blurb": "Medicines prescribed overseas that are unavailable, unfunded, or differently restricted in NZ -- with local equivalents."
+        },
+        {
+          "name": "Anticholinergic Burden",
+          "url": "/workshop/tools/anticholinergic-burden/",
+          "blurb": "Cumulative ACB score across a patient medication list, with STOPP flags and deprescribing guidance."
+        }
+      ]
+    },
+    {
+      "name": "Geriatrics",
+      "items": [
+        {
+          "name": "Geriatric Assessment Toolkit",
+          "url": "/workshop/tools/geriatric-assessment/",
+          "blurb": "FRAIL, Katz ADL, Lawton IADL, and Rockwood CFS for frailty and functional assessment."
+        }
+      ]
+    },
+    {
+      "name": "General",
+      "items": [
+        {
+          "name": "COPD Management",
+          "url": "/workshop/tools/copd/",
+          "blurb": "BPAC/GOLD-staged medication selector with NZF-subsidised inhaler options."
+        },
+        {
+          "name": "Due Date Estimator",
+          "url": "/workshop/tools/edd/",
+          "blurb": "Naegele rule and gestational age by LMP or ultrasound."
+        },
+        {
+          "name": "CTS-6 (Carpal Tunnel Score)",
+          "url": "/workshop/tools/cts-6/",
+          "blurb": "Kamath and Stothard six-item weighted score for CTS probability."
+        }
+      ]
+    }
+  ]
+}
