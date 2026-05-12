@@ -142,6 +142,7 @@ a:hover { color: var(--green); }
 }
 .brand { font-family: var(--serif-display); font-weight: 700; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.02em; }
 .brand em { font-style: italic; color: var(--green); }
+.brand-working { color: var(--ink-mute); }
 
 .primary-nav {
   display: flex;
@@ -499,6 +500,17 @@ a:hover { color: var(--green); }
 .pillar--workbench     { color: var(--workbench-ink); border-top-color: var(--workbench-ink); }
 .pillar--thinking-room { color: var(--workshop-ink);  border-top-color: var(--workshop-ink); }
 .pillar:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26, 31, 28, 0.1); }
+
+.pillar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
 
 .pillar-icon {
   width: 116px;
