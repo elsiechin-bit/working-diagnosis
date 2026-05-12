@@ -173,6 +173,40 @@ a:hover { color: var(--green); }
 .nav-utility[href="/about/"] { color: var(--slate); }
 .nav-utility[href="/about/"]:hover { color: var(--green); }
 
+/* Top nav row with accents */
+.top-nav {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  position: sticky;
+  top: 88px;
+  z-index: 99;
+}
+.top-nav-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  flex-wrap: wrap;
+}
+.top-nav a {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  transition: color 120ms ease;
+}
+.top-nav a:hover {
+  color: var(--green);
+}
+.top-nav .nav-sep {
+  width: 1px;
+  height: 0.7em;
+  background: var(--rule);
+  display: inline-block;
+}
+
 
 /* ------------------------------------------------------------------ */
 /* 5. Search trigger + dropdown                                       */
