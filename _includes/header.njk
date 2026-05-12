@@ -5,58 +5,27 @@
     </a>
     <nav class="primary-nav" aria-label="Primary">
 
-      <details class="nav-drop nav-drop--library">
-        <summary>Library</summary>
+      {# Main sections #}
+      {% for item in site.nav %}{% if item.inMasthead and item.group == "section" %}
+        <a href="{{ item.url }}" class="primary-nav-link">{{ item.label }}</a>
+      {% endif %}{% endfor %}
+
+      {# Specialties dropdown #}
+      <details class="nav-drop nav-drop--specialties">
+        <summary>Specialties</summary>
         <div class="nav-drop-panel">
           <ul class="nav-drop-list">
-            {% for item in site.nav %}{% if item.row and item.row < 6 %}
-              <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+            {% for item in site.nav %}{% if item.group == "specialty" %}
+              <li><a href="{{ item.url }}"{% if item.inMasthead %} class="featured"{% endif %}>{{ item.label }}</a></li>
             {% endif %}{% endfor %}
           </ul>
         </div>
       </details>
 
-      <details class="nav-drop nav-drop--workbench">
-        <summary>Workbench</summary>
-        <div class="nav-drop-panel nav-drop-panel--wide">
-
-          <a href="/clinician-tools/updated-guidelines/" class="nav-drop-feature">
-            <span class="nav-drop-feature__label">Reference</span>
-            <span class="nav-drop-feature__title">Guideline Comparisons</span>
-            <span class="nav-drop-feature__blurb">NZ vs AU vs international across 12 primary care topics.</span>
-          </a>
-
-          {% for cat in tools.categories %}
-            <details class="nav-drop-cat">
-              <summary class="nav-drop-cat__header">{{ cat.name }}</summary>
-              <ul class="nav-drop-cat__list">
-                {% for tool in cat.items %}
-                  <li>
-                    <a href="{{ tool.url }}" class="nav-drop-tool">
-                      <span class="nav-drop-tool__name">{{ tool.name }}</span>
-                      {% if tool.blurb %}<span class="nav-drop-tool__blurb">{{ tool.blurb }}</span>{% endif %}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </details>
-          {% endfor %}
-
-        </div>
-      </details>
-
-      <a href="/clinician-tools/" class="nav-room-link nav-room-link--workshop">Workshop</a>
-
-      <a href="/patient-tools/handouts/" class="primary-nav-link">Handouts</a>
-      <a href="/beyond-the-clinic/essays/" class="primary-nav-link">Field Notes</a>
-      <a href="/resources/" class="primary-nav-link">Reading List</a>
-      <a href="/about/" class="primary-nav-link">About</a>
-
-      <span class="nav-utilities">
-        {% for item in site.nav %}{% if item.row == 6 and item.inMasthead and not item.divider %}
-          <a href="{{ item.url }}"{% if item.group %} class="nav-{{ item.group }}"{% endif %}>{{ item.shortLabel or item.label }}</a>
-        {% endif %}{% endfor %}
-      </span>
+      {# Utility links #}
+      {% for item in site.nav %}{% if item.inMasthead and item.group == "utility" %}
+        <a href="{{ item.url }}" class="primary-nav-link">{{ item.label }}</a>
+      {% endif %}{% endfor %}
 
     </nav>
     <button id="search-trigger" class="search-trigger" aria-label="Search site">
