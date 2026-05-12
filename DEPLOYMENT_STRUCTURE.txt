@@ -1,0 +1,119 @@
+WORKING DIAGNOSIS DEPLOYMENT STRUCTURE
+======================================
+
+STACK & HOSTING
+- Static site generator: Eleventy v3 (@11ty/eleventy ^3.1.5)
+- Templating engine: Nunjucks (njk)
+- Supported file types: .md, .njk, .html
+- Hosting: GitHub Pages (static)
+- Custom domain: workingdiagnosis.xyz
+- Repository: https://github.com/elsiechin-bit/working-diagnosis
+- Search: Pagefind v1.0.0 (client-side, runs post-build)
+
+BUILD PIPELINE
+
+Local Commands (package.json):
+- npm start > Eleventy in serve mode (dev with live reload)
+- npm run build > Full build: Eleventy > PDF generation > Pagefind indexing
+- npm run build:nopdf > Quick build: Eleventy > Pagefind (no PDFs)
+- npm run pdfs > PDF generation only (uses scripts/build-pdfs.js)
+
+GitHub Actions Workflow (.github/workflows/deploy.yml):
+Triggered on: push to main OR manual dispatch
+
+Build steps:
+1. Checkout code (v4)
+2. Setup Node 20
+3. npm ci (install deps)
+4. npx @11ty/eleventy (generate _site/)
+5. npx pagefind --site _site (index static site)
+6. Upload _site/ artifact
+7. Deploy artifact to GitHub Pages
+
+Key settings:
+- Concurrent deployments cancelled
+- Permissions: read contents, write pages, write id-token
+- Environment: github-pages
+- Uses actions/deploy-pages@v4 (OIDC-based, no token needed)
+
+DIRECTORY STRUCTURE
+
+Build-related:
+- .eleventy.js > Main config
+- package.json > Dependencies & scripts
+- .github/workflows/deploy.yml > GitHub Actions pipeline
+- _site/ > Output directory (generated, not committed)
+- scripts/ > Helper scripts (e.g., build-pdfs.js)
+
+Content & Config:
+- _data/ > JSON data files
+  - site.json > Navigation, global config
+  - tools.json > Clinician tools registry
+  - ticker.json > News ticker (live version)
+  - ticker-draft.json > Draft ticker
+- _includes/ > Reusable components (header.njk, footer.njk, panels, etc.)
+- _layouts/ > Page template layouts
+- assets/ > CSS, fonts, images (copied as-is to _site/)
+
+Content Folders (Eleventy reads these automatically):
+
+Pillar structure (main clinical content):
+- cardiovascular/, dermatology/, endocrinology/, gastroenterology/
+- geriatrics/, gynaecology/, mental-health/, msk/
+- neurology/, occupational-health/, oncology-palliative/
+- paediatrics/, renal-urology/, respiratory/
+- immunology-allergy/, infectious-disease/
+
+Public-facing content:
+- handouts/ > Patient education PDFs & pages (largest folder)
+- library/ > Workshop materials & tools reference
+- workshop/ > Private clinician-only content (workshop/tools/, workshop/guidelines/, etc.)
+- field-notes/ > Clinical notes & tips
+- lifestyle-prevention/ > Lifestyle & prevention guides
+- resources/ > External resource links & references
+
+Other:
+- about/, consult-room/, drafts/, experiments/, junk-drawer/
+
+Each pillar contains topic subfolders (e.g., cardiovascular/atrial-fibrillation/, cardiovascular/hypertension/).
+
+ELEVENTY CONFIGURATION (.eleventy.js)
+
+Passthrough copy:
+- assets/ folder copied to output unchanged
+
+Custom filters:
+- dateDisplay > NZ locale date format
+- dateISO > ISO date string (YYYY-MM-DD)
+- readingTime > Estimates reading duration (words / 200)
+- tagLabel > Human labels for tags (redflags, guidelines, hacks, controversy, medicolegal, patient)
+
+Directory config:
+input: . (root)
+output: _site
+includes: _includes
+layouts: _layouts
+data: _data
+
+Template settings:
+- markdownTemplateEngine: "njk" (Nunjucks processes .md files)
+- htmlTemplateEngine: "njk" (Nunjucks processes .html files)
+- templateFormats: ["md", "njk", "html"]
+
+KEY OBSERVATIONS FOR REBUILD
+
+1. No custom build steps > Eleventy does the heavy lifting; just copy assets & process markdown/Nunjucks
+2. Pagefind is post-build > Must run AFTER Eleventy generates _site/
+3. Data-driven nav > site.json in _data/ controls navigation
+4. Large handout library > 300+ patient education documents
+5. Workshop/tools separation > Private clinician content vs. public patient content (folder-based)
+6. No TypeScript, no CSS framework > Vanilla CSS in assets/; entirely JS-free except search
+7. Git Pages via OIDC > No token management; uses GitHub's built-in OIDC for deploys
+
+FILES TO PRESERVE/REVIEW BEFORE REBUILD
+
+- _data/site.json > Navigation structure
+- _data/tools.json > Clinician tools registry
+- .eleventy.js > Filters & config
+- _includes/header.njk, footer.njk > Brand/UX patterns
+- assets/style.css > Visual identity (Fraunces, Newsreader, JetBrains Mono)

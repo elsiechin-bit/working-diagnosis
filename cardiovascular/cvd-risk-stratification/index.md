@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: Absolute cardiovascular risk assessment in primary care. SCORE2 and NZ guidance. When to discuss risk, how to communicate, who to treat.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">CVD Risk Stratification</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">CVD Risk Stratification</span></p>
 
 <section class="panic-strip">
 
@@ -71,6 +71,6 @@ Explain risk in plain language. Avoid saying "you are high-risk"—instead, expl
 - <a href="/handouts/cardiovascular-risk/">Cardiovascular risk and prevention</a>
 
 ## Field notes
-- <a href="/field-notes/cvd-risk-conversations/">CVD risk conversations: what matters to patients</a>
+- <a href="/beyond-the-clinic/essays/cvd-risk-conversations/">CVD risk conversations: what matters to patients</a>
 
 </aside>

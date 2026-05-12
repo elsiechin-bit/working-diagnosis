@@ -5,7 +5,7 @@ layout: topic.njk
 specialty: Mental Health
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/mental-health/">Mental Health</a><span class="topic-trail-sep">·</span><span class="here">Addiction</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/mental-health/">Mental Health</a><span class="topic-trail-sep">·</span><span class="here">Addiction</span></p>
 
 <div class="panic-strip">
   <div class="panic-tile dont-miss">

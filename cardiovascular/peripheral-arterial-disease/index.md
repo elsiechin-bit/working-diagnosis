@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: Diagnosis of peripheral arterial disease. Claudication assessment. Ankle-brachial pressure index and duplex ultrasound. Medical management and revascularisation referral.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Peripheral Arterial Disease</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Peripheral Arterial Disease</span></p>
 
 <section class="panic-strip">
 
@@ -130,7 +130,7 @@ Review claudication severity, functional impact, and medication adherence every 
 - <a href="/handouts/foot-care/">Foot care for people with poor circulation</a>
 
 ## Field notes
-- <a href="/field-notes/claudication-diagnosis/">Claudication: recognising PAD in primary care</a>
-- <a href="/field-notes/exercise-prescription-pad/">Exercise prescription for claudication</a>
+- <a href="/beyond-the-clinic/essays/claudication-diagnosis/">Claudication: recognising PAD in primary care</a>
+- <a href="/beyond-the-clinic/essays/exercise-prescription-pad/">Exercise prescription for claudication</a>
 
 </aside>

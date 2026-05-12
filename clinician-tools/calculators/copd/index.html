@@ -1,0 +1,705 @@
+---
+title: COPD Management
+permalink: /clinician-tools/calculators/copd/
+eleventyExcludeFromCollections: true
+description: GOLD ABE staging, step-up algorithm, and an NZ-funded inhaler directory for general practice.
+---
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COPD Management  -  Working Diagnosis</title>
+  <meta name="description" content="GOLD ABE classification, evidence-based step-up algorithm, and a filterable directory of NZ-funded inhalers. Consultation-support tool for general practice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    :root {
+      --paper:        #F5F1E8;
+      --paper-warm:   #EDE7D8;
+      --paper-deep:   #E4DBC4;
+      --ink:          #1A1F1C;
+      --ink-soft:     #3A4540;
+      --ink-mute:     #6B7A75;
+      --rule:         #D9D1BD;
+      --green:        #2F6B5C;
+      --green-deep:   #1F4A3F;
+      --ochre:        #B8714F;
+      --rose:         #C4534A;
+      --warn:         #C28C24;
+      --font-d:       'Fraunces', Georgia, serif;
+      --font-b:       'Newsreader', Georgia, serif;
+      --font-m:       'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    body { background: var(--paper); color: var(--ink); font-family: var(--font-b); }
+
+    .tool-main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 6rem; }
+
+    .tool-hero { padding: 1.5rem 0 1rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.5rem; }
+    .tool-hero .kicker { font-family: var(--font-m); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ochre); font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .tool-hero h1 { font-family: var(--font-d); font-weight: 400; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 0.5rem; line-height: 1.05; }
+    .tool-hero h1 em { color: var(--green); font-style: italic; }
+    .tool-hero .dek { font-family: var(--font-d); font-size: 1.1rem; color: var(--ink-soft); margin: 0 0 1rem; max-width: 60ch; }
+    .tool-hero .stamp { font-family: var(--font-m); font-size: 0.78rem; color: var(--ink-mute); background: var(--paper-warm); padding: 0.6rem 0.9rem; border-left: 3px solid var(--ochre); margin: 0; max-width: 70ch; }
+    .tool-hero .stamp strong { color: var(--ink); }
+    .tool-hero .stamp a { color: var(--green); }
+
+    .tool-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--rule); margin-bottom: 2rem; position: sticky; top: 0; background: var(--paper); z-index: 5; }
+    .tool-tabs a { font-family: var(--font-m); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.06em; padding: 0.9rem 1.2rem; color: var(--ink-soft); text-decoration: none; border-bottom: 2px solid transparent; }
+    .tool-tabs a:hover { color: var(--green); }
+    .tool-tabs a.active { color: var(--green); border-bottom-color: var(--green); }
+
+    .tool-section { padding: 2rem 0 3rem; border-bottom: 1px solid var(--rule); scroll-margin-top: 4rem; }
+    .tool-section:last-of-type { border-bottom: 0; }
+    .section-kicker { font-family: var(--font-m); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ochre); font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .tool-section h2 { font-family: var(--font-d); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 1.5rem; }
+    .tool-section h3 { font-family: var(--font-d); font-weight: 500; font-size: 1.2rem; margin: 1.5rem 0 0.75rem; color: var(--ink); }
+
+    .layout-2col { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr); gap: 2rem; }
+    @media (max-width: 800px) { .layout-2col { grid-template-columns: 1fr; } }
+
+    fieldset { border: 1px solid var(--rule); padding: 1rem 1.25rem 1.25rem; margin: 0 0 1rem; background: var(--paper-warm); }
+    legend { font-family: var(--font-m); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.08em; color: var(--ink-soft); padding: 0 0.4rem; }
+    .field { display: flex; flex-direction: column; gap: 0.3rem; margin: 0.6rem 0; }
+    .field label { font-size: 0.9rem; color: var(--ink-soft); }
+    .field input[type="number"], .field select { font-family: var(--font-m); font-size: 0.95rem; padding: 0.5rem 0.7rem; border: 1px solid var(--rule); background: #fff; color: var(--ink); border-radius: 2px; }
+    .field input[type="number"]:focus, .field select:focus { outline: 2px solid var(--green); outline-offset: -1px; }
+    .field-hint { font-size: 0.78rem; color: var(--ink-mute); margin-top: 0.15rem; }
+    .radio-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .radio-row label { font-family: var(--font-m); font-size: 0.85rem; padding: 0.4rem 0.6rem; border: 1px solid var(--rule); background: #fff; cursor: pointer; }
+    .radio-row input { position: absolute; opacity: 0; }
+    .radio-row input:checked + span { font-weight: 600; }
+    .radio-row label:has(input:checked) { background: var(--green); color: #fff; border-color: var(--green); }
+    .check-row label { display: flex; gap: 0.5rem; align-items: center; font-size: 0.9rem; cursor: pointer; }
+
+    .stage-output { padding: 1.25rem; background: var(--paper-deep); border-left: 3px solid var(--green); margin-top: 1rem; }
+    .stage-output h3 { margin-top: 0; }
+    .stage-card { background: #fff; padding: 1rem 1.2rem; margin: 0.7rem 0; border-left: 3px solid var(--rule); }
+    .stage-card.is-A { border-left-color: #6BA17F; }
+    .stage-card.is-B { border-left-color: var(--warn); }
+    .stage-card.is-E { border-left-color: var(--rose); }
+    .stage-card .label { font-family: var(--font-m); text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.08em; color: var(--ink-mute); }
+    .stage-card .value { font-family: var(--font-d); font-size: 1.6rem; line-height: 1.1; margin: 0.2rem 0; }
+    .stage-card .reason { font-size: 0.85rem; color: var(--ink-soft); margin: 0.3rem 0 0; }
+
+    .gold-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin: 0.8rem 0; }
+    .gold-grid .gcell { font-family: var(--font-m); font-size: 0.78rem; padding: 0.5rem; text-align: center; background: #fff; border: 1px solid var(--rule); color: var(--ink-mute); }
+    .gold-grid .gcell.is-active { background: var(--green); color: #fff; border-color: var(--green); }
+
+    .ics-banner { padding: 0.9rem 1.1rem; margin: 0.6rem 0 0; font-size: 0.92rem; border-left: 3px solid var(--ink-mute); background: #fff; }
+    .ics-banner.yes { border-left-color: var(--green); }
+    .ics-banner.consider { border-left-color: var(--warn); }
+    .ics-banner.no { border-left-color: var(--rose); }
+    .ics-banner strong { font-family: var(--font-m); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.08em; }
+
+    .plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 700px) { .plan-grid { grid-template-columns: 1fr; } }
+    .plan-card { background: #fff; padding: 1rem 1.2rem; border: 1px solid var(--rule); }
+    .plan-card h4 { font-family: var(--font-d); font-size: 1.05rem; font-weight: 500; margin: 0 0 0.5rem; }
+    .plan-card ul { margin: 0; padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.5; }
+    .plan-card .pill { display: inline-block; font-family: var(--font-m); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.2rem 0.5rem; background: var(--paper-warm); margin-right: 0.3rem; color: var(--ink-soft); }
+
+    .stepup { display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin: 1rem 0; }
+    .stepup .row { display: grid; grid-template-columns: 90px 1fr; gap: 0.8rem; padding: 0.7rem 0.9rem; background: #fff; border: 1px solid var(--rule); align-items: center; }
+    .stepup .row .step { font-family: var(--font-m); font-size: 0.78rem; color: var(--ochre); text-transform: uppercase; letter-spacing: 0.08em; }
+    .stepup .row .body { font-size: 0.93rem; line-height: 1.4; }
+
+    .red-flags { background: #fff; border-left: 3px solid var(--rose); padding: 1rem 1.2rem; }
+    .red-flags ul { margin: 0; padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.55; }
+
+    /* Inhaler grid */
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 1rem 0; padding: 0.7rem 0.9rem; background: var(--paper-warm); border: 1px solid var(--rule); }
+    .filter-bar label { font-family: var(--font-m); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.08em; color: var(--ink-mute); margin-right: 0.3rem; }
+    .filter-bar select { font-family: var(--font-m); font-size: 0.85rem; padding: 0.35rem 0.5rem; border: 1px solid var(--rule); background: #fff; }
+    .filter-bar .count { margin-left: auto; font-family: var(--font-m); font-size: 0.78rem; color: var(--ink-mute); }
+    .reset-btn { font-family: var(--font-m); font-size: 0.78rem; padding: 0.35rem 0.7rem; border: 1px solid var(--rule); background: #fff; cursor: pointer; }
+    .reset-btn:hover { background: var(--paper-deep); }
+
+    .inhaler-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.7rem; margin: 1rem 0; }
+    .inhaler-card { background: #fff; border: 1px solid var(--rule); padding: 0.9rem 1rem; display: flex; flex-direction: column; gap: 0.3rem; }
+    .inhaler-card .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+    .inhaler-card .brand { font-family: var(--font-d); font-size: 1.1rem; font-weight: 500; line-height: 1.15; }
+    .inhaler-card .generic { font-family: var(--font-b); font-size: 0.82rem; color: var(--ink-mute); font-style: italic; margin: 0.1rem 0 0.4rem; }
+    .inhaler-card .meta { font-family: var(--font-m); font-size: 0.74rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .inhaler-card .meta span { background: var(--paper-warm); padding: 0.15rem 0.4rem; }
+    .inhaler-card .dose { font-size: 0.85rem; color: var(--ink-soft); margin: 0.3rem 0 0; }
+    .inhaler-card .funding { font-family: var(--font-m); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.2rem 0.5rem; align-self: flex-start; flex-shrink: 0; }
+    .inhaler-card .funding.funded { background: #DCEFE2; color: var(--green-deep); }
+    .inhaler-card .funding.sa { background: #F3E1B5; color: #7B5510; }
+    .inhaler-card .funding.unfunded { background: #F3D9D5; color: #8B2D24; }
+    .inhaler-card .sa-note { font-size: 0.78rem; color: var(--ink-soft); margin: 0.3rem 0 0; line-height: 1.4; }
+    .inhaler-card .last-verified { font-family: var(--font-m); font-size: 0.68rem; color: var(--ink-mute); margin-top: 0.4rem; }
+
+    .sources { padding: 2rem 0; font-size: 0.85rem; line-height: 1.55; }
+    .sources ol { padding-left: 1.5rem; }
+    .sources li { margin-bottom: 0.4rem; }
+    .sources a { color: var(--green); }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead-row">
+    <a href="/" class="brand">
+      <span class="brand-name">Working <em>Diagnosis</em>.</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="/cardiovascular/">Cardiovascular</a>
+      <a href="/respiratory/">Respiratory</a>
+      <a href="/clinician-tools/">Workshop</a>
+    </nav>
+  </div>
+</header>
+
+<main class="tool-main">
+
+  <section class="tool-hero">
+    <p class="kicker">&#10063; Clinical tool</p>
+    <h1>COPD <em>Management</em>.</h1>
+    <p class="dek">GOLD ABE staging, evidence-based step-up algorithm, BODE prognosis, and a filterable directory of NZ-funded inhalers.</p>
+    <p class="stamp">Funding data verified <strong id="verifiedStamp">2026-05-07</strong>. Confirm against the <a href="https://schedule.pharmac.govt.nz/" target="_blank" rel="noopener">live PHARMAC schedule</a> and the <a href="https://nzf.org.nz/" target="_blank" rel="noopener">NZF</a> before prescribing. Consultation support, not patient self-assessment.</p>
+  </section>
+
+  <nav class="tool-tabs" aria-label="Sections">
+    <a href="#stage" data-tab="stage">1. Stage</a>
+    <a href="#plan" data-tab="plan">2. Plan</a>
+    <a href="#inhalers" data-tab="inhalers">3. Inhalers</a>
+  </nav>
+
+  <section id="stage" class="tool-section">
+    <p class="section-kicker">&#10063; Step 1</p>
+    <h2>Where is the patient?</h2>
+    <div class="layout-2col">
+      <form id="stageForm" novalidate>
+        <fieldset>
+          <legend>Spirometry (post-bronchodilator)</legend>
+          <div class="field">
+            <label for="fev1pct">FEV<sub>1</sub> % predicted</label>
+            <input type="number" id="fev1pct" min="5" max="150" step="1" placeholder="e.g. 55">
+            <span class="field-hint">Stage threshold uses post-bronchodilator FEV<sub>1</sub> only.</span>
+          </div>
+          <div class="field">
+            <label for="ratio">FEV<sub>1</sub>/FVC ratio</label>
+            <input type="number" id="ratio" min="0.20" max="1.00" step="0.01" placeholder="e.g. 0.62">
+            <span class="field-hint">Ratio &lt; 0.70 confirms persistent airflow obstruction.</span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Symptoms</legend>
+          <div class="field">
+            <label>mMRC dyspnoea (0 to 4)</label>
+            <div class="radio-row" role="radiogroup" aria-label="mMRC">
+              <label><input type="radio" name="mmrc" value="0"><span>0</span></label>
+              <label><input type="radio" name="mmrc" value="1"><span>1</span></label>
+              <label><input type="radio" name="mmrc" value="2"><span>2</span></label>
+              <label><input type="radio" name="mmrc" value="3"><span>3</span></label>
+              <label><input type="radio" name="mmrc" value="4"><span>4</span></label>
+            </div>
+            <span class="field-hint">2 = walks slower than peers; 4 = breathless dressing.</span>
+          </div>
+          <div class="field">
+            <label for="cat">CAT score (0 to 40)</label>
+            <input type="number" id="cat" min="0" max="40" step="1" placeholder="e.g. 14">
+            <span class="field-hint">CAT &ge; 10 indicates significant symptom impact.</span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Exacerbations (last 12 months)</legend>
+          <div class="field">
+            <label for="exacMod">Moderate exacerbations</label>
+            <input type="number" id="exacMod" min="0" max="20" step="1" placeholder="0">
+            <span class="field-hint">Treated with oral steroids or antibiotics, no admission.</span>
+          </div>
+          <div class="field">
+            <label for="exacSev">Hospitalisations for exacerbation</label>
+            <input type="number" id="exacSev" min="0" max="10" step="1" placeholder="0">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Phenotype and BODE</legend>
+          <div class="field">
+            <label for="eos">Blood eosinophils (cells/&micro;L)</label>
+            <input type="number" id="eos" min="0" max="2000" step="10" placeholder="optional">
+            <span class="field-hint">Guides ICS benefit (&ge;300 favours ICS; &lt;100 against).</span>
+          </div>
+          <div class="check-row field">
+            <label><input type="checkbox" id="aco"> Asthma-COPD overlap features</label>
+          </div>
+          <div class="check-row field">
+            <label><input type="checkbox" id="pneumoniaHx"> Recurrent pneumonia history</label>
+          </div>
+          <div class="check-row field">
+            <label><input type="checkbox" id="smokerCurrent"> Current smoker</label>
+          </div>
+          <div class="field">
+            <label for="bmi">BMI (kg/m<sup>2</sup>) <span class="field-hint" style="display:inline">- BODE</span></label>
+            <input type="number" id="bmi" min="10" max="60" step="0.1" placeholder="optional">
+          </div>
+          <div class="field">
+            <label for="walk">6-minute walk distance (m) <span class="field-hint" style="display:inline">- BODE</span></label>
+            <input type="number" id="walk" min="0" max="800" step="10" placeholder="optional">
+          </div>
+        </fieldset>
+      </form>
+
+      <div id="stageOutput" class="stage-output" aria-live="polite">
+        <h3>Stage</h3>
+        <p style="color: var(--ink-mute); font-size: 0.9rem;">Enter spirometry and symptoms to see stage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="plan" class="tool-section">
+    <p class="section-kicker">&#10063; Step 2</p>
+    <h2>What's the plan?</h2>
+
+    <div id="planOutput">
+      <p style="color: var(--ink-mute);">Plan will populate once stage is computed.</p>
+    </div>
+
+    <h3>Step-up algorithm if exacerbations continue</h3>
+    <div class="stepup">
+      <div class="row"><span class="step">Step 1</span><span class="body">Single LABD: LAMA preferred over LABA in COPD without asthma features. Reassess at 6 to 12 weeks.</span></div>
+      <div class="row"><span class="step">Step 2</span><span class="body">LABA + LAMA dual therapy. Single-inhaler combination preferred for adherence.</span></div>
+      <div class="row"><span class="step">Step 3</span><span class="body">Add ICS to make triple if eosinophils &ge; 100 cells/&micro;L AND continued exacerbations, OR if asthma overlap, OR &ge; 1 hospitalisation. Avoid if pneumonia-prone or eosinophils &lt; 100.</span></div>
+      <div class="row"><span class="step">Step 4</span><span class="body">If exacerbations persist on triple: consider azithromycin 250 mg three times weekly (former smokers, eos &ge; 100), refer to respiratory.</span></div>
+    </div>
+
+    <h3>Non-pharmacological pillars</h3>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <h4><span class="pill">Pillar 1</span>Smoking cessation</h4>
+        <ul>
+          <li>Only intervention shown to alter the slope of FEV<sub>1</sub> decline and reduce mortality.</li>
+          <li>Combine behavioural support with NRT, varenicline (Champix), or bupropion. All currently funded in NZ for smokers attempting cessation.</li>
+          <li>Quitline 0800 778 778 and Pathway to Smokefree.</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <h4><span class="pill">Pillar 2</span>Pulmonary rehabilitation</h4>
+        <ul>
+          <li>Cochrane evidence: improves CAT by 2 to 5 points, reduces exacerbations and admissions.</li>
+          <li>Refer all symptomatic patients (mMRC &ge; 2) and after any hospitalisation.</li>
+          <li>Available through DHB respiratory services and some community providers.</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <h4><span class="pill">Pillar 3</span>Vaccinations (NZ)</h4>
+        <ul>
+          <li>Influenza annually: funded for COPD.</li>
+          <li>Pneumococcal: PCV13 then PPSV23 8 weeks apart, funded for COPD adults &ge; 65 or eligible high-risk groups (per IMAC handbook).</li>
+          <li>COVID-19 boosters per current MoH schedule.</li>
+          <li>Pertussis: Tdap booster every 10 years.</li>
+          <li>RSV: limited availability, consider in severe COPD &ge; 60.</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <h4><span class="pill">Pillar 4</span>Self-management</h4>
+        <ul>
+          <li>Written action plan (rescue prednisone and antibiotics for exacerbations in selected patients).</li>
+          <li>Inhaler technique check at every review. Bad technique is the commonest cause of "treatment failure".</li>
+          <li>Review BMI, sarcopenia, anxiety/depression (HADS), advance care planning if FEV<sub>1</sub> &lt; 30%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Refer / red flags</h3>
+    <div class="red-flags">
+      <ul>
+        <li>Two or more exacerbations per year despite triple therapy.</li>
+        <li>FEV<sub>1</sub> &lt; 50% in patients under 65 (consider alpha-1 antitrypsin level).</li>
+        <li>SpO<sub>2</sub> &lt; 92% on air at rest (long-term oxygen assessment).</li>
+        <li>Suspected asthma-COPD overlap or atypical features.</li>
+        <li>Significant weight loss, haemoptysis, or new persistent cough (rule out malignancy).</li>
+        <li>Discussion of advance care planning, palliative needs, or non-invasive ventilation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="inhalers" class="tool-section">
+    <p class="section-kicker">&#10063; Step 3</p>
+    <h2>NZ inhaler directory</h2>
+    <p style="max-width: 65ch; color: var(--ink-soft); font-size: 0.95rem;">Filter by class, device, funding, and frequency. Special Authority criteria are summarised on each card; full criteria live on the PHARMAC schedule.</p>
+
+    <div class="filter-bar">
+      <label for="filterClass">Class</label>
+      <select id="filterClass"><option value="">All</option></select>
+      <label for="filterFunding">Funding</label>
+      <select id="filterFunding">
+        <option value="">All</option>
+        <option value="funded">Funded</option>
+        <option value="sa">Special Authority</option>
+        <option value="unfunded">Not funded</option>
+      </select>
+      <label for="filterDevice">Device</label>
+      <select id="filterDevice"><option value="">All</option></select>
+      <label for="filterFreq">Frequency</label>
+      <select id="filterFreq">
+        <option value="">All</option>
+        <option value="OD">Once daily</option>
+        <option value="BD">Twice daily</option>
+        <option value="QID">Four times daily</option>
+        <option value="PRN">As needed</option>
+      </select>
+      <button type="button" class="reset-btn" id="filterReset">Reset</button>
+      <span class="count" id="inhalerCount"></span>
+    </div>
+
+    <div class="inhaler-grid" id="inhalerGrid"></div>
+  </section>
+
+  <section class="sources">
+    <h2 style="font-family: var(--font-d); font-weight: 400;">Sources</h2>
+    <ol>
+      <li>Global Initiative for Chronic Obstructive Lung Disease. Global Strategy for Prevention, Diagnosis and Management of COPD: 2024 Report. Available from: <a href="https://goldcopd.org/2024-gold-report/" target="_blank" rel="noopener">https://goldcopd.org/2024-gold-report/</a></li>
+      <li>Jones PW, Harding G, Berry P, Wiklund I, Chen WH, Kline Leidy N. Development and first validation of the COPD Assessment Test. Eur Respir J. 2009;34(3):648-54.</li>
+      <li>Best Practice Advocacy Centre New Zealand. COPD: pharmacological management in primary care. BPJ. Available from: <a href="https://bpac.org.nz/" target="_blank" rel="noopener">https://bpac.org.nz/</a></li>
+      <li>McCarthy B, Casey D, Devane D, Murphy K, Murphy E, Lacasse Y. Pulmonary rehabilitation for chronic obstructive pulmonary disease. Cochrane Database Syst Rev. 2015;(2):CD003793.</li>
+      <li>Celli BR, Cote CG, Marin JM, Casanova C, Montes de Oca M, Mendez RA, et al. The body-mass index, airflow obstruction, dyspnea, and exercise capacity index in chronic obstructive pulmonary disease. N Engl J Med. 2004;350(10):1005-12.</li>
+      <li>Pavord ID, Lettis S, Locantore N, Pascoe S, Jones PW, Wedzicha JA, et al. Blood eosinophils and inhaled corticosteroid/long-acting beta-2 agonist efficacy in COPD. Thorax. 2016;71(2):118-25.</li>
+      <li>PHARMAC Pharmaceutical Schedule. Available from: <a href="https://schedule.pharmac.govt.nz/" target="_blank" rel="noopener">https://schedule.pharmac.govt.nz/</a></li>
+      <li>New Zealand Formulary. Available from: <a href="https://nzf.org.nz/" target="_blank" rel="noopener">https://nzf.org.nz/</a></li>
+      <li>Immunisation Advisory Centre (IMAC). Pneumococcal and influenza recommendations. Available from: <a href="https://immune.org.nz/" target="_blank" rel="noopener">https://immune.org.nz/</a></li>
+    </ol>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-copy" style="font-size: 0.85rem; color: var(--ink-mute); padding: 1.5rem 0;">Working Diagnosis &middot; Consultation-support tool. Verify against current PHARMAC schedule, NZF, and BPAC guidance before prescribing. <a href="/workshop/" style="color: var(--green);">&larr; back to clinician tools</a></p>
+  </div>
+</footer>
+
+<script>
+// ======================================================================
+// Inhaler dataset. Hand-curated. Verify against current PHARMAC schedule.
+// Funding values: 'funded' | 'sa' | 'unfunded'
+// ======================================================================
+const VERIFIED_DATE = '2026-05-07';
+const INHALERS = [
+  // SABA
+  { generic: 'Salbutamol', brand: 'Ventolin / SalAir', class: 'SABA', device: 'MDI', dose: '100 mcg', frequency: 'PRN', funded: 'funded', sa: '', notes: 'Use spacer with MDI for COPD.', last_verified: VERIFIED_DATE },
+  { generic: 'Terbutaline',  brand: 'Bricanyl Turbuhaler', class: 'SABA', device: 'Turbuhaler', dose: '500 mcg', frequency: 'PRN', funded: 'funded', sa: '', notes: 'Dry powder: requires adequate inspiratory flow.', last_verified: VERIFIED_DATE },
+
+  // SAMA
+  { generic: 'Ipratropium', brand: 'Atrovent / Apo-Ipravent', class: 'SAMA', device: 'MDI', dose: '20 mcg', frequency: 'QID', funded: 'funded', sa: '', notes: 'Slower onset than SABA. Useful add-on for severe acute exacerbation.', last_verified: VERIFIED_DATE },
+
+  // LABA monotherapy (rare in COPD)
+  { generic: 'Salmeterol', brand: 'Serevent Accuhaler', class: 'LABA', device: 'Accuhaler (DPI)', dose: '50 mcg', frequency: 'BD', funded: 'funded', sa: '', notes: 'Mostly used as part of LABA+ICS combinations in COPD.', last_verified: VERIFIED_DATE },
+
+  // LAMA
+  { generic: 'Tiotropium', brand: 'Spiriva HandiHaler', class: 'LAMA', device: 'HandiHaler (DPI)', dose: '18 mcg', frequency: 'OD', funded: 'sa', sa: 'Special Authority for COPD: confirmed diagnosis with documented spirometry and inadequate response to other bronchodilators. Verify current criteria on PHARMAC.', notes: '', last_verified: VERIFIED_DATE },
+  { generic: 'Tiotropium', brand: 'Spiriva Respimat', class: 'LAMA', device: 'Respimat (soft mist)', dose: '2.5 mcg, 2 puffs', frequency: 'OD', funded: 'sa', sa: 'Special Authority equivalent to HandiHaler form.', notes: 'Soft-mist inhaler suits patients with low inspiratory flow.', last_verified: VERIFIED_DATE },
+  { generic: 'Glycopyrronium', brand: 'Seebri Breezhaler', class: 'LAMA', device: 'Breezhaler (DPI)', dose: '50 mcg', frequency: 'OD', funded: 'sa', sa: 'Special Authority for COPD where tiotropium not tolerated or inadequate. Verify current criteria.', notes: 'Capsule loaded into device each dose.', last_verified: VERIFIED_DATE },
+  { generic: 'Umeclidinium', brand: 'Incruse Ellipta', class: 'LAMA', device: 'Ellipta (DPI)', dose: '62.5 mcg', frequency: 'OD', funded: 'unfunded', sa: '', notes: 'Verify funding status; PHARMAC has reviewed Ellipta-platform agents.', last_verified: VERIFIED_DATE },
+
+  // ICS
+  { generic: 'Beclomethasone', brand: 'Beclazone / Qvar', class: 'ICS', device: 'MDI', dose: '50 to 250 mcg', frequency: 'BD', funded: 'funded', sa: '', notes: 'Qvar is extra-fine particle (different lung deposition).', last_verified: VERIFIED_DATE },
+  { generic: 'Budesonide', brand: 'Pulmicort Turbuhaler', class: 'ICS', device: 'Turbuhaler (DPI)', dose: '100 to 400 mcg', frequency: 'BD', funded: 'funded', sa: '', notes: '', last_verified: VERIFIED_DATE },
+  { generic: 'Fluticasone propionate', brand: 'Flixotide Accuhaler / MDI', class: 'ICS', device: 'Accuhaler / MDI', dose: '50 to 500 mcg', frequency: 'BD', funded: 'funded', sa: '', notes: '', last_verified: VERIFIED_DATE },
+
+  // LABA + ICS
+  { generic: 'Salmeterol + fluticasone propionate', brand: 'Seretide Accuhaler', class: 'LABA+ICS', device: 'Accuhaler (DPI)', dose: '50/100, 50/250, 50/500 mcg', frequency: 'BD', funded: 'funded', sa: '', notes: 'Dose strength for COPD typically 50/500.', last_verified: VERIFIED_DATE },
+  { generic: 'Salmeterol + fluticasone propionate', brand: 'Sereflo / Seretide MDI', class: 'LABA+ICS', device: 'MDI', dose: '25/125, 25/250 mcg', frequency: 'BD', funded: 'funded', sa: '', notes: 'Use with spacer.', last_verified: VERIFIED_DATE },
+  { generic: 'Budesonide + formoterol', brand: 'Symbicort Turbuhaler', class: 'LABA+ICS', device: 'Turbuhaler (DPI)', dose: '200/6 or 400/12 mcg', frequency: 'BD', funded: 'funded', sa: '', notes: '', last_verified: VERIFIED_DATE },
+  { generic: 'Budesonide + formoterol', brand: 'Symbicort Rapihaler', class: 'LABA+ICS', device: 'MDI', dose: '100/3 or 200/6 mcg', frequency: 'BD', funded: 'funded', sa: '', notes: '', last_verified: VERIFIED_DATE },
+  { generic: 'Budesonide + formoterol', brand: 'DuoResp Spiromax', class: 'LABA+ICS', device: 'Spiromax (DPI)', dose: '160/4.5 or 320/9 mcg', frequency: 'BD', funded: 'funded', sa: '', notes: '', last_verified: VERIFIED_DATE },
+  { generic: 'Vilanterol + fluticasone furoate', brand: 'Breo Ellipta', class: 'LABA+ICS', device: 'Ellipta (DPI)', dose: '92/22 or 184/22 mcg', frequency: 'OD', funded: 'sa', sa: 'Special Authority for COPD where alternatives not tolerated. Verify current criteria.', notes: 'Once-daily dosing favours adherence.', last_verified: VERIFIED_DATE },
+
+  // LABA + LAMA
+  { generic: 'Olodaterol + tiotropium', brand: 'Spiolto Respimat', class: 'LABA+LAMA', device: 'Respimat (soft mist)', dose: '2.5/2.5 mcg, 2 puffs', frequency: 'OD', funded: 'sa', sa: 'Special Authority for COPD with documented inadequate response to LAMA monotherapy. Verify current criteria.', notes: '', last_verified: VERIFIED_DATE },
+  { generic: 'Indacaterol + glycopyrronium', brand: 'Ultibro Breezhaler', class: 'LABA+LAMA', device: 'Breezhaler (DPI)', dose: '110/50 mcg', frequency: 'OD', funded: 'unfunded', sa: '', notes: 'Verify current funding status.', last_verified: VERIFIED_DATE },
+  { generic: 'Vilanterol + umeclidinium', brand: 'Anoro Ellipta', class: 'LABA+LAMA', device: 'Ellipta (DPI)', dose: '22/55 mcg', frequency: 'OD', funded: 'unfunded', sa: '', notes: 'Verify current funding status.', last_verified: VERIFIED_DATE },
+
+  // LABA + LAMA + ICS (triple)
+  { generic: 'Beclomethasone + formoterol + glycopyrronium', brand: 'Trimbow MDI', class: 'LABA+LAMA+ICS', device: 'MDI', dose: '87/5/9 mcg, 2 puffs', frequency: 'BD', funded: 'sa', sa: 'Special Authority for severe COPD with persistent exacerbations on dual therapy. Verify current criteria.', notes: 'Extra-fine particle; use with spacer.', last_verified: VERIFIED_DATE },
+  { generic: 'Vilanterol + umeclidinium + fluticasone furoate', brand: 'Trelegy Ellipta', class: 'LABA+LAMA+ICS', device: 'Ellipta (DPI)', dose: '22/55/92 mcg', frequency: 'OD', funded: 'unfunded', sa: '', notes: 'PHARMAC funding has been reviewed; verify current status.', last_verified: VERIFIED_DATE }
+];
+
+// ======================================================================
+// Stage and plan logic
+// ======================================================================
+function computeStage(input) {
+  const out = {};
+  // Spirometric stage
+  out.fev1pct = parseFloat(input.fev1pct);
+  out.ratio = parseFloat(input.ratio);
+  out.obstruction = (!isNaN(out.ratio)) ? (out.ratio < 0.70) : null;
+  if (!isNaN(out.fev1pct)) {
+    if (out.fev1pct >= 80) out.spiroStage = 1;
+    else if (out.fev1pct >= 50) out.spiroStage = 2;
+    else if (out.fev1pct >= 30) out.spiroStage = 3;
+    else out.spiroStage = 4;
+  }
+
+  // Symptom burden
+  out.mmrc = (input.mmrc === '' || input.mmrc == null) ? null : parseInt(input.mmrc, 10);
+  out.cat = (input.cat === '' || isNaN(parseInt(input.cat, 10))) ? null : parseInt(input.cat, 10);
+  out.symptomsHigh = false;
+  if (out.mmrc != null && out.mmrc >= 2) out.symptomsHigh = true;
+  if (out.cat != null && out.cat >= 10) out.symptomsHigh = true;
+  out.symptomsKnown = (out.mmrc != null) || (out.cat != null);
+
+  // Exacerbation risk
+  out.exacMod = parseInt(input.exacMod, 10) || 0;
+  out.exacSev = parseInt(input.exacSev, 10) || 0;
+  out.exacHigh = (out.exacMod >= 2) || (out.exacSev >= 1);
+
+  // GOLD ABE
+  if (out.symptomsKnown) {
+    if (out.exacHigh) out.abe = 'E';
+    else if (out.symptomsHigh) out.abe = 'B';
+    else out.abe = 'A';
+  }
+
+  // ICS indication (eosinophil-guided)
+  out.eos = (input.eos === '' || isNaN(parseFloat(input.eos))) ? null : parseFloat(input.eos);
+  out.aco = !!input.aco;
+  out.pneumoniaHx = !!input.pneumoniaHx;
+  out.icsRecommendation = computeICS(out);
+
+  // BODE
+  out.bmi = (input.bmi === '' || isNaN(parseFloat(input.bmi))) ? null : parseFloat(input.bmi);
+  out.walk = (input.walk === '' || isNaN(parseFloat(input.walk))) ? null : parseFloat(input.walk);
+  out.bode = computeBODE(out);
+
+  return out;
+}
+
+function computeICS(s) {
+  // GOLD-style ICS guidance.
+  const reasons = [];
+  let level = 'no';
+  if (s.aco) { level = 'yes'; reasons.push('Asthma overlap features.'); }
+  if (s.eos != null && s.eos >= 300) { level = 'yes'; reasons.push('Eosinophils &ge; 300 cells/&micro;L.'); }
+  if (s.exacSev >= 1) { level = 'yes'; reasons.push('Hospitalised exacerbation in last 12 months.'); }
+  if (s.exacMod >= 2) { if (level !== 'yes') level = 'yes'; reasons.push('Two or more moderate exacerbations.'); }
+  if (s.eos != null && s.eos >= 100 && s.eos < 300 && level !== 'yes') { level = 'consider'; reasons.push('Eosinophils 100 to 299: consider with other risk factors.'); }
+  if (s.eos != null && s.eos < 100 && !s.aco) { level = 'no'; reasons.push('Eosinophils &lt; 100 cells/&micro;L: limited expected benefit.'); }
+  if (s.pneumoniaHx) {
+    if (level === 'yes') level = 'consider';
+    reasons.push('Recurrent pneumonia history: weigh ICS pneumonia risk.');
+  }
+  if (reasons.length === 0) reasons.push('No strong indication or contraindication identified.');
+  return { level, reasons };
+}
+
+function computeBODE(s) {
+  if (s.bmi == null || s.fev1pct == null || isNaN(s.fev1pct) || s.mmrc == null || s.walk == null) return null;
+  const bmiPts = (s.bmi <= 21) ? 1 : 0;
+  let oPts;
+  if (s.fev1pct >= 65) oPts = 0;
+  else if (s.fev1pct >= 50) oPts = 1;
+  else if (s.fev1pct >= 36) oPts = 2;
+  else oPts = 3;
+  let dPts;
+  if (s.mmrc <= 1) dPts = 0;
+  else if (s.mmrc === 2) dPts = 1;
+  else if (s.mmrc === 3) dPts = 2;
+  else dPts = 3;
+  let ePts;
+  if (s.walk >= 350) ePts = 0;
+  else if (s.walk >= 250) ePts = 1;
+  else if (s.walk >= 150) ePts = 2;
+  else ePts = 3;
+  const total = bmiPts + oPts + dPts + ePts;
+  let band;
+  if (total <= 2) band = 'Low (4-yr survival ~ 80%)';
+  else if (total <= 4) band = 'Medium (~ 70%)';
+  else if (total <= 6) band = 'High (~ 60%)';
+  else band = 'Very high (~ 20%)';
+  return { total, band };
+}
+
+function renderStage(s) {
+  const out = document.getElementById('stageOutput');
+  let html = '<h3>Stage</h3>';
+
+  // Obstruction
+  if (s.obstruction === false) {
+    html += '<div class="stage-card"><span class="label">Spirometry</span><div class="value">No obstruction</div><p class="reason">FEV<sub>1</sub>/FVC &ge; 0.70: airflow obstruction not confirmed. Consider alternative diagnoses.</p></div>';
+  }
+
+  // Spirometric stage
+  if (!isNaN(s.fev1pct)) {
+    html += '<div class="stage-card"><span class="label">GOLD spirometric stage</span>';
+    html += '<div class="value">GOLD ' + s.spiroStage + '</div>';
+    html += '<div class="gold-grid">';
+    [1,2,3,4].forEach(n => {
+      const labels = {1:'&ge; 80%',2:'50 to 79%',3:'30 to 49%',4:'&lt; 30%'};
+      html += '<div class="gcell' + (n === s.spiroStage ? ' is-active' : '') + '">GOLD ' + n + '<br>' + labels[n] + '</div>';
+    });
+    html += '</div></div>';
+  }
+
+  // ABE
+  if (s.abe) {
+    const reasons = [];
+    if (s.symptomsHigh) reasons.push('symptoms high (mMRC &ge; 2 or CAT &ge; 10)');
+    else reasons.push('symptoms low');
+    if (s.exacHigh) reasons.push((s.exacSev >= 1 ? '&ge; 1 hospitalisation' : '&ge; 2 moderate exacerbations'));
+    else reasons.push('low exacerbation history');
+    html += '<div class="stage-card is-' + s.abe + '"><span class="label">GOLD group</span><div class="value">Group ' + s.abe + '</div><p class="reason">' + reasons.join('; ') + '.</p></div>';
+  }
+
+  // ICS guidance
+  if (s.abe) {
+    const ics = s.icsRecommendation;
+    const verb = ics.level === 'yes' ? 'Add ICS' : (ics.level === 'consider' ? 'Consider ICS' : 'ICS unlikely to help');
+    html += '<div class="ics-banner ' + ics.level + '"><strong>' + verb + '</strong><br>' + ics.reasons.join(' ') + '</div>';
+  }
+
+  // BODE
+  if (s.bode) {
+    html += '<div class="stage-card"><span class="label">BODE index</span><div class="value">' + s.bode.total + ' / 10</div><p class="reason">' + s.bode.band + '. Use to support advance care planning conversations, not as a sole prognostic claim.</p></div>';
+  } else {
+    html += '<p class="reason" style="font-size: 0.82rem; color: var(--ink-mute);">BODE index appears once BMI, FEV<sub>1</sub>%, mMRC, and 6-minute walk are entered.</p>';
+  }
+
+  out.innerHTML = html;
+}
+
+function renderPlan(s) {
+  const out = document.getElementById('planOutput');
+  if (!s.abe) { out.innerHTML = '<p style="color: var(--ink-mute);">Plan will populate once stage is computed.</p>'; return; }
+
+  let starter = '';
+  let starterReason = '';
+  if (s.abe === 'A') {
+    starter = 'Single bronchodilator';
+    starterReason = 'LAMA preferred. SABA PRN can suffice for very low symptom burden.';
+  } else if (s.abe === 'B') {
+    starter = 'LABA + LAMA';
+    starterReason = 'Dual long-acting bronchodilation outperforms monotherapy on symptoms and exacerbation rate.';
+  } else if (s.abe === 'E') {
+    if (s.icsRecommendation.level === 'yes') {
+      starter = 'LABA + LAMA + ICS (triple)';
+      starterReason = 'Frequent exacerbator phenotype with ICS-responsive features.';
+    } else {
+      starter = 'LABA + LAMA';
+      starterReason = 'Frequent exacerbator without strong ICS indication. Add ICS only if eosinophils, ACO, or hospitalisation justify.';
+    }
+  }
+
+  let html = '';
+  html += '<div class="plan-grid">';
+  html += '<div class="plan-card"><h4><span class="pill">Group ' + s.abe + '</span>Pharmacological start</h4><p style="font-family: var(--font-d); font-size: 1.15rem; margin: 0.3rem 0 0.6rem;">' + starter + '</p><p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0;">' + starterReason + '</p></div>';
+
+  let icsBlurb;
+  if (s.icsRecommendation.level === 'yes') icsBlurb = 'Add an ICS to the regimen if not already present.';
+  else if (s.icsRecommendation.level === 'consider') icsBlurb = 'Borderline ICS case: discuss with patient, weigh pneumonia risk.';
+  else icsBlurb = 'ICS unlikely to add benefit; avoid unless new evidence emerges.';
+  html += '<div class="plan-card"><h4><span class="pill">ICS</span>' + (s.icsRecommendation.level === 'yes' ? 'Add' : (s.icsRecommendation.level === 'consider' ? 'Consider' : 'Avoid')) + '</h4><p style="font-size: 0.9rem; margin: 0.3rem 0 0;">' + icsBlurb + '</p><ul style="margin-top: 0.5rem;">' + s.icsRecommendation.reasons.map(r => '<li>' + r + '</li>').join('') + '</ul></div>';
+  html += '</div>';
+
+  out.innerHTML = html;
+}
+
+// ======================================================================
+// Form wiring
+// ======================================================================
+function readForm() {
+  const f = document.getElementById('stageForm');
+  const get = (id) => f.querySelector('#' + id) ? f.querySelector('#' + id).value : '';
+  const checked = (id) => f.querySelector('#' + id) ? f.querySelector('#' + id).checked : false;
+  const mmrcEl = f.querySelector('input[name="mmrc"]:checked');
+  return {
+    fev1pct: get('fev1pct'),
+    ratio: get('ratio'),
+    mmrc: mmrcEl ? mmrcEl.value : null,
+    cat: get('cat'),
+    exacMod: get('exacMod'),
+    exacSev: get('exacSev'),
+    eos: get('eos'),
+    aco: checked('aco'),
+    pneumoniaHx: checked('pneumoniaHx'),
+    smokerCurrent: checked('smokerCurrent'),
+    bmi: get('bmi'),
+    walk: get('walk')
+  };
+}
+
+function recompute() {
+  const input = readForm();
+  const stage = computeStage(input);
+  renderStage(stage);
+  renderPlan(stage);
+}
+
+document.getElementById('stageForm').addEventListener('input', recompute);
+document.getElementById('stageForm').addEventListener('change', recompute);
+
+// ======================================================================
+// Inhaler grid
+// ======================================================================
+function uniq(arr) { return Array.from(new Set(arr)).sort(); }
+
+function buildFilterOptions() {
+  const classSel = document.getElementById('filterClass');
+  const deviceSel = document.getElementById('filterDevice');
+  uniq(INHALERS.map(i => i.class)).forEach(c => {
+    const o = document.createElement('option'); o.value = c; o.textContent = c; classSel.appendChild(o);
+  });
+  uniq(INHALERS.map(i => i.device)).forEach(d => {
+    const o = document.createElement('option'); o.value = d; o.textContent = d; deviceSel.appendChild(o);
+  });
+}
+
+function renderInhalers() {
+  const c = document.getElementById('filterClass').value;
+  const f = document.getElementById('filterFunding').value;
+  const d = document.getElementById('filterDevice').value;
+  const fr = document.getElementById('filterFreq').value;
+  const grid = document.getElementById('inhalerGrid');
+  const filtered = INHALERS.filter(i => (!c || i.class === c) && (!f || i.funded === f) && (!d || i.device === d) && (!fr || i.frequency === fr));
+  document.getElementById('inhalerCount').textContent = filtered.length + ' of ' + INHALERS.length;
+  grid.innerHTML = filtered.map(card => {
+    const fundingLabel = card.funded === 'funded' ? 'Funded' : (card.funded === 'sa' ? 'SA' : 'Not funded');
+    return '<div class="inhaler-card">' +
+      '<div class="top">' +
+        '<div><div class="brand">' + card.brand + '</div><div class="generic">' + card.generic + '</div></div>' +
+        '<span class="funding ' + card.funded + '">' + fundingLabel + '</span>' +
+      '</div>' +
+      '<div class="meta"><span>' + card.class + '</span><span>' + card.device + '</span><span>' + card.frequency + '</span></div>' +
+      '<p class="dose">' + card.dose + '</p>' +
+      (card.sa ? '<p class="sa-note"><strong>SA:</strong> ' + card.sa + '</p>' : '') +
+      (card.notes ? '<p class="sa-note">' + card.notes + '</p>' : '') +
+      '<p class="last-verified">Last verified ' + card.last_verified + '</p>' +
+    '</div>';
+  }).join('');
+}
+
+['filterClass','filterFunding','filterDevice','filterFreq'].forEach(id => {
+  document.getElementById(id).addEventListener('change', renderInhalers);
+});
+document.getElementById('filterReset').addEventListener('click', () => {
+  ['filterClass','filterFunding','filterDevice','filterFreq'].forEach(id => document.getElementById(id).value = '');
+  renderInhalers();
+});
+
+buildFilterOptions();
+renderInhalers();
+
+// ======================================================================
+// Tab indicator
+// ======================================================================
+const tabLinks = document.querySelectorAll('.tool-tabs a');
+const sections = ['stage','plan','inhalers'].map(id => document.getElementById(id));
+function setActiveTab() {
+  const top = window.scrollY + 80;
+  let active = sections[0].id;
+  sections.forEach(s => { if (s.offsetTop <= top) active = s.id; });
+  tabLinks.forEach(l => l.classList.toggle('active', l.dataset.tab === active));
+}
+window.addEventListener('scroll', setActiveTab, { passive: true });
+setActiveTab();
+</script>
+
+</body>
+</html>

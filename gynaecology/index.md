@@ -5,7 +5,7 @@ specialty: Gynaecology
 description: Menstrual health, contraception, cervical screening and STIs, pelvic conditions, menopause, and vulval and vaginal disorders in NZ primary care - organised for panic-scan use.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><span class="here">Gynaecology</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><span class="here">Gynaecology</span></p>
 
 <div class="specialty-search-row">
   <input class="specialty-search" type="search" placeholder='Search this specialty - e.g. "MHT", "IUD", "lichen sclerosus"' aria-label="Search Gynaecology" />

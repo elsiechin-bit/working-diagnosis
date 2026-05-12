@@ -5,7 +5,7 @@ specialty: Respiratory
 description: Diagnosis of community-acquired pneumonia. CURB-65 severity assessment. Antibiotic selection. When to admit and when to manage in primary care.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Pneumonia</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Pneumonia</span></p>
 
 <section class="panic-strip">
 
@@ -170,7 +170,7 @@ Review at 48 hours if managed at home. Arrange follow-up CXR after 6 weeks for s
 - <a href="/handouts/respiratory-infection/">Respiratory infections: when to seek help</a>
 
 ## Field notes
-- <a href="/field-notes/pneumonia-diagnosis/">Pneumonia diagnosis in primary care</a>
-- <a href="/field-notes/pneumonia-management/">Managing CAP at home and in hospital</a>
+- <a href="/beyond-the-clinic/essays/pneumonia-diagnosis/">Pneumonia diagnosis in primary care</a>
+- <a href="/beyond-the-clinic/essays/pneumonia-management/">Managing CAP at home and in hospital</a>
 
 </aside>

@@ -1,0 +1,346 @@
+---
+permalink: /workshop/guidelines/atrial-fibrillation/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atrial Fibrillation - Working Diagnosis</title>
+<meta name="description" content="NZ vs AU vs ESC guideline comparison for atrial fibrillation management. Stroke risk stratification, DOAC access, rhythm vs rate control, and PHARMAC-funded anticoagulation landscape.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #F5F1E8;
+  --warm:       #EDE7D8;
+  --deep:       #E4DBC4;
+  --ink:        #1A1F1C;
+  --soft:       #3A4540;
+  --mute:       #6B7A75;
+  --rule:       #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --au-blue:    #1A5CAD;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px);
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+.masthead { border-bottom: 1px solid var(--rule); padding: 20px 32px; background: var(--paper); position: sticky; top: 0; z-index: 50; }
+.masthead-row { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.68rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.primary-nav a:hover { color: var(--green); }
+.primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
+
+.page-wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px 80px; }
+
+.page-header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.back-link { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); display: inline-block; margin-bottom: 24px; }
+.back-link:hover { color: var(--green); }
+.page-kicker { font-family: var(--font-m); font-size: 0.65rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
+.page-kicker::before { content: "❍ "; }
+.page-title { font-family: var(--font-d); font-weight: 500; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; }
+.page-title em { font-style: italic; color: var(--green); }
+.page-dek { font-family: var(--font-b); font-size: 1.05rem; color: var(--soft); max-width: 580px; line-height: 1.55; margin-bottom: 22px; }
+.page-meta { display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); }
+
+.div-summary { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin: 36px 0; }
+@media (max-width: 600px) { .div-summary { grid-template-columns: 1fr; } }
+.div-col { padding: 24px 28px; }
+.div-col:first-child { border-right: 1px solid var(--rule); }
+.div-col-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 7px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-agree { background: var(--green); }
+.dot-diverge { background: var(--ochre); }
+.div-list { list-style: none; padding: 0; }
+.div-list li { font-family: var(--font-b); font-size: 15px; color: var(--soft); padding: 6px 0; border-bottom: 1px solid rgba(217,209,189,.5); line-height: 1.4; }
+.div-list li:last-child { border-bottom: none; }
+
+.section-head { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 44px 0 16px; }
+.section-head::before { content: "❍ "; }
+
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--rule); margin-bottom: 44px; }
+.cmp-table { width: 100%; border-collapse: collapse; min-width: 660px; }
+.cmp-table thead th { padding: 13px 16px; text-align: left; font-family: var(--font-m); font-size: 0.56rem; letter-spacing: 1.8px; text-transform: uppercase; background: var(--warm); border-bottom: 1px solid var(--rule); }
+.cmp-table thead .th-domain { color: var(--mute); width: 148px; }
+.cmp-table thead .th-nz    { color: var(--green-deep); border-left: 3px solid var(--green); }
+.cmp-table thead .th-au    { color: var(--au-blue);    border-left: 3px solid var(--au-blue); }
+.cmp-table thead .th-int   { color: var(--soft);       border-left: 3px solid var(--rule); }
+.cmp-table tbody tr { border-top: 1px solid var(--rule); }
+.cmp-table tbody tr:nth-child(even) { background: rgba(237,231,216,.28); }
+.cmp-table tbody td { padding: 13px 16px; vertical-align: top; font-family: var(--font-b); font-size: 15px; line-height: 1.5; }
+.cmp-table .td-domain { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); line-height: 1.55; }
+.cmp-table .td-nz  { border-left: 3px solid rgba(47,107,92,.12); }
+.cmp-table .td-au  { border-left: 3px solid rgba(26,92,173,.12); }
+.cmp-table .td-int { border-left: 3px solid var(--rule); }
+.cmp-table tr.row-hi .td-nz { border-left-color: var(--ochre); background: rgba(184,113,79,.035); }
+
+.chip { display: inline-block; font-family: var(--font-m); font-size: 0.52rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 6px; margin-left: 5px; vertical-align: middle; border-radius: 2px; }
+.chip-funded     { background: rgba(47,107,92,.1);  color: var(--green-deep); }
+.chip-restricted { background: rgba(184,113,79,.12); color: var(--ochre); }
+.chip-nil        { background: rgba(140,30,30,.1);   color: #7A1C1C; }
+.chip-au         { background: rgba(26,92,173,.1);   color: var(--au-blue); }
+
+.nz-notes { background: rgba(237,231,216,.5); border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 28px 32px; margin-bottom: 32px; }
+.nz-notes-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); margin-bottom: 20px; }
+.nz-notes h3 { font-family: var(--font-d); font-weight: 500; font-size: 1rem; margin: 22px 0 8px; color: var(--ink); }
+.nz-notes h3:first-of-type { margin-top: 0; }
+.nz-notes p { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 8px; }
+.nz-notes ul { padding-left: 18px; margin-bottom: 8px; }
+.nz-notes li { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 5px; }
+
+.bottom-line { border: 1px solid var(--ink); border-left: 3px solid var(--ink); padding: 24px 28px; margin-bottom: 40px; }
+.bottom-line-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 16px; }
+.bottom-line ol { padding-left: 20px; }
+.bottom-line li { font-family: var(--font-b); font-size: 15.5px; color: var(--soft); line-height: 1.55; margin-bottom: 9px; }
+
+.sources { border-top: 1px solid var(--rule); padding-top: 28px; }
+.sources-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; }
+.sources ol { padding-left: 20px; }
+.sources li { font-family: var(--font-b); font-size: 13.5px; color: var(--mute); line-height: 1.6; margin-bottom: 6px; }
+
+.site-footer { border-top: 1px solid var(--rule); max-width: 1080px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-family: var(--font-m); font-size: 0.62rem; color: var(--mute); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Site navigation">
+      <a href="/lifestyle-prevention/">Lifestyle</a>
+      <a href="/msk/">MSK</a>
+      <a href="/paediatrics/">Paeds</a>
+      <a href="/geriatrics/">Geriatrics</a>
+      <a href="/gynaecology/">Gynae</a>
+      <a href="/dermatology/">Derm</a>
+      <a href="/mental-health/">Mental Health</a>
+      <a href="/infectious-disease/">Vaccines</a>
+      <a href="/infectious-disease/">Travel</a>
+      <a href="/clinician-tools/" class="is-current">Workbench</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <a href="/clinician-tools/updated-guidelines/" class="back-link">← Guideline Comparisons</a>
+    <p class="page-kicker">Cardiovascular</p>
+    <h1 class="page-title">Atrial fibrillation - <em>management</em></h1>
+    <p class="page-dek">Where NZ, Australian, and ESC guidelines align on stroke risk stratification, and where PHARMAC's funded DOAC landscape shapes real-world prescribing decisions.</p>
+    <div class="page-meta">
+      <span>Reviewed May 2026</span>
+      <span>BPAC NZ 2022</span>
+      <span>NHFA/CSANZ 2022</span>
+      <span>ESC 2020/2024</span>
+    </div>
+  </div>
+
+  <!-- Scope note -->
+  <p style="font-family: var(--font-m); font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); margin: 28px 0 -8px;">Scope: AF management in non-valvular AF in adults in primary care. Does not cover valvular AF, post-operative AF, or inpatient AF management.</p>
+
+  <!-- Agree / Diverge -->
+  <div class="div-summary">
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-agree"></span>Where they agree</p>
+      <ul class="div-list">
+        <li>CHA₂DS₂-VASc is the validated stroke risk tool across all guidelines</li>
+        <li>Anticoagulation (not antiplatelet) is the recommended stroke prevention strategy; aspirin should NOT be used as a substitute for anticoagulation in AF</li>
+        <li>All four DOACs (apixaban, dabigatran, rivaroxaban, edoxaban) are preferred over warfarin for non-valvular AF due to superior or equivalent efficacy with lower intracranial bleeding risk</li>
+        <li>Rate control is appropriate for most patients with persistent AF; a resting heart rate target of less than 110 bpm is acceptable in asymptomatic patients (RACE II)</li>
+        <li>Rhythm control and rate control are equivalent in terms of mortality and stroke outcomes for most patients (AFFIRM)</li>
+        <li>Anticoagulation should be continued long-term regardless of whether sinus rhythm is restored, due to recurrence risk</li>
+      </ul>
+    </div>
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-diverge"></span>Where they diverge</p>
+      <ul class="div-list">
+        <li>Stroke risk threshold for anticoagulation: ESC 2020 recommends anticoagulation for men with CHA₂DS₂-VASc ≥1 and women ≥2; NZ practice tends to align but with clinical nuance at low scores</li>
+        <li>PHARMAC funded DOACs: apixaban and dabigatran only; rivaroxaban and edoxaban are unfunded (~$80-120/month private cost)</li>
+        <li>Early rhythm control: EAST-AFNET 4 evidence supports rhythm control within 12 months of AF diagnosis for patients with CV risk; ESC 2024 gives this Class IIa weight; NZ capacity constraints limit early access</li>
+        <li>AF ablation: ESC recommends after one antiarrhythmic drug failure; NZ public sector has significant waiting lists; private access available</li>
+        <li>Integrated AF care (ABC pathway): ESC promotes structured model; no formal programme exists in most NZ practices</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="section-head">Comparison</p>
+  <div class="cmp-wrap">
+    <table class="cmp-table" aria-label="Guideline comparison: atrial fibrillation management">
+      <thead>
+        <tr>
+          <th class="th-domain">Domain</th>
+          <th class="th-nz">NZ - BPAC 2022</th>
+          <th class="th-au">AU - NHFA/CSANZ 2022</th>
+          <th class="th-int">International - ESC 2020/2024</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="td-domain">Stroke risk assessment</td>
+          <td class="td-nz">
+            CHA₂DS₂-VASc is the validated stroke risk tool. Anticoagulate if score ≥1 in men or ≥2 in women after discussion of bleeding risk. HAS-BLED used to assess bleeding risk-address modifiable factors (hypertension, INR lability, concurrent NSAIDs/antiplatelets, alcohol) rather than withhold anticoagulation. BPAC recommends shared decision-making; a score of 1 in a male patient warrants discussion but is not an absolute mandate.
+          </td>
+          <td class="td-au">
+            Same CHA₂DS₂-VASc thresholds as NZ. NHFA 2022: treat bleeding risk as modifiable, not a reason to withhold anticoagulation. HAS-BLED ≥3 = high bleeding risk; address modifiable factors before withholding therapy.
+          </td>
+          <td class="td-int">
+            CHA₂DS₂-VASc. Anticoagulate men ≥1, women ≥2 (Class IA). Do not use aspirin for stroke prevention (Class IIIA-net harm vs no therapy). ESC 2024 update reaffirms and strengthens recommendation for integrated care and integrated risk stratification.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">DOAC choice and funding</td>
+          <td class="td-nz">
+            <strong>Apixaban</strong> 5 mg BD (or 2.5 mg BD if ≥2 of: age ≥80, weight ≤60 kg, creatinine ≥133 µmol/L)-PHARMAC-funded, first practical choice. Lowest intracranial bleed rate of the class (ARISTOTLE), twice-daily dosing supports monitoring.<span class="chip chip-funded">PHARMAC funded</span><br><br>
+            <strong>Dabigatran</strong> 150 mg BD (or 110 mg BD if age ≥80 or increased bleeding risk)-PHARMAC-funded; avoid if eGFR less than 30. Higher GI bleed rates at 150 mg dose.<span class="chip chip-funded">PHARMAC funded</span><br><br>
+            Rivaroxaban and edoxaban are NOT funded; private prescription only (~$80-120/month). Warfarin remains an option for prosthetic heart valves, mitral stenosis, or patients who cannot afford or tolerate DOACs.
+          </td>
+          <td class="td-au">
+            All four DOACs PBS-listed. Apixaban and rivaroxaban are most commonly prescribed. Rivaroxaban once-daily dosing may improve adherence. NHFA 2022 gives no strong preference between DOACs; choice based on renal function, dosing, and patient preference.<span class="chip chip-au">PBS funded all</span>
+          </td>
+          <td class="td-int">
+            All four DOACs recommended over warfarin for non-valvular AF (Class IA). Apixaban and dabigatran had lower intracranial bleeding vs warfarin (ARISTOTLE, RE-LY). Rivaroxaban and edoxaban once-daily formulations may support adherence. Choice guided by renal function, adherence factors, and patient values. Warfarin only when DOACs contraindicated.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Rate control targets</td>
+          <td class="td-nz">
+            Lenient rate control (heart rate less than 110 bpm at rest) acceptable for asymptomatic patients with preserved LV function (RACE II). Beta-blockers (metoprolol, bisoprolol) or non-dihydropyridine CCBs (diltiazem, verapamil) first-line. Avoid verapamil/diltiazem in HFrEF (negative inotropic effect). Digoxin for refractory rate control or HF with AF-useful but less effective during exercise. All first-line agents PHARMAC-funded.<span class="chip chip-funded">Funded</span>
+          </td>
+          <td class="td-au">
+            Consistent with NZ. NHFA 2022 endorses lenient rate control target. Bisoprolol preferred beta-blocker for AF with HF.
+          </td>
+          <td class="td-int">
+            Heart rate less than 110 bpm resting (lenient) is standard unless symptoms persist, in which case stricter control (less than 80 bpm) is tried. Beta-blocker or CCB first-line. Digoxin second-line or add-on.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Rhythm control and early AF management</td>
+          <td class="td-nz">
+            Cardioversion (electrical or pharmacological) for symptomatic AF. Flecainide or sotalol (if no structural heart disease) for maintaining sinus rhythm-both PHARMAC-funded. Amiodarone for structural heart disease or antiarrhythmic failure-effective but significant toxicity profile (thyroid, liver, lung, ocular); monitor 6-monthly.<span class="chip chip-funded">Funded</span><br><br>
+            EAST-AFNET 4 evidence supports early rhythm control for AF less than 12 months with cardiovascular risk factors. Refer to cardiology for rhythm control discussion rather than defaulting to rate control alone. Ablation available; refer to cardiologist.
+          </td>
+          <td class="td-au">
+            Consistent approach. Flecainide, sotalol, amiodarone used. Early rhythm control principles acknowledged in NHFA 2022.
+          </td>
+          <td class="td-int">
+            Class I recommendation for rhythm control discussion in symptomatic AF. EAST-AFNET 4 elevates early rhythm control to Class IIa for patients diagnosed less than 12 months with CV risk factors. Ablation Class I for symptomatic AF after ≥1 antiarrhythmic drug failure; Class IIa for selected patients as first-line rhythm control.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Cardiovascular risk factor management (ABC pathway)</td>
+          <td class="td-nz">
+            Hypertension treatment is the most important modifiable stroke risk factor and AF trigger. Weight loss (significant AF burden reduction with ≥10% weight loss documented). OSA screening and treatment reduces AF recurrence-consider OSA screening in all AF patients. Alcohol reduction (dose-dependent AF trigger). Exercise (moderate; excessive endurance exercise increases AF risk). BPAC 2022 highlights this holistic approach.
+          </td>
+          <td class="td-au">
+            NHFA 2022: explicit focus on upstream risk factor management as part of AF strategy. Structured lifestyle intervention-same evidence base as NZ and international.
+          </td>
+          <td class="td-int">
+            ESC ABC pathway: A (Anticoagulation) + B (Better symptom control) + C (Cardiovascular risk factor and comorbidity management). Sleep apnoea, hypertension, obesity, diabetes, and alcohol are all modifiable AF triggers and risk factors. Structured weight management reduces AF recurrence by up to 50% in obese patients (LEGACY trial).
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">AF in special populations</td>
+          <td class="td-nz">
+            CKD: DOACs can be used down to eGFR 15 (apixaban) or 30 (dabigatran); warfarin has uncertain benefit-risk in advanced CKD.<br><br>
+            Elderly: apixaban preferred (lower GI bleed risk); apply dose-reduction criteria if age ≥80 or weight ≤60 kg or creatinine ≥133 µmol/L.<br><br>
+            Post-cardioversion: anticoagulate for ≥4 weeks after cardioversion regardless of CHA₂DS₂-VASc (thrombus risk during re-synchronisation). Pre-cardioversion: anticoagulated ≥3 weeks, or TOE to exclude LAA thrombus if cardioversion urgent.
+          </td>
+          <td class="td-au">
+            Consistent with NZ approach.
+          </td>
+          <td class="td-int">
+            CKD: apixaban has most data down to eGFR 15 (AXAFA-AFNET 5). Elderly: apply dose reduction criteria. Post-cardioversion: ≥4 weeks anticoagulation mandatory; continue long-term if CHA₂DS₂-VASc indicates.
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-head">NZ clinical context</p>
+  <div class="nz-notes">
+    <p class="nz-notes-label">PHARMAC, funded DOACs, and the practical prescribing landscape</p>
+
+    <h3>The funded DOAC pair and first-line choice</h3>
+    <p>The funded DOAC pair in NZ is apixaban and dabigatran. For most patients, apixaban 5 mg twice daily is the practical first-line choice: it has the lowest intracranial bleed rate of the class (ARISTOTLE), its dose reduction criteria (any 2 of: age ≥80, weight ≤60 kg, creatinine ≥133 µmol/L) are straightforward to apply, and twice-daily dosing aids adherence monitoring. Dabigatran is a reasonable alternative but has higher GI bleed rates at the 150 mg dose and should be avoided if eGFR is less than 30.</p>
+
+    <h3>Rivaroxaban and edoxaban: the cost conversation</h3>
+    <p>Rivaroxaban and edoxaban are not funded. If a patient strongly prefers once-daily dosing and can afford it, rivaroxaban is an option-but this requires an explicit discussion of cost (~$80-120/month private), not an assumption. Do not prescribe an unfunded DOAC without discussing the cost barrier. Generic warfarin remains very cheap (~$3/month) and is legitimate for patients who cannot afford DOACs and decline unfunded alternatives.</p>
+
+    <h3>Warfarin: indications and caveats</h3>
+    <p>Warfarin still has a role in AF with mechanical prosthetic heart valves, mitral stenosis, or triple-positive antiphospholipid syndrome. For patients who cannot afford DOACs, warfarin is a cost-effective option if careful INR monitoring is available. If warfarin is used, target INR 2-3 with at least 70% time-in-range. Do not default to warfarin as a cost measure without checking PHARMAC funding status for DOAC special authority criteria.</p>
+
+    <h3>Aspirin has no role in AF stroke prevention</h3>
+    <p>There is no role for aspirin as stroke prevention in AF. The net clinical benefit of aspirin in AF is inferior to anticoagulation and in many risk profiles is net harmful (similar bleeding risk, much lower efficacy). If you see a patient with AF on aspirin alone for stroke prevention, this should prompt an anticoagulation discussion. Do not start aspirin as a "bridge" while waiting for anticoagulation to take effect; anticoagulation works rapidly in AF.</p>
+
+    <h3>Early rhythm control: EAST-AFNET 4 changes the conversation</h3>
+    <p>EAST-AFNET 4 changed the calculus for newly diagnosed AF with cardiovascular risk. For a patient aged 65 presenting with newly diagnosed AF and hypertension (CHA₂DS₂-VASc ≥2), the evidence now supports early referral for rhythm control discussion-not because rate control doesn't work, but because early rhythm control reduces cardiovascular events. This doesn't mean all patients need ablation; it means the conversation should happen early rather than defaulting to rate control alone. Refer to cardiology promptly for eligible patients rather than assuming rate control at diagnosis.</p>
+
+    <h3>HAS-BLED and modifiable bleeding risk</h3>
+    <p>A high HAS-BLED score (≥3) indicates high bleeding risk but should never be an automatic reason to withhold anticoagulation. Instead, address the modifiable factors: tight BP control (the most modifiable), avoiding NSAIDs and concurrent antiplatelets where possible, and alcohol moderation. For a patient with HAS-BLED of 4 or 5 due to hypertension and excessive alcohol, aggressive BP control and alcohol reduction may drop the score and reduce absolute bleeding risk while maintaining anticoagulation. Document the discussion of bleeding risk and the rationale for anticoagulation.</p>
+
+    <h3>OSA screening in AF: a practical gap</h3>
+    <p>Obstructive sleep apnoea is a modifiable risk factor for AF recurrence and progression. Screening with STOP-BANG or Epworth Sleepiness Scale should be offered to all newly diagnosed AF patients. If OSA is suspected, refer for assessment and CPAP if appropriate. Treating OSA reduces AF burden and may reduce the need for antiarrhythmic escalation. Most primary care practices do not systematically screen for OSA in AF; this is an evidence-practice gap worth closing.</p>
+  </div>
+
+  <p class="section-head">Bottom line for NZ practice</p>
+  <div class="bottom-line">
+    <p class="bottom-line-label">What this means in the consulting room</p>
+    <ol>
+      <li>Start anticoagulation for CHA₂DS₂-VASc ≥1 in men, ≥2 in women, unless the patient declines after informed discussion. Do not substitute aspirin, and do not delay while waiting for anticoagulation to "load".</li>
+      <li>Apixaban is the practical first-line DOAC in NZ (funded, lowest intracranial bleed rate, clear dose-reduction criteria). Apply dose-reduction criteria at every review-a patient who didn't qualify at 70 may qualify at 80.</li>
+      <li>Never withhold anticoagulation because of a high HAS-BLED score alone. Address modifiable bleeding risk factors (hypertension, concurrent antiplatelets or NSAIDs, excess alcohol) and reassess.</li>
+      <li>For newly diagnosed AF in a patient with cardiovascular risk factors, refer to cardiology for rhythm control discussion. EAST-AFNET 4 gives rhythm control a stronger evidence base than it had five years ago, and waiting times in NZ public cardiology are long.</li>
+      <li>Screen all AF patients for obstructive sleep apnoea (STOP-BANG or Epworth). Treating OSA reduces AF recurrence and may reduce the need for escalating antiarrhythmic therapy.</li>
+    </ol>
+  </div>
+
+  <div class="sources">
+    <p class="sources-label">Sources</p>
+    <ol>
+      <li>Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation. Eur Heart J. 2021;42(5):373-498.</li>
+      <li>National Heart Foundation of Australia and the Cardiac Society of Australia and New Zealand. Australian Clinical Guidelines for the Diagnosis and Management of Atrial Fibrillation 2018. Heart Lung Circ. 2018;27(10):1209-1266.</li>
+      <li>BPAC NZ. Atrial fibrillation in primary care: anticoagulation and rate control. Best Practice Journal. 2022. Available at bpac.org.nz.</li>
+      <li>Kirchhof P, Camm AJ, Goette A, et al. Early rhythm-control therapy in patients with atrial fibrillation (EAST-AFNET 4). N Engl J Med. 2020;383(14):1305-1316.</li>
+      <li>Granger CB, Alexander JH, McMurray JJV, et al. Apixaban versus warfarin in patients with atrial fibrillation (ARISTOTLE). N Engl J Med. 2011;365(11):981-992.</li>
+      <li>Connolly SJ, Ezekowitz MD, Yusuf S, et al. Dabigatran versus warfarin in patients with atrial fibrillation (RE-LY). N Engl J Med. 2009;361(12):1139-1151.</li>
+      <li>Van Gelder IC, Groenveld HF, Crijns HJ, et al. Lenient versus strict rate control in patients with atrial fibrillation (RACE II). N Engl J Med. 2010;362(15):1363-1373.</li>
+    </ol>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <span class="footer-brand">Working Diagnosis · workingdiagnosis.xyz</span>
+</footer>
+
+</body>
+</html>

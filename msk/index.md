@@ -5,7 +5,7 @@ specialty: MSK
 description: Spine, upper limb, lower limb, inflammatory and bone conditions across the lifespan in NZ primary care - organised for panic-scan use.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><span class="here">Musculoskeletal</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><span class="here">Musculoskeletal</span></p>
 
 <div class="specialty-search-row">
   <input class="specialty-search" type="search" placeholder='Search this specialty - e.g. "cauda equina", "ACC", "FRAX"' aria-label="Search Musculoskeletal" />

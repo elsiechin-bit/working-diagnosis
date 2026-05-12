@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: Evaluation of palpitations. Benign versus dangerous rhythms. Role of ECG, Holter monitoring, and echocardiography. When to reassure and when to refer.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Palpitations</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Palpitations</span></p>
 
 <section class="panic-strip">
 
@@ -136,7 +136,7 @@ Review ECG interpretation with patient. Counsel on triggers. If monitoring is ar
 - <a href="/handouts/heart-rhythm/">Understanding your heart rhythm</a>
 
 ## Field notes
-- <a href="/field-notes/benign-ectopics/">Benign ectopic beats: reassurance in practice</a>
-- <a href="/field-notes/palpitation-triggers/">Common palpitation triggers and management</a>
+- <a href="/beyond-the-clinic/essays/benign-ectopics/">Benign ectopic beats: reassurance in practice</a>
+- <a href="/beyond-the-clinic/essays/palpitation-triggers/">Common palpitation triggers and management</a>
 
 </aside>

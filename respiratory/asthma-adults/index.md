@@ -5,7 +5,7 @@ specialty: Respiratory
 description: Diagnosis and classification of asthma. Step-wise treatment approach. ICS/LABA therapy. Asthma control and action plans.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Asthma in Adults</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Asthma in Adults</span></p>
 
 <section class="panic-strip">
 
@@ -152,7 +152,7 @@ Review at 1–2 weeks after initiating or changing treatment. Once stable, revie
 - <a href="/handouts/asthma-action/">Asthma action plans: when to seek help</a>
 
 ## Field notes
-- <a href="/field-notes/asthma-inhaler-technique/">Asthma inhaler technique: common errors</a>
-- <a href="/field-notes/asthma-triggers/">Managing asthma triggers at home and work</a>
+- <a href="/beyond-the-clinic/essays/asthma-inhaler-technique/">Asthma inhaler technique: common errors</a>
+- <a href="/beyond-the-clinic/essays/asthma-triggers/">Managing asthma triggers at home and work</a>
 
 </aside>

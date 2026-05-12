@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: Management after acute myocardial infarction. Medication optimization. Cardiac rehabilitation. Risk stratification. When to intensify treatment.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Post-MI Follow-up</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Post-MI Follow-up</span></p>
 
 <section class="panic-strip">
 
@@ -96,7 +96,7 @@ Recurrent angina, persistent dyspnoea or orthopnoea, syncope, palpitations, new 
 - <a href="/handouts/heart-medications/">Heart medications explained</a>
 
 ## Field notes
-- <a href="/field-notes/post-mi-adherence/">Post-MI medication adherence: common barriers</a>
-- <a href="/field-notes/post-mi-depression/">Psychological recovery after MI</a>
+- <a href="/beyond-the-clinic/essays/post-mi-adherence/">Post-MI medication adherence: common barriers</a>
+- <a href="/beyond-the-clinic/essays/post-mi-depression/">Psychological recovery after MI</a>
 
 </aside>

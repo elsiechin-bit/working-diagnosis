@@ -5,7 +5,7 @@ specialty: Respiratory
 description: Post-COVID-19 syndrome. Persistent symptoms after acute infection. Fatigue, dyspnoea, cognitive dysfunction. Rehabilitation and holistic management.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Long COVID</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Long COVID</span></p>
 
 <section class="panic-strip">
 
@@ -153,7 +153,7 @@ Review at 4–6 weeks after diagnosis to assess response to pacing and support. 
 - <a href="/handouts/pacing/">Pacing and energy management after illness</a>
 
 ## Field notes
-- <a href="/field-notes/post-exertional-malaise/">Post-exertional malaise: recognising and managing</a>
-- <a href="/field-notes/long-covid-rehabilitation/">Supporting long COVID patients in recovery</a>
+- <a href="/beyond-the-clinic/essays/post-exertional-malaise/">Post-exertional malaise: recognising and managing</a>
+- <a href="/beyond-the-clinic/essays/long-covid-rehabilitation/">Supporting long COVID patients in recovery</a>
 
 </aside>

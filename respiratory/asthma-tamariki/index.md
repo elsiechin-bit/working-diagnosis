@@ -5,7 +5,7 @@ specialty: Respiratory
 description: Asthma diagnosis in children. Intermittent and persistent asthma management. Age-appropriate devices and education.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Asthma in Tamariki</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Asthma in Tamariki</span></p>
 
 <section class="panic-strip">
 
@@ -147,7 +147,7 @@ Most children with asthma have excellent control with low-dose ICS. Many childre
 - <a href="/handouts/asthma-school/">Managing asthma at school and sports</a>
 
 ## Field notes
-- <a href="/field-notes/inhaler-technique-children/">Inhaler technique in children: teaching carers</a>
-- <a href="/field-notes/viral-wheeze-asthma/">Viral-induced wheeze versus asthma</a>
+- <a href="/beyond-the-clinic/essays/inhaler-technique-children/">Inhaler technique in children: teaching carers</a>
+- <a href="/beyond-the-clinic/essays/viral-wheeze-asthma/">Viral-induced wheeze versus asthma</a>
 
 </aside>

@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: Diagnosis and stroke risk assessment (CHA₂DS₂-VASc score). Anticoagulation decisions. Rate control and rhythm control. When to refer.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Atrial Fibrillation</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Atrial Fibrillation</span></p>
 
 <section class="panic-strip">
 
@@ -115,7 +115,7 @@ Arrange cardiology review if rhythm control is considered, if symptomatic despit
 - <a href="/handouts/anticoagulation/">Anticoagulation to prevent stroke</a>
 
 ## Field notes
-- <a href="/field-notes/af-stroke-risk/">CHA₂DS₂-VASc in practice</a>
-- <a href="/field-notes/af-in-older-people/">Atrial fibrillation in older age</a>
+- <a href="/beyond-the-clinic/essays/af-stroke-risk/">CHA₂DS₂-VASc in practice</a>
+- <a href="/beyond-the-clinic/essays/af-in-older-people/">Atrial fibrillation in older age</a>
 
 </aside>

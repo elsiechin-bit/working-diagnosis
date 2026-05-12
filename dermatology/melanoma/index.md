@@ -8,7 +8,7 @@ description: Recognising and managing melanoma and non-melanoma skin cancer in N
 <div class="topic-with-aside">
 <div class="topic-body">
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/dermatology/">Dermatology</a><span class="topic-trail-sep">·</span><span class="here">Melanoma &amp; skin cancer</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/dermatology/">Dermatology</a><span class="topic-trail-sep">·</span><span class="here">Melanoma &amp; skin cancer</span></p>
 
 <div class="panic-strip">
   <div class="panic-tile dont-miss">

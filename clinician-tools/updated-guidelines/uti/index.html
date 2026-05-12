@@ -1,0 +1,331 @@
+---
+permalink: /workshop/guidelines/uti/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uncomplicated UTI  -  Working Diagnosis</title>
+<meta name="description" content="NZ vs AU vs NICE/EAU guideline comparison for uncomplicated lower urinary tract infection. First-line antibiotics, fosfomycin access, trimethoprim resistance, and NZ PHARMAC context.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #F5F1E8;
+  --warm:       #EDE7D8;
+  --deep:       #E4DBC4;
+  --ink:        #1A1F1C;
+  --soft:       #3A4540;
+  --mute:       #6B7A75;
+  --rule:       #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --au-blue:    #1A5CAD;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px);
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+.masthead { border-bottom: 1px solid var(--rule); padding: 20px 32px; background: var(--paper); position: sticky; top: 0; z-index: 50; }
+.masthead-row { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.68rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.primary-nav a:hover { color: var(--green); }
+.primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
+
+.page-wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px 80px; }
+
+.page-header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.back-link { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); display: inline-block; margin-bottom: 24px; }
+.back-link:hover { color: var(--green); }
+.page-kicker { font-family: var(--font-m); font-size: 0.65rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
+.page-kicker::before { content: "❍ "; }
+.page-title { font-family: var(--font-d); font-weight: 500; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; }
+.page-title em { font-style: italic; color: var(--green); }
+.page-dek { font-family: var(--font-b); font-size: 1.05rem; color: var(--soft); max-width: 580px; line-height: 1.55; margin-bottom: 22px; }
+.page-meta { display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); }
+
+.div-summary { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin: 36px 0; }
+@media (max-width: 600px) { .div-summary { grid-template-columns: 1fr; } }
+.div-col { padding: 24px 28px; }
+.div-col:first-child { border-right: 1px solid var(--rule); }
+.div-col-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 7px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-agree { background: var(--green); }
+.dot-diverge { background: var(--ochre); }
+.div-list { list-style: none; padding: 0; }
+.div-list li { font-family: var(--font-b); font-size: 15px; color: var(--soft); padding: 6px 0; border-bottom: 1px solid rgba(217,209,189,.5); line-height: 1.4; }
+.div-list li:last-child { border-bottom: none; }
+
+.section-head { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 44px 0 16px; }
+.section-head::before { content: "❍ "; }
+
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--rule); margin-bottom: 44px; }
+.cmp-table { width: 100%; border-collapse: collapse; min-width: 660px; }
+.cmp-table thead th { padding: 13px 16px; text-align: left; font-family: var(--font-m); font-size: 0.56rem; letter-spacing: 1.8px; text-transform: uppercase; background: var(--warm); border-bottom: 1px solid var(--rule); }
+.cmp-table thead .th-domain { color: var(--mute); width: 148px; }
+.cmp-table thead .th-nz    { color: var(--green-deep); border-left: 3px solid var(--green); }
+.cmp-table thead .th-au    { color: var(--au-blue);    border-left: 3px solid var(--au-blue); }
+.cmp-table thead .th-int   { color: var(--soft);       border-left: 3px solid var(--rule); }
+.cmp-table tbody tr { border-top: 1px solid var(--rule); }
+.cmp-table tbody tr:nth-child(even) { background: rgba(237,231,216,.28); }
+.cmp-table tbody td { padding: 13px 16px; vertical-align: top; font-family: var(--font-b); font-size: 15px; line-height: 1.5; }
+.cmp-table .td-domain { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); line-height: 1.55; }
+.cmp-table .td-nz  { border-left: 3px solid rgba(47,107,92,.12); }
+.cmp-table .td-au  { border-left: 3px solid rgba(26,92,173,.12); }
+.cmp-table .td-int { border-left: 3px solid var(--rule); }
+.cmp-table tr.row-hi .td-nz { border-left-color: var(--ochre); background: rgba(184,113,79,.035); }
+
+.chip { display: inline-block; font-family: var(--font-m); font-size: 0.52rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 6px; margin-left: 5px; vertical-align: middle; border-radius: 2px; }
+.chip-funded     { background: rgba(47,107,92,.1);  color: var(--green-deep); }
+.chip-restricted { background: rgba(184,113,79,.12); color: var(--ochre); }
+.chip-nil        { background: rgba(140,30,30,.1);   color: #7A1C1C; }
+.chip-au         { background: rgba(26,92,173,.1);   color: var(--au-blue); }
+
+.nz-notes { background: rgba(237,231,216,.5); border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 28px 32px; margin-bottom: 32px; }
+.nz-notes-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); margin-bottom: 20px; }
+.nz-notes h3 { font-family: var(--font-d); font-weight: 500; font-size: 1rem; margin: 22px 0 8px; color: var(--ink); }
+.nz-notes h3:first-of-type { margin-top: 0; }
+.nz-notes p { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 8px; }
+.nz-notes ul { padding-left: 18px; margin-bottom: 8px; }
+.nz-notes li { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 5px; }
+
+.bottom-line { border: 1px solid var(--ink); border-left: 3px solid var(--ink); padding: 24px 28px; margin-bottom: 40px; }
+.bottom-line-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 16px; }
+.bottom-line ol { padding-left: 20px; }
+.bottom-line li { font-family: var(--font-b); font-size: 15.5px; color: var(--soft); line-height: 1.55; margin-bottom: 9px; }
+
+.sources { border-top: 1px solid var(--rule); padding-top: 28px; }
+.sources-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; }
+.sources ol { padding-left: 20px; }
+.sources li { font-family: var(--font-b); font-size: 13.5px; color: var(--mute); line-height: 1.6; margin-bottom: 6px; }
+
+.site-footer { border-top: 1px solid var(--rule); max-width: 1080px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-family: var(--font-m); font-size: 0.62rem; color: var(--mute); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Site navigation">
+      <a href="/lifestyle-prevention/">Lifestyle</a>
+      <a href="/msk/">MSK</a>
+      <a href="/paediatrics/">Paeds</a>
+      <a href="/geriatrics/">Geriatrics</a>
+      <a href="/gynaecology/">Gynae</a>
+      <a href="/dermatology/">Derm</a>
+      <a href="/mental-health/">Mental Health</a>
+      <a href="/infectious-disease/">Vaccines</a>
+      <a href="/infectious-disease/">Travel</a>
+      <a href="/clinician-tools/" class="is-current">Workbench</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <a href="/clinician-tools/updated-guidelines/" class="back-link">← Guideline Comparisons</a>
+    <p class="page-kicker">Infection</p>
+    <h1 class="page-title">Uncomplicated UTI - <em>antimicrobial choice</em></h1>
+    <p class="page-dek">How NZ, Australian, and international guidelines differ on first-line antibiotic selection for lower urinary tract infection in non-pregnant women - and what the absence of fosfomycin means for NZ practice.</p>
+    <div class="page-meta">
+      <span>Reviewed May 2026</span>
+      <span>BPAC NZ 2023</span>
+      <span>RACGP / Therapeutic Guidelines AU</span>
+      <span>NICE NG109 2022</span>
+      <span>EAU 2023</span>
+    </div>
+  </div>
+
+  <!-- Scope note -->
+  <p style="font-family: var(--font-m); font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); margin: 28px 0 -8px;">Scope: acute, community-acquired lower UTI in non-pregnant women with no known structural or functional abnormality and no indwelling catheter.</p>
+
+  <!-- Agree / Diverge -->
+  <div class="div-summary">
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-agree"></span>Where they agree</p>
+      <ul class="div-list">
+        <li>Clinical diagnosis acceptable with ≥2 typical symptoms; culture not required before starting treatment</li>
+        <li>Do not treat asymptomatic bacteriuria in non-pregnant adults</li>
+        <li>Fluoroquinolones not appropriate for uncomplicated cystitis</li>
+        <li>Send urine culture for men, pregnancy, atypical presentation, or treatment failure</li>
+        <li>Dipstick supports but does not replace clinical judgement</li>
+      </ul>
+    </div>
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-diverge"></span>Where they diverge</p>
+      <ul class="div-list">
+        <li>Fosfomycin: EAU preferred first-line; available in AU; not registered or funded in NZ</li>
+        <li>Pivmecillinam: EAU and NICE recommend; not available in NZ or routinely in AU</li>
+        <li>Nitrofurantoin duration: 3 days (NICE) vs 5 days (NZ, AU, EAU)</li>
+        <li>Local NZ trimethoprim resistance requires patient-specific risk assessment before prescribing</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="section-head">Comparison</p>
+  <div class="cmp-wrap">
+    <table class="cmp-table" aria-label="Guideline comparison: uncomplicated UTI antimicrobial choice">
+      <thead>
+        <tr>
+          <th class="th-domain">Domain</th>
+          <th class="th-nz">NZ  -  BPAC 2023</th>
+          <th class="th-au">AU  -  RACGP / Therapeutic Guidelines</th>
+          <th class="th-int">International  -  NICE NG109 / EAU 2023</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="td-domain">When to treat empirically</td>
+          <td class="td-nz">Women with <strong>≥2 typical symptoms</strong> (dysuria, frequency, urgency, haematuria, suprapubic pain). Clinical diagnosis without dipstick or culture required.</td>
+          <td class="td-au">Similar. Clinical diagnosis acceptable with typical symptoms. No requirement for dipstick or culture before initiating treatment in uncomplicated cases.</td>
+          <td class="td-int">NICE: ≥1 lower urinary tract symptom in women. EAU: ≥2 symptoms. Both allow empirical treatment without prior culture in uncomplicated presentations.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">First-line antibiotic</td>
+          <td class="td-nz">
+            <strong>Trimethoprim</strong> 300mg once daily for 3 days<span class="chip chip-funded">Funded</span><br><br>
+            OR <strong>nitrofurantoin MR</strong> 100mg twice daily for 5 days (preferred if trimethoprim resistance risk)<span class="chip chip-funded">Funded</span>
+          </td>
+          <td class="td-au">
+            <strong>Nitrofurantoin MR</strong> 100mg twice daily for 5 days (often preferred)<span class="chip chip-au">PBS</span><br><br>
+            OR <strong>trimethoprim</strong> 300mg once daily for 3 days<span class="chip chip-au">PBS</span><br><br>
+            OR <strong>fosfomycin</strong> 3g single dose<span class="chip chip-au">PBS</span>
+          </td>
+          <td class="td-int">
+            NICE: <strong>nitrofurantoin MR</strong> 100mg twice daily for 3 days (if eGFR ≥45)<br><br>
+            EAU: <strong>fosfomycin</strong> 3g single dose (preferred), or <strong>pivmecillinam</strong>, or <strong>nitrofurantoin MR</strong> 100mg twice daily for 5 days
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Fosfomycin</td>
+          <td class="td-nz">Not registered in NZ. Cannot prescribe.<span class="chip chip-nil">Not available</span></td>
+          <td class="td-au">PBS-listed. Useful where trimethoprim or nitrofurantoin resistance is likely, or for single-dose convenience and adherence.<span class="chip chip-au">PBS</span></td>
+          <td class="td-int">NICE: second-line if nitrofurantoin and trimethoprim not appropriate. EAU: <strong>preferred first-line</strong> due to single-dose convenience and resistance preservation. 3g single dose orally.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Pivmecillinam</td>
+          <td class="td-nz">Not available in NZ.<span class="chip chip-nil">Not available</span></td>
+          <td class="td-au">Not routinely available in Australia.<span class="chip chip-nil">Not available</span></td>
+          <td class="td-int">EAU: <strong>recommended first-line</strong>; 200mg three times daily for 5 days (or 400mg twice daily for 3 days). NICE: alternative option. Widely available in Scandinavia and UK.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Nitrofurantoin duration</td>
+          <td class="td-nz">MR formulation: <strong>5 days</strong> (100mg twice daily). Standard formulation: 7 days (50mg four times daily). MR preferred for adherence.</td>
+          <td class="td-au">MR formulation: <strong>5 days</strong> (100mg twice daily). Aligned with NZ.</td>
+          <td class="td-int">NICE: <strong>3 days</strong> (MR 100mg twice daily)  -  shorter than NZ/AU. EAU: 5 days (MR) or 7 days (standard). NICE 3-day course has adequate evidence for uncomplicated cystitis.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Fluoroquinolones (ciprofloxacin)</td>
+          <td class="td-nz">Not recommended for uncomplicated cystitis. Reserve for pyelonephritis, complicated UTI, or where culture confirms susceptibility and other options are unavailable.</td>
+          <td class="td-au">Not recommended first-line. Avoid for uncomplicated cystitis. Use only for complicated UTI or culture-directed treatment.</td>
+          <td class="td-int">Explicitly <strong>not recommended</strong> by both NICE and EAU. Fluoroquinolones for uncomplicated UTI contribute to resistance selection and C. difficile risk. EAU: "should not be used" for uncomplicated cystitis.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Urine culture (MSU)</td>
+          <td class="td-nz">Recommended for: men, pregnancy, children, treatment failure, recurrent UTI (≥3/year), atypical or uncertain symptoms, recent urological procedure or catheter, immunocompromised.</td>
+          <td class="td-au">Similar indications. Also consider if local trimethoprim resistance rates are high or patient has recent healthcare exposure.</td>
+          <td class="td-int">Similar. EAU: consider culture if empirical choice may be inappropriate. NICE: offer dipstick to guide management; culture if dipstick negative but symptoms persist, or if atypical presentation.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Recurrent UTI (≥2-3 per year)</td>
+          <td class="td-nz">Patient-initiated self-start therapy (trimethoprim or nitrofurantoin); low-dose nocturnal prophylaxis; post-coital prophylaxis. Non-antibiotic options: D-mannose, cranberry. Review underlying risk factors.</td>
+          <td class="td-au">Similar approach. Patient-initiated therapy or continuous low-dose prophylaxis. Consider specialist referral for ≥3 per year or if structural cause suspected.</td>
+          <td class="td-int">Post-coital or continuous low-dose antibiotic prophylaxis. EAU strongly emphasises non-antibiotic strategies: D-mannose, immunostimulation (OM-89), intravaginal oestrogen in post-menopausal women. Vaginal probiotics under investigation.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-head">NZ clinical context</p>
+  <div class="nz-notes">
+    <p class="nz-notes-label">PHARMAC funding and population-specific considerations</p>
+
+    <h3>What is and is not available in NZ</h3>
+    <p>Two agents dominate NZ primary care prescribing for uncomplicated UTI because they are the only fully funded first-line options:</p>
+    <ul>
+      <li><strong>Trimethoprim</strong> 300mg: fully funded, no access restrictions.</li>
+      <li><strong>Nitrofurantoin</strong> (standard and MR formulations): fully funded, no access restrictions.</li>
+      <li><strong>Fosfomycin</strong>: not registered in NZ. Do not follow EAU first-line recommendations directly - this option does not exist in NZ practice.</li>
+      <li><strong>Pivmecillinam</strong>: not available in NZ.</li>
+      <li><strong>Cefalexin</strong>: funded and available, but not recommended as first-line for uncomplicated cystitis - reserve for pregnancy or where trimethoprim and nitrofurantoin are both contraindicated.</li>
+    </ul>
+
+    <h3>When to avoid trimethoprim</h3>
+    <p>Trimethoprim resistance in NZ E. coli isolates has been rising and varies by region and patient population. BPAC 2023 recommends avoiding trimethoprim as first-line if any of the following apply:<sup>1</sup></p>
+    <ul>
+      <li>Trimethoprim used in the past 3 months</li>
+      <li>Travel overseas in the past 6 months (resistance rates are substantially higher in parts of Asia, Africa, and Southern Europe)</li>
+      <li>Recurrent UTI (≥3 episodes in 12 months)</li>
+      <li>Recent hospitalisation or urological intervention in the past 3 months</li>
+    </ul>
+    <p>If any of these apply, use nitrofurantoin as first-line and send an MSU.</p>
+
+    <h3>Nitrofurantoin and renal function</h3>
+    <p>Nitrofurantoin is contraindicated if eGFR is below 45 mL/min/1.73m² - it loses urinary efficacy and the risk of systemic accumulation increases. Check eGFR before prescribing, particularly in older patients and in Maori and Pacific peoples, who have a higher burden of chronic kidney disease. If eGFR &lt;45 and trimethoprim is also contraindicated, cefalexin is the pragmatic alternative; send an MSU and tailor treatment to sensitivities.</p>
+
+    <h3>Men with urinary symptoms</h3>
+    <p>UTI is not uncomplicated in men. Always send an MSU before treating, treat for at least 7 days, and consider prostatitis (which requires a longer course - typically 4 weeks of trimethoprim or a fluoroquinolone). Do not apply the above first-line regimens directly to men with urinary symptoms.</p>
+  </div>
+
+  <p class="section-head">Bottom line for NZ practice</p>
+  <div class="bottom-line">
+    <p class="bottom-line-label">What this means in the consulting room</p>
+    <ol>
+      <li>Women with ≥2 classic symptoms: treat empirically without waiting for a dipstick or MSU result. The diagnosis is clinical.</li>
+      <li>Choose between trimethoprim and nitrofurantoin based on resistance risk. If no resistance risk factors: trimethoprim 300mg once daily for 3 days is simple and effective. If any resistance risk factor applies: nitrofurantoin MR 100mg twice daily for 5 days.</li>
+      <li>Before prescribing nitrofurantoin: check eGFR. Avoid if &lt;45 mL/min/1.73m². This matters particularly in older patients and in Maori and Pacific patients with underlying CKD.</li>
+      <li>Fosfomycin and pivmecillinam are not available in NZ. The EAU first-line algorithm does not translate directly to NZ practice. Work with trimethoprim and nitrofurantoin.</li>
+      <li>Avoid ciprofloxacin for uncomplicated cystitis. All three guidelines agree on this. If a patient expects it, this is worth a brief explanation - fluoroquinolones for lower UTI cause more harm than benefit at a population level.</li>
+    </ol>
+  </div>
+
+  <div class="sources">
+    <p class="sources-label">Sources</p>
+    <ol>
+      <li>BPAC NZ. Diagnosis and treatment of urinary tract infections in adults. 2023. Available from: bpac.org.nz</li>
+      <li>Royal Australian College of General Practitioners. Urinary tract infections. Available from: racgp.org.au. [Supplemented by Therapeutic Guidelines: Antibiotic. eTG complete. Melbourne: Therapeutic Guidelines Ltd; 2023.]</li>
+      <li>National Institute for Health and Care Excellence. Urinary tract infection (lower) - antimicrobial prescribing (NG109). London: NICE; 2018 (updated 2022). Available from: nice.org.uk</li>
+      <li>Bonkat G, Bartoletti R, Bruyere F, et al. EAU Guidelines on Urological Infections. Arnhem: European Association of Urology; 2023. Available from: uroweb.org</li>
+      <li>PHARMAC. New Zealand Pharmaceutical Schedule. Available from: pharmac.govt.nz [accessed 2024].</li>
+    </ol>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <span class="footer-brand">Working Diagnosis · workingdiagnosis.xyz</span>
+</footer>
+
+</body>
+</html>

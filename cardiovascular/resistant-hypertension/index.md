@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: Blood pressure not at target on three antihypertensives. Exclude secondary causes and poor adherence. Fourth-agent options. When to refer.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Resistant Hypertension</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Resistant Hypertension</span></p>
 
 <section class="panic-strip">
 
@@ -93,6 +93,6 @@ Recheck BP at 4 weeks after any adjustment. Aim for <130/80 mmHg; some data sugg
 - <a href="/handouts/blood-pressure-monitoring/">Home blood pressure monitoring</a>
 
 ## Field notes
-- <a href="/field-notes/resistant-hypertension-workup/">Resistant hypertension: systematic workup</a>
+- <a href="/beyond-the-clinic/essays/resistant-hypertension-workup/">Resistant hypertension: systematic workup</a>
 
 </aside>

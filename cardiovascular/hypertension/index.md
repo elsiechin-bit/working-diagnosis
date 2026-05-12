@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: BP target, first-line drug choice in NZ, when to refer, and the conversation that prevents the next callback.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Hypertension</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Hypertension</span></p>
 
 <div class="panic-strip">
   <div class="panic-tile dont-miss">

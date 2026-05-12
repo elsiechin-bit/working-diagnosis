@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: LDL targets by risk category. Statin choice and intensity. NZ funded options. When to add ezetimibe or PCSK9. Monitoring and adherence.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Lipid Targets</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Lipid Targets</span></p>
 
 <section class="panic-strip">
 
@@ -80,6 +80,6 @@ Statin adherence is crucial. Discuss once-daily dosing, side-effect expectations
 - <a href="/handouts/cholesterol-and-statins/">Understanding cholesterol and statins</a>
 
 ## Field notes
-- <a href="/field-notes/statin-conversations/">Statin conversations: side effects and adherence</a>
+- <a href="/beyond-the-clinic/essays/statin-conversations/">Statin conversations: side effects and adherence</a>
 
 </aside>

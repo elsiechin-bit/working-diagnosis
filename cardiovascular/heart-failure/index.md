@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: Diagnosis of heart failure with reduced and preserved ejection fraction. ACE/ARB, beta-blockers, diuretics, and SGLT2 inhibitors. Acute decompensation and referral criteria.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Heart Failure</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Heart Failure</span></p>
 
 <section class="panic-strip">
 
@@ -137,7 +137,7 @@ Acute dyspnoea, syncope, chest pain, tachycardia >110 bpm, hypotension, or confu
 - <a href="/handouts/heart-medications/">Heart medications explained</a>
 
 ## Field notes
-- <a href="/field-notes/hf-medication-titration/">Heart failure: titrating medications safely</a>
-- <a href="/field-notes/hf-in-older-people/">Heart failure in older age</a>
+- <a href="/beyond-the-clinic/essays/hf-medication-titration/">Heart failure: titrating medications safely</a>
+- <a href="/beyond-the-clinic/essays/hf-in-older-people/">Heart failure in older age</a>
 
 </aside>

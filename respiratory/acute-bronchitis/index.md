@@ -5,7 +5,7 @@ specialty: Respiratory
 description: Cough from lower airway inflammation, typically post-viral. Diagnosis is clinical. Antibiotics not beneficial for viral bronchitis. Self-limiting within 2–3 weeks.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Acute Bronchitis</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Acute Bronchitis</span></p>
 
 <section class="panic-strip">
 
@@ -118,7 +118,7 @@ Consider spirometry, chest X-ray, or pertussis serology as appropriate.
 - <a href="/handouts/cough-management/">Understanding cough and when to worry</a>
 
 ## Field notes
-- <a href="/field-notes/viral-respiratory-infections/">Viral respiratory infections: reassurance in practice</a>
-- <a href="/field-notes/antibiotic-stewardship/">Antibiotic stewardship in respiratory infections</a>
+- <a href="/beyond-the-clinic/essays/viral-respiratory-infections/">Viral respiratory infections: reassurance in practice</a>
+- <a href="/beyond-the-clinic/essays/antibiotic-stewardship/">Antibiotic stewardship in respiratory infections</a>
 
 </aside>

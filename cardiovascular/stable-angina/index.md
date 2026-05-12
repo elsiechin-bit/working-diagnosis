@@ -5,7 +5,7 @@ specialty: Cardiovascular
 description: Predictable chest pain on exertion. Diagnosis and referral. Medical management with beta-blockers and nitrates. When to investigate and revascularise.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Stable Angina</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/cardiovascular/">Cardiovascular</a><span class="topic-trail-sep">·</span><span class="here">Stable Angina</span></p>
 
 <section class="panic-strip">
 
@@ -89,7 +89,7 @@ Angiography and revascularisation (PCI or CABG) are considered if angina is not 
 - <a href="/handouts/heart-medications/">Heart medications: beta-blockers and nitrates</a>
 
 ## Field notes
-- <a href="/field-notes/angina-diagnosis/">Diagnosing angina in primary care</a>
-- <a href="/field-notes/angina-referral/">When to refer angina for cardiology assessment</a>
+- <a href="/beyond-the-clinic/essays/angina-diagnosis/">Diagnosing angina in primary care</a>
+- <a href="/beyond-the-clinic/essays/angina-referral/">When to refer angina for cardiology assessment</a>
 
 </aside>

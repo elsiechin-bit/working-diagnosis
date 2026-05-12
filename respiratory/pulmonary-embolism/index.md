@@ -5,7 +5,7 @@ specialty: Respiratory
 description: Diagnosis of pulmonary embolism. Probability assessment (Wells score). D-dimer and CTPA criteria. When to admit and anticoagulation.
 ---
 
-<p class="topic-trail"><a href="/library/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Pulmonary Embolism</span></p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/respiratory/">Respiratory</a><span class="topic-trail-sep">·</span><span class="here">Pulmonary Embolism</span></p>
 
 <section class="panic-strip">
 
@@ -147,7 +147,7 @@ Once discharged on anticoagulation, review at 1–2 weeks to ensure tolerance an
 - <a href="/handouts/anticoagulation/">Understanding blood thinners</a>
 
 ## Field notes
-- <a href="/field-notes/pe-diagnosis/">Diagnosing PE in primary care</a>
-- <a href="/field-notes/post-thrombotic-syndrome/">Managing post-thrombotic syndrome</a>
+- <a href="/beyond-the-clinic/essays/pe-diagnosis/">Diagnosing PE in primary care</a>
+- <a href="/beyond-the-clinic/essays/post-thrombotic-syndrome/">Managing post-thrombotic syndrome</a>
 
 </aside>
