@@ -1,6 +1,6 @@
 ---
 title: Other Resources
-layout: base
+layout: base.njk
 permalink: /beyond-the-clinic/other-resources/
 description: A working GP's curated shelf — podcasts, books, journals, and websites worth your time.
 ---
@@ -86,4 +86,4 @@ description: A working GP's curated shelf — podcasts, books, journals, and web
 [choosingwisely.org.nz](https://choosingwisely.org.nz)
 
 **UpToDate**  -  Requires a subscription (or hospital access). Comprehensive but US-centric  -  always cross-reference funded options and NZ guidelines.
-[uptodate.com
+[uptodate.com](https://uptodate.
