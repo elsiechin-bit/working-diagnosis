@@ -5,32 +5,9 @@ pageType: handout
 description: A growing library of patient-facing handouts for NZ patients  -  free to print or email. Organised by clinical area.
 ---
 
-<p>These handouts are grounded in NZ guidelines, and free to print, email, or work through with patients during a consult. Items marked <span class="hl-soon">coming soon</span> are planned but not yet written  -  until then, the usual pages I use: <a href="https://healthify.nz/">Healthify NZ</a> · <a href="https://bpac.org.nz/patients.aspx">BPAC patient information</a> · <a href="https://www.kidshealth.org.nz/">KidsHealth NZ</a> · <a href="https://www.mymedicines.nz/cdhb">MyMedicines NZ</a> · <a href="https://healthed.govt.nz/">HealthEd</a> · <a href="https://www.medsafe.govt.nz/consumers/educational-material.asp">Medsafe consumer information</a>.</p>
+<p>These handouts are grounded in NZ guidelines, and free to print, email, or work through with patients during a consult. Items marked <span class="hl-soon">coming soon</span> are planned but not yet written. Until then, the usual pages I use are listed below:</p>
 
-<nav aria-label="Jump to section">
-  <ul class="handouts-jump">
-    <li><a href="/lifestyle-prevention/">Lifestyle</a></li>
-    <li><a href="#respiratory">Respiratory</a></li>
-    <li><a href="#cardiovascular">Cardiovascular</a></li>
-    <li><a href="#diabetes-endocrine">Diabetes &amp; Endocrine</a></li>
-    <li><a href="#gastro">Gastroenterology</a></li>
-    <li><a href="/msk/">MSK</a></li>
-    <li><a href="/mental-health/">Mental Health</a></li>
-    <li><a href="/dermatology/">Dermatology</a></li>
-    <li><a href="/gynaecology/">Gynae</a></li>
-    <li><a href="#mens-health">Men's Health</a></li>
-    <li><a href="#paeds">Paeds</a></li>
-    <li><a href="/geriatrics/">Geriatrics</a></li>
-    <li><a href="#ent">ENT</a></li>
-    <li><a href="#eyes">Eyes</a></li>
-    <li><a href="#neurology">Neurology</a></li>
-    <li><a href="#infections">Infections</a></li>
-    <li><a href="/infectious-disease/">Vaccines</a></li>
-    <li><a href="/infectious-disease/">Travel</a></li>
-    <li><a href="#nutrition">Nutrition</a></li>
-    <li><a href="#general">General Practice</a></li>
-  </ul>
-</nav>
+<p><a href="https://healthify.nz/">Healthify NZ</a> · <a href="https://bpac.org.nz/patients.aspx">BPAC patient information</a> · <a href="https://www.kidshealth.org.nz/">KidsHealth NZ</a> · <a href="https://www.mymedicines.nz/cdhb">MyMedicines NZ</a> · <a href="https://healthed.govt.nz/">HealthEd</a> · <a href="https://www.medsafe.govt.nz/consumers/educational-material.asp">Medsafe consumer information</a></p>
 
 <div class="handout-section" id="lifestyle">
   <h2>Lifestyle</h2>

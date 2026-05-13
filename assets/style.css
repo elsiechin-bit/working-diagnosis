@@ -668,12 +668,13 @@ a:hover { color: var(--green); }
 .specialty-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 @media (max-width: 720px) { .specialty-grid { grid-template-columns: 1fr; } }
 
-.specialty-card { background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 4px; padding: 14px 16px; transition: border-color 140ms, transform 140ms; display: block; color: inherit; }
+.specialty-card { background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 4px; padding: 20px 16px; transition: border-color 140ms, transform 140ms; display: flex; flex-direction: column; align-items: center; justify-content: center; color: inherit; }
 .specialty-card:hover { border-color: var(--green); transform: translateY(-1px); }
-.specialty-card__name { font-family: var(--serif-display); font-weight: 700; font-size: 16px; color: var(--green-deep); margin: 0 0 3px; letter-spacing: -0.01em; }
+.specialty-card__icon { font-size: 24px; margin: 0 0 10px; line-height: 1; }
+.specialty-card__name { font-family: var(--serif-display); font-weight: 700; font-size: 16px; color: var(--green-deep); margin: 0 0 8px; letter-spacing: -0.01em; text-align: center; }
 .specialty-card:hover .specialty-card__name { color: var(--green); }
 .specialty-card__line { font-family: var(--serif-body); font-size: 14px; line-height: 1.4; color: var(--ink-soft); margin: 0; }
-.specialty-card__count { font-family: var(--sans-body); font-size: 13px; color: var(--ink-mute); margin: 8px 0 0; }
+.specialty-card__count { font-family: var(--sans-body); font-size: 13px; color: var(--ink-mute); margin: 0; text-align: center; }
 .specialty-card.is-soon { opacity: 0.55; pointer-events: none; }
 .specialty-card.is-soon::after { content: "coming soon"; display: inline-block; margin-top: 4px; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
 

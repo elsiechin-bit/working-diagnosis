@@ -81,6 +81,16 @@ Future maintainability matters more than short-term cleverness.
 - If git operations fail with lock file errors (.git/index.lock, etc.), clean up locally with: Remove-Item -Force .git/*.lock
 - Sandbox environment has permission restrictions - lock file cleanup must occur on the user's Windows machine
 
+## Windows Workflow: Post-Action Cleanup
+
+After each working session with the AI agent, run this PowerShell command in the project folder to clear any stuck git processes and lock files:
+
+```powershell
+Get-Process | Where-Object {$_.ProcessName -like "*git*"} | Stop-Process -Force; Remove-Item -Force .git/*.lock -ErrorAction SilentlyContinue
+```
+
+Copy and paste as-is — this safely terminates any background git processes and clears lock files without error output if they don't exist.
+
 ## Site Structure & Naming
 
 - Top level: specialty folders (cardiovascular, dermatology, endocrinology, etc.) - one per medical domain
@@ -136,4 +146,3 @@ Future maintainability matters more than short-term cleverness.
 - Maintain font consistency across layouts (serif-body for specific text elements)
 - Card design patterns use gap spacing and rounded corners
 - All hardcoded values that appear in multiple places should be extracted to variables
-
