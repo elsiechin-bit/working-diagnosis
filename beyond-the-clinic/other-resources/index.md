@@ -86,4 +86,4 @@ description: A working GP's curated shelf — podcasts, books, journals, and web
 [choosingwisely.org.nz](https://choosingwisely.org.nz)
 
 **UpToDate**  -  Requires a subscription (or hospital access). Comprehensive but US-centric  -  always cross-reference funded options and NZ guidelines.
-[uptodate.com](https://uptodate.
+[uptodate.com](https://uptodate.com)

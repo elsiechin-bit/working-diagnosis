@@ -32,6 +32,6 @@
     { "label": "Older Person's Health", "url": "/geriatrics/", "row": 15 },
     { "label": "Oncology & Palliative Care", "url": "/oncology-palliative/", "row": 16 },
     { "label": "Mental Health", "url": "/mental-health/", "row": 17, "inMasthead": true, "group": "specialty" },
-    { "label": "About", "url": "/about/", "row": 7, "inMasthead": true, "group": "utility" }
+    { "label": "About", "url": "/about/", "row": 18, "inMasthead": true, "group": "utility" }
   ]
 }
