@@ -89,7 +89,7 @@ a:hover { color: var(--green); }
 }
 .page-wrapper main { flex: 1; min-width: 0; padding: 0 0 48px; }
 
-.wrap { max-width: 1080px; padding: 0 24px; }
+.wrap { max-width: 1080px; padding: 0 24px; margin: 0 auto; }
 
 /* Page TOC (left column on topic pages) */
 .page-toc { width: 176px; flex-shrink: 0; order: -1; }
@@ -932,11 +932,11 @@ button.handout-pdf-link { margin: 0; cursor: pointer; -webkit-appearance: none; 
 /* ------------------------------------------------------------------ */
 
 .site-footer { border-top: 1px solid var(--rule); padding: 32px 24px 40px; margin-top: 64px; max-width: 1060px; margin-left: auto; margin-right: auto; }
-.footer-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+.footer-top { display: flex; align-items: baseline; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
 .footer-brand-name { font-family: var(--serif-display); font-weight: 600; font-size: 0.95rem; color: var(--ink); }
 .footer-sep { color: var(--rule); }
 .footer-tagline { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.05em; color: var(--ink-mute); }
-.footer-disclosures { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin-bottom: 4px; }
+.footer-disclosures { display: flex; justify-content: center; gap: 40px; margin-bottom: 4px; flex-wrap: wrap; }
 .footer-item { border-top: 1px solid var(--rule); padding: 10px 0; }
 .footer-item summary { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); cursor: pointer; list-style: none; display: flex; align-items: center; gap: 6px; user-select: none; }
 .footer-item summary::-webkit-details-marker { display: none; }
@@ -948,7 +948,7 @@ button.handout-pdf-link { margin: 0; cursor: pointer; -webkit-appearance: none; 
 .footer-copy { font-size: 13px; color: var(--ink-mute); margin: 8px 0 0; }
 .footer-junk { font-size: 1em; opacity: 0.2; margin-left: 6px; display: inline-block; transition: opacity 0.25s; }
 .footer-junk:hover { opacity: 0.9; }
-@media (max-width: 600px) { .footer-disclosures { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .footer-disclosures { flex-direction: column; align-items: center; } }
 
 .kofi-widget-overlay { position: fixed !important; bottom: 24px !important; right: 24px !important; z-index: 9999; }
 
