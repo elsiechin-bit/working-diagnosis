@@ -670,11 +670,51 @@ a:hover { color: var(--green); }
 .specialty-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 @media (max-width: 720px) { .specialty-grid { grid-template-columns: 1fr; } }
 
-.specialty-card { background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 4px; padding: 20px 16px; transition: border-color 140ms, transform 140ms; display: flex; flex-direction: column; align-items: center; justify-content: center; color: inherit; }
+.specialty-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 20px 16px;
+  transition: border-color 140ms, transform 140ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  position: relative;
+  border-top: 4px solid var(--green-deep);
+}
+.specialty-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 4px 4px 0 0;
+  background: currentColor;
+}
+.specialty-card[data-specialty="cardiovascular"] { color: #8B5A3C; border-top-color: #8B5A3C; }
+.specialty-card[data-specialty="respiratory"] { color: #406A87; border-top-color: #406A87; }
+.specialty-card[data-specialty="endocrinology"] { color: #2F6B5C; border-top-color: #2F6B5C; }
+.specialty-card[data-specialty="gastroenterology"] { color: #B8714F; border-top-color: #B8714F; }
+.specialty-card[data-specialty="musculoskeletal"] { color: #6F7E3F; border-top-color: #6F7E3F; }
+.specialty-card[data-specialty="dermatology"] { color: #5C9582; border-top-color: #5C9582; }
+.specialty-card[data-specialty="psychiatry"] { color: #A0AD7C; border-top-color: #A0AD7C; }
+.specialty-card[data-specialty="gynaecology"] { color: #8B5A3C; border-top-color: #8B5A3C; }
+.specialty-card[data-specialty="lifestyle"] { color: #2F6B5C; border-top-color: #2F6B5C; }
+.specialty-card[data-specialty="paediatrics"] { color: #5C9582; border-top-color: #5C9582; }
+.specialty-card[data-specialty="general-practice"] { color: #406A87; border-top-color: #406A87; }
+.specialty-card[data-specialty="geriatrics"] { color: #6F7E3F; border-top-color: #6F7E3F; }
+.specialty-card[data-specialty="mens-health"] { color: #B8714F; border-top-color: #B8714F; }
+.specialty-card[data-specialty="ent"] { color: #406A87; border-top-color: #406A87; }
+.specialty-card[data-specialty="eyes"] { color: #A0AD7C; border-top-color: #A0AD7C; }
+.specialty-card[data-specialty="neurology"] { color: #2F6B5C; border-top-color: #2F6B5C; }
+.specialty-card[data-specialty="infectious-disease"] { color: #8B5A3C; border-top-color: #8B5A3C; }
+.specialty-card[data-specialty="nutrition"] { color: #B8714F; border-top-color: #B8714F; }
 .specialty-card:hover { border-color: var(--green); transform: translateY(-1px); }
-.specialty-card__icon { font-size: 24px; margin: 0 0 10px; line-height: 1; }
-.specialty-card__name { font-family: var(--serif-display); font-weight: 700; font-size: 16px; color: var(--green-deep); margin: 0 0 8px; letter-spacing: -0.01em; text-align: center; }
-.specialty-card:hover .specialty-card__name { color: var(--green); }
+.specialty-card__name { font-family: var(--serif-display); font-weight: 700; font-size: 16px; color: inherit; margin: 0 0 8px; letter-spacing: -0.01em; text-align: center; }
+.specialty-card:hover .specialty-card__name { color: var(--green-deep); }
 .specialty-card__line { font-family: var(--serif-body); font-size: 14px; line-height: 1.4; color: var(--ink-soft); margin: 0; }
 .specialty-card__count { font-family: var(--sans-body); font-size: 13px; color: var(--ink-mute); margin: 0; text-align: center; }
 .specialty-card.is-soon { opacity: 0.55; pointer-events: none; }
