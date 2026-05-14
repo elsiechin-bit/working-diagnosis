@@ -60,6 +60,30 @@ The project should remain understandable after months away from the codebase.
 
 Future maintainability matters more than short-term cleverness.
 
+## GitHub Actions & Deployment
+
+**Branch consistency is critical for deployment automation.**
+
+The repository uses `master` as the default branch (not `main`). The GitHub Actions workflow in `.github/workflows/deploy.yml` must always be configured to trigger on the `master` branch:
+
+```yaml
+on:
+  push:
+    branches: [master]
+```
+
+If the workflow ever references `[main]` instead of `[master]`, commits to `master` will not trigger builds and the site will not deploy. This must be caught and corrected immediately.
+
+**Verification checklist after any branch-related changes:**
+- Confirm `.github/workflows/deploy.yml` line 5 reads `branches: [master]`
+- Confirm `git branch` shows `* master` as the active branch
+- After pushing, verify GitHub Actions runs within 1 minute on the Actions tab
+
+**If workflows stop triggering:**
+1. Check the workflow file branch configuration
+2. Verify the push went to `master` (not accidentally to a different branch)
+3. Check GitHub Actions logs for any configuration errors
+
 ## File Organization
 
 - Drafts folder: Development artifacts, prototypes, experiments - not for version control
