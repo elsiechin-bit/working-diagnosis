@@ -943,7 +943,8 @@ button.handout-pdf-link { margin: 0; cursor: pointer; -webkit-appearance: none; 
 .footer-item summary::after { content: "\203A"; font-size: 0.85em; color: var(--ink-mute); display: inline-block; transition: transform 180ms ease; }
 .footer-item[open] summary::after { transform: rotate(90deg); }
 .footer-item summary:hover { color: var(--green); }
-.footer-item p { font-size: 13px; line-height: 1.65; color: var(--ink-mute); margin: 10px 0 4px; }
+.footer-item p { font-size: 13px; line-height: 1.65; color: var(--ink-mute); margin: 0 0 4px; transition: margin 200ms ease; }
+.footer-item[open] p { margin: 10px 0 4px; }
 .footer-contact { font-size: 13px; color: var(--ink-mute); border-top: 1px solid var(--rule); padding-top: 14px; margin: 0; }
 .footer-copy { font-size: 13px; color: var(--ink-mute); margin: 8px 0 0; }
 .footer-junk { font-size: 1em; opacity: 0.2; margin-left: 6px; display: inline-block; transition: opacity 0.25s; }
