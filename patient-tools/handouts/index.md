@@ -51,7 +51,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 </div>
 
 <div class="handout-section" id="respiratory">
-  <p class="handout-section-label">❍ Respiratory</p>
   <h2>Respiratory</h2>
   <ul class="handout-list">
     <li><a href="/handouts/common-cold/">Upper respiratory infection (common cold)  -  self-care at home</a></li>
@@ -75,7 +74,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 </div>
 
 <div class="handout-section" id="cardiovascular">
-  <p class="handout-section-label">❍ Cardiovascular</p>
   <h2>Cardiovascular</h2>
   <ul class="handout-list">
     <li><a href="/handouts/high-blood-pressure/">High blood pressure (hypertension)  -  what the numbers mean</a></li>
@@ -101,7 +99,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 </div>
 
 <div class="handout-section" id="diabetes-endocrine">
-  <p class="handout-section-label">❍ Diabetes &amp; Endocrine</p>
   <h2>Diabetes &amp; Endocrine</h2>
   <ul class="handout-list">
     <li><a href="/handouts/type-2-diabetes/">Type 2 diabetes  -  understanding your diagnosis</a></li>
@@ -126,7 +123,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 </div>
 
 <div class="handout-section" id="gastro">
-  <p class="handout-section-label">❍ Gastroenterology</p>
   <h2>Gastroenterology</h2>
   <ul class="handout-list">
     <li><a href="/handouts/reflux-gord/">Reflux (GORD)  -  symptoms, triggers, and treatment</a></li>
@@ -270,7 +266,6 @@ description: A growing library of patient-facing handouts for NZ patients  -  fr
 </div>
 
 <div class="handout-section" id="general">
-  <p class="handout-section-label">❍ General Practice</p>
   <h2>General Practice &amp; the NZ Health System</h2>
   <ul class="handout-list">
     <li><a href="/handouts/nz-health-system/">The New Zealand health system  -  a guide for patients</a></li>
