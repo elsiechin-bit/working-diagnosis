@@ -776,7 +776,7 @@ a:hover { color: var(--green); }
 .handouts-jump { list-style: none; padding: 0 0 24px; margin: 0 0 20px; display: flex; flex-wrap: wrap; gap: 8px 20px; border-bottom: 1px solid var(--rule); }
 .handouts-jump a { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); }
 .handouts-jump a:hover { color: var(--green); }
-.handout-section { margin: 0 0 52px; float: right; max-width: 65%; }
+.handout-section { margin: 0 0 52px; }
 .handout-section-label { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 2px; text-transform: uppercase; color: var(--ochre); margin: 0 0 6px; }
 .handout-section-label a { color: inherit; }
 .handout-section-label a:hover { color: var(--green); }
