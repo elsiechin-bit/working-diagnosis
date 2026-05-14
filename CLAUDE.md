@@ -64,24 +64,24 @@ Future maintainability matters more than short-term cleverness.
 
 **Branch consistency is critical for deployment automation.**
 
-The repository uses `master` as the default branch (not `main`). The GitHub Actions workflow in `.github/workflows/deploy.yml` must always be configured to trigger on the `master` branch:
+The repository uses `main` as the default branch. The GitHub Actions workflow in `.github/workflows/deploy.yml` must always be configured to trigger on the `main` branch:
 
 ```yaml
 on:
   push:
-    branches: [master]
+    branches: [main]
 ```
 
-If the workflow ever references `[main]` instead of `[master]`, commits to `master` will not trigger builds and the site will not deploy. This must be caught and corrected immediately.
+If the workflow ever references `[master]` instead of `[main]`, commits to `main` will not trigger builds and the site will not deploy. This must be caught and corrected immediately.
 
 **Verification checklist after any branch-related changes:**
-- Confirm `.github/workflows/deploy.yml` line 5 reads `branches: [master]`
-- Confirm `git branch` shows `* master` as the active branch
+- Confirm `.github/workflows/deploy.yml` line 5 reads `branches: [main]`
+- Confirm `git branch` shows `* main` as the active branch
 - After pushing, verify GitHub Actions runs within 1 minute on the Actions tab
 
 **If workflows stop triggering:**
 1. Check the workflow file branch configuration
-2. Verify the push went to `master` (not accidentally to a different branch)
+2. Verify the push went to `main` (not accidentally to a different branch)
 3. Check GitHub Actions logs for any configuration errors
 
 ## File Organization
