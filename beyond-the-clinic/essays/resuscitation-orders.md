@@ -2,14 +2,24 @@
 title: Resuscitation orders in general practice
 dek: The clinical reality of CPR, the legal architecture of DNACPR in NZ, the community documentation problem, ceiling-of-care frameworks, and where the common errors are.
 date: 2026-04-07
-category: Consultation Practice
-summary:
-  - "Realistic CPR survival rates are context-dependent: 15-20% in unselected in-hospital arrests, below 5% in advanced cancer or frailty; communicating these honestly is the prerequisite for a useful resuscitation conversation."
-  - "In New Zealand, a DNACPR decision is a clinical decision: family consultation is good practice but family members cannot veto a clinician's determination that CPR would be futile, and an Enduring Power of Attorney for Personal Care and Welfare cannot compel treatment."
-  - "DNACPR is a ceiling-of-care decision, not a withdrawal of care -- the framing matters for patients, families, and clinical teams."
-  - "The community DNACPR gap is significant: a document in the hospital file does not protect a patient at home; the PCCS form is an imperfect workaround and New Zealand has no national POLST equivalent."
-  - "Do not allow the CPR question to consume the entire advance care planning conversation -- it is one ceiling-of-care decision within a broader goals-of-care discussion."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, ethics-medicolegal, consultation-practice]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Resuscitation orders in general practice</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Realistic CPR survival rates are context-dependent: 15-20% in unselected in-hospital arrests, below 5% in advanced cancer or frailty; communicating these honestly is the prerequisite for a useful resuscitation conversation.</li>
+<li>In New Zealand, a DNACPR decision is a clinical decision: family consultation is good practice but family members cannot veto a clinician's determination that CPR would be futile, and an Enduring Power of Attorney for Personal Care and Welfare cannot compel treatment.</li>
+<li>DNACPR is a ceiling-of-care decision, not a withdrawal of care; the framing matters for patients, families, and clinical teams.</li>
+<li>The community DNACPR gap is significant: a document in the hospital file does not protect a patient at home; the PCCS form is an imperfect workaround and New Zealand has no national POLST equivalent.</li>
+<li>Do not allow the CPR question to consume the entire advance care planning conversation; it is one ceiling-of-care decision within a broader goals-of-care discussion.</li>
+</ul>
+</div>
 
 There is a version of this conversation that goes badly in a specific way. A patient  -  or, more often, a family  -  hears "Do Not Attempt Resuscitation" and understands it to mean "we are stopping treating them." They hear it as withdrawal. They understand it as abandonment. They push back, sometimes forcefully, because they love the person and they don't understand why the doctor is writing an order to let them die.
 

@@ -1,16 +1,25 @@
 ---
 title: Rongoā Māori, mātauranga Māori, and the GP consult
 dek: Beyond cultural competence  -  a working introduction to the historical record, the frameworks, the regulatory landscape, and what real engagement looks like.
-description: A working non-Māori GP on engaging seriously with rongoā Māori and te ao Māori in clinical practice  -  the historical context, the established frameworks, the contemporary regulatory situation, and what good practice actually requires.
-category: Culture & Social Context
 date: 2026-03-20
-summary:
-  - "Rongoā Māori is not a complementary or alternative medicine in the Western sense -- it is a whakapapa-based knowledge system embedded in tikanga and relational obligations; treating it as interchangeable with herbal supplements misframes it."
-  - "The Tohunga Suppression Act 1907 is often cited but frequently misunderstood: it was supported by Māori MPs as a measure against fraudulent practitioners, resulted in only 9 convictions, and was repealed in 1962."
-  - "ACC formally funds rongoā Māori since 2020; approximately 100 registered rongoā practitioners delivered over 77,000 sessions in the first four years of the programme."
-  - "Key Māori health frameworks (Te Whare Tapa Whā, Te Wheke) understand health as holistic and relational -- taha tinana (physical) is one dimension alongside taha wairua, taha hinengaro, and taha whānau."
-  - "In the consultation, the clinical task is to ask openly rather than assume, to invite whānau involvement when appropriate, and to know the local rongoā landscape well enough to engage meaningfully rather than perform."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, cultural-competence, maori-health]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Rongoā Māori, mātauranga Māori, and the GP consult</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Rongoā Māori is not a complementary or alternative medicine in the Western sense -- it is a whakapapa-based knowledge system embedded in tikanga and relational obligations; treating it as interchangeable with herbal supplements misframes it.</li>
+<li>The Tohunga Suppression Act 1907 is often cited but frequently misunderstood: it was supported by Māori MPs as a measure against fraudulent practitioners, resulted in only 9 convictions, and was repealed in 1962.</li>
+<li>ACC formally funds rongoā Māori since 2020; approximately 100 registered rongoā practitioners delivered over 77,000 sessions in the first four years of the programme.</li>
+<li>Key Māori health frameworks (Te Whare Tapa Whā, Te Wheke) understand health as holistic and relational -- taha tinana (physical) is one dimension alongside taha wairua, taha hinengaro, and taha whānau.</li>
+<li>In the consultation, the clinical task is to ask openly rather than assume, to invite whānau involvement when appropriate, and to know the local rongoā landscape well enough to engage meaningfully rather than perform.</li>
+</ul>
+</div>
 
 This piece is written by a non-Māori GP for an audience that is largely non-Māori. That is the first thing to be honest about. Mātauranga Māori is Māori knowledge. It is held by tohunga, by rongoā practitioners, by kaumātua, by whānau and hapū and iwi. It is not held by me, and it is not held by most readers of this post. What I can usefully do is engage with the substance  -  historical, regulatory, framework-level  -  that a working GP needs to know to engage well, and to flag, repeatedly, the points at which the responsible move is to defer to Māori voices rather than to perform competence we don't have.
 

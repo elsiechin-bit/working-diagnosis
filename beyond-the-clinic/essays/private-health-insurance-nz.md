@@ -2,14 +2,24 @@
 title: Private health insurance in New Zealand
 dek: How the two-tier system works, who the players are, what gets covered (and what quietly doesn't), and why it matters every time you write a referral.
 date: 2026-05-01
-category: NZ Health System & Policy
-summary:
-  - "Approximately 30-35% of New Zealanders hold private health insurance; Southern Cross dominates the market (60-65% share) as a mutual insurer, with nib as the main listed competitor."
-  - "Private health insurance typically covers specialist consultations, elective surgery, diagnostics, and some cancer drugs; it does not cover GP visits, ACC-covered injuries, pre-existing conditions, maternity care, or routine preventive care."
-  - "The ACC boundary is a frequent friction point: injuries are ACC-covered regardless of insurance, while diseases are not; the distinction between an acute injury and a degenerative process is often contested."
-  - "Mental health coverage in NZ private insurance is variable and often substantially lower than physical health coverage -- patients frequently exhaust their benefits well before reaching adequate treatment."
-  - "There is a significant equity gradient: Maori and Pacific patients are markedly underrepresented among the insured, compounding existing access disparities in an already inequitable system."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, policy, health-system]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Private health insurance in New Zealand</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Approximately 30-35% of New Zealanders hold private health insurance; Southern Cross dominates the market (60-65% share) as a mutual insurer, with nib as the main listed competitor.</li>
+<li>Private health insurance typically covers specialist consultations, elective surgery, diagnostics, and some cancer drugs; it does not cover GP visits, ACC-covered injuries, pre-existing conditions, maternity care, or routine preventive care.</li>
+<li>The ACC boundary is a frequent friction point: injuries are ACC-covered regardless of insurance, while diseases are not; the distinction between an acute injury and a degenerative process is often contested.</li>
+<li>Mental health coverage in NZ private insurance is variable and often substantially lower than physical health coverage; patients frequently exhaust their benefits well before reaching adequate treatment.</li>
+<li>There is a significant equity gradient: Māori and Pacific patients are markedly underrepresented among the insured, compounding existing access disparities in an already inequitable system.</li>
+</ul>
+</div>
 
 New Zealand has a publicly funded health system  -  one of the foundational achievements of the 1938 Social Security Act  -  and also a flourishing private health insurance market. These two facts coexist without obvious contradiction, but understanding how they interact is one of the more practically useful pieces of contextual knowledge a GP can have. It shapes referral pathways, patient expectations, and the clinical dynamics of consultations that are nominally about something else entirely.
 

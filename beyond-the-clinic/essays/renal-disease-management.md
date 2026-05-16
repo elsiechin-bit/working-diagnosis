@@ -2,14 +2,24 @@
 title: Chronic kidney disease  -  management in general practice, 2024 update
 dek: Staging, the four pillars of nephroprotection, the SGLT2 inhibitor evidence that changed everything, managing complications, prescribing safely, and when to refer.
 date: 2026-04-14
-category: Clinical Conditions
-summary:
-  - "The 2024 KDIGO framework defines four pillars of CKD management: RAS blockade, blood pressure below 120 mmHg (SPRINT target), SGLT2 inhibition, and finerenone for diabetic CKD."
-  - "DAPA-CKD established that SGLT2 inhibitors slow CKD progression in patients without diabetes; empagliflozin and dapagliflozin can be continued down to eGFR 20 for renoprotection."
-  - "Do not dual-block the renin-angiotensin system (ONTARGET evidence); if hyperkalaemia prevents RAS use, potassium binders (patiromer, ZS-9) can enable continuation of renoprotective therapy."
-  - "Nitrofurantoin is contraindicated at eGFR below 45; the SADMAN sick day rules apply -- withhold metformin, NSAIDs, diuretics, and ACEi/ARB during intercurrent illness."
-  - "After an acute kidney injury, arrange follow-up at three months with eGFR and urine ACR; refer to nephrology at eGFR below 30 or with evidence of rapid progression."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, clinical-guidelines, nephrology]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Chronic kidney disease: management in general practice</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>The 2024 KDIGO framework defines four pillars of CKD management: RAS blockade, blood pressure below 120 mmHg (SPRINT target), SGLT2 inhibition, and finerenone for diabetic CKD.</li>
+<li>DAPA-CKD established that SGLT2 inhibitors slow CKD progression in patients without diabetes; empagliflozin and dapagliflozin can be continued down to eGFR 20 for renoprotection.</li>
+<li>Do not dual-block the renin-angiotensin system (ONTARGET evidence); if hyperkalaemia prevents RAS use, potassium binders (patiromer, ZS-9) can enable continuation of renoprotective therapy.</li>
+<li>Nitrofurantoin is contraindicated at eGFR below 45; the SADMAN sick day rules apply: withhold metformin, NSAIDs, diuretics, and ACEi/ARB during intercurrent illness.</li>
+<li>After an acute kidney injury, arrange follow-up at three months with eGFR and urine ACR; refer to nephrology at eGFR below 30 or with evidence of rapid progression.</li>
+</ul>
+</div>
 
 The management of chronic kidney disease has undergone more substantive change in the past five years than in the preceding two decades. The SGLT2 inhibitor trials  -  CREDENCE, DAPA-CKD, and EMPA-KIDNEY  -  have established a nephroprotective drug class that works across the spectrum of CKD, including in patients without diabetes. The FLOW trial established GLP-1 receptor agonists as an additional nephroprotective option in diabetic kidney disease. Finerenone, a non-steroidal mineralocorticoid receptor antagonist, has added a fourth pillar to the treatment of diabetic CKD. The 2024 KDIGO guidelines have consolidated these findings into updated recommendations that now differ substantially from what was current practice in 2018.
 
@@ -145,7 +155,7 @@ CKD changes the pharmacokinetics of a large number of drugs. The key principle i
 
 ## Part VI  -  Acute kidney injury in the community
 
-Acute kidney injury (AKI) is defined as a rise in creatinine of ≥26.5 µmol/L within 48 hours, a rise to ≥1.5�- the known or estimated baseline within 7 days, or urine output <0.5 mL/kg/hr for ≥6 hours [13]. Community-presenting AKI is commonly pre-renal (volume depletion, reduced cardiac output, NSAID use) or intrinsic (drug-induced, infection-related) and is managed by addressing the precipitant.
+Acute kidney injury (AKI) is defined as a rise in creatinine of ≥26.5 µmol/L within 48 hours, a rise to ≥1.5�- the known or estimated baseline within 7 days, or urine output <0.5 mL/kg/hr for ≥6 hours [13]. Community-presenting AKI is commonly pre-renal (volume depletion, reduced cardiac output, NSAID use) or intrinsic (drug-induced, infection-related) and is managed by addressing the precipitant.
 
 **The sick day rule  -  the "SADMAN" approach.** Patients with CKD (and their family members/caregivers) benefit from a pre-emptive plan for intercurrent illness. The pneumonic SADMAN lists the drugs to hold during episodes of significant vomiting, diarrhoea, fever, or reduced oral intake:
 

@@ -2,8 +2,24 @@
 title: POTS - why a diagnosis that takes five minutes to screen for takes an average of five years to make
 dek: Postural orthostatic tachycardia syndrome is common, often disabling, and straightforwardly diagnosable in a GP office with a blood pressure cuff and a stopwatch. The diagnostic delay is not a mystery. It is a pattern, and the pattern is worth examining.
 date: 2026-05-05
-category: Clinical Conditions
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, clinical-guidelines, cardiology]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">POTS: Postural Orthostatic Tachycardia Syndrome</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>POTS is characterized by a sustained heart rate increase of ≥30 bpm (≥40 in under-19s) within ten minutes of standing, in the absence of significant orthostatic hypotension, often with wide-ranging symptoms including brain fog, palpitations, fatigue, and orthostatic intolerance.</li>
+<li>The condition is significantly more common in young women and is frequently misdiagnosed as anxiety, deconditioning, or ME/CFS; diagnostic delay averages four to six years in most case series.</li>
+<li>Active standing testing (supine baseline heart rate and blood pressure, then measurement at 1, 3, 5, 7, and 10 minutes standing) can be performed in primary care and is sufficient for diagnosis without tilt-table testing.</li>
+<li>Management is overwhelmingly non-pharmacological first: fluid loading (2-3L/day with additional sodium), compression garments, postural modifications, and careful exercise rehabilitation (recumbent initially); pharmacological options include fludrocortisone, low-dose propranolol, midodrine, and ivabradine.</li>
+<li>Post-COVID POTS is increasingly recognized; any Long COVID patient with postural symptoms should undergo active standing testing, and POTS may coexist with hypermobile Ehlers-Danlos syndrome requiring additional clinical screening.</li>
+</ul>
+</div>
 
 The patient is a 24-year-old woman. She has been seeing various doctors for two years with fatigue, palpitations, brain fog, and dizziness on standing. She has had a normal ECG, a normal echocardiogram, normal thyroid function, normal full blood count, and a cardiology referral that came back with "no structural cardiac disease, likely anxiety." She has been told to exercise more, to drink more water, and, in one consultation she mentions with some bitterness, to worry less.
 
