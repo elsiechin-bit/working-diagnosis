@@ -137,4 +137,4 @@ These patients are also more likely to present late, to have more severe disease
 [^10]: Medsafe NZ. *Allopurinol and serious cutaneous adverse reactions: HLA-B*5801 testing*. Prescriber Update. 2011;32(4):30.
 [^11]: Dalbeth N, Stamp LK, Merriman TR. The genetics of gout: towards personalised medicine? *BMC Med*. 2017;15(1):108.
 [^12]: White WB, Saag KG, Becker MA, et al. Cardiovascular safety of febuxostat or allopurinol in patients with gout. *N Engl J Med*. 2018;378(13):1200--1210.
-[^13]: Choi HK, Curhan G. Soft drinks, fructose consumption, and the risk of gout in me                                                                                                                                                                                                                                                                                                                                                                                                            
+[^13]: Choi HK, Curhan G. Soft drinks, fructose consumption, and the risk of gout in men. *N Engl J Med*. 2004;350(15):1495--1502.
