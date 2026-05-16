@@ -667,7 +667,8 @@ a:hover { color: var(--green); }
 
 .specialty-group { margin: 0 0 24px; }
 .specialty-group__title { font-family: var(--mono); font-size: 0.35rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ochre); margin: 0 0 10px; font-weight: 500; }
-.specialty-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.specialty-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+@media (max-width: 900px) { .specialty-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 720px) { .specialty-grid { grid-template-columns: 1fr; } }
 
 .specialty-card {
