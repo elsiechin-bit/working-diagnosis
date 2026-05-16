@@ -15,7 +15,6 @@ description: Essays and thinking pieces on primary care, health systems, and med
 
 <div class="handout-section" id="practice">
   <p class="handout-section-label">❍ Practice &amp; Consultation</p>
-  <h2>Practice &amp; Consultation</h2>
   <ul class="essay-list">
     <li><a href="/beyond-the-clinic/essays/consultation-models/">Field Notes: Consultation Models in General Practice</a></li>
     <li><a href="/beyond-the-clinic/essays/the-fifteen-minute-consult/">The fifteen-minute consult</a></li>
@@ -29,7 +28,6 @@ description: Essays and thinking pieces on primary care, health systems, and med
 
 <div class="handout-section" id="health-system">
   <p class="handout-section-label">❍ Health System &amp; Policy</p>
-  <h2>Health System &amp; Policy</h2>
   <ul class="essay-list">
     <li><a href="/beyond-the-clinic/essays/the-shape-of-the-nz-health-system/">The shape of the New Zealand health system</a></li>
     <li><a href="/beyond-the-clinic/essays/history-of-nz-general-practice/">How general practice happened in New Zealand</a></li>
@@ -42,7 +40,6 @@ description: Essays and thinking pieces on primary care, health systems, and med
 
 <div class="handout-section" id="ethics">
   <p class="handout-section-label">❍ Ethics &amp; Medicolegal</p>
-  <h2>Ethics &amp; Medicolegal</h2>
   <ul class="essay-list">
     <li><a href="/beyond-the-clinic/essays/assisted-dying-ethics-and-history/">Assisted dying — the ethics, the history, and the world map</a></li>
     <li><a href="/beyond-the-clinic/essays/resuscitation-orders/">Resuscitation orders in general practice</a></li>
@@ -56,7 +53,6 @@ description: Essays and thinking pieces on primary care, health systems, and med
 
 <div class="handout-section" id="clinical">
   <p class="handout-section-label">❍ Clinical Topics</p>
-  <h2>Clinical Topics</h2>
   <ul class="essay-list">
     <li><a href="/beyond-the-clinic/essays/the-new-heart-failure/">The new heart failure</a></li>
     <li><a href="/beyond-the-clinic/essays/renal-disease-management/">Chronic kidney disease — management in general practice, 2024 update</a></li>
