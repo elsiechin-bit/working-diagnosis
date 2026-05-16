@@ -1,5 +1,5 @@
 ---
-title: Gout: the disease we keep undertreating
+title: "Gout: the disease we keep undertreating"
 dek: It is one of the most painful, best-understood, and most undertreated conditions in general practice. We can cure it. We often don't.
 date: 2026-05-04
 layout: topic.njk
