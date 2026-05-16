@@ -1,0 +1,564 @@
+---
+title: Prescriptions Outside NZ
+permalink: /clinician-tools/medications/rx-outside-nz/
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prescriptions Outside NZ  -  Working Diagnosis</title>
+  <meta name="description" content="Medicines commonly prescribed overseas that are unavailable, unfunded, or differently restricted in NZ. For GP consultation support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ── Tokens ──────────────────────────────────────── */
+    :root {
+      --paper:      #F5F1E8;
+      --paper-warm: #EDE7D8;
+      --paper-deep: #E4DBC4;
+      --ink:        #1A1F1C;
+      --ink-soft:   #3A4540;
+      --ink-mute:   #6B7A75;
+      --green:      #2F6B5C;
+      --green-deep: #1F4A3F;
+      --ochre:      #B8714F;
+      --rule:       #D9D1BD;
+      --alert:      #C84C3C;
+
+      --serif-display: 'Fraunces', Georgia, serif;
+      --serif-body:    'Newsreader', Georgia, serif;
+      --mono:          'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--serif-body);
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--green-deep); text-decoration: none; }
+    a:hover { text-decoration: underline; color: var(--green); }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Masthead ────────────────────────────────────── */
+    .masthead { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; }
+    .masthead-row { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.3rem; color: var(--ink); letter-spacing: -0.01em; text-decoration: none; }
+    .brand em { font-style: italic; color: var(--green); }
+    .primary-nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .primary-nav a { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-mute); text-decoration: none; }
+    .primary-nav a:hover { color: var(--green); }
+
+    /* ── Tool header ─────────────────────────────────── */
+    .tool-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .tool-header {
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .tool-kicker {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ochre);
+      margin: 0 0 14px;
+    }
+
+    .tool-title {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      color: var(--ink);
+    }
+
+    .tool-dek {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      margin: 0 0 16px;
+      max-width: 680px;
+      line-height: 1.55;
+    }
+
+    .disclaimer {
+      background: rgba(184, 113, 79, 0.07);
+      border-left: 3px solid var(--ochre);
+      padding: 12px 16px;
+      border-radius: 2px;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+
+    /* ── Controls ────────────────────────────────────── */
+    .controls {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+      align-items: flex-end;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .control-group label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+
+    .search-input {
+      padding: 10px 14px;
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      font-family: var(--serif-body);
+      font-size: 16px;
+      color: var(--ink);
+      background: white;
+      width: 280px;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 0 2px rgba(47, 107, 92, 0.1);
+    }
+
+    .filter-select {
+      padding: 10px 12px;
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      font-family: var(--serif-body);
+      font-size: 15px;
+      color: var(--ink);
+      background: white;
+      cursor: pointer;
+    }
+
+    .filter-select:focus {
+      outline: none;
+      border-color: var(--green);
+    }
+
+    .results-count {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--ink-mute);
+      letter-spacing: 0.5px;
+      align-self: flex-end;
+      padding-bottom: 11px;
+      margin-left: auto;
+    }
+
+    /* ── Drug cards ──────────────────────────────────── */
+    .drug-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .drug-card {
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .drug-card-head {
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .drug-name {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: var(--ink);
+      margin: 0 0 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .drug-brands {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--ink-mute);
+      letter-spacing: 0.5px;
+    }
+
+    .card-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      flex-shrink: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 3px;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-country {
+      background: var(--paper-deep);
+      color: var(--ink-soft);
+    }
+
+    .badge-status-none {
+      background: rgba(200, 76, 60, 0.1);
+      color: var(--alert);
+    }
+
+    .badge-status-restricted {
+      background: rgba(184, 113, 79, 0.12);
+      color: #7a4a1e;
+    }
+
+    .badge-status-rx {
+      background: rgba(47, 107, 92, 0.1);
+      color: var(--green-deep);
+    }
+
+    .badge-category {
+      background: var(--paper-warm);
+      color: var(--ink-mute);
+    }
+
+    .badge-confidence-moderate {
+      background: rgba(184, 113, 79, 0.08);
+      color: #7a4a1e;
+      border: 1px solid rgba(184, 113, 79, 0.25);
+    }
+
+    .drug-card-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    @media (max-width: 700px) {
+      .drug-card-body { grid-template-columns: 1fr; }
+    }
+
+    .card-col {
+      padding: 20px 24px;
+    }
+
+    .card-col + .card-col {
+      border-left: 1px solid var(--rule);
+    }
+
+    @media (max-width: 700px) {
+      .card-col + .card-col {
+        border-left: none;
+        border-top: 1px solid var(--rule);
+      }
+    }
+
+    .col-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin: 0 0 8px;
+    }
+
+    .col-text {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .drug-card-foot {
+      padding: 14px 24px;
+      border-top: 1px solid var(--rule);
+      background: var(--paper-warm);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .foot-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      flex-shrink: 0;
+    }
+
+    .nz-equiv {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .nzf-link {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.5px;
+      color: var(--green-deep);
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    /* ── Empty state ─────────────────────────────────── */
+    .empty-state {
+      text-align: center;
+      padding: 64px 24px;
+      color: var(--ink-mute);
+      display: none;
+    }
+
+    .empty-state p {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* ── Footer ──────────────────────────────────────── */
+    .tool-footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.85rem;
+      color: var(--ink-mute);
+      line-height: 1.6;
+    }
+
+    /* ─── Footer ───────────────────────────────────── */
+    .site-footer { margin-top: 64px; padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; color: var(--ink-mute); }
+    .site-footer p { margin: 0 0 6px; }
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="masthead-row">
+      <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/clinician-tools/">Workshop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tool-container">
+
+    <div class="tool-header">
+      <p class="tool-kicker">❍ Workshop reference</p>
+      <h1 class="tool-title">Prescriptions Outside NZ</h1>
+      <p class="tool-dek">Medicines commonly prescribed overseas that are unavailable, unfunded, or differently restricted in NZ. Look up a drug by name or brand to find the NZ status and nearest equivalent.</p>
+      <div class="disclaimer">
+        Always verify current PHARMAC funding status at <a href="https://pharmac.govt.nz" target="_blank" rel="noopener">pharmac.govt.nz</a> and NZF monograph at <a href="https://nzf.org.nz" target="_blank" rel="noopener">nzf.org.nz</a> before prescribing. Funding decisions change. Confidence ratings reflect the author's certainty at time of writing, not clinical evidence quality.
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="search">Search drug or brand name</label>
+        <input type="text" id="search" class="search-input" placeholder="e.g. Ozempic, alprazolam…" autocomplete="off">
+      </div>
+      <div class="control-group">
+        <label for="filter-country">Origin country</label>
+        <select id="filter-country" class="filter-select">
+          <option value="all">All countries</option>
+          <option value="AU">Australia (PBS)</option>
+          <option value="UK">United Kingdom (NHS)</option>
+          <option value="US">United States</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="filter-status">NZ status</label>
+        <select id="filter-status" class="filter-select">
+          <option value="all">All statuses</option>
+          <option value="not-registered">Not registered in NZ</option>
+          <option value="not-funded">Not funded</option>
+          <option value="not-funded-for-indication">Not funded for that indication</option>
+          <option value="funded-restricted">Funded, stricter criteria</option>
+          <option value="prescription-only">Prescription-only (OTC elsewhere)</option>
+        </select>
+      </div>
+      <div class="results-count" id="results-count"></div>
+    </div>
+
+    <div class="drug-list" id="drug-list"></div>
+    <div class="empty-state" id="empty-state">
+      <p>No entries match your search. Try a generic name, brand name, or clear the filters.</p>
+    </div>
+
+    <div class="tool-footer">
+      <p>Data current as of May 2026. Sources: PHARMAC Schedule, NZF, PBS (Australia), NHS (UK), FDA (US). This tool is for GP consultation support  -  not for patient use. Entries with a <em>moderate</em> confidence badge should be verified against current PHARMAC documentation before acting on them.</p>
+    </div>
+
+  </main>
+
+  <script>
+    const DATA_URL = '/assets/rx-outside-nz.json';
+
+    const STATUS_CONFIG = {
+      'not-registered':            { label: 'Not registered in NZ', cls: 'badge-status-none' },
+      'not-funded':                { label: 'Not funded in NZ',     cls: 'badge-status-none' },
+      'not-funded-for-indication': { label: 'Not funded for that indication', cls: 'badge-status-none' },
+      'funded-restricted':         { label: 'Funded  -  stricter criteria', cls: 'badge-status-restricted' },
+      'prescription-only':         { label: 'Prescription-only in NZ', cls: 'badge-status-rx' }
+    };
+
+    const COUNTRY_LABELS = { AU: 'Australia', UK: 'United Kingdom', US: 'United States' };
+
+    let allEntries = [];
+
+    async function loadData() {
+      const res = await fetch(DATA_URL);
+      const json = await res.json();
+      allEntries = json.entries;
+      render(allEntries);
+    }
+
+    function countryBadges(countries) {
+      return countries.map(c =>
+        `<span class="badge badge-country">${COUNTRY_LABELS[c] || c}</span>`
+      ).join('');
+    }
+
+    function statusBadge(status) {
+      const cfg = STATUS_CONFIG[status] || { label: status, cls: 'badge-status-restricted' };
+      return `<span class="badge ${cfg.cls}">${cfg.label}</span>`;
+    }
+
+    function confidenceBadge(confidence) {
+      if (confidence === 'moderate') {
+        return `<span class="badge badge-confidence-moderate" title="Verify before acting">Verify status</span>`;
+      }
+      return '';
+    }
+
+    function buildCard(entry) {
+      const conf = confidenceBadge(entry.confidence);
+      const nzfHref = entry.nzfLink || 'https://www.nzf.org.nz';
+
+      return `
+        <div class="drug-card"
+          data-countries="${entry.originCountries.join(',')}"
+          data-status="${entry.nzStatus}"
+          data-search="${[entry.genericName, ...(entry.brandNames || []), entry.category, ...(entry.tags || [])].join(' ').toLowerCase()}">
+
+          <div class="drug-card-head">
+            <div>
+              <p class="drug-name">${entry.genericName}</p>
+              <p class="drug-brands">${(entry.brandNames || []).join(' · ')}</p>
+            </div>
+            <div class="card-badges">
+              ${countryBadges(entry.originCountries)}
+              ${statusBadge(entry.nzStatus)}
+              <span class="badge badge-category">${entry.category}</span>
+              ${conf}
+            </div>
+          </div>
+
+          <div class="drug-card-body">
+            <div class="card-col">
+              <p class="col-label">Overseas</p>
+              <p class="col-text">${entry.originStatus}</p>
+            </div>
+            <div class="card-col">
+              <p class="col-label">In NZ</p>
+              <p class="col-text">${entry.nzStatusNote}</p>
+            </div>
+          </div>
+
+          <div class="drug-card-foot">
+            <span class="foot-label">NZ equivalent</span>
+            <span class="nz-equiv">${entry.nzEquivalent}</span>
+            <a class="nzf-link" href="${nzfHref}" target="_blank" rel="noopener">NZF �-</a>
+          </div>
+        </div>
+      `;
+    }
+
+    function render(entries) {
+      const list = document.getElementById('drug-list');
+      const empty = document.getElementById('empty-state');
+      const count = document.getElementById('results-count');
+
+      if (entries.length === 0) {
+        list.innerHTML = '';
+        empty.style.display = 'block';
+        count.textContent = '0 entries';
+      } else {
+        list.innerHTML = entries.map(buildCard).join('');
+        empty.style.display = 'none';
+        count.textContent = `${entries.length} ${entries.length === 1 ? 'entry' : 'entries'}`;
+      }
+    }
+
+    function applyFilters() {
+      const q = document.getElementById('search').value.toLowerCase().trim();
+      const country = document.getElementById('filter-country').value;
+      const status = document.getElementById('filter-status').value;
+
+      const filtered = allEntries.filter(e => {
+        const searchStr = [e.genericName, ...(e.brandNames || []), e.category, ...(e.tags || [])].join(' ').toLowerCase();
+        const matchSearch = !q || searchStr.includes(q);
+        const matchCountry = country === 'all' || e.originCountries.includes(country);
+        const matchStatus = status === 'all' || e.nzStatus === status;
+        return matchSearch && matchCountry && matchStatus;
+      });
+
+      render(filtered);
+    }
+
+    document.getElementById('search').addEventListener('input', applyFilters);
+    document.getElementById('filter-country').addEventListener('change', applyFilters);
+    document.getElementById('filter-status').addEventListener('change', applyFilters);
+
+    loadData();
+  </script>
+
+  <footer class="site-footer">
+    <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+      <p><strong>Working Diagnosis</strong> · Aotearoa New Zealand · © 2026</p>
+      <p>An internet workshop for general practice.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

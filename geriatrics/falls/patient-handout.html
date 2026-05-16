@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falls Prevention in Older Adults | Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Newsreader:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F5F1E8;--warm:#EDE7D8;--deep:#E4DBC4;--ink:#1A1F1C;--ink-soft:#3A4540;--ink-mute:#6B7A75;--green:#2F6B5C;--green-deep:#1F4A3F;--ochre:#B8714F;--rule:#D9D1BD;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.7}
+    .masthead{padding:1.1rem 2rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+    .masthead-brand{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:var(--ink);text-decoration:none}
+    .masthead-crumb{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);text-decoration:none}
+    .masthead-crumb:hover{color:var(--green)}
+    .hero{max-width:680px;margin:0 auto;padding:2.5rem 2rem 1.75rem}
+    .kicker{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:.8rem}
+    .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin-bottom:.8rem}
+    .hero h1 em{font-style:italic;color:var(--green)}
+    .hero-lead{color:var(--ink-soft);font-size:1rem;max-width:520px;line-height:1.6}
+    .page-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+    .print-bar{max-width:680px;margin:0 auto;padding:.75rem 2rem;display:flex;justify-content:flex-end}
+    .print-btn{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);border:1px solid var(--rule);color:var(--ink-mute);padding:.45rem 1rem;border-radius:50px;cursor:pointer;transition:all .15s}
+    .print-btn:hover{color:var(--green);border-color:var(--green)}
+    .glance{background:var(--warm);border-radius:14px;padding:1.5rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .glance-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.2rem}
+    .glance-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--green);line-height:1.1;margin-bottom:.2rem}
+    .glance-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45}
+    .acc-item{border:1px solid var(--rule);border-radius:12px;margin-bottom:.75rem;overflow:hidden}
+    .acc-head{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;cursor:pointer;background:var(--warm);font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:var(--ink);transition:background .15s;user-select:none}
+    .acc-head:hover,.acc-item.open .acc-head{background:var(--deep)}
+    .chevron{font-size:1rem;color:var(--ink-mute);transition:transform .2s;flex-shrink:0}
+    .acc-item.open .chevron{transform:rotate(90deg)}
+    .acc-body{display:none;padding:1.25rem 1.4rem 1.5rem;background:var(--paper);border-top:1px solid var(--rule);font-size:.95rem;color:var(--ink-soft);line-height:1.72}
+    .acc-item.open .acc-body{display:block}
+    .acc-body p+p{margin-top:.75rem}
+    .acc-body ul,.acc-body ol{padding-left:1.25rem;margin:.5rem 0}
+    .acc-body li{margin-bottom:.3rem}
+    .data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.9rem}
+    .data-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.7rem 1rem;background:var(--deep);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+    .data-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:nth-child(even) td{background:var(--warm)}
+    .alert-box{background:#FDF6EE;border:2px solid var(--ochre);border-radius:12px;padding:1.5rem;margin:2rem 0}
+    .alert-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);margin-bottom:.75rem}
+    .alert-box p,.alert-box ul{font-size:.93rem;color:var(--ink-soft)}
+    .alert-box ul{padding-left:1.25rem}
+    .alert-box ul li{margin-bottom:.4rem}
+    .resources{background:var(--warm);border-radius:12px;padding:1.5rem;margin-top:2rem}
+    .resources-head{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+    .resources a{color:var(--green);font-size:.93rem;display:block;margin-bottom:.4rem;text-decoration:none}
+    .resources a:hover{text-decoration:underline}
+    .resources p{font-size:.88rem;color:var(--ink-soft);margin-top:.5rem}
+    .section-h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.35rem;margin-bottom:.3rem;margin-top:2rem}
+    .section-lead{color:var(--ink-soft);margin-bottom:1.25rem;font-size:.95rem}
+    .refs-section{border-top:1px solid var(--rule);max-width:680px;margin:0 auto;padding:1.5rem 2rem 2rem}
+    .refs-toggle{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;cursor:pointer;padding:0}
+    .refs-toggle:hover{color:var(--green)}
+    .refs-list{display:none;margin-top:1rem}
+    .refs-list.on{display:block}
+    .refs-list ol{padding-left:1.4rem}
+    .refs-list li{font-size:.8rem;color:var(--ink-mute);line-height:1.6;margin-bottom:.45rem}
+    .page-footer{text-align:center;font-size:.8rem;color:var(--ink-mute);padding:1.25rem 2rem 2rem;border-top:1px solid var(--rule);max-width:680px;margin:0 auto}
+    @media print{
+      .masthead-crumb,.print-bar,.refs-section,.page-footer{display:none}
+      .acc-body{display:block!important;padding:.4rem 0}
+      .acc-head{background:none!important;font-size:1rem;padding:.5rem 0;border-bottom:1px solid #ccc;border-radius:0}
+      .acc-item{border:none;margin-bottom:.5rem;border-radius:0}
+      body{font-size:.85rem}
+      .alert-box,.data-table{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <a href="/" class="masthead-brand">Working Diagnosis</a>
+  <a href="/geriatrics/" class="masthead-crumb">Geriatrics</a>
+</header>
+
+<div class="hero">
+  <div class="kicker">❍ Healthy Ageing</div>
+  <h1>Falls <em>Prevention</em> in Older Adults</h1>
+  <p class="hero-lead">Falls are not an inevitable part of ageing. Most are the result of modifiable risk factors. A combination of targeted exercise, home modification, and medication review can significantly reduce your risk of falling and maintain your independence.</p>
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Print this page</button>
+</div>
+
+<div class="page-body">
+
+  <div class="glance">
+    <div>
+      <div class="glance-label">Frequency</div>
+      <div class="glance-value">1 in 3</div>
+      <div class="glance-desc">Adults over 65 fall at least once yearly</div>
+    </div>
+    <div>
+      <div class="glance-label">Consequence</div>
+      <div class="glance-value">40%</div>
+      <div class="glance-desc">Of falls result in injury, hip fracture most serious</div>
+    </div>
+    <div>
+      <div class="glance-label">Preventable</div>
+      <div class="glance-value">Significant</div>
+      <div class="glance-desc">Most falls prevented with targeted action</div>
+    </div>
+    <div>
+      <div class="glance-label">NZ Cost</div>
+      <div class="glance-value">$650M+</div>
+      <div class="glance-desc">Annual fall-related hospital admissions</div>
+    </div>
+  </div>
+
+  <div class="acc-item open">
+    <div class="acc-head">
+      Why falls happen as we age
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Falls are rarely random events. They occur at the intersection of changes within the person (intrinsic factors) and hazards in the environment (extrinsic factors). Understanding these factors helps explain why someone fell and what can be changed to prevent future falls.</p>
+      <p>Intrinsic factors are age-related changes in the body itself. Muscle strength declines progressively with age, a phenomenon called sarcopenia. This means older adults cannot push off the ground as powerfully or catch themselves during a stumble. Balance deteriorates as the vestibular system in the inner ear becomes less sensitive. Reaction times slow, so reflexes are slower. Vision changes, making it harder to judge distances and obstacles, especially in poor light. Blood pressure regulation becomes less efficient, causing orthostatic hypotension where blood pressure drops when standing up, leading to dizziness. Joints become stiffer and less flexible. Pain in the feet, bunions, or arthritis alters walking mechanics. Cognitive impairment reduces attention and awareness of surroundings. Many older adults take multiple medications, some of which directly increase falls risk.</p>
+      <p>Extrinsic factors are environmental hazards that would trip up anyone, but are particularly dangerous for older adults with less reserve. Loose rugs and carpets cause trips. Poor lighting, especially in hallways and on stairs, makes obstacles invisible. Slippery bathroom floors, wet kitchens, or icy outdoor paths are hazardous. Missing grab rails in the bathroom mean nothing to hold when unsteady. Unsecured extension cords, clutter on the floor, or furniture rearrangement creates navigation challenges. Unsuitable footwear, especially loose slippers without grip, increases slipping. Stairs without handrails on both sides are particularly dangerous. The living room is often full of obstacles. Many falls in older adults occur in the familiar home environment, in rooms they have walked hundreds of times, because they navigate on automatic pilot without full attention.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Medicines and falls
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Medications are one of the most important and often underrecognised risk factors for falls. Several classes of drugs significantly increase falls risk through different mechanisms. Sedative and hypnotic medications including benzodiazepines and zopiclone cause drowsiness, impair balance and coordination, slow reaction time, and may cause confusion. Antihypertensive medications, especially in combination or at high doses, can cause blood pressure to drop excessively when standing, resulting in dizziness and fainting. Tricyclic antidepressants have anticholinergic effects that impair balance and cognition. Selective serotonin reuptake inhibitors (SSRIs) can cause hyponatraemia, leading to confusion and falls. Antipsychotic medications impair balance and increase orthostatic hypotension. Opioids cause drowsiness and confusion. Some antihistamines cause sedation. Even diuretics, if they cause electrolyte disturbances, can contribute to falls.</p>
+      <p>The risk increases exponentially with polypharmacy. Someone taking five or more medications has substantially higher falls risk than someone taking one or two, even after accounting for the severity of their underlying conditions. This is because drug interactions are common and because taking many pills increases the likelihood of medication errors. Additionally, some medications become more dangerous in older age because the body handles them differently: kidneys are less efficient, liver metabolism changes, and body composition shifts.</p>
+      <p>Medication review is a core component of falls prevention and should be part of any assessment. Your GP may be able to reduce doses, switch to safer alternatives, change the timing of doses, or deprescribe medications that are no longer beneficial. Never stop medications yourself without discussing with your doctor, but do raise the issue if you have had falls or near-falls. Sometimes a small change in medication can make a dramatic difference in falls risk.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Strength, balance and exercise
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Exercise is the single most effective intervention for falls prevention. Importantly, this does not mean just walking more. While walking is good for overall health and cardiovascular fitness, it is not specifically effective at preventing falls. What works is targeted balance training and progressive strength training. The evidence is robust: people who do balance and strength exercise have significantly fewer falls than those who do not, even when other factors are controlled for.</p>
+      <p>Tai Chi has particularly strong evidence for falls prevention and has been extensively studied. It improves balance, proprioception (your sense of where your body is in space), leg strength, and has the added benefit of being enjoyable for many older adults, which improves adherence. Formal resistance training with weights or resistance bands also has excellent evidence. The Otago Exercise Programme was developed in New Zealand and tested rigorously here. It is designed specifically for older people and can be done at home. Ask your GP or physiotherapist about whether this programme is suitable for you and how to access it. Progressive resistance training tailored to your baseline fitness level, gradually increasing the challenge as you become stronger, is highly effective.</p>
+      <p>Exercise should be individualised, progressive, and preferably supervised at least initially, so that you are doing the movements correctly and the intensity is appropriate for your baseline fitness. Even frail older adults benefit from supervised exercise. Some concerns about exercise in older people, such as fear that exercise will cause injury or exacerbate a chronic condition, are often unfounded. In fact, inactivity due to fear is a strong risk factor for falls (it worsens strength and balance and leads to deconditioning). Discuss with your GP what exercise programme would be appropriate for your circumstances.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      Making your home safer
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>The majority of falls experienced by older people occur in the home. This is the good news, because the home is under your control and you can modify it. Many simple, inexpensive changes dramatically reduce hazards. Start with identifying the places in your home where you feel least steady or where you have had near-falls.</p>
+      <p>Flooring hazards are the most common culprit. Loose rugs and mats should be removed or securely taped down. Thresholds between rooms should be minimal or covered with a ramp. Slippery floors can be addressed with non-slip mats or waxing less frequently. In the bathroom, non-slip mats in the shower and bath are essential. Grab rails should be installed beside the toilet and in the shower or tub, positioned where you would naturally reach. A raised toilet seat makes standing easier. A shower chair or stool allows you to bathe while seated if balance is poor. In the bedroom, ensure the bed height is appropriate (not too low to stand from). Keep a nightlight or bedside lamp so you can see when getting up in the night. Bedside tables should not be cluttered with items that could trip you. On stairs, ensure handrails are present on at least one side, preferably both. Improve lighting on stairs and in hallways. Worn carpet should be repaired. In living areas, remove clutter, secure extension cords, and avoid low furniture that could be tripped over.</p>
+      <p>Footwear matters more than many people realise. Loose slippers without grip are a common cause of falls. Wear supportive, properly fitting shoes with non-slip soles even inside the home. Avoid high heels and shoes that do not stay on your foot. Many falls happen during the night trip to the toilet while wearing unsuitable footwear. Finally, consider a personal alarm or medical alert device if you live alone. If you do fall and cannot get up, you will need a way to call for help.</p>
+    </div>
+  </div>
+
+  <div class="acc-item">
+    <div class="acc-head">
+      After a fall
+      <span class="chevron">›</span>
+    </div>
+    <div class="acc-body">
+      <p>If you fall, the first priority is safety. If you are not injured and feel able, try to get up slowly. You might roll onto your side, push yourself up onto hands and knees, then slowly push yourself upright using furniture for support. Move deliberately rather than quickly, as rush and panic can lead to another fall. If you are injured or unable to get up, do not try repeatedly to stand. Lying on the floor for an extended period carries its own risks: you may become cold, your muscles may be compressed, and your confidence may be shaken. Use a personal alarm, phone, or call out for help if possible.</p>
+      <p>After any fall, you should inform your GP. This is important medical information and enables preventive action. Many people feel embarrassed about falls and do not mention them, but this is a missed opportunity. Your GP can assess whether there was an obvious trigger (a loose rug, unsuitable shoes, a newly started medication) and address it. They can check for injuries you might not have noticed, such as rib fractures or internal injuries. If you take blood thinners, a fall affecting your head requires assessment even if there is no obvious injury, because intracranial bleeding can occur. Your GP can also identify whether this was a one-off incident or whether you are falling repeatedly, which suggests a need for falls risk assessment and intervention.</p>
+      <p>Fear of falling is itself a risk factor for future falls. After a fall, some people become so frightened that they reduce their activity substantially. This leads to deconditioning, loss of muscle and balance, and paradoxically increases falls risk even further. Additionally, inactivity has serious consequences for overall health and independence. If you are fearful after a fall, discuss this with your GP or ask about a referral to physiotherapy or exercise classes designed for people with falls concerns. Many people find that regaining confidence through supported exercise is helpful.</p>
+    </div>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Area</th>
+        <th>What to check</th>
+        <th>Fix</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Entrance/hallway</td>
+        <td>Loose mats, poor lighting, cluttered floor</td>
+        <td>Remove mats or tape down securely, add bright lighting, clear pathways</td>
+      </tr>
+      <tr>
+        <td>Bathroom</td>
+        <td>Slippery bath/shower, no grab rails, low toilet</td>
+        <td>Non-slip mat, install rails at toilet and tub, raised toilet seat</td>
+      </tr>
+      <tr>
+        <td>Bedroom</td>
+        <td>Low bed, poor night lighting, slippery flooring</td>
+        <td>Bed raiser or higher bed frame, bedside nightlight, remove or secure rugs</td>
+      </tr>
+      <tr>
+        <td>Stairs</td>
+        <td>Poor lighting, worn carpet, missing handrails</td>
+        <td>Install bright lighting, repair carpet, add handrails to both sides</td>
+      </tr>
+      <tr>
+        <td>Living areas</td>
+        <td>Extension cords, low furniture, pet items on floor</td>
+        <td>Tape down or remove cords, rearrange to clear paths, store items safely</td>
+      </tr>
+      <tr>
+        <td>Outside</td>
+        <td>Uneven paths, wet leaves, poor lighting</td>
+        <td>Repair cracks and uneven surfaces, clear debris, install outdoor lighting</td>
+      </tr>
+      <tr>
+        <td>Footwear</td>
+        <td>Loose slippers, socks without grip, unsuitable shoes</td>
+        <td>Wear supportive non-slip shoes indoors and out, avoid high heels and loose shoes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <div class="alert-head">When to seek medical attention</div>
+    <p>Contact your GP or go to hospital after any fall, or immediately if you have:</p>
+    <ul>
+      <li>Any head injury, or if you take blood thinners, even without obvious injury</li>
+      <li>Hip pain, groin pain, or inability to weight-bear on one leg (possible fracture)</li>
+      <li>Severe pain anywhere</li>
+      <li>New onset of falls in someone who has not previously fallen (warrants assessment for underlying illness)</li>
+      <li>Inability to get up from the floor</li>
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="resources-head">NZ Resources</div>
+    <a href="https://acc.co.nz/preventing-injuries/at-home/falls/">ACC Falls Prevention</a>
+    <a href="https://ageconcern.org.nz">Age Concern NZ</a>
+    <a href="https://otago.ac.nz">Otago Exercise Programme</a>
+    <p>Contact your GP for a falls assessment and advice tailored to your situation. Ask about Otago Exercise classes in your area or for a physiotherapy referral.</p>
+  </div>
+
+</div>
+
+<div class="refs-section">
+  <button class="refs-toggle" onclick="toggleRefs()">Show references</button>
+  <div id="refs" class="refs-list">
+    <ol>
+      <li>Gillespie LD, Robertson MC, Gillespie WJ, et al. Interventions for preventing falls in older people living in the community. Cochrane Database Syst Rev. 2012;9:CD007146.</li>
+      <li>Campbell AJ, Robertson MC, Gardner MM, Norton RN, Buchner DM. Psychotropic medication withdrawal and a home-based exercise program to prevent falls: a randomized, controlled trial. J Am Geriatr Soc. 1999;47(7):850-3.</li>
+      <li>Sherrington C, Fairhall NJ, Wallbank GK, et al. Exercise for preventing falls in older people living in the community. Cochrane Database Syst Rev. 2019;1:CD012424.</li>
+      <li>Ministry of Health NZ. Older People's Health Data and Stats. Wellington: MoH; 2023.</li>
+      <li>Li F, Harmer P, Fisher KJ, et al. Tai Chi and fall reductions in older adults: a randomized controlled trial. J Gerontol A Biol Sci Med Sci. 2005;60(2):187-94.</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <p>This handout is for information only and does not replace advice from your doctor or physiotherapist. Always discuss falls prevention with your healthcare provider.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.acc-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+</script>
+
+</body>
+</html>

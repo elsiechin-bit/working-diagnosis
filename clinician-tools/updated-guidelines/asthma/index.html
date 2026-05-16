@@ -1,0 +1,372 @@
+---
+permalink: /workshop/guidelines/asthma/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asthma in Adults  -  Working Diagnosis</title>
+<meta name="description" content="NZ vs AU vs GINA 2024 guideline comparison for adult asthma management. ICS-formoterol as reliever, MART therapy, biologic access, and PHARMAC funded options.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #F5F1E8;
+  --warm:       #EDE7D8;
+  --deep:       #E4DBC4;
+  --ink:        #1A1F1C;
+  --soft:       #3A4540;
+  --mute:       #6B7A75;
+  --rule:       #D9D1BD;
+  --green:      #2F6B5C;
+  --green-deep: #1F4A3F;
+  --ochre:      #B8714F;
+  --au-blue:    #1A5CAD;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'Newsreader', Georgia, serif;
+  --font-m: 'JetBrains Mono', ui-monospace, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-b);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.008) 2px, rgba(0,0,0,.008) 4px);
+}
+a { color: var(--green-deep); text-decoration: none; }
+a:hover { color: var(--green); }
+
+.masthead { border-bottom: 1px solid var(--rule); padding: 20px 32px; background: var(--paper); position: sticky; top: 0; z-index: 50; }
+.masthead-row { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--font-d); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; }
+.brand em { font-style: italic; color: var(--green); }
+.primary-nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.primary-nav a { font-family: var(--font-m); font-size: 0.68rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.primary-nav a:hover { color: var(--green); }
+.primary-nav a.is-current { color: var(--green-deep); border-bottom: 1px solid var(--green-deep); padding-bottom: 2px; }
+
+.page-wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px 80px; }
+
+.page-header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.back-link { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); display: inline-block; margin-bottom: 24px; }
+.back-link:hover { color: var(--green); }
+.page-kicker { font-family: var(--font-m); font-size: 0.65rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
+.page-kicker::before { content: "❍ "; }
+.page-title { font-family: var(--font-d); font-weight: 500; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 12px; }
+.page-title em { font-style: italic; color: var(--green); }
+.page-dek { font-family: var(--font-b); font-size: 1.05rem; color: var(--soft); max-width: 580px; line-height: 1.55; margin-bottom: 22px; }
+.page-meta { display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); }
+
+.div-summary { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin: 36px 0; }
+@media (max-width: 600px) { .div-summary { grid-template-columns: 1fr; } }
+.div-col { padding: 24px 28px; }
+.div-col:first-child { border-right: 1px solid var(--rule); }
+.div-col-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 7px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-agree { background: var(--green); }
+.dot-diverge { background: var(--ochre); }
+.div-list { list-style: none; padding: 0; }
+.div-list li { font-family: var(--font-b); font-size: 15px; color: var(--soft); padding: 6px 0; border-bottom: 1px solid rgba(217,209,189,.5); line-height: 1.4; }
+.div-list li:last-child { border-bottom: none; }
+
+.section-head { font-family: var(--font-m); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--ochre); margin: 44px 0 16px; }
+.section-head::before { content: "❍ "; }
+
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--rule); margin-bottom: 44px; }
+.cmp-table { width: 100%; border-collapse: collapse; min-width: 660px; }
+.cmp-table thead th { padding: 13px 16px; text-align: left; font-family: var(--font-m); font-size: 0.56rem; letter-spacing: 1.8px; text-transform: uppercase; background: var(--warm); border-bottom: 1px solid var(--rule); }
+.cmp-table thead .th-domain { color: var(--mute); width: 148px; }
+.cmp-table thead .th-nz    { color: var(--green-deep); border-left: 3px solid var(--green); }
+.cmp-table thead .th-au    { color: var(--au-blue);    border-left: 3px solid var(--au-blue); }
+.cmp-table thead .th-int   { color: var(--soft);       border-left: 3px solid var(--rule); }
+.cmp-table tbody tr { border-top: 1px solid var(--rule); }
+.cmp-table tbody tr:nth-child(even) { background: rgba(237,231,216,.28); }
+.cmp-table tbody td { padding: 13px 16px; vertical-align: top; font-family: var(--font-b); font-size: 15px; line-height: 1.5; }
+.cmp-table .td-domain { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); line-height: 1.55; }
+.cmp-table .td-nz  { border-left: 3px solid rgba(47,107,92,.12); }
+.cmp-table .td-au  { border-left: 3px solid rgba(26,92,173,.12); }
+.cmp-table .td-int { border-left: 3px solid var(--rule); }
+.cmp-table tr.row-hi .td-nz { border-left-color: var(--ochre); background: rgba(184,113,79,.035); }
+
+.chip { display: inline-block; font-family: var(--font-m); font-size: 0.52rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 6px; margin-left: 5px; vertical-align: middle; border-radius: 2px; }
+.chip-funded     { background: rgba(47,107,92,.1);  color: var(--green-deep); }
+.chip-restricted { background: rgba(184,113,79,.12); color: var(--ochre); }
+.chip-nil        { background: rgba(140,30,30,.1);   color: #7A1C1C; }
+.chip-au         { background: rgba(26,92,173,.1);   color: var(--au-blue); }
+
+.nz-notes { background: rgba(237,231,216,.5); border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 28px 32px; margin-bottom: 32px; }
+.nz-notes-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-deep); margin-bottom: 20px; }
+.nz-notes h3 { font-family: var(--font-d); font-weight: 500; font-size: 1rem; margin: 22px 0 8px; color: var(--ink); }
+.nz-notes h3:first-of-type { margin-top: 0; }
+.nz-notes p { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 8px; }
+.nz-notes ul { padding-left: 18px; margin-bottom: 8px; }
+.nz-notes li { font-family: var(--font-b); font-size: 15px; color: var(--soft); line-height: 1.55; margin-bottom: 5px; }
+
+.bottom-line { border: 1px solid var(--ink); border-left: 3px solid var(--ink); padding: 24px 28px; margin-bottom: 40px; }
+.bottom-line-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 16px; }
+.bottom-line ol { padding-left: 20px; }
+.bottom-line li { font-family: var(--font-b); font-size: 15.5px; color: var(--soft); line-height: 1.55; margin-bottom: 9px; }
+
+.sources { border-top: 1px solid var(--rule); padding-top: 28px; }
+.sources-label { font-family: var(--font-m); font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; }
+.sources ol { padding-left: 20px; }
+.sources li { font-family: var(--font-b); font-size: 13.5px; color: var(--mute); line-height: 1.6; margin-bottom: 6px; }
+
+.site-footer { border-top: 1px solid var(--rule); max-width: 1080px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-family: var(--font-m); font-size: 0.62rem; color: var(--mute); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="/" class="brand">Working <em>Diagnosis</em>.</a>
+    <nav class="primary-nav" aria-label="Site navigation">
+      <a href="/lifestyle-prevention/">Lifestyle</a>
+      <a href="/msk/">MSK</a>
+      <a href="/paediatrics/">Paeds</a>
+      <a href="/geriatrics/">Geriatrics</a>
+      <a href="/gynaecology/">Gynae</a>
+      <a href="/dermatology/">Derm</a>
+      <a href="/mental-health/">Mental Health</a>
+      <a href="/infectious-disease/">Vaccines</a>
+      <a href="/infectious-disease/">Travel</a>
+      <a href="/clinician-tools/" class="is-current">Workbench</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <a href="/clinician-tools/updated-guidelines/" class="back-link">← Guideline Comparisons</a>
+    <p class="page-kicker">Respiratory</p>
+    <h1 class="page-title">Asthma in adults - <em>management</em></h1>
+    <p class="page-dek">How NZ, Australian, and GINA 2024 guidelines approach reliever therapy, maintenance stepping, MART, and biologic access for adult asthma - including where the end of SABA-only management changes what to prescribe in the consulting room.</p>
+    <div class="page-meta">
+      <span>Reviewed May 2026</span>
+      <span>BPAC NZ / Asthma NZ</span>
+      <span>NPS MedicineWise / NACA</span>
+      <span>GINA 2024</span>
+    </div>
+  </div>
+
+  <!-- Scope note -->
+  <p style="font-family: var(--font-m); font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); margin: 28px 0 -8px;">Scope: newly diagnosed and established asthma in adults aged 18 and over. Occupational asthma, asthma-COPD overlap, and acute severe asthma requiring hospital admission are not covered in detail.</p>
+
+  <!-- Agree / Diverge -->
+  <div class="div-summary">
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-agree"></span>Where they agree</p>
+      <ul class="div-list">
+        <li>Spirometry with post-bronchodilator reversibility is required to confirm the diagnosis; clinical suspicion alone is insufficient</li>
+        <li>ICS is the cornerstone of maintenance therapy; patients with any persistent symptoms need regular ICS</li>
+        <li>SABA-only management at any treatment step is no longer appropriate</li>
+        <li>Written asthma action plan for every patient; reduces hospitalisation and asthma mortality</li>
+        <li>Smoking cessation and allergen or trigger reduction remain important non-pharmacological interventions</li>
+        <li>Inhaler technique should be checked at every review, regardless of patient confidence</li>
+      </ul>
+    </div>
+    <div class="div-col">
+      <p class="div-col-label"><span class="dot dot-diverge"></span>Where they diverge</p>
+      <ul class="div-list">
+        <li>GINA 2024 Track 1 preferentially recommends ICS-formoterol as the reliever at all steps, replacing SABA; NZ and AU endorse this but real-world prescribing transition is incomplete</li>
+        <li>Biologic therapy for severe asthma: AU PBS funds omalizumab, mepolizumab, benralizumab, dupilumab, and tezepelumab; NZ PHARMAC access is more restricted</li>
+        <li>Tezepelumab (anti-TSLP, broadly applicable across T2 and non-T2 severe asthma): PBS-listed in AU; not funded in NZ</li>
+        <li>FeNO (fractional exhaled nitric oxide): GINA 2024 recommends for diagnosis, phenotyping, and biologic selection; not routinely available in NZ primary care</li>
+        <li>Montelukast: NZ and AU retain it as a step 2-3 add-on option; GINA 2024 has reduced its prominence relative to MART</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="section-head">Comparison</p>
+  <div class="cmp-wrap">
+    <table class="cmp-table" aria-label="Guideline comparison: asthma management in adults">
+      <thead>
+        <tr>
+          <th class="th-domain">Domain</th>
+          <th class="th-nz">NZ  -  BPAC / Asthma NZ</th>
+          <th class="th-au">AU  -  NPS MedicineWise / NACA</th>
+          <th class="th-int">International  -  GINA 2024</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="td-domain">Diagnosis and confirmation</td>
+          <td class="td-nz">Spirometry with bronchodilator reversibility: FEV1 improvement of ≥12% <em>and</em> ≥200 mL after salbutamol 400 mcg confirms variable airflow limitation. Peak flow variability (&gt;10%) is supportive. Clinical diagnosis alone is insufficient for initiating long-term therapy.</td>
+          <td class="td-au">Identical spirometry criteria. Australian Asthma Handbook emphasises that over-diagnosis is common where spirometry is not performed. Bronchial challenge testing (methacholine or mannitol) is recommended if spirometry is normal but asthma is strongly suspected.</td>
+          <td class="td-int">GINA 2024: variable airflow limitation confirmed by spirometry. Also recommends FeNO testing at diagnosis where available (FeNO ≥25 ppb supports eosinophilic inflammation). A normal spirometry result does not exclude asthma; serial peak flow monitoring or bronchial challenge may be needed. Excessive variability or reversibility on repeat testing is diagnostic.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Reliever therapy: the end of SABA-only</td>
+          <td class="td-nz">
+            Salbutamol remains widely prescribed as reliever in NZ, but BPAC and Asthma NZ have endorsed the move away from SABA-only management. <strong>Budesonide/formoterol as as-needed reliever</strong> is supported as an alternative to SABA at Step 1-2 for patients willing to use a single inhaler approach.<span class="chip chip-funded">Funded</span><br><br>
+            High salbutamol canister use (&gt;3 canisters per year) is a recognised risk marker for fatal asthma in NZ.<sup>1</sup>
+          </td>
+          <td class="td-au">
+            NPS MedicineWise and NACA endorse ICS-formoterol as the preferred reliever. SABA should no longer be the sole treatment for any patient, including those with infrequent symptoms. Provide ICS-formoterol or ensure daily low-dose ICS alongside any SABA prescription.<span class="chip chip-au">PBS</span>
+          </td>
+          <td class="td-int">
+            GINA 2024 <strong>Track 1 (preferred)</strong>: low-dose ICS-formoterol as the reliever at every step. SABA-only is no longer recommended at any step.<br><br>
+            <strong>Track 2 (alternative)</strong>: take low-dose ICS every time SABA is used (co-administration), or daily low-dose ICS with SABA PRN.<br><br>
+            Rationale: ICS-formoterol as reliever reduces exacerbations compared with SABA alone, even in patients with infrequent symptoms.<sup>2</sup>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Step 2: mild persistent asthma</td>
+          <td class="td-nz">
+            Daily low-dose ICS (e.g. beclomethasone 100-200 mcg/day or budesonide 200-400 mcg/day) with SABA reliever as needed.<span class="chip chip-funded">Funded</span><br><br>
+            Alternatively, switch to budesonide/formoterol as both maintenance and reliever (MART); one inhaler fulfils both roles.
+          </td>
+          <td class="td-au">Daily low-dose ICS plus SABA, or ICS-formoterol as-needed (preferred). The Australian Asthma Handbook encourages transition to ICS-formoterol as reliever to reduce the risk of under-treatment in patients who use more reliever than expected.<span class="chip chip-au">PBS</span></td>
+          <td class="td-int">Track 1 (preferred): low-dose ICS-formoterol as needed only, no separate daily maintenance dose required at Step 2 if symptoms are truly infrequent. Track 2: daily low-dose ICS plus SABA reliever. The as-needed ICS-formoterol approach at Step 2 has a strong evidence base from the SYGMA trials.<sup>3</sup></td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Steps 3-4: MART and ICS/LABA</td>
+          <td class="td-nz">
+            <strong>MART</strong> (Maintenance and Reliever Therapy): budesonide/formoterol used for both daily maintenance and as-needed relief is a funded, supported option. Low-dose budesonide/formoterol (e.g. 200/6 mcg twice daily) as maintenance, with additional puffs as needed.<span class="chip chip-funded">Funded</span><br><br>
+            Alternative: medium-dose ICS with a separate LABA (fluticasone/salmeterol) where MART is not suitable or preferred.
+          </td>
+          <td class="td-au">
+            MART strongly recommended. Budesonide/formoterol or beclomethasone/formoterol for MART. Only formoterol-containing ICS/LABA devices are appropriate for MART because formoterol has rapid onset comparable to SABA.<span class="chip chip-au">PBS</span><br><br>
+            Fluticasone/salmeterol is not suitable for use as a MART reliever because salmeterol has slow onset.
+          </td>
+          <td class="td-int">
+            Track 1 Step 3: low-dose ICS-formoterol maintenance + as-needed (MART). Step 4: medium-dose ICS-formoterol MART.<br><br>
+            Track 2: low-dose or medium-dose ICS/LABA maintenance + SABA reliever. Salmeterol- or vilanterol-containing inhalers (Seretide, Breo) are not suitable for MART because they are slow-onset LABAs.<br><br>
+            MART simplifies treatment and is associated with fewer severe exacerbations than standard ICS/LABA plus SABA regimens.<sup>4</sup>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Add-on therapy: LTRA, LAMA, azithromycin</td>
+          <td class="td-nz">
+            <strong>Montelukast</strong> (LTRA): add-on at Step 2-3 for allergic asthma or exercise-induced symptoms. Funded, no restrictions.<span class="chip chip-funded">Funded</span> Note FDA warning on neuropsychiatric effects (depression, suicidality); document informed consent.<br><br>
+            <strong>Tiotropium</strong> (LAMA): add-on at Step 4-5 for uncontrolled asthma on medium-dose ICS/LABA; funded in NZ (primary indication is COPD, but use in asthma is supported by evidence).<span class="chip chip-funded">Funded</span><br><br>
+            <strong>Azithromycin</strong>: specialist-initiated for severe non-eosinophilic asthma with frequent exacerbations.
+          </td>
+          <td class="td-au">Montelukast as add-on (step 2-3) with the same neuropsychiatric caveat. Tiotropium (Spiriva Respimat) PBS-listed as add-on for adults with uncontrolled asthma on medium-high dose ICS/LABA. Azithromycin (500 mg three times weekly) in adults with uncontrolled asthma despite optimised treatment.<span class="chip chip-au">PBS</span></td>
+          <td class="td-int">GINA 2024: tiotropium add-on at Step 4-5 reduces exacerbations and improves lung function. Montelukast is an alternative at Step 2-3 but is generally less effective than ICS. Azithromycin 500 mg three times weekly reduces exacerbations in adults with persistent symptoms despite optimised therapy regardless of eosinophil phenotype, but requires audiological review. GINA 2024 has explicitly de-escalated LTRA from its former position given the neuropsychiatric safety signal and the superiority of MART.</td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">Step 5: severe uncontrolled asthma and biologics</td>
+          <td class="td-nz">
+            Refer to respiratory medicine or allergy. Biologic therapy is available for eligible patients but requires specialist assessment. Funded options with Special Authority:<br><br>
+            <strong>Omalizumab</strong> (anti-IgE): for severe persistent allergic asthma with elevated total IgE and sensitisation confirmed on skin prick or RAST. Age criteria apply.<span class="chip chip-funded">SA required</span><br><br>
+            <strong>Mepolizumab</strong> (anti-IL5): for severe eosinophilic asthma with blood eosinophils ≥300 cells/µL and ≥3 exacerbations in the prior year despite high-dose ICS/LABA.<span class="chip chip-funded">SA required</span><br><br>
+            <strong>Benralizumab, dupilumab, tezepelumab</strong>: not funded in NZ as of the time of writing. Confirm current PHARMAC schedule for updates.<span class="chip chip-nil">Check PHARMAC</span>
+          </td>
+          <td class="td-au">
+            Specialist-initiated. PBS-funded biologics for severe uncontrolled asthma:<br><br>
+            <strong>Omalizumab</strong>: severe allergic asthma, elevated IgE and positive allergen sensitisation.<span class="chip chip-au">PBS</span><br>
+            <strong>Mepolizumab</strong>: severe eosinophilic asthma, eos ≥150-300 cells/µL threshold criteria.<span class="chip chip-au">PBS</span><br>
+            <strong>Benralizumab</strong>: severe eosinophilic asthma, eos ≥150 cells/µL.<span class="chip chip-au">PBS</span><br>
+            <strong>Dupilumab</strong>: uncontrolled moderate-to-severe asthma with T2 inflammation (eos ≥150 or FeNO ≥25).<span class="chip chip-au">PBS</span><br>
+            <strong>Tezepelumab</strong>: severe uncontrolled asthma regardless of eosinophil count (non-T2 asthma included).<span class="chip chip-au">PBS</span>
+          </td>
+          <td class="td-int">
+            GINA 2024: phenotype-guided add-on biologic therapy at Step 5 for severe uncontrolled asthma despite high-dose ICS/LABA plus additional controller.<br><br>
+            T2-high (eosinophilic/allergic): omalizumab (if allergic), mepolizumab, benralizumab, dupilumab, tezepelumab.<br><br>
+            T2-low or mixed: tezepelumab (anti-TSLP, acts upstream of T2 signalling and benefits a broader phenotypic range than anti-IL5 or anti-IgE agents).<br><br>
+            Blood eosinophils and FeNO are the primary biomarkers for biologic selection. Response should be assessed at 4 months and biologics discontinued if there is no meaningful benefit.
+          </td>
+        </tr>
+
+        <tr class="row-hi">
+          <td class="td-domain">FeNO and biomarker-guided phenotyping</td>
+          <td class="td-nz">FeNO testing is not routinely available in NZ primary care. Specialist respiratory or allergy services may have access. Blood eosinophils (available as part of a standard FBC differential) are a practical surrogate for phenotyping in primary care. Allergen skin-prick testing or specific IgE is available via referral and is required for omalizumab eligibility assessment.</td>
+          <td class="td-au">FeNO testing is more widely available in AU specialist and some GP settings. The Australian Asthma Handbook uses FeNO ≥25 ppb as evidence of eosinophilic airway inflammation. FeNO is used in diagnosis, guiding ICS dose, and biologic eligibility assessment (dupilumab and some mepolizumab criteria).<span class="chip chip-au">More accessible in AU</span></td>
+          <td class="td-int">GINA 2024: FeNO is a validated biomarker for type 2 airway inflammation. Recommended for diagnosis (where available), predicting ICS response, and biologic eligibility. FeNO ≥25 ppb (in adults) indicates eosinophilic inflammation. Blood eosinophils ≥150-300 cells/µL and FeNO ≥25 ppb are the most practical biomarkers for biologic selection when FeNO devices are not available.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Stepping down</td>
+          <td class="td-nz">Review for step-down after 3 months of well-controlled asthma (no symptoms, no reliever use, normal lung function). Reduce ICS dose by 25-50% at each step. Do not stop ICS completely in adults unless there is diagnostic uncertainty. Schedule review after any step change.</td>
+          <td class="td-au">Identical approach. NACA recommends active step-down review rather than waiting for the patient to raise it. Stopping ICS entirely is rarely appropriate for adults with established asthma.</td>
+          <td class="td-int">GINA 2024: step down once asthma has been well-controlled for ≥3 months. Attempt the lowest ICS dose that maintains control. In adults on MART, step down by reducing maintenance dose before ceasing reliever use. Assess before step-down: spirometry, symptom control, exacerbation history, environmental exposures.</td>
+        </tr>
+
+        <tr>
+          <td class="td-domain">Written action plan and monitoring</td>
+          <td class="td-nz">All patients should have a written asthma action plan. NZ has free downloadable templates via Asthma NZ and BPAC. Annual review recommended for stable patients; 4-6 weekly review after any change in treatment. Reliever canister use is a practical proxy for control: &gt;2 puffs per week (excluding pre-exercise) warrants review.</td>
+          <td class="td-au">Written action plan for all patients; symptom-based (not peak flow-based) plans are generally preferred for adults. The NACA Asthma Action Plan template is widely used. Review every 6-12 months when stable, or within 4 weeks of any exacerbation or treatment change.</td>
+          <td class="td-int">GINA 2024: written action plan is one of the strongest evidence-based interventions for reducing asthma-related hospitalisations and deaths. Recommend symptom-based plans (not peak flow-only) for most adults. Assess the ACQ or ACT at each review. Lung function (spirometry) annually for all patients on regular ICS.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-head">NZ clinical context</p>
+  <div class="nz-notes">
+    <p class="nz-notes-label">PHARMAC funding, NZ-specific evidence, and population considerations</p>
+
+    <h3>Funded inhaler options for asthma in NZ</h3>
+    <p>The practical pharmacotherapy options available through PHARMAC are:</p>
+    <ul>
+      <li><strong>SABA:</strong> Salbutamol (MDI and nebules) is fully funded. Still the most widely prescribed reliever in NZ, though guidelines now support transitioning appropriate patients to ICS-formoterol as reliever.</li>
+      <li><strong>ICS monotherapy:</strong> Beclomethasone (QVAR) and budesonide (Pulmicort) are funded. Fluticasone propionate is funded. These remain the cornerstone of maintenance therapy for patients not yet on combination inhalers.</li>
+      <li><strong>ICS/LABA combinations:</strong> Budesonide/formoterol (Symbicort) is funded and is the key MART-capable inhaler in NZ. Fluticasone propionate/salmeterol (generic equivalents of Seretide) is funded but is not suitable for MART use because salmeterol is a slow-onset LABA.</li>
+      <li><strong>LTRA:</strong> Montelukast is funded, no restrictions.</li>
+      <li><strong>LAMA:</strong> Tiotropium (Spiriva) is funded; its primary funded indication is COPD, but it can be used as add-on therapy for severe asthma in appropriate patients.</li>
+      <li><strong>Biologics:</strong> Omalizumab and mepolizumab are funded with Special Authority criteria (see Step 5 row above). Confirm current access via the PHARMAC pharmaceutical schedule, as funded indications evolve.</li>
+    </ul>
+
+    <h3>The PRACTICAL trial: NZ evidence for ICS-formoterol as reliever</h3>
+    <p>The PRACTICAL trial, conducted in NZ and published in <em>The Lancet</em> in 2019, directly underpins the GINA 2024 Track 1 recommendation. The trial randomised adults with asthma to budesonide/formoterol used as both maintenance and reliever versus budesonide maintenance with terbutaline (SABA) reliever. The ICS-formoterol reliever group had significantly fewer severe exacerbations.<sup>2</sup></p>
+    <p>This means NZ GPs are well-placed to implement GINA 2024 Track 1: the evidence was generated here, and the key inhaler (budesonide/formoterol) is funded.</p>
+
+    <h3>NZ asthma mortality and the SABA overuse signal</h3>
+    <p>NZ has historically had one of the highest asthma death rates in the developed world. Studies have consistently linked dispensing of high numbers of SABA canisters per year with risk of fatal and near-fatal asthma, independent of asthma severity. BPAC NZ has highlighted that dispensing more than 3 salbutamol canisters per year should prompt an urgent review: it indicates poor asthma control and likely insufficient ICS use.<sup>1</sup> This SABA overuse signal is more important than any individual symptom score for identifying patients at risk.</p>
+
+    <h3>The biologic gap</h3>
+    <p>The most clinically significant NZ versus AU divergence is biologic access for severe uncontrolled asthma. AU clinicians can prescribe tezepelumab (broadly applicable across T2 and non-T2 phenotypes), benralizumab, and dupilumab for appropriate patients. In NZ, patients who might benefit from these agents are currently restricted to omalizumab (if allergic phenotype confirmed) or mepolizumab (if eosinophilic criteria met), subject to PHARMAC Special Authority. Patients with severe uncontrolled asthma on high-dose ICS/LABA who do not meet the funded criteria for either available biologic have no funded escalation pathway beyond referral to a tertiary centre. If you have such a patient, refer early: accessing unfunded biologics through compassionate access or pharmaceutical company patient support programmes is possible in some cases, and should be explored at a specialist level.</p>
+
+    <h3>Maori and Pacific peoples</h3>
+    <p>Asthma prevalence, hospitalisation, and mortality rates are disproportionately higher in Maori and Pacific peoples in NZ. A combination of higher prevalence, greater barrier to accessing timely primary care, and underuse of ICS maintenance therapy contributes to this disparity. Written action plans and regular review are particularly important in these populations. Address any barriers to ICS use directly, including cost of accessories (spacers are funded for children but not always adults), inhaler technique, and health literacy around the role of preventer versus reliever therapy.</p>
+  </div>
+
+  <p class="section-head">Bottom line for NZ practice</p>
+  <div class="bottom-line">
+    <p class="bottom-line-label">What this means in the consulting room</p>
+    <ol>
+      <li>Do not leave any patient on salbutamol alone. Even for mild or infrequent asthma, ensure they are either on daily low-dose ICS or have been switched to ICS-formoterol (budesonide/formoterol) as their reliever. The evidence for this change was generated in NZ, and the inhaler is funded.</li>
+      <li>For mild-to-moderate persistent asthma, consider MART: budesonide/formoterol for both daily maintenance and as-needed relief. One funded inhaler, one technique to teach, fewer severe exacerbations. Not every patient will suit it, but it should be the default conversation.</li>
+      <li>Count the salbutamol canisters. More than 3 canisters dispensed in a year is a red flag for fatal asthma risk. Pull the dispensing history and book a review.</li>
+      <li>For severe uncontrolled asthma not responding to high-dose ICS/LABA: refer to respiratory medicine or allergy before concluding there is nothing more to offer. Omalizumab and mepolizumab are funded in NZ with Special Authority; check that eligible patients are not being left on inadequate therapy when a biologic would help.</li>
+      <li>Give every patient a written action plan. Download the Asthma NZ template, personalise it, and go through it at the visit. This single intervention has stronger evidence for reducing asthma death and hospitalisation than almost any pharmacological step-up.</li>
+    </ol>
+  </div>
+
+  <div class="sources">
+    <p class="sources-label">Sources</p>
+    <ol>
+      <li>Beasley R, Weatherall M, Aldington S, et al. Salbutamol overuse: serious medical risk. N Z Med J. 2008;121(1283):109-113.</li>
+      <li>Hardy J, Baggott C, Fingleton J, et al. Budesonide-formoterol reliever therapy versus maintenance budesonide plus terbutaline reliever therapy in adults with asthma (PRACTICAL): a 52-week, open-label, multicentre, superiority, randomised controlled trial. Lancet. 2019;394(10202):919-928.</li>
+      <li>Bateman ED, Reddel HK, O'Byrne PM, et al. As-needed budesonide-formoterol versus maintenance budesonide in mild asthma (SYGMA 2): a randomised, parallel-group, double-blind trial. Lancet. 2018;392(10154):1253-1261.</li>
+      <li>O'Byrne PM, FitzGerald JM, Bateman ED, et al. Inhaled combined budesonide-formoterol as needed in mild asthma (SYGMA 1). N Engl J Med. 2018;378(20):1865-1876.</li>
+      <li>Global Initiative for Asthma. Global strategy for asthma management and prevention: 2024 report. Available from: ginasthma.org</li>
+      <li>National Asthma Council Australia. Australian Asthma Handbook, Version 3.0. Melbourne: National Asthma Council Australia; 2022. Available from: asthmahandbook.org.au</li>
+      <li>PHARMAC. New Zealand Pharmaceutical Schedule. Available from: pharmac.govt.nz [accessed 2025].</li>
+    </ol>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <span class="footer-brand">Working Diagnosis · workingdiagnosis.xyz</span>
+</footer>
+
+</body>
+</html>

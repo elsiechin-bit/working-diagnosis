@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medications for Weight Management - Working Diagnosis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F5F1E8;
+    --warm:  #EDE7D8;
+    --deep:  #E4DBC4;
+    --ink:   #1A1F1C;
+    --soft:  #3A4540;
+    --mute:  #6B7A75;
+    --green: #2F6B5C;
+    --green-deep: #1F4A3F;
+    --ochre: #B8714F;
+    --rule:  #D9D1BD;
+    --serif-display: 'Fraunces', Georgia, serif;
+    --serif-body:    'Newsreader', Georgia, serif;
+    --mono:          'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 3rem 3rem 4rem;
+  }
+
+  /* Masthead */
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1.5px solid var(--rule);
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .brand {
+    font-family: var(--serif-display);
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--green-deep);
+    letter-spacing: -0.01em;
+  }
+
+  .pillar-tag {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+
+  /* Headings */
+  h1 {
+    font-family: var(--serif-display);
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 0.4rem;
+  }
+
+  h2 {
+    font-family: var(--serif-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 2.5rem 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-family: var(--serif-display);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--green-deep);
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* Kicker */
+  .kicker {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ochre);
+    letter-spacing: 0.02em;
+    margin: 0 0 2rem;
+  }
+
+  .kicker em { font-style: italic; }
+
+  /* Body copy */
+  p {
+    color: var(--soft);
+    margin: 0 0 1rem;
+  }
+
+  em { color: var(--green); font-style: italic; }
+
+  sup {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--green);
+    vertical-align: super;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.25rem 0;
+  }
+
+  /* Comparison chart */
+  .comp {
+    background: var(--warm);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .comp-title {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--mute);
+    margin-bottom: 1.1rem;
+  }
+
+  .bar-row { margin-bottom: 11px; }
+
+  .bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--soft);
+    margin-bottom: 3px;
+  }
+
+  .bar-outer {
+    background: var(--deep);
+    border-radius: 3px;
+    height: 8px;
+    overflow: hidden;
+  }
+
+  .bar-inner {
+    height: 100%;
+    background: var(--green);
+    border-radius: 3px;
+  }
+
+  /* Drug cards */
+  .drug-card {
+    background: var(--warm);
+    border-left: 3px solid var(--green);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .drug-meta {
+    font-family: var(--mono);
+    font-size: 0.67rem;
+    color: var(--mute);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+
+  .b-yes  { background: #C6E3DC; color: #1F4A3F; }
+  .b-no   { background: #F0E0D7; color: #7A3D25; }
+  .b-part { background: #EFE9CD; color: #6B5A1A; }
+
+  /* Disclaimer */
+  .disclaimer {
+    font-size: 0.82rem;
+    color: var(--mute);
+    border-top: 1px solid var(--rule);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    font-style: italic;
+  }
+
+  /* References */
+  .refs {
+    font-size: 0.8rem;
+    color: var(--mute);
+    margin-top: 1.25rem;
+  }
+
+  .refs-label {
+    font-family: var(--mono);
+    font-size: 0.67rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--mute);
+    margin-bottom: 0.4rem;
+  }
+
+  .refs ol {
+    padding-left: 1.4rem;
+    margin: 0;
+  }
+
+  .refs li { margin-bottom: 4px; }
+
+  /* Print */
+  @media print {
+    body { font-size: 11pt; background: white; }
+    .page { padding: 1.5cm 2cm; max-width: 100%; }
+    .drug-card, .comp { break-inside: avoid; }
+    h2 { page-break-after: avoid; }
+    .masthead { margin-bottom: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <span class="brand">Working Diagnosis</span>
+    <span class="pillar-tag">&#10067; Lifestyle</span>
+  </div>
+
+  <h1>Medications for Weight Management</h1>
+  <p class="kicker">&#10067; <em>When lifestyle changes need a hand</em></p>
+
+  <p>Weight management medications are not a quick fix, and they are not for everyone. But for the right person, they can make a meaningful difference - shifting the metabolic dial enough to make sustained lifestyle change more achievable, and in some cases substantially reducing the health risks that come with significant excess weight.</p>
+
+  <p>No medication works in isolation. Every weight management drug studied has been trialled alongside dietary and behavioural support. What medications can do is make the hard work of changing eating and activity habits somewhat easier. What they cannot do is change the underlying environment, habits, or circumstances that drive weight gain in the first place. Stopping medication also typically leads to partial or complete weight regain - not a personal failure, but a physiological reality of how weight regulation works.<sup>1</sup></p>
+
+  <hr>
+
+  <h2>How the options compare</h2>
+
+  <div class="comp">
+    <div class="comp-title">Total body weight lost at approximately one year (trial averages)</div>
+
+    <div class="bar-row">
+      <div class="bar-label"><span>Orlistat</span><span>3-5%</span></div>
+      <div class="bar-outer"><div class="bar-inner" style="width:18%"></div></div>
+    </div>
+
+    <div class="bar-row">
+      <div class="bar-label"><span>Phentermine (12 weeks)</span><span>~5%</span></div>
+      <div class="bar-outer"><div class="bar-inner" style="width:23%"></div></div>
+    </div>
+
+    <div class="bar-row">
+      <div class="bar-label"><span>Liraglutide 3mg (Saxenda)</span><span>8.4%</span></div>
+      <div class="bar-outer"><div class="bar-inner" style="width:38%"></div></div>
+    </div>
+
+    <div class="bar-row">
+      <div class="bar-label"><span>Semaglutide 2.4mg (Wegovy)</span><span>14.9%</span></div>
+      <div class="bar-outer"><div class="bar-inner" style="width:68%"></div></div>
+    </div>
+
+    <div class="bar-row">
+      <div class="bar-label"><span>Tirzepatide (Mounjaro &mdash; emerging)</span><span>~20-22%</span></div>
+      <div class="bar-outer"><div class="bar-inner" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>The medications</h2>
+
+  <div class="drug-card">
+    <div class="drug-meta">
+      Orlistat &middot; 120&nbsp;mg three times daily
+      <span class="badge b-yes">Pharmac-funded</span>
+    </div>
+    <h3>Orlistat (Xenical / Alli)</h3>
+    <p>Blocks the gut enzyme that breaks down dietary fat, so roughly a third of the fat you eat passes through unabsorbed rather than being absorbed. Does not affect appetite. Average additional weight loss is around 2.9&nbsp;kg over one year compared with placebo, though people who eat a lower-fat diet often respond better.<sup>2,3</sup></p>
+    <p><em>Side effects:</em> Loose oily stools, urgency, and flatulence, directly proportional to how much fat you eat. Take a daily multivitamin at a different time to the medication, as fat-soluble vitamins are less well absorbed.</p>
+    <p><em>Availability:</em> Prescription-only in NZ at 120&nbsp;mg (Xenical), Pharmac-funded with criteria. Also available over the counter at 60&nbsp;mg (Alli) with pharmacist supervision, but less effective.</p>
+  </div>
+
+  <div class="drug-card">
+    <div class="drug-meta">
+      Liraglutide &middot; 3&nbsp;mg daily injection
+      <span class="badge b-no">Not Pharmac-funded</span>
+    </div>
+    <h3>Liraglutide (Saxenda)</h3>
+    <p>A GLP-1 receptor agonist that mimics a gut hormone released after eating, slowing gastric emptying and signalling fullness to the brain. The SCALE trial found average weight loss of 8.4% of body weight over 56 weeks, versus 2.8% on placebo. Injected daily using a pen device.<sup>4</sup></p>
+    <p><em>Side effects:</em> Nausea is very common during dose escalation (typically over 5 weeks) and usually settles. Vomiting, constipation, and diarrhoea also occur. Not suitable if you have a personal or family history of medullary thyroid carcinoma or multiple endocrine neoplasia type 2.</p>
+    <p><em>Availability:</em> Prescription-only. Not currently Pharmac-funded for weight management in NZ; must be paid for privately. Your GP can discuss costs.</p>
+  </div>
+
+  <div class="drug-card">
+    <div class="drug-meta">
+      Semaglutide &middot; 2.4&nbsp;mg weekly injection
+      <span class="badge b-part">Funded for type 2 diabetes only</span>
+    </div>
+    <h3>Semaglutide (Ozempic / Wegovy)</h3>
+    <p>A longer-acting GLP-1 agonist, injected once weekly. At the obesity dose (2.4&nbsp;mg, marketed as Wegovy), the STEP 1 trial found average weight loss of 14.9% of body weight over 68 weeks, with nearly a third of participants losing more than 20% of their weight. This is the largest effect of any currently available weight management medication.<sup>5</sup></p>
+    <p><em>Side effects:</em> Similar to liraglutide. Nausea during dose escalation is common but manageable for most people. Same thyroid cancer contraindications apply.</p>
+    <p><em>NZ note:</em> Ozempic (lower doses) is Pharmac-funded for type 2 diabetes with criteria. Wegovy (obesity dose) was not funded and had limited NZ availability in early 2025 due to global supply pressures. Confirm current status with your GP - this landscape is changing.</p>
+  </div>
+
+  <div class="drug-card">
+    <div class="drug-meta">
+      Phentermine &middot; 15-37.5&nbsp;mg oral, short-term only
+      <span class="badge b-part">Rx only &middot; Schedule 4</span>
+    </div>
+    <h3>Phentermine</h3>
+    <p>A stimulant that suppresses appetite by increasing noradrenaline release in the brain. Produces modest short-term weight loss of around 3-5&nbsp;kg over 12 weeks compared with placebo. Restricted to short-term use (typically up to 12 weeks) as it tends to lose effectiveness as the body adapts, and long-term safety data are limited.<sup>6</sup></p>
+    <p><em>Side effects:</em> Raised heart rate and blood pressure, insomnia, dry mouth, and restlessness. Not suitable for people with cardiovascular disease, uncontrolled hypertension, hyperthyroidism, or a history of stimulant misuse.</p>
+    <p><em>Availability:</em> Prescription-only in NZ, Schedule 4 controlled substance. Less commonly used as a first-line option given the short-term restriction and stimulant profile.</p>
+  </div>
+
+  <hr>
+
+  <h2>A note on tirzepatide and newer agents</h2>
+
+  <p>Tirzepatide (Mounjaro) is a dual GIP/GLP-1 receptor agonist that has shown even larger average weight losses in trials than semaglutide, around 20-22% of body weight at the highest doses. As of early 2025 it was approved in NZ for type 2 diabetes but not yet widely available or funded for weight management. This field is moving quickly, and the treatment landscape in the next year or two will likely look different from today.<sup>7</sup></p>
+
+  <hr>
+
+  <h2>Who might be considered?</h2>
+
+  <p>General criteria: a body mass index (BMI) of 30&nbsp;kg/m&#178; or above, or 27&nbsp;kg/m&#178; or above in someone with a weight-related health condition such as type 2 diabetes, high blood pressure, obstructive sleep apnoea, or significant joint disease. BMI has real limitations as a measure of health - it does not account for muscle mass, ethnicity, or where fat is distributed - and your GP will consider the broader picture.</p>
+
+  <p>Medications are generally considered after meaningful attempts at dietary change and increased physical activity. They work alongside those efforts, not instead of them.</p>
+
+  <hr>
+
+  <h2>What to expect</h2>
+
+  <p>GLP-1 agonists require a gradual dose escalation over several weeks to manage nausea. Response is typically reviewed at 12-16 weeks at the full dose - if you have not lost at least 5% of body weight by then, that medication is unlikely to be the right fit for you and other options can be discussed.</p>
+
+  <p>Stopping medication usually leads to partial or complete weight regain. Multiple studies following people who stopped semaglutide after 68 weeks found they regained most of the weight within a year.<sup>8</sup> Whether long-term or intermittent use makes sense is a conversation to have with your GP. Cost is a real barrier for the more effective modern options, and it is worth raising this directly if it applies to you.</p>
+
+  <hr>
+
+  <p class="disclaimer">This handout is written for general information. It does not replace a conversation with your own GP, who knows your full history and can advise on what is appropriate for you specifically. Prescribing criteria and funding status for some medications change - always confirm current availability with your prescriber.</p>
+
+  <div class="refs">
+    <div class="refs-label">References</div>
+    <ol>
+      <li>MacLean PS, Bergouignan A, Cornier MA, Jackman MR. Biology's response to dieting: the impetus for weight regain. Am J Physiol Regul Integr Comp Physiol. 2011;301(3):R581-600.</li>
+      <li>Rucker D, Padwal R, Li SK, Curioni C, Lau DC. Long term pharmacotherapy for obesity and overweight: updated meta-analysis. BMJ. 2007;335(7631):1194-9.</li>
+      <li>Torgerson JS, Hauptman J, Boldrin MN, Sj&#246;str&#246;m L. XENical in the prevention of diabetes in obese subjects (XENDOS) study. Diabetes Care. 2004;27(1):155-61.</li>
+      <li>Pi-Sunyer X, Astrup A, Fujioka K, et al. A randomized, controlled trial of 3.0&nbsp;mg of liraglutide in weight management. N Engl J Med. 2015;373(1):11-22.</li>
+      <li>Wilding JPH, Batterham RL, Calanna S, et al. Once-weekly semaglutide in adults with overweight or obesity. N Engl J Med. 2021;384(11):989-1002.</li>
+      <li>Haddock CK, Poston WS, Dill PL, Foreyt JP, Ericsson M. Pharmacotherapy for obesity: a quantitative analysis of four decades of published randomized clinical trials. Int J Obes Relat Metab Disord. 2002;26(2):262-73.</li>
+      <li>Jastreboff AM, Aronne LJ, Ahmad NN, et al. Tirzepatide once weekly for the treatment of obesity. N Engl J Med. 2022;387(3):205-16.</li>
+      <li>Wilding JPH, Batterham RL, Davies M, et al. Weight regain and cardiometabolic effects after withdrawal of semaglutide. Diabetes Obes Metab. 2022;24(8):1553-64.</li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}  -  {{ site.title }}</title>
+  <meta name="description" content="{{ description or site.tagline }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+<body>
+
+  {% include "header.njk" %}
+
+  <div class="page-wrapper{% if hasToc %} has-toc{% endif %}">
+
+    {% if hasToc %}
+    <aside class="page-toc" id="page-toc" aria-label="On this page" data-pagefind-ignore>
+      {# populated by toc.js #}
+    </aside>
+    {% endif %}
+
+    <main class="main-content" data-pagefind-body>
+      {{ content | safe }}
+    </main>
+
+    {% if pageType != "handout" %}
+    <aside class="sidebar-tools" data-pagefind-ignore>
+      {% if summary %}
+      <div class="note-summary-aside">
+        <p class="aside-kicker">&#10063; At a glance</p>
+        <div class="note-summary-aside__body">
+          {{ summary | safe }}
+        </div>
+      </div>
+      {% endif %}
+    </aside>
+    {% endif %}
+
+  </div>
+
+  <!-- Search dropdown -->
+  <div id="search-dropdown" class="search-dropdown" hidden>
+    <div id="search"></div>
+  </div>
+
+  {% include "footer.njk" %}
+
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script src="/assets/site.js"></script>
+
+  {% if hasToc %}
+  <script src="/assets/toc.js"></script>
+  {% endif %}
+
+</body>
+</html>

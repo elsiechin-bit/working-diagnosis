@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's Your GP Consultation Style?</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F4EFE3;
+    --bg-card: #FBF8F0;
+    --bg-soft: #EFEADD;
+    --ink: #232323;
+    --ink-soft: #5A5A5A;
+    --ink-muted: #8B8B85;
+    --line: #DDD5C0;
+    --line-soft: #E8E2CF;
+    --accent: #8A6E3F;
+    --accent-deep: #6B5530;
+    --shadow: 0 1px 2px rgba(40, 30, 10, 0.04), 0 8px 24px rgba(40, 30, 10, 0.06);
+    --shadow-lg: 0 4px 8px rgba(40, 30, 10, 0.06), 0 24px 48px rgba(40, 30, 10, 0.10);
+
+    --c-detective: #2E4A6B;
+    --c-empath:    #B96B7A;
+    --c-coach:     #5A8F4D;
+    --c-educator:  #C28A2E;
+    --c-pragmatist:#4F5862;
+    --c-guardian:  #2D7B7E;
+    --c-healer:    #7E8B4F;
+
+    --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(190, 165, 110, 0.08), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(130, 145, 110, 0.07), transparent 40%);
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+
+  .screen { display: none; animation: fadeIn 0.45s ease; }
+  .screen.visible { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---------- Welcome ---------- */
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 8px 0 12px;
+  }
+
+  h1.title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(34px, 5.5vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    color: var(--ink);
+  }
+
+  h1.title em {
+    font-style: italic;
+    color: var(--accent-deep);
+  }
+
+  .lede {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 0 28px;
+  }
+
+  .info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 0 0 32px;
+    box-shadow: var(--shadow);
+  }
+
+  .info-card p { margin: 0 0 10px; }
+  .info-card p:last-child { margin-bottom: 0; }
+  .info-card .muted {
+    font-size: 14px;
+    color: var(--ink-muted);
+  }
+
+  .archetype-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 30px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .chip .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn-primary {
+    background: var(--ink);
+    color: var(--bg);
+    border: 1px solid var(--ink);
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--sans);
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+    box-shadow: var(--shadow);
+  }
+  .btn-primary:hover {
+    background: var(--accent-deep);
+    border-color: var(--accent-deep);
+    transform: translateY(-1px);
+  }
+  .btn-primary:active { transform: translateY(0); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: var(--sans);
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .btn-secondary:hover {
+    border-color: var(--ink);
+    background: var(--bg-card);
+  }
+
+  .btn-back {
+    background: transparent;
+    border: none;
+    color: var(--ink-muted);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 0;
+    font-family: var(--sans);
+    transition: color 0.15s ease;
+  }
+  .btn-back:hover { color: var(--ink); }
+  .btn-back:disabled {
+    visibility: hidden;
+  }
+
+  /* ---------- Quiz ---------- */
+  .progress {
+    height: 4px;
+    background: var(--line-soft);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 36px;
+  }
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-deep));
+    width: 0%;
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 999px;
+  }
+
+  .q-counter {
+    font-size: 13px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin: 0 0 12px;
+  }
+
+  .q-text {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(24px, 3.4vw, 30px);
+    line-height: 1.3;
+    margin: 0 0 28px;
+    color: var(--ink);
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    font-family: var(--sans);
+    font-size: 15.5px;
+    line-height: 1.5;
+    color: var(--ink);
+    width: 100%;
+  }
+  .option:hover {
+    border-color: var(--accent);
+    background: #FFF;
+    transform: translateX(2px);
+  }
+  .option.selected {
+    border-color: var(--accent-deep);
+    background: #FFF;
+    box-shadow: 0 0 0 3px rgba(138, 110, 63, 0.15);
+  }
+  .option-letter {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    transition: all 0.18s ease;
+    margin-top: 1px;
+  }
+  .option:hover .option-letter,
+  .option.selected .option-letter {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #FFF;
+  }
+  .option-text { flex: 1; }
+
+  .quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--line-soft);
+  }
+  .quiz-hint {
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  /* ---------- Results ---------- */
+  .result-hero {
+    background: var(--bg-card);
+    border-radius: 14px;
+    padding: 40px 36px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+  }
+  .result-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: var(--archetype-color, var(--accent));
+  }
+
+  .result-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .result-name {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(36px, 5.5vw, 52px);
+    line-height: 1.05;
+    color: var(--archetype-color, var(--ink));
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .result-name .emoji {
+    margin-right: 12px;
+    font-style: normal;
+  }
+  .result-tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink-soft);
+    margin: 0 0 24px;
+  }
+  .result-description {
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.65;
+    margin-bottom: 0;
+  }
+
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 0 0 28px;
+  }
+  @media (max-width: 560px) {
+    .result-grid { grid-template-columns: 1fr; }
+  }
+
+  .panel {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+  }
+  .panel h3 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 14px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .panel h3 .marker {
+    width: 6px; height: 6px; border-radius: 50%;
+  }
+  .panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .panel li {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    padding: 6px 0;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .panel li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--ink-muted);
+  }
+
+  .famous {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--archetype-color, var(--accent));
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+  .famous strong { color: var(--ink); }
+
+  .distribution {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 26px 28px;
+    margin-bottom: 28px;
+  }
+  .distribution h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0 0 6px;
+  }
+  .distribution-sub {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin: 0 0 22px;
+  }
+
+  .bar-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 50px;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  @media (max-width: 480px) {
+    .bar-row { grid-template-columns: 110px 1fr 44px; }
+  }
+  .bar-name {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bar-track {
+    height: 8px;
+    background: var(--bg-soft);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    width: 0;
+    transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .bar-pct {
+    font-size: 13px;
+    color: var(--ink-muted);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .bar-row.primary .bar-name { font-weight: 700; }
+
+  .top-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 560px) {
+    .top-three { grid-template-columns: 1fr; }
+  }
+  .top-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    border-top: 3px solid var(--card-color);
+  }
+  .top-card .rank {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-muted);
+    font-weight: 600;
+  }
+  .top-card .top-emoji { font-size: 28px; margin: 8px 0 4px; }
+  .top-card .top-name {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--card-color);
+  }
+  .top-card .top-pct {
+    font-size: 13px;
+    color: var(--ink-muted);
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .reflection {
+    background: var(--bg-soft);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 28px;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .reflection strong { color: var(--ink); }
+
+  .actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 36px;
+  }
+
+  .footer-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line-soft);
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <!-- ============ WELCOME ============ -->
+  <section id="welcome" class="screen visible">
+    <p class="eyebrow">A reflective tool for GPs</p>
+    <h1 class="title">What's your <em>consultation style?</em></h1>
+    <p class="lede">
+      Thirty scenario-based questions about how you actually show up in clinic.
+      We'll match you to one of seven archetypes — and show you the full picture
+      of how you balance the others.
+    </p>
+
+    <div class="archetype-preview" id="archetype-preview"></div>
+
+    <div class="info-card">
+      <p><strong>About 5–7 minutes.</strong> No login. Nothing saved or sent. Just you and the questions.</p>
+      <p class="muted">
+        Inspired by established consultation models (Pendleton, Calgary-Cambridge, Neighbour).
+        Not a validated assessment — think of it as a structured prompt for self-reflection.
+      </p>
+    </div>
+
+    <button class="btn-primary" onclick="startQuiz()">Begin the quiz →</button>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section id="quiz" class="screen">
+    <div class="progress">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <p class="q-counter" id="q-counter">Question 1 of 30</p>
+    <h2 class="q-text" id="q-text"></h2>
+    <div class="options" id="options"></div>
+    <div class="quiz-nav">
+      <button class="btn-back" id="btn-back" onclick="goBack()">← Back</button>
+      <span class="quiz-hint">Tap an answer to continue</span>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS ============ -->
+  <section id="results" class="screen">
+    <div class="result-hero" id="result-hero"></div>
+    <div class="result-grid" id="result-grid"></div>
+    <div class="famous" id="famous"></div>
+    <div class="top-three" id="top-three"></div>
+    <div class="distribution" id="distribution"></div>
+    <div class="reflection" id="reflection"></div>
+    <div class="actions">
+      <button class="btn-secondary" onclick="retakeQuiz()">Take it again</button>
+      <button class="btn-primary" onclick="window.print()">Save / print this</button>
+    </div>
+  </section>
+
+  <p class="footer-note">
+    A self-reflection tool. Treat results as a conversation starter, not a verdict.
+  </p>
+</main>
+
+<script>
+/* ============================================================
+   ARCHETYPES
+   ============================================================ */
+const ARCHETYPES = {
+  detective: {
+    name: "The Detective",
+    emoji: "🔍",
+    color: "var(--c-detective)",
+    hex: "#2E4A6B",
+    tagline: "Tell me everything. The clue is always there.",
+    description:
+      "You're a clinical reasoner first. You love a diagnostic puzzle, take a thorough history, and rarely miss the zebra hiding in the herd of horses. Your patients trust you because you take them seriously — and because, more often than not, you find the answer.",
+    strengths: [
+      "Differential thinking and pattern recognition",
+      "Forensic history-taking",
+      "Catching atypical presentations",
+      "Evidence appraisal and clinical curiosity"
+    ],
+    blindSpots: [
+      "Over-investigation when ambiguity feels uncomfortable",
+      "Treating the patient like a puzzle and missing the person",
+      "Underweighting the emotional content of the visit",
+      "Running over time on intellectually interesting cases"
+    ],
+    famous: "Dr. Lisa Sanders writing diagnostic columns; House when he isn't being unbearable; Sherlock with a stethoscope and a guidelines app."
+  },
+  empath: {
+    name: "The Empath",
+    emoji: "💝",
+    color: "var(--c-empath)",
+    hex: "#B96B7A",
+    tagline: "Tell me what's really going on.",
+    description:
+      "You read what isn't said. You sit in silence well, hold space for tears, and patients leave feeling understood — sometimes for the first time in a clinical setting. You lead with the relationship, and the medicine follows.",
+    strengths: [
+      "Therapeutic alliance and trust-building",
+      "Mental health and complex psychosocial presentations",
+      "Reading non-verbal cues",
+      "End-of-life and bereavement care"
+    ],
+    blindSpots: [
+      "Running over time — every time",
+      "Saying yes when you should say no",
+      "Carrying patients home with you",
+      "Burnout risk if you don't actively decompress"
+    ],
+    famous: "Iona Heath writing for The BMJ; the GP everyone in town wants to be registered with; Patch Adams with better boundaries."
+  },
+  coach: {
+    name: "The Coach",
+    emoji: "🎯",
+    color: "var(--c-coach)",
+    hex: "#5A8F4D",
+    tagline: "Let's figure out what you want to do about this.",
+    description:
+      "You're a behaviour-change champion. You ask what readiness looks like, you celebrate small wins, and your patients leave appointments with a plan they actually believe in — because they made it. You're optimistic, but never naive.",
+    strengths: [
+      "Motivational interviewing and goal-setting",
+      "Lifestyle medicine and chronic disease management",
+      "Smoking cessation, weight, alcohol",
+      "Empowering patients to own their care"
+    ],
+    blindSpots: [
+      "Coaching mode doesn't fit every consultation — sometimes patients need a doctor to decide",
+      "False collaboration: pretending it's their choice when you've already made yours",
+      "Frustration with patients who aren't ready to change",
+      "Underweighting acute issues in your enthusiasm for the long game"
+    ],
+    famous: "Rangan Chatterjee on a podcast; Atul Gawande writing about checklists; the GP who turns 'try harder' into a written plan."
+  },
+  educator: {
+    name: "The Educator",
+    emoji: "📚",
+    color: "var(--c-educator)",
+    hex: "#C28A2E",
+    tagline: "Here's what's happening, and here's what we can do about it.",
+    description:
+      "You're a teacher in a white coat. You explain pathophysiology in plain language, sketch diagrams on the back of envelopes, and your patients become quiet experts in their own conditions. Shared decision-making isn't a buzzword for you — it's the job.",
+    strengths: [
+      "Health literacy and informed consent",
+      "Explaining complex conditions without dumbing them down",
+      "Training registrars and medical students",
+      "Risk communication and numeracy"
+    ],
+    blindSpots: [
+      "Not every patient wants information — some want a decision",
+      "Over-explaining when reassurance would land better",
+      "Lecturing without checking understanding",
+      "Mistaking a nodding patient for a comprehending one"
+    ],
+    famous: "The GP who sketches anatomy on the consulting-room paper; Hans Rosling with a prescription pad; a textbook chapter you'd actually want to read."
+  },
+  pragmatist: {
+    name: "The Pragmatist",
+    emoji: "⚡",
+    color: "var(--c-pragmatist)",
+    hex: "#4F5862",
+    tagline: "Right. Let's deal with this.",
+    description:
+      "You're efficient, focused, and your clinic runs on time. You triage in your head, cut through the noise, and your patients leave with a plan. The system works because of GPs like you — and your colleagues call you when they're stuck.",
+    strengths: [
+      "Time management and decision-making under pressure",
+      "Walk-in and same-day triage",
+      "Cutting through patient anxiety with clear plans",
+      "Being the safe pair of hands at 5:55pm on a Friday"
+    ],
+    blindSpots: [
+      "The patient who needed silence didn't get it",
+      "Missing biopsychosocial layers under the presenting complaint",
+      "Brisk can read as cold when someone is scared",
+      "Solving the wrong problem efficiently"
+    ],
+    famous: "The senior partner who's seen it all; the GP everyone refers their nightmare bookings to; House when he's actually being productive."
+  },
+  guardian: {
+    name: "The Guardian",
+    emoji: "🛡️",
+    color: "var(--c-guardian)",
+    hex: "#2D7B7E",
+    tagline: "Better safe than sorry — and let's make sure you know what to look out for.",
+    description:
+      "Safety-netting is your love language. You're the GP who catches the rare-but-serious, who documents thoroughly, and whose patients always know exactly when to come back. Patient safety lives in your bones.",
+    strengths: [
+      "Risk assessment and red flags",
+      "Defensive practice in the good sense — clear documentation, clear plans",
+      "Paediatrics and oncology suspicions",
+      "The sober second look"
+    ],
+    blindSpots: [
+      "Over-investigation and 'just in case' referrals",
+      "Iatrogenic anxiety from too much warning",
+      "Letting fear of missing something become its own kind of harm",
+      "Defensive language that erodes the therapeutic relationship"
+    ],
+    famous: "The locum every practice secretly wants — the one who never misses anything; Atul Gawande's Checklist Manifesto in scrubs."
+  },
+  healer: {
+    name: "The Healer",
+    emoji: "🌿",
+    color: "var(--c-healer)",
+    hex: "#7E8B4F",
+    tagline: "I've known your family for twenty years. Now sit down and tell me.",
+    description:
+      "You play the long game. Continuity is your superpower, and the relationship is your therapy. Patients return for decades because you are the medicine — holistic, narrative, and unrushed even when the clinic isn't.",
+    strengths: [
+      "Continuity and narrative medicine",
+      "Family medicine across generations",
+      "Complex chronic illness and multimorbidity",
+      "Contextual diagnosis — knowing what's normal for this person"
+    ],
+    blindSpots: [
+      "Assumption-driven shortcuts with familiar patients",
+      "Resistance to new tools, systems, and guidelines",
+      "Missing what's new because you know what's old",
+      "Difficulty handing over to colleagues"
+    ],
+    famous: "The country GP from a John Berger photo essay; your nan's doctor who knew her better than her own kids did; Iona Heath, again, because she earned it twice."
+  }
+};
+
+/* ============================================================
+   QUESTIONS — 30 scenarios, each option awards points to 1–2
+   archetypes. Designed to feel like a personality quiz, not a
+   knowledge test.
+   ============================================================ */
+const QUESTIONS = [
+  {
+    text: "A patient walks in saying they've just felt 'tired all the time.' What's your opening move?",
+    options: [
+      { text: ""Tell me more about that — when did it start, and what's a typical day like for you?"",  points: { detective: 2, empath: 1 } },
+      { text: ""Let's start by ruling out the common physical causes — bloods today."",                points: { pragmatist: 2, detective: 1 } },
+      { text: ""How are things at home, work, with sleep?"",                                            points: { empath: 2, healer: 1 } },
+      { text: ""What do you think is going on?"",                                                       points: { educator: 2, coach: 1 } }
+    ]
+  },
+  {
+    text: "Your 10-minute slot is up, and the patient drops a doorknob comment: 'By the way, my chest has been hurting.' You…",
+    options: [
+      { text: "Bring them straight back in. Chest pain isn't waiting — even if it makes you late.",     points: { guardian: 2, empath: 1 } },
+      { text: "Quickly screen for red flags now and book a same-day or next-day review.",               points: { pragmatist: 2, guardian: 1 } },
+      { text: "Acknowledge it, ask them to book another slot, document carefully.",                     points: { pragmatist: 2, educator: 1 } },
+      { text: "Sit back down. 'Tell me more — let's not leave that hanging.'",                          points: { empath: 2, healer: 1 } }
+    ]
+  },
+  {
+    text: "A patient demands antibiotics for what sounds like a viral URTI. Your move?",
+    options: [
+      { text: "Patiently explain why antibiotics won't help, with a leaflet to take home.",             points: { educator: 2, pragmatist: 1 } },
+      { text: "Negotiate a delayed prescription as a middle ground.",                                   points: { pragmatist: 2, coach: 1 } },
+      { text: "Explore why they want them — fear, work pressure, past experience?",                    points: { empath: 2, detective: 1 } },
+      { text: "Stand firm. 'I won't prescribe what won't help, and here's why.'",                       points: { guardian: 2, pragmatist: 1 } }
+    ]
+  },
+  {
+    text: "How do you typically open a consultation?",
+    options: [
+      { text: ""What can I do for you today?" — straight to business.",                                 points: { pragmatist: 2 } },
+      { text: ""How have you been since I last saw you?" — continuity matters.",                        points: { healer: 2, empath: 1 } },
+      { text: ""Tell me what's brought you in." Then silence — let them lead.",                         points: { empath: 2, educator: 1 } },
+      { text: "Quick scan of the notes first, then 'I see you're here about X — tell me more.'",        points: { detective: 2, pragmatist: 1 } }
+    ]
+  },
+  {
+    text: "A four-year-old won't engage with you during the exam. You…",
+    options: [
+      { text: "Get down on the floor with toys. The exam can wait.",                                    points: { empath: 2, healer: 1 } },
+      { text: "Examine on the parent's lap, opportunistically, between giggles.",                       points: { pragmatist: 2, detective: 1 } },
+      { text: "Use a teddy bear as a model and turn it into a game.",                                   points: { coach: 2, educator: 1 } },
+      { text: "If it's not urgent, reschedule for a calmer day.",                                       points: { guardian: 2, empath: 1 } }
+    ]
+  },
+  {
+    text: "A patient walks in with a written list of six problems. Your reaction?",
+    options: [
+      { text: ""Let's pick the top two for today and book a follow-up for the rest."",                  points: { pragmatist: 2, educator: 1 } },
+      { text: "Scan the list. There's often a hidden agenda — the real reason — buried in there.",      points: { detective: 2, empath: 1 } },
+      { text: "Welcome it. They came prepared; you'll work through what you can.",                      points: { empath: 2, healer: 1 } },
+      { text: ""Which one is worrying you the most?"",                                                  points: { empath: 2, coach: 1 } }
+    ]
+  },
+  {
+    text: "Your favourite consultation framework or model?",
+    options: [
+      { text: "Calgary-Cambridge — structured, evidence-based, teachable.",                             points: { educator: 2, detective: 1 } },
+      { text: "Pendleton's tasks — patient ideas, concerns, expectations front and centre.",            points: { empath: 2, educator: 1 } },
+      { text: "I don't really follow one. I read the room and respond.",                                points: { healer: 2, empath: 1 } },
+      { text: "Whatever gets us to the right diagnosis efficiently.",                                   points: { pragmatist: 2, detective: 1 } }
+    ]
+  },
+  {
+    text: "A patient quotes Dr. Google at you. You…",
+    options: [
+      { text: "Ask what they read, then walk through what's accurate and what isn't.",                  points: { educator: 2, coach: 1 } },
+      { text: "Recommend trusted sources (NHS, Patient.info) for next time.",                           points: { educator: 2, guardian: 1 } },
+      { text: "Welcome it. Informed patients are partners.",                                            points: { coach: 2, educator: 1 } },
+      { text: "Acknowledge their research, then guide based on what you see clinically.",               points: { detective: 2, pragmatist: 1 } }
+    ]
+  },
+  {
+    text: "A patient looks visibly anxious about a possible diagnosis. You…",
+    options: [
+      { text: "Pause everything. 'I can see this is frightening. Let's talk about what's worrying you.'", points: { empath: 2, healer: 1 } },
+      { text: "Give them clear facts. Anxiety thrives on uncertainty.",                                 points: { educator: 2, detective: 1 } },
+      { text: "Walk them through next steps so they have a concrete plan.",                             points: { coach: 2, pragmatist: 1 } },
+      { text: "Reassure them with what you can rule out and safety-net the rest.",                      points: { guardian: 2, empath: 1 } }
+    ]
+  },
+  {
+    text: "At the end of a consultation, what matters most?",
+    options: [
+      { text: "The patient knows the plan, the warning signs, and when to come back.",                  points: { guardian: 2, educator: 1 } },
+      { text: "The patient feels heard.",                                                               points: { empath: 2, healer: 1 } },
+      { text: "The diagnosis is correct or appropriately investigated.",                                points: { detective: 2, pragmatist: 1 } },
+      { text: "The patient leaves with a step they can take toward feeling better.",                    points: { coach: 2, pragmatist: 1 } }
+    ]
+  },
+  {
+    text: "Your note-taking style?",
+    options: [
+      { text: "Detailed — SOAP or similar, every consultation, defensible.",                            points: { guardian: 2, educator: 1 } },
+      { text: "Focused — clinically relevant, no fluff.",                                               points: { pragmatist: 2, detective: 1 } },
+      { text: "Narrative — I capture the patient's story in their own words.",                          points: { empath: 2, healer: 1 } },
+      { text: "Templated — I have macros for common scenarios.",                                        points: { pragmatist: 2, educator: 1 } }
+    ]
+  },
+  {
+    text: "A patient unexpectedly cries. You…",
+    options: [
+      { text: "Hand them tissues and stay quiet. Silence is the gift here.",                            points: { empath: 2, healer: 1 } },
+      { text: "Gently ask what's bringing this up.",                                                    points: { empath: 2, detective: 1 } },
+      { text: "Acknowledge it, then steer toward what we can act on together.",                         points: { coach: 2, pragmatist: 1 } },
+      { text: "Reach for the safety-net — is this depression? Suicidal ideation?",                      points: { guardian: 2, detective: 1 } }
+    ]
+  },
+  {
+    text: "Delivering lifestyle advice — your style?",
+    options: [
+      { text: ""What do you think might help? What have you tried before?"",                            points: { coach: 2, empath: 1 } },
+      { text: "Concrete and specific. 'Aim for 30-min walks, five days a week, starting Monday.'",      points: { pragmatist: 2, educator: 1 } },
+      { text: "Motivational interviewing — readiness ruler, importance and confidence.",                points: { coach: 2, educator: 1 } },
+      { text: "Honest. 'I'd be doing you a disservice not to mention this — your weight is affecting your knees.'", points: { guardian: 2, educator: 1 } }
+    ]
+  },
+  {
+    text: "A patient disagrees with your recommended treatment. You…",
+    options: [
+      { text: "Explore their concerns — there's usually a reason.",                                     points: { empath: 2, educator: 1 } },
+      { text: "Lay out the evidence and the risks of each option, then let them choose.",               points: { educator: 2, coach: 1 } },
+      { text: "Document carefully, agree to disagree, plan a review.",                                  points: { pragmatist: 2, guardian: 1 } },
+      { text: "Try to understand their values and find a middle path.",                                 points: { healer: 2, empath: 1 } }
+    ]
+  },
+  {
+    text: "You're 30 minutes behind. The next patient is waiting. You…",
+    options: [
+      { text: "Apologise sincerely, then give them a full appointment anyway.",                         points: { empath: 2, healer: 1 } },
+      { text: "Tighten the structure — same care, less small talk.",                                    points: { pragmatist: 2, detective: 1 } },
+      { text: "Apologise, work efficiently, offer to bring them back if needed.",                       points: { pragmatist: 2, educator: 1 } },
+      { text: "Don't apologise. Stay present. Patients understand.",                                    points: { healer: 2, pragmatist: 1 } }
+    ]
+  },
+  {
+    text: "Performing an intimate examination. Your approach?",
+    options: [
+      { text: "Explicit consent at every step. Chaperone offered. Slow and clear.",                     points: { guardian: 2, educator: 1 } },
+      { text: "Brisk and professional — patients prefer it not be drawn out.",                          points: { pragmatist: 2, detective: 1 } },
+      { text: "Talk through it gently, narrating each step to keep the patient at ease.",               points: { empath: 2, educator: 1 } },
+      { text: "Offer the patient as much control as possible — pacing, position, when to stop.",        points: { empath: 2, coach: 1 } }
+    ]
+  },
+  {
+    text: "A patient repeatedly doesn't follow advice. You…",
+    options: [
+      { text: "Explore what's getting in the way. It's almost never just defiance.",                    points: { empath: 2, coach: 1 } },
+      { text: "Set smaller, more achievable goals.",                                                    points: { coach: 2, pragmatist: 1 } },
+      { text: "Document carefully and keep offering the best-evidence advice.",                         points: { guardian: 2, educator: 1 } },
+      { text: "Accept their autonomy and shift to harm reduction.",                                     points: { healer: 2, empath: 1 } }
+    ]
+  },
+  {
+    text: "New guidelines contradict how you've practiced for years. You…",
+    options: [
+      { text: "Read the underlying evidence and update where convinced.",                               points: { detective: 2, educator: 1 } },
+      { text: "Adopt them. Guidelines exist for good reasons.",                                         points: { guardian: 2, pragmatist: 1 } },
+      { text: "Discuss in the next clinical meeting before changing practice.",                         points: { educator: 2, detective: 1 } },
+      { text: "Adapt thoughtfully. Guidelines are a starting point, not a ceiling.",                    points: { healer: 2, detective: 1 } }
+    ]
+  },
+  {
+    text: "Breaking bad news. Your approach?",
+    options: [
+      { text: "SPIKES protocol — structured, kind, paced.",                                             points: { educator: 2, empath: 1 } },
+      { text: "Honest, direct, and unhurried. Tears welcome.",                                          points: { empath: 2, healer: 1 } },
+      { text: "Plant the seed first — 'I'm worried about what we're seeing' — then build.",             points: { empath: 2, educator: 1 } },
+      { text: "Get the facts across clearly, then sit with them.",                                      points: { detective: 2, empath: 1 } }
+    ]
+  },
+  {
+    text: "A patient brings a family member into the room. You…",
+    options: [
+      { text: "Welcome them, but check first what the patient wants shared.",                           points: { empath: 2, educator: 1 } },
+      { text: "Useful — more history, more support.",                                                   points: { healer: 2, pragmatist: 1 } },
+      { text: "Politely ask for a few minutes alone with the patient first.",                           points: { guardian: 2, empath: 1 } },
+      { text: "Work with whoever's there. Patients have their own systems.",                            points: { healer: 2, empath: 1 } }
+    ]
+  },
+  {
+    text: "A patient presents with low mood. Your first move?",
+    options: [
+      { text: "PHQ-9 and a risk assessment, then explore.",                                             points: { detective: 2, guardian: 1 } },
+      { text: ""Tell me what's going on for you." Just listen.",                                        points: { empath: 2, healer: 1 } },
+      { text: "Map it out: sleep, appetite, work, relationships, substance use, suicidal thoughts.",    points: { detective: 2, pragmatist: 1 } },
+      { text: "Normalise first, then explore options together.",                                        points: { coach: 2, empath: 1 } }
+    ]
+  },
+  {
+    text: "An 84-year-old with seven conditions and twelve medications. You…",
+    options: [
+      { text: "Deprescribe where safe. Polypharmacy is a diagnosis.",                                   points: { pragmatist: 2, guardian: 1 } },
+      { text: "Focus on what matters most to them, not the guidelines.",                                points: { healer: 2, empath: 1 } },
+      { text: "Carefully review interactions, indications, and goals of care.",                         points: { detective: 2, educator: 1 } },
+      { text: "Have an honest conversation about quality versus length of life.",                       points: { empath: 2, healer: 1 } }
+    ]
+  },
+  {
+    text: "A 15-year-old comes in alone. You…",
+    options: [
+      { text: "Confidentiality first — explain Gillick competence, then build rapport.",                points: { educator: 2, guardian: 1 } },
+      { text: "Drop the white-coat tone and meet them where they are.",                                 points: { empath: 2, coach: 1 } },
+      { text: "Be careful not to assume. They came for a reason — ask about it directly.",              points: { detective: 2, empath: 1 } },
+      { text: "HEEADSSS-style screen woven naturally into the conversation.",                           points: { detective: 2, educator: 1 } }
+    ]
+  },
+  {
+    text: "A patient's cultural background is unfamiliar to you. You…",
+    options: [
+      { text: "Ask them to explain what's important to them. They're the expert on their context.",     points: { empath: 2, healer: 1 } },
+      { text: "Check your assumptions before they trip you up.",                                        points: { educator: 2, empath: 1 } },
+      { text: "Read up afterwards. This won't be the last patient from this background.",               points: { educator: 2, detective: 1 } },
+      { text: "Use a professional interpreter if there's any language ambiguity.",                      points: { guardian: 2, educator: 1 } }
+    ]
+  },
+  {
+    text: "A patient apologises for 'wasting your time.' You…",
+    options: [
+      { text: ""You're not. This is exactly what I'm here for."",                                       points: { empath: 2, healer: 1 } },
+      { text: "Reframe it — 'better here than worrying at home.'",                                      points: { coach: 2, empath: 1 } },
+      { text: "Validate the concern and explain your reasoning for any tests or no-tests.",             points: { educator: 2, empath: 1 } },
+      { text: "Ask what made them hesitate. It's useful insight for the consultation.",                 points: { detective: 2, empath: 1 } }
+    ]
+  },
+  {
+    text: "An end-of-life conversation. Your style?",
+    options: [
+      { text: "Open the door, don't push through it. 'Have you thought about what you'd want if things got worse?'", points: { empath: 2, healer: 1 } },
+      { text: "Structured — ReSPECT-style: priorities, treatment ceilings, place of care.",             points: { educator: 2, guardian: 1 } },
+      { text: "Family included, honest, with plenty of pauses.",                                        points: { healer: 2, empath: 1 } },
+      { text: "Frame it around what matters most to them, then work backwards.",                        points: { coach: 2, empath: 1 } }
+    ]
+  },
+  {
+    text: "Your consultation room is…",
+    options: [
+      { text: "Tidy and ergonomic. Screen positioned so the patient can see it too.",                   points: { educator: 2, pragmatist: 1 } },
+      { text: "Warm — pictures, plants, a comfortable chair facing yours.",                             points: { healer: 2, empath: 1 } },
+      { text: "Functional. You spend more time looking at the patient than the décor.",                 points: { pragmatist: 2, empath: 1 } },
+      { text: "Equipped — every reference, leaflet, and kit you might need at arm's reach.",            points: { detective: 2, guardian: 1 } }
+    ]
+  },
+  {
+    text: "Your honest weakness as a GP?",
+    options: [
+      { text: "I run late because I can't cut conversations short.",                                    points: { empath: 2, healer: 1 } },
+      { text: "I sometimes over-investigate because I hate uncertainty.",                               points: { detective: 2, guardian: 1 } },
+      { text: "I can be too brisk when the waiting room is full.",                                      points: { pragmatist: 2, detective: 1 } },
+      { text: "I struggle when patients won't engage with their own care.",                             points: { coach: 2, educator: 1 } }
+    ]
+  },
+  {
+    text: "After a difficult consultation, you…",
+    options: [
+      { text: "Take 60 seconds, breathe, reset.",                                                       points: { pragmatist: 2, guardian: 1 } },
+      { text: "Debrief with a colleague. Talking it through helps.",                                    points: { empath: 2, educator: 1 } },
+      { text: "Replay it later. What could I have done differently?",                                   points: { detective: 2, educator: 1 } },
+      { text: "Feel it. You can't be a good doctor if you stop letting things land.",                   points: { empath: 2, healer: 1 } }
+    ]
+  },
+  {
+    text: "The feedback patients most often give you?",
+    options: [
+      { text: ""You actually listened to me."",                                                         points: { empath: 2, healer: 1 } },
+      { text: ""You explained it so clearly."",                                                         points: { educator: 2, coach: 1 } },
+      { text: ""You sorted it out for me."",                                                            points: { pragmatist: 2, detective: 1 } },
+      { text: ""I trust you."",                                                                         points: { healer: 2, guardian: 1 } }
+    ]
+  }
+];
+
+/* ============================================================
+   STATE
+   ============================================================ */
+let currentQuestion = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+
+/* ============================================================
+   INIT — render archetype chips on welcome
+   ============================================================ */
+function renderPreview() {
+  const container = document.getElementById('archetype-preview');
+  container.innerHTML = Object.values(ARCHETYPES).map(a =>
+    `<span class="chip"><span class="dot" style="background:${a.hex}"></span>${a.emoji} ${a.name}</span>`
+  ).join('');
+}
+renderPreview();
+
+/* ============================================================
+   NAV
+   ============================================================ */
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('visible'));
+  document.getElementById(id).classList.add('visible');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function startQuiz() {
+  currentQuestion = 0;
+  answers = new Array(QUESTIONS.length).fill(null);
+  showScreen('quiz');
+  renderQuestion();
+}
+
+function retakeQuiz() {
+  startQuiz();
+}
+
+function goBack() {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    renderQuestion();
+  }
+}
+
+/* ============================================================
+   QUIZ RENDER
+   ============================================================ */
+function renderQuestion() {
+  const q = QUESTIONS[currentQuestion];
+  const total = QUESTIONS.length;
+
+  document.getElementById('q-counter').textContent = `Question ${currentQuestion + 1} of ${total}`;
+  document.getElementById('q-text').textContent = q.text;
+  document.getElementById('progress-bar').style.width = `${((currentQuestion) / total) * 100}%`;
+
+  const backBtn = document.getElementById('btn-back');
+  backBtn.disabled = currentQuestion === 0;
+
+  const optionsDiv = document.getElementById('options');
+  optionsDiv.innerHTML = '';
+  const letters = ['A', 'B', 'C', 'D'];
+
+  q.options.forEach((opt, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'option' + (answers[currentQuestion] === idx ? ' selected' : '');
+    btn.innerHTML = `
+      <span class="option-letter">${letters[idx]}</span>
+      <span class="option-text">${opt.text}</span>
+    `;
+    btn.onclick = () => selectOption(idx);
+    optionsDiv.appendChild(btn);
+  });
+
+  // animate the question container
+  const quizSection = document.getElementById('quiz');
+  quizSection.style.animation = 'none';
+  void quizSection.offsetWidth;
+  quizSection.style.animation = 'fadeIn 0.4s ease';
+}
+
+function selectOption(idx) {
+  answers[currentQuestion] = idx;
+
+  // brief visual confirmation
+  const buttons = document.querySelectorAll('#options .option');
+  buttons.forEach((b, i) => b.classList.toggle('selected', i === idx));
+
+  // advance
+  setTimeout(() => {
+    if (currentQuestion < QUESTIONS.length - 1) {
+      currentQuestion++;
+      renderQuestion();
+    } else {
+      document.getElementById('progress-bar').style.width = '100%';
+      setTimeout(showResults, 350);
+    }
+  }, 220);
+}
+
+/* ============================================================
+   SCORING
+   ============================================================ */
+function calculateResults() {
+  const totals = {};
+  Object.keys(ARCHETYPES).forEach(k => totals[k] = 0);
+
+  answers.forEach((optIdx, qIdx) => {
+    if (optIdx === null) return;
+    const points = QUESTIONS[qIdx].options[optIdx].points;
+    Object.entries(points).forEach(([k, v]) => { totals[k] += v; });
+  });
+
+  const sum = Object.values(totals).reduce((a, b) => a + b, 0) || 1;
+  const percentages = {};
+  Object.entries(totals).forEach(([k, v]) => {
+    percentages[k] = Math.round((v / sum) * 100);
+  });
+
+  const ranked = Object.entries(totals)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k]) => k);
+
+  return { totals, percentages, ranked };
+}
+
+/* ============================================================
+   RESULTS RENDER
+   ============================================================ */
+function showResults() {
+  const { totals, percentages, ranked } = calculateResults();
+  const primaryKey = ranked[0];
+  const primary = ARCHETYPES[primaryKey];
+
+  document.documentElement.style.setProperty('--archetype-color', primary.hex);
+
+  // Hero
+  document.getElementById('result-hero').innerHTML = `
+    <p class="result-eyebrow">Your primary consultation style</p>
+    <h2 class="result-name" style="color:${primary.hex}">
+      <span class="emoji">${primary.emoji}</span>${primary.name}
+    </h2>
+    <p class="result-tagline">${primary.tagline}</p>
+    <p class="result-description">${primary.description}</p>
+  `;
+
+  // Strengths + Blind spots
+  document.getElementById('result-grid').innerHTML = `
+    <div class="panel">
+      <h3><span class="marker" style="background:${primary.hex}"></span>What you're great at</h3>
+      <ul>${primary.strengths.map(s => `<li>${s}</li>`).join('')}</ul>
+    </div>
+    <div class="panel">
+      <h3><span class="marker" style="background:${primary.hex}"></span>Where to watch yourself</h3>
+      <ul>${primary.blindSpots.map(s => `<li>${s}</li>`).join('')}</ul>
+    </div>
+  `;
+
+  // Famous match
+  document.getElementById('famous').style.borderLeftColor = primary.hex;
+  document.getElementById('famous').innerHTML = `<strong>Kindred spirits:</strong> ${primary.famous}`;
+
+  // Top 3
+  const ranks = ['1st', '2nd', '3rd'];
+  document.getElementById('top-three').innerHTML = ranked.slice(0, 3).map((k, i) => {
+    const a = ARCHETYPES[k];
+    return `
+      <div class="top-card" style="--card-color:${a.hex}">
+        <div class="rank">${ranks[i]}</div>
+        <div class="top-emoji">${a.emoji}</div>
+        <div class="top-name">${a.name}</div>
+        <div class="top-pct">${percentages[k]}%</div>
+      </div>
+    `;
+  }).join('');
+
+  // Distribution bars
+  const distRows = ranked.map((k, i) => {
+    const a = ARCHETYPES[k];
+    return `
+      <div class="bar-row${i === 0 ? ' primary' : ''}">
+        <span class="bar-name">${a.emoji} ${a.name.replace('The ', '')}</span>
+        <div class="bar-track"><div class="bar-fill" data-pct="${percentages[k]}" style="background:${a.hex}"></div></div>
+        <span class="bar-pct">${percentages[k]}%</span>
+      </div>
+    `;
+  }).join('');
+
+  document.getElementById('distribution').innerHTML = `
+    <h3>Your full profile</h3>
+    <p class="distribution-sub">No GP is just one thing. Here's how you balance all seven.</p>
+    ${distRows}
+  `;
+
+  // Reflection
+  const secondary = ARCHETYPES[ranked[1]];
+  document.getElementById('reflection').innerHTML = `
+    <strong>Something to chew on.</strong>
+    Your primary style is <strong>${primary.name}</strong>, but your second-strongest is
+    <strong>${secondary.name}</strong> — that combination shapes a lot of how you actually
+    feel in clinic. The gaps in the bar chart aren't deficits; they're choices, often
+    sensible ones, about where you put your attention. Worth asking: which of your lower
+    archetypes would your most challenging patient most appreciate seeing more of?
+  `;
+
+  showScreen('results');
+
+  // animate bars in after a short delay
+  setTimeout(() => {
+    document.querySelectorAll('.bar-fill').forEach(b => {
+      b.style.width = b.dataset.pct + '%';
+    });
+  }, 150);
+}
+</script>
+</body>
+</html>

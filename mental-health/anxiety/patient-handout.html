@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anxiety Disorders - Working Diagnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F5F1E8; --warm: #EDE7D8; --deep: #E4DBC4;
+      --ink: #1A1F1C; --ink-soft: #3A4540; --ink-mute: #6B7A75;
+      --green: #2F6B5C; --green-deep: #1F4A3F;
+      --ochre: #B8714F; --rule: #D9D1BD;
+      --serif-display: 'Fraunces', serif;
+      --serif-body: 'Newsreader', serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--serif-body); font-size: 1rem; line-height: 1.7; }
+    .masthead { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 1px solid var(--rule); background: var(--paper); }
+    .brand { font-family: var(--serif-display); font-weight: 600; font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+    .masthead-crumb { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
+    .hero { padding: 3rem 2rem 2rem; max-width: 720px; margin: 0 auto; }
+    .kicker { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.75rem; }
+    .hero h1 { font-family: var(--serif-display); font-weight: 300; font-size: 2.5rem; line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 1rem; }
+    .hero h1 em { font-style: italic; color: var(--green); }
+    .hero-lead { color: var(--ink-soft); font-size: 1.1rem; line-height: 1.6; max-width: 600px; }
+    .print-bar { max-width: 720px; margin: 0 auto; padding: 0 2rem 1rem; }
+    .print-btn { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; background: none; border: 1px solid var(--rule); color: var(--ink-mute); padding: 0.4rem 1rem; cursor: pointer; border-radius: 3px; }
+    .print-btn:hover { border-color: var(--ink-mute); color: var(--ink); }
+    .page-body { max-width: 720px; margin: 0 auto; padding: 0 2rem 3rem; }
+    .glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; margin-bottom: 2.5rem; }
+    .glance-item { background: var(--warm); padding: 1.25rem 1rem; }
+    .glance-num { font-family: var(--serif-display); font-weight: 600; font-size: 2rem; color: var(--green-deep); line-height: 1; margin-bottom: 0.3rem; }
+    .glance-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-mute); line-height: 1.4; }
+    .acc-item { border: 1px solid var(--rule); border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+    .acc-head { width: 100%; background: var(--warm); border: none; padding: 1rem 1.25rem; text-align: left; font-family: var(--serif-display); font-weight: 600; font-size: 1rem; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .acc-head::after { content: '+'; font-family: var(--mono); font-size: 1.2rem; color: var(--ink-mute); }
+    .acc-item.open .acc-head::after { content: '−'; }
+    .acc-body { display: none; padding: 1.25rem; background: var(--paper); color: var(--ink-soft); line-height: 1.75; }
+    .acc-body p { margin-bottom: 0.75rem; }
+    .acc-body p:last-child { margin-bottom: 0; }
+    .acc-body ul, .acc-body ol { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    .acc-body li { margin-bottom: 0.4rem; }
+    .acc-item.open .acc-body { display: block; }
+    .alert-box { background: var(--deep); border-left: 4px solid var(--ochre); border-radius: 0 6px 6px 0; padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
+    .alert-title { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.5rem; }
+    .alert-box p, .alert-box li { color: var(--ink-soft); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.4rem; }
+    .alert-box ul { padding-left: 1.25rem; }
+    .alert-box strong { color: var(--ink); }
+    .resources { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+    .resources h3 { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.75rem; }
+    .resources ul { list-style: none; padding: 0; }
+    .resources li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.9rem; color: var(--ink-soft); }
+    .resources li:last-child { border-bottom: none; }
+    .resources a { color: var(--green); text-decoration: none; }
+    .refs-section { max-width: 720px; margin: 0 auto; padding: 0 2rem 3rem; }
+    .refs-toggle { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; background: none; border: none; color: var(--ink-mute); cursor: pointer; padding: 0; }
+    #refs { display: none; margin-top: 1rem; font-size: 0.78rem; color: var(--ink-mute); line-height: 1.8; }
+    #refs.on { display: block; }
+    #refs p { margin-bottom: 0.4rem; }
+    .page-footer { max-width: 720px; margin: 0 auto; padding: 1.5rem 2rem; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-mute); }
+    @media print {
+      .masthead-crumb, .print-bar, .refs-section, .page-footer { display: none; }
+      .acc-body { display: block !important; padding: .4rem 0; }
+      .acc-head { background: none !important; font-size: 1rem; padding: .5rem 0; border-bottom: 1px solid #ccc; border-radius: 0; }
+      .acc-item { border: none; margin-bottom: .5rem; border-radius: 0; }
+      body { font-size: .85rem; }
+      .alert-box, .data-table { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="masthead">
+    <a href="/" class="brand">Working Diagnosis</a>
+    <div class="masthead-crumb">Mental Health</div>
+  </div>
+
+  <div class="hero">
+    <div class="kicker">❍ Your nervous system, explained</div>
+    <h1>Anxiety - when <em>worry</em> won't switch off</h1>
+    <p class="hero-lead">Anxiety is the most common mental health condition in New Zealand. It comes in several forms, and knowing which one you have changes what actually helps.</p>
+  </div>
+
+  <div class="print-bar">
+    <button class="print-btn" onclick="window.print()">Print this page</button>
+  </div>
+
+  <div class="page-body">
+    <div class="glance">
+      <div class="glance-item">
+        <div class="glance-num">18%</div>
+        <div class="glance-label">of NZ adults in any year</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-num">Most</div>
+        <div class="glance-label">common mental health condition</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-num">Lasting</div>
+        <div class="glance-label">effects with CBT therapy</div>
+      </div>
+    </div>
+
+    <div class="acc-item open">
+      <button class="acc-head">What is anxiety?</button>
+      <div class="acc-body">
+        <p>Anxiety is a normal and useful emotion - it helps us prepare for threats and perform under pressure. When anxiety becomes an anxiety disorder, the alarm system stays on even when there is no real danger, or fires at a level that is out of proportion to the situation.</p>
+        <p>There are several common types:</p>
+        <ul>
+          <li><strong>Generalised Anxiety Disorder (GAD)</strong> is persistent, hard-to-control worry about many different things.</li>
+          <li><strong>Panic disorder</strong> involves sudden episodes of intense physical fear: racing heart, chest tightness, difficulty breathing, dizziness. These feel like a medical emergency but are not dangerous.</li>
+          <li><strong>Social anxiety disorder</strong> is intense fear of social situations and judgment by others, beyond ordinary shyness.</li>
+          <li><strong>Health anxiety</strong> (sometimes called illness anxiety) involves excessive worry about having a serious illness, often leading to repeated checking of the body or seeking reassurance that provides only brief relief.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head">Recognising anxiety</button>
+      <div class="acc-body">
+        <p>Common anxiety symptoms include:</p>
+        <ul>
+          <li>Persistent worry or dread that is hard to control</li>
+          <li>Physical symptoms such as racing heart, muscle tension, headaches, stomach upset, difficulty sleeping</li>
+          <li>Difficulty concentrating</li>
+          <li>Avoiding situations that trigger anxiety</li>
+          <li>Irritability or feeling on edge</li>
+        </ul>
+        <p>A panic attack is a sudden surge of intense anxiety with physical symptoms (racing heart, chest pain, shortness of breath, tingling, dizziness, feeling unreal). They are frightening but not medically dangerous. Understanding this - really understanding it, not just being told it - is often the beginning of recovery for panic disorder.</p>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head">What helps (the evidence)</button>
+      <div class="acc-body">
+        <p><strong>Cognitive Behavioural Therapy (CBT)</strong> is the most effective treatment for anxiety disorders, with benefits that typically last longer than medication. It involves understanding the relationship between thoughts, feelings, and behaviours, and learning to respond differently to anxiety triggers. It is available in NZ through psychologists, counsellors, and increasingly through funded Primary Mental Health services.</p>
+        <p><strong>Medications</strong> (SSRIs and SNRIs) are also effective, either alone or alongside therapy. They take several weeks to show full effect.</p>
+        <p><strong>Benzodiazepines</strong> (like diazepam or lorazepam) provide fast short-term relief but are not a long-term solution: the body adjusts to them quickly, they stop working, and they can cause dependence.</p>
+        <p><strong>Self-management strategies</strong> that genuinely help:</p>
+        <ul>
+          <li>Regular physical activity (strong evidence for anxiety reduction)</li>
+          <li>Consistent sleep habits</li>
+          <li>Limiting caffeine and alcohol</li>
+          <li>Breathing techniques (slow diaphragmatic breathing can interrupt the panic cycle)</li>
+          <li>Gradually approaching avoided situations rather than withdrawing further</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head">What happens at your GP appointment</button>
+      <div class="acc-body">
+        <p>Your GP will ask about your symptoms, how long they have been happening, and how they are affecting your life. They may ask you to fill in a short questionnaire (the GAD-7) - this is a screening tool, not a definitive test.</p>
+        <p>They will look for other possible causes of symptoms (such as thyroid problems). Together you can discuss whether therapy, medication, or a combination makes sense for you.</p>
+        <p>Be specific about what your anxiety is affecting: sleep, work, relationships, ability to leave the house. This helps your GP understand the severity.</p>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head">What you can do between appointments</button>
+      <div class="acc-body">
+        <p>Anxiety tends to get worse when we avoid things, and better when we gradually face them. Avoidance feels safe but maintains the anxiety cycle.</p>
+        <p>Keeping a brief diary of anxiety episodes (what triggered it, what you were thinking, what you did) gives useful material for therapy.</p>
+        <p>If you are waiting for therapy, online CBT programmes (Beating the Blues; This Way Up) are evidence-based and free or low-cost.</p>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-title">When to get help urgently</div>
+      <p>Seek help from your GP the same day, call 1737, or go to your nearest ED if:</p>
+      <ul>
+        <li>Anxiety has become so severe you cannot leave home or carry out basic tasks</li>
+        <li>You are having thoughts of harming yourself</li>
+        <li>You are using alcohol or other substances heavily to manage anxiety</li>
+      </ul>
+    </div>
+
+    <div class="resources">
+      <h3>Useful resources</h3>
+      <ul>
+        <li><strong>1737</strong> - free call or text, 24/7. Trained counsellors, any mental health concern.</li>
+        <li><strong>Anxiety New Zealand</strong> - anxietynz.org.nz</li>
+        <li><strong>Mental Health Foundation NZ</strong> - mentalhealth.org.nz</li>
+        <li><strong>Healthline</strong> - 0800 611 116 for health advice and triage</li>
+        <li><strong>This Way Up</strong> (online CBT) - thiswayup.org.au for evidence-based anxiety programmes</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="refs-section">
+    <button class="refs-toggle" onclick="toggleRefs()">Show references</button>
+    <div id="refs">
+      <p>1. Oakley Browne MA, Wells JE, Scott KM. Te Rau Hinengaro: The New Zealand Mental Health Survey. Wellington: Ministry of Health; 2006.</p>
+      <p>2. Spitzer RL, Kroenke K, Williams JBW, Lowe B. A brief measure for assessing generalised anxiety disorder. Arch Intern Med. 2006;166(10):1092-7.</p>
+      <p>3. Bandelow B, Michaelis S, Wedekind D. Treatment of anxiety disorders. Dialogues Clin Neurosci. 2017;19(2):93-107.</p>
+      <p>4. Lader M. Benzodiazepines revisited - will we ever learn? Addiction. 2011;106(12):2086-109.</p>
+      <p>5. Stubbs B, Vancampfort D, Rosenbaum S, et al. An examination of the anxiolytic effects of exercise for people with anxiety and stress-related disorders. Psychiatry Res. 2017;249:102-8.</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    Working Diagnosis - Patient Information Handout
+  </div>
+
+  <script>
+    document.querySelectorAll('.acc-head').forEach(h=>{
+      h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+    });
+    function toggleRefs(){document.getElementById('refs').classList.toggle('on')}
+  </script>
+</body>
+</html>

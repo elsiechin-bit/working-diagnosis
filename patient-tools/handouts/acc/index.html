@@ -1,0 +1,715 @@
+---
+permalink: /handouts/acc/
+layout: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Understanding ACC - NZ's Accident Compensation Corporation</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-elev: #161b22;
+    --bg-elev-2: #1c2230;
+    --border: #2a3140;
+    --text: #e6edf3;
+    --text-dim: #9ba6b3;
+    --accent: #4cc9a4;
+    --accent-2: #6ea8fe;
+    --warn: #f0a868;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: var(--accent-2); }
+  a:hover { color: var(--accent); }
+  header {
+    padding: 2.2rem 1.5rem 1.4rem;
+    text-align: center;
+    background: radial-gradient(ellipse at top, rgba(76, 201, 164, 0.12), transparent 60%);
+    border-bottom: 1px solid var(--border);
+  }
+  header .badge {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    background: rgba(76, 201, 164, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(76, 201, 164, 0.3);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin: 0 0 0.3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  header p.lede {
+    color: var(--text-dim);
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+  nav.tabs {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 1rem;
+    display: flex;
+    gap: 0.4rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav.tabs button {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  nav.tabs button:hover { color: var(--text); border-color: var(--accent-2); }
+  nav.tabs button.active {
+    background: rgba(76, 201, 164, 0.15);
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .panel { display: none; animation: fade 0.25s ease; }
+  .panel.active { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  h2 {
+    font-size: 1.5rem;
+    border-left: 3px solid var(--accent);
+    padding-left: 0.8rem;
+    margin: 0 0 1rem;
+    letter-spacing: -0.01em;
+  }
+  h3 { color: var(--accent-2); margin: 1.5rem 0 0.4rem; font-size: 1.05rem; }
+  p.dim { color: var(--text-dim); }
+  .callout {
+    background: linear-gradient(135deg, rgba(110, 168, 254, 0.1), rgba(76, 201, 164, 0.08));
+    border: 1px solid rgba(110, 168, 254, 0.3);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+  }
+  .callout strong { color: var(--accent-2); }
+  .grid {
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .account-card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .account-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .account-card .icon { font-size: 1.4rem; margin-bottom: 0.3rem; }
+  .account-card h4 { margin: 0 0 0.3rem; font-size: 1rem; color: var(--accent); }
+  .account-card p { color: var(--text-dim); font-size: 0.9rem; margin: 0; }
+  .account-card .funded { margin-top: 0.6rem; font-size: 0.78rem; color: var(--warn); }
+  ol.flow { list-style: none; padding: 0; counter-reset: step; margin: 0; }
+  ol.flow li {
+    counter-increment: step;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-2);
+    border-radius: 0 10px 10px 0;
+    padding: 0.9rem 1.2rem 0.9rem 3.2rem;
+    margin-bottom: 0.7rem;
+    position: relative;
+  }
+  ol.flow li::before {
+    content: counter(step);
+    position: absolute;
+    left: 1rem;
+    top: 0.9rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: var(--accent-2);
+    color: var(--bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  ol.flow li strong { display: block; margin-bottom: 0.1rem; }
+  ol.flow li span { color: var(--text-dim); font-size: 0.93rem; }
+  .support-list { display: grid; gap: 0.7rem; }
+  .support-item {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.15s;
+  }
+  .support-item.open { border-color: var(--accent); }
+  .support-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .support-head:hover { background: var(--bg-elev-2); }
+  .support-head .left { display: flex; align-items: center; gap: 0.7rem; }
+  .support-head .ico { font-size: 1.2rem; }
+  .support-head .title { font-weight: 600; color: var(--text); }
+  .support-head .sub { color: var(--text-dim); font-size: 0.85rem; display: block; margin-top: 0.1rem; }
+  .support-head .chev {
+    color: var(--text-dim);
+    transition: transform 0.2s;
+    font-size: 0.9rem;
+  }
+  .support-item.open .chev { transform: rotate(180deg); color: var(--accent); }
+  .support-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .support-item.open .support-body { max-height: 1500px; }
+  .support-body-inner {
+    padding: 0 1.1rem 1.1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+  }
+  .support-body h5 {
+    color: var(--accent-2);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0.9rem 0 0.3rem;
+  }
+  .support-body h5:first-child { margin-top: 0; }
+  .support-body p, .support-body ul { margin: 0.2rem 0; color: var(--text); font-size: 0.94rem; }
+  .support-body ul { padding-left: 1.2rem; }
+  .support-body ul li { margin-bottom: 0.2rem; color: var(--text-dim); }
+  .support-body .source {
+    margin-top: 1rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--bg-elev-2);
+    border-radius: 6px;
+    font-size: 0.85rem;
+  }
+  .support-body .source a { font-weight: 600; }
+  .org-chart { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; padding: 0.8rem 0; }
+  .org-node {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    min-width: 180px;
+    text-align: center;
+  }
+  .org-node .role { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+  .org-node .who { font-weight: 600; }
+  .org-line { width: 2px; height: 18px; background: var(--border); }
+  .org-row { display: flex; gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
+  .org-node.top { border-color: var(--accent); }
+  .org-node.exec { border-color: var(--accent-2); }
+  details {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+  details summary { cursor: pointer; font-weight: 600; }
+  details[open] summary { color: var(--accent); margin-bottom: 0.4rem; }
+  details p { margin: 0; color: var(--text-dim); }
+  footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--text-dim); }
+  @media (max-width: 600px) {
+    header { padding: 1.5rem 1rem 1rem; }
+    main { padding: 1.5rem 1rem 3rem; }
+    nav.tabs { justify-content: flex-start; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="badge">A plain-language guide</div>
+  <h1>Understanding ACC</h1>
+  <p class="lede">New Zealand's no-fault accident compensation scheme - what it is, how it works, and how to access support.</p>
+</header>
+<nav class="tabs" id="tabs">
+  <button data-tab="what" class="active">What it is</button>
+  <button data-tab="deal">The deal</button>
+  <button data-tab="accounts">5 accounts</button>
+  <button data-tab="flow">How a claim works</button>
+  <button data-tab="support">What ACC pays for</button>
+  <button data-tab="structure">Structure</button>
+  <button data-tab="faq">FAQ</button>
+</nav>
+<main>
+<section id="what" class="panel active">
+  <h2>What ACC actually is</h2>
+  <p>The <strong>Accident Compensation Corporation</strong> is a Crown entity that provides <strong>universal, no-fault personal injury cover</strong> for everyone in New Zealand - citizens, residents, and visitors alike. Set up in 1974 under the Accident Compensation Act, it replaced the right to sue for personal injury with a single nationwide scheme.</p>
+  <p class="dim">If you're hurt in NZ - at work, on the road, playing sport, slipping in the shower - ACC covers your treatment and recovery, regardless of who caused it.</p>
+  <div class="callout">
+    <p><strong>Quick numbers:</strong> ACC accepts roughly <strong>2 million new claims a year</strong>, manages <strong>$50B+ in investment assets</strong>, and covers everyone in NZ at any moment - about 5 million people plus visitors.</p>
+  </div>
+  <p>Browse the official site: <a href="https://www.acc.co.nz" target="_blank" rel="noopener">acc.co.nz</a></p>
+</section>
+<section id="deal" class="panel">
+  <h2>The "social contract" - what you give up, what you get</h2>
+  <div class="callout">
+    <p><strong>The trade-off:</strong> In exchange for guaranteed cover, you generally <em>cannot sue</em> anyone for personal injury in NZ. This is unique globally and is the foundation of the scheme.</p>
+  </div>
+  <p>Recommended by the 1967 <em>Woodhouse Report</em>, the scheme rests on five principles:</p>
+  <ul>
+    <li><strong>Community responsibility</strong> - society as a whole bears the cost of injury.</li>
+    <li><strong>Comprehensive entitlement</strong> - cover for all, regardless of cause or fault.</li>
+    <li><strong>Complete rehabilitation</strong> - restore the injured person, not just compensate.</li>
+    <li><strong>Real compensation</strong> - meaningful income replacement, not a token payment.</li>
+    <li><strong>Administrative efficiency</strong> - one scheme, no court battles.</li>
+  </ul>
+  <p>Read more: <a href="https://www.acc.co.nz/about-us/who-we-are/our-history/" target="_blank" rel="noopener">ACC's history &amp; the Woodhouse Report</a></p>
+</section>
+<section id="accounts" class="panel">
+  <h2>The 5 levy accounts</h2>
+  <p>ACC isn't funded by general tax. It runs on five separate accounts, each with its own levy payers and a ring-fenced pool of money.</p>
+  <div class="grid">
+    <div class="account-card">
+      <div class="icon">üõ†Ô∏è</div>
+      <h4>Work Account</h4>
+      <p>Injuries at work or caused by work.</p>
+      <div class="funded">Funded by: employer + self-employed levies</div>
+    </div>
+    <div class="account-card">
+      <div class="icon">üë•</div>
+      <h4>Earners' Account</h4>
+      <p>Non-work injuries to wage/salary earners (e.g. weekend sports).</p>
+      <div class="funded">Funded by: PAYE deduction from earners</div>
+    </div>
+    <div class="account-card">
+      <div class="icon">üö-</div>
+      <h4>Motor Vehicle Account</h4>
+      <p>Injuries from motor-vehicle crashes on public roads.</p>
+      <div class="funded">Funded by: vehicle licensing (rego) + petrol levy</div>
+    </div>
+    <div class="account-card">
+      <div class="icon">üè°</div>
+      <h4>Non-Earners' Account</h4>
+      <p>Non-work injuries to people who don't earn - children, retirees, beneficiaries.</p>
+      <div class="funded">Funded by: government (general taxation)</div>
+    </div>
+    <div class="account-card">
+      <div class="icon">üè•</div>
+      <h4>Treatment Injury Account</h4>
+      <p>Injuries caused by medical treatment itself.</p>
+      <div class="funded">Funded by: Earners' &amp; Non-Earners' Accounts</div>
+    </div>
+  </div>
+  <p style="margin-top:1rem;">More on levies: <a href="https://www.acc.co.nz/for-business/" target="_blank" rel="noopener">ACC for business &amp; levies</a></p>
+</section>
+<section id="flow" class="panel">
+  <h2>How a claim flows</h2>
+  <ol class="flow">
+    <li><strong>Get treatment</strong><span>Visit a GP, physio, hospital, or other registered provider. The provider usually lodges the claim form (ACC45) electronically - you don't need to file paperwork yourself.</span></li>
+    <li><strong>ACC decides cover</strong><span>ACC reviews whether the injury meets the legal definition of a "personal injury caused by accident." Most claims are accepted within days.</span></li>
+    <li><strong>Treatment costs covered</strong><span>Subsidised or fully-covered visits to GPs, physios, specialists, surgery, imaging, prescriptions, and aids/equipment.</span></li>
+    <li><strong>Weekly compensation kicks in</strong><span>If you can't work for more than a week, ACC pays <strong>80% of your pre-injury earnings</strong> (up to a cap). Your employer pays the first week.</span></li>
+    <li><strong>Rehabilitation plan</strong><span>A case manager works with you on returning to work, retraining, home help, transport, or whatever is needed to recover.</span></li>
+    <li><strong>Long-term outcomes</strong><span>If permanent impairment remains, you may receive a lump sum. If a partner or child dies, survivors receive ongoing support.</span></li>
+  </ol>
+  <p style="margin-top:1rem;">Step-by-step: <a href="https://www.acc.co.nz/im-injured/" target="_blank" rel="noopener">acc.co.nz/im-injured</a></p>
+</section>
+<section id="support" class="panel">
+  <h2>What ACC pays for - and how to access it</h2>
+  <p class="dim">Click any item to expand. Each entry explains what's covered, who's eligible, how to apply, and links to the official ACC page.</p>
+  <div class="support-list" id="supportList">
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">ü©∫</span>
+          <div>
+            <span class="title">Treatment costs</span>
+            <span class="sub">GP, physio, surgery, dental, imaging, prescriptions</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>Visits to GPs, physios, osteos, chiros, podiatrists, specialists, hospital and surgical care, dental for accident-related dental injury, x-rays/MRI/CT scans, and prescription medicines related to your injury.</p>
+        <h5>Eligibility</h5>
+        <p>You must have an accepted ACC claim for the injury. Treatment must be necessary and appropriate for that injury.</p>
+        <h5>How to access</h5>
+        <ul>
+          <li>Just visit a registered NZ provider - they lodge the ACC45 claim form on your behalf.</li>
+          <li>Show photo ID or your NHI number.</li>
+          <li>ACC pays the provider directly (you may pay a small co-payment depending on the clinic).</li>
+        </ul>
+        <h5>Cost to you</h5>
+        <p>Most ACC visits have a part-charge ($30-$60 for a GP is typical). Hospital and ED visits for accidents are fully funded.</p>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/types-of-treatment/" target="_blank" rel="noopener">acc.co.nz - Types of treatment</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">üí∞</span>
+          <div>
+            <span class="title">Weekly compensation</span>
+            <span class="sub">80% of pre-injury earnings while unable to work</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>If your injury stops you working, ACC pays <strong>80% of your pre-injury weekly earnings</strong>, up to a maximum cap (adjusted yearly). Self-employed people are paid based on their declared earnings.</p>
+        <h5>Eligibility</h5>
+        <ul>
+          <li>You must be an "earner" at the time of injury (employed, self-employed, or shareholder-employee).</li>
+          <li>A medical certificate from your GP must say you're unfit for work.</li>
+          <li>You must be off work more than the first 7 days (employer pays week one at 80%).</li>
+        </ul>
+        <h5>How to access</h5>
+        <ul>
+          <li>Get a <strong>medical certificate (ACC18)</strong> from your GP at your first visit.</li>
+          <li>ACC sends you an earnings information form - return it with payslips/IR records.</li>
+          <li>Payments are made fortnightly, taxed as income (PAYE).</li>
+          <li>Renew the medical certificate every few weeks until you're cleared to return.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/financial-support/weekly-compensation/" target="_blank" rel="noopener">acc.co.nz - Weekly compensation</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">üîÑ</span>
+          <div>
+            <span class="title">Rehabilitation</span>
+            <span class="sub">Return-to-work, retraining, vocational and social rehab</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>Two streams: <strong>vocational rehab</strong> (getting back to work - graduated return, retraining, modified duties, workplace assessments) and <strong>social rehab</strong> (everyday-life support - counselling, attendant care, household help).</p>
+        <h5>Eligibility</h5>
+        <p>Anyone with an accepted claim whose injury is creating barriers to work or normal life.</p>
+        <h5>How to access</h5>
+        <ul>
+          <li>For longer claims, ACC assigns you a <strong>recovery team member</strong> (case manager).</li>
+          <li>You and the case manager build an <strong>Individual Recovery Plan</strong> together.</li>
+          <li>The plan lists agreed services, timelines, and goals - you can review and challenge it.</li>
+          <li>Vocational assessments may be arranged with an occupational therapist or specialist.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/recovery/" target="_blank" rel="noopener">acc.co.nz - Recovery &amp; rehabilitation</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">üè†</span>
+          <div>
+            <span class="title">Help at home</span>
+            <span class="sub">Cleaning, cooking, laundry, attendant care</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>Home-help services like vacuuming, washing, ironing, basic cooking, lawn-mowing, and personal care (showering, dressing) if your injury prevents you doing them.</p>
+        <h5>Eligibility</h5>
+        <ul>
+          <li>You must be unable to do these tasks <em>because of</em> your injury.</li>
+          <li>ACC considers what you did before the injury - they won't pay for jobs someone else in your household always did.</li>
+          <li>An ACC needs assessment determines hours per week.</li>
+        </ul>
+        <h5>How to access</h5>
+        <ul>
+          <li>Tell your GP, physio, or case manager that you need help at home.</li>
+          <li>ACC arranges an <strong>assessment by an occupational therapist</strong>.</li>
+          <li>Approved hours are delivered by an ACC-contracted provider, or you can claim reimbursement if a friend/family member helps.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/financial-support/help-at-home/" target="_blank" rel="noopener">acc.co.nz - Help at home</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">üë∂</span>
+          <div>
+            <span class="title">Childcare payments</span>
+            <span class="sub">If your injury stops you caring for your kids</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>A weekly amount towards childcare costs for children under 14 (or under 18 if disabled), for parents who can't provide care because of their injury.</p>
+        <h5>Eligibility</h5>
+        <ul>
+          <li>You're the primary caregiver before the injury.</li>
+          <li>Your medical certificate states you can't care for the kids.</li>
+        </ul>
+        <h5>How to access</h5>
+        <ul>
+          <li>Ask your case manager to add childcare to your recovery plan.</li>
+          <li>ACC pays a set weekly rate per child (rates published on the ACC site).</li>
+          <li>You can use a registered carer or a relative - receipts may be required.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/financial-support/childcare-payments/" target="_blank" rel="noopener">acc.co.nz - Childcare payments</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">üö-</span>
+          <div>
+            <span class="title">Travel &amp; transport</span>
+            <span class="sub">Mileage, taxis, public transport to appointments</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>Travel to and from injury-related appointments - by car (mileage), public transport (fares), taxi (if you can't drive or use buses), or air travel for specialist trips.</p>
+        <h5>Eligibility</h5>
+        <p>Travel must be necessary, reasonable, and to a treatment or rehab provider for your covered injury. There's a minimum distance threshold for mileage claims.</p>
+        <h5>How to access</h5>
+        <ul>
+          <li>Keep records: dates, addresses, distances, receipts.</li>
+          <li>Submit through MyACC online or via your case manager.</li>
+          <li>Mileage rate is the standard ACC rate (updated yearly).</li>
+          <li>Pre-approve taxi or air travel before booking.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/financial-support/travel/" target="_blank" rel="noopener">acc.co.nz - Travel for treatment</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">ü¶Ω</span>
+          <div>
+            <span class="title">Aids, equipment &amp; home modifications</span>
+            <span class="sub">Crutches, wheelchairs, ramps, bathroom aids, prosthetics</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>Short-term equipment (crutches, moon boots, slings), long-term aids (wheelchairs, prosthetics, hearing aids if injury-related), home modifications (ramps, grab rails, bathroom alterations), and vehicle modifications (hand controls, hoists).</p>
+        <h5>Eligibility</h5>
+        <p>Equipment must be needed because of your covered injury. Major modifications require an OT assessment and ACC approval before work begins.</p>
+        <h5>How to access</h5>
+        <ul>
+          <li>Short-term gear: pharmacies, physios, and hospitals can dispense on the spot.</li>
+          <li>Long-term: case manager arranges an <strong>occupational therapist assessment</strong>.</li>
+          <li>OT writes a recommendation; ACC approves and arranges installation through contracted suppliers.</li>
+          <li>Don't pay out-of-pocket for major items - get pre-approval.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/equipment-and-modifications/" target="_blank" rel="noopener">acc.co.nz - Equipment &amp; modifications</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">‚ö-Ô∏è</span>
+          <div>
+            <span class="title">Lump sum for permanent impairment</span>
+            <span class="sub">One-off payment if you have lasting impairment of 10% or more</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>A tax-free lump sum if your injury leaves you with <strong>permanent whole-person impairment of 10% or more</strong>. The amount scales with the impairment percentage, up to a maximum (around $170k+ at the top end).</p>
+        <h5>Eligibility</h5>
+        <ul>
+          <li>Your injury occurred on or after <strong>1 April 2002</strong> (older injuries get the Independence Allowance instead - a fortnightly payment).</li>
+          <li>You're medically stable - usually <strong>at least 2 years</strong> after the injury.</li>
+          <li>An accredited assessor measures impairment using AMA guidelines.</li>
+        </ul>
+        <h5>How to access</h5>
+        <ul>
+          <li>Ask your case manager about a <strong>Whole Person Impairment (WPI) assessment</strong> once your condition has stabilised.</li>
+          <li>ACC arranges and pays for the assessment.</li>
+          <li>If you score 10%+, ACC calculates and pays the lump sum.</li>
+          <li>You can have a reassessment later if your condition worsens.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/financial-support/lump-sum-and-independence-allowance/" target="_blank" rel="noopener">acc.co.nz - Lump sum &amp; Independence Allowance</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">üïäÔ∏è</span>
+          <div>
+            <span class="title">Survivors' support (fatal injuries)</span>
+            <span class="sub">Funeral grant, survivor's grant, weekly payments to spouse and children</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <ul>
+          <li><strong>Funeral grant</strong> - a contribution toward funeral costs (around $7,000+, indexed yearly).</li>
+          <li><strong>Survivor's grant</strong> - tax-free lump sum to spouse, children, and other dependants.</li>
+          <li><strong>Weekly compensation</strong> - ongoing payments to the surviving spouse (60% of the deceased's weekly comp, for up to 5 years) and children (20% each, until 18 or older if studying).</li>
+          <li><strong>Childcare payments</strong> - for surviving children.</li>
+        </ul>
+        <h5>Eligibility</h5>
+        <p>Death must result from a covered personal injury (including treatment injury). Available to spouses, civil-union/de-facto partners, dependent children, and other dependants.</p>
+        <h5>How to access</h5>
+        <ul>
+          <li>Contact ACC directly: <strong>0800 101 996</strong>.</li>
+          <li>ACC assigns a dedicated case manager for fatal claims.</li>
+          <li>You'll need the death certificate, proof of relationship, and (for weekly comp) the deceased's earnings records.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/financial-support/help-after-fatal-injury/" target="_blank" rel="noopener">acc.co.nz - Help after a fatal injury</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">üß†</span>
+          <div>
+            <span class="title">Sensitive claims &amp; mental injury</span>
+            <span class="sub">Counselling and support for mental injury caused by sexual abuse or trauma</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>Mental injury caused by sexual abuse, certain criminal acts, or as a consequence of a covered physical injury or qualifying work-related traumatic event. Includes counselling, therapy, social workers, and weekly compensation if unable to work.</p>
+        <h5>Eligibility</h5>
+        <p>You don't need to have reported the abuse to police. The path to ACC is through an approved mental-health provider who lodges the claim.</p>
+        <h5>How to access</h5>
+        <ul>
+          <li>Find a <strong>sensitive-claims-registered counsellor or social worker</strong> - directories are on the ACC site or via Find Support / 0800 735 566.</li>
+          <li>Initial sessions are funded while ACC assesses cover.</li>
+          <li>You can self-refer; no GP referral is needed.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/im-injured/injuries-we-cover/sensitive-claims/" target="_blank" rel="noopener">acc.co.nz - Sensitive claims</a></div>
+      </div></div>
+    </div>
+    <div class="support-item">
+      <div class="support-head">
+        <div class="left">
+          <span class="ico">üõ°Ô∏è</span>
+          <div>
+            <span class="title">Injury prevention programmes</span>
+            <span class="sub">Public campaigns, workplace safety, community grants</span>
+          </div>
+        </div>
+        <span class="chev">‚-æ</span>
+      </div>
+      <div class="support-body"><div class="support-body-inner">
+        <h5>What's covered</h5>
+        <p>Not a personal entitlement - these are ACC-funded programmes that aim to reduce injuries before they happen: workplace safety partnerships, road safety campaigns, sports injury prevention (e.g. RugbySmart, SportSmart), home and community programmes, and the <em>Live Stronger for Longer</em> falls-prevention initiative.</p>
+        <h5>How to access (for individuals)</h5>
+        <ul>
+          <li>Free resources, courses, and toolkits available on the ACC website.</li>
+          <li>Community organisations can apply for partnership funding.</li>
+        </ul>
+        <div class="source">üìé <a href="https://www.acc.co.nz/preventing-injury/" target="_blank" rel="noopener">acc.co.nz - Preventing injury</a></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+<section id="structure" class="panel">
+  <h2>How ACC is structured</h2>
+  <p>ACC is a <strong>Crown entity</strong> - owned by the government but run at arm's length. It is governed by the Accident Compensation Act 2001 and accountable to Parliament through the Minister for ACC.</p>
+  <div class="org-chart">
+    <div class="org-node top"><div class="role">Accountable to</div><div class="who">Minister for ACC / Parliament</div></div>
+    <div class="org-line"></div>
+    <div class="org-node top"><div class="role">Governance</div><div class="who">ACC Board</div><div class="role" style="margin-top:0.3rem;">Appointed by the Minister</div></div>
+    <div class="org-line"></div>
+    <div class="org-node exec"><div class="role">Leadership</div><div class="who">Chief Executive</div></div>
+    <div class="org-line"></div>
+    <div class="org-row">
+      <div class="org-node"><div class="role">Operations</div><div class="who">Claims &amp; Recovery</div></div>
+      <div class="org-node"><div class="role">Finance</div><div class="who">Investments &amp; Levies</div></div>
+      <div class="org-node"><div class="role">Strategy</div><div class="who">Prevention &amp; Partnerships</div></div>
+    </div>
+  </div>
+  <h3>If you disagree with a decision</h3>
+  <p>You can ask for a <strong>review</strong> (handled by an independent reviewer through FairWay or similar). If still unhappy, you can <strong>appeal to the District Court</strong>, then the High Court, and ultimately the Court of Appeal.</p>
+  <p>More: <a href="https://www.acc.co.nz/resolving-issues/" target="_blank" rel="noopener">acc.co.nz - Resolving issues &amp; reviews</a></p>
+</section>
+<section id="faq" class="panel">
+  <h2>Common questions</h2>
+  <details><summary>Does ACC cover illness?</summary><p>Generally no. ACC covers <em>injury</em>, not illness. Cancer, heart attacks, mental illness on its own - these are health-system, not ACC. Exceptions exist for work-related illness (e.g. asbestos exposure) and mental injury caused by a covered physical injury or certain traumatic events.</p></details>
+  <details><summary>Am I covered as a tourist?</summary><p>Yes - anyone in NZ is covered for personal injury by accident, including overseas visitors. The same trade-off applies: you cannot sue.</p></details>
+  <details><summary>What's the weekly compensation cap?</summary><p>ACC pays 80% of your pre-injury weekly earnings, up to a maximum income threshold adjusted yearly. High earners may not be fully compensated above that cap.</p></details>
+  <details><summary>Who pays the first week off work?</summary><p>Your employer pays the first week of weekly compensation (at 80%). ACC takes over from week two.</p></details>
+  <details><summary>Can I see any doctor I want?</summary><p>Yes - any registered GP, physio, or specialist in NZ can lodge ACC claims. ACC subsidises the visit; some providers charge a small co-payment on top.</p></details>
+  <details><summary>How do I check the status of my claim?</summary><p>Sign in to <a href="https://my.acc.co.nz" target="_blank" rel="noopener">MyACC</a> with RealMe to see your claim, payments, and contact your case manager.</p></details>
+  <details><summary>Where does ACC's investment money come from?</summary><p>Levies are collected ahead of expected lifetime claim costs. The surplus is invested by ACC's investment team to fund long-tail claims (someone injured today may need cover for 50+ years). ACC manages tens of billions of dollars in assets.</p></details>
+</section>
+</main>
+<footer>
+  <p>Educational summary, not legal advice. For your specific situation visit <a href="https://www.acc.co.nz" target="_blank" rel="noopener">acc.co.nz</a> or call 0800 101 996.</p>
+</footer>
+<script>
+  // Tab switching
+  const tabs = document.querySelectorAll('#tabs button');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      tabs.forEach(b => b.classList.toggle('active', b === btn));
+      panels.forEach(p => p.classList.toggle('active', p.id === target));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  // Expandable support items
+  document.querySelectorAll('.support-item').forEach(item => {
+    item.querySelector('.support-head').addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

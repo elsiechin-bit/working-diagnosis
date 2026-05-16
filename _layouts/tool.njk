@@ -1,0 +1,16 @@
+---
+layout: base.njk
+pageType: tool
+---
+
+<article class="tool-page">
+  <header class="tool-header">
+    {% if specialty %}<p class="specialty-label">{{ specialty }}</p>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="topic-dek">{{ description }}</p>{% endif %}
+  </header>
+
+  <div class="tool-body">
+    {{ content | safe }}
+  </div>
+</article>

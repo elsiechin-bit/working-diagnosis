@@ -1,0 +1,362 @@
+{
+  "metadata": {
+    "source": "NZ Pharmaceutical Schedule (as of May 2026)",
+    "note": "This database reflects commonly available and subsidised respiratory aerosol products. Subsidy status and product availability may change. Always verify current formulary status on NZF.org.nz before prescribing.",
+    "lastUpdated": "2026-05-03"
+  },
+  "categories": {
+    "LAMA": {
+      "name": "Long-acting muscarinic antagonist (anticholinergic)",
+      "description": "Once- or twice-daily maintenance, slower onset (2-4 hours), sustained bronchodilation.",
+      "medicines": [
+        {
+          "id": "tio-18",
+          "genericName": "Tiotropium",
+          "brandName": "Spiriva",
+          "strength": "18 µg",
+          "formulation": "Dry powder inhaler (Handihaler)",
+          "frequency": "Once daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "COPD maintenance",
+          "notes": "Long-acting, 24-hour coverage. Gold standard LAMA in NZ. Takes 2-4 weeks to reach steady state."
+        },
+        {
+          "id": "gly-50",
+          "genericName": "Glycopyrronium",
+          "brandName": "Seebri Breezhaler",
+          "strength": "50 µg",
+          "formulation": "Dry powder inhaler (Breezhaler)",
+          "frequency": "Once daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "COPD maintenance",
+          "notes": "Once-daily, rapid onset (~5 min). Alternative to tiotropium."
+        },
+        {
+          "id": "acu-322",
+          "genericName": "Aclidinium",
+          "brandName": "Eklira Genuair",
+          "strength": "322 µg",
+          "formulation": "Dry powder inhaler (Genuair)",
+          "frequency": "Twice daily",
+          "subsidised": false,
+          "subsidyNote": "Not subsidised; funded only if specialist-initiated",
+          "nzfRef": "Restricted benefit",
+          "notes": "Twice-daily option. Less commonly used in NZ primary care."
+        },
+        {
+          "id": "umc-62.5",
+          "genericName": "Umeclidinium",
+          "brandName": "Incruse Ellipta",
+          "strength": "62.5 µg",
+          "formulation": "Dry powder inhaler (Ellipta)",
+          "frequency": "Once daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded (in combination only)",
+          "nzfRef": "Only in LABA/LAMA combinations",
+          "notes": "Available only in Anoro (with vilanterol) and Trelegy (with vilanterol + fluticasone)."
+        }
+      ]
+    },
+    "LABA": {
+      "name": "Long-acting β₂-agonist (beta-2 agonist)",
+      "description": "Once- or twice-daily maintenance bronchodilator. Faster onset (~15 min) than LAMA. Not recommended as monotherapy in COPD.",
+      "medicines": [
+        {
+          "id": "sal-50",
+          "genericName": "Salmeterol",
+          "brandName": "Asmol 50 (LABA only)",
+          "strength": "50 µg",
+          "formulation": "Metered-dose inhaler (MDI)",
+          "frequency": "Twice daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "COPD/asthma",
+          "notes": "Twice-daily. Older formulation; less commonly used now. Not recommended as COPD monotherapy."
+        },
+        {
+          "id": "for-6",
+          "genericName": "Formoterol",
+          "brandName": "Foradil or Oxis",
+          "strength": "6 µg (Oxis) or 12 µg (various)",
+          "formulation": "Dry powder inhaler",
+          "frequency": "Twice daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "Asthma/COPD",
+          "notes": "Rapid onset (~5 min). Typically used in ICS/LABA combinations. Monotherapy not recommended in COPD."
+        },
+        {
+          "id": "vil-25",
+          "genericName": "Vilanterol",
+          "brandName": "Not available alone in NZ",
+          "strength": "25 µg",
+          "formulation": "Dry powder (Ellipta)",
+          "frequency": "Once daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded (in combinations)",
+          "nzfRef": "Only in LABA/LAMA or triple combinations",
+          "notes": "Ultra-LABA; only in Anoro (with umeclidinium) or Trelegy (triple)."
+        },
+        {
+          "id": "ind-110",
+          "genericName": "Indacaterol",
+          "brandName": "Onbrez Breezhaler",
+          "strength": "110 µg or 300 µg",
+          "formulation": "Dry powder inhaler (Breezhaler)",
+          "frequency": "Once daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded (in combination only)",
+          "nzfRef": "In Ultibro and triple combinations",
+          "notes": "Ultra-LABA; once-daily. Available primarily in Ultibro (with glycopyrronium)."
+        }
+      ]
+    },
+    "LABA_LAMA": {
+      "name": "Dual therapy: LABA/LAMA combination",
+      "description": "Once-daily dual maintenance therapy. Excellent for symptomatic patients or those with exacerbation risk.",
+      "medicines": [
+        {
+          "id": "anoro",
+          "genericName": "Vilanterol/Umeclidinium",
+          "brandName": "Anoro Ellipta",
+          "strength": "25/62.5 µg",
+          "formulation": "Dry powder inhaler (Ellipta)",
+          "frequency": "Once daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "GOLD B, C, D",
+          "notes": "Preferred dual therapy. Ultra-LABA + modern LAMA. Single inhaler, once-daily. Well-tolerated."
+        },
+        {
+          "id": "ultibro",
+          "genericName": "Indacaterol/Glycopyrronium",
+          "brandName": "Ultibro Breezhaler",
+          "strength": "110/50 µg",
+          "formulation": "Dry powder inhaler (Breezhaler)",
+          "frequency": "Once daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "GOLD B, C, D",
+          "notes": "Alternative dual therapy. Ultra-LABA + glycopyrronium. Once-daily. Slightly higher LABA dose than Anoro."
+        },
+        {
+          "id": "duaklir",
+          "genericName": "Aclidinium/Formoterol",
+          "brandName": "Duaklir Genuair",
+          "strength": "340/12 µg",
+          "formulation": "Dry powder inhaler (Genuair)",
+          "frequency": "Twice daily",
+          "subsidised": false,
+          "subsidyNote": "Not routinely subsidised in NZ",
+          "nzfRef": "Restricted/not funded",
+          "notes": "Twice-daily option. Not commonly available in NZ primary care due to subsidy restrictions."
+        }
+      ]
+    },
+    "ICS_LABA": {
+      "name": "ICS/LABA combination (inhaled corticosteroid + long-acting beta-agonist)",
+      "description": "Used in asthma-COPD overlap and some COPD cases (not first-line for pure COPD). Step down from triple therapy if appropriate.",
+      "medicines": [
+        {
+          "id": "fluty_sal",
+          "genericName": "Fluticasone/Salmeterol",
+          "brandName": "Seretide (various strengths)",
+          "strength": "25/125 µg, 25/250 µg, 25/500 µg",
+          "formulation": "MDI or dry powder (Accuhaler)",
+          "frequency": "Twice daily (MDI) or twice daily (Accuhaler)",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "Asthma, COPD if overlap or eosinophilia",
+          "notes": "Oldest ICS/LABA. Twice-daily. Generic options available. Not preferred first-line in pure COPD."
+        },
+        {
+          "id": "buds_for",
+          "genericName": "Budesonide/Formoterol",
+          "brandName": "Symbicort (various strengths)",
+          "strength": "100/3 µg, 200/5 µg, 400/12 µg",
+          "formulation": "MDI",
+          "frequency": "Twice daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "Asthma; COPD if ICS indicated",
+          "notes": "Twice-daily. Can be used as maintenance-and-reliever therapy (MART) in asthma. Dual action inhaler."
+        },
+        {
+          "id": "flut_viln",
+          "genericName": "Fluticasone/Vilanterol",
+          "brandName": "Breo Ellipta",
+          "strength": "100/25 µg, 200/25 µg",
+          "formulation": "Dry powder inhaler (Ellipta)",
+          "frequency": "Once daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "Asthma and COPD-ACO",
+          "notes": "Once-daily ICS/LABA. Can bridge patients from COPD to asthma-COPD overlap if eosinophilia emerges."
+        }
+      ]
+    },
+    "TRIPLE": {
+      "name": "Triple therapy: ICS/LABA/LAMA",
+      "description": "Three-drug combination for GOLD D (high symptoms + high exacerbation risk). Reduces exacerbations vs dual therapy.",
+      "medicines": [
+        {
+          "id": "trimbow",
+          "genericName": "Budesonide/Glycopyrronium/Formoterol",
+          "brandName": "Trimbow",
+          "strength": "87/9/4.8 µg",
+          "formulation": "MDI (pressurised metered-dose inhaler)",
+          "frequency": "Two puffs twice daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "GOLD D",
+          "notes": "Preferred triple therapy in NZ. Single inhaler, twice-daily. ICS dose is moderate (budesonide 174 µg/day at standard dosing)."
+        },
+        {
+          "id": "trelegy",
+          "genericName": "Fluticasone/Umeclidinium/Vilanterol",
+          "brandName": "Trelegy Ellipta",
+          "strength": "100/62.5/25 µg or 200/62.5/25 µg",
+          "formulation": "Dry powder inhaler (Ellipta)",
+          "frequency": "Once daily",
+          "subsidised": false,
+          "subsidyNote": "Not routinely funded in NZ; specialist use only",
+          "nzfRef": "Restricted benefit",
+          "notes": "Once-daily triple. Not available for routine primary care prescribing in NZ due to cost."
+        }
+      ]
+    },
+    "SABA": {
+      "name": "Short-acting β₂-agonist (rescue/reliever)",
+      "description": "Rapid-onset (5-15 min) PRN for breakthrough symptoms. Not for regular maintenance.",
+      "medicines": [
+        {
+          "id": "salb-100",
+          "genericName": "Salbutamol (albuterol)",
+          "brandName": "Asmol or Ventolin",
+          "strength": "100 µg",
+          "formulation": "MDI",
+          "frequency": "As needed",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "Standard reliever",
+          "notes": "Gold standard rescue inhaler. Rapid onset. No tachyphylaxis with appropriate maintenance therapy."
+        },
+        {
+          "id": "terb-250",
+          "genericName": "Terbutaline",
+          "brandName": "Bricanyl",
+          "strength": "250 µg",
+          "formulation": "MDI or dry powder",
+          "frequency": "As needed",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "Alternative to salbutamol",
+          "notes": "Less commonly used; alternative if salbutamol intolerance. Slightly longer duration (~5 hours)."
+        }
+      ]
+    },
+    "SAMA": {
+      "name": "Short-acting muscarinic antagonist (anticholinergic)",
+      "description": "Slower onset (30-45 min) than SABA but may be useful adjunct. Can combine with SABA for synergistic effect.",
+      "medicines": [
+        {
+          "id": "ipra-20",
+          "genericName": "Ipratropium",
+          "brandName": "Atrovent",
+          "strength": "20 µg",
+          "formulation": "MDI",
+          "frequency": "Three to four times daily (regular or PRN)",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "COPD adjunct",
+          "notes": "Can be used with SABA for additive effect (e.g., in acute exacerbations). Not preferred for regular use given LAMA availability."
+        }
+      ]
+    },
+    "OTHER": {
+      "name": "Other respiratory agents",
+      "description": "Useful add-ons and adjuncts for specific COPD phenotypes.",
+      "medicines": [
+        {
+          "id": "rofl-500",
+          "genericName": "Roflumilast",
+          "brandName": "Daxas",
+          "strength": "500 µg tablet (oral, not aerosol)",
+          "formulation": "Oral tablet",
+          "frequency": "Once daily",
+          "subsidised": true,
+          "subsidyNote": "Fully funded if chronic bronchitis + frequent exacerbations",
+          "nzfRef": "Add-on for chronic bronchitis phenotype",
+          "notes": "Phosphodiesterase-4 (PDE-4) inhibitor. Oral, not inhaled. Consider in frequent exacerbators (≥2/year) with chronic bronchitis. ~10% relative reduction in exacerbations. GI side effects common (nausea, weight loss)."
+        },
+        {
+          "id": "alb-ineb",
+          "genericName": "Salbutamol nebuliser solution",
+          "brandName": "Asmol or generic",
+          "strength": "2.5 mg/2.5 mL or 5 mg/2.5 mL",
+          "formulation": "Nebuliser solution",
+          "frequency": "As needed (acute) or TDS (severe COPD)",
+          "subsidised": true,
+          "subsidyNote": "Fully funded",
+          "nzfRef": "Acute exacerbations; severe stable COPD",
+          "notes": "For patients unable to use MDI/DPI or requiring higher drug delivery (e.g., acute exacerbations). Slower onset than MDI but higher lung deposition."
+        }
+      ]
+    }
+  },
+  "prescribingNotes": {
+    "COPD_monotherapy": {
+      "recommended": [
+        {
+          "gold_group": "A",
+          "first_line": "LAMA (tiotropium or glycopyrronium)",
+          "alternative": "LABA (if LAMA intolerance or contraindicated)",
+          "avoid": "ICS as monotherapy in pure COPD"
+        }
+      ]
+    },
+    "COPD_dual_therapy": {
+      "recommended": [
+        {
+          "gold_group": "B, C",
+          "first_line": "LABA/LAMA (Anoro or Ultibro)",
+          "rationale": "Superior to monotherapy for symptom relief and exacerbation prevention in higher-risk groups."
+        }
+      ]
+    },
+    "COPD_triple_therapy": {
+      "recommended": [
+        {
+          "gold_group": "D",
+          "first_line": "ICS/LABA/LAMA (Trimbow)",
+          "rationale": "Reduces exacerbations vs dual therapy. Recommended only if ≥2 exac/year or high symptom burden.",
+          "ics_indication": "ICS benefit seen with eosinophils ≥100 cells/µL or frequent exacerbations despite dual therapy."
+        }
+      ]
+    },
+    "ICS_cautions": {
+      "note": "Overuse of ICS in COPD associated with increased risk of pneumonia, oral candidiasis, and adverse metabolic effects.",
+      "guidance": [
+        "Reserve ICS for GOLD D or asthma-COPD overlap.",
+        "Do not use ICS monotherapy in pure COPD.",
+        "If eosinophils <100 cells/µL and no asthma features, consider dual LABA/LAMA before triple.",
+        "Monitor for oral candidiasis; advise rinse after use."
+      ]
+    },
+    "smoking_cessation": {
+      "note": "Smoking cessation is the single most effective intervention. Refer to cessation service.",
+      "pharmacotherapy": [
+        "Varenicline (Champix) - partial nicotinic agonist",
+        "Bupropion (Zyban) - antidepressant",
+        "Nicotine replacement therapy (patches, lozenges, gum) - available OTC or subsidised"
+      ]
+    }
+  },
+  "nzf_links": {
+    "nzf_home": "https://www.nzf.org.nz",
+    "respiratory_section": "https://www.nzf.org.nz/nzf_3_0/search?q=Respiratory",
+    "copd_funding": "https://www.nzf.org.nz/nzf_3_0/search?q=COPD"
+  }
+}

@@ -1,0 +1,87 @@
+---
+title: Bronchiolitis
+description: Assessment and management of bronchiolitis in NZ general practice - RSV season, supportive care, admission thresholds, and nirsevimab.
+layout: topic.njk
+specialty: Paeds
+---
+
+<div class="topic-with-aside">
+<div class="topic-body">
+
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/paediatrics/">Paediatrics</a><span class="topic-trail-sep">·</span><span class="here">Bronchiolitis</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Don't miss</p>
+    <ul>
+      <li>Apnoea in &lt;6 month old - admit even if well between episodes</li>
+      <li>Severe recession, head bobbing, exhaustion - imminent respiratory failure</li>
+      <li>Underlying premature, CHD, CLD, immunodeficiency - lower threshold for admission</li>
+      <li>Pneumonia overlap - focal crackles, persisting fever, deteriorating</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">First-line</p>
+    <dl>
+      <dt>Diagnosis</dt>
+      <dd>Clinical - viral prodrome → tachypnoea, recession, wheeze, age usually &lt;2</dd>
+      <dt>Treatment</dt>
+      <dd>Supportive only - hydration, oxygenation, minimal handling</dd>
+      <dt>What does NOT help</dt>
+      <dd>Salbutamol, corticosteroids, antibiotics, hypertonic saline - no benefit, sometimes harm</dd>
+      <dt>Prevention</dt>
+      <dd>Nirsevimab (Beyfortus) on NZ funded schedule from 2024 for eligible infants</dd>
+    </dl>
+  </div>
+  <div class="panic-tile refer">
+    <p class="panic-tile__label">Refer when</p>
+    <ul>
+      <li>SpO2 &lt;92% in air, RR &gt;70, significant recession, head bobbing, apnoea</li>
+      <li>Feeding &lt;50% usual over 24 hours</li>
+      <li>Age &lt;6 weeks with any concerning features</li>
+      <li>Significant comorbidity (premature, CHD, CLD)</li>
+    </ul>
+  </div>
+  <div class="panic-tile tell">
+    <p class="panic-tile__label">Tell whanau</p>
+    <ul>
+      <li>Bronchiolitis lasts 7-10 days; cough can linger 2-3 weeks</li>
+      <li>Worst day is often day 3-5 of illness</li>
+      <li>Watch for: feeding less than half usual, fast or laboured breathing, blue lips, going floppy</li>
+      <li>Smaller more frequent feeds; come back any time you are worried</li>
+    </ul>
+  </div>
+</div>
+
+<p>Bronchiolitis is the most common serious respiratory illness of infancy and the leading cause of infant hospitalisation in New Zealand. It is caused predominantly by respiratory syncytial virus (RSV), with NZ peak incidence in the winter months (June to August). Most cases resolve with supportive care; the challenge is recognising the minority who deteriorate and need hospital-level management.</p>
+
+<div class="tier-2">
+  <p class="tier-label">❍ Presentation and assessment</p>
+  <p>Bronchiolitis affects mainly children under 2, with the under-6-month group at highest risk of severe disease, apnoea, and respiratory failure. Premature infants, those with congenital heart disease, chronic lung disease, or immunodeficiency are also at elevated risk.</p>
+  <p>The typical course begins with 1-3 days of viral prodrome (rhinorrhoea, low-grade fever) followed by progressive lower respiratory tract involvement: increasing cough, tachypnoea, subcostal and intercostal recession, wheeze, and hyperinflation. Feeding difficulty is an early marker of severity - infants who cannot maintain adequate oral intake are at risk of dehydration and may need nasogastric or IV support.</p>
+  <p>Features indicating more severe disease:</p>
+  <ul>
+    <li>Respiratory rate above 70 per minute in infants</li>
+    <li>Oxygen saturations below 92% in air</li>
+    <li>Significant accessory muscle use or head bobbing</li>
+    <li>Apnoeic episodes</li>
+    <li>Poor colour: pallor, mottling, or cyanosis</li>
+    <li>Feeding below 50% of usual volume over the previous 24 hours</li>
+    <li>Age under 6 weeks; premature birth under 35 weeks' gestation</li>
+  </ul>
+  <p>Bronchiolitis is a clinical diagnosis. Routine laboratory investigations and chest X-ray are not required in typical presentations. Chest X-ray is appropriate if the diagnosis is uncertain, the child fails to improve as expected, or complications are suspected (atelectasis, air leak). Oxygen saturation monitoring is the most useful bedside tool for assessing severity and guiding admission decisions.<sup>1</sup></p>
+</div>
+
+<div class="tier-2">
+  <p class="tier-label">❍ Management and parental guidance</p>
+  <p>Management of bronchiolitis is supportive. The following interventions have no evidence of benefit and should not be routinely used: salbutamol, adrenaline (epinephrine), systemic corticosteroids, hypertonic saline nebulisation, chest physiotherapy, and antibiotics (unless concurrent bacterial infection is specifically suspected).<sup>1</sup></p>
+  <p>In the community or primary care setting, the management goals are to maintain hydration (small frequent feeds; nasogastric feeding if unable to maintain oral intake) and to maintain oxygenation (supplemental oxygen if saturations fall below 92% in air). A bulb syringe or gentle nasal saline irrigation can help clear secretions and improve feeding in young infants. Humidified air has no proven benefit.</p>
+  <p>Advise parents to monitor respiratory effort, feeding, colour, and alertness. Provide specific return criteria and Healthline contact information. Most children with mild bronchiolitis can be managed at home - reconsult is expected, as the illness often worsens before improving, typically peaking at days 3-5.</p>
+  <p>Refer to secondary care for: SpO2 below 92% in air; significant respiratory distress (RR above 70, severe recession, head bobbing); apnoeic episodes; feeding below 50% of usual intake over 24 hours; age under 6 weeks or premature birth under 35 weeks; significant comorbidity; parental inability to monitor appropriately; or rapid clinical deterioration. If uncertain, same-day secondary care assessment is appropriate and preferable to an unsafe discharge.</p>
+</div>
+
+<div class="tier-3">
+  <p class="tier-label">❍ Nirsevimab and RSV prevention</p>
+  <p>Nirsevimab (Beyfortus) is a long-acting monoclonal antibody providing passive immunity against RSV. It was introduced to the NZ funded immunisation schedule in 2024 for eligible infants entering their first RSV season. Unlike the previous agent palivizumab - which required monthly injections and was restricted to high-risk infants - nirsevimab is a single dose providing protection across a full RSV season.</p>
+  <p>Eligibility and dose information is maintained by IMAC and the NZF; check current criteria at the start of each RSV season as policy continues to evolve.<sup>2</sup> The introduction of nirsevimab represents a significant change in RSV prevention strategy - palivizumab, previously used only in high-risk infants, has been superseded by a product with broader eligibility and simpler administration.</p>
+  <p>For families of infants at high risk (premature birth, congenital heart disease, chronic lung disease), active counselling at the start of th
