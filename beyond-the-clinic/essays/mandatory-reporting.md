@@ -2,13 +2,23 @@
 title: Mandatory reporting in general practice
 dek: What NZ GPs are legally required to report, what they are professionally obliged to report, and why the gap between those two categories is where most of the clinical difficulty lives.
 date: 2026-04-24
-category: Consultation Practice
-summary:
-  - "In New Zealand, mandatory reporting obligations exist in three layers: legally compulsory (notifiable diseases, gunshot wounds under Crimes Act s201, NZTA driver fitness, coroner notifications), professionally obligatory under codes of conduct, and ethically expected."
-  - "Child abuse reporting in New Zealand is permissive, not mandatory: the Oranga Tamariki Act s15 uses 'may report,' not 'must report' -- a significant difference from Australia, the US, and Canada."
-  - "Elder abuse and impaired practitioner reporting are professional obligations under the Medical Council's code but are not current legal mandates in New Zealand."
-  - "The 2019 Oranga Tamariki uplift controversy has shaped Maori community trust in mandatory reporting systems, adding clinical complexity to decisions about when and how to report concerns."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, ethics-medicolegal, consultation-practice]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Mandatory reporting in general practice</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>In New Zealand, mandatory reporting obligations exist in three layers: legally compulsory (notifiable diseases, gunshot wounds under Crimes Act s201, NZTA driver fitness, coroner notifications), professionally obligatory under codes of conduct, and ethically expected.</li>
+<li>Child abuse reporting in New Zealand is permissive, not mandatory: the Oranga Tamariki Act s15 uses 'may report,' not 'must report' — a significant difference from Australia, the US, and Canada.</li>
+<li>Elder abuse and impaired practitioner reporting are professional obligations under the Medical Council's code but are not current legal mandates in New Zealand.</li>
+<li>The 2019 Oranga Tamariki uplift controversy has shaped Maori community trust in mandatory reporting systems, adding clinical complexity to decisions about when and how to report concerns.</li>
+</ul>
+</div>
 
 The phrase "mandatory reporting" is used loosely in clinical conversation, and the looseness creates real problems. It conflates at least three distinct categories of obligation: things the law requires you to report on pain of criminal or civil liability; things your professional regulatory body requires you to report as a condition of professional registration; and things that the ethical weight of your position makes it effectively impossible not to report, even in the absence of a legal mandate. These three categories overlap but they are not the same, and understanding which applies in a given situation changes both the clinical calculus and the conversation with the patient.
 

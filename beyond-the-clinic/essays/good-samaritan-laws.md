@@ -2,14 +2,24 @@
 title: Good Samaritan laws - do you have to stop, and are you protected if you do?
 dek: A comparative look at how different countries handle the legal consequences of helping a stranger in an emergency - and why New Zealand's answer is less clear than most clinicians assume.
 date: 2026-05-05
-category: Ethics & Law
-summary:
-  - "Good Samaritan law operates under two fundamentally different models internationally: liability protection (common law countries -- no duty to help, but protection if you do) vs duty to rescue (civil law countries -- a legal obligation to assist, with criminal penalties for failure)."
-  - "New Zealand has no statutory duty to rescue and no specific Good Samaritan legislation; a clinician who stops at a roadside emergency may rely on the general negligence standard of reasonable care, but there is no clear legislative protection equivalent to Australia's state-level Acts."
-  - "The professional obligation is different from the legal one: Medical Council guidance is that registered practitioners have an ethical duty to provide emergency assistance when they are the only qualified person available and can do so without undue personal risk."
-  - "In practice, the legal risk of helping in good faith is very low in New Zealand -- no reported case has resulted in successful negligence action against a bystander clinician -- but the uncertainty is greater than most clinicians assume."
-  - "The key practical points: stop if you safely can, act within your competence, document what you did and why, and notify your indemnifier if anything subsequently becomes contentious."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, ethics-medicolegal, emergency-medicine]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Good Samaritan laws</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Good Samaritan law operates under two fundamentally different models internationally: liability protection (common law countries — no duty to help, but protection if you do) vs duty to rescue (civil law countries — a legal obligation to assist, with criminal penalties for failure).</li>
+<li>New Zealand has no statutory duty to rescue and no specific Good Samaritan legislation; a clinician who stops at a roadside emergency may rely on the general negligence standard of reasonable care, but there is no clear legislative protection equivalent to Australia's state-level Acts.</li>
+<li>The professional obligation is different from the legal one: Medical Council guidance is that registered practitioners have an ethical duty to provide emergency assistance when they are the only qualified person available and can do so without undue personal risk.</li>
+<li>In practice, the legal risk of helping in good faith is very low in New Zealand — no reported case has resulted in successful negligence action against a bystander clinician — but the uncertainty is greater than most clinicians assume.</li>
+<li>The key practical points: stop if you safely can, act within your competence, document what you did and why, and notify your indemnifier if anything subsequently becomes contentious.</li>
+</ul>
+</div>
 
 You are driving on State Highway 1 when you see a car that has left the road. You pull over. There is a person, unconscious, with a bleeding scalp laceration. You are a GP. You have a basic first-aid kit in your car.
 

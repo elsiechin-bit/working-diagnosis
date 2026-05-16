@@ -2,14 +2,24 @@
 title: Gillick competence - when a child can say yes
 dek: The 1985 case that rewrote adolescent consent, how the courts subsequently walked it back, and what all of this actually means in a New Zealand consultation room.
 date: 2026-05-05
-category: Ethics & Law
-summary:
-  - "Gillick competence is a common law doctrine -- not a NZ statute -- establishing that a person under 16 may consent to medical treatment without parental knowledge if they have sufficient understanding and intelligence to fully understand what is proposed."
-  - "The Care of Children Act 2004 grants full consent capacity at 16; below that, Gillick applies to fill the statutory silence -- the assessment is individual and contextual every time, not a fixed age threshold."
-  - "Gillick competence is a test for consenting to treatment; it is not symmetrical for refusal -- courts in multiple jurisdictions have held that a Gillick-competent minor cannot always refuse treatment that adults or the court determine is in their best interests."
-  - "For confidentiality, the same test applies: a Gillick-competent adolescent is entitled to confidential consultation; the GP's obligation is to that young person, not to their parents, unless safety requires disclosure."
-  - "Practical applications in NZ general practice include: contraception, sexual health, mental health treatment, substance use assessment, and vaccination -- in each case, the clinical task is to document the capacity assessment, not just assume it."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, ethics-medicolegal, paediatrics]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Gillick competence</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Gillick competence is a common law doctrine — not a NZ statute — establishing that a person under 16 may consent to medical treatment without parental knowledge if they have sufficient understanding and intelligence to fully understand what is proposed.</li>
+<li>The Care of Children Act 2004 grants full consent capacity at 16; below that, Gillick applies to fill the statutory silence — the assessment is individual and contextual every time, not a fixed age threshold.</li>
+<li>Gillick competence is a test for consenting to treatment; it is not symmetrical for refusal — courts in multiple jurisdictions have held that a Gillick-competent minor cannot always refuse treatment that adults or the court determine is in their best interests.</li>
+<li>For confidentiality, the same test applies: a Gillick-competent adolescent is entitled to confidential consultation; the GP's obligation is to that young person, not to their parents, unless safety requires disclosure.</li>
+<li>Practical applications in NZ general practice include: contraception, sexual health, mental health treatment, substance use assessment, and vaccination — in each case, the clinical task is to document the capacity assessment, not just assume it.</li>
+</ul>
+</div>
 
 A fifteen-year-old comes in alone. She would like to start the pill. She does not want her parents to know. She is not in danger. She is not being coerced. She is, by any reasonable assessment, a thoughtful young person making a considered request about her own body.
 

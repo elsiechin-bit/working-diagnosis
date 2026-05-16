@@ -2,14 +2,24 @@
 title: Endurance sport and the GP  -  marathons, ultramarathons, and the clinical territory in between
 dek: Pre-participation assessment, condition-specific management, the ultramarathon-specific hazards that kill people, and the working knowledge a GP needs when the waiting room fills with people in compression socks.
 date: 2026-04-30
-category: Prevention & Lifestyle
-summary:
-  - "Exercise-associated hyponatraemia (EAH) is the most important preventable cause of death in ultramarathon events; the core management principle is drink to thirst, not to schedule, and 3% NaCl is used for symptomatic EAHE."
-  - "Sudden cardiac death in marathon participants occurs at a rate of 0.5-2 per 100,000; in younger athletes, hypertrophic cardiomyopathy or anomalous coronary arteries predominate; in older athletes, atherosclerotic coronary disease is the usual cause."
-  - "Relative Energy Deficiency in Sport (RED-S) has replaced the female athlete triad -- it is not a female-only condition and encompasses hormonal, bone, and metabolic consequences of inadequate energy availability."
-  - "NSAIDs during endurance events increase gastrointestinal permeability, impair renal adaptation, and do not reliably reduce post-event soreness; advise patients not to take them during events."
-  - "Iron deficiency is common in endurance athletes and impairs performance before haemoglobin falls; ferritin thresholds for supplementation are higher in athletes than in the general population."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, prevention, sports-medicine]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Endurance sport and the GP</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Exercise-associated hyponatraemia (EAH) is the most important preventable cause of death in ultramarathon events; the core management principle is drink to thirst, not to schedule, and 3% NaCl is used for symptomatic EAHE.</li>
+<li>Sudden cardiac death in marathon participants occurs at a rate of 0.5-2 per 100,000; in younger athletes, hypertrophic cardiomyopathy or anomalous coronary arteries predominate; in older athletes, atherosclerotic coronary disease is the usual cause.</li>
+<li>Relative Energy Deficiency in Sport (RED-S) has replaced the female athlete triad — it is not a female-only condition and encompasses hormonal, bone, and metabolic consequences of inadequate energy availability.</li>
+<li>NSAIDs during endurance events increase gastrointestinal permeability, impair renal adaptation, and do not reliably reduce post-event soreness; advise patients not to take them during events.</li>
+<li>Iron deficiency is common in endurance athletes and impairs performance before haemoglobin falls; ferritin thresholds for supplementation are higher in athletes than in the general population.</li>
+</ul>
+</div>
 
 The number of New Zealanders participating in organised endurance events has grown substantially over the past two decades [1]. The Auckland Marathon, Queenstown International Marathon, Rotorua Marathon, and the Wellington and Christchurch events collectively attract tens of thousands of participants annually. The trail running and ultramarathon scene  -  anchored by events like the Tarawera Ultramarathon (50 km to 102 miles), the Kepler Challenge, and dozens of smaller trail events  -  has expanded rapidly since the early 2010s. Ironman New Zealand at Taupo has been running since 1985.
 

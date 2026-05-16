@@ -1,16 +1,25 @@
 ---
 title: Drug seekers, opioids, and benzos
 dek: A working GP, in five parts  -  the framing, the opioid story, the benzo story, the ethics, and a working position.
-description: A working GP on the framing problem behind 'drug seeking', the NZ opioid context, the quieter benzodiazepine epidemic, and what coherent practice looks like.
-category: Consultation Practice
 date: 2026-03-27
-summary:
-  - "The 'drug seeker' label is a clinical problem, not a diagnostic category -- it attributes motive without investigation and consistently predicts worse care, particularly for patients with undertreated pain or iatrogenic dependence."
-  - "New Zealand has not experienced a US-style opioid epidemic; methamphetamine is substantially more prevalent than illicit opioids in NZ contexts of problematic substance use."
-  - "Benzodiazepines and zopiclone are dispensed to 25.8% of New Zealanders aged 85 and over; zopiclone is not classified as a controlled drug in New Zealand, creating a significant regulatory gap."
-  - "Deprescribing benzodiazepines and zopiclone requires a slow, patient-led approach -- reductions of approximately 10% every two weeks are tolerable for most patients; abrupt withdrawal is dangerous."
-  - "Physiological dependence (predictable withdrawal on cessation) is not the same as addiction (compulsive use despite harm) -- conflating the two leads to inadequate pain management and inappropriate stigma."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, consultation-practice, substance-use]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Drug seekers, opioids, and benzos</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>The 'drug seeker' label is a clinical problem, not a diagnostic category — it attributes motive without investigation and consistently predicts worse care, particularly for patients with undertreated pain or iatrogenic dependence.</li>
+<li>New Zealand has not experienced a US-style opioid epidemic; methamphetamine is substantially more prevalent than illicit opioids in NZ contexts of problematic substance use.</li>
+<li>Benzodiazepines and zopiclone are dispensed to 25.8% of New Zealanders aged 85 and over; zopiclone is not classified as a controlled drug in New Zealand, creating a significant regulatory gap.</li>
+<li>Deprescribing benzodiazepines and zopiclone requires a slow, patient-led approach — reductions of approximately 10% every two weeks are tolerable for most patients; abrupt withdrawal is dangerous.</li>
+<li>Physiological dependence (predictable withdrawal on cessation) is not the same as addiction (compulsive use despite harm) — conflating the two leads to inadequate pain management and inappropriate stigma.</li>
+</ul>
+</div>
 
 ## Part I  -  The framing problem
 

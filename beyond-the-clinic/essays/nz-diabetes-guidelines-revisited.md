@@ -1,16 +1,25 @@
 ---
 title: Thoughts on the NZ diabetes guidelines (2026)
 dek: What's actually changed since 2021, and what to keep close at hand in clinic.
-description: A working GP's read of the NZSSD type 2 diabetes management guidance  -  the 2021 paradigm shift, the ethnicity criterion, and what's still unsettled.
-category: Clinical Conditions
 date: 2026-04-20
-summary:
-  - "The 2021 NZSSD guidelines shifted the step-2 pathway from vildagliptin or sulfonylurea to SGLT2 inhibitors or GLP-1 receptor agonists for most patients with type 2 diabetes and cardiovascular or renal risk."
-  - "EMPA-REG demonstrated a 38% reduction in cardiovascular death with empagliflozin; cardiorenal benefit is a class effect for SGLT2i and GLP-1 RA, not confined to a single agent."
-  - "Funded access to SGLT2i and GLP-1 RA in New Zealand includes an ethnicity criterion: Maori and Pacific patients qualify at lower cardiovascular risk thresholds."
-  - "SGLT2 inhibitors carry a euglycaemic DKA risk during illness, surgery, or fasting; patients need sick day rules reviewed before starting."
-  - "GLP-1 receptor agonist supply has been intermittent in New Zealand; check current PHARMAC funded availability before initiating or switching."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, clinical-guidelines, endocrinology]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Thoughts on the NZ diabetes guidelines (2026)</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>The 2021 NZSSD guidelines shifted the step-2 pathway from vildagliptin or sulfonylurea to SGLT2 inhibitors or GLP-1 receptor agonists for most patients with type 2 diabetes and cardiovascular or renal risk.</li>
+<li>EMPA-REG demonstrated a 38% reduction in cardiovascular death with empagliflozin; cardiorenal benefit is a class effect for SGLT2i and GLP-1 RA, not confined to a single agent.</li>
+<li>Funded access to SGLT2i and GLP-1 RA in New Zealand includes an ethnicity criterion: Maori and Pacific patients qualify at lower cardiovascular risk thresholds.</li>
+<li>SGLT2 inhibitors carry a euglycaemic DKA risk during illness, surgery, or fasting; patients need sick day rules reviewed before starting.</li>
+<li>GLP-1 receptor agonist supply has been intermittent in New Zealand; check current PHARMAC funded availability before initiating or switching.</li>
+</ul>
+</div>
 
 The NZSSD type 2 diabetes management guidance is now the de facto standard for primary care in NZ [1]. It replaced an aging 2012 document and arrived in February 2021, the same week PHARMAC began funding empagliflozin (an SGLT2 inhibitor); dulaglutide (a GLP-1 RA) followed that September [2]. That timing wasn't an accident  -  the guidance and the funded toolkit were designed to land together. Five years on, a few things are clearly settled, and a few things still aren't.
 

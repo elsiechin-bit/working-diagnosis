@@ -675,14 +675,16 @@ a:hover { color: var(--green); }
   border: 1px solid var(--rule);
   border-radius: 4px;
   padding: 20px 16px;
-  transition: border-color 140ms, transform 140ms;
+  transition: border-color 140ms, transform 140ms, box-shadow 140ms;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: flex-start;
   color: inherit;
   position: relative;
   border-top: 4px solid var(--green-deep);
+  text-align: center;
+  gap: 12px;
 }
 .specialty-card::before {
   content: "";
@@ -693,6 +695,52 @@ a:hover { color: var(--green); }
   height: 4px;
   border-radius: 4px 4px 0 0;
   background: currentColor;
+}
+.specialty-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.specialty-card__icon {
+  font-size: 28px;
+}
+.specialty-card__description {
+  font-family: var(--serif-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0;
+  flex-grow: 1;
+}
+.specialty-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.specialty-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+.content-badge {
+  display: inline-block;
+  background: rgba(31, 74, 63, 0.08);
+  border: 1px solid rgba(31, 74, 63, 0.15);
+  color: var(--green-deep);
+  font-family: var(--sans-body);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: background-color 140ms, border-color 140ms;
+}
+.specialty-card:hover .content-badge {
+  background: rgba(31, 74, 63, 0.12);
+  border-color: rgba(31, 74, 63, 0.25);
 }
 .specialty-card[data-specialty="cardiovascular"] { color: #8B5A3C; border-top-color: #8B5A3C; }
 .specialty-card[data-specialty="respiratory"] { color: #406A87; border-top-color: #406A87; }
@@ -712,7 +760,11 @@ a:hover { color: var(--green); }
 .specialty-card[data-specialty="neurology"] { color: #2F6B5C; border-top-color: #2F6B5C; }
 .specialty-card[data-specialty="infectious-disease"] { color: #8B5A3C; border-top-color: #8B5A3C; }
 .specialty-card[data-specialty="nutrition"] { color: #B8714F; border-top-color: #B8714F; }
-.specialty-card:hover { border-color: var(--green); transform: translateY(-1px); }
+.specialty-card:hover {
+  border-color: var(--green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
 .specialty-card__name { font-family: var(--serif-display); font-weight: 700; font-size: 16px; color: inherit; margin: 0 0 8px; letter-spacing: -0.01em; text-align: center; }
 .specialty-card:hover .specialty-card__name { color: var(--green-deep); }
 .specialty-card__line { font-family: var(--serif-body); font-size: 14px; line-height: 1.4; color: var(--ink-soft); margin: 0; }

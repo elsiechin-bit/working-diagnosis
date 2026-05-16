@@ -6,71 +6,105 @@ description: Evidence-based clinical guidelines organized by specialty.
 
 A searchable reference of evidence-based guidelines across Working Diagnosis, organized by medical specialty. Each guideline represents practical, actionable recommendations for general practice.
 
-<div class="wb-zone">
-  <div class="specialty-grid">
-    <a href="/cardiovascular/cvd-risk-stratification/" class="specialty-card" data-specialty="cardiovascular">
-      <div class="specialty-card__name">Cardiovascular</div>
-      <div class="specialty-card__count">3 guidelines</div>
-    </a>
-    <a href="/dermatology/" class="specialty-card" data-specialty="dermatology">
-      <div class="specialty-card__name">Dermatology</div>
-      <div class="specialty-card__count">2 guidelines</div>
-    </a>
-    <a href="/gastroenterology/" class="specialty-card" data-specialty="gastroenterology">
-      <div class="specialty-card__name">Gastroenterology</div>
-      <div class="specialty-card__count">2 guidelines</div>
-    </a>
-    <a href="/geriatrics/" class="specialty-card" data-specialty="geriatrics">
-      <div class="specialty-card__name">Geriatrics</div>
-      <div class="specialty-card__count">1 guideline</div>
-    </a>
-    <a href="/gynaecology/" class="specialty-card" data-specialty="gynaecology">
-      <div class="specialty-card__name">Gynaecology</div>
-      <div class="specialty-card__count">2 guidelines</div>
-    </a>
-    <a href="/immunology-allergy/" class="specialty-card" data-specialty="immunology-allergy">
-      <div class="specialty-card__name">Immunology &amp; Allergy</div>
-      <div class="specialty-card__count">1 guideline</div>
-    </a>
-    <a href="/infectious-disease/" class="specialty-card" data-specialty="infectious-disease">
-      <div class="specialty-card__name">Infectious Disease</div>
-      <div class="specialty-card__count">2 guidelines</div>
-    </a>
-    <a href="/lifestyle-prevention/" class="specialty-card" data-specialty="lifestyle-prevention">
-      <div class="specialty-card__name">Lifestyle &amp; Prevention</div>
-      <div class="specialty-card__count">1 guideline</div>
-    </a>
-    <a href="/mental-health/" class="specialty-card" data-specialty="mental-health">
-      <div class="specialty-card__name">Mental Health</div>
-      <div class="specialty-card__count">2 guidelines</div>
-    </a>
-    <a href="/msk/" class="specialty-card" data-specialty="msk">
-      <div class="specialty-card__name">Musculoskeletal</div>
-      <div class="specialty-card__count">1 guideline</div>
-    </a>
-    <a href="/neurology/" class="specialty-card" data-specialty="neurology">
-      <div class="specialty-card__name">Neurology</div>
-      <div class="specialty-card__count">2 guidelines</div>
-    </a>
-    <a href="/occupational-health/" class="specialty-card" data-specialty="occupational-health">
-      <div class="specialty-card__name">Occupational Health</div>
-      <div class="specialty-card__count">0 guidelines</div>
-    </a>
-    <a href="/oncology-palliative/" class="specialty-card" data-specialty="oncology-palliative">
-      <div class="specialty-card__name">Oncology &amp; Palliative</div>
-      <div class="specialty-card__count">1 guideline</div>
-    </a>
-    <a href="/paediatrics/" class="specialty-card" data-specialty="paediatrics">
-      <div class="specialty-card__name">Paediatrics</div>
-      <div class="specialty-card__count">2 guidelines</div>
-    </a>
-    <a href="/renal-urology/" class="specialty-card" data-specialty="renal-urology">
-      <div class="specialty-card__name">Renal &amp; Urology</div>
-      <div class="specialty-card__count">1 guideline</div>
-    </a>
-    <a href="/respiratory/" class="specialty-card" data-specialty="respiratory">
-      <div class="specialty-card__name">Respiratory</div>
-      <div class="specialty-card__count">3 guidelines</div>
-    </a>
-  </div>
+<nav class="guidelines-jump">
+  <a href="#cardiovascular-respiratory">Cardiovascular & Respiratory</a>
+  <a href="#gastroenterology-hepatology">Gastroenterology & Hepatology</a>
+  <a href="#mental-health">Mental Health</a>
+  <a href="#infectious-disease">Infectious Disease</a>
+  <a href="#women-reproductive">Women's & Reproductive Health</a>
+  <a href="#dermatology">Dermatology</a>
+  <a href="#neurology">Neurology</a>
+  <a href="#paediatrics">Paediatrics</a>
+  <a href="#musculoskeletal">Musculoskeletal</a>
+  <a href="#geriatrics">Geriatrics & Ageing</a>
+  <a href="#renal">Renal & Urology</a>
+  <a href="#other">Other Specialties</a>
+</nav>
+
+<div class="guideline-section" id="cardiovascular-respiratory">
+  <h2>Cardiovascular & Respiratory</h2>
+  <ul class="guideline-list">
+    <li><a href="/cardiovascular/">Cardiovascular</a> — 3 guidelines</li>
+    <li><a href="/respiratory/">Respiratory</a> — 3 guidelines</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="gastroenterology-hepatology">
+  <h2>Gastroenterology & Hepatology</h2>
+  <ul class="guideline-list">
+    <li><a href="/gastroenterology/">Gastroenterology</a> — 2 guidelines</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="mental-health">
+  <h2>Mental Health</h2>
+  <ul class="guideline-list">
+    <li><a href="/mental-health/">Mental Health</a> — 2 guidelines</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="infectious-disease">
+  <h2>Infectious Disease</h2>
+  <ul class="guideline-list">
+    <li><a href="/infectious-disease/">Infectious Disease</a> — 2 guidelines</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="women-reproductive">
+  <h2>Women's & Reproductive Health</h2>
+  <ul class="guideline-list">
+    <li><a href="/gynaecology/">Gynaecology</a> — 2 guidelines</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="dermatology">
+  <h2>Dermatology</h2>
+  <ul class="guideline-list">
+    <li><a href="/dermatology/">Dermatology</a> — 2 guidelines</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="neurology">
+  <h2>Neurology</h2>
+  <ul class="guideline-list">
+    <li><a href="/neurology/">Neurology</a> — 2 guidelines</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="paediatrics">
+  <h2>Paediatrics</h2>
+  <ul class="guideline-list">
+    <li><a href="/paediatrics/">Paediatrics</a> — 2 guidelines</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="musculoskeletal">
+  <h2>Musculoskeletal</h2>
+  <ul class="guideline-list">
+    <li><a href="/msk/">Musculoskeletal</a> — 1 guideline</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="geriatrics">
+  <h2>Geriatrics & Ageing</h2>
+  <ul class="guideline-list">
+    <li><a href="/geriatrics/">Geriatrics</a> — 1 guideline</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="renal">
+  <h2>Renal & Urology</h2>
+  <ul class="guideline-list">
+    <li><a href="/renal-urology/">Renal & Urology</a> — 1 guideline</li>
+  </ul>
+</div>
+
+<div class="guideline-section" id="other">
+  <h2>Other Specialties</h2>
+  <ul class="guideline-list">
+    <li><a href="/immunology-allergy/">Immunology & Allergy</a> — 1 guideline</li>
+    <li><a href="/lifestyle-prevention/">Lifestyle & Prevention</a> — 1 guideline</li>
+    <li><a href="/oncology-palliative/">Oncology & Palliative</a> — 1 guideline</li>
+    <li><a href="/occupational-health/">Occupational Health</a> — 0 guidelines</li>
+  </ul>
 </div>

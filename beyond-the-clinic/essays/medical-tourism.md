@@ -1,19 +1,25 @@
 ---
 title: "The Cheapest Operation You Can't Afford to Get Wrong"
-dek: Medical tourism is here, and it's landing on our desks. What the GP needs to know before the patient boards the plane  -  and after they come back.
-description: A working NZ GP on medical tourism  -  real cost comparisons, the VTE risk on the flight home, antimicrobial resistance, and what the pre-trip consultation should actually cover.
+dek: Medical tourism is here, and it's landing on our desks. What the GP needs to know before the patient boards the plane — and after they come back.
 date: 2026-05-04
-category: NZ Health System & Policy
-permalink: /beyond-the-clinic/essays/medical-tourism/
-tags:
-  - field-notes
-summary:
-  - "Medical tourism is a rational response to NZ's surgical waiting times: with over 37,000 patients waiting more than four months, cost differentials for procedures like hip replacement ($22-40k NZ vs $12-18k offshore) are compelling."
-  - "The DVT risk from medical tourism is multiplicative, not additive -- surgery and long-haul immobility on the return flight compound each other, and this conversation should happen at pre-travel assessment."
-  - "Infection risk is approximately three times higher for procedures performed outside Europe and North America; carbapenem-resistant organisms (NDM-1 Klebsiella, carbapenem-resistant Acinetobacter) are the organisms of greatest concern."
-  - "Operative notes often do not travel with the patient; the GP role includes requesting full documentation and maintaining a low threshold for review in the weeks after return."
-  - "The clinical approach is to engage, not refuse: patients have made their decision, and the GP's value is in pre-trip assessment, risk conversation, medication review, and post-return follow-up."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, consultation-practice, policy]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">The Cheapest Operation You Can't Afford to Get Wrong</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Medical tourism is a rational response to NZ's surgical waiting times: with over 37,000 patients waiting more than four months, cost differentials for procedures like hip replacement ($22-40k NZ vs $12-18k offshore) are compelling.</li>
+<li>The DVT risk from medical tourism is multiplicative, not additive — surgery and long-haul immobility on the return flight compound each other, and this conversation should happen at pre-travel assessment.</li>
+<li>Infection risk is approximately three times higher for procedures performed outside Europe and North America; carbapenem-resistant organisms (NDM-1 Klebsiella, carbapenem-resistant Acinetobacter) are the organisms of greatest concern.</li>
+<li>Operative notes often do not travel with the patient; the GP role includes requesting full documentation and maintaining a low threshold for review in the weeks after return.</li>
+<li>The clinical approach is to engage, not refuse: patients have made their decision, and the GP's value is in pre-trip assessment, risk conversation, medication review, and post-return follow-up.</li>
+</ul>
+</div>
 
 It started with a knee. Mrs T had been on the orthopaedic waiting list for fourteen months. Her BMI was just high enough that the threshold kept sliding out of reach. Her daughter had found a clinic in Bangkok  -  accredited, English-speaking, good reviews on TripAdvisor. The total package, flights and five-star recovery hotel included, came in under what Southern Cross would have charged as the uninsured gap. She wanted my blessing.
 

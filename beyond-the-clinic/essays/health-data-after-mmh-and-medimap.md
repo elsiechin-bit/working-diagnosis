@@ -1,16 +1,25 @@
 ---
 title: Notes on health data, after MMH and MediMap
 dek: Two breaches in two months, one regulatory regime, and a hard look at the trust we extend to private platforms.
-description: Reflections on the Manage My Health and MediMap breaches of 2025-26, what they reveal about NZ's privacy regime, and what they mean for working GPs.
-category: NZ Health System & Policy
 date: 2026-04-29
-summary:
-  - "Two major NZ health data breaches in quick succession -- MyMedicalHub (December 2025, ~125,000 users) and MediMap (February 2026, with patient records actively altered) -- exposed structural weaknesses in health data security and regulatory oversight."
-  - "GPs learned of the MyMedicalHub breach primarily through media coverage rather than from the RNZCGP or the Ministry of Health, a failure of professional communication with direct clinical implications."
-  - "New Zealand's Privacy Act 2020 lacks the enforcement resources and penalty structure of comparable overseas regimes; breaches can occur with limited consequences for the organisations involved."
-  - "The therapeutic relationship absorbs the reputational damage of institutional data failures -- patients who distrust digital health systems bring that distrust into the consultation room."
-  - "What clinicians write in records matters beyond clinical care: notes travel, can be exfiltrated, and may be read by the patient, third parties, or actors with hostile intent."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, policy, data-security]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Notes on health data, after MMH and MediMap</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Two major NZ health data breaches in quick succession — MyMedicalHub (December 2025, ~125,000 users) and MediMap (February 2026, with patient records actively altered) — exposed structural weaknesses in health data security and regulatory oversight.</li>
+<li>GPs learned of the MyMedicalHub breach primarily through media coverage rather than from the RNZCGP or the Ministry of Health, a failure of professional communication with direct clinical implications.</li>
+<li>New Zealand's Privacy Act 2020 lacks the enforcement resources and penalty structure of comparable overseas regimes; breaches can occur with limited consequences for the organisations involved.</li>
+<li>The therapeutic relationship absorbs the reputational damage of institutional data failures — patients who distrust digital health systems bring that distrust into the consultation room.</li>
+<li>What clinicians write in records matters beyond clinical care: notes travel, can be exfiltrated, and may be read by the patient, third parties, or actors with hostile intent.</li>
+</ul>
+</div>
 
 Two cyber incidents in NZ general practice infrastructure between late December 2025 and February 2026 made it impossible to keep treating health data privacy as somebody else's problem. They are also genuinely instructive about what we trust when we hand patient information to a private technology company, and what happens when that trust fails.
 

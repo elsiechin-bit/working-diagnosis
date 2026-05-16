@@ -1,16 +1,25 @@
 ---
 title: Counselling people who smoke, after Smokefree 2025
 dek: Where the policy landed, what the numbers actually show, what active smokers tend to believe, and what works in the consult.
-description: A working GP on the post-repeal Smokefree 2025 landscape, NZ smoking rates by age, the beliefs older smokers hold about quitting, the relapse data, and what to actually do in clinic.
-category: Prevention & Lifestyle
 date: 2026-03-30
-summary:
-  - "New Zealand's 2022 Smokefree legislation (denicotinisation, retailer reduction, smokefree generation provision) was repealed in early 2024 by the coalition government, primarily on fiscal grounds -- the Smokefree 2025 goal of below 5% daily smoking is now widely considered unlikely to be met."
-  - "Daily smoking in New Zealand has fallen from 16.4% in 2011/12 to approximately 6.8% in 2024/25 -- one of the steepest declines in any high-income country -- but approximately 300,000 adults still smoke daily."
-  - "Varenicline (Champix, now available as generic) is the most effective single pharmacotherapy for cessation, with quit rates approximately double those of NRT alone; it is funded in New Zealand."
-  - "Older smokers often hold a fatalistic belief that the damage is done and quitting now won't help -- the evidence clearly contradicts this: cessation at any age reduces cardiovascular and cancer risk, and lung function improves within weeks."
-  - "Brief opportunistic intervention (the Ask, Advise, Act model) in general practice has robust evidence for increasing quit attempts; the referral to Quitline or a stop-smoking service is the highest-yield action for most consultations."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, prevention, consultation-practice]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Counselling people who smoke, after Smokefree 2025</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>New Zealand's 2022 Smokefree legislation (denicotinisation, retailer reduction, smokefree generation provision) was repealed in early 2024 by the coalition government, primarily on fiscal grounds — the Smokefree 2025 goal of below 5% daily smoking is now widely considered unlikely to be met.</li>
+<li>Daily smoking in New Zealand has fallen from 16.4% in 2011/12 to approximately 6.8% in 2024/25 — one of the steepest declines in any high-income country — but approximately 300,000 adults still smoke daily.</li>
+<li>Varenicline (Champix, now available as generic) is the most effective single pharmacotherapy for cessation, with quit rates approximately double those of NRT alone; it is funded in New Zealand.</li>
+<li>Older smokers often hold a fatalistic belief that the damage is done and quitting now won't help — the evidence clearly contradicts this: cessation at any age reduces cardiovascular and cancer risk, and lung function improves within weeks.</li>
+<li>Brief opportunistic intervention (the Ask, Advise, Act model) in general practice has robust evidence for increasing quit attempts; the referral to Quitline or a stop-smoking service is the highest-yield action for most consultations.</li>
+</ul>
+</div>
 
 ## Where the policy is
 
