@@ -424,7 +424,7 @@ a:hover { color: var(--green); }
 /* The aside is currently hidden globally; remove the next rule to bring
    it back. Markup is already conditionally rendered (handouts opt out
    in base.njk). */
-.sidebar-tools { width: 260px; flex-shrink: 0; display: none; }
+.sidebar-tools { width: 260px; flex-shrink: 0; }
 
 /* Collapsible <details> panel (used by tools-aside.njk). */
 .tools-aside {
