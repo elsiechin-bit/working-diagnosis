@@ -1,15 +1,25 @@
 ---
 title: Eating disorders - who we think they affect, and who they actually affect
 dek: The popular image of the eating disorder patient is a thin, white, affluent teenage girl. The evidence says otherwise - and the gap between image and reality has serious consequences for who gets diagnosed, who gets referred, and who gets better in New Zealand.
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, mental-health]
 date: 2026-05-05
-category: Mental Health & Society
-summary:
-  - "Eating disorders affect approximately 9% of people globally across their lifetime; anorexia nervosa has a standardised mortality ratio of approximately 5.86, making it one of the most lethal psychiatric conditions -- yet it attracts a fraction of the research and clinical resource of conditions with lower mortality."
-  - "The dominant cultural image (thin, white, teenage girl) causes systematic under-recognition in males, Maori and Pacific patients, people in larger bodies, those with binge eating disorder, and patients with ARFID -- these groups are less likely to be asked, assessed, or referred."
-  - "DSM-5 (2013) expanded the eating disorders category to include binge eating disorder as a standalone diagnosis and loosened the diagnostic criteria for anorexia nervosa (removing the amenorrhoea requirement); many NZ clinicians are working from pre-2013 frameworks."
-  - "The National Alliance for Eating Disorder helpline is the current recommended support resource; NEDA's helpline has been permanently disconnected."
-  - "In the consultation, the most important single move is to ask directly and non-judgementally -- eating disorders are rarely volunteered, often concealed, and the question itself communicates that the GP considers this a legitimate medical concern."
 ---
+
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/beyond-the-clinic/">Beyond the Clinic</a><span class="topic-trail-sep">·</span><span class="here">Eating disorders</span></p>
+
+{% include "panic-strip.njk" %}
+<div class="panic-strip" data-category="dont-miss">
+<h4 class="panic-title">Don't miss</h4>
+<ul>
+<li>Eating disorders affect approximately 9% of people globally across their lifetime; anorexia nervosa has a standardised mortality ratio of approximately 5.86, making it one of the most lethal psychiatric conditions—yet it attracts a fraction of the research and clinical resource of conditions with lower mortality.</li>
+<li>The dominant cultural image (thin, white, teenage girl) causes systematic under-recognition in males, Māori and Pacific patients, people in larger bodies, those with binge eating disorder, and patients with ARFID—these groups are less likely to be asked, assessed, or referred.</li>
+<li>DSM-5 (2013) expanded the eating disorders category to include binge eating disorder as a standalone diagnosis and loosened the diagnostic criteria for anorexia nervosa (removing the amenorrhoea requirement); many NZ clinicians are working from pre-2013 frameworks.</li>
+<li>The National Alliance for Eating Disorder helpline is the current recommended support resource; NEDA's helpline has been permanently disconnected.</li>
+<li>In the consultation, the most important single move is to ask directly and non-judgementally—eating disorders are rarely volunteered, often concealed, and the question itself communicates that the GP considers this a legitimate medical concern.</li>
+</ul>
+</div>
 
 There is a version of the eating disorder patient that lives in our cultural imagination. She is a teenage girl. She is white. She is thin - visibly, worryingly thin. She comes from a family with enough disposable income to have food anxiety as a presenting problem. She has probably been overexposed to fashion magazines or, more recently, to Instagram. She is, in some tellings, simply taking dieting too far.
 
@@ -139,7 +149,4 @@ The image is worth examining.
 8. [A systematic review and meta-analysis of the effects of social media use on disordered eating and body image outcomes](https://doi.org/10.1016/j.cpr.2023.102259). Linardon J, Messer M, Fuller-Tyszkiewicz M. Clin Psychol Rev. 2023;101:102259.
 9. [On orthorexia nervosa: a review of the literature and proposed diagnostic criteria](https://doi.org/10.1016/j.eatbeh.2015.12.006). Dunn TM, Bratman S. Eat Behav. 2016;21:11-17.
 10. [The enigma of male eating disorders: a critical review and synthesis](https://doi.org/10.1016/j.cpr.2017.08.001). Murray SB, Nagata JM, Griffiths S, Calzo JP, Brown TA, Mitchison D, et al. Clin Psychol Rev. 2017;57:1-11.
-11. [Eating disorders and disordered weight and shape control behaviors in sexual minority populations](https://doi.org/10.1007/s11920-017-0801-y). Calzo JP, Blashill AJ, Brown TA, Argenal RL. Curr Psychiatry Rep. 2017;19(8):49.
-12. Mental Health Foundation of New Zealand. Eating disorders. Auckland: MHFNZ; 2022. Available from: https://www.mentalhealth.org.nz/conditions/eating-disorders
-13. Royal College of Psychiatrists. MARSIPAN: management of really sick patients with anorexia nervosa. 2nd ed. London: RCPsych; 2014. College Report CR189.
-14. [The SCOFF questionnaire: assessment of a new screening tool for
+11. [Eating disorders and disordered weight and shape control behaviors in sexual minority populations](https://doi.org/10.1007/s11920-017-0801-y). Calzo JP, Blashill AJ, Brown TA, A

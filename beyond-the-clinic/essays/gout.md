@@ -1,25 +1,34 @@
 ---
 title: "Gout: the disease we keep undertreating"
 description: "A working GP's notes on getting gout management right  -  from the acute flare to long-term urate lowering."
-layout: note.njk
+layout: topic.njk
 specialty: Field Notes
-category: Clinical Conditions
 dek: "It is one of the most painful, best-understood, and most undertreated conditions in general practice. We can cure it. We often don't."
 date: 2026-05-04
-tags:
+ctags:
   - notes
   - msk
   - gout
-permalink: /beyond-the-clinic/essays/gout/
-summary:
-  - "Gout is potentially curable: maintaining serum urate below 0.36 mmol/L dissolves crystals and prevents flares; it is one of the most undertreated conditions in general practice."
-  - "Do not start allopurinol during an acute flare -- it prolongs the attack by mobilising crystal deposits; if the patient is already taking it, continue without interruption."
-  - "Urate-lowering therapy requires at least 6 months of concurrent colchicine or NSAID prophylaxis, because the drop in urate destabilises existing crystal deposits and provokes flares in up to 75% of patients otherwise."
-  - "HLA-B*5801 testing is recommended before starting allopurinol in patients of Han Chinese, Korean, or Thai descent, due to substantially elevated risk of severe cutaneous adverse reactions."
-  - "Gout prevalence in Maori and Pasifika New Zealanders is three to four times higher than in European New Zealanders, driven largely by genetic variants in urate transporters -- framing it as primarily a lifestyle issue compounds clinical harm with stigma."
 ---
 
-<p class="field-notes-xref">For the structured clinical reference - diagnosis criteria, investigation checklist, and prescribing details - see the <a href="/msk/gout/">MSK: Gout</a> page.</p>
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/beyond-the-clinic/">Beyond the Clinic</a><span class="topic-trail-sep">·</span><span class="here">Gout: the disease we keep undertreating</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Key point</p>
+    <ul>
+      <li>Gout is potentially curable: maintaining serum urate below 0.36 mmol/L dissolves crystals and prevents flares</li>
+      <li>Do not start allopurinol during an acute flare — stopping or starting is more destabilising than continuing</li>
+      <li>Urate-lowering therapy requires 6+ months concurrent prophylaxis — without it, 75% of patients flare in the first 6 months</li>
+      <li>HLA-B*5801 testing before allopurinol is recommended in Han Chinese, Korean, or Thai patients</li>
+    </ul>
+  </div>
+  <div class="panic-tile first-line">
+    <p class="panic-tile__label">Clinical note</p>
+    <p>Gout prevalence in Māori and Pasifika New Zealanders is 3–4 times higher than in Europeans, driven largely by genetic variants in urate transporters. Framing it as primarily a lifestyle issue compounds clinical harm with stigma.</p>
+    <p><strong>For structured reference:</strong> see <a href="/msk/gout/">MSK: Gout</a> for diagnosis criteria, investigation checklist, and prescribing details.</p>
+  </div>
+</div>
 
 Gout sits in an awkward cultural position. It has centuries of baggage: the "disease of kings," the self-inflicted affliction of men who drink too much port. That framing is mostly wrong and entirely unhelpful. Most of my patients with gout aren't drinking excessively. They have a combination of genetic hyperuricaemia, chronic kidney disease, diuretic use, or simply the bad luck of being Maori or Pasifika in a country where gout prevalence runs roughly three to four times higher than in European New Zealanders.[^1] When a patient comes in with a red, exquisitely tender first MTP joint and I find myself mentally noting their build or their lunch, I'm doing them a disservice.
 
@@ -136,5 +145,4 @@ These patients are also more likely to present late, to have more severe disease
 [^10]: Medsafe NZ. *Allopurinol and serious cutaneous adverse reactions: HLA-B*5801 testing*. Prescriber Update. 2011;32(4):30.
 [^11]: Dalbeth N, Stamp LK, Merriman TR. The genetics of gout: towards personalised medicine? *BMC Med*. 2017;15(1):108.
 [^12]: White WB, Saag KG, Becker MA, et al. Cardiovascular safety of febuxostat or allopurinol in patients with gout. *N Engl J Med*. 2018;378(13):1200--1210.
-[^13]: Choi HK, Curhan G. Soft drinks, fructose consumption, and the risk of gout in men. *BMJ*. 2008;336(7639):309--312.
-[^14]: Dalbeth N, Merriman TR, Stamp LK. Gout. *Lancet*. 2016;388(10055)
+[^13]: Choi HK, Curhan G. Soft drinks, fructose consumption, and the risk of gout in me

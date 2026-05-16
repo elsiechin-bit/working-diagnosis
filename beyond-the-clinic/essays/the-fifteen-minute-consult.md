@@ -1,16 +1,25 @@
 ---
 title: The fifteen-minute consult
 dek: How NZ general practice compares internationally, what performance indicators measure (and miss), and what the evidence actually shows.
-description: A working GP on the international evidence around consultation length, performance frameworks like the UK's QOF, and what the comparative data suggests for NZ primary care.
-category: Consultation Practice
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, consultation-practice]
 date: 2026-03-11
-summary:
-  - "New Zealand's typical 15-minute GP consultation is comparable to the UK and shorter than most Northern European systems; Irving et al. (BMJ Open 2017) found shorter consultation times associated with higher hospital admission rates for ambulatory-sensitive conditions."
-  - "Longer consultations are associated with more preventive care discussion, more psychosocial content, lower antibiotic prescribing, and higher patient satisfaction -- consultation length is a clinical input, not a scheduling convenience."
-  - "Capitation funding (NZ since 2002) incentivises enrolling more patients but creates no per-consultation incentive for time; fee-for-service and tiered models (as in Australia) create more explicit financial reward for longer consultations."
-  - "Mercer et al. demonstrated that consultation time has the greatest effect on patient enablement in patients with multimorbidity and high deprivation -- those who most need time are most harmed by its absence."
-  - "Performance frameworks (like the UK's Quality and Outcomes Framework) measure what is easy to measure rather than what is clinically meaningful; NZ's PHO incentive structures have a similar limitation."
 ---
+
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/beyond-the-clinic/">Beyond the Clinic</a><span class="topic-trail-sep">·</span><span class="here">The fifteen-minute consult</span></p>
+
+{% include "panic-strip.njk" %}
+<div class="panic-strip" data-category="dont-miss">
+<h4 class="panic-title">Don't miss</h4>
+<ul>
+<li>New Zealand's 15-minute consultation is comparable to the UK and shorter than most Northern European systems. Shorter consultations are associated with higher hospital admission rates for ambulatory-sensitive conditions (Irving et al. BMJ Open 2017).</li>
+<li>Longer consultations are associated with more preventive care discussion, more psychosocial content, lower antibiotic prescribing, and higher patient satisfaction—consultation length is a clinical input, not a scheduling convenience.</li>
+<li>Capitation funding since 2002 incentivises enrolling more patients but creates no per-consultation incentive for time; fee-for-service and tiered models create explicit financial reward for spending more time.</li>
+<li>Consultation time has the greatest effect on patient enablement in patients with multimorbidity and high deprivation—those who most need time are most harmed by its absence (Mercer et al.).</li>
+<li>Performance frameworks like the UK's QOF measure what is easy to measure rather than what is clinically meaningful. NZ's PHO structures have the same limitation.</li>
+</ul>
+</div>
 
 The fifteen-minute consult is the unit in which most NZ general practice happens. It is also a unit we rarely interrogate. Patients book it. Practice management systems are scheduled around it. PHO contracts assume it. Capitation funding is calibrated to it. Most clinical guidelines implicitly presuppose it. Almost nobody, including most GPs, has explicit views on whether it is the right unit  -  partly because nobody can remember anyone offering a coherent alternative.
 
@@ -101,4 +110,4 @@ That is the present situation, accurately described. It is also, I think, the ca
 5. NHS England Digital. Quality and Outcomes Framework, 2024-25 [Internet]. London: NHS England; 2025 [cited 2026 May 2]. Available from: https://digital.nhs.uk/data-and-information/publications/statistical/quality-and-outcomes-framework-achievement-prevalence-and-exceptions-data/2024-25
 6. NHS England. Quality and Outcomes Framework guidance for 2025/26 [Internet]. London: NHS England; 2025 [cited 2026 May 2]. Available from: https://www.england.nhs.uk/wp-content/uploads/2025/03/quality-outcomes-framework-guidance-for-2025-26.pdf
 7. Health New Zealand | Te Whatu Ora. Annual primary care funding [Internet]. Wellington: Health NZ; 2025 [cited 2026 May 2]. Available from: https://www.tewhatuora.govt.nz/for-health-providers/primary-care-sector/annual-primary-care-funding
-8. Forbes LJL, Marchand C, Doran T, Peckham S. The role of the Quality and Outcomes Framework in the care of long-term conditions: a systematic review. Br J Gen Pract. 2017;67(664):e775-e784. doi:10.3399/bjgp17X693077
+8. Forbes LJL, Marchand C, Doran T, Peckham S. The 

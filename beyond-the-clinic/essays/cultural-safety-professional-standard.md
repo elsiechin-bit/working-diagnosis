@@ -1,9 +1,25 @@
 ---
 title: Cultural safety as a professional standard - the NZ idea that went global, and the debate it left behind
 dek: Cultural safety was invented here, in New Zealand nursing, in the late 1980s. It has since been adopted by medical regulators across the common law world. The debate about what it actually requires - and whether "culturally unsafe" practice can be the basis for professional discipline - is unresolved, important, and poorly served by the shouting that surrounds it.
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, ethics-medicolegal]
 date: 2026-05-05
-category: Ethics & Law
 ---
+
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/beyond-the-clinic/">Beyond the Clinic</a><span class="topic-trail-sep">·</span><span class="here">Cultural safety as a professional standard</span></p>
+
+{% include "panic-strip.njk" %}
+<div class="panic-strip" data-category="dont-miss">
+<h4 class="panic-title">Don't miss</h4>
+<ul>
+<li>Cultural safety is defined by the patient's experience of the clinical encounter, not by the practitioner's intentions or beliefs. A clinician cannot declare their practice culturally safe any more than a surgeon can declare their own operation successful without looking at outcomes.</li>
+<li>MCNZ requires you to reflect on your own cultural positioning and how it influences your interactions with patients, to be aware of and responsive to cultural factors that affect health and engagement with the health system, and to recognise that power imbalances in the clinical relationship affect patient safety.</li>
+<li>The concept originated in New Zealand nursing in the late 1980s through Irihapeti Ramsden's work and has since been adopted by medical regulators in Australia, Canada, and beyond. Each jurisdiction has debated and adapted it to their own context.</li>
+<li>Implicit bias in clinical practice is well-documented: practitioners systematically vary in clinical decision-making in ways that track patient demographic characteristics. Maori patients in NZ receive fewer investigations and referrals for equivalent presentations, wait longer, and are prescribed pain relief at lower rates.</li>
+<li>The regulatory challenge remains unsolved: for "culturally unsafe" practice to support disciplinary action, it must be sufficiently defined that practitioners know what conduct is prohibited and disciplinary bodies can assess whether that conduct occurred.</li>
+</ul>
+</div>
 
 New Zealand has an unusual relationship to cultural safety as a concept: we made it up. The term, the framework, and the underlying argument that healthcare encounters are not clinically neutral events but are shaped by power relations that can protect or harm patients - all of this originated in New Zealand nursing in the late 1980s, through the work of a Maori nurse educator named Irihapeti Ramsden.
 
@@ -135,12 +151,4 @@ They probably will not settle cleanly. The discomfort is, in some sense, the poi
 6. [The pervasive effects of racism: experiences of racial discrimination in New Zealand over the life-course](https://doi.org/10.1016/j.socscimed.2011.11.004). Harris R, Cormack D, Tobias M, Yeh LC, Talamaivao N, Minster J, et al. Soc Sci Med. 2012;74(3):408-15.
 7. Jones R. Cultural safety: research and practice. In: Wepa D, editor. Cultural safety in Aotearoa New Zealand. 2nd ed. Port Melbourne: Cambridge University Press; 2015. p. 146-56.
 8. [Implicit bias in healthcare professionals: a systematic review](https://doi.org/10.1186/s12910-017-0179-8). Fitzgerald C, Hurst S. BMC Med Ethics. 2017;18(1):19.
-9. Cormack D, Robson C, Purdie G, Ratima M, Brown R. Access to cancer screening in New Zealand: disparities by ethnicity. N Z Med J. 2005;118(1216):U1483.
-10. [How effective is cultural competence training of healthcare providers on improving patient satisfaction of minority groups? A systematic review of literature](https://doi.org/10.1111/wvn.12176). Govere L, Govere EM. Worldviews Evid Based Nurs. 2016;13(6):402-10.
-11. Radio-Canada. Joliette hospital ordered to improve care following Joyce Echaquan's death. CBC News. 2021 Oct 5. Available from: https://www.cbc.ca/news/canada/montreal/joyce-echaquan-joliette-hospital-coroner-inquest-1.6200375
-12. Truth and Reconciliation Commission of Canada. Calls to action. Winnipeg: TRC; 2015. Available from: https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/indigenous-people/aboriginal-peoples-documents/calls_to_action_english2.pdf
-13. Australian Health Practitioner Regulation Agency. Implementing the Aboriginal and Torres Strait Islander health and cultural safety strategy 2020-2025. Melbourne: AHPRA; 2020. Available from: https://www.ahpra.gov.au/About-AHPRA/Aboriginal-and-Torres-Strait-Islander-Health-Strategy.aspx
-14. Australian Institute of Health and Welfare. Cultural safety in health care for Indigenous Australians: monitoring framework. Canberra: AIHW; 2020. Cat no IHW 222.
-15. General Medical Council. Good medical practice. London: GMC; 2024. Available from: https://www.gmc-uk.org/professional-standards/professional-standards-for-doctors/good-medical-practice
-16. MBRRACE-UK. Saving lives, improving mothers' care: lessons learned to inform maternity care from the UK and Ireland confidential enquiries into maternal deaths and morbidity 2018-20. Oxford: NPEU; 2022.
-17. [Cultural humility versus cultural competence: a critical distinction in defining physician training outcomes in multicultural education](https://doi.org/10.1353/hpu.2010.0233). Tervalon M, Murray-
+9. Cormack 

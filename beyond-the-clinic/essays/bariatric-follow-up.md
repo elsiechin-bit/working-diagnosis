@@ -1,17 +1,25 @@
 ---
 title: "After the surgery: what we actually need to do"
 dek: "Bariatric surgery works. The follow-up  -  mostly landing back in our laps  -  is where outcomes are won or lost."
-layout: note.njk
-category: Clinical Conditions
-tags: notes
 date: 2026-05-04
-summary:
-  - "Know what procedure the patient had: sleeve gastrectomy has a lower micronutrient deficiency risk than Roux-en-Y gastric bypass, which bypasses the duodenum and proximal jejunum and requires a broader and more intensive supplement and monitoring regimen."
-  - "Medication review is the most time-sensitive task post-bariatric surgery: insulin, sulfonylureas, and antihypertensives may need reducing within days; NSAIDs are contraindicated indefinitely; modified-release formulations may have unpredictable absorption after RYGB."
-  - "Annual nutritional bloods are recommended for life but rarely happen in practice; the minimum panel after sleeve includes FBC, ferritin, B12, folate, 25-OH vitamin D, calcium, PTH, and albumin; RYGB requires copper, zinc, vitamin A, and vitamin E in addition."
-  - "Some degree of weight regain after the nadir at 12-18 months is expected and should be framed as a manageable part of the trajectory, not failure; GLP-1 receptor agonists have an emerging role in post-bariatric weight regain in New Zealand."
-  - "Dumping syndrome, reactive hypoglycaemia, and GORD can all emerge or change after surgery; GORD may paradoxically worsen after sleeve gastrectomy, which is a factor in procedure selection."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, clinical-practice, metabolic]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">After the surgery: what we actually need to do</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Know what procedure they had: sleeve gastrectomy and Roux-en-Y bypass carry different micronutrient risks; RYGB has significantly higher risk due to malabsorptive component.</li>
+<li>Medication review is time-sensitive: blood pressure and glucose can fall dramatically in the first days to weeks post-operatively; insulin and sulfonylureas require urgent reduction or cessation to prevent hypoglycaemia.</li>
+<li>Nutritional monitoring is lifelong: annual bloodwork indefinitely is recommended; deficiencies accumulate slowly and silently; iron and B12 are most commonly missed.</li>
+<li>Weight regain after 12-18 months is normal biology: mean regain from nadir is around 10% of initial body weight; distinguish expected biology from modifiable behaviour from surgical complications.</li>
+<li>Mental health is not an afterthought: depression, anxiety, disordered eating, and alcohol use disorder deserve proactive monitoring; alcohol absorption is faster post-RYGB with significantly higher peak concentrations.</li>
+</ul>
+</div>
 
 <p>I see more post-bariatric patients in general practice than I used to. Some come from the public programme; more are coming back from private surgery, occasionally offshore. They arrive with a discharge summary, a list of supplements, and an assumption that I know what to do next. Usually I do  -  but the honest truth is that most of us weren't taught this in training, the specialist handover is often thin, and the evidence that primary care follow-up actually happens is not encouraging.<sup>1</sup></p>
 <p>This note is my attempt to consolidate what I actually need to know at the coalface. It's not a comprehensive management guide  -  it's a working GP's crib sheet, written in the order that problems tend to present.</p>
@@ -50,4 +58,4 @@ summary:
 
 <h2>A note on what I keep at hand</h2>
 <p>The BOMSS (British Obesity and Metabolic Surgery Society) guidance for GPs is the most practically useful clinical reference I've found; it's free online and updated regularly. It covers medications, nutritional monitoring, complications, and pregnancy in a format that works as a consultation reference. Worth bookmarking.</p>
-<p>The post-bariatric patient who's well-followed-up does well. The one who slips through  -  whose ferritin was never checked, whose metformin was never reviewed, who regained weight and felt she'd failed  -  is the one I think about. Most of the time, she was ours to catch.</p>
+<p>The post-bariatric patient who's well-followed-up does well. The one who slips through  -  whose ferritin was never checked, whose metformin was never reviewed, who reg

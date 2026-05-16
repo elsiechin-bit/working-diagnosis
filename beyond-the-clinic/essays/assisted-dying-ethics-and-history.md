@@ -2,14 +2,24 @@
 title: Assisted dying  -  the ethics, the history, and the world map
 dek: A working GP's guide to the ethical architecture of assisted dying, the legislative history in NZ, Australia, the UK, North America, Europe, and Asia, and the landmark cases that changed the argument.
 date: 2026-04-09
-category: Culture & Social Context
-summary:
-  - "New Zealand's End of Life Choice Act 2019 received 65.1% referendum support and came into force in November 2021; eligibility requires a terminal illness likely to end life within six months, age 18+, NZ residency, and decision-making capacity."
-  - "The foundational NZ case is Seales v Attorney-General 2015, in which Justice Collins declined to recognise a right to assisted dying -- his judgment was delivered the day before Lecretia Seales died."
-  - "International permissiveness varies widely: Canada's MAID accounted for 4.1% of all deaths in 2022 (13,241 deaths); the Netherlands reports approximately 9,000 per year; Oregon's physician-assisted suicide model has been available since 1994."
-  - "Core ethical tensions include: autonomy and dignity (for legalisation) vs sanctity of life, slippery slope concerns, adequacy of palliative alternatives, and the disability rights critique that legalisation signals that some lives are worth less."
-  - "The physician's role argument -- that healing and hastening death are incompatible -- remains one of the most substantive objections; the End of Life Choice Act s8 prohibits practitioners from initiating the conversation, a legal constraint unique among permissive jurisdictions."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, ethics-medicolegal, policy]
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Assisted dying - the ethics, the history, and the world map</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>New Zealand's End of Life Choice Act 2019 received 65.1% referendum support and came into force in November 2021; eligibility requires a terminal illness likely to end life within six months, age 18+, NZ residency, and decision-making capacity.</li>
+<li>The foundational NZ case is Seales v Attorney-General 2015, in which Justice Collins declined to recognise a right to assisted dying — his judgment was delivered the day before Lecretia Seales died.</li>
+<li>International permissiveness varies widely: Canada's MAID accounted for 4.1% of all deaths in 2022 (13,241 deaths); the Netherlands reports approximately 9,000 per year; Oregon's physician-assisted suicide model has been available since 1994.</li>
+<li>Core ethical tensions include autonomy and dignity (for legalisation) versus sanctity of life, slippery slope concerns, adequacy of palliative alternatives, and the disability rights critique that legalisation signals some lives are worth less.</li>
+<li>The physician's role argument — that healing and hastening death are incompatible — remains one of the most substantive objections; the End of Life Choice Act s8 prohibits practitioners from initiating the conversation, a legal constraint unique among permissive jurisdictions.</li>
+</ul>
+</div>
 
 Every GP, sooner or later, sits across from a patient for whom the question is no longer whether they are going to die from this illness, but what that death is going to look like. The question of whether medicine should be able to shorten the interval between now and then  -  on the patient's terms, under conditions the patient chooses  -  is one of the most consequential ethical questions in contemporary health policy, and the one that generates more heat relative to light than perhaps any other.
 
@@ -212,7 +222,4 @@ That, at any rate, is where it lands in general practice.
 31. Bowman KW, Singer PA. Chinese seniors' perspectives on end-of-life decisions. Soc Sci Med. 2001;53(4):455-64. doi:10.1016/S0277-9536(00)00348-8
 32. Catechism of the Catholic Church, §§2276-2279 [Internet]. Vatican City: Libreria Editrice Vaticana; 1993. Available from: https://www.vatican.va/archive/ENG0015/__P7Z.HTM
 33. Sachedina A. End-of-life: the Islamic view. Lancet. 2005;366(9487):774-9. doi:10.1016/S0140-6736(05)67183-8
-34. Steinberg A. The Jewish view of euthanasia. In: Emanuel LL, editor. Regulating how we die: the ethical, medical, and legal issues surrounding physician-assisted suicide. Cambridge: Harvard University Press; 1998. p. 337-57.
-35. In re Quinlan 70 NJ 10 (1976).
-36. Pretty v United Kingdom [2002] 35 EHRR 1; (2002) 66 BMLR 147.
-37. Caplan AL, McCartney JJ, Sisti DA, editors. The case of Terri Schiavo: ethics, politics, and death in America. Amherst: Prometheus Books; 2006.
+34. Steinberg A. The Jewish view of euthanasia. In: Emanuel LL, editor. Regulating how we die: t

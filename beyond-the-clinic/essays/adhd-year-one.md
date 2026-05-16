@@ -1,20 +1,25 @@
 ---
 title: "The boy who couldn't wait his turn"
 dek: "An archetypal Year 1 referral, and what the neuroscience actually says about why his brain works this way  -  and why the pills help."
-description: "A GP field note on ADHD in a six-year-old: diagnostic uncertainty, the neuroscience of dopamine circuits, and how methylphenidate, dexamfetamine, and atomoxetine each do their work."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, mental-health, paeds]
 date: 2026-05-03
-permalink: /beyond-the-clinic/essays/adhd-year-one/
-tags:
-  - field-notes
-  - paeds
-  - mental-health
-summary:
-  - "ADHD involves delayed cortical maturation (average 3 years, particularly in prefrontal regions) rather than a fixed structural deficit -- the neurodevelopmental framing matters for how the condition is explained to patients and families."
-  - "DSM-5 diagnosis requires symptoms in at least two settings with functional impairment; heritability is 70-80%, making family history a clinically useful part of assessment."
-  - "In New Zealand, GPs cannot initiate ADHD pharmacotherapy -- specialist assessment is required first, after which shared care with the GP is the standard model."
-  - "Methylphenidate (Class B controlled drug, funded first-line) inhibits dopamine and noradrenaline reuptake; dexamfetamine (second-line, more potent) causes active reverse transport; atomoxetine is a non-controlled selective noradrenaline reuptake inhibitor that takes 4-6 weeks to reach effect."
-  - "ADHD behaviours are highly context-dependent -- symptoms are much less apparent in high-stimulation, short-delay, or highly motivating environments; this is neurobiologically expected variability, not inconsistency."
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">The boy who couldn't wait his turn</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>ADHD involves delayed cortical maturation (average 3 years, particularly in prefrontal regions) rather than a fixed structural deficit — the neurodevelopmental framing matters for how the condition is explained to patients and families.</li>
+<li>DSM-5 diagnosis requires symptoms in at least two settings with functional impairment; heritability is 70-80%, making family history a clinically useful part of assessment.</li>
+<li>In New Zealand, GPs cannot initiate ADHD pharmacotherapy — specialist assessment is required first, after which shared care with the GP is the standard model.</li>
+<li>Methylphenidate (Class B controlled drug, funded first-line) inhibits dopamine and noradrenaline reuptake; dexamfetamine (second-line, more potent) causes active reverse transport; atomoxetine is a non-controlled selective noradrenaline reuptake inhibitor that takes 4-6 weeks to reach effect.</li>
+<li>ADHD behaviours are highly context-dependent — symptoms are much less apparent in high-stimulation, short-delay, or highly motivating environments; this is neurobiologically expected variability, not inconsistency.</li>
+</ul>
+</div>
 
 <p>He's six. He's in Year 1. His teacher has flagged him three times this term. His mother brings a printed email from school and sits across from me with the particular exhaustion of someone who has been managing this child since he could walk, and who has been told, in various softened ways, that he is <em>a lot</em>.</p>
 
@@ -117,5 +122,4 @@ summary:
   <li><a href="https://doi.org/10.1016/S0893-133X(02)00346-9">Bymaster FP, Katner JS, Nelson DL, et al. Atomoxetine increases extracellular levels of norepinephrine and dopamine in prefrontal cortex of rat.</a> Neuropsychopharmacology. 2002;27(5):699-711.</li>
   <li><a href="https://doi.org/10.1038/s41380-018-0070-0">Faraone SV, Larsson H. Genetics of attention deficit hyperactivity disorder.</a> Mol Psychiatry. 2019;24(4):562-575.</li>
   <li><a href="https://doi.org/10.1038/s41588-018-0269-7">Demontis D, Walters RK, Martin J, et al. Discovery of the first genome-wide significant risk loci for attention deficit/hyperactivity disorder.</a> Nat Genet. 2019;51(1):63-75.</li>
-  <li>Stahl SM. Stahl's Essential Psychopharmacology, 5th ed. Cambridge: Cambridge University Press; 2021. Chapter 12.</li>
-  <li>Pharmac. Pharmaceutical Schedule: methy
+  <li>Stahl SM. Stahl's Essential Psychopharmacology, 5th ed. Cambridge: Cambridge 

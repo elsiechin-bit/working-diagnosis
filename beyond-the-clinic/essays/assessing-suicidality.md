@@ -1,15 +1,25 @@
 ---
 title: Assessing suicidality in general practice
 dek: New Zealand has a serious suicide problem, GPs are usually the first clinical contact, and the evidence on what actually helps is both clearer and more uncomfortable than most training suggests.
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, mental-health]
 date: 2026-05-05
-category: Mental Health & Society
-summary:
-  - "Most people who die by suicide in New Zealand have seen a GP in the year before their death; New Zealand's youth suicide rate (15-24 years) consistently ranks among the highest in the OECD, with Maori rates approximately twice that of non-Maori peers."
-  - "Asking about suicide does not increase suicidal ideation or behaviour -- a systematic review by Dazzi and colleagues found no supporting evidence for this concern, and in some high-risk groups asking was associated with reduced distress."
-  - "Means restriction (access to firearms, medication stockpiles, bridges) has the most consistent population-level evidence base for reducing suicide mortality -- asking about access to means is one of the highest-yield questions in any suicidality assessment."
-  - "Validated tools (PHQ-9 item 9, Columbia Suicide Severity Rating Scale, the SafeSide framework) structure the assessment but do not replace clinical judgement; no tool reliably predicts individual suicide, and false negatives are common."
-  - "The clinical task after identifying suicidality is safety planning, not just referral: a written, collaboratively developed safety plan with crisis contacts and means restriction steps reduces repeat attempts in RCT evidence."
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Assessing suicidality in general practice</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Most people who die by suicide in New Zealand have seen a GP in the year before their death; New Zealand's youth suicide rate (15-24 years) consistently ranks among the highest in the OECD, with Maori rates approximately twice that of non-Maori peers.</li>
+<li>Asking about suicide does not increase suicidal ideation or behaviour — a systematic review by Dazzi and colleagues found no supporting evidence for this concern, and in some high-risk groups asking was associated with reduced distress.</li>
+<li>Means restriction (access to firearms, medication stockpiles, bridges) has the most consistent population-level evidence base for reducing suicide mortality — asking about access to means is one of the highest-yield questions in any suicidality assessment.</li>
+<li>Validated tools (PHQ-9 item 9, Columbia Suicide Severity Rating Scale, the SafeSide framework) structure the assessment but do not replace clinical judgement; no tool reliably predicts individual suicide, and false negatives are common.</li>
+<li>The clinical task after identifying suicidality is safety planning, not just referral: a written, collaboratively developed safety plan with crisis contacts and means restriction steps reduces repeat attempts in RCT evidence.</li>
+</ul>
+</div>
 
 Most people who die by suicide in New Zealand have seen a GP in the year before their death. [#ref-1] A substantial proportion have seen one in the month before. This is not an indictment of general practice - it reflects that GPs are where distressed people go - but it is a fact that gives the topic of suicidality assessment a particular weight in primary care that it does not always receive in training.
 
@@ -176,6 +186,4 @@ Suicidality assessment is not a box-ticking exercise and it is not a liability m
 12. Franklin JC, Ribeiro JD, Fox KR, Bentley KH, Kleiman EM, Huang X, et al. [Risk factors for suicidal thoughts and behaviors: a meta-analysis of 50 years of research](https://doi.org/10.1037/bul0000084) Psychol Bull. 2017;143(2):187-232.
 13. Stanley B, Brown GK. [Safety planning intervention: a brief intervention to mitigate suicide risk](https://doi.org/10.1016/j.cbpra.2011.01.001) Cogn Behav Pract. 2012;19(2):256-63.
 14. Stanley B, Chaudhury SR, Chesin M, Pontoski K, Bush AM, Knox KL, et al. [An emergency department intervention and follow-up to reduce suicide risk in the VA: acceptability and effectiveness](https://doi.org/10.1176/appi.ps.201500082) Psychiatr Serv. 2016;67(6):680-3.
-15. Rudd MD, Mandrusiak M, Joiner TE. [The case against no-suicide contracts: the commitment to treatment statement as a practice alternative](https://doi.org/10.1002/jclp.20227) J Clin Psychol. 2006;62(2):243-51.
-16. Husum TL, Bjorngaard JH, Finset A, Ruud T. A cross-sectional prospective study of seclusion, restraint and involuntary medication in acute psychiatric units: patient, staff and ward factors. Int J Nurs Stud. 2010;47(11):1379-88.
-17. Paris J. Half in love with death: managing the chronically suicidal patient. Mahwah: Lawrence Erlbaum 
+15. Rudd MD, Mandrusiak M, Joiner TE. [The case against no-suicide contracts: the commitment to treatment statement as a practice alternative](https://doi.org/10.1002/jclp.20227) J Clin Psychol. 2006;6

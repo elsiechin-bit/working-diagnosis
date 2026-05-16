@@ -1,15 +1,28 @@
 ---
 title: Aches and pains  -  the undifferentiated musculoskeletal presentation
+layout: topic.njk
+specialty: Field Notes
 dek: What to look for, what not to miss, why statins and hypothyroidism are the most rewarding things to check, and why the management reflex that feels most thorough often does the most harm.
 date: 2026-05-02
-category: Clinical Conditions
-summary:
-  - "Approaching undifferentiated musculoskeletal pain through three frameworks -- inflammatory, mechanical/structural, and central/widespread -- guides investigation and management more reliably than symptom-matching alone."
-  - "Polymyalgia rheumatica has an incidence of approximately 100 per 100,000 in those over 50; the near-diagnostic response to prednisolone is part of EULAR/ACR criteria; always ask about GCA symptoms before starting steroids."
-  - "Fibromyalgia is a disorder of central sensitisation; opioids are contraindicated in chronic non-cancer pain and consistently worsen outcomes in fibromyalgia over time."
-  - "Statin myalgia occurs in 5-10% of users; a 4-6 week trial off the statin (with CK measurement) is the practical diagnostic step; rosuvastatin and pravastatin carry lower myopathy risk."
-  - "Post-COVID fatigue with post-exertional malaise requires pacing, not graded exercise therapy -- graded exercise is contraindicated when PEM is present and can cause significant deterioration."
+ctags:
+  - msk
+  - notes
 ---
+
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/beyond-the-clinic/">Beyond the Clinic</a><span class="topic-trail-sep">·</span><span class="here">Aches and pains</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Key point</p>
+    <ul>
+      <li>Three diagnostic frameworks — inflammatory, mechanical/structural, and central/widespread — guide investigation more reliably than symptom-matching alone</li>
+      <li>Polymyalgia rheumatica: incidence ~100 per 100,000 over 50; near-diagnostic response to prednisolone is part of EULAR/ACR criteria; ask about GCA before steroids</li>
+      <li>Fibromyalgia is central sensitisation; opioids are contraindicated and consistently worsen outcomes</li>
+      <li>Statin myalgia: 5–10% of users; 4–6 week trial off (with CK) is diagnostic; rosuvastatin and pravastatin carry lower myopathy risk</li>
+      <li>Post-COVID with post-exertional malaise: pacing is essential, graded exercise is contraindicated and can cause deterioration</li>
+    </ul>
+  </div>
+</div>
 
 "I just ache all over" is one of the most common opening lines in general practice, and one of the most information-poor. It tells you the patient is suffering. It tells you almost nothing else. Behind it sits a differential that runs from viral myalgia and deconditioning, through statin toxicity and vitamin D deficiency, past fibromyalgia and post-COVID syndrome, and into territory that warrants urgent action: polymyalgia rheumatica, inflammatory arthritis, occult malignancy, hypothyroidism, and  -  in the right clinical context  -  something serious enough to require the same-day phone call.
 
@@ -171,5 +184,4 @@ The conversation about central sensitisation  -  explaining the neuroscience in 
 12. Häuser W, Bernardy K, Uçeyler N, Sommer C. [Treatment of fibromyalgia syndrome with antidepressants: a meta-analysis](https://doi.org/10.1001/jama.2008.944). JAMA. 2009;301(2):198-209. doi:10.1001/jama.2008.944
 13. Häuser W, Fitzcharles MA, Lavand'homme P, Tölle T, Wolfe F, Häuser W. [Withdrawal of long-term opioid therapy in fibromyalgia](https://doi.org/10.1002/14651858.CD011978.pub2). Cochrane Database Syst Rev. 2017;1:CD011978. doi:10.1002/14651858.CD011978.pub2
 14. New Zealand Guidelines Group. New Zealand Acute Low Back Pain Guide. Wellington: NZGG; 2004 (principles applied in chronic pain guidelines).
-15. Davis HE, McCorkell L, Vogel JM, Topol EJ. [Long COVID: major findings, mechanisms and recommendations](https://doi.org/10.1038/s41579-022-00846-2). Nat Rev Microbiol. 2023;21(3):133-46. doi:10.1038/s41579-022-00846-2
-16. Twisk FN, Maes M. A review on cognitive behavorial therapy (CBT
+15. Davis HE, McCorkell L, Vogel JM, Topol EJ. [Long COVID: major findings, mechanisms and recommendations](https://doi.org/10.1038

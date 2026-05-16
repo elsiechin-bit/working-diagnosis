@@ -1,16 +1,29 @@
 ---
 title: On GP burnout
+layout: topic.njk
+specialty: Field Notes
 dek: The NZ numbers, the moral-injury reframing, and why the wellness-industry response is mostly the wrong response.
 description: A working GP on burnout in NZ general practice  -  what the RNZCGP workforce data show, why "burnout" may be the wrong frame, and what the evidence suggests actually helps.
-category: NZ Health System & Policy
 date: 2026-03-14
-summary:
-  - "GP burnout in New Zealand has fluctuated significantly: 38% reported high burnout in 2024 (down from a 2022 peak of 48%), but still far above the 22% reported in 2016."
-  - "Approximately 70% of NZ GPs report moderate-to-high burnout; 17% of mid-career GPs are actively considering leaving New Zealand."
-  - "The moral injury framing (Talbot and Dean, 2018) reframes burnout as a system-level failure -- the injury is working in conditions that prevent delivering the care you believe patients deserve -- rather than an individual resilience deficit."
-  - "Organisational interventions (workload, supervision, team structure) have approximately double the effect size of individual-level interventions (mindfulness, resilience training) in reducing physician burnout (West et al., Lancet 2016)."
-  - "43% of NZ GPs say they would recommend the career in 2024, up from a 2022 low of 39%; the Doctors' Health Advisory Service provides confidential support for practitioners in difficulty."
+ctags:
+  - notes
+  - health-systems
 ---
+
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/beyond-the-clinic/">Beyond the Clinic</a><span class="topic-trail-sep">·</span><span class="here">On GP burnout</span></p>
+
+<div class="panic-strip">
+  <div class="panic-tile dont-miss">
+    <p class="panic-tile__label">Key point</p>
+    <ul>
+      <li>GP burnout in NZ: 38% reported high burnout in 2024 (down from 48% in 2022, but far above 22% in 2016)</li>
+      <li>70% of NZ GPs report moderate-to-high burnout; 17% of mid-career GPs are considering leaving New Zealand</li>
+      <li>Moral injury reframing: burnout is system-level failure, not individual resilience deficit</li>
+      <li>Organisational interventions (workload, supervision, team structure) have approximately double the effect of individual interventions (mindfulness, resilience training)</li>
+      <li>43% of NZ GPs would recommend the career in 2024; Doctors' Health Advisory Service provides confidential support</li>
+    </ul>
+  </div>
+</div>
 
 The 2024 RNZCGP Workforce Survey, released in July 2025, found that 38% of NZ GPs rated themselves as highly burnt out (level 7-10 on an eleven-point scale), and 70% rated themselves as moderately-to-highly burnt out (level 4-10) [1]. The 38% figure is down from 48% in 2022  -  itself a high-water mark  -  but is substantially higher than the 22% measured in 2016 and the 31% measured in 2020 [1,2]. Whatever has happened in NZ general practice over the last decade has been measurable, and most of it has not been good.
 
@@ -115,4 +128,4 @@ That, in the end, is the best that this kind of writing can do.
 7. Ministry of Health. Capitation reweighting [Internet]. Wellington: Ministry of Health; 2025 [cited 2026 May 2]. Available from: https://www.health.govt.nz/strategies-initiatives/programmes-and-initiatives/primary-and-community-health-care/capitation-reweighting
 8. Sinsky C, Colligan L, Li L, et al. Allocation of physician time in ambulatory practice: a time and motion study in 4 specialties. Ann Intern Med. 2016;165(11):753-60. doi:10.7326/M16-0961
 9. West CP, Dyrbye LN, Erwin PJ, Shanafelt TD. Interventions to prevent and reduce physician burnout: a systematic review and meta-analysis. Lancet. 2016;388(10057):2272-81. doi:10.1016/S0140-6736(16)31279-X
-10. Shanafelt TD, Noseworthy JH. Executive leadership and physician well-being: nine organizational strategies to promote engagement and reduce burnout. Mayo Clin Proc. 2017;92(1):129-46. doi:10.1016/j.mayocp.2016.10.004
+10. Shanafelt TD, Noseworthy JH. Executive leadership and physician well-being: nine organizational strategies to promote engagement

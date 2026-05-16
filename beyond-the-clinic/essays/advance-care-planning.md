@@ -1,16 +1,25 @@
 ---
 title: Advance care planning, in practice
 dek: Why it matters, the legal and cultural framework, and what the conversation actually looks like in clinic.
-description: A working GP on advance care planning in NZ  -  the evidence, the PPPR Act, the End of Life Choice Act, te ao Māori perspectives, and the practicalities of the consult.
-category: Consultation Practice
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, consultation-practice]
 date: 2026-04-05
-summary:
-  - "Facilitated advance care planning is evidence-based: Detering et al. (BMJ 2010) demonstrated in an RCT that structured ACP conversations significantly reduced family bereavement distress and improved adherence to patient wishes."
-  - "Advance directives are legally binding in New Zealand under Right 7(5) of the Code of Health and Disability Services Consumers' Rights; an Enduring Power of Attorney for Personal Care and Welfare cannot override a competent directive or compel futile treatment."
-  - "The End of Life Choice Act s8 prohibits health practitioners from initiating assisted dying discussions -- the patient must raise the topic first; this is a specific legal constraint on how the conversation can be structured."
-  - "ACP has important cultural dimensions in New Zealand: for many Māori patients, whānau is the appropriate decision-making unit; tikanga around death and wairua should shape how and where these conversations happen."
-  - "Do not allow the CPR question to consume the entire advance care planning conversation -- it is one ceiling-of-care decision within a broader goals-of-care discussion about what matters to the patient."
 ---
+
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/beyond-the-clinic/">Beyond the Clinic</a><span class="topic-trail-sep">·</span><span class="here">Advance care planning, in practice</span></p>
+
+{% include "panic-strip.njk" %}
+<div class="panic-strip" data-category="dont-miss">
+<h4 class="panic-title">Don't miss</h4>
+<ul>
+<li>Facilitated advance care planning is evidence-based: Detering et al. (BMJ 2010) demonstrated in an RCT that structured ACP conversations significantly reduced family bereavement distress and improved adherence to patient wishes.</li>
+<li>Advance directives are legally binding in New Zealand under Right 7(5) of the Code of Health and Disability Services Consumers' Rights; an Enduring Power of Attorney for Personal Care and Welfare cannot override a competent directive or compel futile treatment.</li>
+<li>The End of Life Choice Act s8 prohibits health practitioners from initiating assisted dying discussions—the patient must raise the topic first; this is a specific legal constraint on how the conversation can be structured.</li>
+<li>ACP has important cultural dimensions in New Zealand: for many Māori patients, whānau is the appropriate decision-making unit; tikanga around death and wairua should shape how and where these conversations happen.</li>
+<li>Do not allow the CPR question to consume the entire advance care planning conversation—it is one ceiling-of-care decision within a broader goals-of-care discussion about what matters to the patient.</li>
+</ul>
+</div>
 
 The conversation that should have happened didn't, and now the patient is in ICU intubated, the family is divided, the partner is sure she wouldn't have wanted this, the daughter is sure she would. Nobody has the document. The patient cannot be asked.
 
@@ -122,6 +131,4 @@ That, I think, is what the work amounts to.
 4. Protection of Personal and Property Rights Act 1988 [Internet]. Wellington: New Zealand Government. Available from: https://www.legislation.govt.nz/act/public/1988/0004/latest/DLM126528.html
 5. Health Quality & Safety Commission. Advance care planning | Te whakamahere tauwhiro whakamau (Frailty care guides 2023) [Internet]. Wellington: HQSC; 2023 [cited 2026 May 2]. Available from: https://www.hqsc.govt.nz/resources/resource-library/advance-care-planning-te-whakamahere-tauwhiro-whakamau-frailty-care-guides-2023/
 6. End of Life Choice Act 2019 [Internet]. Wellington: New Zealand Government. Available from: https://www.legislation.govt.nz/act/public/2019/0067/latest/DLM7285905.html
-7. Ministry of Health. Review of the End of Life Choice Act 2019. Wellington: Ministry of Health; 2024. Available from: https://www.health.govt.nz/regulation-legislation/assisted-dying/review-of-the-end-of-life-choice-act
-8. Durie M. Whaiora: Māori Health Development. 2nd ed. Auckland: Oxford University Press; 1998.
-9. Health New Zealand | Te Whatu Ora. Advance care plannin
+7. Ministry of Health. Review of the End of Life Choice Act 2019. Wellington: Ministry of Health; 

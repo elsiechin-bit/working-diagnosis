@@ -1,15 +1,24 @@
 ---
-title: "Field Notes: Consultation Models in General Practice"
+title: Consultation models in general practice
 layout: topic.njk
-description: The evolution of GP consultation theory from Balint to shared decision-making, with cross-cultural comparisons.
-specialty: Field Notes
-summary:
-  - "The consultation as a clinical encounter has been formally studied since Balint's 1957 work, which argued that the doctor-patient relationship itself has therapeutic properties consistently underused in general practice."
-  - "Successive frameworks -- Stott-Davis (1979), Pendleton (1984), Neighbour (1987), and Calgary-Cambridge (1996) -- each added structure; Calgary-Cambridge remains the most widely adopted in Anglophone medical education."
-  - "Doctors interrupt patients' opening statements after a mean of 18 seconds; patients rarely return to their initial concern once interrupted."
-  - "International consultation times vary widely: Sweden averages 22.5 minutes, the UK 9.2 minutes, New Zealand approximately 15 minutes."
-  - "Shared decision-making, formalised from the 1990s, requires that both clinician and patient share information, participate in the process, and agree on the treatment decision."
+specialty: Beyond the Clinic
+dek: The evolution of GP consultation theory from Balint to shared decision-making, with cross-cultural comparisons.
+ctags: [notes, consultation-practice]
 ---
+
+<p class="topic-trail"><a href="/clinician-tools/">Library</a><span class="topic-trail-sep">·</span><a href="/beyond-the-clinic/">Beyond the Clinic</a><span class="topic-trail-sep">·</span><span class="here">Consultation models in general practice</span></p>
+
+{% include "panic-strip.njk" %}
+<div class="panic-strip" data-category="dont-miss">
+<h4 class="panic-title">Don't miss</h4>
+<ul>
+<li>The consultation as a clinical encounter has been formally studied since Balint's 1957 work, which argued that the doctor-patient relationship itself has therapeutic properties consistently underused in general practice.</li>
+<li>Successive frameworks—Stott-Davis (1979), Pendleton (1984), Neighbour (1987), and Calgary-Cambridge (1996)—each added structure; Calgary-Cambridge remains the most widely adopted in Anglophone medical education.</li>
+<li>Doctors interrupt patients' opening statements after a mean of 18 seconds; patients rarely return to their initial concern once interrupted.</li>
+<li>International consultation times vary widely: Sweden averages 22.5 minutes, the UK 9.2 minutes, New Zealand approximately 15 minutes.</li>
+<li>Shared decision-making, formalised from the 1990s, requires that both clinician and patient share information, participate in the process, and agree on the treatment decision.</li>
+</ul>
+</div>
 
 Before the mid-twentieth century, general practice had no formal consultation theory. The structure of the encounter was largely determined by professional convention: the doctor took a history, conducted an examination where indicated, and delivered a diagnosis or prescription. The patient's role was to answer questions accurately. In the United Kingdom, consultation times in the 1950s and early 1960s averaged around five to six minutes in general practice settings, and the content was predominantly biomedical.¹
 
@@ -60,8 +69,4 @@ The movement toward shared decision-making formalised in the 1990s and 2000s rep
 9. Irving G, Neves AL, Dambha-Miller H, et al. International variations in primary care physician consultation time. *BMJ Open.* 2017;7(10):e017902.
 10. Tatara K, Okamoto E. Japan: Health system review. *Health Syst Transit.* 2009;11(5):1-164.
 11. Grol R. Beliefs and evidence in changing clinical practice. *BMJ.* 1997;315(7105):418-421.
-12. Kleinman A. *The Illness Narratives.* New York: Basic Books; 1988.
-13. World Health Organization. *Traditional Medicine Strategy 2014-2023.* Geneva: WHO; 2013.
-14. Herceg A. Improving health in Aboriginal and Torres Strait Islander peoples. *Med J Aust.* 2005;182(3):139-143.
-15. Charles C, Gafni A, Whelan T. Shared decision-making in the medical encounter. *Soc Sci Med.* 1997;44(5):681-692.
-16. Ottawa Hospital Research Institute. Patient Decision Aids. https://decisionaid.ohri.ca
+12. Kleinman A. *The Illness Narratives.* New York: Bas

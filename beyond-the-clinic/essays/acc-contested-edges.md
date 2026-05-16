@@ -1,16 +1,25 @@
 ---
 title: ACC's contested edges
 dek: A working GP reading the lines that ACC draws  -  and three case histories showing where they fall.
-description: A survey of the conditions where ACC's cover boundaries are most contested, with deep dives into surgical mesh, maternal birth injury, and TN v ACC.
-category: NZ Health System & Policy
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, medicolegal, policy]
 date: 2026-04-26
-summary:
-  - "ACC coverage of mental injury is narrowly defined: a pure psychiatric injury is covered only if it results from a covered physical injury, a Schedule 3 criminal act, or meets the s21B work-related threshold."
-  - "The degeneration/accident boundary is the most frequent point of ACC dispute in general practice: 'acute on chronic' presentations require careful documentation of the precipitating event and its contribution to functional change."
-  - "Surgical mesh injuries required a dedicated reassessment exercise from 2020 after a restorative justice process acknowledged systematic underrecognition; clinicians treating mesh-injured patients should be aware that historical claims may be revisited."
-  - "The 2022 ACC Amendment Act expanded maternal birth injury coverage to include internal soft tissue injuries from the forces of labour (Schedule 3A); LSCS and episiotomies are excluded and the provision is not retrospective."
-  - "TN v ACC 2023 established that the date of injury for historical abuse claims is the date of the abuse, not the date of first treatment -- a ruling with an estimated $3.6 billion liability impact for the scheme."
 ---
+
+<div class="breadcrumb-trail"><a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">ACC's contested edges</span></div>
+
+{% include "panic-strip.njk" %}
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>ACC coverage of mental injury is narrowly defined: a pure psychiatric injury is covered only if it results from a covered physical injury, a Schedule 3 criminal act, or meets the s21B work-related threshold.</li>
+<li>The degeneration/accident boundary is the most frequent point of ACC dispute in general practice: 'acute on chronic' presentations require careful documentation of the precipitating event and its contribution to functional change.</li>
+<li>Surgical mesh injuries required a dedicated reassessment exercise from 2020 after a restorative justice process acknowledged systematic underrecognition; clinicians treating mesh-injured patients should be aware that historical claims may be revisited.</li>
+<li>The 2022 ACC Amendment Act expanded maternal birth injury coverage to include internal soft tissue injuries from the forces of labour (Schedule 3A); LSCS and episiotomies are excluded and the provision is not retrospective.</li>
+<li>TN v ACC 2023 established that the date of injury for historical abuse claims is the date of the abuse, not the date of first treatment — a ruling with an estimated $3.6 billion liability impact for the scheme.</li>
+</ul>
+</div>
 
 ACC is one of New Zealand's most distinctive public institutions. The 1967 Woodhouse Royal Commission set out two principles that still anchor the scheme: community responsibility and comprehensive entitlement [#ref-1]. The Accident Compensation Act 2001 operationalises those principles into something far more bounded  -  cover for personal injury caused by accident, treatment injury, work-related gradual process, and a small number of other defined categories, with a long list of carve-outs [#ref-2].
 
@@ -111,5 +120,4 @@ For working GPs, the everyday boundaries we push against  -  the back with conco
 15. Diana Unwin Chair in Restorative Justice. Hearing and responding to the stories of survivors of surgical mesh. Wellington: Te Herenga Waka - Victoria University of Wellington for Ministry of Health; 2019.
 16. Ministry of Health. Ministry welcomes ACC's offer to reassess declined surgical mesh claims [news release]. Wellington: Ministry of Health; 2020 [cited 2026 May 2]. Available from: https://www.health.govt.nz/news-media/news-items/ministry-welcomes-accs-offer-reassess-declined-surgical-mesh-claims
 17. Ministry of Health. Surgical mesh statement from Director-General of Health [Internet]. Wellington: Ministry of Health; 2023 [cited 2026 May 2]. Available from: https://www.health.govt.nz/strategies-initiatives/programmes-and-initiatives/surgical-mesh/surgical-mesh-statement-from-director-general-of-health
-18. Health New Zealand | Te Whatu Ora. Female Pelvic Mesh Service [Internet]. [cited 2026 May 2]. Available from: https://www.tewhatuora.govt.nz/health-services-and-programmes/the-new-zealand-female-pelvic-mesh-service
-19. Davidson M. Maternal birth injuries [How to treat]. NZ Doctor [Internet]. 2023 [cited 2026 May 2]. Available from: 
+18. Health New Zealand | Te Whatu Ora. Female Pelvic Mesh Service [Internet]. [cited 2026 May 2]. Available from: https://www.tewhatuora.govt.nz/health-services-and-

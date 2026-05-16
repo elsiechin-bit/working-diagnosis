@@ -1,16 +1,26 @@
 ---
 title: Blood cancers in GP land
 dek: MGUS, CLL, MPNs, lymphoma survivors, and the patient on ibrutinib who turns up with a bruise. The conditions haematology now mostly manages from a distance, and what the long-term GP role actually involves.
-description: A working GP on managing blood malignancies in the post-diagnosis years  -  MGUS surveillance, CLL on watch-and-wait, lymphoma survivorship, MPNs on hydroxyurea, and recognising the side effects of BTK inhibitors and venetoclax in the chronic disease consult.
-category: Clinical Conditions
 date: 2026-04-16
-summary:
-  - "Blood malignancies have become long-term conditions: most patients with MGUS, CLL, MPNs, and treated indolent lymphoma spend most of their disease course on surveillance or oral therapy, not intensive treatment -- and that monitoring is increasingly in general practice."
-  - "MGUS progresses to myeloma or related disorders at approximately 1% per year; risk stratification (Mayo three-factor model) determines whether follow-up is every 2-3 years or annually for life."
-  - "CLL on watch-and-wait requires only annual FBC and symptom review in stable patients; the GP's role is recognising the transformation signals (rapid lymph node growth, systemic symptoms, falling counts) that prompt re-referral."
-  - "BTK inhibitors (ibrutinib, acalabrutinib) and venetoclax carry side effects that present to GPs: atrial fibrillation, bleeding risk with ibrutinib; tumour lysis syndrome precautions and immune suppression with venetoclax."
-  - "Lymphoma survivors need long-term surveillance for second malignancies, hypothyroidism (post-mantle radiation), cardiovascular disease (anthracycline cardiotoxicity), and treatment-related myeloid neoplasms."
+layout: topic.njk
+specialty: Beyond the Clinic
+ctags: [notes, haematology-oncology]
 ---
+
+<div class="breadcrumb-trail">
+<a href="/library/">Library</a> / <a href="/beyond-the-clinic/">Beyond the Clinic</a> / <span class="topic-here">Blood cancers in GP land</span>
+</div>
+
+<div class="dont-miss">
+<h3>Don't miss</h3>
+<ul>
+<li>Blood malignancies have become long-term conditions: most patients with MGUS, CLL, MPNs, and treated indolent lymphoma spend most of their disease course on surveillance or oral therapy, not intensive treatment—and that monitoring is increasingly in general practice.</li>
+<li>MGUS progresses to myeloma or related disorders at approximately 1% per year; risk stratification (Mayo three-factor model) determines whether follow-up is every 2–3 years or annually for life.</li>
+<li>CLL on watch-and-wait requires only annual FBC and symptom review in stable patients; the GP's role is recognising the transformation signals (rapid lymph node growth, systemic symptoms, falling counts) that prompt re-referral.</li>
+<li>BTK inhibitors (ibrutinib, acalabrutinib) and venetoclax carry side effects that present to GPs: atrial fibrillation, bleeding risk with ibrutinib; tumour lysis syndrome precautions and immune suppression with venetoclax.</li>
+<li>Lymphoma survivors need long-term surveillance for second malignancies, hypothyroidism (post-mantle radiation), cardiovascular disease (anthracycline cardiotoxicity), and treatment-related myeloid neoplasms.</li>
+</ul>
+</div>
 
 A patient turns up for her annual review. She has had MGUS for nine years. Her cousin had myeloma. Every year she gets a paraprotein measured, a full blood count, a U&E, a calcium. Every year she asks the same question  -  does this mean I'm getting cancer?  -  and every year the answer is the same: not today, probably not next year, but we keep watching.
 
@@ -44,7 +54,7 @@ Chronic lymphocytic leukaemia is the most common adult leukaemia in Western coun
 
 The GP role in the watch-and-wait phase is significant. The haematology team typically reviews these patients every 3-12 months. Between visits, the patient lives in primary care. The clinical points worth being explicit about:
 
-- Lymphocytosis on routine FBC is the usual reason these patients are picked up. A persistent absolute lymphocyte count >5 �- 10⁹/L in an older patient warrants haematology referral and flow cytometry, not annual repeat to see if it goes away.
+- Lymphocytosis on routine FBC is the usual reason these patients are picked up. A persistent absolute lymphocyte count >5 �- 10⁹/L in an older patient warrants haematology referral and flow cytometry, not annual repeat to see if it goes away.
 - Once diagnosed, GPs are often the first to spot early indications for treatment: progressive fatigue out of proportion to other causes, drenching night sweats, unintentional weight loss, increasing lymphadenopathy or splenomegaly noticed by the patient, recurrent infections, rapidly rising lymphocyte count (lymphocyte doubling time <6 months is a treatment indication), new cytopenias.
 - CLL patients have a real and durable immunodeficiency, both from the disease itself (hypogammaglobulinaemia is common) and increasingly from treatment. Vaccinate accordingly  -  annual influenza, pneumococcal (PCV13 then PPSV23 per current schedule), shingles (Shingrix is preferred over Zostavax in any immunocompromised patient and is now the only Pharmac-funded shingles vaccine for the at-risk groups), COVID-19 boosters per the immunocompromised schedule.
 - Live vaccines are contraindicated in patients on or recently off treatment. Yellow fever, MMR (live attenuated), and Zostavax (the older live shingles vaccine, no longer funded) all need haematology input.
@@ -139,5 +149,4 @@ The GP work is not the dramatic part of cancer care. It is the steady part. It i
 7. [Polycythemia vera and essential thrombocythemia: 2021 update on diagnosis, risk-stratification and management](https://doi.org/10.1002/ajh.26008). Tefferi A, Barbui T. Am J Hematol. 2020;95(12):1599-613.
 8. [Myeloproliferative neoplasms](https://doi.org/10.1056/NEJMra1406186). Spivak JL. N Engl J Med. 2017;376(22):2168-81.
 9. [Cardiovascular events and intensity of treatment in polycythemia vera](https://doi.org/10.1056/NEJMoa1208500). Marchioli R, Finazzi G, Specchia G, et al. N Engl J Med. 2013;368(1):22-33.
-10. [Randomized trial of lenalidomide versus observation in smoldering multiple myeloma](https://doi.org/10.1200/JCO.19.01740). Lonial S, Jacobus S, Fonseca R, et al. J Clin Oncol. 2020;38(11):1126-37.
-11. [How I manage ibrutinib intolerance 
+10. [Randomized trial of lenalidomide versus observation in smoldering multiple myeloma](https://doi.org/10.1200/JCO.19.01740). Lonial S, Jacobus S, Fonseca R, et al. J Clin Oncol. 2020;38(11):1126-
