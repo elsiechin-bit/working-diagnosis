@@ -9,20 +9,21 @@ A searchable reference of all topics in Working Diagnosis, organized by medical 
 <nav aria-label="Jump to section">
   <ul class="handouts-jump">
     <li><a href="#cardiovascular">Cardiovascular</a></li>
-    <li><a href="#dermatology">Dermatology</a></li>
+    <li><a href="#respiratory">Respiratory</a></li>
+    <li><a href="#infectious-disease">Infectious Disease</a></li>
+    <li><a href="#psychiatry">Psychiatry</a></li>
     <li><a href="#endocrinology">Endocrinology</a></li>
     <li><a href="#gastroenterology">Gastroenterology</a></li>
-    <li><a href="#geriatrics">Geriatrics</a></li>
+    <li><a href="#musculoskeletal">Musculoskeletal</a></li>
+    <li><a href="#dermatology">Dermatology</a></li>
+    <li><a href="#paediatrics">Paediatrics</a></li>
     <li><a href="#gynaecology">Gynaecology</a></li>
-    <li><a href="#immunology-allergy">Immunology & Allergy</a></li>
-    <li><a href="#infectious-disease">Infectious Disease</a></li>
-    <li><a href="#lifestyle-prevention">Lifestyle & Prevention</a></li>
+    <li><a href="#geriatrics">Geriatrics</a></li>
     <li><a href="#neurology">Neurology</a></li>
     <li><a href="#renal-urology">Renal & Urology</a></li>
+    <li><a href="#immunology-allergy">Immunology & Allergy</a></li>
+    <li><a href="#lifestyle-prevention">Lifestyle & Prevention</a></li>
     <li><a href="#oncology">Oncology</a></li>
-    <li><a href="#psychiatry">Psychiatry</a></li>
-    <li><a href="#respiratory">Respiratory</a></li>
-    <li><a href="#musculoskeletal">Musculoskeletal</a></li>
   </ul>
 </nav>
 
@@ -34,11 +35,27 @@ A searchable reference of all topics in Working Diagnosis, organized by medical 
   </ul>
 </div>
 
-<div class="handout-section" id="dermatology">
-  <p class="handout-section-label">❍ Dermatology</p>
-  <h2>Dermatology</h2>
+<div class="handout-section" id="respiratory">
+  <p class="handout-section-label">❍ Respiratory</p>
+  <h2>Respiratory</h2>
+  <ul class="handout-list">
+    <li>Coming soon</li>
+  </ul>
+</div>
+
+<div class="handout-section" id="infectious-disease">
+  <p class="handout-section-label">❍ Infectious Disease</p>
+  <h2>Infectious Disease</h2>
   <ul class="handout-list">
     <li>9 topics</li>
+  </ul>
+</div>
+
+<div class="handout-section" id="psychiatry">
+  <p class="handout-section-label">❍ Psychiatry</p>
+  <h2>Psychiatry</h2>
+  <ul class="handout-list">
+    <li>Coming soon</li>
   </ul>
 </div>
 
@@ -58,11 +75,27 @@ A searchable reference of all topics in Working Diagnosis, organized by medical 
   </ul>
 </div>
 
-<div class="handout-section" id="geriatrics">
-  <p class="handout-section-label">❍ Geriatrics</p>
-  <h2>Geriatrics</h2>
+<div class="handout-section" id="musculoskeletal">
+  <p class="handout-section-label">❍ Musculoskeletal</p>
+  <h2>Musculoskeletal</h2>
   <ul class="handout-list">
-    <li>16 topics</li>
+    <li>Coming soon</li>
+  </ul>
+</div>
+
+<div class="handout-section" id="dermatology">
+  <p class="handout-section-label">❍ Dermatology</p>
+  <h2>Dermatology</h2>
+  <ul class="handout-list">
+    <li>9 topics</li>
+  </ul>
+</div>
+
+<div class="handout-section" id="paediatrics">
+  <p class="handout-section-label">❍ Paediatrics</p>
+  <h2>Paediatrics</h2>
+  <ul class="handout-list">
+    <li>12 topics</li>
   </ul>
 </div>
 
@@ -74,27 +107,11 @@ A searchable reference of all topics in Working Diagnosis, organized by medical 
   </ul>
 </div>
 
-<div class="handout-section" id="immunology-allergy">
-  <p class="handout-section-label">❍ Immunology & Allergy</p>
-  <h2>Immunology & Allergy</h2>
+<div class="handout-section" id="geriatrics">
+  <p class="handout-section-label">❍ Geriatrics</p>
+  <h2>Geriatrics</h2>
   <ul class="handout-list">
-    <li>Coming soon</li>
-  </ul>
-</div>
-
-<div class="handout-section" id="infectious-disease">
-  <p class="handout-section-label">❍ Infectious Disease</p>
-  <h2>Infectious Disease</h2>
-  <ul class="handout-list">
-    <li>9 topics</li>
-  </ul>
-</div>
-
-<div class="handout-section" id="lifestyle-prevention">
-  <p class="handout-section-label">❍ Lifestyle & Prevention</p>
-  <h2>Lifestyle & Prevention</h2>
-  <ul class="handout-list">
-    <li>4 topics</li>
+    <li>16 topics</li>
   </ul>
 </div>
 
@@ -114,33 +131,25 @@ A searchable reference of all topics in Working Diagnosis, organized by medical 
   </ul>
 </div>
 
+<div class="handout-section" id="immunology-allergy">
+  <p class="handout-section-label">❍ Immunology & Allergy</p>
+  <h2>Immunology & Allergy</h2>
+  <ul class="handout-list">
+    <li>Coming soon</li>
+  </ul>
+</div>
+
+<div class="handout-section" id="lifestyle-prevention">
+  <p class="handout-section-label">❍ Lifestyle & Prevention</p>
+  <h2>Lifestyle & Prevention</h2>
+  <ul class="handout-list">
+    <li>4 topics</li>
+  </ul>
+</div>
+
 <div class="handout-section" id="oncology">
   <p class="handout-section-label">❍ Oncology</p>
   <h2>Oncology</h2>
-  <ul class="handout-list">
-    <li>Coming soon</li>
-  </ul>
-</div>
-
-<div class="handout-section" id="psychiatry">
-  <p class="handout-section-label">❍ Psychiatry</p>
-  <h2>Psychiatry</h2>
-  <ul class="handout-list">
-    <li>Coming soon</li>
-  </ul>
-</div>
-
-<div class="handout-section" id="respiratory">
-  <p class="handout-section-label">❍ Respiratory</p>
-  <h2>Respiratory</h2>
-  <ul class="handout-list">
-    <li>Coming soon</li>
-  </ul>
-</div>
-
-<div class="handout-section" id="musculoskeletal">
-  <p class="handout-section-label">❍ Musculoskeletal</p>
-  <h2>Musculoskeletal</h2>
   <ul class="handout-list">
     <li>Coming soon</li>
   </ul>
