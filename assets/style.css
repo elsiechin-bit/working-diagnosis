@@ -545,7 +545,6 @@ a:hover { color: var(--green); }
   color: inherit;
   text-decoration: none;
   width: 100%;
-  height: 100%;
 }
 
 .pillar-icon {
