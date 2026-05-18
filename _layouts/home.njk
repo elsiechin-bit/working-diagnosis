@@ -2,79 +2,117 @@
 layout: base.njk
 ---
 
-{#
-<section class="hero">
-  <section class="home-hero">
-    <img src="/assets/logo-hero.png"
-         alt="Working Diagnosis"
-         width="1200" height="1200"
-         class="home-hero-img">
-  </section>
+{# ── Hero ────────────────────────────────────────────────────────────── #}
+<section class="home-hero-section">
+  <div class="home-hero-main">
+    <p class="home-eyebrow">Issue 07 &middot; Early access</p>
+    <h1 class="home-headline">A working library<br>for <em>general practice</em>.</h1>
+    <p class="home-lede">Guidelines, medications, calculators, and patient handouts, alongside essays and experiments from the edge of the consult. One GP&#8217;s hyperfixation project, now with a domain name.</p>
+  </div>
 
-  {{ content | safe }}
+  <aside class="home-hero-aside">
+    <p class="home-eyebrow">This week</p>
+    <ul class="this-week-list">
+      {% set recentItems = collections.all | reverse %}
+      {% set weekCount = 0 %}
+      {% for item in recentItems %}
+        {% if weekCount < 3 and item.url != "/" and item.data.title %}
+          <li class="this-week-item">
+            <time class="this-week-date" datetime="{{ item.date | dateISO }}">{{ item.date | dateDisplay }}</time>
+            <a href="{{ item.url }}" class="this-week-title">{{ item.data.title }}</a>
+          </li>
+          {% set weekCount = weekCount + 1 %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </aside>
 </section>
-#}
 
-<section class="pillars-grid">
-  <div class="pillars">
+{# ── Three Hubs ──────────────────────────────────────────────────────── #}
+<section class="home-hubs-section">
+  <div class="home-hubs-header">
+    <p class="home-eyebrow">The three drawers</p>
+    <p class="home-hubs-hint">start anywhere</p>
+  </div>
 
-    <article class="pillar pillar--field-guide">
-      <a href="/clinician-tools/" class="pillar-link">
-        <div class="pillar-icon pillar-icon--library" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M32 18 V52" />
-            <path d="M32 18 C24 16, 14 16, 8 18 V50 C14 48, 24 48, 32 50" />
-            <path d="M32 18 C40 16, 50 16, 56 18 V50 C50 48, 40 48, 32 50" />
-          </svg>
-        </div>
-        <h3 class="pillar-title"><em>Clinician Tools</em>.</h3>
-        <span class="pillar-rule pillar-rule--library" aria-hidden="true"></span>
-        <p>Guidelines, medications, and clinical calculators. Reference material for practice.</p>
-        <span class="pillar-cta pillar-cta--library">Browse Clinician Tools <span class="pillar-cta-arrow" aria-hidden="true">&rarr;</span></span>
-      </a>
-    </article>
+  <div class="home-hubs-row">
 
-    <article class="pillar pillar--workbench">
-      <a href="/patient-tools/" class="pillar-link">
-        <div class="pillar-icon pillar-icon--workbench" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Wrench: head at top-right, handle to bottom-left -->
-            <circle cx="48" cy="16" r="5" />
-            <path d="M44 20 L20 44" />
-            <path d="M16 48 L20 44" />
-            <circle cx="16" cy="48" r="2" fill="currentColor" stroke="none"/>
-            <!-- Screwdriver: handle at top-left, tip to bottom-right -->
-            <rect x="13" y="13" width="10" height="6" transform="rotate(45 18 16)" />
-            <path d="M22 22 L46 46" />
-            <path d="M46 46 L50 50" stroke-width="2.4"/>
-          </svg>
-        </div>
-        <h3 class="pillar-title"><em>Patient Tools</em>.</h3>
-        <span class="pillar-rule pillar-rule--workbench" aria-hidden="true"></span>
-        <p>Patient education, interactive explainers, and handouts for discussion in clinical encounters.</p>
-        <span class="pillar-cta pillar-cta--workbench">Explore patient tools <span class="pillar-cta-arrow" aria-hidden="true">&rarr;</span></span>
-      </a>
-    </article>
+    <div class="hub-card">
+      <div class="hub-card-header">
+        <p class="hub-card-eyebrow">Clinician Tools</p>
+        <span class="hub-card-count">142 entries</span>
+      </div>
+      <h2 class="hub-card-title">Reference material for practice.</h2>
+      <p class="hub-card-lede">Guidelines, medications, and clinical calculators, written for the GP at 10pm rather than the medical student.</p>
+      <ul class="hub-card-list">
+        <li><span class="hub-card-list-name">Topics</span><span class="hub-card-list-count">64</span></li>
+        <li><span class="hub-card-list-name">Guidelines</span><span class="hub-card-list-count">38</span></li>
+        <li><span class="hub-card-list-name">Medications</span><span class="hub-card-list-count">27</span></li>
+        <li><span class="hub-card-list-name">Calculators</span><span class="hub-card-list-count">13</span></li>
+      </ul>
+      <a href="/clinician-tools/" class="hub-card-browse">Browse clinician tools &rarr;</a>
+    </div>
 
-    <article class="pillar pillar--thinking-room">
-      <a href="/beyond-the-clinic/" class="pillar-link">
-        <div class="pillar-icon pillar-icon--workshop" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Erlenmeyer flask -->
-            <path d="M24 12 H40" />
-            <path d="M26 12 V26 L14 48 C13 50, 14 53, 17 53 H47 C50 53, 51 50, 50 48 L38 26 V12" />
-            <line x1="20" y1="40" x2="44" y2="40" />
-            <circle cx="26" cy="46" r="1.6" fill="currentColor" stroke="none"/>
-            <circle cx="34" cy="44" r="1.2" fill="currentColor" stroke="none"/>
-            <circle cx="38" cy="48" r="1.4" fill="currentColor" stroke="none"/>
-          </svg>
-        </div>
-        <h3 class="pillar-title"><em>Beyond the Clinic</em>.</h3>
-        <span class="pillar-rule pillar-rule--workshop" aria-hidden="true"></span>
-        <p>Essays, experiments, and resources that sit beyond the daily clinic. Thinking space for practice.</p>
-        <span class="pillar-cta pillar-cta--workshop">Open the workshop <span class="pillar-cta-arrow" aria-hidden="true">&rarr;</span></span>
-      </a>
-    </article>
+    <div class="hub-card">
+      <div class="hub-card-header">
+        <p class="hub-card-eyebrow">Patient Tools</p>
+        <span class="hub-card-count">46 entries</span>
+      </div>
+      <h2 class="hub-card-title">For the conversation in the room.</h2>
+      <p class="hub-card-lede">Interactive explainers and printable handouts to share with the person across the desk.</p>
+      <ul class="hub-card-list">
+        <li><span class="hub-card-list-name">Explainers</span><span class="hub-card-list-count">21</span></li>
+        <li><span class="hub-card-list-name">Handouts</span><span class="hub-card-list-count">25</span></li>
+      </ul>
+      <a href="/patient-tools/" class="hub-card-browse">Browse patient tools &rarr;</a>
+    </div>
+
+    <div class="hub-card">
+      <div class="hub-card-header">
+        <p class="hub-card-eyebrow">Beyond the Clinic</p>
+        <span class="hub-card-count">29 entries</span>
+      </div>
+      <h2 class="hub-card-title">Thinking space for practice.</h2>
+      <p class="hub-card-lede">Essays, experiments, and a quietly accumulating resource list, for the parts of the work that aren&#8217;t in the algorithm.</p>
+      <ul class="hub-card-list">
+        <li><span class="hub-card-list-name">Essays</span><span class="hub-card-list-count">18</span></li>
+        <li><span class="hub-card-list-name">Resources</span><span class="hub-card-list-count">11</span></li>
+      </ul>
+      <a href="/beyond-the-clinic/" class="hub-card-browse">Browse beyond the clinic &rarr;</a>
+    </div>
 
   </div>
+</section>
+
+{# ── Recently Updated ────────────────────────────────────────────────── #}
+<section class="home-updates-section">
+  <div class="home-updates-header">
+    <h2 class="home-updates-heading">Recently updated</h2>
+    <a href="/topics/" class="home-updates-all">All updates &rarr;</a>
+  </div>
+
+  {% set recentAll = collections.all | reverse %}
+  {% set updateCount = 0 %}
+  {% for item in recentAll %}
+    {% if updateCount < 5 and item.url != "/" and item.data.title %}
+      <a href="{{ item.url }}" class="update-row">
+        <time class="update-date" datetime="{{ item.date | dateISO }}">{{ item.date | dateDisplay }}</time>
+        <span class="update-type{% if updateCount == 0 %} is-accent{% endif %}">
+          {%- if item.data.specialty -%}
+            {{ item.data.specialty | capitalize }}
+          {%- elif item.data.pageType -%}
+            {{ item.data.pageType | capitalize }}
+          {%- else -%}
+            Topic
+          {%- endif -%}
+        </span>
+        <div class="update-content">
+          <span class="update-title">{{ item.data.title }}</span>
+          {% if item.data.dek %}<p class="update-summary">{{ item.data.dek }}</p>{% endif %}
+        </div>
+        <span class="update-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      {% set updateCount = updateCount + 1 %}
+    {% endif %}
+  {% endfor %}
 </section>

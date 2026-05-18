@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: home.njk
+bodyClass: home-page
 kicker: A workshop for general practice  -  Aotearoa NZ
 ---
 

@@ -1,29 +1,36 @@
-<header class="masthead">
-  <div class="wrap masthead-row">
-    <a href="/" class="brand">
-      <span class="brand-name"><span class="brand-working">Working</span> <em>Diagnosis</em>.</span>
+<header class="ed-masthead">
+  <div class="ed-masthead-top">
+    <a href="/" class="ed-brand">
+      Working <em>Diagnosis</em><span class="ed-brand-dot">.</span>
     </a>
+    <p class="ed-masthead-tagline">An internet workshop for general practice&nbsp;·&nbsp;Aotearoa</p>
+    <div class="ed-masthead-actions">
+      <a href="https://ko-fi.com/chilipress" class="ed-coffee-link" target="_blank" rel="noopener noreferrer">
+        <span>☕</span><span>Buy me a coffee</span>
+      </a>
+      <span class="ed-masthead-sep" aria-hidden="true"></span>
+      <a href="mailto:chilipress@workingdiagnosis.xyz" class="ed-email-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 7l9 6 9-6"/></svg>
+        Email
+      </a>
+      <span class="ed-masthead-sep" aria-hidden="true"></span>
+      <button type="button" class="ed-search-btn search-trigger" id="search-open" aria-label="Open search" aria-expanded="false" aria-controls="search-dropdown">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        Search
+        <kbd>⌘K</kbd>
+      </button>
+    </div>
   </div>
 
-  <nav class="top-nav" aria-label="Main topics">
-    <div class="wrap top-nav-row">
-      <a href="/topics/">Topics</a>
-      <span class="nav-sep"></span>
-      <a href="/guidelines/">Guidelines</a>
-      <span class="nav-sep"></span>
-      <a href="/medications/">Medications</a>
-      <span class="nav-sep"></span>
-      <a href="/calculators/">Calculators</a>
-      <span class="nav-sep"></span>
-      <a href="/explainers/">Explainers</a>
-      <span class="nav-sep"></span>
-      <a href="/patient-tools/handouts/">Handouts</a>
-      <span class="nav-sep"></span>
-      <a href="/beyond-the-clinic/essays/">Essays</a>
-      <span class="nav-sep"></span>
-      <a href="/resources/">Resources</a>
-      <span class="nav-sep"></span>
-      <a href="/about/">About</a>
-    </div>
+  <nav class="ed-nav" aria-label="Main navigation">
+    <a href="/topics/"{% if page.url starts with "/topics/" %} class="is-current"{% endif %}>Topics</a>
+    <a href="/guidelines/"{% if page.url starts with "/guidelines/" %} class="is-current"{% endif %}>Guidelines</a>
+    <a href="/medications/"{% if page.url starts with "/medications/" %} class="is-current"{% endif %}>Medications</a>
+    <a href="/calculators/"{% if page.url starts with "/calculators/" %} class="is-current"{% endif %}>Calculators</a>
+    <a href="/explainers/"{% if page.url starts with "/explainers/" %} class="is-current"{% endif %}>Explainers</a>
+    <a href="/patient-tools/handouts/"{% if page.url starts with "/patient-tools/handouts/" %} class="is-current"{% endif %}>Handouts</a>
+    <a href="/beyond-the-clinic/essays/"{% if page.url starts with "/beyond-the-clinic/essays/" %} class="is-current"{% endif %}>Essays</a>
+    <a href="/resources/"{% if page.url starts with "/resources/" %} class="is-current"{% endif %}>Resources</a>
+    <a href="/about/"{% if page.url starts with "/about/" %} class="is-current"{% endif %}>About</a>
   </nav>
 </header>
