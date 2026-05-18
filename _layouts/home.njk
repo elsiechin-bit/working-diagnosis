@@ -13,15 +13,12 @@ layout: base.njk
   <aside class="home-hero-aside">
     <p class="home-eyebrow">This week</p>
     <ul class="this-week-list">
-      {% set recentItems = collections.all | reverse %}
-      {% set weekCount = 0 %}
-      {% for item in recentItems %}
-        {% if weekCount < 3 and item.url != "/" and item.data.title %}
+      {% for item in collections.all | reverse %}
+        {% if loop.index <= 3 %}
           <li class="this-week-item">
             <time class="this-week-date" datetime="{{ item.date | dateISO }}">{{ item.date | dateDisplay }}</time>
             <a href="{{ item.url }}" class="this-week-title">{{ item.data.title }}</a>
           </li>
-          {% set weekCount = weekCount + 1 %}
         {% endif %}
       {% endfor %}
     </ul>
@@ -91,13 +88,11 @@ layout: base.njk
     <a href="/topics/" class="home-updates-all">All updates &rarr;</a>
   </div>
 
-  {% set recentAll = collections.all | reverse %}
-  {% set updateCount = 0 %}
-  {% for item in recentAll %}
-    {% if updateCount < 5 and item.url != "/" and item.data.title %}
+  {% for item in collections.all | reverse %}
+    {% if loop.index <= 5 %}
       <a href="{{ item.url }}" class="update-row">
         <time class="update-date" datetime="{{ item.date | dateISO }}">{{ item.date | dateDisplay }}</time>
-        <span class="update-type{% if updateCount == 0 %} is-accent{% endif %}">
+        <span class="update-type{% if loop.index == 1 %} is-accent{% endif %}">
           {%- if item.data.specialty -%}
             {{ item.data.specialty | capitalize }}
           {%- elif item.data.pageType -%}
@@ -112,7 +107,6 @@ layout: base.njk
         </div>
         <span class="update-arrow" aria-hidden="true">&rarr;</span>
       </a>
-      {% set updateCount = updateCount + 1 %}
     {% endif %}
   {% endfor %}
 </section>
