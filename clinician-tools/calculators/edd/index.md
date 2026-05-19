@@ -1,6 +1,6 @@
 ---
 title: Antenatal EDD & Screening
-layout: tool.njk
+layout: topic.njk
 permalink: /clinician-tools/calculators/edd/
 eleventyExcludeFromCollections: true
 specialty: Gynaecology
