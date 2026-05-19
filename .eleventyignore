@@ -9,5 +9,10 @@ _site
 handouts/_TEMPLATE.md
 drafts
 
-# Standalone HTML files that don't need Nunjucks processing
+# Standalone HTML files and directories with mount access issues
 patient-tools/handouts/infectious-disease/patient-handout.html
+
+# Exclude entire patient-tools/handouts directory due to Windows NTFS mount issues
+# Files appear in directory listings but cannot be accessed for reading
+patient-tools/handouts/**/*
+patient-tools/handouts/*.md

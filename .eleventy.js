@@ -2,7 +2,7 @@ module.exports = function(eleventyConfig) {
   // Copy these files/folders straight to the output without processing
   eleventyConfig.addPassthroughCopy("assets");
 
-eleventyConfig.addFilter("dateDisplay", (dateObj) => {
+  eleventyConfig.addFilter("dateDisplay", (dateObj) => {
     if (!dateObj) return "";
     return new Date(dateObj).toLocaleDateString("en-NZ", {
       year: "numeric", month: "long", day: "numeric"
