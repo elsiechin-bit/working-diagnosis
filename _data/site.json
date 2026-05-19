@@ -10,7 +10,7 @@
     { "label": "Clinical Calculators", "url": "/clinician-tools/calculators/", "group": "subsection" },
     { "label": "Patient Tools", "url": "/patient-tools/", "inMasthead": true, "group": "section" },
     { "label": "Interactive Explainers", "url": "/patient-tools/interactive-explainers/", "group": "subsection" },
-    { "label": "Patient Handouts", "url": "/patient-tools/handouts/", "group": "subsection" },
+    { "label": "Patient Handouts", "url": "/patient-tools/handouts-by-specialty/", "group": "subsection" },
     { "label": "Beyond the Clinic", "url": "/beyond-the-clinic/", "inMasthead": true, "group": "section" },
     { "label": "Essays", "url": "/beyond-the-clinic/essays/", "group": "subsection" },
     { "label": "Experiments", "url": "/beyond-the-clinic/experiments/", "group": "subsection" },
