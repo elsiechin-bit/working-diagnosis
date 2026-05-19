@@ -8,3 +8,6 @@ _site
 # Templates, drafts, and reference docs (not for publication)
 handouts/_TEMPLATE.md
 drafts
+
+# Standalone HTML files that don't need Nunjucks processing
+patient-tools/handouts/infectious-disease/patient-handout.html
