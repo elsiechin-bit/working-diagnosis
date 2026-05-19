@@ -23,14 +23,14 @@
   </div>
 
   <nav class="ed-nav" aria-label="Main navigation">
-    <a href="/topics/"{% if page.url starts with "/topics/" %} class="is-current"{% endif %}>Topics</a>
-    <a href="/guidelines/"{% if page.url starts with "/guidelines/" %} class="is-current"{% endif %}>Guidelines</a>
-    <a href="/medications/"{% if page.url starts with "/medications/" %} class="is-current"{% endif %}>Medications</a>
-    <a href="/calculators/"{% if page.url starts with "/calculators/" %} class="is-current"{% endif %}>Calculators</a>
-    <a href="/explainers/"{% if page.url starts with "/explainers/" %} class="is-current"{% endif %}>Explainers</a>
-    <a href="/patient-tools/handouts/"{% if page.url starts with "/patient-tools/handouts/" %} class="is-current"{% endif %}>Handouts</a>
-    <a href="/beyond-the-clinic/essays/"{% if page.url starts with "/beyond-the-clinic/essays/" %} class="is-current"{% endif %}>Essays</a>
-    <a href="/resources/"{% if page.url starts with "/resources/" %} class="is-current"{% endif %}>Resources</a>
-    <a href="/about/"{% if page.url starts with "/about/" %} class="is-current"{% endif %}>About</a>
+    <a href="/topics/"{% if page.url.startsWith("/topics/") %} class="is-current"{% endif %}>Topics</a>
+    <a href="/guidelines/"{% if page.url.startsWith("/guidelines/") %} class="is-current"{% endif %}>Guidelines</a>
+    <a href="/medications/"{% if page.url.startsWith("/medications/") %} class="is-current"{% endif %}>Medications</a>
+    <a href="/calculators/"{% if page.url.startsWith("/calculators/") %} class="is-current"{% endif %}>Calculators</a>
+    <a href="/explainers/"{% if page.url.startsWith("/explainers/") %} class="is-current"{% endif %}>Explainers</a>
+    <a href="/patient-tools/handouts/"{% if page.url.startsWith("/patient-tools/handouts/") %} class="is-current"{% endif %}>Handouts</a>
+    <a href="/beyond-the-clinic/essays/"{% if page.url.startsWith("/beyond-the-clinic/essays/") %} class="is-current"{% endif %}>Essays</a>
+    <a href="/resources/"{% if page.url.startsWith("/resources/") %} class="is-current"{% endif %}>Resources</a>
+    <a href="/about/"{% if page.url.startsWith("/about/") %} class="is-current"{% endif %}>About</a>
   </nav>
 </header>
